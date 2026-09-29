@@ -5,6 +5,7 @@ import '../models.dart';
 import '../services/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import 'family_screen.dart';
 import 'settings_screen.dart';
 import 'vehicle_detail_screen.dart';
 import 'vehicle_edit_screen.dart';
@@ -20,9 +21,11 @@ class _HomeScreenState extends State<HomeScreen> {
   int _tab = 0;
   VehicleType? _filter;
 
-  void _openAdd() {
+  void _openAdd({String? fleetId}) {
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (_) => VehicleEditScreen(vehicle: Vehicle(type: _filter ?? VehicleType.auto)),
+      builder: (_) => VehicleEditScreen(
+        vehicle: Vehicle(type: _filter ?? VehicleType.auto, fleetId: fleetId),
+      ),
     ));
   }
 
@@ -55,12 +58,21 @@ class _HomeScreenState extends State<HomeScreen> {
     return ListenableBuilder(
       listenable: appState,
       builder: (context, _) {
-        final title = appState.isCloud
-            ? (appState.data.fleetName ?? 'Il mio parco auto')
-            : 'I miei veicoli';
+        const titles = ['I miei veicoli', 'Famiglia', 'Scadenze'];
+        Widget body;
+        switch (_tab) {
+          case 1:
+            body = FamilyTab(onOpen: _openDetail, onAdd: (g) => _openAdd(fleetId: g));
+            break;
+          case 2:
+            body = _deadlinesTab();
+            break;
+          default:
+            body = _vehiclesTab();
+        }
         return Scaffold(
           appBar: AppBar(
-            title: Text(title, overflow: TextOverflow.ellipsis),
+            title: Text(titles[_tab]),
             actions: [
               _syncIcon(),
               IconButton(
@@ -71,10 +83,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
-          body: NotebookPage(child: _tab == 0 ? _vehiclesTab() : _deadlinesTab()),
+          body: NotebookPage(child: body),
           floatingActionButton: _tab == 0
               ? FloatingActionButton.extended(
-                  onPressed: _openAdd,
+                  onPressed: () => _openAdd(),
                   icon: const Icon(Icons.add),
                   label: const Text('Aggiungi'),
                 )
@@ -83,8 +95,18 @@ class _HomeScreenState extends State<HomeScreen> {
             selectedIndex: _tab,
             onDestinationSelected: (i) => setState(() => _tab = i),
             destinations: const [
-              NavigationDestination(icon: Icon(Icons.garage_outlined), selectedIcon: Icon(Icons.garage), label: 'Veicoli'),
-              NavigationDestination(icon: Icon(Icons.event_outlined), selectedIcon: Icon(Icons.event), label: 'Scadenze'),
+              NavigationDestination(
+                  icon: Icon(Icons.garage_outlined),
+                  selectedIcon: Icon(Icons.garage),
+                  label: 'I miei'),
+              NavigationDestination(
+                  icon: Icon(Icons.family_restroom_outlined),
+                  selectedIcon: Icon(Icons.family_restroom),
+                  label: 'Famiglia'),
+              NavigationDestination(
+                  icon: Icon(Icons.event_outlined),
+                  selectedIcon: Icon(Icons.event),
+                  label: 'Scadenze'),
             ],
           ),
         );
@@ -93,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _vehiclesTab() {
-    final all = appState.vehicles;
+    final all = appState.myVehicles;
     final list = _filter == null ? all : all.where((v) => v.type == _filter).toList();
     return RefreshIndicator(
       onRefresh: appState.retrySync,
@@ -116,7 +138,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.only(right: 6),
                     child: ChoiceChip(
                       avatar: Icon(vehicleIcon(t), size: 18),
-                      label: Text('${vehicleTypePlural(t)} (${all.where((v) => v.type == t).length})'),
+                      label: Text(
+                          '${vehicleTypePlural(t)} (${all.where((v) => v.type == t).length})'),
                       selected: _filter == t,
                       onSelected: (_) => setState(() => _filter = t),
                     ),
@@ -131,60 +154,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icon(Icons.garage_outlined,
                     size: 80, color: Theme.of(context).colorScheme.outline),
                 const SizedBox(height: 12),
-                const Text('Nessun veicolo', style: TextStyle(fontSize: 26, fontFamily: handFont)),
+                const Text('Nessun veicolo',
+                    style: TextStyle(fontSize: 26, fontFamily: handFont)),
                 const SizedBox(height: 4),
-                const Text('Tocca "Aggiungi" per inserire il primo veicolo.', textAlign: TextAlign.center),
+                const Text('Tocca "Aggiungi" per inserire il primo veicolo.',
+                    textAlign: TextAlign.center),
               ]),
             ),
-          ...list.map(_vehicleCard),
+          ...list.map((v) => VehicleCard(vehicle: v, onTap: () => _openDetail(v))),
         ],
-      ),
-    );
-  }
-
-  Widget _vehicleCard(Vehicle v) {
-    final next = v.nextDeadline;
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 5),
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: () => _openDetail(v),
-        child: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Row(children: [
-            VehicleAvatar(vehicle: v, size: 64),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(v.name.isEmpty ? 'Senza nome' : v.name,
-                    style: const TextStyle(fontSize: 22, fontFamily: handFont, height: 1.1),
-                    overflow: TextOverflow.ellipsis),
-                const SizedBox(height: 2),
-                Row(children: [
-                  Icon(vehicleIcon(v.type), size: 16),
-                  const SizedBox(width: 4),
-                  Text(v.plate.isEmpty ? '—' : v.plate,
-                      style: const TextStyle(letterSpacing: 1.2)),
-                ]),
-                const SizedBox(height: 6),
-                if (next != null)
-                  Wrap(
-                    crossAxisAlignment: WrapCrossAlignment.center,
-                    spacing: 6,
-                    children: [
-                      Text('${next.dueLabel}:', style: const TextStyle(fontSize: 12)),
-                      StatusChip(due: next.dueDate!, compact: true),
-                    ],
-                  )
-                else
-                  Text('Nessuna scadenza impostata',
-                      style: TextStyle(
-                          fontSize: 12, color: Theme.of(context).colorScheme.outline)),
-              ]),
-            ),
-            const Icon(Icons.chevron_right),
-          ]),
-        ),
       ),
     );
   }
@@ -200,17 +178,21 @@ class _HomeScreenState extends State<HomeScreen> {
     if (items.isEmpty) {
       return const Center(child: Text('Nessuna scadenza impostata.'));
     }
+    final showFleet = appState.isCloud && appState.data.groups.isNotEmpty;
     return ListView.separated(
       padding: const EdgeInsets.fromLTRB(4, 8, 8, 24),
       itemCount: items.length,
       separatorBuilder: (_, __) => const Divider(height: 1),
       itemBuilder: (context, i) {
         final it = items[i];
+        final name = it.v.name.isEmpty ? it.v.plate : it.v.name;
         return ListTile(
+          contentPadding: const EdgeInsets.symmetric(horizontal: 8),
           leading: VehicleAvatar(vehicle: it.v, size: 44),
-          title: Text(it.d.dueLabel),
+          title: Text(it.d.dueLabel,
+              style: const TextStyle(fontFamily: handFont, fontSize: 20)),
           subtitle: Text(
-              '${it.v.name.isEmpty ? it.v.plate : it.v.name} · ${fmtDate(it.d.dueDate)}'),
+              '$name · ${fmtDate(it.d.dueDate)}${showFleet ? '\n${appState.fleetLabel(it.v)}' : ''}'),
           trailing: StatusChip(due: it.d.dueDate!, compact: true),
           onTap: () => _openDetail(it.v),
         );

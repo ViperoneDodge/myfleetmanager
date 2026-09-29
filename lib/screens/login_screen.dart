@@ -66,32 +66,61 @@ class _LoginScreenState extends State<LoginScreen> {
     final cloud = appState.auth.cloudAvailable;
     final scheme = Theme.of(context).colorScheme;
     final isLocal = _mode == AccountMode.local;
+    final cover = NotebookColors.of(context).cover;
     return Scaffold(
-      body: SafeArea(
-        child: NotebookPage(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.lerp(cover, Colors.white, 0.12)!,
+              Color.lerp(cover, Colors.black, 0.35)!,
+            ],
+          ),
+        ),
+        child: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(12, 24, 16, 24),
+            padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),
             child: ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 420),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Center(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(22),
-                      child: Image.asset('assets/icon.png', width: 96, height: 96),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(26),
+                        boxShadow: const [
+                          BoxShadow(color: Colors.black38, blurRadius: 18, offset: Offset(0, 8)),
+                        ],
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(26),
+                        child: Image.asset('assets/icon.png', width: 110, height: 110),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 8),
                   Text('MyFleetManager',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.headlineMedium),
+                      style: const TextStyle(
+                          fontSize: 34, fontWeight: FontWeight.w700, color: Colors.white)),
                   const SizedBox(height: 4),
-                  Text('Scadenze di auto e moto, sempre sotto controllo',
+                  const Text('Le scadenze dei tuoi veicoli, sempre sotto controllo',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: scheme.onSurfaceVariant)),
-                  const SizedBox(height: 28),
+                      style: TextStyle(color: Colors.white70)),
+                  const SizedBox(height: 24),
+                  Card(
+                    elevation: 10,
+                    color: scheme.surface,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(22)),
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(18, 20, 18, 14),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
                   if (cloud) ...[
                     SegmentedButton<AccountMode>(
                       segments: const [
@@ -203,19 +232,16 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                   if (!cloud) ...[
                     const SizedBox(height: 16),
-                    Card(
-                      color: scheme.surfaceContainerHighest,
-                      child: const Padding(
-                        padding: EdgeInsets.all(12),
-                        child: Text(
-                          'Modalità solo telefono: i dati restano su questo dispositivo. '
-                          'Accesso con Google e parco auto familiare si attivano dopo la '
-                          'configurazione online (vedi guida).',
-                          style: TextStyle(fontSize: 12),
-                        ),
-                      ),
+                    Text(
+                      'I dati restano su questo telefono. Accesso con Google e parco auto '
+                      'familiare arriveranno con un prossimo aggiornamento.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
                     ),
                   ],
+                  ]),
+                    ),
+                  ),
                 ],
               ),
             ),

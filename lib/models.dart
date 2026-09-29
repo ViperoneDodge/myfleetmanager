@@ -190,6 +190,9 @@ class Vehicle {
   String updatedBy;
   bool deleted;
 
+  /// Parco a cui appartiene (null/personale = "I miei"; altrimenti id del nucleo familiare).
+  String? fleetId;
+
   Uint8List? _photoCache;
   String? _photoCacheKey;
 
@@ -205,6 +208,7 @@ class Vehicle {
     int? updatedAt,
     this.updatedBy = '',
     this.deleted = false,
+    this.fleetId,
   })  : id = id ?? newId(),
         deadlines = deadlines ?? defaultDeadlines(type),
         documents = documents ?? [],
@@ -262,6 +266,7 @@ class Vehicle {
         'updatedAt': updatedAt,
         'updatedBy': updatedBy,
         'deleted': deleted,
+        'fleetId': fleetId,
       };
 
   factory Vehicle.fromJson(Map<String, dynamic> j) => Vehicle(
@@ -282,6 +287,7 @@ class Vehicle {
         updatedAt: (j['updatedAt'] as num?)?.toInt() ?? 0,
         updatedBy: j['updatedBy'] as String? ?? '',
         deleted: j['deleted'] as bool? ?? false,
+        fleetId: j['fleetId'] as String?,
       );
 
   Vehicle copy() => Vehicle.fromJson(toJson());
@@ -314,26 +320,68 @@ class NotifySettings {
   }
 }
 
+/// Nucleo familiare condiviso (parco auto di gruppo).
+class FleetGroup {
+  final String id;
+  String name;
+  String ownerUid;
+
+  /// uid -> email dei membri.
+  Map<String, String> members;
+
+  FleetGroup({
+    required this.id,
+    required this.name,
+    this.ownerUid = '',
+    Map<String, String>? members,
+  }) : members = members ?? {};
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'ownerUid': ownerUid,
+        'members': members,
+      };
+
+  factory FleetGroup.fromJson(Map<String, dynamic> j) => FleetGroup(
+        id: j['id'] as String,
+        name: j['name'] as String? ?? 'Famiglia',
+        ownerUid: j['ownerUid'] as String? ?? '',
+        members: Map<String, dynamic>.from((j['members'] as Map?) ?? {})
+            .map((k, v) => MapEntry(k, v.toString())),
+      );
+}
+
 /// Dati di un utente salvati sul telefono.
 class UserData {
   List<Vehicle> vehicles;
   NotifySettings notify;
-  String? fleetId;
-  String? fleetName;
+
+  /// Parco personale online (id = uid dell'utente).
+  String? personalFleetId;
+  List<FleetGroup> groups;
 
   UserData({
     List<Vehicle>? vehicles,
     NotifySettings? notify,
-    this.fleetId,
-    this.fleetName,
+    this.personalFleetId,
+    List<FleetGroup>? groups,
   })  : vehicles = vehicles ?? [],
-        notify = notify ?? NotifySettings();
+        notify = notify ?? NotifySettings(),
+        groups = groups ?? [];
+
+  FleetGroup? groupById(String? id) {
+    for (final g in groups) {
+      if (g.id == id) return g;
+    }
+    return null;
+  }
 
   Map<String, dynamic> toJson() => {
         'vehicles': vehicles.map((v) => v.toJson()).toList(),
         'notify': notify.toJson(),
-        'fleetId': fleetId,
-        'fleetName': fleetName,
+        'personalFleetId': personalFleetId,
+        'groups': groups.map((g) => g.toJson()).toList(),
       };
 
   factory UserData.fromJson(Map<String, dynamic> j) => UserData(
@@ -343,8 +391,11 @@ class UserData {
             [],
         notify: NotifySettings.fromJson(
             j['notify'] == null ? null : Map<String, dynamic>.from(j['notify'] as Map)),
-        fleetId: j['fleetId'] as String?,
-        fleetName: j['fleetName'] as String?,
+        personalFleetId: j['personalFleetId'] as String?,
+        groups: (j['groups'] as List?)
+                ?.map((e) => FleetGroup.fromJson(Map<String, dynamic>.from(e as Map)))
+                .toList() ??
+            [],
       );
 }
 

@@ -3,23 +3,28 @@ service cloud.firestore {
   match /databases/{database}/documents {
     function signedIn() { return request.auth != null; }
 
+    // fleets/{uid}   = parco personale (personal: true)
+    // fleets/{code}  = nucleo familiare condiviso (il codice è l'invito)
     match /fleets/{fleetId} {
       function isMember() {
         return signedIn() && request.auth.uid in resource.data.members;
       }
 
-      // Lettura diretta tramite codice invito (serve per entrare nel parco)
+      // Lettura diretta tramite codice invito (serve per entrare nel nucleo)
       allow get: if signedIn();
       // Ricerca: solo i parchi di cui si è membri
       allow list: if signedIn() && request.auth.uid in resource.data.members;
 
       allow create: if signedIn()
         && request.resource.data.ownerUid == request.auth.uid
-        && request.resource.data.members == [request.auth.uid];
+        && request.resource.data.members == [request.auth.uid]
+        && (request.resource.data.personal != true || fleetId == request.auth.uid);
 
       // I membri possono modificare; chi ha il codice può solo aggiungere se stesso
+      // (e solo ai nuclei condivisi, mai al parco personale di un altro).
       allow update: if isMember() || (
         signedIn()
+        && resource.data.personal != true
         && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['members', 'memberEmails'])
         && request.resource.data.members.hasAll(resource.data.members)
         && request.resource.data.members.removeAll(resource.data.members).hasOnly([request.auth.uid])

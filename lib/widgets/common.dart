@@ -102,3 +102,60 @@ void showSnack(BuildContext context, String msg) {
     ..hideCurrentSnackBar()
     ..showSnackBar(SnackBar(content: Text(msg)));
 }
+
+/// Scheda di un veicolo nelle liste.
+class VehicleCard extends StatelessWidget {
+  final Vehicle vehicle;
+  final VoidCallback onTap;
+  const VehicleCard({super.key, required this.vehicle, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    final v = vehicle;
+    final next = v.nextDeadline;
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 5),
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Row(children: [
+            VehicleAvatar(vehicle: v, size: 64),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(v.name.isEmpty ? 'Senza nome' : v.name,
+                    style: const TextStyle(fontSize: 22, fontFamily: 'PatrickHand', height: 1.1),
+                    overflow: TextOverflow.ellipsis),
+                const SizedBox(height: 2),
+                Row(children: [
+                  Icon(vehicleIcon(v.type), size: 16),
+                  const SizedBox(width: 4),
+                  Text(v.plate.isEmpty ? '—' : v.plate,
+                      style: const TextStyle(letterSpacing: 1.2)),
+                ]),
+                const SizedBox(height: 6),
+                if (next != null)
+                  Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    spacing: 6,
+                    runSpacing: 4,
+                    children: [
+                      Text('${next.dueLabel}:', style: const TextStyle(fontSize: 12)),
+                      StatusChip(due: next.dueDate!, compact: true),
+                    ],
+                  )
+                else
+                  Text('Nessuna scadenza impostata',
+                      style: TextStyle(
+                          fontSize: 12, color: Theme.of(context).colorScheme.outline)),
+              ]),
+            ),
+            const Icon(Icons.chevron_right),
+          ]),
+        ),
+      ),
+    );
+  }
+}

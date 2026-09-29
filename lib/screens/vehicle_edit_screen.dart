@@ -162,6 +162,27 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
                     ))
                 .toList(),
           ),
+          if (appState.isCloud && appState.data.groups.isNotEmpty) ...[
+            const SizedBox(height: 16),
+            Text('Dove si trova', style: Theme.of(context).textTheme.titleMedium),
+            const SizedBox(height: 6),
+            DropdownButtonFormField<String?>(
+              value: appState.data.groupById(v.fleetId) == null ? null : v.fleetId,
+              decoration: const InputDecoration(
+                filled: true,
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.folder_shared_outlined),
+              ),
+              items: [
+                const DropdownMenuItem<String?>(value: null, child: Text('I miei veicoli')),
+                ...appState.data.groups.map((g) => DropdownMenuItem<String?>(
+                      value: g.id,
+                      child: Text('Famiglia: ${g.name}', overflow: TextOverflow.ellipsis),
+                    )),
+              ],
+              onChanged: (id) => setState(() => v.fleetId = id),
+            ),
+          ],
           const SizedBox(height: 16),
           Center(
             child: GestureDetector(

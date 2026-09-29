@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'firebase_config.dart';
 import 'screens/home_screen.dart';
+import 'screens/intro_screen.dart';
 import 'screens/login_screen.dart';
 import 'services/app_state.dart';
 import 'theme.dart';
@@ -38,10 +39,15 @@ class FleetApp extends StatefulWidget {
 }
 
 class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
+  bool _introDone = false;
+
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    Future.delayed(const Duration(milliseconds: 2300), () {
+      if (mounted) setState(() => _introDone = true);
+    });
   }
 
   @override
@@ -76,11 +82,14 @@ class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
           themeMode: t.mode,
           theme: buildTheme(t, Brightness.light),
           darkTheme: buildTheme(t, Brightness.dark),
-          home: appState.loading
-              ? const Scaffold(body: Center(child: CircularProgressIndicator()))
-              : appState.session == null
-                  ? const LoginScreen()
-                  : const HomeScreen(),
+          home: AnimatedSwitcher(
+            duration: const Duration(milliseconds: 500),
+            child: (!_introDone || appState.loading)
+                ? const IntroScreen(key: ValueKey('intro'))
+                : appState.session == null
+                    ? const LoginScreen(key: ValueKey('login'))
+                    : const HomeScreen(key: ValueKey('home')),
+          ),
         );
       },
     );

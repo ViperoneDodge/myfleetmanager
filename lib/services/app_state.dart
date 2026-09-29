@@ -23,7 +23,6 @@ class AppState extends ChangeNotifier {
   Session? session;
   UserData data = UserData();
   SyncStatus syncStatus = SyncStatus.off;
-  List<FleetMember> members = [];
   Timer? _notifyDebounce;
   Timer? _retry;
 
@@ -41,6 +40,18 @@ class AppState extends ChangeNotifier {
     });
     return list;
   }
+
+  /// Veicolo del parco personale ("I miei").
+  bool isPersonal(Vehicle v) => v.fleetId == null || v.fleetId == data.personalFleetId;
+
+  List<Vehicle> get myVehicles => vehicles.where(isPersonal).toList();
+
+  List<Vehicle> groupVehicles(String groupId) =>
+      vehicles.where((v) => v.fleetId == groupId).toList();
+
+  /// Nome del parco a cui appartiene il veicolo.
+  String fleetLabel(Vehicle v) =>
+      isPersonal(v) ? 'I miei veicoli' : (data.groupById(v.fleetId)?.name ?? 'Famiglia');
 
   Vehicle? vehicleById(String id) {
     for (final v in data.vehicles) {
@@ -89,7 +100,6 @@ class AppState extends ChangeNotifier {
     await store.writeSession(null);
     session = null;
     data = UserData();
-    members = [];
     syncStatus = SyncStatus.off;
     try {
       await notifications.rescheduleAll([], data.notify);
@@ -115,10 +125,27 @@ class AppState extends ChangeNotifier {
   // ---------------- Veicoli ----------------
 
   Future<void> saveVehicle(Vehicle v) async {
-    v.updatedAt = DateTime.now().millisecondsSinceEpoch;
+    final now = DateTime.now().millisecondsSinceEpoch;
+    v.updatedAt = now;
     v.updatedBy = session?.displayName ?? '';
+    if (v.fleetId == data.personalFleetId) v.fleetId = null;
     final i = data.vehicles.indexWhere((x) => x.id == v.id);
-    if (i >= 0) {
+    if (i >= 0 && data.vehicles[i].fleetId != v.fleetId && isCloud) {
+      // Spostato in un altro parco: il vecchio viene eliminato per gli altri,
+      // il veicolo prosegue con un nuovo identificativo nel nuovo parco.
+      final old = data.vehicles[i];
+      final tomb = old.copy()
+        ..deleted = true
+        ..photoB64 = null
+        ..documents = []
+        ..updatedAt = now;
+      data.vehicles[i] = tomb;
+      _pushIfCloud(tomb);
+      final moved = Vehicle.fromJson(v.toJson())..id = newId();
+      moved.fleetId = v.fleetId;
+      data.vehicles.add(moved);
+      v = moved;
+    } else if (i >= 0) {
       data.vehicles[i] = v;
     } else {
       data.vehicles.add(v);
@@ -213,10 +240,12 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  // ---------------- Sincronizzazione famiglia ----------------
+  // ---------------- Sincronizzazione e nuclei familiari ----------------
+
+  String? _fleetOf(Vehicle v) => v.fleetId ?? data.personalFleetId;
 
   void _pushIfCloud(Vehicle v) {
-    final f = data.fleetId;
+    final f = _fleetOf(v);
     if (isCloud && f != null) sync.push(f, v);
   }
 
@@ -230,11 +259,9 @@ class AppState extends ChangeNotifier {
     _retry?.cancel();
     syncStatus = SyncStatus.connecting;
     notifyListeners();
-    if (data.fleetId == null) {
+    if (data.personalFleetId == null) {
       try {
-        final f = await sync.ensureFleet(s);
-        data.fleetId = f.id;
-        data.fleetName = f.name;
+        data.personalFleetId = await sync.ensurePersonal(s);
         await _persist();
       } catch (_) {
         // Offline: si lavora in locale e si riprova tra un minuto.
@@ -248,35 +275,42 @@ class AppState extends ChangeNotifier {
   }
 
   void _listen() {
-    final f = data.fleetId;
-    if (f == null) return;
+    final s = session;
+    final personal = data.personalFleetId;
+    if (s == null || personal == null) return;
     sync.start(
-      fleetId: f,
-      localVehicles: () => List.of(data.vehicles),
-      onRemote: _mergeRemote,
-      onFleet: (name, m) {
-        members = m;
-        if (data.fleetName != name) {
-          data.fleetName = name;
-          _persist();
-        }
-        final s = session;
-        if (s != null && m.isNotEmpty && !m.any((x) => x.uid == s.key)) {
-          // Rimosso dal parco familiare: torna a un parco personale.
-          data.fleetId = null;
-          _persist();
-          _startSync();
-          return;
-        }
-        syncStatus = SyncStatus.online;
-        notifyListeners();
-      },
+      session: s,
+      personalId: personal,
+      localVehicles: (fleetId) => data.vehicles.where((v) => _fleetOf(v) == fleetId).toList(),
+      onVehicles: _mergeRemote,
+      onGroups: _onGroups,
     );
   }
 
-  void _mergeRemote(List<Vehicle> remote) {
+  void _onGroups(List<FleetGroup> groups) {
+    data.groups = groups;
+    final valid = {data.personalFleetId, ...groups.map((g) => g.id)};
+    // Veicoli di nuclei da cui si è usciti (o eliminati): tolti dal telefono.
+    final gone = data.vehicles
+        .where((v) => v.fleetId != null && !valid.contains(v.fleetId))
+        .toList();
+    for (final v in gone) {
+      for (final d in v.documents) {
+        _deleteDocFile(d);
+      }
+      data.vehicles.remove(v);
+    }
+    syncStatus = SyncStatus.online;
+    _persist();
+    _scheduleNotifications();
+    notifyListeners();
+  }
+
+  void _mergeRemote(String fleetId, List<Vehicle> remote, bool fromServer) {
     var changed = false;
+    final personal = fleetId == data.personalFleetId;
     for (final r in remote) {
+      r.fleetId = personal ? null : fleetId;
       final i = data.vehicles.indexWhere((x) => x.id == r.id);
       if (i < 0) {
         r.documents = [];
@@ -289,7 +323,7 @@ class AppState extends ChangeNotifier {
         changed = true;
       }
     }
-    if (syncStatus != SyncStatus.online) {
+    if (fromServer && syncStatus != SyncStatus.online) {
       syncStatus = SyncStatus.online;
       changed = true;
     }
@@ -300,42 +334,39 @@ class AppState extends ChangeNotifier {
     }
   }
 
-  String? get inviteCode => data.fleetId;
-
-  Future<void> joinFamily(String code) async {
-    final s = session!;
-    final f = await sync.joinFleet(s, code, data.fleetId);
-    data.fleetId = f.id;
-    data.fleetName = f.name;
-    // I veicoli già presenti sul telefono vengono aggiunti al parco familiare.
-    for (final v in data.vehicles) {
-      v.updatedAt = DateTime.now().millisecondsSinceEpoch;
-    }
+  Future<FleetGroup> createGroup(String name) async {
+    final g = await sync.createGroup(session!, name);
+    if (data.groupById(g.id) == null) data.groups.add(g);
     await _persist();
-    _listen();
     notifyListeners();
+    return g;
   }
 
-  Future<void> leaveFamily() async {
-    final s = session!;
-    final old = data.fleetId;
-    if (old == null) return;
-    final f = await sync.leaveFleet(s, old);
-    data.fleetId = f.id;
-    data.fleetName = f.name;
-    for (final v in data.vehicles) {
-      v.updatedAt = DateTime.now().millisecondsSinceEpoch;
-    }
+  Future<FleetGroup> joinGroup(String code) async {
+    final g = await sync.joinGroup(session!, code);
+    if (data.groupById(g.id) == null) data.groups.add(g);
     await _persist();
-    _listen();
     notifyListeners();
+    return g;
   }
 
-  Future<void> renameFleet(String name) async {
-    final f = data.fleetId;
-    if (f == null) return;
-    await sync.renameFleet(f, name);
-    data.fleetName = name;
+  Future<void> leaveGroup(String id) async {
+    await sync.leaveGroup(session!, id);
+    _onGroups(data.groups.where((g) => g.id != id).toList());
+  }
+
+  Future<void> deleteGroup(String id) async {
+    await sync.deleteGroup(id);
+    _onGroups(data.groups.where((g) => g.id != id).toList());
+  }
+
+  Future<void> removeMember(String groupId, String uid) async {
+    await sync.removeMember(groupId, uid);
+  }
+
+  Future<void> renameGroup(String id, String name) async {
+    await sync.renameGroup(id, name);
+    data.groupById(id)?.name = name;
     await _persist();
     notifyListeners();
   }

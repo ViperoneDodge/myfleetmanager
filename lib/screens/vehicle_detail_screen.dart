@@ -309,6 +309,13 @@ class VehicleDetailScreen extends StatelessWidget {
                       const SizedBox(width: 4),
                       Text(vehicleTypeLabel(v.type)),
                     ]),
+                    if (appState.isCloud && appState.data.groups.isNotEmpty)
+                      Row(mainAxisSize: MainAxisSize.min, children: [
+                        Icon(appState.isPersonal(v) ? Icons.person_outline : Icons.home_outlined,
+                            size: 18),
+                        const SizedBox(width: 4),
+                        Text(appState.fleetLabel(v)),
+                      ]),
                   ],
                 ),
                 const SizedBox(height: 18),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../main.dart';
 import '../models.dart';
 import '../services/notification_service.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import 'family_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -104,7 +104,7 @@ class SettingsScreen extends StatelessWidget {
             ),
 
             // ---------------- Famiglia ----------------
-            _header(context, 'Parco auto familiare'),
+            _header(context, 'Nuclei familiari'),
             if (!appState.isCloud)
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -112,8 +112,8 @@ class SettingsScreen extends StatelessWidget {
                   appState.auth.cloudAvailable
                       ? 'Per condividere i veicoli con la famiglia esci e accedi con un '
                           'account online (email o Google).'
-                      : 'La condivisione con la famiglia sarà disponibile dopo aver '
-                          'attivato la configurazione online dell\'app (vedi guida).',
+                      : 'La condivisione con la famiglia non è ancora attiva in questa '
+                          'versione dell\'app: arriverà con un prossimo aggiornamento.',
                   style: TextStyle(color: scheme.onSurfaceVariant),
                 ),
               )
@@ -225,137 +225,27 @@ class SettingsScreen extends StatelessWidget {
   }
 
   List<Widget> _familySection(BuildContext context) {
-    final code = appState.inviteCode;
-    final myUid = appState.session?.key;
-    final amOwner = appState.members.any((m) => m.uid == myUid && m.owner);
+    final groups = appState.data.groups;
     return [
-      ListTile(
-        leading: const Icon(Icons.garage),
-        title: Text(appState.data.fleetName ?? 'Parco auto'),
-        subtitle: const Text('Nome del parco auto'),
-        trailing: const Icon(Icons.edit, size: 18),
-        onTap: code == null ? null : () => _rename(context),
-      ),
-      ListTile(
-        leading: const Icon(Icons.key),
-        title: Text(code ?? 'In attesa di connessione…',
-            style: const TextStyle(letterSpacing: 2, fontWeight: FontWeight.bold)),
-        subtitle: const Text('Codice invito: dallo ai familiari per condividere questo parco auto'),
-        trailing: code == null
-            ? null
-            : IconButton(
-                icon: const Icon(Icons.copy),
-                tooltip: 'Copia',
-                onPressed: () {
-                  Clipboard.setData(ClipboardData(text: code));
-                  showSnack(context, 'Codice copiato');
-                },
-              ),
-      ),
-      if (appState.members.isNotEmpty)
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-          child: Text('Membri (${appState.members.length})',
-              style: const TextStyle(fontWeight: FontWeight.w600)),
-        ),
-      ...appState.members.map((m) => ListTile(
-            dense: true,
-            leading: Icon(m.owner ? Icons.star : Icons.person_outline),
-            title: Text(m.email),
-            subtitle: m.owner ? const Text('Creatore') : null,
+      ...groups.map((g) => ListTile(
+            leading: const Icon(Icons.home_outlined),
+            title: Text(g.name),
+            subtitle: Text('${g.members.length} membri · codice ${g.id}'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (_) => GroupScreen(groupId: g.id))),
           )),
       ListTile(
         leading: const Icon(Icons.group_add),
-        title: const Text('Entra nel parco auto di un familiare'),
-        subtitle: const Text('Inserisci il codice invito ricevuto'),
-        onTap: () => _join(context),
+        title: const Text('Crea nucleo familiare'),
+        onTap: () => createGroupDialog(context),
       ),
-      if (appState.members.length > 1 && !amOwner)
-        ListTile(
-          leading: const Icon(Icons.exit_to_app),
-          title: const Text('Lascia il parco auto familiare'),
-          onTap: () => _leave(context),
-        ),
+      ListTile(
+        leading: const Icon(Icons.key),
+        title: const Text('Entra con un codice invito'),
+        onTap: () => joinGroupDialog(context),
+      ),
     ];
-  }
-
-  Future<void> _rename(BuildContext context) async {
-    final c = TextEditingController(text: appState.data.fleetName);
-    final name = await showDialog<String>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text('Nome del parco auto'),
-        content: TextField(controller: c, autofocus: true),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Annulla')),
-          FilledButton(
-              onPressed: () => Navigator.pop(ctx, c.text.trim()), child: const Text('Salva')),
-        ],
-      ),
-    );
-    if (name != null && name.isNotEmpty) {
-      try {
-        await appState.renameFleet(name);
-      } catch (_) {
-        if (context.mounted) showSnack(context, 'Serve una connessione internet.');
-      }
-    }
-  }
-
-  Future<void> _join(BuildContext context) async {
-    final c = TextEditingController();
-    final code = await showDialog<String>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text('Codice invito'),
-        content: Column(mainAxisSize: MainAxisSize.min, children: [
-          const Text('I tuoi veicoli attuali verranno aggiunti al parco auto familiare.'),
-          const SizedBox(height: 12),
-          TextField(
-            controller: c,
-            autofocus: true,
-            textCapitalization: TextCapitalization.characters,
-            decoration: const InputDecoration(
-                hintText: 'Es. AB12CD34EF56', border: OutlineInputBorder()),
-          ),
-        ]),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Annulla')),
-          FilledButton(
-              onPressed: () => Navigator.pop(ctx, c.text.trim()), child: const Text('Entra')),
-        ],
-      ),
-    );
-    if (code == null || code.isEmpty) return;
-    try {
-      await appState.joinFamily(code);
-      if (context.mounted) showSnack(context, 'Sei entrato nel parco auto familiare!');
-    } catch (e) {
-      if (context.mounted) {
-        showSnack(context, 'Impossibile entrare: controlla il codice e la connessione.');
-      }
-    }
-  }
-
-  Future<void> _leave(BuildContext context) async {
-    final ok = await showDialog<bool>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text('Lasciare il parco auto?'),
-        content: const Text(
-            'Non vedrai più gli aggiornamenti della famiglia. I veicoli presenti ora sul telefono restano nel tuo nuovo parco personale.'),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Annulla')),
-          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Lascia')),
-        ],
-      ),
-    );
-    if (ok != true) return;
-    try {
-      await appState.leaveFamily();
-    } catch (_) {
-      if (context.mounted) showSnack(context, 'Serve una connessione internet.');
-    }
   }
 
   Widget _header(BuildContext context, String t) => Padding(
