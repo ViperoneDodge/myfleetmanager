@@ -1,0 +1,36 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+
+    match /fleets/{fleetId} {
+      function isMember() {
+        return signedIn() && request.auth.uid in resource.data.members;
+      }
+
+      // Lettura diretta tramite codice invito (serve per entrare nel parco)
+      allow get: if signedIn();
+      // Ricerca: solo i parchi di cui si è membri
+      allow list: if signedIn() && request.auth.uid in resource.data.members;
+
+      allow create: if signedIn()
+        && request.resource.data.ownerUid == request.auth.uid
+        && request.resource.data.members == [request.auth.uid];
+
+      // I membri possono modificare; chi ha il codice può solo aggiungere se stesso
+      allow update: if isMember() || (
+        signedIn()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['members', 'memberEmails'])
+        && request.resource.data.members.hasAll(resource.data.members)
+        && request.resource.data.members.removeAll(resource.data.members).hasOnly([request.auth.uid])
+      );
+
+      allow delete: if signedIn() && resource.data.ownerUid == request.auth.uid;
+
+      match /vehicles/{vehicleId} {
+        allow read, write: if signedIn()
+          && request.auth.uid in get(/databases/$(database)/documents/fleets/$(fleetId)).data.members;
+      }
+    }
+  }
+}
