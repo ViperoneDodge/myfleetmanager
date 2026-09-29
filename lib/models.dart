@@ -8,10 +8,84 @@ String newId([int length = 16]) {
   return List.generate(length, (_) => chars[r.nextInt(chars.length)]).join();
 }
 
-enum VehicleType { auto, moto }
+enum VehicleType { auto, moto, furgone, rimorchio }
 
-VehicleType vehicleTypeFrom(String? s) =>
-    s == 'moto' ? VehicleType.moto : VehicleType.auto;
+VehicleType vehicleTypeFrom(String? s) {
+  for (final t in VehicleType.values) {
+    if (t.name == s) return t;
+  }
+  return VehicleType.auto;
+}
+
+String vehicleTypeLabel(VehicleType t) {
+  switch (t) {
+    case VehicleType.auto:
+      return 'Auto';
+    case VehicleType.moto:
+      return 'Moto';
+    case VehicleType.furgone:
+      return 'Furgone';
+    case VehicleType.rimorchio:
+      return 'Rimorchio';
+  }
+}
+
+String vehicleTypePlural(VehicleType t) {
+  switch (t) {
+    case VehicleType.auto:
+      return 'Auto';
+    case VehicleType.moto:
+      return 'Moto';
+    case VehicleType.furgone:
+      return 'Furgoni';
+    case VehicleType.rimorchio:
+      return 'Rimorchi';
+  }
+}
+
+/// Documento allegato (libretto, polizza…): il file resta sul telefono.
+class VehicleDocument {
+  String id;
+  String name;
+
+  /// Nome del file nella cartella documenti dell'app.
+  String fileName;
+
+  /// 'pdf' oppure 'image'.
+  String kind;
+  int addedAt;
+  int size;
+
+  VehicleDocument({
+    String? id,
+    required this.name,
+    required this.fileName,
+    required this.kind,
+    int? addedAt,
+    this.size = 0,
+  })  : id = id ?? newId(10),
+        addedAt = addedAt ?? DateTime.now().millisecondsSinceEpoch;
+
+  bool get isPdf => kind == 'pdf';
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'fileName': fileName,
+        'kind': kind,
+        'addedAt': addedAt,
+        'size': size,
+      };
+
+  factory VehicleDocument.fromJson(Map<String, dynamic> j) => VehicleDocument(
+        id: j['id'] as String?,
+        name: j['name'] as String? ?? 'Documento',
+        fileName: j['fileName'] as String? ?? '',
+        kind: j['kind'] as String? ?? 'image',
+        addedAt: (j['addedAt'] as num?)?.toInt(),
+        size: (j['size'] as num?)?.toInt() ?? 0,
+      );
+}
 
 enum DeadlineKind { insurance, inspection, service, custom }
 
@@ -110,6 +184,7 @@ class Vehicle {
   /// Foto compressa (JPEG) in base64: salvata in locale e sincronizzata.
   String? photoB64;
   List<Deadline> deadlines;
+  List<VehicleDocument> documents;
   String notes;
   int updatedAt;
   String updatedBy;
@@ -125,18 +200,25 @@ class Vehicle {
     this.plate = '',
     this.photoB64,
     List<Deadline>? deadlines,
+    List<VehicleDocument>? documents,
     this.notes = '',
     int? updatedAt,
     this.updatedBy = '',
     this.deleted = false,
   })  : id = id ?? newId(),
-        deadlines = deadlines ?? defaultDeadlines(),
+        deadlines = deadlines ?? defaultDeadlines(type),
+        documents = documents ?? [],
         updatedAt = updatedAt ?? DateTime.now().millisecondsSinceEpoch;
 
-  static List<Deadline> defaultDeadlines() => [
+  static List<Deadline> defaultDeadlines(VehicleType t) => [
         Deadline(kind: DeadlineKind.insurance),
         Deadline(kind: DeadlineKind.inspection),
-        Deadline(kind: DeadlineKind.service, intervalMonths: 12),
+        Deadline(
+          kind: DeadlineKind.service,
+          intervalMonths: 12,
+          // I rimorchi non hanno motore: tagliando disattivato di default.
+          enabled: t != VehicleType.rimorchio,
+        ),
       ];
 
   Uint8List? get photoBytes {
@@ -166,13 +248,16 @@ class Vehicle {
     return a.isEmpty ? null : a.first;
   }
 
-  Map<String, dynamic> toJson() => {
+  /// [includeDocs] = false per la sincronizzazione: i file dei documenti
+  /// restano solo sul telefono.
+  Map<String, dynamic> toJson({bool includeDocs = true}) => {
         'id': id,
         'type': type.name,
         'name': name,
         'plate': plate,
         'photoB64': photoB64,
         'deadlines': deadlines.map((d) => d.toJson()).toList(),
+        if (includeDocs) 'documents': documents.map((d) => d.toJson()).toList(),
         'notes': notes,
         'updatedAt': updatedAt,
         'updatedBy': updatedBy,
@@ -187,6 +272,10 @@ class Vehicle {
         photoB64: j['photoB64'] as String?,
         deadlines: (j['deadlines'] as List?)
                 ?.map((e) => Deadline.fromJson(Map<String, dynamic>.from(e as Map)))
+                .toList() ??
+            [],
+        documents: (j['documents'] as List?)
+                ?.map((e) => VehicleDocument.fromJson(Map<String, dynamic>.from(e as Map)))
                 .toList() ??
             [],
         notes: j['notes'] as String? ?? '',

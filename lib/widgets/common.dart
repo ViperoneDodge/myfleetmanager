@@ -34,8 +34,18 @@ DueStatus dueStatus(DateTime due) {
   return DueStatus(Colors.green.shade700, 'Tra $n giorni', Icons.check_circle);
 }
 
-IconData vehicleIcon(VehicleType t) =>
-    t == VehicleType.moto ? Icons.two_wheeler : Icons.directions_car;
+IconData vehicleIcon(VehicleType t) {
+  switch (t) {
+    case VehicleType.auto:
+      return Icons.directions_car;
+    case VehicleType.moto:
+      return Icons.two_wheeler;
+    case VehicleType.furgone:
+      return Icons.local_shipping;
+    case VehicleType.rimorchio:
+      return Icons.rv_hookup;
+  }
+}
 
 class VehicleAvatar extends StatelessWidget {
   final Vehicle vehicle;
@@ -68,7 +78,9 @@ class StatusChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final s = dueStatus(due);
+    final st = dueStatus(due);
+    final dark = Theme.of(context).brightness == Brightness.dark;
+    final s = dark ? DueStatus(Color.lerp(st.color, Colors.white, 0.35)!, st.text, st.icon) : st;
     return Container(
       padding: EdgeInsets.symmetric(horizontal: compact ? 6 : 8, vertical: 3),
       decoration: BoxDecoration(

@@ -5,6 +5,7 @@ import 'package:image_picker/image_picker.dart';
 
 import '../main.dart';
 import '../models.dart';
+import '../theme.dart';
 import '../widgets/common.dart';
 
 class VehicleEditScreen extends StatefulWidget {
@@ -129,22 +130,37 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
         actions: [
           TextButton(
             onPressed: _saving ? null : _save,
-            child: const Text('Salva'),
+            style: TextButton.styleFrom(foregroundColor: Colors.white),
+            child: const Text('Salva', style: TextStyle(fontFamily: handFont, fontSize: 22)),
           ),
         ],
       ),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
+      body: NotebookPage(
+        child: ListView(
+        padding: const EdgeInsets.fromLTRB(10, 14, 12, 16),
         children: [
-          SegmentedButton<VehicleType>(
-            segments: const [
-              ButtonSegment(
-                  value: VehicleType.auto, icon: Icon(Icons.directions_car), label: Text('Auto')),
-              ButtonSegment(
-                  value: VehicleType.moto, icon: Icon(Icons.two_wheeler), label: Text('Moto')),
-            ],
-            selected: {v.type},
-            onSelectionChanged: (s) => setState(() => v.type = s.first),
+          Text('Tipo di veicolo', style: Theme.of(context).textTheme.titleMedium),
+          const SizedBox(height: 6),
+          Wrap(
+            spacing: 8,
+            runSpacing: 6,
+            children: VehicleType.values
+                .map((t) => ChoiceChip(
+                      avatar: Icon(vehicleIcon(t), size: 18),
+                      label: Text(vehicleTypeLabel(t)),
+                      selected: v.type == t,
+                      onSelected: (_) => setState(() {
+                        v.type = t;
+                        if (_isNew) {
+                          for (final d in v.deadlines) {
+                            if (d.kind == DeadlineKind.service) {
+                              d.enabled = t != VehicleType.rimorchio;
+                            }
+                          }
+                        }
+                      }),
+                    ))
+                .toList(),
           ),
           const SizedBox(height: 16),
           Center(
@@ -186,6 +202,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
             textCapitalization: TextCapitalization.sentences,
             decoration: const InputDecoration(
               labelText: 'Nome (es. Panda di Marco)',
+              filled: true,
               border: OutlineInputBorder(),
               prefixIcon: Icon(Icons.label_outline),
             ),
@@ -196,6 +213,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
             textCapitalization: TextCapitalization.characters,
             decoration: const InputDecoration(
               labelText: 'Targa',
+              filled: true,
               border: OutlineInputBorder(),
               prefixIcon: Icon(Icons.pin_outlined),
             ),
@@ -226,6 +244,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
             maxLines: 3,
             decoration: const InputDecoration(
               labelText: 'Note (facoltative)',
+              filled: true,
               border: OutlineInputBorder(),
             ),
           ),
@@ -238,6 +257,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
           ),
           const SizedBox(height: 24),
         ],
+      ),
       ),
     );
   }

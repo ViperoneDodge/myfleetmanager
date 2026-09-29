@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui' show Color;
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
@@ -22,7 +23,7 @@ class NotificationService {
     } catch (_) {
       tz.setLocalLocation(tz.getLocation('Europe/Rome'));
     }
-    const android = AndroidInitializationSettings('@mipmap/ic_launcher');
+    const android = AndroidInitializationSettings('@drawable/ic_stat_notify');
     const ios = DarwinInitializationSettings(
       requestAlertPermission: false,
       requestBadgePermission: false,
@@ -67,6 +68,7 @@ class NotificationService {
       channelDescription: 'Promemoria per assicurazione, revisione, tagliando e altre scadenze',
       importance: Importance.high,
       priority: Priority.high,
+      color: Color(0xFF0257C3),
     ),
     iOS: DarwinNotificationDetails(),
   );

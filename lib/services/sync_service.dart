@@ -130,7 +130,7 @@ class SyncService {
         .doc(fleetId)
         .collection('vehicles')
         .doc(v.id)
-        .set(v.toJson())
+        .set(v.toJson(includeDocs: false))
         .catchError((_) {});
   }
 

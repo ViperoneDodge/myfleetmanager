@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import '../main.dart';
 import '../models.dart';
 import '../services/notification_service.dart';
+import '../theme.dart';
 import '../widgets/common.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -22,7 +23,8 @@ class SettingsScreen extends StatelessWidget {
         final scheme = Theme.of(context).colorScheme;
         return Scaffold(
           appBar: AppBar(title: const Text('Impostazioni')),
-          body: ListView(children: [
+          body: NotebookPage(
+            child: ListView(padding: const EdgeInsets.only(top: 6, right: 4), children: [
             // ---------------- Account ----------------
             _header(context, 'Account'),
             ListTile(
@@ -32,6 +34,9 @@ class SettingsScreen extends StatelessWidget {
                   ? 'Account online · dati salvati sul telefono e condivisi con la famiglia'
                   : 'Account solo su questo telefono'),
             ),
+
+            // ---------------- Aspetto ----------------
+            ..._appearance(context),
 
             // ---------------- Notifiche ----------------
             _header(context, 'Notifiche'),
@@ -133,9 +138,90 @@ class SettingsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
           ]),
+          ),
         );
       },
     );
+  }
+
+  List<Widget> _appearance(BuildContext context) {
+    final t = appState.theme;
+    void save({ThemeMode? mode, int? palette, PaperStyle? paper}) {
+      appState.updateTheme(ThemeSettings(
+        mode: mode ?? t.mode,
+        palette: palette ?? t.palette,
+        paper: paper ?? t.paper,
+      ));
+    }
+
+    return [
+      _header(context, 'Aspetto'),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
+        child: SegmentedButton<ThemeMode>(
+          showSelectedIcon: false,
+          segments: const [
+            ButtonSegment(value: ThemeMode.light, icon: Icon(Icons.light_mode), label: Text('Chiaro')),
+            ButtonSegment(value: ThemeMode.dark, icon: Icon(Icons.dark_mode), label: Text('Scuro')),
+            ButtonSegment(value: ThemeMode.system, icon: Icon(Icons.brightness_auto), label: Text('Auto')),
+          ],
+          selected: {t.mode},
+          onSelectionChanged: (sel) => save(mode: sel.first),
+        ),
+      ),
+      const Padding(
+        padding: EdgeInsets.fromLTRB(16, 8, 16, 6),
+        child: Text('Colore copertina'),
+      ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        child: Wrap(
+          spacing: 10,
+          runSpacing: 10,
+          children: List.generate(palettes.length, (i) {
+            final p = palettes[i];
+            final sel = i == t.palette;
+            return Tooltip(
+              message: p.name,
+              child: InkWell(
+                customBorder: const CircleBorder(),
+                onTap: () => save(palette: i),
+                child: Container(
+                  width: 42,
+                  height: 42,
+                  decoration: BoxDecoration(
+                    color: p.seed,
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: sel ? Theme.of(context).colorScheme.onSurface : Colors.transparent,
+                      width: 3,
+                    ),
+                  ),
+                  child: sel ? const Icon(Icons.check, color: Colors.white) : null,
+                ),
+              ),
+            );
+          }),
+        ),
+      ),
+      const Padding(
+        padding: EdgeInsets.fromLTRB(16, 14, 16, 6),
+        child: Text('Sfondo delle pagine'),
+      ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        child: Wrap(
+          spacing: 8,
+          children: PaperStyle.values
+              .map((p) => ChoiceChip(
+                    label: Text(paperStyleLabel(p)),
+                    selected: t.paper == p,
+                    onSelected: (_) => save(paper: p),
+                  ))
+              .toList(),
+        ),
+      ),
+    ];
   }
 
   List<Widget> _familySection(BuildContext context) {
@@ -276,6 +362,8 @@ class SettingsScreen extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(16, 20, 16, 4),
         child: Text(t,
             style: TextStyle(
-                color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold)),
+                fontFamily: handFont,
+                fontSize: 24,
+                color: Theme.of(context).colorScheme.primary)),
       );
 }

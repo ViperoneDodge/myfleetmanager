@@ -55,6 +55,18 @@ class LocalStore {
     await _writeJson('session.json', s.toJson());
   }
 
+  // ---- Impostazioni del telefono (tema) ----
+  Future<Map<String, dynamic>?> readSettings() => _readJson('settings.json');
+
+  Future<void> writeSettings(Map<String, dynamic> s) => _writeJson('settings.json', s);
+
+  // ---- Cartella documenti ----
+  Future<Directory> docsDir() async {
+    final d = Directory('${(await _base()).path}/documenti');
+    if (!await d.exists()) await d.create(recursive: true);
+    return d;
+  }
+
   // ---- Dati utente ----
   Future<UserData> readUserData(Session s) async {
     final j = await _readJson('data_${s.storageKey}.json');

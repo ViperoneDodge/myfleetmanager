@@ -87,6 +87,12 @@ if icons.exists():
             for f in d.iterdir():
                 shutil.copy(f, res / d.name / f.name)
     print("Icons copied")
+(res / "raw").mkdir(parents=True, exist_ok=True)
+(res / "raw" / "keep.xml").write_text(
+    '<?xml version="1.0" encoding="utf-8"?>\n'
+    '<resources xmlns:tools="http://schemas.android.com/tools" '
+    'tools:keep="@drawable/ic_stat_notify,@mipmap/ic_launcher*" />\n'
+)
 
 # ---------------------------------------------------------------- iOS
 plist = ROOT / "ios" / "Runner" / "Info.plist"

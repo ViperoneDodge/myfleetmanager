@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import '../models.dart';
 import '../services/app_state.dart';
+import '../theme.dart';
 import '../widgets/common.dart';
 import 'settings_screen.dart';
 import 'vehicle_detail_screen.dart';
@@ -70,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
-          body: _tab == 0 ? _vehiclesTab() : _deadlinesTab(),
+          body: NotebookPage(child: _tab == 0 ? _vehiclesTab() : _deadlinesTab()),
           floatingActionButton: _tab == 0
               ? FloatingActionButton.extended(
                   onPressed: _openAdd,
@@ -98,27 +99,30 @@ class _HomeScreenState extends State<HomeScreen> {
       onRefresh: appState.retrySync,
       child: ListView(
         physics: const AlwaysScrollableScrollPhysics(),
-        padding: const EdgeInsets.fromLTRB(12, 8, 12, 96),
+        padding: const EdgeInsets.fromLTRB(10, 10, 10, 96),
         children: [
-          Wrap(spacing: 8, children: [
-            ChoiceChip(
-              label: Text('Tutti (${all.length})'),
-              selected: _filter == null,
-              onSelected: (_) => setState(() => _filter = null),
-            ),
-            ChoiceChip(
-              avatar: const Icon(Icons.directions_car, size: 18),
-              label: Text('Auto (${all.where((v) => v.type == VehicleType.auto).length})'),
-              selected: _filter == VehicleType.auto,
-              onSelected: (_) => setState(() => _filter = VehicleType.auto),
-            ),
-            ChoiceChip(
-              avatar: const Icon(Icons.two_wheeler, size: 18),
-              label: Text('Moto (${all.where((v) => v.type == VehicleType.moto).length})'),
-              selected: _filter == VehicleType.moto,
-              onSelected: (_) => setState(() => _filter = VehicleType.moto),
-            ),
-          ]),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 6),
+                child: ChoiceChip(
+                  label: Text('Tutti (${all.length})'),
+                  selected: _filter == null,
+                  onSelected: (_) => setState(() => _filter = null),
+                ),
+              ),
+              ...VehicleType.values.map((t) => Padding(
+                    padding: const EdgeInsets.only(right: 6),
+                    child: ChoiceChip(
+                      avatar: Icon(vehicleIcon(t), size: 18),
+                      label: Text('${vehicleTypePlural(t)} (${all.where((v) => v.type == t).length})'),
+                      selected: _filter == t,
+                      onSelected: (_) => setState(() => _filter = t),
+                    ),
+                  )),
+            ]),
+          ),
           const SizedBox(height: 8),
           if (list.isEmpty)
             Padding(
@@ -127,9 +131,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icon(Icons.garage_outlined,
                     size: 80, color: Theme.of(context).colorScheme.outline),
                 const SizedBox(height: 12),
-                const Text('Nessun veicolo', style: TextStyle(fontSize: 18)),
+                const Text('Nessun veicolo', style: TextStyle(fontSize: 26, fontFamily: handFont)),
                 const SizedBox(height: 4),
-                const Text('Tocca "Aggiungi" per inserire la prima auto o moto.'),
+                const Text('Tocca "Aggiungi" per inserire il primo veicolo.', textAlign: TextAlign.center),
               ]),
             ),
           ...list.map(_vehicleCard),
@@ -153,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text(v.name.isEmpty ? 'Senza nome' : v.name,
-                    style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
+                    style: const TextStyle(fontSize: 22, fontFamily: handFont, height: 1.1),
                     overflow: TextOverflow.ellipsis),
                 const SizedBox(height: 2),
                 Row(children: [
@@ -197,7 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
       return const Center(child: Text('Nessuna scadenza impostata.'));
     }
     return ListView.separated(
-      padding: const EdgeInsets.fromLTRB(8, 8, 8, 24),
+      padding: const EdgeInsets.fromLTRB(4, 8, 8, 24),
       itemCount: items.length,
       separatorBuilder: (_, __) => const Divider(height: 1),
       itemBuilder: (context, i) {

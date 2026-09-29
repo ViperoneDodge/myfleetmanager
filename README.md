@@ -1,10 +1,12 @@
 # MyFleetManager
 
-App Android/iOS per gestire il parco veicoli (auto e moto) di famiglia.
+App Android/iOS per gestire il parco veicoli (auto, moto, furgoni e rimorchi) di famiglia.
 
 ## Funzioni
 
-- Veicoli **auto o moto** con nome, targa e foto (fotocamera o galleria)
+- Veicoli **auto, moto, furgoni e rimorchi** con nome, targa e foto (fotocamera o galleria)
+- **Documenti** per ogni veicolo (libretto, polizza…) come foto o PDF, salvati sul telefono
+- Grafica a **taccuino ad anelli**, tema **chiaro / scuro / automatico**, 8 colori di copertina e 4 sfondi pagina (righe, quadretti, puntini, liscio)
 - Scadenze a scelta per ogni mezzo: **assicurazione**, **revisione**, **ultimo tagliando** (con promemoria del prossimo dopo 6/12/24 mesi) e **scadenze personalizzate** illimitate (bollo, gomme, ecc.)
 - **Notifiche** 1 mese, 1 settimana, 1 giorno prima e il giorno stesso (selezionabili, anche tutte), all'orario scelto
 - **Dati salvati sul telefono**: funziona anche senza internet (notifiche comprese)

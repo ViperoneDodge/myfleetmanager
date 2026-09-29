@@ -1,8 +1,10 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 
 import '../models.dart';
+import '../theme.dart';
 import 'auth_service.dart';
 import 'local_store.dart';
 import 'notification_service.dart';
@@ -17,6 +19,7 @@ class AppState extends ChangeNotifier {
   final SyncService sync = SyncService();
 
   bool loading = true;
+  ThemeSettings theme = ThemeSettings();
   Session? session;
   UserData data = UserData();
   SyncStatus syncStatus = SyncStatus.off;
@@ -47,6 +50,8 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> init() async {
+    theme = ThemeSettings.fromJson(await store.readSettings());
+    notifyListeners();
     try {
       await notifications.init();
     } catch (_) {}
@@ -128,9 +133,77 @@ class AppState extends ChangeNotifier {
     final i = data.vehicles.indexWhere((x) => x.id == id);
     if (i < 0) return;
     final v = data.vehicles[i];
+    for (final d in List.of(v.documents)) {
+      await _deleteDocFile(d);
+    }
+    v.documents.clear();
     v.deleted = true;
     v.photoB64 = null;
     await saveVehicle(v);
+  }
+
+  // ---------------- Documenti (restano sul telefono) ----------------
+
+  Future<File> documentFile(VehicleDocument d) async =>
+      File('${(await store.docsDir()).path}/${d.fileName}');
+
+  Future<void> addDocument(String vehicleId, String sourcePath, String name) async {
+    final i = data.vehicles.indexWhere((x) => x.id == vehicleId);
+    if (i < 0) return;
+    final src = File(sourcePath);
+    final lower = sourcePath.toLowerCase();
+    final isPdf = lower.endsWith('.pdf');
+    var ext = 'jpg';
+    final dot = lower.lastIndexOf('.');
+    if (dot >= 0 && lower.length - dot <= 5) ext = lower.substring(dot + 1);
+    final doc = VehicleDocument(
+      name: name,
+      fileName: '',
+      kind: isPdf ? 'pdf' : 'image',
+    );
+    doc.fileName = '${vehicleId}_${doc.id}.$ext';
+    final dest = await documentFile(doc);
+    await src.copy(dest.path);
+    doc.size = await dest.length();
+    data.vehicles[i].documents.add(doc);
+    await _persist();
+    notifyListeners();
+  }
+
+  Future<void> renameDocument(String vehicleId, String docId, String name) async {
+    final v = vehicleById(vehicleId);
+    if (v == null) return;
+    for (final d in v.documents) {
+      if (d.id == docId) d.name = name;
+    }
+    await _persist();
+    notifyListeners();
+  }
+
+  Future<void> removeDocument(String vehicleId, String docId) async {
+    final v = vehicleById(vehicleId);
+    if (v == null) return;
+    final idx = v.documents.indexWhere((d) => d.id == docId);
+    if (idx < 0) return;
+    await _deleteDocFile(v.documents[idx]);
+    v.documents.removeAt(idx);
+    await _persist();
+    notifyListeners();
+  }
+
+  Future<void> _deleteDocFile(VehicleDocument d) async {
+    try {
+      final f = await documentFile(d);
+      if (await f.exists()) await f.delete();
+    } catch (_) {}
+  }
+
+  // ---------------- Tema ----------------
+
+  Future<void> updateTheme(ThemeSettings t) async {
+    theme = t;
+    notifyListeners();
+    await store.writeSettings(t.toJson());
   }
 
   Future<void> updateNotify(NotifySettings n) async {
@@ -206,9 +279,12 @@ class AppState extends ChangeNotifier {
     for (final r in remote) {
       final i = data.vehicles.indexWhere((x) => x.id == r.id);
       if (i < 0) {
+        r.documents = [];
         data.vehicles.add(r);
         changed = true;
       } else if (r.updatedAt > data.vehicles[i].updatedAt) {
+        // I documenti sono solo locali: si conservano quelli del telefono.
+        r.documents = data.vehicles[i].documents;
         data.vehicles[i] = r;
         changed = true;
       }

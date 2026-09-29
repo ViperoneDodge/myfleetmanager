@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../main.dart';
 import '../models.dart';
+import '../theme.dart';
 import '../widgets/common.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -67,22 +68,25 @@ class _LoginScreenState extends State<LoginScreen> {
     final isLocal = _mode == AccountMode.local;
     return Scaffold(
       body: SafeArea(
+        child: NotebookPage(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.all(24),
+            padding: const EdgeInsets.fromLTRB(12, 24, 16, 24),
             child: ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 420),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Icon(Icons.garage_rounded, size: 72, color: scheme.primary),
+                  Center(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(22),
+                      child: Image.asset('assets/icon.png', width: 96, height: 96),
+                    ),
+                  ),
                   const SizedBox(height: 8),
                   Text('MyFleetManager',
                       textAlign: TextAlign.center,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headlineMedium
-                          ?.copyWith(fontWeight: FontWeight.bold)),
+                      style: Theme.of(context).textTheme.headlineMedium),
                   const SizedBox(height: 4),
                   Text('Scadenze di auto e moto, sempre sotto controllo',
                       textAlign: TextAlign.center,
@@ -120,6 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     autocorrect: false,
                     textInputAction: TextInputAction.next,
                     decoration: InputDecoration(
+                      filled: true,
                       labelText: isLocal ? 'Nome utente' : 'Email',
                       prefixIcon: Icon(isLocal ? Icons.person : Icons.email),
                       border: const OutlineInputBorder(),
@@ -135,6 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (!_register) _submit();
                     },
                     decoration: InputDecoration(
+                      filled: true,
                       labelText: 'Password',
                       prefixIcon: const Icon(Icons.lock),
                       border: const OutlineInputBorder(),
@@ -151,6 +157,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       obscureText: _hide,
                       onSubmitted: (_) => _submit(),
                       decoration: const InputDecoration(
+                        filled: true,
                         labelText: 'Ripeti password',
                         prefixIcon: Icon(Icons.lock_outline),
                         border: OutlineInputBorder(),
@@ -213,6 +220,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
+        ),
         ),
       ),
     );
