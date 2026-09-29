@@ -44,24 +44,31 @@ jobs:
             echo "=== build ===" &&
             flutter build apk --release
           } 2>&1 | tee build.log
-          cp build/app/outputs/flutter-apk/app-release.apk MyFleetManager.apk
+          VER=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d+ -f1)
+          APK="MyFleetManager-v${VER}.apk"
+          cp build/app/outputs/flutter-apk/app-release.apk "$APK"
+          echo "apk=$APK" >> "$GITHUB_OUTPUT"
+          echo "ver=$VER" >> "$GITHUB_OUTPUT"
+          echo "=== firma ===" >> build.log
+          $(ls -d $ANDROID_HOME/build-tools/*/ | sort -V | tail -1)apksigner verify --print-certs "$APK" | grep -i "SHA-1" >> build.log || true
 
       - name: Pubblica APK nella pagina Releases
         if: success()
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.${{ github.run_number }}
-          name: MyFleetManager 1.0.${{ github.run_number }}
+          tag_name: v${{ steps.build.outputs.ver }}-build${{ github.run_number }}
+          name: MyFleetManager ${{ steps.build.outputs.ver }} (build ${{ github.run_number }})
           body: |
-            Scarica **MyFleetManager.apk** qui sotto e aprilo sul telefono Android per installarlo.
-          files: MyFleetManager.apk
+            Scarica **${{ steps.build.outputs.apk }}** qui sotto e aprilo sul telefono Android per installarlo.
+            Si installa sopra la versione precedente mantenendo i dati.
+          files: ${{ steps.build.outputs.apk }}
 
       - name: Carica APK come artifact
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: MyFleetManager-apk
-          path: MyFleetManager.apk
+          name: MyFleetManager-v${{ steps.build.outputs.ver }}
+          path: ${{ steps.build.outputs.apk }}
 
       - name: Salva log di compilazione (branch build-log)
         if: always()
