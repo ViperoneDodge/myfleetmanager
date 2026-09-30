@@ -21,13 +21,35 @@ jobs:
 
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.29.3'
+          flutter-version: '3.38.x'
           channel: stable
           cache: true
 
+      # Chiave di caricamento Play Store: arriva dai Secrets del repository
+      # (Settings → Secrets and variables → Actions). Senza, si usa la chiave di prova.
+      - name: Chiave di firma
+        shell: bash
+        env:
+          UPLOAD_KEYSTORE_B64: ${{ secrets.UPLOAD_KEYSTORE_B64 }}
+        run: |
+          if [ -n "$UPLOAD_KEYSTORE_B64" ]; then
+            echo "$UPLOAD_KEYSTORE_B64" | base64 -d > keystore/upload.jks
+            echo "Chiave di caricamento presente"
+          else
+            echo "Nessuna chiave di caricamento: firma di prova"
+          fi
+
+      # APK (installazione diretta): firmato SEMPRE con keystore/debug.keystore,
+      # così si aggiorna sopra le versioni già installate.
+      # AAB (Play Store): firmato con la chiave di caricamento, solo se presente nei Secrets.
       - name: Prepara progetto e compila
         id: build
         shell: bash
+        env:
+          FLEET_KEYSTORE: keystore/upload.jks
+          FLEET_STORE_PASS: ${{ secrets.UPLOAD_STORE_PASSWORD }}
+          FLEET_KEY_ALIAS: ${{ secrets.UPLOAD_KEY_ALIAS }}
+          FLEET_KEY_PASS: ${{ secrets.UPLOAD_KEY_PASSWORD }}
         run: |
           set -o pipefail
           {
@@ -41,12 +63,29 @@ jobs:
             flutter pub get &&
             echo "=== analyze ===" &&
             (flutter analyze --no-fatal-infos --no-fatal-warnings || true) &&
-            echo "=== build ===" &&
-            flutter build apk --release
+            echo "=== build apk ===" &&
+            flutter build apk --release &&
+            if [ -f keystore/upload.jks ] && [ -n "$FLEET_STORE_PASS" ]; then
+              echo "=== build appbundle (Play Store, chiave di caricamento) ===" &&
+              FLEET_SIGN=upload flutter build appbundle --release
+            else
+              echo "=== appbundle saltato: chiave di caricamento non configurata ==="
+            fi
           } 2>&1 | tee build.log
           VER=$(grep '^version:' pubspec.yaml | awk '{print $2}' | cut -d+ -f1)
           APK="MyFleetManager-v${VER}.apk"
           cp build/app/outputs/flutter-apk/app-release.apk "$APK"
+          FILES="$APK"
+          if [ -f build/app/outputs/bundle/release/app-release.aab ]; then
+            AAB="MyFleetManager-v${VER}.aab"
+            cp build/app/outputs/bundle/release/app-release.aab "$AAB"
+            FILES="$APK"$'\n'"$AAB"
+          fi
+          {
+            echo "files<<EOF"
+            echo "$FILES"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
           echo "apk=$APK" >> "$GITHUB_OUTPUT"
           echo "ver=$VER" >> "$GITHUB_OUTPUT"
           echo "=== firma ===" >> build.log
@@ -59,16 +98,16 @@ jobs:
           tag_name: v${{ steps.build.outputs.ver }}-build${{ github.run_number }}
           name: MyFleetManager ${{ steps.build.outputs.ver }} (build ${{ github.run_number }})
           body: |
-            Scarica **${{ steps.build.outputs.apk }}** qui sotto e aprilo sul telefono Android per installarlo.
-            Si installa sopra la versione precedente mantenendo i dati.
-          files: ${{ steps.build.outputs.apk }}
+            Scarica **${{ steps.build.outputs.apk }}** qui sotto e aprilo sul telefono Android per installarlo (si aggiorna sopra la versione precedente).
+            Il file **.aab**, se presente, serve per caricare l'app nella Play Console.
+          files: ${{ steps.build.outputs.files }}
 
       - name: Carica APK come artifact
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: MyFleetManager-v${{ steps.build.outputs.ver }}
-          path: ${{ steps.build.outputs.apk }}
+          path: ${{ steps.build.outputs.files }}
 
       - name: Salva log di compilazione (branch build-log)
         if: always()
