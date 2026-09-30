@@ -118,7 +118,11 @@ class FamilyTab extends StatelessWidget {
             child: Text('Ancora nessun veicolo in questo nucleo.',
                 style: TextStyle(color: scheme.onSurfaceVariant)),
           ),
-        ...list.map((v) => VehicleCard(vehicle: v, onTap: () => onOpen(v))),
+        ...list.map((v) => VehicleCard(
+              vehicle: v,
+              onTap: () => onOpen(v),
+              onLongPress: () => moveVehicleSheet(context, v),
+            )),
         Align(
           alignment: Alignment.centerLeft,
           child: TextButton.icon(
@@ -130,6 +134,69 @@ class FamilyTab extends StatelessWidget {
       ]),
     );
   }
+}
+
+// ---------------------------------------------------------------- Sposta veicolo
+
+/// Menu della pressione prolungata su un veicolo: aggiungilo a un nucleo
+/// familiare (o spostalo in un altro nucleo / in "I miei").
+Future<void> moveVehicleSheet(BuildContext context, Vehicle v) async {
+  HapticFeedback.mediumImpact();
+  if (!appState.isCloud) {
+    showSnack(context, 'Per condividere un veicolo con la famiglia serve un account online.');
+    return;
+  }
+  const personalKey = '__personal__';
+  final groups = appState.data.groups.where((g) => g.id != v.fleetId).toList();
+  final personal = appState.isPersonal(v);
+  final name = v.name.isEmpty ? (v.plate.isEmpty ? 'Veicolo' : v.plate) : v.name;
+  final dest = await showModalBottomSheet<String>(
+    context: context,
+    builder: (ctx) => SafeArea(
+      child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
+          child: Text(personal ? 'Aggiungi "$name" a un nucleo' : 'Sposta "$name"',
+              style: const TextStyle(fontFamily: handFont, fontSize: 24)),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+          child: Text(
+            personal
+                ? 'Il veicolo passa nel nucleo scelto e tutti i membri lo vedranno e potranno modificarlo.'
+                : 'Il veicolo verrà tolto da "${appState.fleetLabel(v)}".',
+            style: TextStyle(color: Theme.of(ctx).colorScheme.onSurfaceVariant),
+          ),
+        ),
+        if (groups.isEmpty && personal)
+          ListTile(
+            leading: const Icon(Icons.info_outline),
+            title: const Text('Non fai ancora parte di nessun nucleo familiare'),
+            subtitle: const Text('Creane uno o entra con un codice dalla scheda Famiglia.'),
+            onTap: () => Navigator.pop(ctx),
+          ),
+        ...groups.map((g) => ListTile(
+              leading: const Icon(Icons.home_outlined),
+              title: Text(g.name),
+              subtitle: Text('${g.members.length} ${g.members.length == 1 ? 'membro' : 'membri'}'),
+              onTap: () => Navigator.pop(ctx, g.id),
+            )),
+        if (!personal)
+          ListTile(
+            leading: const Icon(Icons.person_outline),
+            title: const Text('I miei veicoli'),
+            subtitle: const Text('Solo tu lo vedrai'),
+            onTap: () => Navigator.pop(ctx, personalKey),
+          ),
+        const SizedBox(height: 8),
+      ]),
+    ),
+  );
+  if (dest == null || !context.mounted) return;
+  final target = dest == personalKey ? null : dest;
+  final label = target == null ? 'I miei veicoli' : (appState.data.groupById(target)?.name ?? 'Famiglia');
+  await appState.moveVehicle(v.id, target);
+  if (context.mounted) showSnack(context, '"$name" ora è in "$label"');
 }
 
 // ---------------------------------------------------------------- Dialoghi

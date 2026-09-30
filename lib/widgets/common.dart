@@ -7,6 +7,17 @@ final DateFormat dateFmt = DateFormat('dd/MM/yyyy');
 
 String fmtDate(DateTime? d) => d == null ? '—' : dateFmt.format(d);
 
+/// 123456 -> "123.456 km"
+String fmtKm(int km) {
+  final s = km.toString();
+  final b = StringBuffer();
+  for (var i = 0; i < s.length; i++) {
+    if (i > 0 && (s.length - i) % 3 == 0) b.write('.');
+    b.write(s[i]);
+  }
+  return '$b km';
+}
+
 int daysUntil(DateTime d) {
   final now = DateTime.now();
   final today = DateTime(now.year, now.month, now.day);
@@ -107,7 +118,10 @@ void showSnack(BuildContext context, String msg) {
 class VehicleCard extends StatelessWidget {
   final Vehicle vehicle;
   final VoidCallback onTap;
-  const VehicleCard({super.key, required this.vehicle, required this.onTap});
+
+  /// Pressione prolungata: menu "aggiungi a nucleo familiare / sposta".
+  final VoidCallback? onLongPress;
+  const VehicleCard({super.key, required this.vehicle, required this.onTap, this.onLongPress});
 
   @override
   Widget build(BuildContext context) {
@@ -118,6 +132,7 @@ class VehicleCard extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: onTap,
+        onLongPress: onLongPress,
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Row(children: [

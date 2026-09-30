@@ -9,6 +9,7 @@ import '../main.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import 'maintenance_screen.dart';
 import 'vehicle_edit_screen.dart';
 
 class VehicleDetailScreen extends StatelessWidget {
@@ -329,6 +330,33 @@ class VehicleDetailScreen extends StatelessWidget {
                 const SizedBox(height: 16),
                 Row(children: [
                   Expanded(
+                      child: Text('Manutenzioni', style: Theme.of(context).textTheme.titleLarge)),
+                  TextButton.icon(
+                    onPressed: () => _openMaintenance(context, v, null),
+                    icon: const Icon(Icons.add),
+                    label: const Text('Aggiungi'),
+                  ),
+                ]),
+                if (v.maintenance.isEmpty)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: Text('Registra qui tagliandi e interventi: data, km e filtri sostituiti.',
+                        style: TextStyle(color: scheme.onSurfaceVariant)),
+                  ),
+                ...v.maintenanceSorted.map((m) => Card(
+                      margin: const EdgeInsets.symmetric(vertical: 4),
+                      child: ListTile(
+                        leading: Icon(Icons.build_circle_outlined, color: scheme.primary, size: 30),
+                        title: Text(
+                            '${fmtDate(m.date)}${m.km != null ? ' · ${fmtKm(m.km!)}' : ''}'),
+                        subtitle: Text(_maintSummary(m),
+                            maxLines: 3, overflow: TextOverflow.ellipsis),
+                        onTap: () => _openMaintenance(context, v, m),
+                      ),
+                    )),
+                const SizedBox(height: 16),
+                Row(children: [
+                  Expanded(
                       child: Text('Documenti', style: Theme.of(context).textTheme.titleLarge)),
                   TextButton.icon(
                     onPressed: () => _addDocument(context, v),
@@ -387,6 +415,21 @@ class VehicleDetailScreen extends StatelessWidget {
         );
       },
     );
+  }
+
+  void _openMaintenance(BuildContext context, Vehicle v, MaintenanceRecord? m) {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => MaintenanceEditScreen(vehicleId: v.id, record: m),
+    ));
+  }
+
+  static String _maintSummary(MaintenanceRecord m) {
+    final parts = <String>[
+      ...maintenanceItems.where(m.items.contains).map(maintenanceItemLabel),
+    ];
+    final txt = parts.join(', ');
+    if (m.notes.isEmpty) return txt.isEmpty ? '—' : txt;
+    return txt.isEmpty ? m.notes : '$txt\n${m.notes}';
   }
 
   static String _size(int bytes) {

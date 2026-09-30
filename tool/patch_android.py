@@ -61,6 +61,47 @@ elif groovy.exists():
 else:
     raise SystemExit("build.gradle non trovato")
 
+
+# ---------------------------------------------------------------- Firebase (google-services)
+gjson = ROOT / "tool" / "google-services.json"
+if gjson.exists():
+    shutil.copy(gjson, APP / "google-services.json")
+    sk = ROOT / "android" / "settings.gradle.kts"
+    sg = ROOT / "android" / "settings.gradle"
+    if sk.exists():
+        t = sk.read_text()
+        if "com.google.gms.google-services" not in t:
+            t, n = re.subn(r'(id\("dev\.flutter\.flutter-plugin-loader"\)[^\n]*)',
+                           r'\1\n    id("com.google.gms.google-services") version "4.4.2" apply false', t, count=1)
+            if n == 0:
+                raise SystemExit("settings.gradle.kts: plugin loader non trovato")
+            sk.write_text(t)
+    elif sg.exists():
+        t = sg.read_text()
+        if "com.google.gms.google-services" not in t:
+            t, n = re.subn(r'(id\s+"dev\.flutter\.flutter-plugin-loader"[^\n]*)',
+                           r'\1\n    id "com.google.gms.google-services" version "4.4.2" apply false', t, count=1)
+            if n == 0:
+                raise SystemExit("settings.gradle: plugin loader non trovato")
+            sg.write_text(t)
+    if kts.exists():
+        t = kts.read_text()
+        if "com.google.gms.google-services" not in t:
+            t, n = re.subn(r'(id\("com\.android\.application"\))',
+                           r'\1\n    id("com.google.gms.google-services")', t, count=1)
+            if n == 0:
+                raise SystemExit("build.gradle.kts: plugin android non trovato")
+            kts.write_text(t)
+    else:
+        t = groovy.read_text()
+        if "com.google.gms.google-services" not in t:
+            t, n = re.subn(r'(id\s+"com\.android\.application")',
+                           r'\1\n    id "com.google.gms.google-services"', t, count=1)
+            if n == 0:
+                raise SystemExit("build.gradle: plugin android non trovato")
+            groovy.write_text(t)
+    print("Firebase google-services configurato")
+
 # Regole R8 per le notifiche programmate (evita crash in release)
 (APP / "proguard-rules.pro").write_text(
     """-keep class com.dexterous.** { *; }
@@ -84,6 +125,8 @@ perms = """    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" android:maxSdkVersion="32"/>
 """
 if "POST_NOTIFICATIONS" not in m:
     m = m.replace("<application", perms + "    <application", 1)
@@ -98,6 +141,9 @@ receivers = """
                 <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
             </intent-filter>
         </receiver>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="famiglia"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_stat_notify"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/notify_color"/>
 """
 if "ScheduledNotificationReceiver" not in m:
     m = m.replace("</application>", receivers + "    </application>", 1)
@@ -115,22 +161,36 @@ if icons.exists():
             for f in d.iterdir():
                 shutil.copy(f, res / d.name / f.name)
     print("Icons copied")
-# Schermata di avvio nativa: sfondo blu + logo (evita il lampo bianco)
+# Schermata di avvio nativa: SOLO sfondo blu. Il logo lo disegna l'intro animata:
+# così non ci sono due loghi di dimensioni diverse sovrapposti (Android 12+).
 launch = '''<?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item><color android:color="#0257C3"/></item>
-    <item><bitmap android:gravity="center" android:src="@drawable/splash_logo"/></item>
 </layer-list>
 '''
 for d in ("drawable", "drawable-v21"):
     (res / d).mkdir(parents=True, exist_ok=True)
     (res / d / "launch_background.xml").write_text(launch)
+(res / "drawable" / "splash_empty.xml").write_text(
+    '''<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="#00000000"/>
+    <size android:width="1dp" android:height="1dp"/>
+</shape>
+''')
+(res / "values").mkdir(parents=True, exist_ok=True)
+(res / "values" / "fleet_colors.xml").write_text(
+    '''<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="notify_color">#0257C3</color>
+</resources>
+''')
 styles31 = '''<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <item name="android:windowBackground">@drawable/launch_background</item>
         <item name="android:windowSplashScreenBackground">#0257C3</item>
-        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_empty</item>
     </style>
     <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <item name="android:windowBackground">?android:colorBackground</item>

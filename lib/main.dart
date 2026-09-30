@@ -15,16 +15,21 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   if (FirebaseConfig.isConfigured) {
     try {
-      await Firebase.initializeApp(
-        options: const FirebaseOptions(
-          apiKey: FirebaseConfig.apiKey,
-          appId: FirebaseConfig.appId,
-          messagingSenderId: FirebaseConfig.messagingSenderId,
-          projectId: FirebaseConfig.projectId,
-          storageBucket: FirebaseConfig.storageBucket,
-        ),
-      );
-    } catch (_) {}
+      // Android: configurazione letta da google-services.json (inserito dalla build).
+      await Firebase.initializeApp();
+    } catch (_) {
+      try {
+        await Firebase.initializeApp(
+          options: const FirebaseOptions(
+            apiKey: FirebaseConfig.apiKey,
+            appId: FirebaseConfig.appId,
+            messagingSenderId: FirebaseConfig.messagingSenderId,
+            projectId: FirebaseConfig.projectId,
+            storageBucket: FirebaseConfig.storageBucket,
+          ),
+        );
+      } catch (_) {}
+    }
   }
   appState = AppState();
   runApp(const FleetApp());

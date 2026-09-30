@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "583335711681",
+    "project_id": "myfleetmanager-3ca03",
+    "storage_bucket": "myfleetmanager-3ca03.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583335711681:android:0cca6a6919c14b5dddd540",
+        "android_client_info": {
+          "package_name": "it.myfleet.myfleetmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583335711681-astrh8tbpp8adqlfqoel6q19ho6iq9vf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "it.myfleet.myfleetmanager",
+            "certificate_hash": "3a89119487cf4323d839385638f2b811105fe114"
+          }
+        },
+        {
+          "client_id": "583335711681-03hm8b37a1hjhq7fscuc8o6r4mng1kj8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8BiwYm8BmEQfVQSd2zswxEC7VKgc7GGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583335711681-03hm8b37a1hjhq7fscuc8o6r4mng1kj8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

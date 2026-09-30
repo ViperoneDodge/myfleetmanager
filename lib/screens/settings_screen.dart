@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../main.dart';
 import '../models.dart';
@@ -40,6 +41,7 @@ class SettingsScreen extends StatelessWidget {
 
             // ---------------- Notifiche ----------------
             _header(context, 'Notifiche'),
+            const _NotifyStatus(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text('Quando vuoi essere avvisato prima di una scadenza?',
@@ -102,6 +104,57 @@ class SettingsScreen extends StatelessWidget {
                 }
               },
             ),
+            ListTile(
+              leading: const Icon(Icons.timer_outlined),
+              title: const Text('Prova promemoria tra 1 minuto'),
+              subtitle: const Text('Poi chiudi l\'app: se la notifica arriva, i promemoria funzionano'),
+              onTap: () async {
+                await appState.notifications.requestPermission();
+                try {
+                  await appState.notifications.scheduleTest(const Duration(minutes: 1));
+                  if (context.mounted) {
+                    showSnack(context, 'Promemoria di prova programmato: chiudi pure l\'app.');
+                  }
+                } catch (e) {
+                  if (context.mounted) showSnack(context, 'Impossibile programmare: $e');
+                }
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
+              child: Text(
+                'Su alcuni telefoni (Xiaomi, Huawei, Samsung, Oppo…) il risparmio energetico '
+                'blocca i promemoria: in Impostazioni Android → App → MyFleetManager → Batteria '
+                'scegli "Nessuna restrizione".',
+                style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
+              ),
+            ),
+            if (appState.isCloud) ...[
+              _header(context, 'Notifiche push'),
+              ListTile(
+                leading: Icon(
+                  appState.push.registered ? Icons.cloud_done_outlined : Icons.cloud_off_outlined,
+                  color: appState.push.registered ? Colors.green.shade700 : Colors.orange.shade800,
+                ),
+                title: Text(appState.push.registered
+                    ? 'Telefono registrato per le push'
+                    : 'Telefono non ancora registrato'),
+                subtitle: Text(appState.push.registered
+                    ? 'Tocca per copiare il codice del dispositivo (serve per una prova dalla console Firebase)'
+                    : 'Tocca per riprovare (serve internet)'),
+                onTap: () async {
+                  if (!appState.push.registered) {
+                    await appState.startPush();
+                    if (context.mounted && !appState.push.registered) {
+                      showSnack(context, 'Registrazione non riuscita: controlla la connessione.');
+                    }
+                    return;
+                  }
+                  Clipboard.setData(ClipboardData(text: appState.push.token!));
+                  showSnack(context, 'Codice dispositivo copiato');
+                },
+              ),
+            ],
 
             // ---------------- Famiglia ----------------
             _header(context, 'Nuclei familiari'),
@@ -133,7 +186,7 @@ class SettingsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             Center(
-              child: Text('MyFleetManager 1.0',
+              child: Text('MyFleetManager 1.3.0',
                   style: TextStyle(fontSize: 12, color: scheme.outline)),
             ),
             const SizedBox(height: 24),
@@ -256,4 +309,73 @@ class SettingsScreen extends StatelessWidget {
                 fontSize: 24,
                 color: Theme.of(context).colorScheme.primary)),
       );
+}
+
+/// Stato dei permessi notifiche, aggiornato quando si torna nell'app
+/// (ad esempio dopo averli abilitati nelle impostazioni di Android).
+class _NotifyStatus extends StatefulWidget {
+  const _NotifyStatus();
+
+  @override
+  State<_NotifyStatus> createState() => _NotifyStatusState();
+}
+
+class _NotifyStatusState extends State<_NotifyStatus> with WidgetsBindingObserver {
+  ({bool enabled, bool exact})? _st;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+    _load();
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) _load();
+  }
+
+  Future<void> _load() async {
+    try {
+      final s = await appState.notifications.status();
+      if (mounted) setState(() => _st = s);
+    } catch (_) {}
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final st = _st;
+    if (st == null) return const SizedBox.shrink();
+    if (!st.enabled) {
+      return ListTile(
+        leading: Icon(Icons.notifications_off, color: Colors.red.shade700),
+        title: const Text('Notifiche bloccate', style: TextStyle(fontWeight: FontWeight.w600)),
+        subtitle: const Text('Tocca per consentirle. Se non compare nessuna richiesta: '
+            'Impostazioni Android → App → MyFleetManager → Notifiche → Consenti.'),
+        onTap: () async {
+          await appState.notifications.requestPermission();
+          await _load();
+        },
+      );
+    }
+    if (!st.exact) {
+      return ListTile(
+        leading: Icon(Icons.alarm_off, color: Colors.orange.shade800),
+        title: const Text('Promemoria non puntuali', style: TextStyle(fontWeight: FontWeight.w600)),
+        subtitle: const Text('Android potrebbe ritardare gli avvisi. Tocca e attiva '
+            '"Sveglie e promemoria" per MyFleetManager.'),
+        onTap: () => appState.notifications.requestExactAlarms(),
+      );
+    }
+    return ListTile(
+      leading: Icon(Icons.notifications_active, color: Colors.green.shade700),
+      title: const Text('Notifiche consentite'),
+    );
+  }
 }

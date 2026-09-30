@@ -8,6 +8,7 @@ import '../theme.dart';
 import 'auth_service.dart';
 import 'local_store.dart';
 import 'notification_service.dart';
+import 'push_service.dart';
 import 'sync_service.dart';
 
 enum SyncStatus { off, connecting, online, offline }
@@ -17,6 +18,7 @@ class AppState extends ChangeNotifier {
   late final AuthService auth = AuthService(store);
   final NotificationService notifications = NotificationService();
   final SyncService sync = SyncService();
+  final PushService push = PushService();
 
   bool loading = true;
   ThemeSettings theme = ThemeSettings();
@@ -75,6 +77,16 @@ class AppState extends ChangeNotifier {
     }
     loading = false;
     notifyListeners();
+    if (session != null) {
+      // Dopo l'intro: chiede il permesso notifiche (Android 13+) se non è già stato dato.
+      // Prima veniva chiesto solo al login, quindi chi aggiornava l'app restava senza.
+      Future.delayed(const Duration(seconds: 3), () async {
+        try {
+          await notifications.requestPermission();
+        } catch (_) {}
+        _scheduleNotifications();
+      });
+    }
   }
 
   Future<void> login(Session s) async {
@@ -90,12 +102,24 @@ class AppState extends ChangeNotifier {
     _scheduleNotifications();
     if (s.mode == AccountMode.cloud) {
       _startSync();
+      startPush();
     }
+  }
+
+  /// Registra il telefono per le notifiche push (solo account online).
+  Future<void> startPush() async {
+    final s = session;
+    if (s == null || s.mode != AccountMode.cloud || !auth.cloudAvailable) return;
+    await push.start(s.key, onForeground: (title, body) {
+      notifications.showRemote(title, body);
+    });
+    notifyListeners();
   }
 
   Future<void> logout() async {
     sync.stop();
     _retry?.cancel();
+    if (isCloud) await push.stop();
     await auth.logout(session);
     await store.writeSession(null);
     session = null;
@@ -166,6 +190,47 @@ class AppState extends ChangeNotifier {
     v.documents.clear();
     v.deleted = true;
     v.photoB64 = null;
+    await saveVehicle(v);
+  }
+
+  /// Sposta un veicolo in un altro parco (nucleo familiare o "I miei").
+  /// [fleetId] null = parco personale.
+  Future<void> moveVehicle(String id, String? fleetId) async {
+    final v = vehicleById(id);
+    if (v == null) return;
+    final moved = v.copy()..fleetId = fleetId;
+    await saveVehicle(moved);
+  }
+
+  // ---------------- Storico manutenzioni ----------------
+
+  /// Salva un intervento. Con [asService] aggiorna anche la data
+  /// dell'ultimo tagliando (e quindi il promemoria del prossimo).
+  Future<void> saveMaintenance(String vehicleId, MaintenanceRecord r,
+      {bool asService = false}) async {
+    final v = vehicleById(vehicleId);
+    if (v == null) return;
+    final i = v.maintenance.indexWhere((m) => m.id == r.id);
+    if (i >= 0) {
+      v.maintenance[i] = r;
+    } else {
+      v.maintenance.add(r);
+    }
+    if (asService) {
+      for (final d in v.deadlines) {
+        if (d.kind == DeadlineKind.service && (d.date == null || !r.date.isBefore(d.date!))) {
+          d.date = DateTime(r.date.year, r.date.month, r.date.day);
+          d.enabled = true;
+        }
+      }
+    }
+    await saveVehicle(v);
+  }
+
+  Future<void> deleteMaintenance(String vehicleId, String recordId) async {
+    final v = vehicleById(vehicleId);
+    if (v == null) return;
+    v.maintenance.removeWhere((m) => m.id == recordId);
     await saveVehicle(v);
   }
 
@@ -250,7 +315,10 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> retrySync() async {
-    if (isCloud) await _startSync();
+    if (isCloud) {
+      if (!push.registered) startPush();
+      await _startSync();
+    }
   }
 
   Future<void> _startSync() async {

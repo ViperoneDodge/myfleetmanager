@@ -175,6 +175,70 @@ class Deadline {
   Deadline copy() => Deadline.fromJson(toJson());
 }
 
+/// Voci selezionabili (checkbox) in un intervento di manutenzione.
+const List<String> maintenanceItems = [
+  'oil',
+  'oilFilter',
+  'airFilter',
+  'cabinFilter',
+  'fuelFilter',
+];
+
+String maintenanceItemLabel(String k) {
+  switch (k) {
+    case 'oil':
+      return 'Olio motore';
+    case 'oilFilter':
+      return 'Filtro olio';
+    case 'airFilter':
+      return 'Filtro aria';
+    case 'cabinFilter':
+      return 'Filtro abitacolo';
+    case 'fuelFilter':
+      return 'Filtro carburante';
+    default:
+      return k;
+  }
+}
+
+/// Intervento nello storico manutenzioni di un veicolo.
+class MaintenanceRecord {
+  String id;
+  DateTime date;
+  int? km;
+
+  /// Chiavi di [maintenanceItems] spuntate.
+  Set<String> items;
+  String notes;
+
+  MaintenanceRecord({
+    String? id,
+    required this.date,
+    this.km,
+    Set<String>? items,
+    this.notes = '',
+  })  : id = id ?? newId(8),
+        items = items ?? <String>{};
+
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'date': date.toIso8601String(),
+        'km': km,
+        'items': items.toList(),
+        'notes': notes,
+      };
+
+  factory MaintenanceRecord.fromJson(Map<String, dynamic> j) => MaintenanceRecord(
+        id: j['id'] as String?,
+        date: DateTime.tryParse((j['date'] as String?) ?? '') ?? DateTime.now(),
+        km: (j['km'] as num?)?.toInt(),
+        items: ((j['items'] as List?) ?? const []).map((e) => e.toString()).toSet(),
+        notes: j['notes'] as String? ?? '',
+      );
+
+  MaintenanceRecord copy() => MaintenanceRecord.fromJson(toJson());
+}
+
 class Vehicle {
   String id;
   VehicleType type;
@@ -185,6 +249,9 @@ class Vehicle {
   String? photoB64;
   List<Deadline> deadlines;
   List<VehicleDocument> documents;
+
+  /// Storico manutenzioni (sincronizzato con la famiglia).
+  List<MaintenanceRecord> maintenance;
   String notes;
   int updatedAt;
   String updatedBy;
@@ -204,6 +271,7 @@ class Vehicle {
     this.photoB64,
     List<Deadline>? deadlines,
     List<VehicleDocument>? documents,
+    List<MaintenanceRecord>? maintenance,
     this.notes = '',
     int? updatedAt,
     this.updatedBy = '',
@@ -212,6 +280,7 @@ class Vehicle {
   })  : id = id ?? newId(),
         deadlines = deadlines ?? defaultDeadlines(type),
         documents = documents ?? [],
+        maintenance = maintenance ?? [],
         updatedAt = updatedAt ?? DateTime.now().millisecondsSinceEpoch;
 
   static List<Deadline> defaultDeadlines(VehicleType t) => [
@@ -247,6 +316,10 @@ class Vehicle {
     return list;
   }
 
+  /// Manutenzioni dalla più recente.
+  List<MaintenanceRecord> get maintenanceSorted =>
+      List.of(maintenance)..sort((a, b) => b.date.compareTo(a.date));
+
   Deadline? get nextDeadline {
     final a = activeDeadlines;
     return a.isEmpty ? null : a.first;
@@ -262,6 +335,7 @@ class Vehicle {
         'photoB64': photoB64,
         'deadlines': deadlines.map((d) => d.toJson()).toList(),
         if (includeDocs) 'documents': documents.map((d) => d.toJson()).toList(),
+        'maintenance': maintenance.map((m) => m.toJson()).toList(),
         'notes': notes,
         'updatedAt': updatedAt,
         'updatedBy': updatedBy,
@@ -281,6 +355,10 @@ class Vehicle {
             [],
         documents: (j['documents'] as List?)
                 ?.map((e) => VehicleDocument.fromJson(Map<String, dynamic>.from(e as Map)))
+                .toList() ??
+            [],
+        maintenance: (j['maintenance'] as List?)
+                ?.map((e) => MaintenanceRecord.fromJson(Map<String, dynamic>.from(e as Map)))
                 .toList() ??
             [],
         notes: j['notes'] as String? ?? '',

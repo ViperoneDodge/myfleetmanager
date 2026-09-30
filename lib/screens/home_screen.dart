@@ -161,7 +161,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     textAlign: TextAlign.center),
               ]),
             ),
-          ...list.map((v) => VehicleCard(vehicle: v, onTap: () => _openDetail(v))),
+          ...list.map((v) => VehicleCard(
+                vehicle: v,
+                onTap: () => _openDetail(v),
+                onLongPress: () => moveVehicleSheet(context, v),
+              )),
+          if (list.isNotEmpty && appState.isCloud && appState.data.groups.isNotEmpty)
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Text(
+                'Tieni premuto un veicolo per aggiungerlo a un nucleo familiare.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 12, color: Theme.of(context).colorScheme.outline),
+              ),
+            ),
         ],
       ),
     );
