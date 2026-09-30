@@ -336,5 +336,19 @@
  "pro.devDisabled": "Pro за разработка е изключена",
  "type.truck": "Камион",
  "type.trucks": "Камиони",
- "deadline.tax": "Данък МПС"
+ "deadline.tax": "Данък МПС",
+ "groupAct.someone": "Член на групата",
+ "groupAct.added": "{who} добави {vehicle}",
+ "groupAct.edited": "{who} промени {vehicle}",
+ "groupAct.deleted": "{who} изтри {vehicle}",
+ "groupAct.many": "{n} промени в превозните средства на групата",
+ "settings.groupAlerts": "Известия за активност в групите",
+ "settings.groupAlertsInfo": "Известява ви, когато друг член добави, промени или изтрие превозно средство. При затворено приложение известието може да дойде с няколко минути закъснение.",
+ "crop.title": "Нагласяне на снимката",
+ "crop.rotate": "Завъртане",
+ "crop.reset": "Центриране",
+ "crop.hint": "Разтворете два пръста за увеличение, плъзнете за преместване",
+ "crop.original": "Оригинал",
+ "crop.use": "Използвай снимката",
+ "crop.adjust": "Нагласяне на снимката (увеличение и изрязване)"
 }

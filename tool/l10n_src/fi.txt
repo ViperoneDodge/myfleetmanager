@@ -1,0 +1,352 @@
+Auto
+Moottoripyörä
+Pakettiauto
+Perävaunu
+Autot
+Moottoripyörät
+Pakettiautot
+Perävaunut
+Asiakirja
+Vakuutus
+Katsastus
+Huolto
+Mukautettu
+Seuraava huolto
+Moottoriöljy
+Öljynsuodatin
+Ilmansuodatin
+Raitisilmasuodatin
+Polttoainesuodatin
+Ryhmä
+Viivoitettu
+Ruudutettu
+Pisteytetty
+Tyhjä
+Sininen
+Metsänvihreä
+Kilpapunainen
+Oranssi
+Petrolinsininen
+Violetti
+Grafiitti
+Nahka
+Umpeutui eilen
+Umpeutui {n} päivää sitten
+Erääntyy tänään
+Erääntyy huomenna
+{n} päivän päästä
+Nimetön
+Ei määräaikoja
+Ajoneuvojen määräajat
+Muistutukset vakuutuksesta, katsastuksesta, huollosta ja muista määräajoista
+Ryhmien toiminta
+Push-ilmoitukset ryhmissä jaetuista ajoneuvoista
+1 kuukausi ennen
+1 viikko ennen
+1 päivä ennen
+Eräpäivänä
+{n} päivää ennen
+1 kuukauden päästä
+1 viikon päästä
+huomenna
+{n} päivän päästä
+{what} erääntyy tänään
+{what}: erääntyy {when}
+{vehicle} · eräpäivä {date}
+Testimuistutus
+Jos luet tätä, ajastetut muistutukset toimivat myös sovelluksen ollessa suljettuna.
+Ilmoitukset käytössä
+Saat muistutuksia ajoneuvojesi määräajoista.
+Käyttäjänimessä on oltava vähintään 3 merkkiä.
+Salasanassa on oltava vähintään 4 merkkiä.
+Käyttäjänimi on jo olemassa tässä puhelimessa.
+Käyttäjää ei löytynyt tästä puhelimesta.
+Väärä salasana.
+Käyttäjä
+Virheellinen sähköpostiosoite.
+Väärä sähköposti tai salasana.
+Tällä sähköpostilla on jo tili.
+Liian heikko salasana (vähintään 6 merkkiä).
+Ensimmäiseen verkkokirjautumiseen tarvitaan internetyhteys.
+Rekisteröityminen sähköpostilla ei ole käytössä: ota Firebase-konsolissa käyttöön kirjautumistapa Sähköposti/salasana.
+Liian monta yritystä: yritä uudelleen muutaman minuutin kuluttua.
+Tili on poistettu käytöstä.
+Kirjautumisvirhe ({code}).
+Google-kirjautuminen peruttu.
+Google-kirjautuminen epäonnistui: {error}
+Virheellinen koodi.
+Palvelin esti pääsyn: julkaise Firestore-säännöt (tiedosto firestore.rules) Firebase-konsolissa.
+Tietokantaa ei ole: luo Firestore Database Firebase-konsolissa.
+Palvelimeen ei saada yhteyttä: tarkista internetyhteys.
+Istunto vanhentui: kirjaudu ulos ja takaisin sisään verkkotilillä.
+Palvelinvirhe ({code}).
+Omat ajoneuvot
+Synkronoitu
+Yhdistetään…
+Offline-tilassa: tiedot on tallennettu puhelimeen. Yritä uudelleen napauttamalla.
+Ryhmät
+Määräajat
+Omat
+Asetukset
+Lisää
+Kaikki ({n})
+Ei ajoneuvoja
+Lisää ensimmäinen ajoneuvosi napauttamalla "Lisää".
+Siirrä ajoneuvo ryhmään painamalla sitä pitkään.
+Ei määräaikoja.
+Ajoneuvojesi määräaikojen muistikirja
+Otetaanko ajoneuvot mukaan?
+Haluatko kopioida ajoneuvosi (määräajat, huollot ja asiakirjat) verkkotilille? Paikallinen tili jää joka tapauksessa tähän puhelimeen.
+Haluatko kopioida {n} ajoneuvoasi (määräajat, huollot ja asiakirjat) verkkotilille? Paikallinen tili jää joka tapauksessa tähän puhelimeen.
+Kyllä, kopioi
+Ei
+Käytät nyt verkkotiliä.
+Käytät nyt verkkotiliä: 1 ajoneuvo kopioitu.
+Käytät nyt verkkotiliä: {n} ajoneuvoa kopioitu.
+Vaihda verkkotiliin jakaaksesi ajoneuvoja muiden kanssa
+Kirjoita ensin sähköpostiosoitteesi yllä olevaan kenttään.
+Lähetimme osoitteeseen {email} viestin salasanan vaihtamista varten.
+Täytä kaikki kentät.
+Salasanat eivät täsmää.
+Ajoneuvojesi määräajat aina hallinnassa
+Verkkotili
+Vain puhelin
+Tili tallennetaan vain tähän puhelimeen. Ei jakamista.
+Voit jakaa ajoneuvoja muiden kanssa ryhmien avulla. Tiedot säilyvät myös puhelimessa.
+Käyttäjänimi
+Sähköposti
+Salasana
+Toista salasana
+Luo tili
+Kirjaudu
+Onko sinulla jo tili? Kirjaudu
+Ei tiliä? Rekisteröidy
+Unohditko salasanan?
+tai
+Kirjaudu Googlella
+Googlen kautta sovellus saa vain sähköpostiosoitteesi.
+Tiedot pysyvät tässä puhelimessa. Google-kirjautuminen ja jaetut ryhmät tulevat myöhemmässä päivityksessä.
+Sulje
+Peruuta
+Luo
+Tallenna
+Kopioi
+Poista
+Poista
+Jaetut ajoneuvot
+Ajoneuvojen jakamiseen ryhmässä tarvitaan verkkotili. Voit vaihtaa kirjautumatta ulos ja menettämättä ajoneuvojasi.
+Verkkojakaminen ei ole vielä käytössä tässä sovellusversiossa.
+Vaihda verkkotiliin
+Ei vielä ryhmiä
+Luo ryhmä (perhe, ystävät, työ…) ja anna kutsukoodi muille, tai liity ryhmään saamallasi koodilla.
+Luo ryhmä
+Liity koodilla
+1 jäsen
+{n} jäsentä
+1 ajoneuvo
+{n} ajoneuvoa
+Tässä ryhmässä ei ole vielä ajoneuvoja.
+Lisää ajoneuvo ryhmään "{name}"
+Ajoneuvon jakamiseen tarvitaan verkkotili.
+Ajoneuvo
+Siirrä "{name}" ryhmään
+Siirrä "{name}"
+Ajoneuvo siirtyy valittuun ryhmään, ja kaikki jäsenet näkevät ja voivat muokata sitä.
+Ajoneuvo poistetaan ryhmästä "{name}".
+Et ole vielä missään ryhmässä
+Luo ryhmä tai liity koodilla Ryhmät-välilehdeltä.
+Vain sinä näet sen
+"{name}" on nyt ryhmässä "{where}"
+Uusi ryhmä
+Nimi (esim. Virtasen perhe, Korjaamo, Ystävät)
+Kutsukoodi
+Anna ryhmän kutsukoodi.
+Esim. AB12CD34EF
+Liity
+Liityit ryhmään "{name}"!
+Ryhmä ei ole saatavilla.
+Koodi kopioitu: liitä se WhatsAppiin tai tekstiviestiin
+Toinen henkilö asentaa sovelluksen, kirjautuu verkkotilillä, avaa Ryhmät-välilehden → "Liity koodilla" ja antaa tämän koodin.
+Jäsenet ({n})
+(sinä)
+Luoja
+Nimeä ryhmä uudelleen
+Poista ryhmä
+Poistu ryhmästä
+Kaikki jäsenet menettävät pääsyn ryhmän ajoneuvoihin
+Et enää näe tämän ryhmän ajoneuvoja
+Ryhmän nimi
+Poistetaanko jäsen?
+{email} ei enää näe ryhmän "{name}" ajoneuvoja.
+Poistetaanko ryhmä?
+Poistutaanko ryhmästä?
+"{name}" poistetaan kaikilta jäseniltä ajoneuvoineen.
+Ryhmän "{name}" ajoneuvot katoavat tästä puhelimesta.
+Poistu
+Tili
+Verkkotili · tiedot tallennettu puhelimeen ja jaettu ryhmissä
+Tili vain tässä puhelimessa
+Jaa ajoneuvoja muiden kanssa kirjautumatta ulos: voit ottaa tämän tilin ajoneuvot mukaan.
+Kieli
+Kuten puhelimessa
+Ilmoitukset
+Milloin haluat muistutuksen ennen määräaikaa?
+Kaikki muistutukset
+Ilmoitusten kellonaika
+Testaa ilmoitus
+Tarkista, että ilmoitukset on sallittu
+Ajastetut ilmoitukset: {n}
+Testimuistutus 1 minuutin päästä
+Sulje sitten sovellus: jos ilmoitus tulee, muistutukset toimivat
+Testimuistutus ajastettu: voit sulkea sovelluksen.
+Ajastus epäonnistui: {error}
+Joissakin puhelimissa (Xiaomi, Huawei, Samsung, Oppo…) virransäästö estää muistutukset: valitse Androidin asetukset → Sovellukset → MyFleetManager → Akku → "Rajoittamaton".
+Push-ilmoitukset
+Puhelin rekisteröity pushia varten
+Puhelinta ei ole vielä rekisteröity
+Kopioi laitekoodi napauttamalla (tarvitaan testiin Firebase-konsolista)
+Yritä uudelleen napauttamalla (vaatii internetin)
+Rekisteröinti epäonnistui: tarkista yhteys.
+Laitekoodi kopioitu
+Ryhmät
+Jaa ajoneuvoja ryhmässä vaihtamalla verkkotiliin (yllä, kohdassa Tili).
+Kirjaudu ulos
+Tiedot säilyvät puhelimessa
+Ulkoasu
+Vaalea
+Tumma
+Auto
+Kannen väri
+Sivujen tausta
+koodi {code}
+Liity kutsukoodilla
+Ilmoitukset estetty
+Salli ne napauttamalla. Jos pyyntöä ei tule: Androidin asetukset → Sovellukset → MyFleetManager → Ilmoitukset → Salli.
+Muistutukset voivat myöhästyä
+Android voi viivästyttää muistutuksia. Napauta ja salli "Hälytykset ja muistutukset" MyFleetManagerille.
+Ilmoitukset sallittu
+Poistetaanko ajoneuvo?
+"{name}", sen määräajat ja asiakirjat poistetaan.
+"{name}", sen määräajat ja asiakirjat poistetaan (määräajat myös ryhmän muilta jäseniltä).
+Rekisteröintitodistus
+Vakuutuskirja
+Katsastustodistus
+Ajoneuvovero
+Huoltolasku
+Asiakirjan nimi
+Esim. Rekisteröintitodistus
+Lisää asiakirja
+Kuvaa asiakirja
+Kuva galleriasta
+PDF-tiedosto tai kuva
+Puhelimen tiedostoista, Drivesta, latauksista…
+Tiedoston avaaminen epäonnistui: {error}
+Asiakirja tallennettu
+Virhe tallennuksessa: {error}
+Tiedostoa ei löytynyt puhelimesta.
+Ei sovellusta PDF-tiedostojen avaamiseen: {error}
+Avaa
+Nimeä uudelleen
+Poistetaanko asiakirja?
+"{name}" poistetaan puhelimesta.
+Ajoneuvoa ei löytynyt.
+Muokkaa
+Ei seurattavia määräaikoja.
+Huolto
+Kirjaa tähän huollot ja työt: päivämäärä, mittarilukema ja vaihdetut suodattimet.
+Asiakirjat
+Tallenna tähän rekisteröintitodistus, vakuutuskirja ja muut asiakirjat (kuvat tai PDF).
+Kuva
+Asiakirjat säilyvät vain tässä puhelimessa.
+Muistiinpanot
+Viimeksi muokattu: {who} · {date}
+Viimeisin: {date}
+Seuraava: {date} ({n} kuukauden välein)
+Päivämäärää ei asetettu
+Eräpäivä {date}
+Ota kuva
+Valitse galleriasta
+Poista kuva
+Kuvan lataaminen epäonnistui: {error}
+Lisää kuva
+Viimeisimmän huollon päivämäärä
+Eräpäivä: {what}
+Anna vähintään nimi tai rekisterinumero.
+Mukautettu määräaika
+Uusi ajoneuvo
+Muokkaa ajoneuvoa
+Ajoneuvotyyppi
+Mihin se kuuluu
+Ryhmä: {name}
+Nimi (esim. Markun Panda)
+Rekisterinumero
+Seurattavat määräajat
+Ota käyttöön vain haluamasi. Saat ilmoitukset asetustesi mukaan.
+Lisää mukautettu määräaika
+Esim. ajoneuvovero, talvirenkaat, takuu, jakohihna…
+Muistiinpanot (valinnainen)
+Määräajan nimi (esim. Ajoneuvovero)
+Viimeisin huolto
+Valitse päivämäärä
+Seuraava muistutus:
+ei mitään
+{n} kuukauden jälkeen
+Valitse vähintään yksi kohta tai kirjoita muistiinpano.
+Poistetaanko tämä merkintä?
+Merkintä {date} poistetaan historiasta.
+Uusi huolto
+Huolto
+Päivämäärä
+Mittarilukema
+Tehdyt työt
+Muistiinpanot (korjaamo, hinta, muut osat…)
+Laske huolloksi
+Päivittää viimeisimmän huollon päivämäärän ja seuraavan muistutuksen
+OK
+Ajoneuvot
+Valitse ajoneuvo luettelosta
+Pro-versio
+Päivitä MyFleetManager Prohon
+Yksi ostos, ikuisesti: ei tilausta.
+Pro-versio käytössä
+Kiitos, että tuet MyFleetManageria!
+Pro avattu kehittäjäkoodilla
+Rajattomasti ajoneuvoja
+Pakettiautot, kuorma-autot ja perävaunut
+Ajoneuvon asiakirjat (rekisteröintitodistus, vakuutus…)
+Huoltohistoria
+Tue sovelluksen kehitystä
+Ilmainen versio: enintään {n} ajoneuvoa (autoja tai moottoripyöriä) määräaikoineen ja ilmoituksineen.
+Osta Pro
+Osta Pro · {price}
+Ostaminen on mahdollista, kun sovellus on asennettu Play Kaupasta.
+Palauta ostos
+Etsitään aiempia ostoksia…
+Maksa kerran, sinun ikuisesti.
+Ilmainen versio hallitsee enintään {n} ajoneuvoa. Päivitä Prohon lisätäksesi enemmän.
+{type}: saatavilla Pro-versiossa.
+Ajoneuvon asiakirjat ovat saatavilla Pro-versiossa.
+Huoltohistoria on saatavilla Pro-versiossa.
+Kehittäjäkoodi
+Anna koodi
+Pro avattu (kehitys)
+Virheellinen koodi
+Poista kehittäjä-Pro käytöstä
+Kehittäjä-Pro poistettu käytöstä
+Kuorma-auto
+Kuorma-autot
+Ajoneuvovero
+Ryhmän jäsen
+{who} lisäsi: {vehicle}
+{who} muokkasi: {vehicle}
+{who} poisti: {vehicle}
+Ryhmän ajoneuvojen muutokset: {n}
+Ryhmien toimintailmoitukset
+Ilmoittaa, kun toinen jäsen lisää, muokkaa tai poistaa ajoneuvon. Kun sovellus on suljettu, ilmoitus voi tulla muutaman minuutin viiveellä.
+Säädä kuvaa
+Kierrä
+Keskitä
+Zoomaa nipistämällä, siirrä vetämällä
+Alkuperäinen
+Käytä kuvaa
+Säädä kuvaa (zoomaus ja rajaus)

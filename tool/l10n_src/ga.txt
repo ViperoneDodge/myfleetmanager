@@ -1,0 +1,352 @@
+Carr
+Gluaisrothar
+Veain
+Leantóir
+Carranna
+Gluaisrothair
+Veaineanna
+Leantóirí
+Doiciméad
+Árachas
+NCT
+Seirbhís
+Saincheaptha
+An chéad seirbhís eile
+Ola innill
+Scagaire ola
+Scagaire aeir
+Scagaire cábáin
+Scagaire breosla
+Grúpa
+Línithe
+Cearnógach
+Poncanna
+Glan
+Gorm
+Glas foraoise
+Dearg rásaíochta
+Oráiste
+Gorm peitril
+Corcra
+Graifít
+Leathar
+D'éag inné
+D'éag {n} lá ó shin
+Dlite inniu
+Dlite amárach
+I gceann {n} lá
+Gan ainm
+Níl aon spriocdhátaí socraithe
+Spriocdhátaí na bhfeithiclí
+Meabhrúcháin don árachas, NCT, seirbhís agus spriocdhátaí eile
+Gníomhaíocht grúpaí
+Fógraí brú faoi fheithiclí a roinntear i ngrúpaí
+Mí roimh ré
+Seachtain roimh ré
+Lá roimh ré
+Ar an lá dlite
+{n} lá roimh ré
+i gceann míosa
+i gceann seachtaine
+amárach
+i gceann {n} lá
+{what} dlite inniu
+{what}: dlite {when}
+{vehicle} · dlite ar {date}
+Meabhrúchán tástála
+Má tá tú in ann é seo a léamh, oibríonn meabhrúcháin sceidealta fiú nuair atá an aip dúnta.
+Fógraí cumasaithe
+Gheobhaidh tú meabhrúcháin faoi spriocdhátaí d'fheithiclí.
+Caithfidh 3 charachtar ar a laghad a bheith san ainm úsáideora.
+Caithfidh 4 charachtar ar a laghad a bheith sa phasfhocal.
+Tá an t-ainm úsáideora seo ar an bhfón seo cheana.
+Níor aimsíodh an t-úsáideoir ar an bhfón seo.
+Pasfhocal mícheart.
+Úsáideoir
+Ríomhphost neamhbhailí.
+Ríomhphost nó pasfhocal mícheart.
+Tá cuntas leis an ríomhphost seo ann cheana.
+Pasfhocal ró-lag (6 charachtar ar a laghad).
+Tá idirlíon ag teastáil don chéad síniú isteach ar líne.
+Níl clárú le ríomhphost cumasaithe: i gconsól Firebase cumasaigh an modh sínithe isteach Ríomhphost/Pasfhocal.
+An iomarca iarrachtaí: bain triail eile as i gceann cúpla nóiméad.
+Díchumasaíodh an cuntas seo.
+Earráid sínithe isteach ({code}).
+Cealaíodh síniú isteach le Google.
+Theip ar shíniú isteach le Google: {error}
+Cód neamhbhailí.
+Dhiúltaigh an freastalaí rochtain: i gconsól Firebase foilsigh rialacha Firestore (comhad firestore.rules).
+Níl an bunachar sonraí ann: cruthaigh Firestore Database i gconsól Firebase.
+Níl an freastalaí ar fáil: seiceáil an ceangal idirlín.
+Chuaigh an seisiún in éag: sínigh amach agus isteach arís leis an gcuntas ar líne.
+Earráid freastalaí ({code}).
+Mo fheithiclí
+Sioncrónaithe
+Ag ceangal…
+As líne: tá na sonraí sábháilte ar an bhfón. Tapáil le triail arís.
+Grúpaí
+Spriocdhátaí
+Mo chuid
+Socruithe
+Cuir leis
+Gach ceann ({n})
+Níl aon fheithiclí
+Tapáil "Cuir leis" chun do chéad fheithicil a iontráil.
+Brúigh agus coinnigh feithicil chun í a bhogadh chuig grúpa.
+Níl aon spriocdhátaí socraithe.
+Leabhar nótaí spriocdhátaí d'fheithiclí
+Do chuid feithiclí a thabhairt leat?
+Ar mhaith leat d'fheithicil (le spriocdhátaí, cothabháil agus doiciméid) a chóipeáil chuig an gcuntas ar líne? Fanfaidh an cuntas áitiúil ar an bhfón seo ar aon nós.
+Ar mhaith leat do {n} fheithicil (le spriocdhátaí, cothabháil agus doiciméid) a chóipeáil chuig an gcuntas ar líne? Fanfaidh an cuntas áitiúil ar an bhfón seo ar aon nós.
+Cóipeáil
+Ná cóipeáil
+Tá an cuntas ar líne in úsáid agat anois.
+Tá an cuntas ar líne in úsáid agat anois: cóipeáladh 1 fheithicil.
+Tá an cuntas ar líne in úsáid agat anois: cóipeáladh {n} fheithicil.
+Aistrigh go cuntas ar líne chun feithiclí a roinnt le daoine eile
+Scríobh do ríomhphost sa réimse thuas ar dtús.
+Sheolamar ríomhphost chuig {email} chun an pasfhocal a athshocrú.
+Líon isteach gach réimse.
+Ní hionann na pasfhocail.
+Spriocdhátaí d'fheithiclí, i gcónaí faoi smacht
+Cuntas ar líne
+Fón amháin
+Cuntas sábháilte ar an bhfón seo amháin. Gan roinnt.
+Ligeann sé duit feithiclí a roinnt le daoine eile trí ghrúpaí. Fanann na sonraí ar an bhfón freisin.
+Ainm úsáideora
+Ríomhphost
+Pasfhocal
+Athscríobh an pasfhocal
+Cruthaigh cuntas
+Sínigh isteach
+Cuntas agat cheana? Sínigh isteach
+Gan cuntas? Cláraigh
+Pasfhocal dearmadta?
+nó
+Sínigh isteach le Google
+Le Google ní fhaigheann an aip ach do sheoladh ríomhphoist.
+Fanann na sonraí ar an bhfón seo. Tiocfaidh síniú isteach le Google agus grúpaí comhroinnte i nuashonrú amach anseo.
+Dún
+Cealaigh
+Cruthaigh
+Sábháil
+Cóipeáil
+Bain
+Scrios
+Feithiclí comhroinnte
+Chun feithiclí a roinnt i ngrúpa tá cuntas ar líne ag teastáil. Is féidir aistriú gan síniú amach agus gan d'fheithiclí a chailleadh.
+Níl roinnt ar líne gníomhach fós sa leagan seo den aip.
+Aistrigh go cuntas ar líne
+Níl aon ghrúpaí fós
+Cruthaigh grúpa (teaghlach, cairde, obair…) agus tabhair an cód cuiridh do dhaoine eile, nó téigh isteach i ngrúpa leis an gcód a fuair tú.
+Cruthaigh grúpa
+Téigh isteach le cód
+1 bhall
+{n} ball
+1 fheithicil
+{n} feithicil
+Níl aon fheithiclí sa ghrúpa seo fós.
+Cuir feithicil le "{name}"
+Tá cuntas ar líne ag teastáil chun feithicil a roinnt.
+Feithicil
+Bog "{name}" chuig grúpa
+Bog "{name}"
+Bogann an fheithicil chuig an ngrúpa roghnaithe agus feicfidh gach ball í agus beidh siad in ann í a chur in eagar.
+Bainfear an fheithicil de "{name}".
+Níl tú i ngrúpa ar bith fós
+Cruthaigh ceann nó téigh isteach le cód ón gcluaisín Grúpaí.
+Is tusa amháin a fheiceann í
+Tá "{name}" anois i "{where}"
+Grúpa nua
+Ainm (m.sh. Teaghlach Uí Bhriain, Ceardlann, Cairde)
+Cód cuiridh
+Iontráil cód cuiridh an ghrúpa.
+M.sh. AB12CD34EF
+Téigh isteach
+Chuaigh tú isteach i "{name}"!
+Níl an grúpa ar fáil.
+Cóipeáladh an cód: greamaigh é i WhatsApp nó i SMS
+Suiteálann an duine eile an aip, síníonn isteach le cuntas ar líne, osclaíonn an cluaisín Grúpaí → "Téigh isteach le cód" agus iontrálann an cód seo.
+Baill ({n})
+(tusa)
+Cruthaitheoir
+Athainmnigh an grúpa
+Scrios an grúpa
+Fág an grúpa
+Cailleann gach ball rochtain ar fheithiclí an ghrúpa
+Ní fheicfidh tú feithiclí an ghrúpa seo níos mó
+Ainm an ghrúpa
+Ball a bhaint?
+Ní fheicfidh {email} feithiclí "{name}" níos mó.
+An grúpa a scriosadh?
+An grúpa a fhágáil?
+Scriosfar "{name}" do gach ball, mar aon lena fheithiclí.
+Imeoidh feithiclí "{name}" ón bhfón seo.
+Fág
+Cuntas
+Cuntas ar líne · sonraí ar an bhfón agus comhroinnte i ngrúpaí
+Cuntas ar an bhfón seo amháin
+Roinn feithiclí le daoine eile gan síniú amach: is féidir leat feithiclí an chuntais seo a thabhairt leat.
+Teanga
+Mar an fón
+Fógraí
+Cathain ba mhaith leat meabhrúchán roimh spriocdháta?
+Gach meabhrúchán
+Am na bhfógraí
+Tástáil fógra
+Seiceáil go bhfuil fógraí ceadaithe
+Fógraí sceidealta: {n}
+Meabhrúchán tástála i gceann nóiméid
+Ansin dún an aip: má thagann an fógra, oibríonn na meabhrúcháin
+Meabhrúchán tástála sceidealta: is féidir leat an aip a dhúnadh.
+Níorbh fhéidir sceideal a dhéanamh: {error}
+Ar roinnt fón (Xiaomi, Huawei, Samsung, Oppo…) cuireann coigilt ceallraí bac ar mheabhrúcháin: i Socruithe Android → Aipeanna → MyFleetManager → Ceallra roghnaigh "Gan srian".
+Fógraí brú
+Tá an fón cláraithe le haghaidh brú
+Níl an fón cláraithe fós
+Tapáil chun cód an ghléis a chóipeáil (ag teastáil le haghaidh tástála ó chonsól Firebase)
+Tapáil le triail arís (idirlíon ag teastáil)
+Theip ar an gclárú: seiceáil an ceangal.
+Cóipeáladh cód an ghléis
+Grúpaí
+Chun feithiclí a roinnt i ngrúpa, aistrigh go cuntas ar líne (thuas, sa chuid Cuntas).
+Sínigh amach
+Fanann do shonraí sábháilte ar an bhfón
+Cuma
+Geal
+Dorcha
+Uathoibríoch
+Dath an chlúdaigh
+Cúlra na leathanach
+cód {code}
+Téigh isteach le cód cuiridh
+Fógraí blocáilte
+Tapáil chun iad a cheadú. Mura dtagann iarratas: Socruithe Android → Aipeanna → MyFleetManager → Fógraí → Ceadaigh.
+D'fhéadfadh meabhrúcháin a bheith déanach
+Is féidir le Android meabhrúcháin a mhoilliú. Tapáil agus cumasaigh "Aláraim agus meabhrúcháin" do MyFleetManager.
+Fógraí ceadaithe
+An fheithicil a scriosadh?
+Scriosfar "{name}", a spriocdhátaí agus a doiciméid.
+Scriosfar "{name}", a spriocdhátaí agus a doiciméid (na spriocdhátaí do bhaill eile an ghrúpa freisin).
+Teastas clárúcháin
+Polasaí árachais
+Teastas NCT
+Cáin mhótair
+Sonrasc seirbhíse
+Ainm an doiciméid
+M.sh. Teastas clárúcháin
+Cuir doiciméad leis
+Tóg grianghraf den doiciméad
+Íomhá ón ngailearaí
+Comhad PDF nó íomhá
+Ó chomhaid an fhóin, Drive, íoslódálacha…
+Níorbh fhéidir an comhad a oscailt: {error}
+Doiciméad sábháilte
+Earráid le linn sábhála: {error}
+Níor aimsíodh an comhad ar an bhfón.
+Níl aip ann chun PDF a oscailt: {error}
+Oscail
+Athainmnigh
+An doiciméad a scriosadh?
+Scriosfar "{name}" ón bhfón.
+Níor aimsíodh an fheithicil.
+Cuir in eagar
+Níl aon spriocdhátaí á leanúint.
+Cothabháil
+Taifead seirbhísí agus obair anseo: dáta, míleáiste agus scagairí athraithe.
+Doiciméid
+Coinnigh anseo an teastas clárúcháin, an polasaí agus doiciméid eile (grianghraif nó PDF).
+Íomhá
+Fanann na doiciméid ar an bhfón seo amháin.
+Nótaí
+Athrú deireanach: {who} · {date}
+Deireanach: {date}
+An chéad cheann eile: {date} (gach {n} mí)
+Níl dáta socraithe
+Dlite ar {date}
+Tóg grianghraf
+Roghnaigh ón ngailearaí
+Bain an grianghraf
+Níorbh fhéidir an grianghraf a lódáil: {error}
+Cuir grianghraf leis
+Dáta na seirbhíse deireanaí
+Dáta dlite: {what}
+Iontráil an t-ainm nó an uimhir chláraithe ar a laghad.
+Spriocdháta saincheaptha
+Feithicil nua
+Cuir an fheithicil in eagar
+Cineál feithicle
+Cá mbaineann sí
+Grúpa: {name}
+Ainm (m.sh. Panda Mhairc)
+Uimhir chláraithe
+Spriocdhátaí le leanúint
+Cumasaigh na cinn a bhfuil suim agat iontu amháin. Gheobhaidh tú fógraí de réir do shocruithe.
+Cuir spriocdháta saincheaptha leis
+M.sh. cáin mhótair, boinn gheimhridh, baránta, crios uainithe…
+Nótaí (roghnach)
+Ainm an spriocdháta (m.sh. Cáin mhótair)
+Seirbhís dheireanach
+Roghnaigh dáta
+An chéad mheabhrúchán eile:
+dada
+tar éis {n} mí
+Roghnaigh mír amháin ar a laghad nó scríobh nóta.
+An iontráil seo a scriosadh?
+Bainfear iontráil {date} den stair.
+Cothabháil nua
+Cothabháil
+Dáta
+Míleáiste
+Obair a rinneadh
+Nótaí (garáiste, costas, páirteanna eile…)
+Áirigh mar sheirbhís
+Nuashonraíonn sé dáta na seirbhíse deireanaí agus an chéad mheabhrúchán eile
+OK
+Feithiclí
+Roghnaigh feithicil ón liosta
+Leagan Pro
+Uasghrádaigh go MyFleetManager Pro
+Ceannach amháin, go deo: gan síntiús.
+Leagan Pro gníomhach
+Go raibh maith agat as tacú le MyFleetManager!
+Díghlasáladh Pro le cód an fhorbróra
+Feithiclí gan teorainn
+Veaineanna, trucailí agus leantóirí
+Doiciméid feithicle (teastas clárúcháin, polasaí…)
+Stair chothabhála
+Tacaigh le forbairt na haipe
+Leagan saor in aisce: suas le {n} feithicil (carranna nó gluaisrothair) le spriocdhátaí agus fógraí.
+Ceannaigh Pro
+Ceannaigh Pro · {price}
+Beidh an ceannach ar fáil nuair a shuiteáiltear an aip ón Play Store.
+Athchóirigh ceannach
+Ag cuardach ceannachán roimhe seo…
+Íoc uair amháin, is leatsa é go deo.
+Láimhseálann an leagan saor in aisce suas le {n} feithicil. Uasghrádaigh go Pro chun tuilleadh a chur leis.
+{type}: ar fáil sa leagan Pro.
+Tá doiciméid feithicle ar fáil sa leagan Pro.
+Tá an stair chothabhála ar fáil sa leagan Pro.
+Cód forbróra
+Iontráil an cód
+Díghlasáladh Pro (forbairt)
+Cód neamhbhailí
+Múch Pro forbartha
+Múchadh Pro forbartha
+Trucail
+Trucailí
+Cáin mhótair
+Ball den ghrúpa
+Chuir {who} {vehicle} leis
+Chuir {who} {vehicle} in eagar
+Scrios {who} {vehicle}
+{n} athrú ar fheithiclí an ghrúpa
+Foláirimh ghníomhaíochta grúpa
+Cuireann sé in iúl duit nuair a chuireann ball eile feithicil leis, nuair a athraíonn sé í nó nuair a scriosann sé í. Nuair atá an aip dúnta, d'fhéadfadh an foláireamh teacht cúpla nóiméad déanach.
+Coigeartaigh grianghraf
+Rothlaigh
+Láraigh
+Fáisc chun súmáil, tarraing chun bogadh
+Bunaidh
+Úsáid grianghraf
+Coigeartaigh grianghraf (súmáil agus bearradh)

@@ -42,7 +42,6 @@ class L10n {
     'ja': '日本語',
     'ko': '한국어',
     'hi': 'हिन्दी',
-    'ar': 'العربية',
     'id': 'Bahasa Indonesia',
     'vi': 'Tiếng Việt',
     'th': 'ไทย',

@@ -1,0 +1,352 @@
+Autoturism
+Motocicletă
+Dubă
+Remorcă
+Autoturisme
+Motociclete
+Dube
+Remorci
+Document
+Asigurare
+ITP
+Revizie
+Personalizat
+Următoarea revizie
+Ulei de motor
+Filtru de ulei
+Filtru de aer
+Filtru de habitaclu
+Filtru de combustibil
+Grup
+Liniat
+Cu pătrățele
+Cu puncte
+Simplu
+Albastru
+Verde pădure
+Roșu de curse
+Portocaliu
+Albastru petrol
+Violet
+Grafit
+Piele
+A expirat ieri
+A expirat acum {n} zile
+Expiră azi
+Expiră mâine
+Peste {n} zile
+Fără nume
+Niciun termen setat
+Termenele vehiculelor
+Mementouri pentru asigurare, ITP, revizie și alte termene
+Activitatea grupurilor
+Notificări push despre vehiculele partajate în grupuri
+Cu 1 lună înainte
+Cu 1 săptămână înainte
+Cu 1 zi înainte
+În ziua termenului
+Cu {n} zile înainte
+peste 1 lună
+peste 1 săptămână
+mâine
+peste {n} zile
+{what} expiră azi
+{what}: expiră {when}
+{vehicle} · expiră pe {date}
+Memento de test
+Dacă poți citi asta, mementourile programate funcționează și cu aplicația închisă.
+Notificări activate
+Vei primi mementouri pentru termenele vehiculelor tale.
+Numele de utilizator trebuie să aibă cel puțin 3 caractere.
+Parola trebuie să aibă cel puțin 4 caractere.
+Acest nume de utilizator există deja pe acest telefon.
+Utilizatorul nu a fost găsit pe acest telefon.
+Parolă greșită.
+Utilizator
+E-mail invalid.
+E-mail sau parolă greșite.
+Există deja un cont cu acest e-mail.
+Parolă prea slabă (cel puțin 6 caractere).
+Pentru prima autentificare online este nevoie de internet.
+Înregistrarea cu e-mail nu este activă: în consola Firebase activează metoda de autentificare E-mail/parolă.
+Prea multe încercări: încearcă din nou peste câteva minute.
+Acest cont a fost dezactivat.
+Eroare de autentificare ({code}).
+Autentificarea cu Google a fost anulată.
+Autentificarea cu Google a eșuat: {error}
+Cod invalid.
+Serverul a refuzat accesul: în consola Firebase publică regulile Firestore (fișierul firestore.rules).
+Baza de date nu există: creează Firestore Database în consola Firebase.
+Server inaccesibil: verifică conexiunea la internet.
+Sesiune expirată: deconectează-te și conectează-te din nou cu contul online.
+Eroare de server ({code}).
+Vehiculele mele
+Sincronizat
+Conectare…
+Offline: datele sunt salvate pe telefon. Atinge pentru a reîncerca.
+Grupuri
+Termene
+Ale mele
+Setări
+Adaugă
+Toate ({n})
+Niciun vehicul
+Atinge „Adaugă” pentru a introduce primul vehicul.
+Ține apăsat pe un vehicul pentru a-l muta într-un grup.
+Niciun termen setat.
+Agenda termenelor vehiculelor tale
+Îți iei vehiculele cu tine?
+Vrei să copiezi vehiculul (cu termene, întreținere și documente) în contul online? Contul local rămâne oricum pe acest telefon.
+Vrei să copiezi cele {n} vehicule (cu termene, întreținere și documente) în contul online? Contul local rămâne oricum pe acest telefon.
+Da, copiază
+Nu
+Acum folosești contul online.
+Acum folosești contul online: 1 vehicul copiat.
+Acum folosești contul online: {n} vehicule copiate.
+Treci la un cont online pentru a partaja vehicule cu alte persoane
+Mai întâi scrie adresa de e-mail în câmpul de mai sus.
+Am trimis un e-mail la {email} pentru resetarea parolei.
+Completează toate câmpurile.
+Parolele nu coincid.
+Termenele vehiculelor tale, mereu sub control
+Cont online
+Doar telefon
+Cont salvat doar pe acest telefon. Fără partajare.
+Îți permite să partajezi vehicule cu alte persoane prin grupuri. Datele rămân și pe telefon.
+Nume de utilizator
+E-mail
+Parolă
+Repetă parola
+Creează cont
+Conectare
+Ai deja cont? Conectează-te
+Nu ai cont? Înregistrează-te
+Ai uitat parola?
+sau
+Conectare cu Google
+Prin Google aplicația primește doar adresa ta de e-mail.
+Datele rămân pe acest telefon. Conectarea cu Google și grupurile partajate vor sosi într-o actualizare viitoare.
+Închide
+Anulează
+Creează
+Salvează
+Copiază
+Elimină
+Șterge
+Vehicule partajate
+Pentru a partaja vehicule într-un grup ai nevoie de un cont online. Poți trece fără să te deconectezi și fără să pierzi vehiculele.
+Partajarea online nu este încă activă în această versiune a aplicației.
+Treci la cont online
+Încă niciun grup
+Creează un grup (familie, prieteni, serviciu…) și dă codul de invitație celorlalți sau intră într-un grup cu codul primit.
+Creează grup
+Intră cu un cod
+1 membru
+{n} membri
+1 vehicul
+{n} vehicule
+Încă nu există vehicule în acest grup.
+Adaugă vehicul în „{name}”
+Ai nevoie de un cont online pentru a partaja un vehicul.
+Vehicul
+Mută „{name}” într-un grup
+Mută „{name}”
+Vehiculul trece în grupul ales și toți membrii îl vor vedea și îl vor putea modifica.
+Vehiculul va fi eliminat din „{name}”.
+Nu faci încă parte din niciun grup
+Creează unul sau intră cu un cod din fila Grupuri.
+Doar tu îl vezi
+„{name}” este acum în „{where}”
+Grup nou
+Nume (ex. Familia Popescu, Atelier, Prieteni)
+Cod de invitație
+Introdu codul de invitație al grupului.
+Ex. AB12CD34EF
+Intră
+Ai intrat în „{name}”!
+Grup indisponibil.
+Cod copiat: lipește-l în WhatsApp sau SMS
+Cealaltă persoană instalează aplicația, se conectează cu un cont online, deschide fila Grupuri → „Intră cu un cod” și introduce acest cod.
+Membri ({n})
+(tu)
+Creator
+Redenumește grupul
+Șterge grupul
+Părăsește grupul
+Toți membrii vor pierde accesul la vehiculele grupului
+Nu vei mai vedea vehiculele acestui grup
+Numele grupului
+Elimini membrul?
+{email} nu va mai vedea vehiculele din „{name}”.
+Ștergi grupul?
+Părăsești grupul?
+„{name}” va fi șters pentru toți membrii, împreună cu vehiculele sale.
+Vehiculele din „{name}” vor dispărea de pe acest telefon.
+Părăsește
+Cont
+Cont online · date salvate pe telefon și partajate în grupuri
+Cont doar pe acest telefon
+Partajează vehicule cu alte persoane fără să te deconectezi: poți lua cu tine vehiculele acestui cont.
+Limbă
+Ca telefonul
+Notificări
+Când vrei să fii anunțat înainte de un termen?
+Toate mementourile
+Ora notificărilor
+Testează notificarea
+Verifică dacă notificările sunt permise
+Notificări programate: {n}
+Memento de test peste 1 minut
+Apoi închide aplicația: dacă notificarea sosește, mementourile funcționează
+Memento de test programat: poți închide aplicația.
+Programarea a eșuat: {error}
+Pe unele telefoane (Xiaomi, Huawei, Samsung, Oppo…) economisirea bateriei blochează mementourile: în Setări Android → Aplicații → MyFleetManager → Baterie alege „Nerestricționat”.
+Notificări push
+Telefon înregistrat pentru push
+Telefonul nu este încă înregistrat
+Atinge pentru a copia codul dispozitivului (necesar pentru un test din consola Firebase)
+Atinge pentru a reîncerca (necesită internet)
+Înregistrarea a eșuat: verifică conexiunea.
+Codul dispozitivului a fost copiat
+Grupuri
+Pentru a partaja vehicule într-un grup, treci la un cont online (mai sus, în secțiunea Cont).
+Deconectare
+Datele tale rămân salvate pe telefon
+Aspect
+Luminos
+Întunecat
+Auto
+Culoarea copertei
+Fundalul paginilor
+cod {code}
+Intră cu un cod de invitație
+Notificări blocate
+Atinge pentru a le permite. Dacă nu apare nicio solicitare: Setări Android → Aplicații → MyFleetManager → Notificări → Permite.
+Mementourile pot întârzia
+Android poate întârzia mementourile. Atinge și activează „Alarme și mementouri” pentru MyFleetManager.
+Notificări permise
+Ștergi vehiculul?
+„{name}”, termenele și documentele sale vor fi șterse.
+„{name}”, termenele și documentele sale vor fi șterse (termenele și pentru ceilalți membri ai grupului).
+Certificat de înmatriculare
+Poliță de asigurare
+Certificat ITP
+Impozit auto
+Factură revizie
+Numele documentului
+Ex. Certificat de înmatriculare
+Adaugă document
+Fotografiază documentul
+Imagine din galerie
+Fișier PDF sau imagine
+Din fișierele telefonului, Drive, descărcări…
+Fișierul nu poate fi deschis: {error}
+Document salvat
+Eroare la salvare: {error}
+Fișierul nu a fost găsit pe telefon.
+Nicio aplicație pentru deschiderea PDF: {error}
+Deschide
+Redenumește
+Ștergi documentul?
+„{name}” va fi șters de pe telefon.
+Vehiculul nu a fost găsit.
+Editează
+Niciun termen urmărit.
+Întreținere
+Notează aici reviziile și intervențiile: data, kilometrajul și filtrele înlocuite.
+Documente
+Păstrează aici certificatul de înmatriculare, polița și alte documente (poze sau PDF).
+Imagine
+Documentele rămân doar pe acest telefon.
+Note
+Ultima modificare: {who} · {date}
+Ultima: {date}
+Următoarea: {date} (la fiecare {n} luni)
+Dată nesetată
+Expiră pe {date}
+Fă o poză
+Alege din galerie
+Elimină poza
+Poza nu poate fi încărcată: {error}
+Adaugă poză
+Data ultimei revizii
+Data termenului: {what}
+Introdu cel puțin numele sau numărul de înmatriculare.
+Termen personalizat
+Vehicul nou
+Editează vehiculul
+Tipul vehiculului
+Unde aparține
+Grup: {name}
+Nume (ex. Panda lui Marc)
+Număr de înmatriculare
+Termene de urmărit
+Activează doar ce te interesează. Vei primi notificări conform setărilor.
+Adaugă termen personalizat
+Ex. rovinietă, anvelope de iarnă, garanție, curea de distribuție…
+Note (opțional)
+Numele termenului (ex. Rovinietă)
+Ultima revizie
+Alege data
+Următorul memento:
+niciunul
+după {n} luni
+Selectează cel puțin un element sau scrie o notă.
+Ștergi această înregistrare?
+Înregistrarea din {date} va fi eliminată din istoric.
+Întreținere nouă
+Întreținere
+Data
+Kilometraj
+Lucrări efectuate
+Note (service, cost, alte piese…)
+Contează ca revizie
+Actualizează data ultimei revizii și următorul memento
+OK
+Vehicule
+Selectează un vehicul din listă
+Versiunea Pro
+Treci la MyFleetManager Pro
+O singură achiziție, pentru totdeauna: fără abonament.
+Versiunea Pro este activă
+Mulțumim că susții MyFleetManager!
+Pro deblocat cu codul de dezvoltator
+Vehicule nelimitate
+Dube, camioane și remorci
+Documentele vehiculului (certificat de înmatriculare, poliță…)
+Istoric de întreținere
+Susține dezvoltarea aplicației
+Versiune gratuită: până la {n} vehicule (autoturisme sau motociclete) cu termene și notificări.
+Cumpără Pro
+Cumpără Pro · {price}
+Achiziția va fi disponibilă când aplicația va fi instalată din Magazin Play.
+Restabilește achiziția
+Se caută achizițiile anterioare…
+Plătești o dată, e a ta pentru totdeauna.
+Versiunea gratuită gestionează până la {n} vehicule. Treci la Pro pentru a adăuga mai multe.
+{type}: disponibil în versiunea Pro.
+Documentele vehiculului sunt disponibile în versiunea Pro.
+Istoricul de întreținere este disponibil în versiunea Pro.
+Cod de dezvoltator
+Introdu codul
+Pro deblocat (dezvoltare)
+Cod invalid
+Dezactivează Pro de dezvoltare
+Pro de dezvoltare dezactivat
+Camion
+Camioane
+Impozit auto
+Un membru al grupului
+{who} a adăugat {vehicle}
+{who} a modificat {vehicle}
+{who} a șters {vehicle}
+{n} modificări la vehiculele grupului
+Alerte activitate grupuri
+Te anunță când alt membru adaugă, modifică sau șterge un vehicul. Cu aplicația închisă, alerta poate sosi cu câteva minute întârziere.
+Ajustează fotografia
+Rotește
+Centrează
+Depărtează degetele pentru zoom, trage pentru a muta
+Original
+Folosește fotografia
+Ajustează fotografia (zoom și decupare)

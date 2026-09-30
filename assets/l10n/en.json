@@ -336,5 +336,19 @@
  "pro.devDisabled": "Development Pro disabled",
  "type.truck": "Truck",
  "type.trucks": "Trucks",
- "deadline.tax": "Road tax"
+ "deadline.tax": "Road tax",
+ "groupAct.someone": "A group member",
+ "groupAct.added": "{who} added {vehicle}",
+ "groupAct.edited": "{who} edited {vehicle}",
+ "groupAct.deleted": "{who} deleted {vehicle}",
+ "groupAct.many": "{n} changes to the group vehicles",
+ "settings.groupAlerts": "Group activity alerts",
+ "settings.groupAlertsInfo": "Notifies you when another member adds, edits or deletes a vehicle. When the app is closed the alert may arrive a few minutes late.",
+ "crop.title": "Adjust photo",
+ "crop.rotate": "Rotate",
+ "crop.reset": "Recenter",
+ "crop.hint": "Pinch to zoom, drag to move",
+ "crop.original": "Original",
+ "crop.use": "Use photo",
+ "crop.adjust": "Adjust photo (zoom and crop)"
 }

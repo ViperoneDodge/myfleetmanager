@@ -1,0 +1,352 @@
+Auto
+Mootorratas
+Kaubik
+Haagis
+Autod
+Mootorrattad
+Kaubikud
+Haagised
+Dokument
+Kindlustus
+Tehniline ülevaatus
+Hooldus
+Kohandatud
+Järgmine hooldus
+Mootoriõli
+Õlifilter
+Õhufilter
+Salongifilter
+Kütusefilter
+Grupp
+Joonitud
+Ruuduline
+Täpiline
+Tühi
+Sinine
+Metsaroheline
+Võidusõidupunane
+Oranž
+Petrooleumsinine
+Violetne
+Grafiit
+Nahk
+Aegus eile
+Aegus {n} päeva tagasi
+Aegub täna
+Aegub homme
+{n} päeva pärast
+Nimetu
+Tähtaegu pole määratud
+Sõidukite tähtajad
+Meeldetuletused kindlustuse, ülevaatuse, hoolduse ja muude tähtaegade kohta
+Gruppide tegevus
+Tõuketeated gruppides jagatud sõidukite kohta
+1 kuu enne
+1 nädal enne
+1 päev enne
+Tähtaja päeval
+{n} päeva enne
+1 kuu pärast
+1 nädala pärast
+homme
+{n} päeva pärast
+{what} aegub täna
+{what}: aegub {when}
+{vehicle} · tähtaeg {date}
+Testmeeldetuletus
+Kui sa seda loed, töötavad ajastatud meeldetuletused ka suletud rakendusega.
+Teated on sisse lülitatud
+Saad meeldetuletusi oma sõidukite tähtaegade kohta.
+Kasutajanimi peab olema vähemalt 3 märki pikk.
+Parool peab olema vähemalt 4 märki pikk.
+See kasutajanimi on selles telefonis juba olemas.
+Kasutajat selles telefonis ei leitud.
+Vale parool.
+Kasutaja
+Vigane e-posti aadress.
+Vale e-post või parool.
+Selle e-postiga konto on juba olemas.
+Liiga nõrk parool (vähemalt 6 märki).
+Esimeseks võrgus sisselogimiseks on vaja internetiühendust.
+E-postiga registreerumine pole lubatud: lülita Firebase'i konsoolis sisse sisselogimisviis E-post/parool.
+Liiga palju katseid: proovi mõne minuti pärast uuesti.
+See konto on keelatud.
+Sisselogimise viga ({code}).
+Google'iga sisselogimine tühistati.
+Google'iga sisselogimine ebaõnnestus: {error}
+Vigane kood.
+Server keelas juurdepääsu: avalda Firebase'i konsoolis Firestore'i reeglid (fail firestore.rules).
+Andmebaasi pole olemas: loo Firebase'i konsoolis Firestore Database.
+Server pole kättesaadav: kontrolli internetiühendust.
+Seanss aegus: logi välja ja uuesti sisse võrgukontoga.
+Serveri viga ({code}).
+Minu sõidukid
+Sünkroonitud
+Ühendamine…
+Võrguta: andmed on telefoni salvestatud. Uuesti proovimiseks puuduta.
+Grupid
+Tähtajad
+Minu
+Seaded
+Lisa
+Kõik ({n})
+Sõidukeid pole
+Puuduta „Lisa”, et sisestada esimene sõiduk.
+Hoia sõidukit all, et see gruppi teisaldada.
+Tähtaegu pole määratud.
+Sinu sõidukite tähtaegade märkmik
+Kas võtad sõidukid kaasa?
+Kas kopeerida sinu sõiduk (koos tähtaegade, hoolduste ja dokumentidega) võrgukontole? Kohalik konto jääb nagunii sellesse telefoni.
+Kas kopeerida sinu {n} sõidukit (koos tähtaegade, hoolduste ja dokumentidega) võrgukontole? Kohalik konto jääb nagunii sellesse telefoni.
+Jah, kopeeri
+Ei
+Kasutad nüüd võrgukontot.
+Kasutad nüüd võrgukontot: 1 sõiduk kopeeritud.
+Kasutad nüüd võrgukontot: {n} sõidukit kopeeritud.
+Mine üle võrgukontole, et jagada sõidukeid teistega
+Kirjuta esmalt oma e-post ülalolevasse välja.
+Saatsime aadressile {email} kirja parooli lähtestamiseks.
+Täida kõik väljad.
+Paroolid ei kattu.
+Sinu sõidukite tähtajad alati kontrolli all
+Võrgukonto
+Ainult telefon
+Konto salvestatakse ainult sellesse telefoni. Jagamist pole.
+Võimaldab jagada sõidukeid teistega gruppide kaudu. Andmed jäävad ka telefoni.
+Kasutajanimi
+E-post
+Parool
+Korda parooli
+Loo konto
+Logi sisse
+Konto on juba olemas? Logi sisse
+Kontot pole? Registreeru
+Unustasid parooli?
+või
+Logi sisse Google'iga
+Google'i kaudu saab rakendus ainult sinu e-posti aadressi.
+Andmed jäävad sellesse telefoni. Google'iga sisselogimine ja jagatud grupid tulevad hilisemas uuenduses.
+Sulge
+Tühista
+Loo
+Salvesta
+Kopeeri
+Eemalda
+Kustuta
+Jagatud sõidukid
+Sõidukite jagamiseks grupis on vaja võrgukontot. Saad üle minna välja logimata ja sõidukeid kaotamata.
+Võrgus jagamine pole selles rakenduse versioonis veel aktiivne.
+Mine üle võrgukontole
+Gruppe veel pole
+Loo grupp (pere, sõbrad, töö…) ja anna kutsekood teistele või liitu grupiga saadud koodi abil.
+Loo grupp
+Liitu koodiga
+1 liige
+{n} liiget
+1 sõiduk
+{n} sõidukit
+Selles grupis pole veel sõidukeid.
+Lisa sõiduk gruppi „{name}”
+Sõiduki jagamiseks on vaja võrgukontot.
+Sõiduk
+Teisalda „{name}” gruppi
+Teisalda „{name}”
+Sõiduk läheb valitud gruppi ja kõik liikmed näevad seda ning saavad seda muuta.
+Sõiduk eemaldatakse grupist „{name}”.
+Sa ei ole veel üheski grupis
+Loo grupp või liitu koodiga vahekaardil Grupid.
+Seda näed ainult sina
+„{name}” on nüüd grupis „{where}”
+Uus grupp
+Nimi (nt Tamme pere, Töökoda, Sõbrad)
+Kutsekood
+Sisesta grupi kutsekood.
+Nt AB12CD34EF
+Liitu
+Liitusid grupiga „{name}”!
+Grupp pole saadaval.
+Kood kopeeritud: kleebi see WhatsAppi või SMS-i
+Teine inimene paigaldab rakenduse, logib sisse võrgukontoga, avab vahekaardi Grupid → „Liitu koodiga” ja sisestab selle koodi.
+Liikmed ({n})
+(sina)
+Looja
+Nimeta grupp ümber
+Kustuta grupp
+Lahku grupist
+Kõik liikmed kaotavad juurdepääsu grupi sõidukitele
+Sa ei näe enam selle grupi sõidukeid
+Grupi nimi
+Kas eemaldada liige?
+{email} ei näe enam grupi „{name}” sõidukeid.
+Kas kustutada grupp?
+Kas lahkuda grupist?
+„{name}” kustutatakse kõigilt liikmetelt koos sõidukitega.
+Grupi „{name}” sõidukid kaovad sellest telefonist.
+Lahku
+Konto
+Võrgukonto · andmed telefonis ja jagatud gruppides
+Konto ainult selles telefonis
+Jaga sõidukeid teistega välja logimata: selle konto sõidukid saad kaasa võtta.
+Keel
+Nagu telefonis
+Teated
+Millal soovid enne tähtaega meeldetuletust?
+Kõik meeldetuletused
+Teadete kellaaeg
+Testi teadet
+Kontrolli, et teated on lubatud
+Ajastatud teated: {n}
+Testmeeldetuletus 1 minuti pärast
+Seejärel sulge rakendus: kui teade tuleb, töötavad meeldetuletused
+Testmeeldetuletus ajastatud: võid rakenduse sulgeda.
+Ajastamine ebaõnnestus: {error}
+Mõnes telefonis (Xiaomi, Huawei, Samsung, Oppo…) blokeerib akusäästja meeldetuletused: vali Androidi seadetes → Rakendused → MyFleetManager → Aku „Piiranguteta”.
+Tõuketeated
+Telefon on tõuketeadete jaoks registreeritud
+Telefon pole veel registreeritud
+Puuduta seadme koodi kopeerimiseks (vajalik testiks Firebase'i konsoolist)
+Puuduta uuesti proovimiseks (vaja internetti)
+Registreerimine ebaõnnestus: kontrolli ühendust.
+Seadme kood kopeeritud
+Grupid
+Sõidukite jagamiseks grupis mine üle võrgukontole (ülal, jaotises Konto).
+Logi välja
+Sinu andmed jäävad telefoni salvestatuks
+Välimus
+Hele
+Tume
+Auto
+Kaane värv
+Lehtede taust
+kood {code}
+Liitu kutsekoodiga
+Teated on blokeeritud
+Puuduta, et need lubada. Kui päringut ei tule: Androidi seaded → Rakendused → MyFleetManager → Märguanded → Luba.
+Meeldetuletused võivad hilineda
+Android võib meeldetuletusi viivitada. Puuduta ja luba MyFleetManagerile „Äratused ja meeldetuletused”.
+Teated on lubatud
+Kas kustutada sõiduk?
+„{name}”, selle tähtajad ja dokumendid kustutatakse.
+„{name}”, selle tähtajad ja dokumendid kustutatakse (tähtajad ka teistel grupi liikmetel).
+Registreerimistunnistus
+Kindlustuspoliis
+Ülevaatuse tõend
+Mootorsõidukimaks
+Hoolduse arve
+Dokumendi nimi
+Nt Registreerimistunnistus
+Lisa dokument
+Pildista dokumenti
+Pilt galeriist
+PDF-fail või pilt
+Telefoni failidest, Drive'ist, allalaadimistest…
+Faili ei saanud avada: {error}
+Dokument salvestatud
+Viga salvestamisel: {error}
+Faili ei leitud telefonist.
+PDF-i avamiseks pole rakendust: {error}
+Ava
+Nimeta ümber
+Kas kustutada dokument?
+„{name}” kustutatakse telefonist.
+Sõidukit ei leitud.
+Muuda
+Jälgitavaid tähtaegu pole.
+Hooldus
+Märgi siia hooldused ja tööd: kuupäev, läbisõit ja vahetatud filtrid.
+Dokumendid
+Hoia siin registreerimistunnistust, poliisi ja muid dokumente (pildid või PDF).
+Pilt
+Dokumendid jäävad ainult sellesse telefoni.
+Märkmed
+Viimati muudetud: {who} · {date}
+Viimane: {date}
+Järgmine: {date} (iga {n} kuu järel)
+Kuupäev määramata
+Tähtaeg {date}
+Tee foto
+Vali galeriist
+Eemalda foto
+Fotot ei saanud laadida: {error}
+Lisa foto
+Viimase hoolduse kuupäev
+Tähtaja kuupäev: {what}
+Sisesta vähemalt nimi või numbrimärk.
+Kohandatud tähtaeg
+Uus sõiduk
+Muuda sõidukit
+Sõiduki tüüp
+Kuhu see kuulub
+Grupp: {name}
+Nimi (nt Marguse Panda)
+Numbrimärk
+Jälgitavad tähtajad
+Lülita sisse ainult need, mis sind huvitavad. Teated tulevad sinu seadete järgi.
+Lisa kohandatud tähtaeg
+Nt mootorsõidukimaks, talverehvid, garantii, hammasrihm…
+Märkmed (valikuline)
+Tähtaja nimi (nt Mootorsõidukimaks)
+Viimane hooldus
+Vali kuupäev
+Järgmine meeldetuletus:
+puudub
+{n} kuu pärast
+Vali vähemalt üks punkt või kirjuta märge.
+Kas kustutada see kirje?
+Kirje kuupäevaga {date} eemaldatakse ajaloost.
+Uus hooldus
+Hooldus
+Kuupäev
+Läbisõit
+Tehtud tööd
+Märkmed (töökoda, hind, muud osad…)
+Loe hoolduseks
+Uuendab viimase hoolduse kuupäeva ja järgmist meeldetuletust
+OK
+Sõidukid
+Vali loendist sõiduk
+Pro-versioon
+Uuenda MyFleetManager Pro-le
+Üks ost, igaveseks: tellimust pole.
+Pro-versioon on aktiivne
+Aitäh, et toetad MyFleetManagerit!
+Pro avatud arendaja koodiga
+Piiramatult sõidukeid
+Kaubikud, veoautod ja haagised
+Sõiduki dokumendid (registreerimistunnistus, poliis…)
+Hoolduste ajalugu
+Toeta rakenduse arendamist
+Tasuta versioon: kuni {n} sõidukit (autod või mootorrattad) koos tähtaegade ja teadetega.
+Osta Pro
+Osta Pro · {price}
+Ost muutub kättesaadavaks, kui rakendus on paigaldatud Play poest.
+Taasta ost
+Varasemate ostude otsimine…
+Maksad ühe korra, sinu igaveseks.
+Tasuta versioon haldab kuni {n} sõidukit. Uuenda Pro-le, et lisada rohkem.
+{type}: saadaval Pro-versioonis.
+Sõiduki dokumendid on saadaval Pro-versioonis.
+Hoolduste ajalugu on saadaval Pro-versioonis.
+Arendaja kood
+Sisesta kood
+Pro avatud (arendus)
+Vigane kood
+Lülita arendaja-Pro välja
+Arendaja-Pro välja lülitatud
+Veoauto
+Veoautod
+Mootorsõidukimaks
+Grupi liige
+{who} lisas: {vehicle}
+{who} muutis: {vehicle}
+{who} kustutas: {vehicle}
+Grupi sõidukite muudatusi: {n}
+Grupi tegevuse teavitused
+Teavitab, kui teine liige lisab, muudab või kustutab sõiduki. Suletud rakenduse korral võib teavitus tulla mõne minuti hilinemisega.
+Kohanda fotot
+Pööra
+Tsentreeri
+Suumimiseks näpista, liigutamiseks lohista
+Originaal
+Kasuta fotot
+Kohanda fotot (suum ja kärpimine)

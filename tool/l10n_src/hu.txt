@@ -1,0 +1,352 @@
+Autó
+Motor
+Kisteherautó
+Utánfutó
+Autók
+Motorok
+Kisteherautók
+Utánfutók
+Dokumentum
+Biztosítás
+Műszaki vizsga
+Szerviz
+Egyéni
+Következő szerviz
+Motorolaj
+Olajszűrő
+Levegőszűrő
+Pollenszűrő
+Üzemanyagszűrő
+Csoport
+Vonalas
+Kockás
+Pöttyös
+Sima
+Kék
+Erdőzöld
+Versenypiros
+Narancs
+Petrolkék
+Ibolya
+Grafit
+Bőr
+Tegnap lejárt
+{n} napja lejárt
+Ma jár le
+Holnap jár le
+{n} nap múlva
+Névtelen
+Nincs beállított határidő
+Járművek határidői
+Emlékeztetők biztosításról, műszaki vizsgáról, szervizről és más határidőkről
+Csoportok tevékenysége
+Push-értesítések a csoportokban megosztott járművekről
+1 hónappal előtte
+1 héttel előtte
+1 nappal előtte
+A határidő napján
+{n} nappal előtte
+1 hónap múlva
+1 hét múlva
+holnap
+{n} nap múlva
+{what} ma jár le
+{what}: lejár {when}
+{vehicle} · lejár: {date}
+Teszt-emlékeztető
+Ha ezt olvasod, az ütemezett emlékeztetők bezárt alkalmazás mellett is működnek.
+Értesítések bekapcsolva
+Emlékeztetőket kapsz a járműveid határidőiről.
+A felhasználónévnek legalább 3 karakterből kell állnia.
+A jelszónak legalább 4 karakterből kell állnia.
+Ez a felhasználónév már létezik ezen a telefonon.
+A felhasználó nem található ezen a telefonon.
+Hibás jelszó.
+Felhasználó
+Érvénytelen e-mail-cím.
+Hibás e-mail-cím vagy jelszó.
+Ezzel az e-mail-címmel már létezik fiók.
+Túl gyenge jelszó (legalább 6 karakter).
+Az első online bejelentkezéshez internetkapcsolat szükséges.
+Az e-mailes regisztráció nincs engedélyezve: a Firebase-konzolban kapcsold be az E-mail/jelszó bejelentkezési módot.
+Túl sok próbálkozás: próbáld újra néhány perc múlva.
+Ezt a fiókot letiltották.
+Bejelentkezési hiba ({code}).
+Google-bejelentkezés megszakítva.
+A Google-bejelentkezés sikertelen: {error}
+Érvénytelen kód.
+A szerver megtagadta a hozzáférést: a Firebase-konzolban tedd közzé a Firestore-szabályokat (firestore.rules fájl).
+Az adatbázis nem létezik: hozd létre a Firestore Database-t a Firebase-konzolban.
+A szerver nem érhető el: ellenőrizd az internetkapcsolatot.
+A munkamenet lejárt: jelentkezz ki, majd be újra az online fiókkal.
+Szerverhiba ({code}).
+Saját járművek
+Szinkronizálva
+Kapcsolódás…
+Offline: az adatok a telefonon vannak mentve. Koppints az újrapróbáláshoz.
+Csoportok
+Határidők
+Sajátok
+Beállítások
+Hozzáadás
+Mind ({n})
+Nincs jármű
+Koppints a „Hozzáadás” gombra az első jármű felvételéhez.
+Tarts nyomva egy járművet, hogy csoportba helyezd.
+Nincs beállított határidő.
+Járműveid határidőinek jegyzetfüzete
+Viszed a járműveidet?
+Átmásolod a járművedet (határidőkkel, karbantartással és dokumentumokkal) az online fiókba? A helyi fiók ettől még a telefonon marad.
+Átmásolod a(z) {n} járművedet (határidőkkel, karbantartással és dokumentumokkal) az online fiókba? A helyi fiók ettől még a telefonon marad.
+Igen, másolás
+Nem
+Most már az online fiókot használod.
+Most már az online fiókot használod: 1 jármű átmásolva.
+Most már az online fiókot használod: {n} jármű átmásolva.
+Válts online fiókra, hogy másokkal is megoszthasd a járműveket
+Előbb írd be az e-mail-címed a fenti mezőbe.
+E-mailt küldtünk a(z) {email} címre a jelszó visszaállításához.
+Tölts ki minden mezőt.
+A jelszavak nem egyeznek.
+Járműveid határidői mindig kézben
+Online fiók
+Csak telefon
+A fiók csak ezen a telefonon van mentve. Nincs megosztás.
+Lehetővé teszi a járművek megosztását másokkal csoportokon keresztül. Az adatok a telefonon is megmaradnak.
+Felhasználónév
+E-mail
+Jelszó
+Jelszó ismét
+Fiók létrehozása
+Bejelentkezés
+Van már fiókod? Jelentkezz be
+Nincs fiókod? Regisztrálj
+Elfelejtetted a jelszót?
+vagy
+Bejelentkezés Google-lel
+Google-lel az alkalmazás csak az e-mail-címedet kapja meg.
+Az adatok ezen a telefonon maradnak. A Google-bejelentkezés és a megosztott csoportok egy későbbi frissítésben érkeznek.
+Bezárás
+Mégse
+Létrehozás
+Mentés
+Másolás
+Eltávolítás
+Törlés
+Megosztott járművek
+A járművek csoportban való megosztásához online fiók kell. Kijelentkezés és a járművek elvesztése nélkül válthatsz.
+Az online megosztás ebben az alkalmazásverzióban még nem aktív.
+Váltás online fiókra
+Még nincs csoport
+Hozz létre csoportot (család, barátok, munka…) és add oda a meghívókódot a többieknek, vagy csatlakozz egy csoporthoz a kapott kóddal.
+Csoport létrehozása
+Csatlakozás kóddal
+1 tag
+{n} tag
+1 jármű
+{n} jármű
+Ebben a csoportban még nincs jármű.
+Jármű hozzáadása ide: „{name}”
+Jármű megosztásához online fiók kell.
+Jármű
+„{name}” áthelyezése csoportba
+„{name}” áthelyezése
+A jármű a kiválasztott csoportba kerül, és minden tag látja és szerkesztheti.
+A jármű eltávolításra kerül innen: „{name}”.
+Még egy csoportnak sem vagy tagja
+Hozz létre egyet, vagy csatlakozz kóddal a Csoportok lapon.
+Csak te látod
+„{name}” most itt van: „{where}”
+Új csoport
+Név (pl. Kovács család, Műhely, Barátok)
+Meghívókód
+Add meg a csoport meghívókódját.
+Pl. AB12CD34EF
+Csatlakozás
+Csatlakoztál: „{name}”!
+A csoport nem érhető el.
+Kód másolva: illeszd be WhatsAppba vagy SMS-be
+A másik személy telepíti az alkalmazást, bejelentkezik egy online fiókkal, megnyitja a Csoportok lapot → „Csatlakozás kóddal”, és beírja ezt a kódot.
+Tagok ({n})
+(te)
+Létrehozó
+Csoport átnevezése
+Csoport törlése
+Kilépés a csoportból
+Minden tag elveszíti a hozzáférést a csoport járműveihez
+Többé nem látod a csoport járműveit
+Csoport neve
+Eltávolítod a tagot?
+{email} többé nem látja „{name}” járműveit.
+Törlöd a csoportot?
+Kilépsz a csoportból?
+„{name}” minden tag számára törlődik a járműveivel együtt.
+„{name}” járművei eltűnnek erről a telefonról.
+Kilépés
+Fiók
+Online fiók · az adatok a telefonon mentve és csoportokban megosztva
+Fiók csak ezen a telefonon
+Oszd meg a járműveket másokkal kijelentkezés nélkül: ennek a fióknak a járműveit magaddal viheted.
+Nyelv
+Mint a telefonon
+Értesítések
+Mikor kérsz emlékeztetőt egy határidő előtt?
+Minden emlékeztető
+Értesítések időpontja
+Értesítés tesztelése
+Ellenőrizd, hogy az értesítések engedélyezve vannak-e
+Ütemezett értesítések: {n}
+Teszt-emlékeztető 1 perc múlva
+Utána zárd be az alkalmazást: ha megjön az értesítés, az emlékeztetők működnek
+Teszt-emlékeztető ütemezve: bezárhatod az alkalmazást.
+Az ütemezés nem sikerült: {error}
+Egyes telefonokon (Xiaomi, Huawei, Samsung, Oppo…) az akkumulátorkímélő blokkolja az emlékeztetőket: az Android-beállítások → Alkalmazások → MyFleetManager → Akkumulátor menüben válaszd a „Korlátlan” lehetőséget.
+Push-értesítések
+A telefon regisztrálva van a pushra
+A telefon még nincs regisztrálva
+Koppints az eszközkód másolásához (a Firebase-konzolból végzett teszthez kell)
+Koppints az újrapróbáláshoz (internet szükséges)
+A regisztráció sikertelen: ellenőrizd a kapcsolatot.
+Eszközkód másolva
+Csoportok
+A járművek csoportban való megosztásához válts online fiókra (fent, a Fiók részben).
+Kijelentkezés
+Az adataid a telefonon maradnak
+Megjelenés
+Világos
+Sötét
+Auto
+Borító színe
+Oldalak háttere
+kód: {code}
+Csatlakozás meghívókóddal
+Értesítések letiltva
+Koppints az engedélyezéshez. Ha nem jelenik meg kérés: Android-beállítások → Alkalmazások → MyFleetManager → Értesítések → Engedélyezés.
+Az emlékeztetők késhetnek
+Az Android késleltetheti az emlékeztetőket. Koppints, és kapcsold be az „Ébresztések és emlékeztetők” engedélyt a MyFleetManager számára.
+Értesítések engedélyezve
+Törlöd a járművet?
+„{name}”, a határidői és dokumentumai törlődnek.
+„{name}”, a határidői és dokumentumai törlődnek (a határidők a csoport többi tagjánál is).
+Forgalmi engedély
+Biztosítási kötvény
+Műszaki vizsga igazolás
+Gépjárműadó
+Szervizszámla
+Dokumentum neve
+Pl. Forgalmi engedély
+Dokumentum hozzáadása
+Dokumentum lefényképezése
+Kép a galériából
+PDF-fájl vagy kép
+A telefon fájljaiból, Drive-ról, letöltésekből…
+A fájl nem nyitható meg: {error}
+Dokumentum mentve
+Hiba mentés közben: {error}
+A fájl nem található a telefonon.
+Nincs alkalmazás PDF megnyitásához: {error}
+Megnyitás
+Átnevezés
+Törlöd a dokumentumot?
+„{name}” törlődik a telefonról.
+A jármű nem található.
+Szerkesztés
+Nincs követett határidő.
+Karbantartás
+Itt rögzítheted a szervizeket és javításokat: dátum, kilométeróra-állás és cserélt szűrők.
+Dokumentumok
+Itt tárolhatod a forgalmit, a kötvényt és más dokumentumokat (képek vagy PDF).
+Kép
+A dokumentumok csak ezen a telefonon maradnak.
+Jegyzetek
+Utolsó módosítás: {who} · {date}
+Utolsó: {date}
+Következő: {date} ({n} havonta)
+Nincs dátum megadva
+Lejár: {date}
+Fénykép készítése
+Választás a galériából
+Fénykép eltávolítása
+A fénykép nem tölthető be: {error}
+Fénykép hozzáadása
+Utolsó szerviz dátuma
+Határidő dátuma: {what}
+Adj meg legalább egy nevet vagy rendszámot.
+Egyéni határidő
+Új jármű
+Jármű szerkesztése
+Jármű típusa
+Hová tartozik
+Csoport: {name}
+Név (pl. Márk Pandája)
+Rendszám
+Követett határidők
+Csak azokat kapcsold be, amelyek érdekelnek. Az értesítéseket a beállításaid szerint kapod.
+Egyéni határidő hozzáadása
+Pl. gépjárműadó, téli gumi, garancia, vezérműszíj…
+Jegyzetek (nem kötelező)
+Határidő neve (pl. Gépjárműadó)
+Utolsó szerviz
+Dátum kiválasztása
+Következő emlékeztető:
+nincs
+{n} hónap után
+Válassz ki legalább egy tételt, vagy írj jegyzetet.
+Törlöd ezt a bejegyzést?
+A(z) {date} dátumú bejegyzés törlődik az előzményekből.
+Új karbantartás
+Karbantartás
+Dátum
+Kilométeróra-állás
+Elvégzett munkák
+Jegyzetek (szerviz, költség, egyéb alkatrészek…)
+Szerviznek számít
+Frissíti az utolsó szerviz dátumát és a következő emlékeztetőt
+OK
+Járművek
+Válassz egy járművet a listából
+Pro verzió
+Válts MyFleetManager Pro-ra
+Egyszeri vásárlás, örökre: nincs előfizetés.
+Pro verzió aktív
+Köszönjük, hogy támogatod a MyFleetManagert!
+Pro feloldva fejlesztői kóddal
+Korlátlan számú jármű
+Kisteherautók, teherautók és utánfutók
+Járműdokumentumok (forgalmi, kötvény…)
+Karbantartási előzmények
+Támogasd az alkalmazás fejlesztését
+Ingyenes verzió: legfeljebb {n} jármű (autó vagy motor) határidőkkel és értesítésekkel.
+Pro megvásárlása
+Pro megvásárlása · {price}
+A vásárlás akkor lesz elérhető, amikor az alkalmazást a Play Áruházból telepítették.
+Vásárlás visszaállítása
+Korábbi vásárlások keresése…
+Egyszer fizetsz, örökre a tiéd.
+Az ingyenes verzió legfeljebb {n} járművet kezel. Válts Pro-ra, hogy többet is hozzáadhass.
+{type}: a Pro verzióban érhető el.
+A járműdokumentumok a Pro verzióban érhetők el.
+A karbantartási előzmények a Pro verzióban érhetők el.
+Fejlesztői kód
+Add meg a kódot
+Pro feloldva (fejlesztés)
+Érvénytelen kód
+Fejlesztői Pro kikapcsolása
+Fejlesztői Pro kikapcsolva
+Teherautó
+Teherautók
+Gépjárműadó
+A csoport egyik tagja
+{who} hozzáadta: {vehicle}
+{who} módosította: {vehicle}
+{who} törölte: {vehicle}
+A csoport járműveinek változásai: {n}
+Csoportaktivitás értesítések
+Értesít, ha egy másik tag járművet ad hozzá, módosít vagy töröl. Bezárt alkalmazásnál az értesítés néhány perc késéssel érkezhet.
+Fotó igazítása
+Forgatás
+Középre
+Két ujjal nagyíthat, húzással mozgathat
+Eredeti
+Fotó használata
+Fotó igazítása (nagyítás és vágás)

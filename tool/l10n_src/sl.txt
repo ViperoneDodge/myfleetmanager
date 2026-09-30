@@ -1,0 +1,352 @@
+Avto
+Motor
+Kombi
+Prikolica
+Avti
+Motorji
+Kombiji
+Prikolice
+Dokument
+Zavarovanje
+Tehnični pregled
+Servis
+Po meri
+Naslednji servis
+Motorno olje
+Oljni filter
+Zračni filter
+Filter kabine
+Filter goriva
+Skupina
+Črtasto
+Karirasto
+Pikčasto
+Prazno
+Modra
+Gozdno zelena
+Dirkalno rdeča
+Oranžna
+Petrolejsko modra
+Vijolična
+Grafitna
+Usnje
+Poteklo včeraj
+Poteklo pred {n} dnevi
+Poteče danes
+Poteče jutri
+Čez {n} dni
+Brez imena
+Ni nastavljenih rokov
+Roki vozil
+Opomniki za zavarovanje, tehnični pregled, servis in druge roke
+Dejavnost skupin
+Potisna obvestila o vozilih, deljenih v skupinah
+1 mesec prej
+1 teden prej
+1 dan prej
+Na dan roka
+{n} dni prej
+čez 1 mesec
+čez 1 teden
+jutri
+čez {n} dni
+{what} poteče danes
+{what}: poteče {when}
+{vehicle} · poteče {date}
+Preizkusni opomnik
+Če to berete, načrtovani opomniki delujejo tudi, ko je aplikacija zaprta.
+Obvestila vklopljena
+Prejemali boste opomnike za roke svojih vozil.
+Uporabniško ime mora imeti vsaj 3 znake.
+Geslo mora imeti vsaj 4 znake.
+To uporabniško ime na tem telefonu že obstaja.
+Uporabnika na tem telefonu ni mogoče najti.
+Napačno geslo.
+Uporabnik
+Neveljaven e-poštni naslov.
+Napačen e-poštni naslov ali geslo.
+Račun s tem e-poštnim naslovom že obstaja.
+Prešibko geslo (vsaj 6 znakov).
+Za prvo spletno prijavo je potrebna internetna povezava.
+Registracija z e-pošto ni vklopljena: v konzoli Firebase vklopite način prijave E-pošta/geslo.
+Preveč poskusov: poskusite znova čez nekaj minut.
+Ta račun je onemogočen.
+Napaka pri prijavi ({code}).
+Prijava z Googlom preklicana.
+Prijava z Googlom ni uspela: {error}
+Neveljavna koda.
+Strežnik je zavrnil dostop: v konzoli Firebase objavite pravila Firestore (datoteka firestore.rules).
+Zbirka podatkov ne obstaja: ustvarite Firestore Database v konzoli Firebase.
+Strežnik ni dosegljiv: preverite internetno povezavo.
+Seja je potekla: odjavite se in se znova prijavite s spletnim računom.
+Napaka strežnika ({code}).
+Moja vozila
+Sinhronizirano
+Povezovanje…
+Brez povezave: podatki so shranjeni v telefonu. Tapnite za ponovni poskus.
+Skupine
+Roki
+Moja
+Nastavitve
+Dodaj
+Vsa ({n})
+Ni vozil
+Tapnite »Dodaj« in vnesite prvo vozilo.
+Pridržite vozilo, da ga premaknete v skupino.
+Ni nastavljenih rokov.
+Beležka rokov vaših vozil
+Prenesem vaša vozila?
+Želite kopirati svoje vozilo (z roki, vzdrževanjem in dokumenti) v spletni račun? Lokalni račun bo vseeno ostal na tem telefonu.
+Število vozil za kopiranje v spletni račun: {n} (z roki, vzdrževanjem in dokumenti). Lokalni račun bo vseeno ostal na tem telefonu.
+Da, kopiraj
+Ne
+Zdaj uporabljate spletni račun.
+Zdaj uporabljate spletni račun: kopirano 1 vozilo.
+Zdaj uporabljate spletni račun: kopirana vozila: {n}.
+Preklopite na spletni račun in delite vozila z drugimi
+Najprej vnesite e-poštni naslov v polje zgoraj.
+Na {email} smo poslali e-pošto za ponastavitev gesla.
+Izpolnite vsa polja.
+Gesli se ne ujemata.
+Roki vaših vozil, vedno pod nadzorom
+Spletni račun
+Samo telefon
+Račun je shranjen samo na tem telefonu. Brez deljenja.
+Omogoča deljenje vozil z drugimi prek skupin. Podatki ostanejo tudi v telefonu.
+Uporabniško ime
+E-pošta
+Geslo
+Ponovite geslo
+Ustvari račun
+Prijava
+Že imate račun? Prijavite se
+Nimate računa? Registrirajte se
+Ste pozabili geslo?
+ali
+Prijava z Googlom
+Prek Googla aplikacija prejme samo vaš e-poštni naslov.
+Podatki ostanejo na tem telefonu. Prijava z Googlom in skupne skupine bodo na voljo v prihodnji posodobitvi.
+Zapri
+Prekliči
+Ustvari
+Shrani
+Kopiraj
+Odstrani
+Izbriši
+Deljena vozila
+Za deljenje vozil v skupini potrebujete spletni račun. Preklopite lahko brez odjave in brez izgube vozil.
+Spletno deljenje v tej različici aplikacije še ni aktivno.
+Preklopi na spletni račun
+Še ni skupin
+Ustvarite skupino (družina, prijatelji, služba…) in dajte drugim kodo povabila ali se pridružite skupini s kodo, ki ste jo prejeli.
+Ustvari skupino
+Pridruži se s kodo
+1 član
+Člani: {n}
+1 vozilo
+Vozila: {n}
+V tej skupini še ni vozil.
+Dodaj vozilo v »{name}«
+Za deljenje vozila potrebujete spletni račun.
+Vozilo
+Premakni »{name}« v skupino
+Premakni »{name}«
+Vozilo preide v izbrano skupino; vsi člani ga bodo videli in ga lahko urejali.
+Vozilo bo odstranjeno iz »{name}«.
+Še niste v nobeni skupini
+Ustvarite jo ali se pridružite s kodo na zavihku Skupine.
+Vidite ga samo vi
+»{name}« je zdaj v »{where}«
+Nova skupina
+Ime (npr. Družina Novak, Delavnica, Prijatelji)
+Koda povabila
+Vnesite kodo povabila skupine.
+Npr. AB12CD34EF
+Pridruži se
+Pridružili ste se skupini »{name}«!
+Skupina ni na voljo.
+Koda kopirana: prilepite jo v WhatsApp ali SMS
+Druga oseba namesti aplikacijo, se prijavi s spletnim računom, odpre zavihek Skupine → »Pridruži se s kodo« in vnese to kodo.
+Člani ({n})
+(vi)
+Ustvarjalec
+Preimenuj skupino
+Izbriši skupino
+Zapusti skupino
+Vsi člani bodo izgubili dostop do vozil skupine
+Vozil te skupine ne boste več videli
+Ime skupine
+Odstranim člana?
+{email} ne bo več videl vozil iz »{name}«.
+Izbrišem skupino?
+Zapustim skupino?
+»{name}« bo izbrisana za vse člane, skupaj z vozili.
+Vozila iz »{name}« bodo izginila s tega telefona.
+Zapusti
+Račun
+Spletni račun · podatki shranjeni v telefonu in deljeni v skupinah
+Račun samo na tem telefonu
+Delite vozila z drugimi brez odjave: vozila tega računa lahko vzamete s seboj.
+Jezik
+Kot telefon
+Obvestila
+Kdaj želite opomnik pred rokom?
+Vsi opomniki
+Ura obvestil
+Preizkusi obvestilo
+Preverite, ali so obvestila dovoljena
+Načrtovana obvestila: {n}
+Preizkusni opomnik čez 1 minuto
+Nato zaprite aplikacijo: če obvestilo pride, opomniki delujejo
+Preizkusni opomnik načrtovan: aplikacijo lahko zaprete.
+Načrtovanje ni uspelo: {error}
+Na nekaterih telefonih (Xiaomi, Huawei, Samsung, Oppo…) varčevanje z baterijo blokira opomnike: v Nastavitvah Androida → Aplikacije → MyFleetManager → Baterija izberite »Neomejeno«.
+Potisna obvestila
+Telefon je registriran za potisna obvestila
+Telefon še ni registriran
+Tapnite, da kopirate kodo naprave (potrebna za preizkus iz konzole Firebase)
+Tapnite za ponovni poskus (potreben internet)
+Registracija ni uspela: preverite povezavo.
+Koda naprave kopirana
+Skupine
+Za deljenje vozil v skupini preklopite na spletni račun (zgoraj, v razdelku Račun).
+Odjava
+Vaši podatki ostanejo shranjeni v telefonu
+Videz
+Svetla
+Temna
+Samodejno
+Barva platnic
+Ozadje strani
+koda {code}
+Pridruži se s kodo povabila
+Obvestila blokirana
+Tapnite, da jih dovolite. Če se zahteva ne prikaže: Nastavitve Androida → Aplikacije → MyFleetManager → Obvestila → Dovoli.
+Opomniki lahko zamujajo
+Android lahko zakasni opomnike. Tapnite in vklopite »Alarmi in opomniki« za MyFleetManager.
+Obvestila dovoljena
+Izbrišem vozilo?
+»{name}«, njegovi roki in dokumenti bodo izbrisani.
+»{name}«, njegovi roki in dokumenti bodo izbrisani (roki tudi za druge člane skupine).
+Prometno dovoljenje
+Zavarovalna polica
+Potrdilo o tehničnem pregledu
+Letna dajatev
+Račun za servis
+Ime dokumenta
+Npr. Prometno dovoljenje
+Dodaj dokument
+Fotografiraj dokument
+Slika iz galerije
+Datoteka PDF ali slika
+Iz datotek telefona, Drive, prenosov…
+Datoteke ni mogoče odpreti: {error}
+Dokument shranjen
+Napaka pri shranjevanju: {error}
+Datoteke v telefonu ni mogoče najti.
+Ni aplikacije za odpiranje PDF: {error}
+Odpri
+Preimenuj
+Izbrišem dokument?
+»{name}« bo izbrisan s telefona.
+Vozila ni mogoče najti.
+Uredi
+Ni spremljanih rokov.
+Vzdrževanje
+Tu beležite servise in posege: datum, prevožene kilometre in zamenjane filtre.
+Dokumenti
+Tu shranite prometno dovoljenje, polico in druge dokumente (slike ali PDF).
+Slika
+Dokumenti ostanejo samo na tem telefonu.
+Opombe
+Zadnja sprememba: {who} · {date}
+Zadnji: {date}
+Naslednji: {date} (vsakih {n} mes.)
+Datum ni nastavljen
+Poteče {date}
+Fotografiraj
+Izberi iz galerije
+Odstrani fotografijo
+Fotografije ni mogoče naložiti: {error}
+Dodaj fotografijo
+Datum zadnjega servisa
+Datum roka: {what}
+Vnesite vsaj ime ali registrsko številko.
+Rok po meri
+Novo vozilo
+Uredi vozilo
+Vrsta vozila
+Kam spada
+Skupina: {name}
+Ime (npr. Markova Panda)
+Registrska številka
+Roki za spremljanje
+Vklopite samo tiste, ki vas zanimajo. Obvestila boste prejeli po nastavitvah.
+Dodaj rok po meri
+Npr. letna dajatev, zimske pnevmatike, garancija, zobati jermen…
+Opombe (neobvezno)
+Ime roka (npr. Letna dajatev)
+Zadnji servis
+Izberi datum
+Naslednji opomnik:
+brez
+po {n} mes.
+Izberite vsaj eno postavko ali napišite opombo.
+Izbrišem ta vnos?
+Vnos z dne {date} bo odstranjen iz zgodovine.
+Novo vzdrževanje
+Vzdrževanje
+Datum
+Prevoženi kilometri
+Opravljena dela
+Opombe (servis, cena, drugi deli…)
+Šteje kot servis
+Posodobi datum zadnjega servisa in naslednji opomnik
+V redu
+Vozila
+Izberite vozilo s seznama
+Različica Pro
+Nadgradite na MyFleetManager Pro
+En nakup, za vedno: brez naročnine.
+Različica Pro je aktivna
+Hvala, ker podpirate MyFleetManager!
+Pro odklenjen z razvijalsko kodo
+Neomejeno število vozil
+Kombiji, tovornjaki in prikolice
+Dokumenti vozila (prometno dovoljenje, polica…)
+Zgodovina vzdrževanja
+Podprite razvoj aplikacije
+Brezplačna različica: do {n} vozil (avti ali motorji) z roki in obvestili.
+Kupi Pro
+Kupi Pro · {price}
+Nakup bo na voljo, ko bo aplikacija nameščena iz Trgovine Play.
+Obnovi nakup
+Iskanje prejšnjih nakupov…
+Plačate enkrat, vaše je za vedno.
+Brezplačna različica upravlja do {n} vozil. Nadgradite na Pro, da dodate več.
+{type}: na voljo v različici Pro.
+Dokumenti vozila so na voljo v različici Pro.
+Zgodovina vzdrževanja je na voljo v različici Pro.
+Razvijalska koda
+Vnesite kodo
+Pro odklenjen (razvoj)
+Neveljavna koda
+Izklopi razvijalski Pro
+Razvijalski Pro izklopljen
+Tovornjak
+Tovornjaki
+Letna dajatev za vozila
+Član skupine
+{who} je dodal {vehicle}
+{who} je spremenil {vehicle}
+{who} je izbrisal {vehicle}
+{n} sprememb vozil skupine
+Obvestila o dejavnosti skupin
+Obvesti vas, ko drug član doda, spremeni ali izbriše vozilo. Ko je aplikacija zaprta, lahko obvestilo pride nekaj minut pozneje.
+Prilagodi fotografijo
+Zasukaj
+Na sredino
+Razprite prsta za povečavo, povlecite za premik
+Izvirno
+Uporabi fotografijo
+Prilagodi fotografijo (povečava in obrezovanje)

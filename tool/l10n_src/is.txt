@@ -1,0 +1,352 @@
+Bíll
+Mótorhjól
+Sendibíll
+Kerra
+Bílar
+Mótorhjól
+Sendibílar
+Kerrur
+Skjal
+Trygging
+Skoðun
+Þjónustuskoðun
+Sérsniðið
+Næsta þjónustuskoðun
+Vélarolía
+Olíusía
+Loftsía
+Frjókornasía
+Eldsneytissía
+Hópur
+Línustrikað
+Rúðustrikað
+Punktað
+Autt
+Blár
+Skógargrænn
+Kappakstursrauður
+Appelsínugulur
+Olíublár
+Fjólublár
+Grafít
+Leður
+Rann út í gær
+Rann út fyrir {n} dögum
+Rennur út í dag
+Rennur út á morgun
+Eftir {n} daga
+Ónefnt
+Engir frestir skráðir
+Frestir ökutækja
+Áminningar um tryggingu, skoðun, þjónustu og aðra fresti
+Virkni hópa
+Tilkynningar um ökutæki sem deilt er í hópum
+1 mánuði áður
+1 viku áður
+1 degi áður
+Á gjalddaga
+{n} dögum áður
+eftir 1 mánuð
+eftir 1 viku
+á morgun
+eftir {n} daga
+{what} rennur út í dag
+{what}: rennur út {when}
+{vehicle} · rennur út {date}
+Prufuáminning
+Ef þú getur lesið þetta virka tímasettar áminningar líka þegar appið er lokað.
+Tilkynningar virkar
+Þú færð áminningar um fresti ökutækjanna þinna.
+Notandanafnið verður að vera að minnsta kosti 3 stafir.
+Lykilorðið verður að vera að minnsta kosti 4 stafir.
+Þetta notandanafn er þegar til í þessum síma.
+Notandi fannst ekki í þessum síma.
+Rangt lykilorð.
+Notandi
+Ógilt netfang.
+Rangt netfang eða lykilorð.
+Aðgangur með þessu netfangi er þegar til.
+Of veikt lykilorð (að minnsta kosti 6 stafir).
+Nettenging þarf fyrir fyrstu innskráningu á netinu.
+Nýskráning með netfangi er ekki virk: virkjaðu innskráningaraðferðina Netfang/lykilorð í Firebase-stjórnborðinu.
+Of margar tilraunir: reyndu aftur eftir nokkrar mínútur.
+Þessi aðgangur hefur verið gerður óvirkur.
+Innskráningarvilla ({code}).
+Hætt við innskráningu með Google.
+Innskráning með Google mistókst: {error}
+Ógildur kóði.
+Þjónninn hafnaði aðgangi: birtu Firestore-reglurnar (skráin firestore.rules) í Firebase-stjórnborðinu.
+Gagnagrunnurinn er ekki til: búðu til Firestore Database í Firebase-stjórnborðinu.
+Ekki næst í þjóninn: athugaðu nettenginguna.
+Lotan er útrunnin: skráðu þig út og aftur inn með netaðganginum.
+Villa í þjóni ({code}).
+Mín ökutæki
+Samstillt
+Tengist…
+Ótengt: gögnin eru vistuð í símanum. Ýttu til að reyna aftur.
+Hópar
+Frestir
+Mín
+Stillingar
+Bæta við
+Öll ({n})
+Engin ökutæki
+Ýttu á „Bæta við“ til að skrá fyrsta ökutækið.
+Haltu fingri á ökutæki til að færa það í hóp.
+Engir frestir skráðir.
+Minnisbókin fyrir fresti ökutækjanna þinna
+Taka ökutækin með?
+Viltu afrita ökutækið þitt (með frestum, viðhaldi og skjölum) á netaðganginn? Staðbundni aðgangurinn verður samt áfram í þessum síma.
+Viltu afrita {n} ökutækin þín (með frestum, viðhaldi og skjölum) á netaðganginn? Staðbundni aðgangurinn verður samt áfram í þessum síma.
+Já, afrita
+Nei
+Þú notar nú netaðganginn.
+Þú notar nú netaðganginn: 1 ökutæki afritað.
+Þú notar nú netaðganginn: {n} ökutæki afrituð.
+Skiptu yfir í netaðgang til að deila ökutækjum með öðrum
+Skrifaðu fyrst netfangið þitt í reitinn hér fyrir ofan.
+Við sendum tölvupóst á {email} til að endurstilla lykilorðið.
+Fylltu út alla reiti.
+Lykilorðin stemma ekki.
+Frestir ökutækjanna þinna, alltaf undir stjórn
+Netaðgangur
+Aðeins sími
+Aðgangurinn er aðeins vistaður í þessum síma. Engin deiling.
+Gerir þér kleift að deila ökutækjum með öðrum í hópum. Gögnin haldast líka í símanum.
+Notandanafn
+Netfang
+Lykilorð
+Endurtaktu lykilorð
+Stofna aðgang
+Skrá inn
+Ertu með aðgang? Skráðu þig inn
+Enginn aðgangur? Nýskráðu þig
+Gleymt lykilorð?
+eða
+Skrá inn með Google
+Með Google fær appið aðeins netfangið þitt.
+Gögnin haldast í þessum síma. Innskráning með Google og sameiginlegir hópar koma í síðari uppfærslu.
+Loka
+Hætta við
+Búa til
+Vista
+Afrita
+Fjarlægja
+Eyða
+Sameiginleg ökutæki
+Til að deila ökutækjum í hópi þarftu netaðgang. Þú getur skipt án þess að skrá þig út og án þess að missa ökutækin.
+Deiling á netinu er ekki enn virk í þessari útgáfu appsins.
+Skipta yfir í netaðgang
+Engir hópar enn
+Búðu til hóp (fjölskylda, vinir, vinna…) og gefðu hinum boðskóðann, eða gakktu í hóp með kóðanum sem þú fékkst.
+Búa til hóp
+Ganga í hóp með kóða
+1 meðlimur
+{n} meðlimir
+1 ökutæki
+{n} ökutæki
+Engin ökutæki í þessum hópi enn.
+Bæta ökutæki við „{name}“
+Þú þarft netaðgang til að deila ökutæki.
+Ökutæki
+Færa „{name}“ í hóp
+Færa „{name}“
+Ökutækið færist í valinn hóp og allir meðlimir sjá það og geta breytt því.
+Ökutækið verður fjarlægt úr „{name}“.
+Þú ert ekki enn í neinum hópi
+Búðu til hóp eða gakktu í hóp með kóða á flipanum Hópar.
+Aðeins þú sérð það
+„{name}“ er nú í „{where}“
+Nýr hópur
+Nafn (t.d. Fjölskylda Jóns, Verkstæði, Vinir)
+Boðskóði
+Sláðu inn boðskóða hópsins.
+T.d. AB12CD34EF
+Ganga í hóp
+Þú gekkst í „{name}“!
+Hópur ekki tiltækur.
+Kóðinn afritaður: límdu hann í WhatsApp eða SMS
+Hinn aðilinn setur upp appið, skráir sig inn með netaðgangi, opnar flipann Hópar → „Ganga í hóp með kóða“ og slær inn þennan kóða.
+Meðlimir ({n})
+(þú)
+Stofnandi
+Endurnefna hóp
+Eyða hóp
+Yfirgefa hóp
+Allir meðlimir missa aðgang að ökutækjum hópsins
+Þú sérð ekki lengur ökutæki þessa hóps
+Nafn hóps
+Fjarlægja meðlim?
+{email} sér ekki lengur ökutækin í „{name}“.
+Eyða hópnum?
+Yfirgefa hópinn?
+„{name}“ verður eytt hjá öllum meðlimum, ásamt ökutækjum.
+Ökutækin í „{name}“ hverfa úr þessum síma.
+Yfirgefa
+Aðgangur
+Netaðgangur · gögn vistuð í símanum og deilt í hópum
+Aðgangur aðeins í þessum síma
+Deildu ökutækjum með öðrum án þess að skrá þig út: þú getur tekið ökutæki þessa aðgangs með.
+Tungumál
+Eins og síminn
+Tilkynningar
+Hvenær viltu fá áminningu fyrir frest?
+Allar áminningar
+Tími tilkynninga
+Prófa tilkynningu
+Athugaðu hvort tilkynningar séu leyfðar
+Tímasettar tilkynningar: {n}
+Prufuáminning eftir 1 mínútu
+Lokaðu svo appinu: ef tilkynningin berst virka áminningarnar
+Prufuáminning tímasett: þú getur lokað appinu.
+Tókst ekki að tímasetja: {error}
+Í sumum símum (Xiaomi, Huawei, Samsung, Oppo…) lokar rafhlöðusparnaður á áminningar: veldu „Ótakmarkað“ í Android-stillingum → Forrit → MyFleetManager → Rafhlaða.
+Tilkynningar (push)
+Síminn er skráður fyrir push
+Síminn er ekki enn skráður
+Ýttu til að afrita tækjakóðann (þarf fyrir próf úr Firebase-stjórnborðinu)
+Ýttu til að reyna aftur (þarf net)
+Skráning mistókst: athugaðu tenginguna.
+Tækjakóði afritaður
+Hópar
+Til að deila ökutækjum í hópi skaltu skipta yfir í netaðgang (hér að ofan, undir Aðgangur).
+Skrá út
+Gögnin þín haldast vistuð í símanum
+Útlit
+Ljóst
+Dökkt
+Sjálfvirkt
+Litur kápu
+Bakgrunnur síðna
+kóði {code}
+Ganga í hóp með boðskóða
+Tilkynningar lokaðar
+Ýttu til að leyfa þær. Ef engin beiðni birtist: Android-stillingar → Forrit → MyFleetManager → Tilkynningar → Leyfa.
+Áminningar geta tafist
+Android getur tafið áminningar. Ýttu og virkjaðu „Vekjarar og áminningar“ fyrir MyFleetManager.
+Tilkynningar leyfðar
+Eyða ökutækinu?
+„{name}“, frestum þess og skjölum verður eytt.
+„{name}“, frestum þess og skjölum verður eytt (frestunum einnig hjá öðrum meðlimum hópsins).
+Skráningarskírteini
+Tryggingaskírteini
+Skoðunarvottorð
+Bifreiðagjald
+Reikningur fyrir þjónustu
+Heiti skjals
+T.d. Skráningarskírteini
+Bæta við skjali
+Taka mynd af skjalinu
+Mynd úr myndasafni
+PDF-skrá eða mynd
+Úr skrám símans, Drive, niðurhali…
+Tókst ekki að opna skrána: {error}
+Skjal vistað
+Villa við vistun: {error}
+Skrá fannst ekki í símanum.
+Ekkert app til að opna PDF: {error}
+Opna
+Endurnefna
+Eyða skjalinu?
+„{name}“ verður eytt úr símanum.
+Ökutæki fannst ekki.
+Breyta
+Engum frestum fylgt.
+Viðhald
+Skráðu þjónustu og vinnu hér: dagsetningu, kílómetrastöðu og skiptar síur.
+Skjöl
+Vistaðu skráningarskírteini, tryggingu og önnur skjöl hér (myndir eða PDF).
+Mynd
+Skjölin haldast aðeins í þessum síma.
+Athugasemdir
+Síðast breytt: {who} · {date}
+Síðast: {date}
+Næst: {date} (á {n} mánaða fresti)
+Dagsetning ekki skráð
+Rennur út {date}
+Taka mynd
+Velja úr myndasafni
+Fjarlægja mynd
+Tókst ekki að hlaða myndinni: {error}
+Bæta við mynd
+Dagsetning síðustu þjónustu
+Gjalddagi: {what}
+Sláðu að minnsta kosti inn nafn eða númeraplötu.
+Sérsniðinn frestur
+Nýtt ökutæki
+Breyta ökutæki
+Tegund ökutækis
+Hvar það á heima
+Hópur: {name}
+Nafn (t.d. Panda hans Marks)
+Númeraplata
+Frestir til að fylgjast með
+Virkjaðu aðeins þá sem skipta þig máli. Þú færð tilkynningar samkvæmt stillingunum.
+Bæta við sérsniðnum fresti
+T.d. bifreiðagjald, vetrardekk, ábyrgð, tímareim…
+Athugasemdir (valfrjálst)
+Heiti frests (t.d. Bifreiðagjald)
+Síðasta þjónusta
+Velja dagsetningu
+Næsta áminning:
+engin
+eftir {n} mánuði
+Veldu að minnsta kosti eitt atriði eða skrifaðu athugasemd.
+Eyða þessari færslu?
+Færslan frá {date} verður fjarlægð úr sögunni.
+Nýtt viðhald
+Viðhald
+Dagsetning
+Kílómetrastaða
+Unnin verk
+Athugasemdir (verkstæði, kostnaður, aðrir hlutar…)
+Telst sem þjónustuskoðun
+Uppfærir dagsetningu síðustu þjónustu og næstu áminningu
+Í lagi
+Ökutæki
+Veldu ökutæki af listanum
+Pro-útgáfa
+Uppfæra í MyFleetManager Pro
+Ein kaup, að eilífu: engin áskrift.
+Pro-útgáfa virk
+Takk fyrir að styðja MyFleetManager!
+Pro opnað með þróunarkóða
+Ótakmörkuð ökutæki
+Sendibílar, vörubílar og kerrur
+Skjöl ökutækis (skráningarskírteini, trygging…)
+Viðhaldssaga
+Styddu þróun appsins
+Ókeypis útgáfa: allt að {n} ökutæki (bílar eða mótorhjól) með frestum og tilkynningum.
+Kaupa Pro
+Kaupa Pro · {price}
+Kaupin verða í boði þegar appið hefur verið sett upp úr Play Store.
+Endurheimta kaup
+Leitar að fyrri kaupum…
+Borgaðu einu sinni, þitt að eilífu.
+Ókeypis útgáfan heldur utan um allt að {n} ökutæki. Uppfærðu í Pro til að bæta fleiri við.
+{type}: í boði í Pro-útgáfunni.
+Skjöl ökutækis eru í boði í Pro-útgáfunni.
+Viðhaldssagan er í boði í Pro-útgáfunni.
+Þróunarkóði
+Sláðu inn kóðann
+Pro opnað (þróun)
+Ógildur kóði
+Slökkva á þróunar-Pro
+Slökkt á þróunar-Pro
+Vörubíll
+Vörubílar
+Bifreiðagjald
+Meðlimur hópsins
+{who} bætti við {vehicle}
+{who} breytti {vehicle}
+{who} eyddi {vehicle}
+{n} breytingar á ökutækjum hópsins
+Tilkynningar um virkni hópa
+Lætur vita þegar annar meðlimur bætir við, breytir eða eyðir ökutæki. Þegar appið er lokað getur tilkynningin borist nokkrum mínútum síðar.
+Laga mynd
+Snúa
+Miðja
+Klíptu til að þysja, dragðu til að færa
+Upprunaleg
+Nota mynd
+Laga mynd (aðdráttur og skurður)

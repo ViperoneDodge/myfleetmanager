@@ -1,0 +1,352 @@
+Samochód
+Motocykl
+Furgon
+Przyczepa
+Samochody
+Motocykle
+Furgony
+Przyczepy
+Dokument
+Ubezpieczenie
+Przegląd techniczny
+Serwis
+Własny
+Następny serwis
+Olej silnikowy
+Filtr oleju
+Filtr powietrza
+Filtr kabinowy
+Filtr paliwa
+Grupa
+W linie
+W kratkę
+W kropki
+Gładkie
+Niebieski
+Leśna zieleń
+Wyścigowa czerwień
+Pomarańczowy
+Morski
+Fioletowy
+Grafitowy
+Skórzany
+Wygasło wczoraj
+Wygasło {n} dni temu
+Upływa dziś
+Upływa jutro
+Za {n} dni
+Bez nazwy
+Brak ustawionych terminów
+Terminy pojazdów
+Przypomnienia o ubezpieczeniu, przeglądzie, serwisie i innych terminach
+Aktywność grup
+Powiadomienia push o pojazdach udostępnionych w grupach
+1 miesiąc wcześniej
+1 tydzień wcześniej
+1 dzień wcześniej
+W dniu terminu
+{n} dni wcześniej
+za 1 miesiąc
+za 1 tydzień
+jutro
+za {n} dni
+{what} upływa dziś
+{what}: upływa {when}
+{vehicle} · termin {date}
+Przypomnienie testowe
+Jeśli to czytasz, zaplanowane przypomnienia działają także przy zamkniętej aplikacji.
+Powiadomienia włączone
+Będziesz otrzymywać przypomnienia o terminach swoich pojazdów.
+Nazwa użytkownika musi mieć co najmniej 3 znaki.
+Hasło musi mieć co najmniej 4 znaki.
+Ta nazwa użytkownika już istnieje na tym telefonie.
+Nie znaleziono użytkownika na tym telefonie.
+Błędne hasło.
+Użytkownik
+Nieprawidłowy e-mail.
+Nieprawidłowy e-mail lub hasło.
+Konto z tym adresem e-mail już istnieje.
+Zbyt słabe hasło (co najmniej 6 znaków).
+Do pierwszego logowania online potrzebne jest połączenie z internetem.
+Rejestracja e-mailem nie jest włączona: w konsoli Firebase włącz metodę logowania E-mail/hasło.
+Zbyt wiele prób: spróbuj ponownie za kilka minut.
+To konto zostało wyłączone.
+Błąd logowania ({code}).
+Anulowano logowanie przez Google.
+Logowanie przez Google nie powiodło się: {error}
+Nieprawidłowy kod.
+Serwer odmówił dostępu: w konsoli Firebase opublikuj reguły Firestore (plik firestore.rules).
+Baza danych nie istnieje: utwórz Firestore Database w konsoli Firebase.
+Serwer niedostępny: sprawdź połączenie z internetem.
+Sesja wygasła: wyloguj się i zaloguj ponownie kontem online.
+Błąd serwera ({code}).
+Moje pojazdy
+Zsynchronizowano
+Łączenie…
+Offline: dane są zapisane w telefonie. Dotknij, aby spróbować ponownie.
+Grupy
+Terminy
+Moje
+Ustawienia
+Dodaj
+Wszystkie ({n})
+Brak pojazdów
+Dotknij „Dodaj”, aby wprowadzić pierwszy pojazd.
+Przytrzymaj pojazd, aby przenieść go do grupy.
+Brak ustawionych terminów.
+Notes terminów Twoich pojazdów
+Zabrać pojazdy ze sobą?
+Czy skopiować Twój pojazd (z terminami, serwisami i dokumentami) na konto online? Konto lokalne i tak zostanie na tym telefonie.
+Pojazdy do skopiowania na konto online: {n} (z terminami, serwisami i dokumentami). Konto lokalne i tak zostanie na tym telefonie.
+Tak, skopiuj
+Nie
+Korzystasz teraz z konta online.
+Korzystasz teraz z konta online: skopiowano 1 pojazd.
+Korzystasz teraz z konta online: skopiowane pojazdy: {n}.
+Przejdź na konto online, aby udostępniać pojazdy innym osobom
+Najpierw wpisz swój e-mail w polu powyżej.
+Wysłaliśmy wiadomość na {email}, aby zresetować hasło.
+Wypełnij wszystkie pola.
+Hasła nie są zgodne.
+Terminy Twoich pojazdów zawsze pod kontrolą
+Konto online
+Tylko telefon
+Konto zapisane tylko na tym telefonie. Bez udostępniania.
+Pozwala udostępniać pojazdy innym osobom w grupach. Dane zostają też w telefonie.
+Nazwa użytkownika
+E-mail
+Hasło
+Powtórz hasło
+Utwórz konto
+Zaloguj się
+Masz już konto? Zaloguj się
+Nie masz konta? Zarejestruj się
+Nie pamiętasz hasła?
+lub
+Zaloguj się przez Google
+Przez Google aplikacja otrzymuje tylko Twój adres e-mail.
+Dane zostają na tym telefonie. Logowanie przez Google i wspólne grupy pojawią się w przyszłej aktualizacji.
+Zamknij
+Anuluj
+Utwórz
+Zapisz
+Kopiuj
+Usuń
+Usuń
+Wspólne pojazdy
+Aby udostępniać pojazdy w grupie, potrzebujesz konta online. Możesz przejść bez wylogowania i bez utraty pojazdów.
+Udostępnianie online nie jest jeszcze aktywne w tej wersji aplikacji.
+Przejdź na konto online
+Brak grup
+Utwórz grupę (rodzina, znajomi, praca…) i przekaż innym kod zaproszenia albo dołącz do grupy kodem, który otrzymałeś.
+Utwórz grupę
+Dołącz kodem
+1 członek
+Członkowie: {n}
+1 pojazd
+Pojazdy: {n}
+W tej grupie nie ma jeszcze pojazdów.
+Dodaj pojazd do „{name}”
+Aby udostępnić pojazd, potrzebujesz konta online.
+Pojazd
+Przenieś „{name}” do grupy
+Przenieś „{name}”
+Pojazd trafi do wybranej grupy, a wszyscy członkowie będą go widzieć i edytować.
+Pojazd zostanie usunięty z „{name}”.
+Nie należysz jeszcze do żadnej grupy
+Utwórz grupę lub dołącz kodem w karcie Grupy.
+Tylko Ty go widzisz
+„{name}” jest teraz w „{where}”
+Nowa grupa
+Nazwa (np. Rodzina Kowalskich, Warsztat, Znajomi)
+Kod zaproszenia
+Wpisz kod zaproszenia do grupy.
+Np. AB12CD34EF
+Dołącz
+Dołączono do „{name}”!
+Grupa niedostępna.
+Kod skopiowany: wklej go w WhatsAppie lub SMS-ie
+Druga osoba instaluje aplikację, loguje się kontem online, otwiera kartę Grupy → „Dołącz kodem” i wpisuje ten kod.
+Członkowie ({n})
+(Ty)
+Twórca
+Zmień nazwę grupy
+Usuń grupę
+Opuść grupę
+Wszyscy członkowie stracą dostęp do pojazdów grupy
+Nie będziesz już widzieć pojazdów tej grupy
+Nazwa grupy
+Usunąć członka?
+{email} nie będzie już widzieć pojazdów z „{name}”.
+Usunąć grupę?
+Opuścić grupę?
+„{name}” zostanie usunięta dla wszystkich członków wraz z pojazdami.
+Pojazdy z „{name}” znikną z tego telefonu.
+Opuść
+Konto
+Konto online · dane zapisane w telefonie i udostępniane w grupach
+Konto tylko na tym telefonie
+Udostępniaj pojazdy innym bez wylogowania: możesz zabrać pojazdy z tego konta.
+Język
+Jak w telefonie
+Powiadomienia
+Kiedy przypominać przed terminem?
+Wszystkie przypomnienia
+Godzina powiadomień
+Testuj powiadomienie
+Sprawdź, czy powiadomienia są dozwolone
+Zaplanowane powiadomienia: {n}
+Przypomnienie testowe za 1 minutę
+Potem zamknij aplikację: jeśli powiadomienie dotrze, przypomnienia działają
+Zaplanowano przypomnienie testowe: możesz zamknąć aplikację.
+Nie udało się zaplanować: {error}
+W niektórych telefonach (Xiaomi, Huawei, Samsung, Oppo…) oszczędzanie baterii blokuje przypomnienia: w Ustawieniach Androida → Aplikacje → MyFleetManager → Bateria wybierz „Bez ograniczeń”.
+Powiadomienia push
+Telefon zarejestrowany do push
+Telefon jeszcze niezarejestrowany
+Dotknij, aby skopiować kod urządzenia (potrzebny do testu z konsoli Firebase)
+Dotknij, aby spróbować ponownie (wymaga internetu)
+Rejestracja nie powiodła się: sprawdź połączenie.
+Skopiowano kod urządzenia
+Grupy
+Aby udostępniać pojazdy w grupie, przejdź na konto online (wyżej, w sekcji Konto).
+Wyloguj się
+Twoje dane zostają zapisane w telefonie
+Wygląd
+Jasny
+Ciemny
+Auto
+Kolor okładki
+Tło stron
+kod {code}
+Dołącz kodem zaproszenia
+Powiadomienia zablokowane
+Dotknij, aby je zezwolić. Jeśli nie pojawi się prośba: Ustawienia Androida → Aplikacje → MyFleetManager → Powiadomienia → Zezwalaj.
+Przypomnienia mogą się spóźniać
+Android może opóźniać przypomnienia. Dotknij i włącz „Alarmy i przypomnienia” dla MyFleetManager.
+Powiadomienia dozwolone
+Usunąć pojazd?
+„{name}”, jego terminy i dokumenty zostaną usunięte.
+„{name}”, jego terminy i dokumenty zostaną usunięte (terminy także dla pozostałych członków grupy).
+Dowód rejestracyjny
+Polisa ubezpieczeniowa
+Zaświadczenie z przeglądu
+Podatek drogowy
+Faktura za serwis
+Nazwa dokumentu
+Np. Dowód rejestracyjny
+Dodaj dokument
+Zrób zdjęcie dokumentu
+Obraz z galerii
+Plik PDF lub obraz
+Z plików telefonu, Dysku, pobranych…
+Nie można otworzyć pliku: {error}
+Dokument zapisany
+Błąd zapisu: {error}
+Nie znaleziono pliku w telefonie.
+Brak aplikacji do otwierania PDF: {error}
+Otwórz
+Zmień nazwę
+Usunąć dokument?
+„{name}” zostanie usunięty z telefonu.
+Nie znaleziono pojazdu.
+Edytuj
+Brak śledzonych terminów.
+Serwis
+Zapisuj tu serwisy i naprawy: datę, przebieg i wymienione filtry.
+Dokumenty
+Przechowuj tu dowód rejestracyjny, polisę i inne dokumenty (zdjęcia lub PDF).
+Obraz
+Dokumenty zostają tylko na tym telefonie.
+Notatki
+Ostatnia zmiana: {who} · {date}
+Ostatni: {date}
+Następny: {date} (co {n} mies.)
+Data nieustawiona
+Termin: {date}
+Zrób zdjęcie
+Wybierz z galerii
+Usuń zdjęcie
+Nie można wczytać zdjęcia: {error}
+Dodaj zdjęcie
+Data ostatniego serwisu
+Termin: {what}
+Wpisz co najmniej nazwę lub numer rejestracyjny.
+Własny termin
+Nowy pojazd
+Edytuj pojazd
+Typ pojazdu
+Gdzie należy
+Grupa: {name}
+Nazwa (np. Panda Marka)
+Numer rejestracyjny
+Terminy do śledzenia
+Włącz tylko te, które Cię interesują. Powiadomienia przyjdą zgodnie z ustawieniami.
+Dodaj własny termin
+Np. podatek, opony zimowe, gwarancja, pasek rozrządu…
+Notatki (opcjonalnie)
+Nazwa terminu (np. Podatek)
+Ostatni serwis
+Wybierz datę
+Następne przypomnienie:
+brak
+po {n} mies.
+Wybierz co najmniej jedną pozycję lub dodaj notatkę.
+Usunąć ten wpis?
+Wpis z {date} zostanie usunięty z historii.
+Nowy serwis
+Serwis
+Data
+Przebieg
+Wykonane prace
+Notatki (warsztat, koszt, inne części…)
+Licz jako serwis
+Aktualizuje datę ostatniego serwisu i następne przypomnienie
+OK
+Pojazdy
+Wybierz pojazd z listy
+Wersja Pro
+Przejdź na MyFleetManager Pro
+Jeden zakup, na zawsze: bez subskrypcji.
+Wersja Pro aktywna
+Dziękujemy za wspieranie MyFleetManager!
+Pro odblokowane kodem dewelopera
+Nieograniczona liczba pojazdów
+Furgony, ciężarówki i przyczepy
+Dokumenty pojazdu (dowód rejestracyjny, polisa…)
+Historia serwisowa
+Wspieraj rozwój aplikacji
+Wersja bezpłatna: do {n} pojazdów (samochody lub motocykle) z terminami i powiadomieniami.
+Kup Pro
+Kup Pro · {price}
+Zakup będzie dostępny, gdy aplikacja zostanie zainstalowana ze Sklepu Play.
+Przywróć zakup
+Szukanie wcześniejszych zakupów…
+Płacisz raz, masz na zawsze.
+Wersja bezpłatna obsługuje do {n} pojazdów. Przejdź na Pro, aby dodać więcej.
+{type}: dostępne w wersji Pro.
+Dokumenty pojazdu są dostępne w wersji Pro.
+Historia serwisowa jest dostępna w wersji Pro.
+Kod dewelopera
+Wpisz kod
+Pro odblokowane (rozwój)
+Nieprawidłowy kod
+Wyłącz Pro deweloperskie
+Pro deweloperskie wyłączone
+Ciężarówka
+Ciężarówki
+Podatek od pojazdu
+Członek grupy
+{who} dodał(a) {vehicle}
+{who} zmienił(a) {vehicle}
+{who} usunął(ęła) {vehicle}
+Zmiany pojazdów grupy: {n}
+Powiadomienia o aktywności grup
+Powiadamia, gdy inny członek doda, zmieni lub usunie pojazd. Przy zamkniętej aplikacji powiadomienie może przyjść kilka minut później.
+Dopasuj zdjęcie
+Obróć
+Wyśrodkuj
+Rozsuń palce, aby powiększyć, przeciągnij, aby przesunąć
+Oryginał
+Użyj zdjęcia
+Dopasuj zdjęcie (powiększenie i kadrowanie)

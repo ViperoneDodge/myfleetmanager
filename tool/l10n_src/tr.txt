@@ -1,0 +1,352 @@
+Otomobil
+Motosiklet
+Panelvan
+Römork
+Otomobiller
+Motosikletler
+Panelvanlar
+Römorklar
+Belge
+Sigorta
+Araç muayenesi
+Bakım
+Özel
+Sonraki bakım
+Motor yağı
+Yağ filtresi
+Hava filtresi
+Polen filtresi
+Yakıt filtresi
+Grup
+Çizgili
+Kareli
+Noktalı
+Düz
+Mavi
+Orman yeşili
+Yarış kırmızısı
+Turuncu
+Petrol mavisi
+Mor
+Grafit
+Deri
+Dün sona erdi
+{n} gün önce sona erdi
+Bugün sona eriyor
+Yarın sona eriyor
+{n} gün sonra
+Adsız
+Tarih belirlenmedi
+Araç son tarihleri
+Sigorta, muayene, bakım ve diğer son tarihler için hatırlatıcılar
+Grup etkinliği
+Gruplarda paylaşılan araçlarla ilgili anlık bildirimler
+1 ay önce
+1 hafta önce
+1 gün önce
+Son tarih gününde
+{n} gün önce
+1 ay sonra
+1 hafta sonra
+yarın
+{n} gün sonra
+{what} bugün sona eriyor
+{what}: {when} sona eriyor
+{vehicle} · son tarih {date}
+Test hatırlatıcısı
+Bunu okuyabiliyorsan zamanlanmış hatırlatıcılar uygulama kapalıyken de çalışıyor.
+Bildirimler açık
+Araçlarının son tarihleri için hatırlatıcılar alacaksın.
+Kullanıcı adı en az 3 karakter olmalıdır.
+Şifre en az 4 karakter olmalıdır.
+Bu kullanıcı adı bu telefonda zaten var.
+Kullanıcı bu telefonda bulunamadı.
+Yanlış şifre.
+Kullanıcı
+Geçersiz e-posta.
+E-posta veya şifre yanlış.
+Bu e-postayla bir hesap zaten var.
+Şifre çok zayıf (en az 6 karakter).
+İlk çevrimiçi giriş için internet bağlantısı gerekir.
+E-postayla kayıt etkin değil: Firebase konsolunda E-posta/Şifre giriş yöntemini etkinleştir.
+Çok fazla deneme: birkaç dakika sonra tekrar dene.
+Bu hesap devre dışı bırakıldı.
+Giriş hatası ({code}).
+Google ile giriş iptal edildi.
+Google ile giriş başarısız: {error}
+Geçersiz kod.
+Sunucu erişimi reddetti: Firebase konsolunda Firestore kurallarını (firestore.rules dosyası) yayınla.
+Veritabanı yok: Firebase konsolunda Firestore Database oluştur.
+Sunucuya ulaşılamıyor: internet bağlantını kontrol et.
+Oturum sona erdi: çıkış yap ve çevrimiçi hesapla tekrar giriş yap.
+Sunucu hatası ({code}).
+Araçlarım
+Eşitlendi
+Bağlanıyor…
+Çevrimdışı: verilerin telefonda kayıtlı. Tekrar denemek için dokun.
+Gruplar
+Son tarihler
+Benim
+Ayarlar
+Ekle
+Tümü ({n})
+Araç yok
+İlk aracını girmek için "Ekle"ye dokun.
+Bir aracı gruba taşımak için basılı tut.
+Tarih belirlenmedi.
+Araçlarının son tarih defteri
+Araçlarını da getirmek ister misin?
+Aracını (son tarihler, bakımlar ve belgelerle) çevrimiçi hesaba kopyalamak ister misin? Yerel hesap yine de bu telefonda kalır.
+{n} aracını (son tarihler, bakımlar ve belgelerle) çevrimiçi hesaba kopyalamak ister misin? Yerel hesap yine de bu telefonda kalır.
+Evet, kopyala
+Hayır
+Artık çevrimiçi hesabı kullanıyorsun.
+Artık çevrimiçi hesabı kullanıyorsun: 1 araç kopyalandı.
+Artık çevrimiçi hesabı kullanıyorsun: {n} araç kopyalandı.
+Araçları başkalarıyla paylaşmak için çevrimiçi hesaba geç
+Önce e-postanı yukarıdaki alana yaz.
+Şifreni sıfırlamak için {email} adresine bir e-posta gönderdik.
+Tüm alanları doldur.
+Şifreler eşleşmiyor.
+Araçlarının son tarihleri her zaman kontrol altında
+Çevrimiçi hesap
+Yalnızca telefon
+Hesap yalnızca bu telefonda kayıtlı. Paylaşım yok.
+Araçları gruplar aracılığıyla başkalarıyla paylaşmanı sağlar. Veriler telefonda da kalır.
+Kullanıcı adı
+E-posta
+Şifre
+Şifreyi tekrarla
+Hesap oluştur
+Giriş yap
+Hesabın var mı? Giriş yap
+Hesabın yok mu? Kaydol
+Şifreni mi unuttun?
+veya
+Google ile giriş yap
+Google ile uygulama yalnızca e-posta adresini alır.
+Veriler bu telefonda kalır. Google ile giriş ve paylaşılan gruplar gelecekteki bir güncellemeyle gelecek.
+Kapat
+İptal
+Oluştur
+Kaydet
+Kopyala
+Kaldır
+Sil
+Paylaşılan araçlar
+Araçları bir grupta paylaşmak için çevrimiçi hesap gerekir. Çıkış yapmadan ve araçlarını kaybetmeden geçebilirsin.
+Çevrimiçi paylaşım uygulamanın bu sürümünde henüz etkin değil.
+Çevrimiçi hesaba geç
+Henüz grup yok
+Bir grup oluştur (aile, arkadaşlar, iş…) ve davet kodunu diğerlerine ver ya da aldığın kodla bir gruba katıl.
+Grup oluştur
+Kodla katıl
+1 üye
+{n} üye
+1 araç
+{n} araç
+Bu grupta henüz araç yok.
+"{name}" grubuna araç ekle
+Bir aracı paylaşmak için çevrimiçi hesap gerekir.
+Araç
+"{name}" aracını bir gruba taşı
+"{name}" aracını taşı
+Araç seçilen gruba geçer ve tüm üyeler onu görüp düzenleyebilir.
+Araç "{name}" grubundan kaldırılacak.
+Henüz hiçbir grupta değilsin
+Bir tane oluştur veya Gruplar sekmesinden kodla katıl.
+Yalnızca sen görürsün
+"{name}" artık "{where}" içinde
+Yeni grup
+Ad (ör. Yılmaz ailesi, Atölye, Arkadaşlar)
+Davet kodu
+Grubun davet kodunu gir.
+Ör. AB12CD34EF
+Katıl
+"{name}" grubuna katıldın!
+Grup kullanılamıyor.
+Kod kopyalandı: WhatsApp'a veya SMS'e yapıştır
+Diğer kişi uygulamayı yükler, çevrimiçi hesapla giriş yapar, Gruplar sekmesini açar → "Kodla katıl" ve bu kodu girer.
+Üyeler ({n})
+(sen)
+Oluşturan
+Grubu yeniden adlandır
+Grubu sil
+Gruptan ayrıl
+Tüm üyeler grubun araçlarına erişimi kaybeder
+Bu grubun araçlarını artık görmeyeceksin
+Grup adı
+Üye kaldırılsın mı?
+{email} artık "{name}" araçlarını görmeyecek.
+Grup silinsin mi?
+Gruptan ayrılınsın mı?
+"{name}" araçlarıyla birlikte tüm üyeler için silinecek.
+"{name}" araçları bu telefondan kaybolacak.
+Ayrıl
+Hesap
+Çevrimiçi hesap · veriler telefonda ve gruplarda paylaşılıyor
+Yalnızca bu telefondaki hesap
+Araçları çıkış yapmadan başkalarıyla paylaş: bu hesabın araçlarını yanında götürebilirsin.
+Dil
+Telefonla aynı
+Bildirimler
+Bir son tarihten ne kadar önce hatırlatılmak istersin?
+Tüm hatırlatıcılar
+Bildirim saati
+Bildirimi test et
+Bildirimlere izin verildiğini kontrol et
+Zamanlanmış bildirimler: {n}
+1 dakika sonra test hatırlatıcısı
+Sonra uygulamayı kapat: bildirim gelirse hatırlatıcılar çalışıyor
+Test hatırlatıcısı zamanlandı: uygulamayı kapatabilirsin.
+Zamanlanamadı: {error}
+Bazı telefonlarda (Xiaomi, Huawei, Samsung, Oppo…) pil tasarrufu hatırlatıcıları engeller: Android Ayarları → Uygulamalar → MyFleetManager → Pil bölümünde "Kısıtlamasız" seç.
+Anlık bildirimler
+Telefon anlık bildirimler için kayıtlı
+Telefon henüz kayıtlı değil
+Cihaz kodunu kopyalamak için dokun (Firebase konsolundan test için gerekli)
+Tekrar denemek için dokun (internet gerekir)
+Kayıt başarısız: bağlantını kontrol et.
+Cihaz kodu kopyalandı
+Gruplar
+Araçları bir grupta paylaşmak için çevrimiçi hesaba geç (yukarıda, Hesap bölümünde).
+Çıkış yap
+Verilerin telefonda kayıtlı kalır
+Görünüm
+Açık
+Koyu
+Otomatik
+Kapak rengi
+Sayfa arka planı
+kod {code}
+Davet koduyla katıl
+Bildirimler engellendi
+İzin vermek için dokun. İstek görünmezse: Android Ayarları → Uygulamalar → MyFleetManager → Bildirimler → İzin ver.
+Hatırlatıcılar gecikebilir
+Android hatırlatıcıları geciktirebilir. Dokun ve MyFleetManager için "Alarmlar ve hatırlatıcılar" iznini aç.
+Bildirimlere izin verildi
+Araç silinsin mi?
+"{name}", son tarihleri ve belgeleri silinecek.
+"{name}", son tarihleri ve belgeleri silinecek (son tarihler diğer grup üyeleri için de).
+Ruhsat
+Sigorta poliçesi
+Muayene belgesi
+Motorlu taşıtlar vergisi
+Bakım faturası
+Belge adı
+Ör. Ruhsat
+Belge ekle
+Belgenin fotoğrafını çek
+Galeriden görsel
+PDF dosyası veya görsel
+Telefon dosyalarından, Drive'dan, indirilenlerden…
+Dosya açılamadı: {error}
+Belge kaydedildi
+Kaydetme hatası: {error}
+Dosya telefonda bulunamadı.
+PDF açacak uygulama yok: {error}
+Aç
+Yeniden adlandır
+Belge silinsin mi?
+"{name}" telefondan silinecek.
+Araç bulunamadı.
+Düzenle
+Takip edilen son tarih yok.
+Bakım
+Bakımları ve işlemleri buraya kaydet: tarih, kilometre ve değiştirilen filtreler.
+Belgeler
+Ruhsatı, poliçeyi ve diğer belgeleri burada sakla (fotoğraf veya PDF).
+Görsel
+Belgeler yalnızca bu telefonda kalır.
+Notlar
+Son değişiklik: {who} · {date}
+Son: {date}
+Sonraki: {date} (her {n} ayda bir)
+Tarih belirlenmedi
+Son tarih {date}
+Fotoğraf çek
+Galeriden seç
+Fotoğrafı kaldır
+Fotoğraf yüklenemedi: {error}
+Fotoğraf ekle
+Son bakım tarihi
+Son tarih: {what}
+En azından ad veya plaka gir.
+Özel son tarih
+Yeni araç
+Aracı düzenle
+Araç türü
+Nereye ait
+Grup: {name}
+Ad (ör. Mert'in Panda'sı)
+Plaka
+Takip edilecek son tarihler
+Yalnızca ilgilendiklerini aç. Bildirimleri ayarlarına göre alırsın.
+Özel son tarih ekle
+Ör. MTV, kış lastikleri, garanti, triger kayışı…
+Notlar (isteğe bağlı)
+Son tarih adı (ör. MTV)
+Son bakım
+Tarih seç
+Sonraki hatırlatıcı:
+yok
+{n} ay sonra
+En az bir öğe seç veya not yaz.
+Bu kayıt silinsin mi?
+{date} tarihli kayıt geçmişten kaldırılacak.
+Yeni bakım
+Bakım
+Tarih
+Kilometre
+Yapılan işler
+Notlar (servis, maliyet, diğer parçalar…)
+Bakım sayılsın
+Son bakım tarihini ve sonraki hatırlatıcıyı günceller
+Tamam
+Araçlar
+Listeden bir araç seç
+Pro sürüm
+MyFleetManager Pro'ya geç
+Tek satın alma, sonsuza dek: abonelik yok.
+Pro sürüm etkin
+MyFleetManager'ı desteklediğin için teşekkürler!
+Pro, geliştirici koduyla açıldı
+Sınırsız araç
+Panelvanlar, kamyonlar ve römorklar
+Araç belgeleri (ruhsat, poliçe…)
+Bakım geçmişi
+Uygulamanın geliştirilmesini destekle
+Ücretsiz sürüm: son tarihler ve bildirimlerle en fazla {n} araç (otomobil veya motosiklet).
+Pro satın al
+Pro satın al · {price}
+Satın alma, uygulama Play Store'dan yüklendiğinde kullanılabilir olacak.
+Satın almayı geri yükle
+Önceki satın almalar aranıyor…
+Bir kez öde, sonsuza dek senin.
+Ücretsiz sürüm en fazla {n} aracı yönetir. Daha fazlasını eklemek için Pro'ya geç.
+{type}: Pro sürümde mevcut.
+Araç belgeleri Pro sürümde mevcut.
+Bakım geçmişi Pro sürümde mevcut.
+Geliştirici kodu
+Kodu gir
+Pro açıldı (geliştirme)
+Geçersiz kod
+Geliştirici Pro'yu kapat
+Geliştirici Pro kapatıldı
+Kamyon
+Kamyonlar
+Motorlu taşıtlar vergisi (MTV)
+Bir grup üyesi
+{who}, {vehicle} ekledi
+{who}, {vehicle} düzenledi
+{who}, {vehicle} sildi
+Grup araçlarında {n} değişiklik
+Grup etkinliği bildirimleri
+Başka bir üye araç eklediğinde, düzenlediğinde veya sildiğinde bildirir. Uygulama kapalıyken bildirim birkaç dakika gecikmeli gelebilir.
+Fotoğrafı ayarla
+Döndür
+Ortala
+Yakınlaştırmak için iki parmağınızı açın, taşımak için sürükleyin
+Orijinal
+Fotoğrafı kullan
+Fotoğrafı ayarla (yakınlaştırma ve kırpma)

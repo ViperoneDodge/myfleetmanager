@@ -336,5 +336,19 @@
  "pro.devDisabled": "Udvikler-Pro slået fra",
  "type.truck": "Lastbil",
  "type.trucks": "Lastbiler",
- "deadline.tax": "Ejerafgift"
+ "deadline.tax": "Ejerafgift",
+ "groupAct.someone": "Et gruppemedlem",
+ "groupAct.added": "{who} tilføjede {vehicle}",
+ "groupAct.edited": "{who} ændrede {vehicle}",
+ "groupAct.deleted": "{who} slettede {vehicle}",
+ "groupAct.many": "{n} ændringer af gruppens køretøjer",
+ "settings.groupAlerts": "Besked om gruppeaktivitet",
+ "settings.groupAlertsInfo": "Giver besked, når et andet medlem tilføjer, ændrer eller sletter et køretøj. Når appen er lukket, kan beskeden komme nogle minutter senere.",
+ "crop.title": "Tilpas foto",
+ "crop.rotate": "Rotér",
+ "crop.reset": "Centrér",
+ "crop.hint": "Knib for at zoome, træk for at flytte",
+ "crop.original": "Original",
+ "crop.use": "Brug foto",
+ "crop.adjust": "Tilpas foto (zoom og beskæring)"
 }

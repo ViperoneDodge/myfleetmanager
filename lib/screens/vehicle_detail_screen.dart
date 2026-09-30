@@ -6,6 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:open_filex/open_filex.dart';
 
 import '../l10n.dart';
+import 'photo_crop_screen.dart';
 import '../main.dart';
 import '../models.dart';
 import '../theme.dart';
@@ -152,6 +153,26 @@ class VehicleDetailScreen extends StatelessWidget {
       return;
     }
     if (path == null || !context.mounted) return;
+    // Foto: zoom e ritaglio prima di salvarla (i PDF restano così come sono).
+    final lower = path.toLowerCase();
+    if (lower.endsWith('.jpg') ||
+        lower.endsWith('.jpeg') ||
+        lower.endsWith('.png') ||
+        lower.endsWith('.webp')) {
+      try {
+        final bytes = await File(path).readAsBytes();
+        if (!context.mounted) return;
+        final cropped = await cropPhoto(context, bytes, maxSide: 2200, quality: 85);
+        if (cropped == null || !context.mounted) return;
+        final tmp = File('${Directory.systemTemp.path}/doc_${DateTime.now().millisecondsSinceEpoch}.jpg');
+        await tmp.writeAsBytes(cropped);
+        path = tmp.path;
+      } catch (e) {
+        if (context.mounted) showSnack(context, tr('photo.error', {'error': e}));
+        return;
+      }
+    }
+    if (!context.mounted) return;
     final name = await _askName(context, initial: v.documents.isEmpty ? tr('doc.registration') : '');
     if (name == null) return;
     try {

@@ -1,9 +1,11 @@
+import 'dart:typed_data';
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../l10n.dart';
+import 'photo_crop_screen.dart';
 import '../main.dart';
 import '../services/app_state.dart';
 import '../models.dart';
@@ -66,7 +68,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
       _labels.putIfAbsent(d.id, () => TextEditingController(text: d.label));
 
   Future<void> _pickPhoto() async {
-    final source = await showModalBottomSheet<ImageSource?>(
+    final source = await showModalBottomSheet<Object?>(
       context: context,
       builder: (ctx) => SafeArea(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
@@ -80,6 +82,12 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
             title: Text(tr('photo.gallery')),
             onTap: () => Navigator.pop(ctx, ImageSource.gallery),
           ),
+          if (v.photoBytes != null)
+            ListTile(
+              leading: const Icon(Icons.crop),
+              title: Text(tr('crop.adjust')),
+              onTap: () => Navigator.pop(ctx, 'adjust'),
+            ),
           if (v.photoB64 != null)
             ListTile(
               leading: const Icon(Icons.delete_outline),
@@ -94,15 +102,24 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     );
     if (source == null) return;
     try {
-      final x = await ImagePicker().pickImage(
-        source: source,
-        maxWidth: 1024,
-        maxHeight: 1024,
-        imageQuality: 70,
-      );
-      if (x == null) return;
-      final bytes = await x.readAsBytes();
-      setState(() => v.photoB64 = base64Encode(bytes));
+      Uint8List? bytes;
+      if (source == 'adjust') {
+        bytes = v.photoBytes;
+      } else if (source is ImageSource) {
+        final x = await ImagePicker().pickImage(
+          source: source,
+          maxWidth: 2048,
+          maxHeight: 2048,
+          imageQuality: 90,
+        );
+        if (x == null) return;
+        bytes = await x.readAsBytes();
+      }
+      if (bytes == null || !mounted) return;
+      // Zoom e ritaglio con le stesse proporzioni della foto nella scheda veicolo.
+      final cropped = await cropPhoto(context, bytes, aspect: 25 / 16, maxSide: 1024, quality: 75);
+      if (cropped == null || !mounted) return;
+      setState(() => v.photoB64 = base64Encode(cropped));
     } catch (e) {
       if (mounted) showSnack(context, tr('photo.error', {'error': e}));
     }

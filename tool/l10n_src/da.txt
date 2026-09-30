@@ -1,0 +1,352 @@
+Bil
+Motorcykel
+Varevogn
+Trailer
+Biler
+Motorcykler
+Varevogne
+Trailere
+Dokument
+Forsikring
+Syn
+Service
+Tilpasset
+Næste service
+Motorolie
+Oliefilter
+Luftfilter
+Kabinefilter
+Brændstoffilter
+Gruppe
+Linjeret
+Ternet
+Prikket
+Blank
+Blå
+Skovgrøn
+Racerrød
+Orange
+Petroleumsblå
+Violet
+Grafit
+Læder
+Udløb i går
+Udløb for {n} dage siden
+Udløber i dag
+Udløber i morgen
+Om {n} dage
+Unavngivet
+Ingen frister angivet
+Køretøjernes frister
+Påmindelser om forsikring, syn, service og andre frister
+Gruppeaktivitet
+Pushnotifikationer om køretøjer, der deles i grupper
+1 måned før
+1 uge før
+1 dag før
+På fristdagen
+{n} dage før
+om 1 måned
+om 1 uge
+i morgen
+om {n} dage
+{what} udløber i dag
+{what}: udløber {when}
+{vehicle} · udløber {date}
+Testpåmindelse
+Hvis du kan læse dette, virker planlagte påmindelser også når appen er lukket.
+Notifikationer aktiveret
+Du får påmindelser om dine køretøjers frister.
+Brugernavnet skal være mindst 3 tegn langt.
+Adgangskoden skal være mindst 4 tegn lang.
+Brugernavnet findes allerede på denne telefon.
+Brugeren blev ikke fundet på denne telefon.
+Forkert adgangskode.
+Bruger
+Ugyldig e-mail.
+Forkert e-mail eller adgangskode.
+Der findes allerede en konto med denne e-mail.
+Adgangskoden er for svag (mindst 6 tegn).
+Der kræves internetforbindelse til første onlinelogin.
+Tilmelding med e-mail er ikke aktiveret: aktivér loginmetoden E-mail/adgangskode i Firebase-konsollen.
+For mange forsøg: prøv igen om et par minutter.
+Kontoen er deaktiveret.
+Loginfejl ({code}).
+Login med Google annulleret.
+Login med Google mislykkedes: {error}
+Ugyldig kode.
+Serveren nægtede adgang: udgiv Firestore-reglerne (filen firestore.rules) i Firebase-konsollen.
+Databasen findes ikke: opret Firestore Database i Firebase-konsollen.
+Serveren kan ikke nås: tjek internetforbindelsen.
+Sessionen er udløbet: log ud og log ind igen med onlinekontoen.
+Serverfejl ({code}).
+Mine køretøjer
+Synkroniseret
+Forbinder…
+Offline: dine data er gemt på telefonen. Tryk for at prøve igen.
+Grupper
+Frister
+Mine
+Indstillinger
+Tilføj
+Alle ({n})
+Ingen køretøjer
+Tryk på "Tilføj" for at oprette dit første køretøj.
+Hold fingeren på et køretøj for at flytte det til en gruppe.
+Ingen frister angivet.
+Notesbogen til dine køretøjers frister
+Tage dine køretøjer med?
+Vil du kopiere dit køretøj (med frister, vedligeholdelse og dokumenter) til onlinekontoen? Den lokale konto bliver på denne telefon.
+Vil du kopiere dine {n} køretøjer (med frister, vedligeholdelse og dokumenter) til onlinekontoen? Den lokale konto bliver på denne telefon.
+Ja, kopiér
+Nej
+Du bruger nu onlinekontoen.
+Du bruger nu onlinekontoen: 1 køretøj kopieret.
+Du bruger nu onlinekontoen: {n} køretøjer kopieret.
+Skift til en onlinekonto for at dele køretøjer med andre
+Skriv først din e-mail i feltet ovenfor.
+Vi har sendt en e-mail til {email} for at nulstille adgangskoden.
+Udfyld alle felter.
+Adgangskoderne er ikke ens.
+Dine køretøjers frister, altid under kontrol
+Onlinekonto
+Kun telefon
+Kontoen gemmes kun på denne telefon. Ingen deling.
+Giver mulighed for at dele køretøjer med andre via grupper. Data bliver også på telefonen.
+Brugernavn
+E-mail
+Adgangskode
+Gentag adgangskode
+Opret konto
+Log ind
+Har du allerede en konto? Log ind
+Ingen konto? Tilmeld dig
+Glemt adgangskode?
+eller
+Log ind med Google
+Med Google modtager appen kun din e-mailadresse.
+Data bliver på denne telefon. Login med Google og delte grupper kommer i en fremtidig opdatering.
+Luk
+Annuller
+Opret
+Gem
+Kopiér
+Fjern
+Slet
+Delte køretøjer
+For at dele køretøjer i en gruppe skal du have en onlinekonto. Du kan skifte uden at logge ud og uden at miste dine køretøjer.
+Onlinedeling er endnu ikke aktiv i denne version af appen.
+Skift til onlinekonto
+Ingen grupper endnu
+Opret en gruppe (familie, venner, arbejde…) og giv invitationskoden til de andre, eller bliv medlem af en gruppe med den kode, du har fået.
+Opret gruppe
+Bliv medlem med en kode
+1 medlem
+{n} medlemmer
+1 køretøj
+{n} køretøjer
+Ingen køretøjer i denne gruppe endnu.
+Tilføj køretøj til "{name}"
+Du skal have en onlinekonto for at dele et køretøj.
+Køretøj
+Flyt "{name}" til en gruppe
+Flyt "{name}"
+Køretøjet flyttes til den valgte gruppe, og alle medlemmer kan se og redigere det.
+Køretøjet fjernes fra "{name}".
+Du er ikke med i nogen gruppe endnu
+Opret en eller bliv medlem med en kode under fanen Grupper.
+Kun du kan se det
+"{name}" er nu i "{where}"
+Ny gruppe
+Navn (f.eks. Familien Jensen, Værksted, Venner)
+Invitationskode
+Indtast gruppens invitationskode.
+F.eks. AB12CD34EF
+Bliv medlem
+Du er blevet medlem af "{name}"!
+Gruppen er ikke tilgængelig.
+Koden er kopieret: indsæt den i WhatsApp eller sms
+Den anden person installerer appen, logger ind med en onlinekonto, åbner fanen Grupper → "Bliv medlem med en kode" og indtaster denne kode.
+Medlemmer ({n})
+(dig)
+Opretter
+Omdøb gruppen
+Slet gruppen
+Forlad gruppen
+Alle medlemmer mister adgangen til gruppens køretøjer
+Du kan ikke længere se denne gruppes køretøjer
+Gruppens navn
+Fjern medlem?
+{email} kan ikke længere se køretøjerne i "{name}".
+Slet gruppen?
+Forlad gruppen?
+"{name}" slettes for alle medlemmer sammen med sine køretøjer.
+Køretøjerne i "{name}" forsvinder fra denne telefon.
+Forlad
+Konto
+Onlinekonto · data gemt på telefonen og delt i grupper
+Konto kun på denne telefon
+Del køretøjer med andre uden at logge ud: du kan tage denne kontos køretøjer med.
+Sprog
+Som telefonen
+Notifikationer
+Hvornår vil du påmindes før en frist?
+Alle påmindelser
+Tidspunkt for notifikationer
+Test notifikation
+Tjek at notifikationer er tilladt
+Planlagte notifikationer: {n}
+Testpåmindelse om 1 minut
+Luk derefter appen: kommer notifikationen, virker påmindelserne
+Testpåmindelse planlagt: du kan lukke appen.
+Kunne ikke planlægge: {error}
+På nogle telefoner (Xiaomi, Huawei, Samsung, Oppo…) blokerer batterisparing påmindelserne: vælg "Ubegrænset" i Android-indstillinger → Apps → MyFleetManager → Batteri.
+Pushnotifikationer
+Telefonen er registreret til push
+Telefonen er endnu ikke registreret
+Tryk for at kopiere enhedskoden (bruges til en test fra Firebase-konsollen)
+Tryk for at prøve igen (kræver internet)
+Registreringen mislykkedes: tjek forbindelsen.
+Enhedskoden er kopieret
+Grupper
+For at dele køretøjer i en gruppe skal du skifte til en onlinekonto (ovenfor, under Konto).
+Log ud
+Dine data forbliver gemt på telefonen
+Udseende
+Lyst
+Mørkt
+Auto
+Omslagets farve
+Sidernes baggrund
+kode {code}
+Bliv medlem med en invitationskode
+Notifikationer blokeret
+Tryk for at tillade dem. Vises der ingen forespørgsel: Android-indstillinger → Apps → MyFleetManager → Notifikationer → Tillad.
+Påmindelser kan komme for sent
+Android kan forsinke påmindelser. Tryk og aktivér "Alarmer og påmindelser" for MyFleetManager.
+Notifikationer tilladt
+Slet køretøjet?
+"{name}", dets frister og dokumenter slettes.
+"{name}", dets frister og dokumenter slettes (fristerne også for gruppens andre medlemmer).
+Registreringsattest
+Forsikringspolice
+Synsrapport
+Vægtafgift
+Servicefaktura
+Dokumentets navn
+F.eks. Registreringsattest
+Tilføj dokument
+Fotografér dokumentet
+Billede fra galleriet
+PDF-fil eller billede
+Fra telefonens filer, Drive, downloads…
+Kunne ikke åbne filen: {error}
+Dokumentet er gemt
+Fejl ved gemning: {error}
+Filen blev ikke fundet på telefonen.
+Ingen app til at åbne PDF: {error}
+Åbn
+Omdøb
+Slet dokumentet?
+"{name}" slettes fra telefonen.
+Køretøjet blev ikke fundet.
+Redigér
+Ingen frister følges.
+Vedligeholdelse
+Registrér service og arbejde her: dato, kilometertal og udskiftede filtre.
+Dokumenter
+Gem registreringsattest, police og andre dokumenter her (billeder eller PDF).
+Billede
+Dokumenterne bliver kun på denne telefon.
+Noter
+Sidst ændret: {who} · {date}
+Seneste: {date}
+Næste: {date} (hver {n}. måned)
+Dato ikke angivet
+Udløber {date}
+Tag et foto
+Vælg fra galleriet
+Fjern foto
+Kunne ikke indlæse fotoet: {error}
+Tilføj foto
+Dato for seneste service
+Fristdato: {what}
+Angiv mindst navn eller nummerplade.
+Tilpasset frist
+Nyt køretøj
+Redigér køretøj
+Køretøjstype
+Hvor det hører til
+Gruppe: {name}
+Navn (f.eks. Marks Panda)
+Nummerplade
+Frister, der skal følges
+Aktivér kun dem, du vil følge. Du får notifikationer efter dine indstillinger.
+Tilføj tilpasset frist
+F.eks. vægtafgift, vinterdæk, garanti, tandrem…
+Noter (valgfrit)
+Fristens navn (f.eks. Vægtafgift)
+Seneste service
+Vælg dato
+Næste påmindelse:
+ingen
+efter {n} måneder
+Vælg mindst ét punkt, eller skriv en note.
+Slet denne registrering?
+Registreringen fra {date} fjernes fra historikken.
+Ny vedligeholdelse
+Vedligeholdelse
+Dato
+Kilometertal
+Udført arbejde
+Noter (værksted, pris, andre dele…)
+Tæller som service
+Opdaterer datoen for seneste service og næste påmindelse
+OK
+Køretøjer
+Vælg et køretøj på listen
+Pro-version
+Opgradér til MyFleetManager Pro
+Ét køb, for altid: intet abonnement.
+Pro-version aktiv
+Tak fordi du støtter MyFleetManager!
+Pro låst op med udviklerkoden
+Ubegrænset antal køretøjer
+Varevogne, lastbiler og trailere
+Køretøjsdokumenter (registreringsattest, police…)
+Vedligeholdelseshistorik
+Støt udviklingen af appen
+Gratis version: op til {n} køretøjer (biler eller motorcykler) med frister og notifikationer.
+Køb Pro
+Køb Pro · {price}
+Købet bliver tilgængeligt, når appen er installeret fra Play Butik.
+Gendan køb
+Søger efter tidligere køb…
+Betal én gang, din for altid.
+Gratisversionen håndterer op til {n} køretøjer. Opgradér til Pro for at tilføje flere.
+{type}: findes i Pro-versionen.
+Køretøjsdokumenter findes i Pro-versionen.
+Vedligeholdelseshistorikken findes i Pro-versionen.
+Udviklerkode
+Indtast koden
+Pro låst op (udvikling)
+Ugyldig kode
+Slå udvikler-Pro fra
+Udvikler-Pro slået fra
+Lastbil
+Lastbiler
+Ejerafgift
+Et gruppemedlem
+{who} tilføjede {vehicle}
+{who} ændrede {vehicle}
+{who} slettede {vehicle}
+{n} ændringer af gruppens køretøjer
+Besked om gruppeaktivitet
+Giver besked, når et andet medlem tilføjer, ændrer eller sletter et køretøj. Når appen er lukket, kan beskeden komme nogle minutter senere.
+Tilpas foto
+Rotér
+Centrér
+Knib for at zoome, træk for at flytte
+Original
+Brug foto
+Tilpas foto (zoom og beskæring)

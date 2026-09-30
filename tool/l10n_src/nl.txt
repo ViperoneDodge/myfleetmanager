@@ -1,0 +1,352 @@
+Auto
+Motor
+Bestelwagen
+Aanhanger
+Auto's
+Motoren
+Bestelwagens
+Aanhangers
+Document
+Verzekering
+APK-keuring
+Onderhoudsbeurt
+Aangepast
+Volgende onderhoudsbeurt
+Motorolie
+Oliefilter
+Luchtfilter
+Interieurfilter
+Brandstoffilter
+Groep
+Gelinieerd
+Geruit
+Gestippeld
+Blanco
+Blauw
+Bosgroen
+Racerood
+Oranje
+Petrolblauw
+Violet
+Grafiet
+Leer
+Gisteren verlopen
+{n} dagen geleden verlopen
+Verloopt vandaag
+Verloopt morgen
+Over {n} dagen
+Naamloos
+Geen deadlines ingesteld
+Deadlines van voertuigen
+Herinneringen voor verzekering, APK, onderhoud en andere deadlines
+Groepsactiviteit
+Pushmeldingen over voertuigen die in groepen worden gedeeld
+1 maand van tevoren
+1 week van tevoren
+1 dag van tevoren
+Op de vervaldag
+{n} dagen van tevoren
+over 1 maand
+over 1 week
+morgen
+over {n} dagen
+{what} verloopt vandaag
+{what}: verloopt {when}
+{vehicle} · verloopt op {date}
+Testherinnering
+Als je dit kunt lezen, werken geplande herinneringen ook als de app gesloten is.
+Meldingen ingeschakeld
+Je krijgt herinneringen voor de deadlines van je voertuigen.
+De gebruikersnaam moet minstens 3 tekens lang zijn.
+Het wachtwoord moet minstens 4 tekens lang zijn.
+Deze gebruikersnaam bestaat al op deze telefoon.
+Gebruiker niet gevonden op deze telefoon.
+Onjuist wachtwoord.
+Gebruiker
+Ongeldig e-mailadres.
+Onjuist e-mailadres of wachtwoord.
+Er bestaat al een account met dit e-mailadres.
+Wachtwoord te zwak (minstens 6 tekens).
+Voor de eerste online aanmelding is een internetverbinding nodig.
+Registreren met e-mail is niet ingeschakeld: schakel in de Firebase-console de aanmeldmethode E-mail/wachtwoord in.
+Te veel pogingen: probeer het over een paar minuten opnieuw.
+Dit account is uitgeschakeld.
+Aanmeldfout ({code}).
+Aanmelden met Google geannuleerd.
+Aanmelden met Google mislukt: {error}
+Ongeldige code.
+Toegang geweigerd door de server: publiceer in de Firebase-console de Firestore-regels (bestand firestore.rules).
+De database bestaat niet: maak de Firestore Database aan in de Firebase-console.
+Server onbereikbaar: controleer je internetverbinding.
+Sessie verlopen: meld je af en weer aan met het online account.
+Serverfout ({code}).
+Mijn voertuigen
+Gesynchroniseerd
+Verbinden…
+Offline: je gegevens zijn op de telefoon opgeslagen. Tik om opnieuw te proberen.
+Groepen
+Deadlines
+Van mij
+Instellingen
+Toevoegen
+Alle ({n})
+Geen voertuigen
+Tik op "Toevoegen" om je eerste voertuig in te voeren.
+Houd een voertuig ingedrukt om het naar een groep te verplaatsen.
+Geen deadlines ingesteld.
+Het deadlineschrift voor je voertuigen
+Je voertuigen meenemen?
+Wil je je voertuig (met deadlines, onderhoud en documenten) naar het online account kopiëren? Het lokale account blijft toch op deze telefoon.
+Wil je je {n} voertuigen (met deadlines, onderhoud en documenten) naar het online account kopiëren? Het lokale account blijft toch op deze telefoon.
+Ja, kopiëren
+Nee
+Je gebruikt nu het online account.
+Je gebruikt nu het online account: 1 voertuig gekopieerd.
+Je gebruikt nu het online account: {n} voertuigen gekopieerd.
+Stap over op een online account om voertuigen met anderen te delen
+Vul eerst je e-mailadres in het veld hierboven in.
+We hebben een e-mail naar {email} gestuurd om je wachtwoord te herstellen.
+Vul alle velden in.
+De wachtwoorden komen niet overeen.
+De deadlines van je voertuigen, altijd onder controle
+Online account
+Alleen telefoon
+Account alleen op deze telefoon opgeslagen. Niet delen.
+Hiermee deel je voertuigen met anderen via groepen. De gegevens blijven ook op de telefoon.
+Gebruikersnaam
+E-mail
+Wachtwoord
+Herhaal wachtwoord
+Account aanmaken
+Aanmelden
+Heb je al een account? Meld je aan
+Geen account? Registreer je
+Wachtwoord vergeten?
+of
+Aanmelden met Google
+Met Google ontvangt de app alleen je e-mailadres.
+De gegevens blijven op deze telefoon. Aanmelden met Google en gedeelde groepen komen in een volgende update.
+Sluiten
+Annuleren
+Aanmaken
+Opslaan
+Kopiëren
+Verwijderen
+Verwijderen
+Gedeelde voertuigen
+Om voertuigen in een groep te delen heb je een online account nodig. Je kunt overstappen zonder af te melden en zonder je voertuigen te verliezen.
+Online delen is in deze versie van de app nog niet actief.
+Overstappen op online account
+Nog geen groepen
+Maak een groep (gezin, vrienden, werk…) en geef de uitnodigingscode aan de anderen, of word lid van een groep met de code die je hebt gekregen.
+Groep aanmaken
+Lid worden met een code
+1 lid
+{n} leden
+1 voertuig
+{n} voertuigen
+Nog geen voertuigen in deze groep.
+Voertuig toevoegen aan "{name}"
+Je hebt een online account nodig om een voertuig te delen.
+Voertuig
+"{name}" naar een groep verplaatsen
+"{name}" verplaatsen
+Het voertuig gaat naar de gekozen groep en alle leden kunnen het zien en bewerken.
+Het voertuig wordt verwijderd uit "{name}".
+Je zit nog in geen enkele groep
+Maak er een aan of word lid met een code via het tabblad Groepen.
+Alleen jij ziet het
+"{name}" staat nu in "{where}"
+Nieuwe groep
+Naam (bijv. Familie Jansen, Werkplaats, Vrienden)
+Uitnodigingscode
+Voer de uitnodigingscode van de groep in.
+Bijv. AB12CD34EF
+Lid worden
+Je bent lid geworden van "{name}"!
+Groep niet beschikbaar.
+Code gekopieerd: plak hem in WhatsApp of een sms
+De ander installeert de app, meldt zich aan met een online account, opent het tabblad Groepen → "Lid worden met een code" en voert deze code in.
+Leden ({n})
+(jij)
+Maker
+Groep hernoemen
+Groep verwijderen
+Groep verlaten
+Alle leden verliezen de toegang tot de voertuigen van de groep
+Je ziet de voertuigen van deze groep niet meer
+Naam van de groep
+Lid verwijderen?
+{email} ziet de voertuigen van "{name}" niet meer.
+Groep verwijderen?
+Groep verlaten?
+"{name}" wordt voor alle leden verwijderd, samen met de voertuigen.
+De voertuigen van "{name}" verdwijnen van deze telefoon.
+Verlaten
+Account
+Online account · gegevens op de telefoon opgeslagen en in groepen gedeeld
+Account alleen op deze telefoon
+Deel voertuigen met anderen zonder af te melden: je kunt de voertuigen van dit account meenemen.
+Taal
+Zoals de telefoon
+Meldingen
+Wanneer wil je vóór een deadline herinnerd worden?
+Alle herinneringen
+Tijdstip van meldingen
+Testmelding
+Controleer of meldingen zijn toegestaan
+Geplande meldingen: {n}
+Testherinnering over 1 minuut
+Sluit daarna de app: als de melding komt, werken de herinneringen
+Testherinnering gepland: je kunt de app sluiten.
+Plannen mislukt: {error}
+Op sommige telefoons (Xiaomi, Huawei, Samsung, Oppo…) blokkeert batterijbesparing de herinneringen: kies in Android-instellingen → Apps → MyFleetManager → Batterij "Onbeperkt".
+Pushmeldingen
+Telefoon geregistreerd voor push
+Telefoon nog niet geregistreerd
+Tik om de apparaatcode te kopiëren (nodig voor een test vanuit de Firebase-console)
+Tik om opnieuw te proberen (internet nodig)
+Registratie mislukt: controleer je verbinding.
+Apparaatcode gekopieerd
+Groepen
+Om voertuigen in een groep te delen, stap je over op een online account (hierboven, bij Account).
+Afmelden
+Je gegevens blijven op de telefoon opgeslagen
+Weergave
+Licht
+Donker
+Auto
+Kleur van de kaft
+Achtergrond van de pagina's
+code {code}
+Lid worden met een uitnodigingscode
+Meldingen geblokkeerd
+Tik om ze toe te staan. Verschijnt er geen vraag: Android-instellingen → Apps → MyFleetManager → Meldingen → Toestaan.
+Herinneringen kunnen te laat komen
+Android kan herinneringen vertragen. Tik en schakel "Wekkers en herinneringen" in voor MyFleetManager.
+Meldingen toegestaan
+Voertuig verwijderen?
+"{name}", de deadlines en documenten worden verwijderd.
+"{name}", de deadlines en documenten worden verwijderd (de deadlines ook voor de andere groepsleden).
+Kentekenbewijs
+Verzekeringspolis
+Keuringsrapport
+Motorrijtuigenbelasting
+Factuur onderhoud
+Naam van het document
+Bijv. Kentekenbewijs
+Document toevoegen
+Document fotograferen
+Afbeelding uit galerij
+PDF-bestand of afbeelding
+Uit telefoonbestanden, Drive, downloads…
+Kan het bestand niet openen: {error}
+Document opgeslagen
+Fout bij opslaan: {error}
+Bestand niet gevonden op de telefoon.
+Geen app om pdf's te openen: {error}
+Openen
+Hernoemen
+Document verwijderen?
+"{name}" wordt van de telefoon verwijderd.
+Voertuig niet gevonden.
+Bewerken
+Geen deadlines gevolgd.
+Onderhoud
+Leg hier beurten en werkzaamheden vast: datum, kilometerstand en vervangen filters.
+Documenten
+Bewaar hier kentekenbewijs, polis en andere documenten (foto's of pdf).
+Afbeelding
+Documenten blijven alleen op deze telefoon.
+Notities
+Laatst gewijzigd: {who} · {date}
+Laatste: {date}
+Volgende: {date} (elke {n} maanden)
+Datum niet ingesteld
+Verloopt op {date}
+Foto maken
+Kiezen uit galerij
+Foto verwijderen
+Kan de foto niet laden: {error}
+Foto toevoegen
+Datum laatste beurt
+Vervaldatum: {what}
+Vul minstens de naam of het kenteken in.
+Aangepaste deadline
+Nieuw voertuig
+Voertuig bewerken
+Type voertuig
+Waar het hoort
+Groep: {name}
+Naam (bijv. Panda van Mark)
+Kenteken
+Te volgen deadlines
+Schakel alleen in wat je belangrijk vindt. Je krijgt meldingen volgens je instellingen.
+Aangepaste deadline toevoegen
+Bijv. wegenbelasting, winterbanden, garantie, distributieriem…
+Notities (optioneel)
+Naam van de deadline (bijv. Wegenbelasting)
+Laatste beurt
+Datum kiezen
+Volgende herinnering:
+geen
+na {n} maanden
+Kies minstens één onderdeel of schrijf een notitie.
+Deze registratie verwijderen?
+De registratie van {date} wordt uit de geschiedenis verwijderd.
+Nieuw onderhoud
+Onderhoud
+Datum
+Kilometerstand
+Uitgevoerde werkzaamheden
+Notities (garage, kosten, andere onderdelen…)
+Telt als onderhoudsbeurt
+Werkt de datum van de laatste beurt en de volgende herinnering bij
+OK
+Voertuigen
+Kies een voertuig uit de lijst
+Pro-versie
+Upgrade naar MyFleetManager Pro
+Eén aankoop, voor altijd: geen abonnement.
+Pro-versie actief
+Bedankt voor je steun aan MyFleetManager!
+Pro ontgrendeld met de ontwikkelaarscode
+Onbeperkt aantal voertuigen
+Bestelwagens, vrachtwagens en aanhangers
+Voertuigdocumenten (kentekenbewijs, polis…)
+Onderhoudsgeschiedenis
+Steun de ontwikkeling van de app
+Gratis versie: tot {n} voertuigen (auto's of motoren) met deadlines en meldingen.
+Pro kopen
+Pro kopen · {price}
+Kopen is mogelijk zodra de app uit de Play Store is geïnstalleerd.
+Aankoop herstellen
+Zoeken naar eerdere aankopen…
+Eén keer betalen, voor altijd van jou.
+De gratis versie beheert tot {n} voertuigen. Upgrade naar Pro om er meer toe te voegen.
+{type}: beschikbaar in de Pro-versie.
+Voertuigdocumenten zijn beschikbaar in de Pro-versie.
+De onderhoudsgeschiedenis is beschikbaar in de Pro-versie.
+Ontwikkelaarscode
+Voer de code in
+Pro ontgrendeld (ontwikkeling)
+Ongeldige code
+Ontwikkelaars-Pro uitschakelen
+Ontwikkelaars-Pro uitgeschakeld
+Vrachtwagen
+Vrachtwagens
+Motorrijtuigenbelasting
+Een groepslid
+{who} heeft {vehicle} toegevoegd
+{who} heeft {vehicle} gewijzigd
+{who} heeft {vehicle} verwijderd
+{n} wijzigingen aan de voertuigen van de groep
+Meldingen groepsactiviteit
+Meldt wanneer een ander lid een voertuig toevoegt, wijzigt of verwijdert. Als de app gesloten is, kan de melding een paar minuten later komen.
+Foto aanpassen
+Draaien
+Centreren
+Knijp om te zoomen, sleep om te verplaatsen
+Origineel
+Foto gebruiken
+Foto aanpassen (zoomen en bijsnijden)

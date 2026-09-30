@@ -1,0 +1,352 @@
+Automašīna
+Motocikls
+Furgons
+Piekabe
+Automašīnas
+Motocikli
+Furgoni
+Piekabes
+Dokuments
+Apdrošināšana
+Tehniskā apskate
+Apkope
+Pielāgots
+Nākamā apkope
+Motoreļļa
+Eļļas filtrs
+Gaisa filtrs
+Salona filtrs
+Degvielas filtrs
+Grupa
+Līniju
+Rūtiņu
+Punktu
+Tukšs
+Zils
+Meža zaļš
+Sacīkšu sarkans
+Oranžs
+Petroleja zils
+Violets
+Grafīts
+Āda
+Beidzās vakar
+Beidzās pirms {n} dienām
+Beidzas šodien
+Beidzas rīt
+Pēc {n} dienām
+Bez nosaukuma
+Nav iestatītu termiņu
+Transportlīdzekļu termiņi
+Atgādinājumi par apdrošināšanu, tehnisko apskati, apkopi un citiem termiņiem
+Grupu aktivitāte
+Paziņojumi par grupās koplietotiem transportlīdzekļiem
+1 mēnesi pirms
+1 nedēļu pirms
+1 dienu pirms
+Termiņa dienā
+{n} dienas pirms
+pēc 1 mēneša
+pēc 1 nedēļas
+rīt
+pēc {n} dienām
+{what} beidzas šodien
+{what}: beidzas {when}
+{vehicle} · termiņš {date}
+Testa atgādinājums
+Ja tu to lasi, ieplānotie atgādinājumi darbojas arī tad, kad lietotne ir aizvērta.
+Paziņojumi ieslēgti
+Tu saņemsi atgādinājumus par savu transportlīdzekļu termiņiem.
+Lietotājvārdā jābūt vismaz 3 rakstzīmēm.
+Parolē jābūt vismaz 4 rakstzīmēm.
+Šis lietotājvārds šajā tālrunī jau pastāv.
+Lietotājs šajā tālrunī nav atrasts.
+Nepareiza parole.
+Lietotājs
+Nederīgs e-pasts.
+Nepareizs e-pasts vai parole.
+Konts ar šo e-pastu jau pastāv.
+Pārāk vāja parole (vismaz 6 rakstzīmes).
+Pirmajai pieteikšanās reizei tiešsaistē vajadzīgs internets.
+Reģistrācija ar e-pastu nav ieslēgta: Firebase konsolē ieslēdz pieteikšanās metodi E-pasts/parole.
+Pārāk daudz mēģinājumu: mēģini vēlreiz pēc dažām minūtēm.
+Šis konts ir atspējots.
+Pieteikšanās kļūda ({code}).
+Pieteikšanās ar Google atcelta.
+Pieteikšanās ar Google neizdevās: {error}
+Nederīgs kods.
+Serveris liedza piekļuvi: Firebase konsolē publicē Firestore noteikumus (fails firestore.rules).
+Datubāze nepastāv: izveido Firestore Database Firebase konsolē.
+Serveris nav sasniedzams: pārbaudi interneta savienojumu.
+Sesija beigusies: izrakstās un piesakies vēlreiz ar tiešsaistes kontu.
+Servera kļūda ({code}).
+Mani transportlīdzekļi
+Sinhronizēts
+Savienojas…
+Bezsaistē: dati saglabāti tālrunī. Pieskaries, lai mēģinātu vēlreiz.
+Grupas
+Termiņi
+Mani
+Iestatījumi
+Pievienot
+Visi ({n})
+Nav transportlīdzekļu
+Pieskaries „Pievienot”, lai ievadītu pirmo transportlīdzekli.
+Turi nospiestu transportlīdzekli, lai pārvietotu to uz grupu.
+Nav iestatītu termiņu.
+Tavu transportlīdzekļu termiņu piezīmju grāmatiņa
+Ņemt līdzi transportlīdzekļus?
+Vai kopēt tavu transportlīdzekli (ar termiņiem, apkopēm un dokumentiem) uz tiešsaistes kontu? Vietējais konts tik un tā paliks šajā tālrunī.
+Vai kopēt tavus transportlīdzekļus ({n}) ar termiņiem, apkopēm un dokumentiem uz tiešsaistes kontu? Vietējais konts tik un tā paliks šajā tālrunī.
+Jā, kopēt
+Nē
+Tagad tu izmanto tiešsaistes kontu.
+Tagad tu izmanto tiešsaistes kontu: nokopēts 1 transportlīdzeklis.
+Tagad tu izmanto tiešsaistes kontu: nokopēti transportlīdzekļi: {n}.
+Pārej uz tiešsaistes kontu, lai koplietotu transportlīdzekļus ar citiem
+Vispirms ieraksti savu e-pastu laukā augstāk.
+Nosūtījām e-pastu uz {email}, lai atiestatītu paroli.
+Aizpildi visus laukus.
+Paroles nesakrīt.
+Tavu transportlīdzekļu termiņi vienmēr kontrolē
+Tiešsaistes konts
+Tikai tālrunis
+Konts saglabāts tikai šajā tālrunī. Bez koplietošanas.
+Ļauj koplietot transportlīdzekļus ar citiem grupās. Dati paliek arī tālrunī.
+Lietotājvārds
+E-pasts
+Parole
+Atkārto paroli
+Izveidot kontu
+Pieteikties
+Jau ir konts? Piesakies
+Nav konta? Reģistrējies
+Aizmirsi paroli?
+vai
+Pieteikties ar Google
+Ar Google lietotne saņem tikai tavu e-pasta adresi.
+Dati paliek šajā tālrunī. Pieteikšanās ar Google un koplietotās grupas būs pieejamas nākamajā atjauninājumā.
+Aizvērt
+Atcelt
+Izveidot
+Saglabāt
+Kopēt
+Noņemt
+Dzēst
+Koplietotie transportlīdzekļi
+Lai koplietotu transportlīdzekļus grupā, vajadzīgs tiešsaistes konts. Vari pāriet bez izrakstīšanās un nezaudējot transportlīdzekļus.
+Tiešsaistes koplietošana šajā lietotnes versijā vēl nav aktīva.
+Pāriet uz tiešsaistes kontu
+Vēl nav grupu
+Izveido grupu (ģimene, draugi, darbs…) un iedod citiem ielūguma kodu vai pievienojies grupai ar saņemto kodu.
+Izveidot grupu
+Pievienoties ar kodu
+1 dalībnieks
+Dalībnieki: {n}
+1 transportlīdzeklis
+Transportlīdzekļi: {n}
+Šajā grupā vēl nav transportlīdzekļu.
+Pievienot transportlīdzekli grupai „{name}”
+Lai koplietotu transportlīdzekli, vajadzīgs tiešsaistes konts.
+Transportlīdzeklis
+Pārvietot „{name}” uz grupu
+Pārvietot „{name}”
+Transportlīdzeklis pāriet uz izvēlēto grupu, un visi dalībnieki to redzēs un varēs rediģēt.
+Transportlīdzeklis tiks noņemts no „{name}”.
+Tu vēl neesi nevienā grupā
+Izveido to vai pievienojies ar kodu cilnē Grupas.
+To redzi tikai tu
+„{name}” tagad ir grupā „{where}”
+Jauna grupa
+Nosaukums (piem. Bērziņu ģimene, Darbnīca, Draugi)
+Ielūguma kods
+Ievadi grupas ielūguma kodu.
+Piem. AB12CD34EF
+Pievienoties
+Tu pievienojies grupai „{name}”!
+Grupa nav pieejama.
+Kods nokopēts: ielīmē to WhatsApp vai SMS
+Otra persona instalē lietotni, piesakās ar tiešsaistes kontu, atver cilni Grupas → „Pievienoties ar kodu” un ievada šo kodu.
+Dalībnieki ({n})
+(tu)
+Izveidotājs
+Pārdēvēt grupu
+Dzēst grupu
+Pamest grupu
+Visi dalībnieki zaudēs piekļuvi grupas transportlīdzekļiem
+Tu vairs neredzēsi šīs grupas transportlīdzekļus
+Grupas nosaukums
+Noņemt dalībnieku?
+{email} vairs neredzēs grupas „{name}” transportlīdzekļus.
+Dzēst grupu?
+Pamest grupu?
+„{name}” tiks dzēsta visiem dalībniekiem kopā ar transportlīdzekļiem.
+Grupas „{name}” transportlīdzekļi pazudīs no šī tālruņa.
+Pamest
+Konts
+Tiešsaistes konts · dati tālrunī un koplietoti grupās
+Konts tikai šajā tālrunī
+Koplieto transportlīdzekļus ar citiem, neizrakstoties: šī konta transportlīdzekļus vari paņemt līdzi.
+Valoda
+Kā tālrunī
+Paziņojumi
+Kad vēlies atgādinājumu pirms termiņa?
+Visi atgādinājumi
+Paziņojumu laiks
+Pārbaudīt paziņojumu
+Pārbaudi, vai paziņojumi ir atļauti
+Ieplānotie paziņojumi: {n}
+Testa atgādinājums pēc 1 minūtes
+Pēc tam aizver lietotni: ja paziņojums pienāk, atgādinājumi darbojas
+Testa atgādinājums ieplānots: vari aizvērt lietotni.
+Neizdevās ieplānot: {error}
+Dažos tālruņos (Xiaomi, Huawei, Samsung, Oppo…) akumulatora taupīšana bloķē atgādinājumus: Android iestatījumos → Lietotnes → MyFleetManager → Akumulators izvēlies „Neierobežots”.
+Push paziņojumi
+Tālrunis reģistrēts push paziņojumiem
+Tālrunis vēl nav reģistrēts
+Pieskaries, lai nokopētu ierīces kodu (vajadzīgs testam no Firebase konsoles)
+Pieskaries, lai mēģinātu vēlreiz (vajadzīgs internets)
+Reģistrācija neizdevās: pārbaudi savienojumu.
+Ierīces kods nokopēts
+Grupas
+Lai koplietotu transportlīdzekļus grupā, pārej uz tiešsaistes kontu (augstāk, sadaļā Konts).
+Izrakstīties
+Tavi dati paliek saglabāti tālrunī
+Izskats
+Gaišs
+Tumšs
+Auto
+Vāka krāsa
+Lapu fons
+kods {code}
+Pievienoties ar ielūguma kodu
+Paziņojumi bloķēti
+Pieskaries, lai tos atļautu. Ja pieprasījums neparādās: Android iestatījumi → Lietotnes → MyFleetManager → Paziņojumi → Atļaut.
+Atgādinājumi var kavēties
+Android var aizkavēt atgādinājumus. Pieskaries un ieslēdz „Signāli un atgādinājumi” lietotnei MyFleetManager.
+Paziņojumi atļauti
+Dzēst transportlīdzekli?
+„{name}”, tā termiņi un dokumenti tiks dzēsti.
+„{name}”, tā termiņi un dokumenti tiks dzēsti (termiņi arī citiem grupas dalībniekiem).
+Reģistrācijas apliecība
+Apdrošināšanas polise
+Tehniskās apskates karte
+Transportlīdzekļa ekspluatācijas nodoklis
+Apkopes rēķins
+Dokumenta nosaukums
+Piem. Reģistrācijas apliecība
+Pievienot dokumentu
+Nofotografēt dokumentu
+Attēls no galerijas
+PDF fails vai attēls
+No tālruņa failiem, Drive, lejupielādēm…
+Neizdevās atvērt failu: {error}
+Dokuments saglabāts
+Kļūda saglabājot: {error}
+Fails tālrunī nav atrasts.
+Nav lietotnes PDF atvēršanai: {error}
+Atvērt
+Pārdēvēt
+Dzēst dokumentu?
+„{name}” tiks dzēsts no tālruņa.
+Transportlīdzeklis nav atrasts.
+Rediģēt
+Netiek sekots nevienam termiņam.
+Apkope
+Pieraksti šeit apkopes un darbus: datumu, nobraukumu un nomainītos filtrus.
+Dokumenti
+Glabā šeit reģistrācijas apliecību, polisi un citus dokumentus (attēli vai PDF).
+Attēls
+Dokumenti paliek tikai šajā tālrunī.
+Piezīmes
+Pēdējās izmaiņas: {who} · {date}
+Pēdējā: {date}
+Nākamā: {date} (ik pēc {n} mēnešiem)
+Datums nav iestatīts
+Termiņš {date}
+Uzņemt foto
+Izvēlēties no galerijas
+Noņemt foto
+Neizdevās ielādēt foto: {error}
+Pievienot foto
+Pēdējās apkopes datums
+Termiņa datums: {what}
+Ievadi vismaz nosaukumu vai numura zīmi.
+Pielāgots termiņš
+Jauns transportlīdzeklis
+Rediģēt transportlīdzekli
+Transportlīdzekļa veids
+Kur tas pieder
+Grupa: {name}
+Nosaukums (piem. Marka Panda)
+Numura zīme
+Sekojamie termiņi
+Ieslēdz tikai tos, kas tevi interesē. Paziņojumus saņemsi atbilstoši iestatījumiem.
+Pievienot pielāgotu termiņu
+Piem. nodoklis, ziemas riepas, garantija, zobsiksna…
+Piezīmes (neobligāti)
+Termiņa nosaukums (piem. Nodoklis)
+Pēdējā apkope
+Izvēlēties datumu
+Nākamais atgādinājums:
+nav
+pēc {n} mēnešiem
+Izvēlies vismaz vienu pozīciju vai uzraksti piezīmi.
+Dzēst šo ierakstu?
+Ieraksts no {date} tiks noņemts no vēstures.
+Jauna apkope
+Apkope
+Datums
+Nobraukums
+Veiktie darbi
+Piezīmes (serviss, izmaksas, citas detaļas…)
+Uzskatīt par apkopi
+Atjaunina pēdējās apkopes datumu un nākamo atgādinājumu
+Labi
+Transportlīdzekļi
+Izvēlies transportlīdzekli no saraksta
+Pro versija
+Pāriet uz MyFleetManager Pro
+Viens pirkums uz visiem laikiem: bez abonementa.
+Pro versija ir aktīva
+Paldies, ka atbalsti MyFleetManager!
+Pro atbloķēts ar izstrādātāja kodu
+Neierobežots transportlīdzekļu skaits
+Furgoni, kravas auto un piekabes
+Transportlīdzekļa dokumenti (reģistrācijas apliecība, polise…)
+Apkopju vēsture
+Atbalsti lietotnes izstrādi
+Bezmaksas versija: līdz {n} transportlīdzekļiem (automašīnas vai motocikli) ar termiņiem un paziņojumiem.
+Pirkt Pro
+Pirkt Pro · {price}
+Pirkums būs pieejams, kad lietotne būs instalēta no Play veikala.
+Atjaunot pirkumu
+Meklē iepriekšējos pirkumus…
+Maksā vienreiz, tavs uz visiem laikiem.
+Bezmaksas versija pārvalda līdz {n} transportlīdzekļiem. Pārej uz Pro, lai pievienotu vairāk.
+{type}: pieejams Pro versijā.
+Transportlīdzekļa dokumenti ir pieejami Pro versijā.
+Apkopju vēsture ir pieejama Pro versijā.
+Izstrādātāja kods
+Ievadi kodu
+Pro atbloķēts (izstrāde)
+Nederīgs kods
+Izslēgt izstrādātāja Pro
+Izstrādātāja Pro izslēgts
+Kravas auto
+Kravas auto
+Transportlīdzekļa ekspluatācijas nodoklis
+Grupas dalībnieks
+{who} pievienoja {vehicle}
+{who} mainīja {vehicle}
+{who} izdzēsa {vehicle}
+Grupas transportlīdzekļu izmaiņas: {n}
+Paziņojumi par grupu aktivitāti
+Paziņo, kad cits dalībnieks pievieno, maina vai izdzēš transportlīdzekli. Ja lietotne ir aizvērta, paziņojums var pienākt ar dažu minūšu nokavēšanos.
+Pielāgot foto
+Pagriezt
+Centrēt
+Savelciet pirkstus, lai tuvinātu, velciet, lai pārvietotu
+Oriģināls
+Izmantot foto
+Pielāgot foto (tālummaiņa un apgriešana)

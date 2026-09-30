@@ -1,0 +1,352 @@
+Ô tô
+Xe máy
+Xe van
+Rơ-moóc
+Ô tô
+Xe máy
+Xe van
+Rơ-moóc
+Tài liệu
+Bảo hiểm
+Đăng kiểm
+Bảo dưỡng
+Tùy chỉnh
+Lần bảo dưỡng tới
+Dầu động cơ
+Lọc dầu
+Lọc gió
+Lọc gió điều hòa
+Lọc nhiên liệu
+Nhóm
+Kẻ dòng
+Kẻ ô
+Chấm bi
+Trơn
+Xanh dương
+Xanh rừng
+Đỏ đua
+Cam
+Xanh dầu
+Tím
+Than chì
+Da
+Hết hạn hôm qua
+Hết hạn {n} ngày trước
+Hết hạn hôm nay
+Hết hạn ngày mai
+Còn {n} ngày
+Chưa đặt tên
+Chưa đặt hạn nào
+Các hạn của xe
+Nhắc nhở bảo hiểm, đăng kiểm, bảo dưỡng và các hạn khác
+Hoạt động nhóm
+Thông báo đẩy về xe được chia sẻ trong nhóm
+Trước 1 tháng
+Trước 1 tuần
+Trước 1 ngày
+Vào ngày đến hạn
+Trước {n} ngày
+sau 1 tháng
+sau 1 tuần
+ngày mai
+sau {n} ngày
+{what} hết hạn hôm nay
+{what}: hết hạn {when}
+{vehicle} · hết hạn ngày {date}
+Nhắc nhở thử
+Nếu bạn đọc được dòng này, nhắc nhở đã hẹn vẫn hoạt động ngay cả khi đóng ứng dụng.
+Đã bật thông báo
+Bạn sẽ nhận được nhắc nhở về các hạn của xe.
+Tên người dùng phải có ít nhất 3 ký tự.
+Mật khẩu phải có ít nhất 4 ký tự.
+Tên người dùng này đã có trên điện thoại này.
+Không tìm thấy người dùng trên điện thoại này.
+Sai mật khẩu.
+Người dùng
+Email không hợp lệ.
+Sai email hoặc mật khẩu.
+Đã có tài khoản với email này.
+Mật khẩu quá yếu (ít nhất 6 ký tự).
+Cần kết nối internet cho lần đăng nhập trực tuyến đầu tiên.
+Chưa bật đăng ký bằng email: trong bảng điều khiển Firebase hãy bật phương thức đăng nhập Email/Mật khẩu.
+Quá nhiều lần thử: hãy thử lại sau vài phút.
+Tài khoản này đã bị vô hiệu hóa.
+Lỗi đăng nhập ({code}).
+Đã hủy đăng nhập bằng Google.
+Đăng nhập bằng Google thất bại: {error}
+Mã không hợp lệ.
+Máy chủ từ chối truy cập: trong bảng điều khiển Firebase hãy xuất bản quy tắc Firestore (tệp firestore.rules).
+Cơ sở dữ liệu không tồn tại: hãy tạo Firestore Database trong bảng điều khiển Firebase.
+Không kết nối được máy chủ: hãy kiểm tra kết nối internet.
+Phiên đã hết hạn: hãy đăng xuất và đăng nhập lại bằng tài khoản trực tuyến.
+Lỗi máy chủ ({code}).
+Xe của tôi
+Đã đồng bộ
+Đang kết nối…
+Ngoại tuyến: dữ liệu đã lưu trên điện thoại. Chạm để thử lại.
+Nhóm
+Các hạn
+Của tôi
+Cài đặt
+Thêm
+Tất cả ({n})
+Chưa có xe
+Chạm "Thêm" để nhập chiếc xe đầu tiên.
+Nhấn giữ một xe để chuyển nó vào nhóm.
+Chưa đặt hạn nào.
+Sổ tay các hạn của xe bạn
+Mang theo xe của bạn?
+Bạn có muốn sao chép xe (kèm các hạn, bảo dưỡng và tài liệu) sang tài khoản trực tuyến? Tài khoản cục bộ vẫn ở lại trên điện thoại này.
+Bạn có muốn sao chép {n} xe (kèm các hạn, bảo dưỡng và tài liệu) sang tài khoản trực tuyến? Tài khoản cục bộ vẫn ở lại trên điện thoại này.
+Có, sao chép
+Không
+Bạn đang dùng tài khoản trực tuyến.
+Bạn đang dùng tài khoản trực tuyến: đã sao chép 1 xe.
+Bạn đang dùng tài khoản trực tuyến: đã sao chép {n} xe.
+Chuyển sang tài khoản trực tuyến để chia sẻ xe với người khác
+Trước tiên hãy nhập email vào ô phía trên.
+Chúng tôi đã gửi email tới {email} để đặt lại mật khẩu.
+Hãy điền đầy đủ các ô.
+Mật khẩu không khớp.
+Các hạn của xe bạn, luôn trong tầm kiểm soát
+Tài khoản trực tuyến
+Chỉ điện thoại
+Tài khoản chỉ lưu trên điện thoại này. Không chia sẻ.
+Cho phép chia sẻ xe với người khác qua nhóm. Dữ liệu vẫn được lưu trên điện thoại.
+Tên người dùng
+Email
+Mật khẩu
+Nhập lại mật khẩu
+Tạo tài khoản
+Đăng nhập
+Đã có tài khoản? Đăng nhập
+Chưa có tài khoản? Đăng ký
+Quên mật khẩu?
+hoặc
+Đăng nhập bằng Google
+Với Google, ứng dụng chỉ nhận địa chỉ email của bạn.
+Dữ liệu ở lại trên điện thoại này. Đăng nhập Google và nhóm chia sẻ sẽ có trong bản cập nhật sau.
+Đóng
+Hủy
+Tạo
+Lưu
+Sao chép
+Gỡ
+Xóa
+Xe được chia sẻ
+Để chia sẻ xe trong nhóm, bạn cần tài khoản trực tuyến. Bạn có thể chuyển mà không cần đăng xuất và không mất xe.
+Chia sẻ trực tuyến chưa được bật trong phiên bản này của ứng dụng.
+Chuyển sang tài khoản trực tuyến
+Chưa có nhóm nào
+Tạo một nhóm (gia đình, bạn bè, công việc…) và gửi mã mời cho người khác, hoặc tham gia nhóm bằng mã bạn nhận được.
+Tạo nhóm
+Tham gia bằng mã
+1 thành viên
+{n} thành viên
+1 xe
+{n} xe
+Nhóm này chưa có xe nào.
+Thêm xe vào "{name}"
+Bạn cần tài khoản trực tuyến để chia sẻ xe.
+Xe
+Chuyển "{name}" vào nhóm
+Chuyển "{name}"
+Xe sẽ chuyển vào nhóm đã chọn và mọi thành viên đều xem và chỉnh sửa được.
+Xe sẽ bị gỡ khỏi "{name}".
+Bạn chưa ở trong nhóm nào
+Tạo nhóm hoặc tham gia bằng mã ở thẻ Nhóm.
+Chỉ bạn thấy
+"{name}" hiện ở trong "{where}"
+Nhóm mới
+Tên (ví dụ: Gia đình Nguyễn, Xưởng, Bạn bè)
+Mã mời
+Nhập mã mời của nhóm.
+Ví dụ AB12CD34EF
+Tham gia
+Bạn đã tham gia "{name}"!
+Nhóm không khả dụng.
+Đã sao chép mã: dán vào Zalo, WhatsApp hoặc SMS
+Người kia cài ứng dụng, đăng nhập bằng tài khoản trực tuyến, mở thẻ Nhóm → "Tham gia bằng mã" và nhập mã này.
+Thành viên ({n})
+(bạn)
+Người tạo
+Đổi tên nhóm
+Xóa nhóm
+Rời nhóm
+Mọi thành viên sẽ mất quyền truy cập xe của nhóm
+Bạn sẽ không còn thấy xe của nhóm này
+Tên nhóm
+Gỡ thành viên?
+{email} sẽ không còn thấy xe của "{name}".
+Xóa nhóm?
+Rời nhóm?
+"{name}" sẽ bị xóa với mọi thành viên, cùng các xe của nhóm.
+Xe của "{name}" sẽ biến mất khỏi điện thoại này.
+Rời
+Tài khoản
+Tài khoản trực tuyến · dữ liệu lưu trên điện thoại và chia sẻ trong nhóm
+Tài khoản chỉ trên điện thoại này
+Chia sẻ xe với người khác mà không cần đăng xuất: bạn có thể mang theo xe của tài khoản này.
+Ngôn ngữ
+Giống điện thoại
+Thông báo
+Bạn muốn được nhắc trước hạn bao lâu?
+Tất cả nhắc nhở
+Giờ thông báo
+Thử thông báo
+Kiểm tra thông báo đã được cho phép
+Thông báo đã hẹn: {n}
+Nhắc nhở thử sau 1 phút
+Sau đó đóng ứng dụng: nếu nhận được thông báo, nhắc nhở hoạt động
+Đã hẹn nhắc nhở thử: bạn có thể đóng ứng dụng.
+Không hẹn được: {error}
+Trên một số điện thoại (Xiaomi, Huawei, Samsung, Oppo…) chế độ tiết kiệm pin chặn nhắc nhở: trong Cài đặt Android → Ứng dụng → MyFleetManager → Pin chọn "Không hạn chế".
+Thông báo đẩy
+Điện thoại đã đăng ký nhận thông báo đẩy
+Điện thoại chưa đăng ký
+Chạm để sao chép mã thiết bị (cần cho thử nghiệm từ bảng điều khiển Firebase)
+Chạm để thử lại (cần internet)
+Đăng ký thất bại: hãy kiểm tra kết nối.
+Đã sao chép mã thiết bị
+Nhóm
+Để chia sẻ xe trong nhóm, hãy chuyển sang tài khoản trực tuyến (phía trên, mục Tài khoản).
+Đăng xuất
+Dữ liệu của bạn vẫn được lưu trên điện thoại
+Giao diện
+Sáng
+Tối
+Tự động
+Màu bìa
+Nền trang
+mã {code}
+Tham gia bằng mã mời
+Thông báo bị chặn
+Chạm để cho phép. Nếu không hiện yêu cầu: Cài đặt Android → Ứng dụng → MyFleetManager → Thông báo → Cho phép.
+Nhắc nhở có thể đến muộn
+Android có thể trì hoãn nhắc nhở. Chạm và bật "Báo thức và lời nhắc" cho MyFleetManager.
+Đã cho phép thông báo
+Xóa xe?
+"{name}", các hạn và tài liệu của xe sẽ bị xóa.
+"{name}", các hạn và tài liệu của xe sẽ bị xóa (các hạn cũng bị xóa với thành viên khác trong nhóm).
+Giấy đăng ký xe
+Hợp đồng bảo hiểm
+Giấy chứng nhận đăng kiểm
+Phí đường bộ
+Hóa đơn bảo dưỡng
+Tên tài liệu
+Ví dụ: Giấy đăng ký xe
+Thêm tài liệu
+Chụp ảnh tài liệu
+Ảnh từ thư viện
+Tệp PDF hoặc ảnh
+Từ tệp trên điện thoại, Drive, tải xuống…
+Không mở được tệp: {error}
+Đã lưu tài liệu
+Lỗi khi lưu: {error}
+Không tìm thấy tệp trên điện thoại.
+Không có ứng dụng mở PDF: {error}
+Mở
+Đổi tên
+Xóa tài liệu?
+"{name}" sẽ bị xóa khỏi điện thoại.
+Không tìm thấy xe.
+Sửa
+Không có hạn nào được theo dõi.
+Bảo dưỡng
+Ghi lại bảo dưỡng và sửa chữa ở đây: ngày, số km và các bộ lọc đã thay.
+Tài liệu
+Lưu giấy đăng ký, bảo hiểm và tài liệu khác ở đây (ảnh hoặc PDF).
+Ảnh
+Tài liệu chỉ lưu trên điện thoại này.
+Ghi chú
+Sửa lần cuối: {who} · {date}
+Lần trước: {date}
+Lần tới: {date} (mỗi {n} tháng)
+Chưa đặt ngày
+Hết hạn ngày {date}
+Chụp ảnh
+Chọn từ thư viện
+Gỡ ảnh
+Không tải được ảnh: {error}
+Thêm ảnh
+Ngày bảo dưỡng gần nhất
+Ngày đến hạn: {what}
+Hãy nhập ít nhất tên hoặc biển số.
+Hạn tùy chỉnh
+Xe mới
+Sửa xe
+Loại xe
+Thuộc về
+Nhóm: {name}
+Tên (ví dụ: Chiếc Panda của Minh)
+Biển số
+Các hạn cần theo dõi
+Chỉ bật những mục bạn quan tâm. Bạn sẽ nhận thông báo theo cài đặt.
+Thêm hạn tùy chỉnh
+Ví dụ: phí đường bộ, lốp mùa đông, bảo hành, dây curoa cam…
+Ghi chú (tùy chọn)
+Tên hạn (ví dụ: Phí đường bộ)
+Lần bảo dưỡng gần nhất
+Chọn ngày
+Nhắc nhở tiếp theo:
+không có
+sau {n} tháng
+Hãy chọn ít nhất một mục hoặc viết ghi chú.
+Xóa bản ghi này?
+Bản ghi ngày {date} sẽ bị gỡ khỏi lịch sử.
+Bảo dưỡng mới
+Bảo dưỡng
+Ngày
+Số km
+Công việc đã làm
+Ghi chú (garage, chi phí, phụ tùng khác…)
+Tính là bảo dưỡng
+Cập nhật ngày bảo dưỡng gần nhất và nhắc nhở tiếp theo
+OK
+Xe
+Chọn một xe trong danh sách
+Bản Pro
+Nâng cấp lên MyFleetManager Pro
+Mua một lần, dùng mãi mãi: không đăng ký định kỳ.
+Bản Pro đang hoạt động
+Cảm ơn bạn đã ủng hộ MyFleetManager!
+Đã mở khóa Pro bằng mã nhà phát triển
+Không giới hạn số xe
+Xe van, xe tải và rơ-moóc
+Tài liệu xe (giấy đăng ký, bảo hiểm…)
+Lịch sử bảo dưỡng
+Ủng hộ phát triển ứng dụng
+Bản miễn phí: tối đa {n} xe (ô tô hoặc xe máy) kèm các hạn và thông báo.
+Mua Pro
+Mua Pro · {price}
+Có thể mua khi ứng dụng được cài từ Play Store.
+Khôi phục giao dịch
+Đang tìm giao dịch trước đây…
+Trả một lần, của bạn mãi mãi.
+Bản miễn phí quản lý tối đa {n} xe. Nâng cấp lên Pro để thêm nữa.
+{type}: có trong bản Pro.
+Tài liệu xe có trong bản Pro.
+Lịch sử bảo dưỡng có trong bản Pro.
+Mã nhà phát triển
+Nhập mã
+Đã mở khóa Pro (phát triển)
+Mã không hợp lệ
+Tắt Pro phát triển
+Đã tắt Pro phát triển
+Xe tải
+Xe tải
+Phí đường bộ
+Một thành viên nhóm
+{who} đã thêm {vehicle}
+{who} đã sửa {vehicle}
+{who} đã xóa {vehicle}
+{n} thay đổi đối với xe của nhóm
+Thông báo hoạt động nhóm
+Thông báo khi thành viên khác thêm, sửa hoặc xóa xe. Khi ứng dụng đóng, thông báo có thể đến trễ vài phút.
+Chỉnh ảnh
+Xoay
+Căn giữa
+Chụm hai ngón để phóng to, kéo để di chuyển
+Gốc
+Dùng ảnh
+Chỉnh ảnh (thu phóng và cắt)

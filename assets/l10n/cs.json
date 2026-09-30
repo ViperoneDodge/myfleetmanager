@@ -336,5 +336,19 @@
  "pro.devDisabled": "Vývojářské Pro vypnuto",
  "type.truck": "Nákladní auto",
  "type.trucks": "Nákladní auta",
- "deadline.tax": "Silniční daň"
+ "deadline.tax": "Silniční daň",
+ "groupAct.someone": "Člen skupiny",
+ "groupAct.added": "{who} přidal(a) {vehicle}",
+ "groupAct.edited": "{who} upravil(a) {vehicle}",
+ "groupAct.deleted": "{who} smazal(a) {vehicle}",
+ "groupAct.many": "Změny vozidel skupiny: {n}",
+ "settings.groupAlerts": "Upozornění na aktivitu skupin",
+ "settings.groupAlertsInfo": "Upozorní, když jiný člen přidá, upraví nebo smaže vozidlo. Při zavřené aplikaci může upozornění přijít o několik minut později.",
+ "crop.title": "Upravit fotku",
+ "crop.rotate": "Otočit",
+ "crop.reset": "Vycentrovat",
+ "crop.hint": "Roztažením prstů přiblížíte, tažením posunete",
+ "crop.original": "Původní",
+ "crop.use": "Použít fotku",
+ "crop.adjust": "Upravit fotku (přiblížení a oříznutí)"
 }

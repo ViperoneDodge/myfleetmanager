@@ -336,5 +336,19 @@
  "pro.devDisabled": "Entwickler-Pro deaktiviert",
  "type.truck": "Lkw",
  "type.trucks": "Lkw",
- "deadline.tax": "Kfz-Steuer"
+ "deadline.tax": "Kfz-Steuer",
+ "groupAct.someone": "Ein Gruppenmitglied",
+ "groupAct.added": "{who} hat {vehicle} hinzugefügt",
+ "groupAct.edited": "{who} hat {vehicle} bearbeitet",
+ "groupAct.deleted": "{who} hat {vehicle} gelöscht",
+ "groupAct.many": "{n} Änderungen an den Fahrzeugen der Gruppe",
+ "settings.groupAlerts": "Gruppenaktivität melden",
+ "settings.groupAlertsInfo": "Benachrichtigt dich, wenn ein anderes Mitglied ein Fahrzeug hinzufügt, bearbeitet oder löscht. Bei geschlossener App kann die Meldung einige Minuten später kommen.",
+ "crop.title": "Foto anpassen",
+ "crop.rotate": "Drehen",
+ "crop.reset": "Zentrieren",
+ "crop.hint": "Mit zwei Fingern zoomen, ziehen zum Verschieben",
+ "crop.original": "Original",
+ "crop.use": "Foto verwenden",
+ "crop.adjust": "Foto anpassen (Zoom und Zuschnitt)"
 }

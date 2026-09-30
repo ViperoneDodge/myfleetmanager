@@ -1,0 +1,352 @@
+Automobilis
+Motociklas
+Furgonas
+Priekaba
+Automobiliai
+Motociklai
+Furgonai
+Priekabos
+Dokumentas
+Draudimas
+Techninė apžiūra
+Techninė priežiūra
+Pasirinktinis
+Kita techninė priežiūra
+Variklio alyva
+Alyvos filtras
+Oro filtras
+Salono filtras
+Kuro filtras
+Grupė
+Linijomis
+Langeliais
+Taškais
+Tuščias
+Mėlyna
+Miško žalia
+Lenktynių raudona
+Oranžinė
+Naftos mėlyna
+Violetinė
+Grafitinė
+Oda
+Baigėsi vakar
+Baigėsi prieš {n} d.
+Baigiasi šiandien
+Baigiasi rytoj
+Po {n} d.
+Be pavadinimo
+Terminai nenustatyti
+Transporto priemonių terminai
+Priminimai apie draudimą, techninę apžiūrą, priežiūrą ir kitus terminus
+Grupių veikla
+Pranešimai apie grupėse bendrinamas transporto priemones
+Prieš 1 mėnesį
+Prieš 1 savaitę
+Prieš 1 dieną
+Termino dieną
+Prieš {n} d.
+po 1 mėnesio
+po 1 savaitės
+rytoj
+po {n} d.
+{what} baigiasi šiandien
+{what}: baigiasi {when}
+{vehicle} · terminas {date}
+Bandomasis priminimas
+Jei tai skaitote, suplanuoti priminimai veikia ir uždarius programėlę.
+Pranešimai įjungti
+Gausite priminimus apie savo transporto priemonių terminus.
+Vartotojo vardas turi būti bent 3 simbolių.
+Slaptažodis turi būti bent 4 simbolių.
+Šis vartotojo vardas šiame telefone jau yra.
+Vartotojas šiame telefone nerastas.
+Neteisingas slaptažodis.
+Vartotojas
+Neteisingas el. paštas.
+Neteisingas el. paštas arba slaptažodis.
+Paskyra su šiuo el. paštu jau yra.
+Per silpnas slaptažodis (bent 6 simboliai).
+Pirmam prisijungimui internetu reikia interneto ryšio.
+Registracija el. paštu neįjungta: „Firebase“ konsolėje įjunkite prisijungimo būdą El. paštas / slaptažodis.
+Per daug bandymų: bandykite dar kartą po kelių minučių.
+Ši paskyra išjungta.
+Prisijungimo klaida ({code}).
+Prisijungimas per „Google“ atšauktas.
+Prisijungti per „Google“ nepavyko: {error}
+Neteisingas kodas.
+Serveris atmetė prieigą: „Firebase“ konsolėje paskelbkite „Firestore“ taisykles (failas firestore.rules).
+Duomenų bazės nėra: „Firebase“ konsolėje sukurkite „Firestore Database“.
+Serveris nepasiekiamas: patikrinkite interneto ryšį.
+Sesija baigėsi: atsijunkite ir vėl prisijunkite internetine paskyra.
+Serverio klaida ({code}).
+Mano transporto priemonės
+Sinchronizuota
+Jungiamasi…
+Neprisijungta: duomenys išsaugoti telefone. Bakstelėkite, kad bandytumėte dar kartą.
+Grupės
+Terminai
+Mano
+Nustatymai
+Pridėti
+Visos ({n})
+Transporto priemonių nėra
+Bakstelėkite „Pridėti“, kad įvestumėte pirmą transporto priemonę.
+Palaikykite transporto priemonę, kad perkeltumėte ją į grupę.
+Terminai nenustatyti.
+Jūsų transporto priemonių terminų užrašinė
+Pasiimti transporto priemones?
+Ar nukopijuoti jūsų transporto priemonę (su terminais, priežiūra ir dokumentais) į internetinę paskyrą? Vietinė paskyra vis tiek liks šiame telefone.
+Ar nukopijuoti jūsų transporto priemones ({n}) su terminais, priežiūra ir dokumentais į internetinę paskyrą? Vietinė paskyra vis tiek liks šiame telefone.
+Taip, kopijuoti
+Ne
+Dabar naudojate internetinę paskyrą.
+Dabar naudojate internetinę paskyrą: nukopijuota 1 transporto priemonė.
+Dabar naudojate internetinę paskyrą: nukopijuota transporto priemonių: {n}.
+Pereikite prie internetinės paskyros ir bendrinkite transporto priemones su kitais
+Pirmiausia įveskite el. paštą į lauką aukščiau.
+Išsiuntėme laišką adresu {email} slaptažodžiui atkurti.
+Užpildykite visus laukus.
+Slaptažodžiai nesutampa.
+Jūsų transporto priemonių terminai visada kontroliuojami
+Internetinė paskyra
+Tik telefonas
+Paskyra išsaugoma tik šiame telefone. Be bendrinimo.
+Leidžia bendrinti transporto priemones su kitais per grupes. Duomenys lieka ir telefone.
+Vartotojo vardas
+El. paštas
+Slaptažodis
+Pakartokite slaptažodį
+Sukurti paskyrą
+Prisijungti
+Jau turite paskyrą? Prisijunkite
+Neturite paskyros? Užsiregistruokite
+Pamiršote slaptažodį?
+arba
+Prisijungti per „Google“
+Per „Google“ programėlė gauna tik jūsų el. pašto adresą.
+Duomenys lieka šiame telefone. Prisijungimas per „Google“ ir bendros grupės bus kitame atnaujinime.
+Uždaryti
+Atšaukti
+Sukurti
+Išsaugoti
+Kopijuoti
+Pašalinti
+Ištrinti
+Bendrinamos transporto priemonės
+Norint bendrinti transporto priemones grupėje, reikia internetinės paskyros. Galite pereiti neatsijungę ir neprarasdami transporto priemonių.
+Bendrinimas internetu šioje programėlės versijoje dar neaktyvus.
+Pereiti prie internetinės paskyros
+Grupių dar nėra
+Sukurkite grupę (šeima, draugai, darbas…) ir duokite kitiems pakvietimo kodą arba prisijunkite prie grupės gautu kodu.
+Sukurti grupę
+Prisijungti kodu
+1 narys
+Nariai: {n}
+1 transporto priemonė
+Transporto priemonės: {n}
+Šioje grupėje dar nėra transporto priemonių.
+Pridėti transporto priemonę į „{name}“
+Norint bendrinti transporto priemonę, reikia internetinės paskyros.
+Transporto priemonė
+Perkelti „{name}“ į grupę
+Perkelti „{name}“
+Transporto priemonė pereina į pasirinktą grupę, ir visi nariai ją matys bei galės redaguoti.
+Transporto priemonė bus pašalinta iš „{name}“.
+Dar nesate jokioje grupėje
+Sukurkite grupę arba prisijunkite kodu skirtuke Grupės.
+Matote tik jūs
+„{name}“ dabar yra „{where}“
+Nauja grupė
+Pavadinimas (pvz. Petraičių šeima, Dirbtuvės, Draugai)
+Pakvietimo kodas
+Įveskite grupės pakvietimo kodą.
+Pvz. AB12CD34EF
+Prisijungti
+Prisijungėte prie „{name}“!
+Grupė nepasiekiama.
+Kodas nukopijuotas: įklijuokite jį į WhatsApp arba SMS
+Kitas asmuo įdiegia programėlę, prisijungia internetine paskyra, atidaro skirtuką Grupės → „Prisijungti kodu“ ir įveda šį kodą.
+Nariai ({n})
+(jūs)
+Kūrėjas
+Pervadinti grupę
+Ištrinti grupę
+Palikti grupę
+Visi nariai praras prieigą prie grupės transporto priemonių
+Nebematysite šios grupės transporto priemonių
+Grupės pavadinimas
+Pašalinti narį?
+{email} nebematys „{name}“ transporto priemonių.
+Ištrinti grupę?
+Palikti grupę?
+„{name}“ bus ištrinta visiems nariams kartu su transporto priemonėmis.
+„{name}“ transporto priemonės dings iš šio telefono.
+Palikti
+Paskyra
+Internetinė paskyra · duomenys telefone ir bendrinami grupėse
+Paskyra tik šiame telefone
+Bendrinkite transporto priemones su kitais neatsijungę: šios paskyros transporto priemones galite pasiimti.
+Kalba
+Kaip telefone
+Pranešimai
+Kada norite priminimo prieš terminą?
+Visi priminimai
+Pranešimų laikas
+Išbandyti pranešimą
+Patikrinkite, ar pranešimai leidžiami
+Suplanuoti pranešimai: {n}
+Bandomasis priminimas po 1 minutės
+Tada uždarykite programėlę: jei pranešimas ateis, priminimai veikia
+Bandomasis priminimas suplanuotas: galite uždaryti programėlę.
+Nepavyko suplanuoti: {error}
+Kai kuriuose telefonuose („Xiaomi“, „Huawei“, „Samsung“, „Oppo“…) akumuliatoriaus taupymas blokuoja priminimus: „Android“ nustatymuose → Programos → MyFleetManager → Akumuliatorius pasirinkite „Neribojama“.
+„Push“ pranešimai
+Telefonas užregistruotas „push“ pranešimams
+Telefonas dar neužregistruotas
+Bakstelėkite, kad nukopijuotumėte įrenginio kodą (reikia bandymui iš „Firebase“ konsolės)
+Bakstelėkite, kad bandytumėte dar kartą (reikia interneto)
+Registracija nepavyko: patikrinkite ryšį.
+Įrenginio kodas nukopijuotas
+Grupės
+Norėdami bendrinti transporto priemones grupėje, pereikite prie internetinės paskyros (aukščiau, skiltyje Paskyra).
+Atsijungti
+Jūsų duomenys lieka išsaugoti telefone
+Išvaizda
+Šviesi
+Tamsi
+Automatinė
+Viršelio spalva
+Puslapių fonas
+kodas {code}
+Prisijungti pakvietimo kodu
+Pranešimai užblokuoti
+Bakstelėkite, kad juos leistumėte. Jei užklausa nepasirodo: „Android“ nustatymai → Programos → MyFleetManager → Pranešimai → Leisti.
+Priminimai gali vėluoti
+„Android“ gali atidėti priminimus. Bakstelėkite ir įjunkite „Žadintuvai ir priminimai“ programėlei MyFleetManager.
+Pranešimai leidžiami
+Ištrinti transporto priemonę?
+„{name}“, jos terminai ir dokumentai bus ištrinti.
+„{name}“, jos terminai ir dokumentai bus ištrinti (terminai ir kitiems grupės nariams).
+Registracijos liudijimas
+Draudimo polisas
+Techninės apžiūros pažyma
+Transporto priemonės mokestis
+Priežiūros sąskaita
+Dokumento pavadinimas
+Pvz. Registracijos liudijimas
+Pridėti dokumentą
+Nufotografuoti dokumentą
+Vaizdas iš galerijos
+PDF failas arba vaizdas
+Iš telefono failų, „Drive“, atsisiuntimų…
+Nepavyko atidaryti failo: {error}
+Dokumentas išsaugotas
+Klaida išsaugant: {error}
+Failas telefone nerastas.
+Nėra programėlės PDF atidaryti: {error}
+Atidaryti
+Pervadinti
+Ištrinti dokumentą?
+„{name}“ bus ištrintas iš telefono.
+Transporto priemonė nerasta.
+Redaguoti
+Stebimų terminų nėra.
+Priežiūra
+Įrašykite čia priežiūras ir darbus: datą, ridą ir pakeistus filtrus.
+Dokumentai
+Laikykite čia registracijos liudijimą, polisą ir kitus dokumentus (nuotraukos arba PDF).
+Vaizdas
+Dokumentai lieka tik šiame telefone.
+Pastabos
+Paskutinis pakeitimas: {who} · {date}
+Paskutinė: {date}
+Kita: {date} (kas {n} mėn.)
+Data nenustatyta
+Terminas {date}
+Fotografuoti
+Pasirinkti iš galerijos
+Pašalinti nuotrauką
+Nepavyko įkelti nuotraukos: {error}
+Pridėti nuotrauką
+Paskutinės priežiūros data
+Termino data: {what}
+Įveskite bent pavadinimą arba valstybinį numerį.
+Pasirinktinis terminas
+Nauja transporto priemonė
+Redaguoti transporto priemonę
+Transporto priemonės tipas
+Kur priklauso
+Grupė: {name}
+Pavadinimas (pvz. Marko Panda)
+Valstybinis numeris
+Stebimi terminai
+Įjunkite tik tuos, kurie jums svarbūs. Pranešimus gausite pagal nustatymus.
+Pridėti pasirinktinį terminą
+Pvz. mokestis, žieminės padangos, garantija, paskirstymo diržas…
+Pastabos (neprivaloma)
+Termino pavadinimas (pvz. Mokestis)
+Paskutinė priežiūra
+Pasirinkti datą
+Kitas priminimas:
+nėra
+po {n} mėn.
+Pasirinkite bent vieną punktą arba parašykite pastabą.
+Ištrinti šį įrašą?
+{date} įrašas bus pašalintas iš istorijos.
+Nauja priežiūra
+Priežiūra
+Data
+Rida
+Atlikti darbai
+Pastabos (servisas, kaina, kitos dalys…)
+Laikyti technine priežiūra
+Atnaujina paskutinės priežiūros datą ir kitą priminimą
+Gerai
+Transporto priemonės
+Pasirinkite transporto priemonę iš sąrašo
+Pro versija
+Pereiti prie MyFleetManager Pro
+Vienas pirkinys visam laikui: jokios prenumeratos.
+Pro versija aktyvi
+Ačiū, kad remiate MyFleetManager!
+Pro atrakinta kūrėjo kodu
+Neribotas transporto priemonių skaičius
+Furgonai, sunkvežimiai ir priekabos
+Transporto priemonės dokumentai (registracijos liudijimas, polisas…)
+Priežiūros istorija
+Paremkite programėlės kūrimą
+Nemokama versija: iki {n} transporto priemonių (automobiliai arba motociklai) su terminais ir pranešimais.
+Pirkti Pro
+Pirkti Pro · {price}
+Pirkimas bus galimas, kai programėlė bus įdiegta iš „Play“ parduotuvės.
+Atkurti pirkinį
+Ieškoma ankstesnių pirkinių…
+Mokate vieną kartą, jūsų visam laikui.
+Nemokama versija tvarko iki {n} transporto priemonių. Pereikite prie Pro, kad pridėtumėte daugiau.
+{type}: galima Pro versijoje.
+Transporto priemonės dokumentai galimi Pro versijoje.
+Priežiūros istorija galima Pro versijoje.
+Kūrėjo kodas
+Įveskite kodą
+Pro atrakinta (kūrimas)
+Neteisingas kodas
+Išjungti kūrėjo Pro
+Kūrėjo Pro išjungta
+Sunkvežimis
+Sunkvežimiai
+Transporto priemonės mokestis
+Grupės narys
+{who} pridėjo {vehicle}
+{who} pakeitė {vehicle}
+{who} ištrynė {vehicle}
+Grupės transporto priemonių pakeitimai: {n}
+Pranešimai apie grupių veiklą
+Praneša, kai kitas narys prideda, pakeičia ar ištrina transporto priemonę. Uždarius programėlę, pranešimas gali ateiti keliomis minutėmis vėliau.
+Pritaikyti nuotrauką
+Pasukti
+Centruoti
+Suimkite pirštais, kad priartintumėte, vilkite, kad perkeltumėte
+Originalas
+Naudoti nuotrauką
+Pritaikyti nuotrauką (priartinimas ir apkarpymas)

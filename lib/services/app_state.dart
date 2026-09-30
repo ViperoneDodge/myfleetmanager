@@ -10,6 +10,7 @@ import 'auth_service.dart';
 import 'local_store.dart';
 import 'notification_service.dart';
 import 'pro_service.dart';
+import 'group_watch.dart';
 import 'push_service.dart';
 import 'sync_service.dart';
 
@@ -21,6 +22,9 @@ class AppState extends ChangeNotifier {
   final NotificationService notifications = NotificationService();
   final SyncService sync = SyncService();
   final PushService push = PushService();
+
+  /// Avvisi quando altri membri modificano i veicoli dei gruppi.
+  GroupWatchState watch = GroupWatchState();
   final ProService pro = ProService();
 
   // ---------------- Versione Pro ----------------
@@ -43,8 +47,18 @@ class AppState extends ChangeNotifier {
   static bool isProType(VehicleType t) =>
       t == VehicleType.furgone || t == VehicleType.camion || t == VehicleType.rimorchio;
 
+  /// Veicoli che contano per il limite gratuito: quelli creati da me, ovunque si trovino
+  /// (anche spostati o aggiunti in un gruppo). I veicoli creati da altri membri
+  /// di un gruppo non contano. Per i veicoli vecchi senza autore contano quelli personali.
+  List<Vehicle> get ownedVehicles {
+    final me = session?.key ?? '';
+    return vehicles
+        .where((v) => v.createdBy.isNotEmpty ? v.createdBy == me : isPersonal(v))
+        .toList();
+  }
+
   /// Con la versione gratuita si possono avere al massimo [freeVehicleLimit] veicoli propri.
-  bool get canAddVehicle => isPro || myVehicles.length < freeVehicleLimit;
+  bool get canAddVehicle => isPro || ownedVehicles.length < freeVehicleLimit;
 
   bool unlockDev(String code) {
     if (code.trim().toUpperCase() != _devCode) return false;
@@ -158,8 +172,75 @@ class AppState extends ChangeNotifier {
     data = await store.readUserData(s);
     _scheduleNotifications();
     if (s.mode == AccountMode.cloud) {
+      await _loadWatch(s);
       _startSync();
       startPush();
+    }
+  }
+
+  // ---------------- Attività dei gruppi ----------------
+
+  Future<void> _loadWatch(Session s) async {
+    watch = await GroupWatchState.load();
+    if (watch.uid != s.key) watch = GroupWatchState(uid: s.key);
+    watch.groups = {for (final g in data.groups) g.id: g.name};
+    await watch.save();
+    await scheduleGroupWatch(watch.enabled && watch.groups.isNotEmpty);
+  }
+
+  Future<void> _watchChain = Future.value();
+
+  bool get groupAlerts => watch.enabled;
+
+  Future<void> setGroupAlerts(bool on) async {
+    watch.enabled = on;
+    notifyListeners();
+    await watch.save();
+    await scheduleGroupWatch(on && watch.groups.isNotEmpty);
+    if (on) notifications.requestPermission();
+  }
+
+  /// Controlla le novità arrivate da Firestore per un gruppo e avvisa.
+  Future<void> _checkGroupActivity(
+      String fleetId, List<Vehicle> remote, Set<String> existedBefore) async {
+    final s = session;
+    if (s == null || !isCloud) return;
+    // Rilegge: il controllo in background potrebbe aver già avvisato.
+    final fresh = await GroupWatchState.load();
+    if (fresh.uid == s.key) {
+      watch.seen = fresh.seen;
+      watch.known = fresh.known;
+    }
+    final since = watch.seen[fleetId];
+    var maxTs = since ?? 0;
+    for (final r in remote) {
+      if (r.updatedAt > maxTs) maxTs = r.updatedAt;
+    }
+    if (since == null) {
+      // Primo ascolto di questo gruppo: si parte da qui, senza avvisi arretrati.
+      watch.seen[fleetId] = remote.isEmpty ? DateTime.now().millisecondsSinceEpoch : maxTs;
+      for (final r in remote) {
+        if (!r.deleted) watch.remember(r.id);
+      }
+      await watch.save();
+      return;
+    }
+    if (maxTs <= since) return;
+    final acts = findActivities(
+      groupName: data.groupById(fleetId)?.name ?? tr('family.defaultName'),
+      me: s.key,
+      myName: s.displayName,
+      since: since,
+      remote: remote,
+      existed: (id) => existedBefore.contains(id) || watch.known.contains(id),
+    );
+    watch.seen[fleetId] = maxTs;
+    for (final r in remote) {
+      if (!r.deleted) watch.remember(r.id);
+    }
+    await watch.save();
+    if (watch.enabled && acts.isNotEmpty) {
+      await showActivities(notifications, acts);
     }
   }
 
@@ -175,6 +256,9 @@ class AppState extends ChangeNotifier {
 
   Future<void> logout() async {
     sync.stop();
+    await scheduleGroupWatch(false);
+    watch = GroupWatchState();
+    await watch.save();
     _retry?.cancel();
     if (isCloud) await push.stop();
     await auth.logout(session);
@@ -209,6 +293,8 @@ class AppState extends ChangeNotifier {
     final now = DateTime.now().millisecondsSinceEpoch;
     v.updatedAt = now;
     v.updatedBy = session?.displayName ?? '';
+    v.updatedByUid = session?.key ?? '';
+    if (v.createdBy.isEmpty && vehicleById(v.id) == null) v.createdBy = session?.key ?? '';
     if (v.fleetId == data.personalFleetId) v.fleetId = null;
     final i = data.vehicles.indexWhere((x) => x.id == v.id);
     if (i >= 0 && data.vehicles[i].fleetId != v.fleetId && isCloud) {
@@ -393,6 +479,8 @@ class AppState extends ChangeNotifier {
           ..fleetId = null
           ..updatedAt = now
           ..updatedBy = cloud.displayName
+          ..updatedByUid = cloud.key
+          ..createdBy = cloud.key
           ..documents = [];
         // I file dei documenti vengono duplicati: i due account restano indipendenti.
         for (final d in v.documents) {
@@ -482,6 +570,14 @@ class AppState extends ChangeNotifier {
 
   void _onGroups(List<FleetGroup> groups) {
     data.groups = groups;
+    if (isCloud) {
+      final names = {for (final g in groups) g.id: g.name};
+      final had = watch.groups.isNotEmpty;
+      watch.groups = names;
+      watch.seen.removeWhere((k, _) => !names.containsKey(k));
+      watch.save();
+      if (had != names.isNotEmpty) scheduleGroupWatch(watch.enabled && names.isNotEmpty);
+    }
     final valid = {data.personalFleetId, ...groups.map((g) => g.id)};
     // Veicoli di nuclei da cui si è usciti (o eliminati): tolti dal telefono.
     final gone = data.vehicles
@@ -502,6 +598,14 @@ class AppState extends ChangeNotifier {
   void _mergeRemote(String fleetId, List<Vehicle> remote, bool fromServer) {
     var changed = false;
     final personal = fleetId == data.personalFleetId;
+    if (!personal) {
+      final existed = data.vehicles.where((v) => !v.deleted).map((v) => v.id).toSet();
+      final copy = List.of(remote);
+      // In fila: due aggiornamenti ravvicinati non devono avvisare due volte.
+      _watchChain = _watchChain
+          .then((_) => _checkGroupActivity(fleetId, copy, existed))
+          .catchError((_) {});
+    }
     for (final r in remote) {
       r.fleetId = personal ? null : fleetId;
       final i = data.vehicles.indexWhere((x) => x.id == r.id);

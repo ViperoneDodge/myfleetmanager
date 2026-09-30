@@ -1,0 +1,352 @@
+Automóvel
+Mota
+Carrinha
+Reboque
+Automóveis
+Motas
+Carrinhas
+Reboques
+Documento
+Seguro
+Inspeção
+Revisão
+Personalizado
+Próxima revisão
+Óleo do motor
+Filtro de óleo
+Filtro de ar
+Filtro do habitáculo
+Filtro de combustível
+Grupo
+Pautado
+Quadriculado
+Pontilhado
+Liso
+Azul
+Verde floresta
+Vermelho corrida
+Laranja
+Azul petróleo
+Violeta
+Grafite
+Couro
+Expirou ontem
+Expirou há {n} dias
+Vence hoje
+Vence amanhã
+Daqui a {n} dias
+Sem nome
+Sem prazos definidos
+Prazos dos veículos
+Lembretes de seguro, inspeção, revisão e outros prazos
+Atividade dos grupos
+Notificações push sobre os veículos partilhados nos grupos
+1 mês antes
+1 semana antes
+1 dia antes
+No dia do prazo
+{n} dias antes
+daqui a 1 mês
+daqui a 1 semana
+amanhã
+daqui a {n} dias
+{what} vence hoje
+{what}: vence {when}
+{vehicle} · vence a {date}
+Lembrete de teste
+Se consegue ler isto, os lembretes programados funcionam mesmo com a app fechada.
+Notificações ativas
+Vai receber lembretes dos prazos dos seus veículos.
+O nome de utilizador deve ter pelo menos 3 caracteres.
+A palavra-passe deve ter pelo menos 4 caracteres.
+Este nome de utilizador já existe neste telemóvel.
+Utilizador não encontrado neste telemóvel.
+Palavra-passe errada.
+Utilizador
+Email inválido.
+Email ou palavra-passe incorretos.
+Já existe uma conta com este email.
+Palavra-passe demasiado fraca (mínimo 6 caracteres).
+É necessária uma ligação à internet para o primeiro início de sessão online.
+O registo por email não está ativo: na consola Firebase ative o método de acesso Email/Palavra-passe.
+Demasiadas tentativas: tente novamente dentro de alguns minutos.
+Esta conta foi desativada.
+Erro de acesso ({code}).
+Acesso com Google cancelado.
+O acesso com Google falhou: {error}
+Código inválido.
+Acesso negado pelo servidor: na consola Firebase publique as regras do Firestore (ficheiro firestore.rules).
+A base de dados não existe: crie a Firestore Database na consola Firebase.
+Servidor inacessível: verifique a ligação à internet.
+Sessão expirada: termine a sessão e volte a entrar com a conta online.
+Erro do servidor ({code}).
+Os meus veículos
+Sincronizado
+A ligar…
+Offline: os dados estão guardados no telemóvel. Toque para tentar de novo.
+Grupos
+Prazos
+Meus
+Definições
+Adicionar
+Todos ({n})
+Nenhum veículo
+Toque em "Adicionar" para inserir o primeiro veículo.
+Mantenha premido um veículo para o mover para um grupo.
+Sem prazos definidos.
+O caderno dos prazos dos seus veículos
+Levar os seus veículos?
+Quer copiar o seu veículo (com prazos, manutenção e documentos) para a conta online? A conta local continua neste telemóvel.
+Quer copiar os seus {n} veículos (com prazos, manutenção e documentos) para a conta online? A conta local continua neste telemóvel.
+Sim, copiar
+Não
+Está agora a usar a conta online.
+Está agora a usar a conta online: 1 veículo copiado.
+Está agora a usar a conta online: {n} veículos copiados.
+Passe para uma conta online para partilhar veículos com outras pessoas
+Primeiro escreva o seu email no campo acima.
+Enviámos um email para {email} para redefinir a palavra-passe.
+Preencha todos os campos.
+As palavras-passe não coincidem.
+Os prazos dos seus veículos, sempre sob controlo
+Conta online
+Só telemóvel
+Conta guardada só neste telemóvel. Sem partilha.
+Permite partilhar veículos com outras pessoas através de grupos. Os dados ficam também no telemóvel.
+Nome de utilizador
+Email
+Palavra-passe
+Repetir palavra-passe
+Criar conta
+Entrar
+Já tem conta? Entre
+Não tem conta? Registe-se
+Esqueceu a palavra-passe?
+ou
+Entrar com Google
+Com Google a app recebe apenas o seu endereço de email.
+Os dados ficam neste telemóvel. O acesso com Google e os grupos partilhados chegarão numa próxima atualização.
+Fechar
+Cancelar
+Criar
+Guardar
+Copiar
+Remover
+Eliminar
+Veículos partilhados
+Para partilhar veículos num grupo precisa de uma conta online. Pode mudar sem terminar a sessão e sem perder os seus veículos.
+A partilha online ainda não está ativa nesta versão da app.
+Mudar para conta online
+Ainda sem grupos
+Crie um grupo (família, amigos, trabalho…) e dê o código de convite aos outros, ou entre num grupo com o código que recebeu.
+Criar grupo
+Entrar com um código
+1 membro
+{n} membros
+1 veículo
+{n} veículos
+Ainda não há veículos neste grupo.
+Adicionar veículo a "{name}"
+Precisa de uma conta online para partilhar um veículo.
+Veículo
+Mover "{name}" para um grupo
+Mover "{name}"
+O veículo passa para o grupo escolhido e todos os membros o vão ver e poder editar.
+O veículo será removido de "{name}".
+Ainda não faz parte de nenhum grupo
+Crie um ou entre com um código no separador Grupos.
+Só você o verá
+"{name}" está agora em "{where}"
+Novo grupo
+Nome (ex. Família Silva, Oficina, Amigos)
+Código de convite
+Introduza o código de convite do grupo.
+Ex. AB12CD34EF
+Entrar
+Entrou em "{name}"!
+Grupo não disponível.
+Código copiado: cole-o no WhatsApp ou SMS
+A outra pessoa instala a app, entra com uma conta online, abre o separador Grupos → "Entrar com um código" e introduz este código.
+Membros ({n})
+(você)
+Criador
+Mudar nome do grupo
+Eliminar grupo
+Sair do grupo
+Todos os membros perderão o acesso aos veículos do grupo
+Deixará de ver os veículos deste grupo
+Nome do grupo
+Remover membro?
+{email} deixará de ver os veículos de "{name}".
+Eliminar o grupo?
+Sair do grupo?
+"{name}" será eliminado para todos os membros, juntamente com os seus veículos.
+Os veículos de "{name}" vão desaparecer deste telemóvel.
+Sair
+Conta
+Conta online · dados guardados no telemóvel e partilhados nos grupos
+Conta só neste telemóvel
+Partilhe veículos com outras pessoas sem terminar a sessão: pode levar consigo os veículos desta conta.
+Idioma
+Igual ao telemóvel
+Notificações
+Quando quer ser avisado antes de um prazo?
+Todos os avisos
+Hora das notificações
+Testar notificação
+Verificar se as notificações estão permitidas
+Notificações programadas: {n}
+Lembrete de teste daqui a 1 minuto
+Depois feche a app: se a notificação chegar, os lembretes funcionam
+Lembrete de teste programado: pode fechar a app.
+Não foi possível programar: {error}
+Em alguns telemóveis (Xiaomi, Huawei, Samsung, Oppo…) a poupança de bateria bloqueia os lembretes: em Definições Android → Apps → MyFleetManager → Bateria escolha "Sem restrições".
+Notificações push
+Telemóvel registado para push
+Telemóvel ainda não registado
+Toque para copiar o código do dispositivo (para um teste na consola Firebase)
+Toque para tentar de novo (requer internet)
+O registo falhou: verifique a ligação.
+Código do dispositivo copiado
+Grupos
+Para partilhar veículos num grupo, mude para uma conta online (acima, na secção Conta).
+Terminar sessão
+Os seus dados ficam guardados no telemóvel
+Aspeto
+Claro
+Escuro
+Auto
+Cor da capa
+Fundo das páginas
+código {code}
+Entrar com um código de convite
+Notificações bloqueadas
+Toque para as permitir. Se não aparecer nenhum pedido: Definições Android → Apps → MyFleetManager → Notificações → Permitir.
+Os lembretes podem chegar atrasados
+O Android pode atrasar os lembretes. Toque e ative "Alarmes e lembretes" para MyFleetManager.
+Notificações permitidas
+Eliminar o veículo?
+"{name}", os seus prazos e documentos serão eliminados.
+"{name}", os seus prazos e documentos serão eliminados (os prazos também para os outros membros do grupo).
+Documento único automóvel
+Apólice de seguro
+Certificado de inspeção
+Imposto de circulação
+Fatura da revisão
+Nome do documento
+Ex. Documento único
+Adicionar documento
+Fotografar o documento
+Imagem da galeria
+Ficheiro PDF ou imagem
+Dos ficheiros do telemóvel, Drive, transferências…
+Não foi possível abrir o ficheiro: {error}
+Documento guardado
+Erro ao guardar: {error}
+Ficheiro não encontrado no telemóvel.
+Nenhuma app para abrir PDF: {error}
+Abrir
+Mudar nome
+Eliminar o documento?
+"{name}" será eliminado do telemóvel.
+Veículo não encontrado.
+Editar
+Nenhum prazo acompanhado.
+Manutenção
+Registe aqui revisões e intervenções: data, quilómetros e filtros substituídos.
+Documentos
+Guarde aqui o documento do veículo, a apólice e outros documentos (fotos ou PDF).
+Imagem
+Os documentos ficam só neste telemóvel.
+Notas
+Última alteração: {who} · {date}
+Última: {date}
+Próxima: {date} (a cada {n} meses)
+Data não definida
+Vence a {date}
+Tirar uma foto
+Escolher da galeria
+Remover foto
+Não foi possível carregar a foto: {error}
+Adicionar foto
+Data da última revisão
+Data do prazo: {what}
+Introduza pelo menos o nome ou a matrícula.
+Prazo personalizado
+Novo veículo
+Editar veículo
+Tipo de veículo
+Onde se encontra
+Grupo: {name}
+Nome (ex. Panda do Marco)
+Matrícula
+Prazos a acompanhar
+Ative só os que lhe interessam. Receberá notificações de acordo com as definições.
+Adicionar prazo personalizado
+Ex. imposto de circulação, pneus de inverno, garantia, correia de distribuição…
+Notas (opcional)
+Nome do prazo (ex. Imposto de circulação)
+Última revisão
+Escolher data
+Próximo lembrete:
+nenhum
+após {n} meses
+Selecione pelo menos um item ou escreva uma nota.
+Eliminar este registo?
+O registo de {date} será removido do histórico.
+Nova manutenção
+Manutenção
+Data
+Quilómetros
+Trabalhos feitos
+Notas (oficina, custo, outras peças…)
+Conta como revisão
+Atualiza a data da última revisão e o próximo lembrete
+OK
+Veículos
+Selecione um veículo da lista
+Versão Pro
+Mude para MyFleetManager Pro
+Uma única compra, para sempre: sem subscrição.
+Versão Pro ativa
+Obrigado por apoiar o MyFleetManager!
+Pro desbloqueada com o código de programador
+Veículos ilimitados
+Carrinhas, camiões e reboques
+Documentos do veículo (documento único, apólice…)
+Histórico de manutenção
+Apoie o desenvolvimento da app
+Versão gratuita: até {n} veículos (automóveis ou motas) com prazos e notificações.
+Comprar Pro
+Comprar Pro · {price}
+A compra ficará disponível quando a app for instalada a partir da Play Store.
+Restaurar compra
+A procurar compras anteriores…
+Paga uma vez, é sua para sempre.
+A versão gratuita gere até {n} veículos. Mude para Pro para adicionar mais.
+{type}: disponível na versão Pro.
+Os documentos do veículo estão disponíveis na versão Pro.
+O histórico de manutenção está disponível na versão Pro.
+Código de programador
+Introduza o código
+Pro desbloqueada (desenvolvimento)
+Código inválido
+Desativar Pro de desenvolvimento
+Pro de desenvolvimento desativada
+Camião
+Camiões
+Imposto de circulação (IUC)
+Um membro do grupo
+{who} adicionou {vehicle}
+{who} alterou {vehicle}
+{who} eliminou {vehicle}
+{n} alterações nos veículos do grupo
+Alertas de atividade dos grupos
+Avisa quando outro membro adiciona, altera ou elimina um veículo. Com a app fechada, o alerta pode chegar com alguns minutos de atraso.
+Ajustar foto
+Rodar
+Centrar
+Aproxime dois dedos para ampliar, arraste para mover
+Original
+Usar foto
+Ajustar foto (zoom e recorte)

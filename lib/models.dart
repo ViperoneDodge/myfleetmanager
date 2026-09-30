@@ -264,6 +264,12 @@ class Vehicle {
   String notes;
   int updatedAt;
   String updatedBy;
+
+  /// Chi ha fatto l'ultima modifica (uid online o utente locale).
+  String updatedByUid;
+
+  /// Chi ha creato il veicolo: conta per il limite della versione gratuita.
+  String createdBy;
   bool deleted;
 
   /// Parco a cui appartiene (null/personale = "I miei"; altrimenti id del nucleo familiare).
@@ -284,6 +290,8 @@ class Vehicle {
     this.notes = '',
     int? updatedAt,
     this.updatedBy = '',
+    this.updatedByUid = '',
+    this.createdBy = '',
     this.deleted = false,
     this.fleetId,
   })  : id = id ?? newId(),
@@ -357,6 +365,8 @@ class Vehicle {
         'notes': notes,
         'updatedAt': updatedAt,
         'updatedBy': updatedBy,
+        'updatedByUid': updatedByUid,
+        'createdBy': createdBy,
         'deleted': deleted,
         'fleetId': fleetId,
       };
@@ -382,6 +392,8 @@ class Vehicle {
         notes: j['notes'] as String? ?? '',
         updatedAt: (j['updatedAt'] as num?)?.toInt() ?? 0,
         updatedBy: j['updatedBy'] as String? ?? '',
+        updatedByUid: j['updatedByUid'] as String? ?? '',
+        createdBy: j['createdBy'] as String? ?? '',
         deleted: j['deleted'] as bool? ?? false,
         fleetId: j['fleetId'] as String?,
       );

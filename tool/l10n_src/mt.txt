@@ -1,0 +1,352 @@
+Karozza
+Mutur
+Van
+Karru
+Karozzi
+Muturi
+Vans
+Karrijiet
+Dokument
+Assigurazzjoni
+VRT
+Servis
+Personalizzat
+Servis li jmiss
+Żejt tal-magna
+Filtru taż-żejt
+Filtru tal-arja
+Filtru tal-kabina
+Filtru tal-fjuwil
+Grupp
+Bil-linji
+Bil-kwadri
+Bit-tikek
+Vojt
+Blu
+Aħdar tal-foresta
+Aħmar tat-tlielaq
+Oranġjo
+Blu petrol
+Vjola
+Grafit
+Ġilda
+Skada lbieraħ
+Skada {n} jiem ilu
+Jiskadi llum
+Jiskadi għada
+Fi {n} jiem
+Bla isem
+Ebda skadenza
+Skadenzi tal-vetturi
+Tfakkiriet għall-assigurazzjoni, VRT, servis u skadenzi oħra
+Attività tal-gruppi
+Notifiki push dwar vetturi maqsuma fil-gruppi
+Xahar qabel
+Ġimgħa qabel
+Ġurnata qabel
+Fil-jum tal-iskadenza
+{n} jiem qabel
+fi xahar
+f'ġimgħa
+għada
+fi {n} jiem
+{what} jiskadi llum
+{what}: jiskadi {when}
+{vehicle} · jiskadi fl-{date}
+Tfakkira ta' prova
+Jekk qed taqra dan, it-tfakkiriet ippjanati jaħdmu anke bl-app magħluqa.
+Notifiki attivati
+Se tirċievi tfakkiriet dwar l-iskadenzi tal-vetturi tiegħek.
+L-isem tal-utent irid ikollu mill-inqas 3 karattri.
+Il-password trid ikollha mill-inqas 4 karattri.
+Dan l-isem tal-utent diġà jeżisti fuq dan it-telefon.
+L-utent ma nstabx fuq dan it-telefon.
+Password ħażina.
+Utent
+Email mhux validu.
+Email jew password ħżiena.
+Diġà jeżisti kont b'dan l-email.
+Password dgħajfa wisq (mill-inqas 6 karattri).
+Għall-ewwel dħul online hemm bżonn l-internet.
+Ir-reġistrazzjoni bl-email mhix attiva: fil-console ta' Firebase attiva l-metodu Email/Password.
+Wisq tentattivi: erġa' pprova fi ftit minuti.
+Dan il-kont ġie diżattivat.
+Żball fid-dħul ({code}).
+Id-dħul b'Google ġie kkanċellat.
+Id-dħul b'Google ma rnexxiex: {error}
+Kodiċi mhux validu.
+Is-server ċaħad l-aċċess: fil-console ta' Firebase ippubblika r-regoli ta' Firestore (fajl firestore.rules).
+Id-database ma teżistix: oħloq Firestore Database fil-console ta' Firebase.
+Is-server mhux disponibbli: iċċekkja l-konnessjoni tal-internet.
+Is-sessjoni skadiet: oħroġ u erġa' idħol bil-kont online.
+Żball tas-server ({code}).
+Il-vetturi tiegħi
+Sinkronizzat
+Qed jikkonnettja…
+Offline: id-data hija ssejvjata fuq it-telefon. Agħfas biex terġa' tipprova.
+Gruppi
+Skadenzi
+Tiegħi
+Settings
+Żid
+Kollha ({n})
+Ebda vettura
+Agħfas "Żid" biex iddaħħal l-ewwel vettura.
+Żomm magħfusa vettura biex tittrasferiha f'grupp.
+Ebda skadenza.
+Il-kwadern tal-iskadenzi tal-vetturi tiegħek
+Tieħu l-vetturi miegħek?
+Trid tikkopja l-vettura tiegħek (bl-iskadenzi, il-manutenzjoni u d-dokumenti) fil-kont online? Il-kont lokali jibqa' fuq dan it-telefon xorta waħda.
+Trid tikkopja l-{n} vetturi tiegħek (bl-iskadenzi, il-manutenzjoni u d-dokumenti) fil-kont online? Il-kont lokali jibqa' fuq dan it-telefon xorta waħda.
+Iva, ikkopja
+Le
+Issa qed tuża l-kont online.
+Issa qed tuża l-kont online: ġiet ikkupjata vettura.
+Issa qed tuża l-kont online: ġew ikkupjati {n} vetturi.
+Aqleb għal kont online biex taqsam vetturi ma' oħrajn
+L-ewwel ikteb l-email tiegħek fil-kaxxa ta' fuq.
+Bgħatna email lil {email} biex tirrisettja l-password.
+Imla l-kaxxi kollha.
+Il-passwords ma jaqblux.
+L-iskadenzi tal-vetturi tiegħek, dejjem taħt kontroll
+Kont online
+Telefon biss
+Kont issejvjat biss fuq dan it-telefon. L-ebda qsim.
+Jippermettilek taqsam vetturi ma' oħrajn permezz ta' gruppi. Id-data tibqa' wkoll fuq it-telefon.
+Isem tal-utent
+Email
+Password
+Irrepeti l-password
+Oħloq kont
+Idħol
+Diġà għandek kont? Idħol
+M'għandekx kont? Irreġistra
+Insejt il-password?
+jew
+Idħol b'Google
+B'Google l-app tirċievi biss l-indirizz tal-email tiegħek.
+Id-data tibqa' fuq dan it-telefon. Id-dħul b'Google u l-gruppi maqsuma se jaslu f'aġġornament li jmiss.
+Agħlaq
+Ikkanċella
+Oħloq
+Issejvja
+Ikkopja
+Neħħi
+Ħassar
+Vetturi maqsuma
+Biex taqsam vetturi fi grupp għandek bżonn kont online. Tista' taqleb mingħajr ma toħroġ u mingħajr ma titlef il-vetturi.
+Il-qsim online għadu mhux attiv f'din il-verżjoni tal-app.
+Aqleb għal kont online
+Għad m'hemmx gruppi
+Oħloq grupp (familja, ħbieb, xogħol…) u agħti l-kodiċi tal-istedina lill-oħrajn, jew idħol fi grupp bil-kodiċi li ngħatajt.
+Oħloq grupp
+Idħol b'kodiċi
+Membru wieħed
+{n} membri
+Vettura waħda
+{n} vetturi
+Għad m'hemmx vetturi f'dan il-grupp.
+Żid vettura ma' "{name}"
+Għandek bżonn kont online biex taqsam vettura.
+Vettura
+Ittrasferixxi "{name}" f'grupp
+Ittrasferixxi "{name}"
+Il-vettura tgħaddi fil-grupp magħżul u l-membri kollha jarawha u jistgħu jeditjawha.
+Il-vettura se titneħħa minn "{name}".
+Għadek mhux f'xi grupp
+Oħloq wieħed jew idħol b'kodiċi mit-tab Gruppi.
+Tarah int biss
+"{name}" issa jinsab f'"{where}"
+Grupp ġdid
+Isem (eż. Familja Borg, Garaxx, Ħbieb)
+Kodiċi tal-istedina
+Daħħal il-kodiċi tal-istedina tal-grupp.
+Eż. AB12CD34EF
+Idħol
+Dħalt f'"{name}"!
+Grupp mhux disponibbli.
+Kodiċi kkupjat: waħħlu fuq WhatsApp jew SMS
+Il-persuna l-oħra tinstalla l-app, tidħol b'kont online, tiftaħ it-tab Gruppi → "Idħol b'kodiċi" u ddaħħal dan il-kodiċi.
+Membri ({n})
+(int)
+Min ħoloq
+Ibdel l-isem tal-grupp
+Ħassar il-grupp
+Oħroġ mill-grupp
+Il-membri kollha jitilfu l-aċċess għall-vetturi tal-grupp
+Ma tibqax tara l-vetturi ta' dan il-grupp
+Isem il-grupp
+Tneħħi l-membru?
+{email} ma jibqax jara l-vetturi ta' "{name}".
+Tħassar il-grupp?
+Toħroġ mill-grupp?
+"{name}" jitħassar għall-membri kollha flimkien mal-vetturi tiegħu.
+Il-vetturi ta' "{name}" jisparixxu minn dan it-telefon.
+Oħroġ
+Kont
+Kont online · data fuq it-telefon u maqsuma fil-gruppi
+Kont fuq dan it-telefon biss
+Aqsam vetturi ma' oħrajn mingħajr ma toħroġ: tista' tieħu miegħek il-vetturi ta' dan il-kont.
+Lingwa
+Bħat-telefon
+Notifiki
+Meta trid tfakkira qabel skadenza?
+It-tfakkiriet kollha
+Ħin tan-notifiki
+Ipprova notifika
+Iċċekkja li n-notifiki huma permessi
+Notifiki ppjanati: {n}
+Tfakkira ta' prova f'minuta
+Imbagħad agħlaq l-app: jekk tasal in-notifika, it-tfakkiriet jaħdmu
+Tfakkira ta' prova ppjanata: tista' tagħlaq l-app.
+Ma rnexxiex jiġi ppjanat: {error}
+Fuq xi telefowns (Xiaomi, Huawei, Samsung, Oppo…) l-iffrankar tal-batterija jimblokka t-tfakkiriet: fis-Settings ta' Android → Apps → MyFleetManager → Batterija agħżel "Mingħajr restrizzjonijiet".
+Notifiki push
+It-telefon huwa rreġistrat għall-push
+It-telefon għadu mhux irreġistrat
+Agħfas biex tikkopja l-kodiċi tal-apparat (meħtieġ għal prova mill-console ta' Firebase)
+Agħfas biex terġa' tipprova (jeħtieġ l-internet)
+Ir-reġistrazzjoni ma rnexxietx: iċċekkja l-konnessjoni.
+Kodiċi tal-apparat ikkupjat
+Gruppi
+Biex taqsam vetturi fi grupp, aqleb għal kont online (hawn fuq, fit-taqsima Kont).
+Oħroġ
+Id-data tiegħek tibqa' ssejvjata fuq it-telefon
+Dehra
+Ċar
+Skur
+Awtomatiku
+Kulur tal-qoxra
+Sfond tal-paġni
+kodiċi {code}
+Idħol b'kodiċi tal-istedina
+Notifiki mblukkati
+Agħfas biex tippermettihom. Jekk ma jidhirx talba: Settings ta' Android → Apps → MyFleetManager → Notifiki → Ippermetti.
+It-tfakkiriet jistgħu jaslu tard
+Android jista' jdewwem it-tfakkiriet. Agħfas u attiva "Allarmi u tfakkiriet" għal MyFleetManager.
+Notifiki permessi
+Tħassar il-vettura?
+"{name}", l-iskadenzi u d-dokumenti tagħha jitħassru.
+"{name}", l-iskadenzi u d-dokumenti tagħha jitħassru (l-iskadenzi anke għall-membri l-oħra tal-grupp).
+Logbook
+Polza tal-assigurazzjoni
+Ċertifikat tal-VRT
+Liċenzja tat-triq
+Fattura tas-servis
+Isem id-dokument
+Eż. Logbook
+Żid dokument
+Ħu ritratt tad-dokument
+Stampa mill-gallerija
+Fajl PDF jew stampa
+Mill-fajls tat-telefon, Drive, downloads…
+Ma setax jinfetaħ il-fajl: {error}
+Dokument issejvjat
+Żball fis-salvataġġ: {error}
+Il-fajl ma nstabx fuq it-telefon.
+L-ebda app biex tiftaħ PDF: {error}
+Iftaħ
+Ibdel l-isem
+Tħassar id-dokument?
+"{name}" jitħassar mit-telefon.
+Vettura ma nstabitx.
+Editja
+Ebda skadenza segwita.
+Manutenzjoni
+Niżżel hawn is-servis u x-xogħlijiet: data, kilometraġġ u filtri mibdula.
+Dokumenti
+Żomm hawn il-logbook, il-polza u dokumenti oħra (ritratti jew PDF).
+Stampa
+Id-dokumenti jibqgħu biss fuq dan it-telefon.
+Noti
+L-aħħar bidla: {who} · {date}
+L-aħħar: {date}
+Li jmiss: {date} (kull {n} xhur)
+Data mhix issettjata
+Jiskadi fl-{date}
+Ħu ritratt
+Agħżel mill-gallerija
+Neħħi r-ritratt
+Ma setax jittella' r-ritratt: {error}
+Żid ritratt
+Data tal-aħħar servis
+Data tal-iskadenza: {what}
+Daħħal mill-inqas l-isem jew in-numru tar-reġistrazzjoni.
+Skadenza personalizzata
+Vettura ġdida
+Editja l-vettura
+Tip ta' vettura
+Fejn tappartjeni
+Grupp: {name}
+Isem (eż. il-Panda ta' Mark)
+Numru tar-reġistrazzjoni
+Skadenzi li jiġu segwiti
+Attiva biss dawk li jinteressawk. Se tirċievi notifiki skont is-settings.
+Żid skadenza personalizzata
+Eż. liċenzja tat-triq, tajers tax-xitwa, garanzija, ċinga tat-timing…
+Noti (mhux obbligatorju)
+Isem l-iskadenza (eż. Liċenzja tat-triq)
+L-aħħar servis
+Agħżel data
+It-tfakkira li jmiss:
+xejn
+wara {n} xhur
+Agħżel mill-inqas oġġett wieħed jew ikteb nota.
+Tħassar din id-daħla?
+Id-daħla tal-{date} titneħħa mill-istorja.
+Manutenzjoni ġdida
+Manutenzjoni
+Data
+Kilometraġġ
+Xogħlijiet magħmula
+Noti (garaxx, spiża, partijiet oħra…)
+Tgħodd bħala servis
+Taġġorna d-data tal-aħħar servis u t-tfakkira li jmiss
+OK
+Vetturi
+Agħżel vettura mil-lista
+Verżjoni Pro
+Aqleb għal MyFleetManager Pro
+Xiri wieħed, għal dejjem: l-ebda abbonament.
+Verżjoni Pro attiva
+Grazzi talli tappoġġja lil MyFleetManager!
+Pro miftuħ bil-kodiċi tal-iżviluppatur
+Vetturi bla limitu
+Vans, trakkijiet u karrijiet
+Dokumenti tal-vettura (logbook, polza…)
+Storja tal-manutenzjoni
+Appoġġja l-iżvilupp tal-app
+Verżjoni b'xejn: sa {n} vetturi (karozzi jew muturi) bi skadenzi u notifiki.
+Ixtri Pro
+Ixtri Pro · {price}
+Ix-xiri jkun disponibbli meta l-app tiġi installata mill-Play Store.
+Irkupra x-xiri
+Qed infittxu xiri preċedenti…
+Tħallas darba, tiegħek għal dejjem.
+Il-verżjoni b'xejn timmaniġġja sa {n} vetturi. Aqleb għal Pro biex iżżid aktar.
+{type}: disponibbli fil-verżjoni Pro.
+Id-dokumenti tal-vettura huma disponibbli fil-verżjoni Pro.
+L-istorja tal-manutenzjoni hija disponibbli fil-verżjoni Pro.
+Kodiċi tal-iżviluppatur
+Daħħal il-kodiċi
+Pro miftuħ (żvilupp)
+Kodiċi mhux validu
+Itfi l-Pro tal-iżvilupp
+Pro tal-iżvilupp mitfi
+Trakk
+Trakkijiet
+Liċenzja tat-triq
+Membru tal-grupp
+{who} żied {vehicle}
+{who} biddel {vehicle}
+{who} ħassar {vehicle}
+{n} bidliet fil-vetturi tal-grupp
+Avviżi dwar l-attività tal-gruppi
+Javżak meta membru ieħor iżid, ibiddel jew iħassar vettura. Meta l-app tkun magħluqa, l-avviż jista' jasal ftit minuti tard.
+Irranġa r-ritratt
+Dawwar
+Iċċentra
+Ifred żewġ subgħajk biex tkabbar, kaxkar biex iċċaqlaq
+Oriġinali
+Uża r-ritratt
+Irranġa r-ritratt (zoom u qtugħ)

@@ -193,6 +193,13 @@ class SettingsScreen extends StatelessWidget {
                   showSnack(context, tr('settings.pushCopied'));
                 },
               ),
+              SwitchListTile(
+                secondary: const Icon(Icons.notifications_active_outlined),
+                title: Text(tr('settings.groupAlerts')),
+                subtitle: Text(tr('settings.groupAlertsInfo')),
+                value: appState.groupAlerts,
+                onChanged: (on) => appState.setGroupAlerts(on),
+              ),
             ],
 
             // ---------------- Famiglia ----------------
@@ -223,7 +230,7 @@ class SettingsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             Center(
-              child: Text('MyFleetManager 1.5.0',
+              child: Text('MyFleetManager 1.6.0',
                   style: TextStyle(fontSize: 12, color: scheme.outline)),
             ),
             const SizedBox(height: 24),

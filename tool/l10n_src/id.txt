@@ -1,0 +1,352 @@
+Mobil
+Motor
+Van
+Trailer
+Mobil
+Motor
+Van
+Trailer
+Dokumen
+Asuransi
+Uji KIR
+Servis
+Kustom
+Servis berikutnya
+Oli mesin
+Filter oli
+Filter udara
+Filter kabin
+Filter bahan bakar
+Grup
+Bergaris
+Kotak-kotak
+Titik-titik
+Polos
+Biru
+Hijau hutan
+Merah balap
+Oranye
+Biru petrol
+Ungu
+Grafit
+Kulit
+Berakhir kemarin
+Berakhir {n} hari lalu
+Jatuh tempo hari ini
+Jatuh tempo besok
+Dalam {n} hari
+Tanpa nama
+Belum ada tenggat
+Tenggat kendaraan
+Pengingat asuransi, uji KIR, servis, dan tenggat lainnya
+Aktivitas grup
+Notifikasi push tentang kendaraan yang dibagikan di grup
+1 bulan sebelumnya
+1 minggu sebelumnya
+1 hari sebelumnya
+Pada hari tenggat
+{n} hari sebelumnya
+dalam 1 bulan
+dalam 1 minggu
+besok
+dalam {n} hari
+{what} jatuh tempo hari ini
+{what}: jatuh tempo {when}
+{vehicle} · jatuh tempo {date}
+Pengingat uji coba
+Jika kamu bisa membaca ini, pengingat terjadwal tetap berfungsi meskipun aplikasi ditutup.
+Notifikasi aktif
+Kamu akan menerima pengingat untuk tenggat kendaraanmu.
+Nama pengguna minimal 3 karakter.
+Kata sandi minimal 4 karakter.
+Nama pengguna ini sudah ada di ponsel ini.
+Pengguna tidak ditemukan di ponsel ini.
+Kata sandi salah.
+Pengguna
+Email tidak valid.
+Email atau kata sandi salah.
+Sudah ada akun dengan email ini.
+Kata sandi terlalu lemah (minimal 6 karakter).
+Perlu koneksi internet untuk login online pertama kali.
+Pendaftaran dengan email belum aktif: di konsol Firebase aktifkan metode login Email/Kata sandi.
+Terlalu banyak percobaan: coba lagi dalam beberapa menit.
+Akun ini telah dinonaktifkan.
+Kesalahan login ({code}).
+Login dengan Google dibatalkan.
+Login dengan Google gagal: {error}
+Kode tidak valid.
+Server menolak akses: di konsol Firebase terbitkan aturan Firestore (file firestore.rules).
+Database tidak ada: buat Firestore Database di konsol Firebase.
+Server tidak dapat dijangkau: periksa koneksi internet.
+Sesi berakhir: logout lalu login lagi dengan akun online.
+Kesalahan server ({code}).
+Kendaraanku
+Tersinkron
+Menghubungkan…
+Offline: datamu tersimpan di ponsel. Ketuk untuk mencoba lagi.
+Grup
+Tenggat
+Milikku
+Pengaturan
+Tambah
+Semua ({n})
+Belum ada kendaraan
+Ketuk "Tambah" untuk memasukkan kendaraan pertamamu.
+Tekan lama kendaraan untuk memindahkannya ke grup.
+Belum ada tenggat.
+Buku catatan tenggat kendaraanmu
+Bawa kendaraanmu?
+Salin kendaraanmu (dengan tenggat, perawatan, dan dokumen) ke akun online? Akun lokal tetap ada di ponsel ini.
+Salin {n} kendaraanmu (dengan tenggat, perawatan, dan dokumen) ke akun online? Akun lokal tetap ada di ponsel ini.
+Ya, salin
+Tidak
+Sekarang kamu memakai akun online.
+Sekarang kamu memakai akun online: 1 kendaraan disalin.
+Sekarang kamu memakai akun online: {n} kendaraan disalin.
+Beralih ke akun online untuk berbagi kendaraan dengan orang lain
+Tulis dulu emailmu di kolom di atas.
+Kami mengirim email ke {email} untuk mengatur ulang kata sandi.
+Isi semua kolom.
+Kata sandi tidak cocok.
+Tenggat kendaraanmu, selalu terkendali
+Akun online
+Hanya ponsel
+Akun hanya tersimpan di ponsel ini. Tanpa berbagi.
+Memungkinkan berbagi kendaraan dengan orang lain lewat grup. Data juga tetap di ponsel.
+Nama pengguna
+Email
+Kata sandi
+Ulangi kata sandi
+Buat akun
+Masuk
+Sudah punya akun? Masuk
+Belum punya akun? Daftar
+Lupa kata sandi?
+atau
+Masuk dengan Google
+Dengan Google, aplikasi hanya menerima alamat emailmu.
+Data tetap di ponsel ini. Login Google dan grup bersama akan hadir di pembaruan berikutnya.
+Tutup
+Batal
+Buat
+Simpan
+Salin
+Hapus dari daftar
+Hapus
+Kendaraan bersama
+Untuk berbagi kendaraan di grup, kamu perlu akun online. Kamu bisa beralih tanpa logout dan tanpa kehilangan kendaraan.
+Berbagi online belum aktif di versi aplikasi ini.
+Beralih ke akun online
+Belum ada grup
+Buat grup (keluarga, teman, kantor…) dan berikan kode undangan ke yang lain, atau gabung ke grup dengan kode yang kamu terima.
+Buat grup
+Gabung dengan kode
+1 anggota
+{n} anggota
+1 kendaraan
+{n} kendaraan
+Belum ada kendaraan di grup ini.
+Tambah kendaraan ke "{name}"
+Kamu perlu akun online untuk berbagi kendaraan.
+Kendaraan
+Pindahkan "{name}" ke grup
+Pindahkan "{name}"
+Kendaraan pindah ke grup yang dipilih dan semua anggota bisa melihat serta mengeditnya.
+Kendaraan akan dihapus dari "{name}".
+Kamu belum bergabung di grup mana pun
+Buat grup atau gabung dengan kode dari tab Grup.
+Hanya kamu yang melihatnya
+"{name}" sekarang ada di "{where}"
+Grup baru
+Nama (mis. Keluarga Santoso, Bengkel, Teman)
+Kode undangan
+Masukkan kode undangan grup.
+Mis. AB12CD34EF
+Gabung
+Kamu bergabung ke "{name}"!
+Grup tidak tersedia.
+Kode disalin: tempel di WhatsApp atau SMS
+Orang lain memasang aplikasi, login dengan akun online, membuka tab Grup → "Gabung dengan kode", lalu memasukkan kode ini.
+Anggota ({n})
+(kamu)
+Pembuat
+Ganti nama grup
+Hapus grup
+Keluar dari grup
+Semua anggota akan kehilangan akses ke kendaraan grup
+Kamu tidak akan lagi melihat kendaraan grup ini
+Nama grup
+Keluarkan anggota?
+{email} tidak akan lagi melihat kendaraan "{name}".
+Hapus grup?
+Keluar dari grup?
+"{name}" akan dihapus untuk semua anggota beserta kendaraannya.
+Kendaraan "{name}" akan hilang dari ponsel ini.
+Keluar
+Akun
+Akun online · data tersimpan di ponsel dan dibagikan di grup
+Akun hanya di ponsel ini
+Bagikan kendaraan dengan orang lain tanpa logout: kamu bisa membawa kendaraan dari akun ini.
+Bahasa
+Sama seperti ponsel
+Notifikasi
+Kapan kamu ingin diingatkan sebelum tenggat?
+Semua pengingat
+Waktu notifikasi
+Uji notifikasi
+Periksa apakah notifikasi diizinkan
+Notifikasi terjadwal: {n}
+Pengingat uji coba dalam 1 menit
+Lalu tutup aplikasi: jika notifikasi muncul, pengingat berfungsi
+Pengingat uji coba dijadwalkan: kamu boleh menutup aplikasi.
+Gagal menjadwalkan: {error}
+Di beberapa ponsel (Xiaomi, Huawei, Samsung, Oppo…) penghemat baterai memblokir pengingat: di Pengaturan Android → Aplikasi → MyFleetManager → Baterai pilih "Tidak dibatasi".
+Notifikasi push
+Ponsel terdaftar untuk push
+Ponsel belum terdaftar
+Ketuk untuk menyalin kode perangkat (diperlukan untuk uji dari konsol Firebase)
+Ketuk untuk mencoba lagi (perlu internet)
+Pendaftaran gagal: periksa koneksi.
+Kode perangkat disalin
+Grup
+Untuk berbagi kendaraan di grup, beralihlah ke akun online (di atas, bagian Akun).
+Keluar akun
+Datamu tetap tersimpan di ponsel
+Tampilan
+Terang
+Gelap
+Otomatis
+Warna sampul
+Latar halaman
+kode {code}
+Gabung dengan kode undangan
+Notifikasi diblokir
+Ketuk untuk mengizinkan. Jika tidak muncul permintaan: Pengaturan Android → Aplikasi → MyFleetManager → Notifikasi → Izinkan.
+Pengingat bisa terlambat
+Android bisa menunda pengingat. Ketuk dan aktifkan "Alarm & pengingat" untuk MyFleetManager.
+Notifikasi diizinkan
+Hapus kendaraan?
+"{name}", tenggat, dan dokumennya akan dihapus.
+"{name}", tenggat, dan dokumennya akan dihapus (tenggat juga untuk anggota grup lainnya).
+STNK
+Polis asuransi
+Sertifikat uji KIR
+Pajak kendaraan
+Nota servis
+Nama dokumen
+Mis. STNK
+Tambah dokumen
+Foto dokumen
+Gambar dari galeri
+File PDF atau gambar
+Dari file ponsel, Drive, unduhan…
+Tidak dapat membuka file: {error}
+Dokumen disimpan
+Kesalahan saat menyimpan: {error}
+File tidak ditemukan di ponsel.
+Tidak ada aplikasi untuk membuka PDF: {error}
+Buka
+Ganti nama
+Hapus dokumen?
+"{name}" akan dihapus dari ponsel.
+Kendaraan tidak ditemukan.
+Edit
+Tidak ada tenggat yang dipantau.
+Perawatan
+Catat servis dan pekerjaan di sini: tanggal, kilometer, dan filter yang diganti.
+Dokumen
+Simpan STNK, polis, dan dokumen lain di sini (foto atau PDF).
+Gambar
+Dokumen hanya tersimpan di ponsel ini.
+Catatan
+Terakhir diubah: {who} · {date}
+Terakhir: {date}
+Berikutnya: {date} (setiap {n} bulan)
+Tanggal belum diatur
+Jatuh tempo {date}
+Ambil foto
+Pilih dari galeri
+Hapus foto
+Tidak dapat memuat foto: {error}
+Tambah foto
+Tanggal servis terakhir
+Tanggal jatuh tempo: {what}
+Masukkan setidaknya nama atau pelat nomor.
+Tenggat kustom
+Kendaraan baru
+Edit kendaraan
+Jenis kendaraan
+Tempatnya
+Grup: {name}
+Nama (mis. Panda-nya Budi)
+Pelat nomor
+Tenggat yang dipantau
+Aktifkan hanya yang penting bagimu. Kamu akan menerima notifikasi sesuai pengaturan.
+Tambah tenggat kustom
+Mis. pajak kendaraan, ban musim dingin, garansi, timing belt…
+Catatan (opsional)
+Nama tenggat (mis. Pajak kendaraan)
+Servis terakhir
+Pilih tanggal
+Pengingat berikutnya:
+tidak ada
+setelah {n} bulan
+Pilih setidaknya satu item atau tulis catatan.
+Hapus catatan ini?
+Catatan tanggal {date} akan dihapus dari riwayat.
+Perawatan baru
+Perawatan
+Tanggal
+Kilometer
+Pekerjaan yang dilakukan
+Catatan (bengkel, biaya, suku cadang lain…)
+Hitung sebagai servis
+Memperbarui tanggal servis terakhir dan pengingat berikutnya
+OK
+Kendaraan
+Pilih kendaraan dari daftar
+Versi Pro
+Tingkatkan ke MyFleetManager Pro
+Sekali beli, selamanya: tanpa langganan.
+Versi Pro aktif
+Terima kasih telah mendukung MyFleetManager!
+Pro dibuka dengan kode pengembang
+Kendaraan tanpa batas
+Van, truk, dan trailer
+Dokumen kendaraan (STNK, polis…)
+Riwayat perawatan
+Dukung pengembangan aplikasi
+Versi gratis: hingga {n} kendaraan (mobil atau motor) dengan tenggat dan notifikasi.
+Beli Pro
+Beli Pro · {price}
+Pembelian akan tersedia saat aplikasi dipasang dari Play Store.
+Pulihkan pembelian
+Mencari pembelian sebelumnya…
+Bayar sekali, milikmu selamanya.
+Versi gratis mengelola hingga {n} kendaraan. Tingkatkan ke Pro untuk menambah lebih banyak.
+{type}: tersedia di versi Pro.
+Dokumen kendaraan tersedia di versi Pro.
+Riwayat perawatan tersedia di versi Pro.
+Kode pengembang
+Masukkan kode
+Pro dibuka (pengembangan)
+Kode tidak valid
+Nonaktifkan Pro pengembangan
+Pro pengembangan dinonaktifkan
+Truk
+Truk
+Pajak kendaraan
+Anggota grup
+{who} menambahkan {vehicle}
+{who} mengubah {vehicle}
+{who} menghapus {vehicle}
+{n} perubahan pada kendaraan grup
+Notifikasi aktivitas grup
+Memberi tahu saat anggota lain menambah, mengubah, atau menghapus kendaraan. Saat aplikasi ditutup, notifikasi bisa datang beberapa menit terlambat.
+Sesuaikan foto
+Putar
+Tengahkan
+Cubit untuk memperbesar, seret untuk memindahkan
+Asli
+Gunakan foto
+Sesuaikan foto (zoom dan potong)

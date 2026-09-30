@@ -1,0 +1,352 @@
+Auto
+Motorka
+Dodávka
+Přívěs
+Auta
+Motorky
+Dodávky
+Přívěsy
+Dokument
+Pojištění
+Technická kontrola
+Servis
+Vlastní
+Příští servis
+Motorový olej
+Olejový filtr
+Vzduchový filtr
+Kabinový filtr
+Palivový filtr
+Skupina
+Linkovaný
+Čtverečkovaný
+Tečkovaný
+Čistý
+Modrá
+Lesní zelená
+Závodní červená
+Oranžová
+Petrolejová
+Fialová
+Grafitová
+Kůže
+Vypršelo včera
+Vypršelo před {n} dny
+Vyprší dnes
+Vyprší zítra
+Za {n} dní
+Bez názvu
+Žádné termíny
+Termíny vozidel
+Připomínky pojištění, technické kontroly, servisu a dalších termínů
+Aktivita skupin
+Push oznámení o vozidlech sdílených ve skupinách
+1 měsíc předem
+1 týden předem
+1 den předem
+V den termínu
+{n} dní předem
+za 1 měsíc
+za 1 týden
+zítra
+za {n} dní
+{what} vyprší dnes
+{what}: vyprší {when}
+{vehicle} · termín {date}
+Testovací připomínka
+Pokud čtete tuto zprávu, naplánované připomínky fungují i při zavřené aplikaci.
+Oznámení zapnuta
+Budete dostávat připomínky termínů svých vozidel.
+Uživatelské jméno musí mít alespoň 3 znaky.
+Heslo musí mít alespoň 4 znaky.
+Toto uživatelské jméno už v telefonu existuje.
+Uživatel nebyl v tomto telefonu nalezen.
+Špatné heslo.
+Uživatel
+Neplatný e-mail.
+Nesprávný e-mail nebo heslo.
+Účet s tímto e-mailem už existuje.
+Příliš slabé heslo (alespoň 6 znaků).
+Pro první online přihlášení je potřeba internet.
+Registrace e-mailem není zapnutá: v konzoli Firebase zapněte metodu přihlášení E-mail/heslo.
+Příliš mnoho pokusů: zkuste to znovu za pár minut.
+Tento účet byl zablokován.
+Chyba přihlášení ({code}).
+Přihlášení přes Google zrušeno.
+Přihlášení přes Google selhalo: {error}
+Neplatný kód.
+Server odepřel přístup: v konzoli Firebase publikujte pravidla Firestore (soubor firestore.rules).
+Databáze neexistuje: vytvořte Firestore Database v konzoli Firebase.
+Server je nedostupný: zkontrolujte připojení k internetu.
+Relace vypršela: odhlaste se a znovu se přihlaste online účtem.
+Chyba serveru ({code}).
+Moje vozidla
+Synchronizováno
+Připojování…
+Offline: data jsou uložena v telefonu. Klepnutím zkuste znovu.
+Skupiny
+Termíny
+Moje
+Nastavení
+Přidat
+Vše ({n})
+Žádná vozidla
+Klepněte na „Přidat“ a zadejte první vozidlo.
+Podržením vozidla ho přesunete do skupiny.
+Žádné termíny.
+Zápisník termínů vašich vozidel
+Vzít vozidla s sebou?
+Chcete zkopírovat své vozidlo (s termíny, servisy a dokumenty) do online účtu? Místní účet v telefonu stejně zůstane.
+Počet vozidel ke zkopírování do online účtu: {n} (s termíny, servisy a dokumenty). Místní účet v telefonu stejně zůstane.
+Ano, zkopírovat
+Ne
+Nyní používáte online účet.
+Nyní používáte online účet: zkopírováno 1 vozidlo.
+Nyní používáte online účet: zkopírovaná vozidla: {n}.
+Přejděte na online účet a sdílejte vozidla s ostatními
+Nejprve zadejte e-mail do pole výše.
+Na {email} jsme poslali e-mail pro obnovení hesla.
+Vyplňte všechna pole.
+Hesla se neshodují.
+Termíny vašich vozidel vždy pod kontrolou
+Online účet
+Jen telefon
+Účet uložený jen v tomto telefonu. Bez sdílení.
+Umožňuje sdílet vozidla s ostatními pomocí skupin. Data zůstávají i v telefonu.
+Uživatelské jméno
+E-mail
+Heslo
+Zopakujte heslo
+Vytvořit účet
+Přihlásit se
+Už máte účet? Přihlaste se
+Nemáte účet? Zaregistrujte se
+Zapomenuté heslo?
+nebo
+Přihlásit se přes Google
+Přes Google aplikace dostane jen vaši e-mailovou adresu.
+Data zůstávají v tomto telefonu. Přihlášení přes Google a sdílené skupiny přijdou v další aktualizaci.
+Zavřít
+Zrušit
+Vytvořit
+Uložit
+Kopírovat
+Odebrat
+Smazat
+Sdílená vozidla
+Ke sdílení vozidel ve skupině potřebujete online účet. Můžete přejít bez odhlášení a bez ztráty vozidel.
+Online sdílení zatím v této verzi aplikace není aktivní.
+Přejít na online účet
+Zatím žádné skupiny
+Vytvořte skupinu (rodina, přátelé, práce…) a dejte ostatním kód pozvánky, nebo se připojte ke skupině kódem, který jste dostali.
+Vytvořit skupinu
+Připojit se kódem
+1 člen
+Členové: {n}
+1 vozidlo
+Vozidla: {n}
+V této skupině zatím nejsou vozidla.
+Přidat vozidlo do „{name}“
+Ke sdílení vozidla potřebujete online účet.
+Vozidlo
+Přesunout „{name}“ do skupiny
+Přesunout „{name}“
+Vozidlo přejde do vybrané skupiny a všichni členové ho uvidí a budou ho moci upravovat.
+Vozidlo bude odebráno z „{name}“.
+Zatím nejste v žádné skupině
+Vytvořte ji nebo se připojte kódem na kartě Skupiny.
+Uvidíte ho jen vy
+„{name}“ je nyní v „{where}“
+Nová skupina
+Název (např. Rodina Novákových, Dílna, Přátelé)
+Kód pozvánky
+Zadejte kód pozvánky do skupiny.
+Např. AB12CD34EF
+Připojit se
+Připojili jste se k „{name}“!
+Skupina není dostupná.
+Kód zkopírován: vložte ho do WhatsAppu nebo SMS
+Druhá osoba si nainstaluje aplikaci, přihlásí se online účtem, otevře kartu Skupiny → „Připojit se kódem“ a zadá tento kód.
+Členové ({n})
+(vy)
+Zakladatel
+Přejmenovat skupinu
+Smazat skupinu
+Opustit skupinu
+Všichni členové ztratí přístup k vozidlům skupiny
+Vozidla této skupiny už neuvidíte
+Název skupiny
+Odebrat člena?
+{email} už neuvidí vozidla ze „{name}“.
+Smazat skupinu?
+Opustit skupinu?
+„{name}“ bude smazána všem členům i s vozidly.
+Vozidla ze „{name}“ zmizí z tohoto telefonu.
+Opustit
+Účet
+Online účet · data uložená v telefonu a sdílená ve skupinách
+Účet jen v tomto telefonu
+Sdílejte vozidla s ostatními bez odhlášení: vozidla z tohoto účtu si můžete vzít s sebou.
+Jazyk
+Podle telefonu
+Oznámení
+Kdy chcete být upozorněni před termínem?
+Všechna upozornění
+Čas oznámení
+Vyzkoušet oznámení
+Ověřte, že jsou oznámení povolena
+Naplánovaná oznámení: {n}
+Testovací připomínka za 1 minutu
+Pak zavřete aplikaci: pokud oznámení přijde, připomínky fungují
+Testovací připomínka naplánována: můžete zavřít aplikaci.
+Naplánování se nezdařilo: {error}
+Na některých telefonech (Xiaomi, Huawei, Samsung, Oppo…) úspora baterie blokuje připomínky: v Nastavení Androidu → Aplikace → MyFleetManager → Baterie zvolte „Bez omezení“.
+Push oznámení
+Telefon registrován pro push
+Telefon zatím není registrován
+Klepnutím zkopírujete kód zařízení (potřebný pro test z konzole Firebase)
+Klepnutím zkuste znovu (vyžaduje internet)
+Registrace selhala: zkontrolujte připojení.
+Kód zařízení zkopírován
+Skupiny
+Ke sdílení vozidel ve skupině přejděte na online účet (výše, v části Účet).
+Odhlásit se
+Vaše data zůstanou uložena v telefonu
+Vzhled
+Světlý
+Tmavý
+Auto
+Barva desek
+Pozadí stránek
+kód {code}
+Připojit se kódem pozvánky
+Oznámení zablokována
+Klepnutím je povolte. Pokud se žádost nezobrazí: Nastavení Androidu → Aplikace → MyFleetManager → Oznámení → Povolit.
+Připomínky se mohou zpozdit
+Android může připomínky zdržovat. Klepněte a zapněte „Budíky a připomínky“ pro MyFleetManager.
+Oznámení povolena
+Smazat vozidlo?
+„{name}“, jeho termíny a dokumenty budou smazány.
+„{name}“, jeho termíny a dokumenty budou smazány (termíny i ostatním členům skupiny).
+Technický průkaz
+Pojistná smlouva
+Protokol o technické kontrole
+Silniční daň
+Faktura za servis
+Název dokumentu
+Např. Technický průkaz
+Přidat dokument
+Vyfotit dokument
+Obrázek z galerie
+Soubor PDF nebo obrázek
+Ze souborů telefonu, Disku, stažených…
+Soubor nelze otevřít: {error}
+Dokument uložen
+Chyba při ukládání: {error}
+Soubor nebyl v telefonu nalezen.
+Žádná aplikace pro otevření PDF: {error}
+Otevřít
+Přejmenovat
+Smazat dokument?
+„{name}“ bude z telefonu smazán.
+Vozidlo nenalezeno.
+Upravit
+Žádné sledované termíny.
+Údržba
+Zapisujte sem servisy a opravy: datum, stav tachometru a vyměněné filtry.
+Dokumenty
+Uložte sem technický průkaz, pojistku a další dokumenty (fotky nebo PDF).
+Obrázek
+Dokumenty zůstávají jen v tomto telefonu.
+Poznámky
+Poslední úprava: {who} · {date}
+Poslední: {date}
+Příští: {date} (každých {n} měs.)
+Datum není nastaveno
+Vyprší {date}
+Vyfotit
+Vybrat z galerie
+Odebrat fotku
+Fotku nelze načíst: {error}
+Přidat fotku
+Datum posledního servisu
+Datum termínu: {what}
+Zadejte alespoň název nebo SPZ.
+Vlastní termín
+Nové vozidlo
+Upravit vozidlo
+Typ vozidla
+Kam patří
+Skupina: {name}
+Název (např. Markova Panda)
+SPZ
+Sledované termíny
+Zapněte jen ty, které vás zajímají. Oznámení dostanete podle nastavení.
+Přidat vlastní termín
+Např. silniční daň, zimní pneumatiky, záruka, rozvodový řemen…
+Poznámky (volitelné)
+Název termínu (např. Silniční daň)
+Poslední servis
+Vybrat datum
+Další připomínka:
+žádná
+po {n} měs.
+Vyberte alespoň jednu položku nebo napište poznámku.
+Smazat tento záznam?
+Záznam z {date} bude odstraněn z historie.
+Nová údržba
+Údržba
+Datum
+Stav tachometru
+Provedené práce
+Poznámky (servis, cena, další díly…)
+Počítat jako servis
+Aktualizuje datum posledního servisu a příští připomínku
+OK
+Vozidla
+Vyberte vozidlo ze seznamu
+Verze Pro
+Přejít na MyFleetManager Pro
+Jeden nákup, navždy: žádné předplatné.
+Verze Pro aktivní
+Děkujeme, že podporujete MyFleetManager!
+Pro odemčeno vývojářským kódem
+Neomezený počet vozidel
+Dodávky, nákladní auta a přívěsy
+Dokumenty vozidla (technický průkaz, pojistka…)
+Historie údržby
+Podpořte vývoj aplikace
+Bezplatná verze: až {n} vozidla (auta nebo motorky) s termíny a oznámeními.
+Koupit Pro
+Koupit Pro · {price}
+Nákup bude dostupný po instalaci aplikace z Obchodu Play.
+Obnovit nákup
+Hledání předchozích nákupů…
+Zaplatíte jednou, máte navždy.
+Bezplatná verze spravuje až {n} vozidla. Přejděte na Pro a přidejte další.
+{type}: dostupné ve verzi Pro.
+Dokumenty vozidla jsou dostupné ve verzi Pro.
+Historie údržby je dostupná ve verzi Pro.
+Vývojářský kód
+Zadejte kód
+Pro odemčeno (vývoj)
+Neplatný kód
+Vypnout vývojářské Pro
+Vývojářské Pro vypnuto
+Nákladní auto
+Nákladní auta
+Silniční daň
+Člen skupiny
+{who} přidal(a) {vehicle}
+{who} upravil(a) {vehicle}
+{who} smazal(a) {vehicle}
+Změny vozidel skupiny: {n}
+Upozornění na aktivitu skupin
+Upozorní, když jiný člen přidá, upraví nebo smaže vozidlo. Při zavřené aplikaci může upozornění přijít o několik minut později.
+Upravit fotku
+Otočit
+Vycentrovat
+Roztažením prstů přiblížíte, tažením posunete
+Původní
+Použít fotku
+Upravit fotku (přiblížení a oříznutí)

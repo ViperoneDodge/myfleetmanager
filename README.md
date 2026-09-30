@@ -4,9 +4,9 @@ App Android/iOS per gestire veicoli (auto, moto, furgoni, camion e rimorchi) da 
 
 ## Funzioni
 
-- Veicoli **auto, moto, furgoni, camion e rimorchi** con nome, targa e foto (o sagoma predefinita)
+- Veicoli **auto, moto, furgoni, camion e rimorchi** con nome, targa e foto (o sagoma predefinita); le foto si possono **ingrandire, spostare e ruotare** prima di salvarle
 - **Versione gratuita**: fino a 3 veicoli (auto o moto) con scadenze e notifiche. **Pro** (acquisto unico, prodotto `myfleet_pro` in Play Console): veicoli illimitati, furgoni, camion, rimorchi, documenti, storico manutenzioni
-- **37 lingue** (tutte le europee, scandinave comprese, e le principali mondiali) in `assets/l10n/`; sorgenti di traduzione in `tool/l10n_src/`
+- **36 lingue** (tutte le europee, scandinave comprese, e le principali mondiali) in `assets/l10n/`; sorgenti di traduzione in `tool/l10n_src/`
 - **Pieghevoli e tablet**: vista a due pannelli che rispetta la cerniera
 - **Documenti** per ogni veicolo (libretto, polizza…) come foto o PDF, salvati sul telefono
 - Grafica a **taccuino ad anelli**, tema **chiaro / scuro / automatico**, 8 colori di copertina e 4 sfondi pagina (righe, quadretti, puntini, liscio)
@@ -14,7 +14,7 @@ App Android/iOS per gestire veicoli (auto, moto, furgoni, camion e rimorchi) da 
 - **Notifiche** 1 mese, 1 settimana, 1 giorno prima e il giorno stesso (selezionabili, anche tutte), all'orario scelto
 - **Dati salvati sul telefono**: funziona anche senza internet (notifiche comprese)
 - Login con **utente e password** oppure **account Google** (all'app arriva solo l'email)
-- **Gruppi** (famiglia, amici, lavoro…): più utenti vedono e modificano gli stessi veicoli tramite un codice invito; i veicoli condivisi compaiono anche nell'elenco principale; le modifiche fatte offline si sincronizzano appena torna la connessione
+- **Gruppi** (famiglia, amici, lavoro…): più utenti vedono e modificano gli stessi veicoli tramite un codice invito; i veicoli condivisi compaiono anche nell'elenco principale; le modifiche fatte offline si sincronizzano appena torna la connessione; **avviso** quando un altro membro aggiunge, modifica o elimina un veicolo (ad app chiusa controllo ogni ~15 minuti, senza server)
 
 ## Come si ottiene l'APK
 
@@ -23,9 +23,9 @@ Ogni volta che il codice viene caricato nel ramo `main`, GitHub:
 
 1. prepara il progetto Android,
 2. compila l'APK firmato,
-3. lo pubblica nella pagina **Releases** del repository come `MyFleetManager.apk`.
+3. lo pubblica nella pagina **Releases** del repository come `MyFleetManager-vX.Y.Z.apk` (più il file `.aab` per il Play Store).
 
-Per installarlo: apri la pagina Releases dal telefono, scarica `MyFleetManager.apk`,
+Per installarlo: apri la pagina Releases dal telefono, scarica `MyFleetManager-vX.Y.Z.apk`,
 aprilo e consenti l'installazione da "origini sconosciute" quando richiesto.
 
 ## Modalità solo telefono e modalità online

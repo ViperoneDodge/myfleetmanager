@@ -1,0 +1,352 @@
+Bil
+Motorcykel
+Skåpbil
+Släpvagn
+Bilar
+Motorcyklar
+Skåpbilar
+Släpvagnar
+Dokument
+Försäkring
+Besiktning
+Service
+Anpassad
+Nästa service
+Motorolja
+Oljefilter
+Luftfilter
+Kupéfilter
+Bränslefilter
+Grupp
+Linjerat
+Rutat
+Prickat
+Blankt
+Blå
+Skogsgrön
+Racingröd
+Orange
+Petroleumblå
+Violett
+Grafit
+Läder
+Gick ut i går
+Gick ut för {n} dagar sedan
+Går ut i dag
+Går ut i morgon
+Om {n} dagar
+Namnlös
+Inga förfallodatum angivna
+Fordonens förfallodatum
+Påminnelser om försäkring, besiktning, service och andra förfallodatum
+Gruppaktivitet
+Pushnotiser om fordon som delas i grupper
+1 månad före
+1 vecka före
+1 dag före
+På förfallodagen
+{n} dagar före
+om 1 månad
+om 1 vecka
+i morgon
+om {n} dagar
+{what} går ut i dag
+{what}: går ut {when}
+{vehicle} · går ut {date}
+Testpåminnelse
+Om du kan läsa detta fungerar schemalagda påminnelser även när appen är stängd.
+Notiser aktiverade
+Du får påminnelser om dina fordons förfallodatum.
+Användarnamnet måste vara minst 3 tecken långt.
+Lösenordet måste vara minst 4 tecken långt.
+Användarnamnet finns redan på den här telefonen.
+Användaren hittades inte på den här telefonen.
+Fel lösenord.
+Användare
+Ogiltig e-postadress.
+Fel e-postadress eller lösenord.
+Det finns redan ett konto med den här e-postadressen.
+För svagt lösenord (minst 6 tecken).
+Internetanslutning krävs för den första inloggningen online.
+Registrering med e-post är inte aktiverad: aktivera inloggningsmetoden E-post/lösenord i Firebase-konsolen.
+För många försök: försök igen om några minuter.
+Kontot har inaktiverats.
+Inloggningsfel ({code}).
+Inloggning med Google avbruten.
+Inloggning med Google misslyckades: {error}
+Ogiltig kod.
+Servern nekade åtkomst: publicera Firestore-reglerna (filen firestore.rules) i Firebase-konsolen.
+Databasen finns inte: skapa Firestore Database i Firebase-konsolen.
+Servern kan inte nås: kontrollera internetanslutningen.
+Sessionen har gått ut: logga ut och logga in igen med onlinekontot.
+Serverfel ({code}).
+Mina fordon
+Synkroniserat
+Ansluter…
+Offline: dina data är sparade på telefonen. Tryck för att försöka igen.
+Grupper
+Förfallodatum
+Mina
+Inställningar
+Lägg till
+Alla ({n})
+Inga fordon
+Tryck på "Lägg till" för att lägga in ditt första fordon.
+Håll kvar fingret på ett fordon för att flytta det till en grupp.
+Inga förfallodatum angivna.
+Anteckningsboken för dina fordons förfallodatum
+Ta med dina fordon?
+Vill du kopiera ditt fordon (med förfallodatum, underhåll och dokument) till onlinekontot? Det lokala kontot finns kvar på den här telefonen.
+Vill du kopiera dina {n} fordon (med förfallodatum, underhåll och dokument) till onlinekontot? Det lokala kontot finns kvar på den här telefonen.
+Ja, kopiera
+Nej
+Du använder nu onlinekontot.
+Du använder nu onlinekontot: 1 fordon kopierat.
+Du använder nu onlinekontot: {n} fordon kopierade.
+Byt till ett onlinekonto för att dela fordon med andra
+Skriv först din e-postadress i fältet ovan.
+Vi har skickat ett mejl till {email} för att återställa lösenordet.
+Fyll i alla fält.
+Lösenorden matchar inte.
+Dina fordons förfallodatum, alltid under kontroll
+Onlinekonto
+Bara telefonen
+Kontot sparas bara på den här telefonen. Ingen delning.
+Gör att du kan dela fordon med andra via grupper. Data finns även kvar på telefonen.
+Användarnamn
+E-post
+Lösenord
+Upprepa lösenord
+Skapa konto
+Logga in
+Har du redan ett konto? Logga in
+Inget konto? Registrera dig
+Glömt lösenordet?
+eller
+Logga in med Google
+Med Google får appen bara din e-postadress.
+Data stannar på den här telefonen. Inloggning med Google och delade grupper kommer i en framtida uppdatering.
+Stäng
+Avbryt
+Skapa
+Spara
+Kopiera
+Ta bort
+Radera
+Delade fordon
+För att dela fordon i en grupp behöver du ett onlinekonto. Du kan byta utan att logga ut och utan att förlora dina fordon.
+Delning online är ännu inte aktiv i den här versionen av appen.
+Byt till onlinekonto
+Inga grupper än
+Skapa en grupp (familj, vänner, jobb…) och ge inbjudningskoden till de andra, eller gå med i en grupp med koden du har fått.
+Skapa grupp
+Gå med med en kod
+1 medlem
+{n} medlemmar
+1 fordon
+{n} fordon
+Inga fordon i den här gruppen än.
+Lägg till fordon i "{name}"
+Du behöver ett onlinekonto för att dela ett fordon.
+Fordon
+Flytta "{name}" till en grupp
+Flytta "{name}"
+Fordonet flyttas till den valda gruppen och alla medlemmar kan se och redigera det.
+Fordonet tas bort från "{name}".
+Du är inte med i någon grupp än
+Skapa en eller gå med med en kod från fliken Grupper.
+Bara du ser det
+"{name}" finns nu i "{where}"
+Ny grupp
+Namn (t.ex. Familjen Andersson, Verkstad, Vänner)
+Inbjudningskod
+Ange gruppens inbjudningskod.
+T.ex. AB12CD34EF
+Gå med
+Du gick med i "{name}"!
+Gruppen är inte tillgänglig.
+Koden har kopierats: klistra in den i WhatsApp eller sms
+Den andra personen installerar appen, loggar in med ett onlinekonto, öppnar fliken Grupper → "Gå med med en kod" och anger den här koden.
+Medlemmar ({n})
+(du)
+Skapare
+Byt namn på gruppen
+Radera gruppen
+Lämna gruppen
+Alla medlemmar förlorar åtkomsten till gruppens fordon
+Du ser inte längre den här gruppens fordon
+Gruppens namn
+Ta bort medlemmen?
+{email} ser inte längre fordonen i "{name}".
+Radera gruppen?
+Lämna gruppen?
+"{name}" raderas för alla medlemmar, tillsammans med sina fordon.
+Fordonen i "{name}" försvinner från den här telefonen.
+Lämna
+Konto
+Onlinekonto · data sparade på telefonen och delade i grupper
+Konto bara på den här telefonen
+Dela fordon med andra utan att logga ut: du kan ta med dig det här kontots fordon.
+Språk
+Som telefonen
+Notiser
+När vill du bli påmind före ett förfallodatum?
+Alla påminnelser
+Tid för notiser
+Testa notis
+Kontrollera att notiser är tillåtna
+Schemalagda notiser: {n}
+Testpåminnelse om 1 minut
+Stäng sedan appen: om notisen kommer fungerar påminnelserna
+Testpåminnelse schemalagd: du kan stänga appen.
+Kunde inte schemalägga: {error}
+På vissa telefoner (Xiaomi, Huawei, Samsung, Oppo…) blockerar batterisparläget påminnelserna: välj "Obegränsad" i Android-inställningar → Appar → MyFleetManager → Batteri.
+Pushnotiser
+Telefonen är registrerad för push
+Telefonen är inte registrerad än
+Tryck för att kopiera enhetskoden (behövs för ett test från Firebase-konsolen)
+Tryck för att försöka igen (internet krävs)
+Registreringen misslyckades: kontrollera anslutningen.
+Enhetskoden har kopierats
+Grupper
+För att dela fordon i en grupp, byt till ett onlinekonto (ovan, under Konto).
+Logga ut
+Dina data finns kvar på telefonen
+Utseende
+Ljust
+Mörkt
+Auto
+Omslagets färg
+Sidornas bakgrund
+kod {code}
+Gå med med en inbjudningskod
+Notiser blockerade
+Tryck för att tillåta dem. Om ingen fråga visas: Android-inställningar → Appar → MyFleetManager → Aviseringar → Tillåt.
+Påminnelser kan bli försenade
+Android kan fördröja påminnelser. Tryck och aktivera "Alarm och påminnelser" för MyFleetManager.
+Notiser tillåtna
+Radera fordonet?
+"{name}", dess förfallodatum och dokument raderas.
+"{name}", dess förfallodatum och dokument raderas (förfallodatumen även för gruppens andra medlemmar).
+Registreringsbevis
+Försäkringsbrev
+Besiktningsprotokoll
+Fordonsskatt
+Servicefaktura
+Dokumentets namn
+T.ex. Registreringsbevis
+Lägg till dokument
+Fotografera dokumentet
+Bild från galleriet
+PDF-fil eller bild
+Från telefonens filer, Drive, nedladdningar…
+Kunde inte öppna filen: {error}
+Dokumentet har sparats
+Fel vid sparande: {error}
+Filen hittades inte på telefonen.
+Ingen app för att öppna PDF: {error}
+Öppna
+Byt namn
+Radera dokumentet?
+"{name}" raderas från telefonen.
+Fordonet hittades inte.
+Redigera
+Inga förfallodatum följs.
+Underhåll
+Registrera service och arbeten här: datum, mätarställning och bytta filter.
+Dokument
+Spara registreringsbevis, försäkringsbrev och andra dokument här (bilder eller PDF).
+Bild
+Dokumenten stannar bara på den här telefonen.
+Anteckningar
+Senast ändrad: {who} · {date}
+Senaste: {date}
+Nästa: {date} (var {n}:e månad)
+Datum inte angivet
+Går ut {date}
+Ta ett foto
+Välj från galleriet
+Ta bort foto
+Kunde inte läsa in fotot: {error}
+Lägg till foto
+Datum för senaste service
+Förfallodatum: {what}
+Ange minst namn eller registreringsnummer.
+Anpassat förfallodatum
+Nytt fordon
+Redigera fordon
+Fordonstyp
+Var det hör hemma
+Grupp: {name}
+Namn (t.ex. Marcus Panda)
+Registreringsnummer
+Förfallodatum att följa
+Aktivera bara de du vill. Du får notiser enligt dina inställningar.
+Lägg till anpassat förfallodatum
+T.ex. fordonsskatt, vinterdäck, garanti, kamrem…
+Anteckningar (valfritt)
+Namn på förfallodatumet (t.ex. Fordonsskatt)
+Senaste service
+Välj datum
+Nästa påminnelse:
+ingen
+efter {n} månader
+Välj minst en punkt eller skriv en anteckning.
+Radera den här posten?
+Posten från {date} tas bort från historiken.
+Nytt underhåll
+Underhåll
+Datum
+Mätarställning
+Utfört arbete
+Anteckningar (verkstad, kostnad, andra delar…)
+Räkna som service
+Uppdaterar datumet för senaste service och nästa påminnelse
+OK
+Fordon
+Välj ett fordon i listan
+Pro-version
+Uppgradera till MyFleetManager Pro
+Ett enda köp, för alltid: ingen prenumeration.
+Pro-versionen är aktiv
+Tack för att du stöder MyFleetManager!
+Pro upplåst med utvecklarkoden
+Obegränsat antal fordon
+Skåpbilar, lastbilar och släpvagnar
+Fordonsdokument (registreringsbevis, försäkring…)
+Underhållshistorik
+Stöd utvecklingen av appen
+Gratisversion: upp till {n} fordon (bilar eller motorcyklar) med förfallodatum och notiser.
+Köp Pro
+Köp Pro · {price}
+Köpet blir tillgängligt när appen har installerats från Play Butik.
+Återställ köp
+Söker efter tidigare köp…
+Betala en gång, din för alltid.
+Gratisversionen hanterar upp till {n} fordon. Uppgradera till Pro för att lägga till fler.
+{type}: finns i Pro-versionen.
+Fordonsdokument finns i Pro-versionen.
+Underhållshistoriken finns i Pro-versionen.
+Utvecklarkod
+Ange koden
+Pro upplåst (utveckling)
+Ogiltig kod
+Stäng av utvecklar-Pro
+Utvecklar-Pro avstängd
+Lastbil
+Lastbilar
+Fordonsskatt
+En gruppmedlem
+{who} lade till {vehicle}
+{who} ändrade {vehicle}
+{who} tog bort {vehicle}
+{n} ändringar av gruppens fordon
+Aviseringar om gruppaktivitet
+Meddelar dig när en annan medlem lägger till, ändrar eller tar bort ett fordon. När appen är stängd kan aviseringen komma några minuter senare.
+Justera foto
+Rotera
+Centrera
+Nyp för att zooma, dra för att flytta
+Original
+Använd foto
+Justera foto (zoom och beskärning)

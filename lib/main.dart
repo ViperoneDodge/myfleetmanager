@@ -8,6 +8,7 @@ import 'screens/home_screen.dart';
 import 'screens/intro_screen.dart';
 import 'screens/login_screen.dart';
 import 'services/app_state.dart';
+import 'services/group_watch.dart';
 import 'services/local_store.dart';
 import 'theme.dart';
 
@@ -40,6 +41,7 @@ Future<void> main() async {
       } catch (_) {}
     }
   }
+  await initGroupWatch();
   appState = AppState();
   runApp(const FleetApp());
   appState.init();
