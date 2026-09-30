@@ -336,5 +336,19 @@
  "pro.devDisabled": "Đã tắt Pro phát triển",
  "type.truck": "Xe tải",
  "type.trucks": "Xe tải",
- "deadline.tax": "Phí đường bộ"
+ "deadline.tax": "Phí đường bộ",
+ "groupAct.someone": "Một thành viên nhóm",
+ "groupAct.added": "{who} đã thêm {vehicle}",
+ "groupAct.edited": "{who} đã sửa {vehicle}",
+ "groupAct.deleted": "{who} đã xóa {vehicle}",
+ "groupAct.many": "{n} thay đổi đối với xe của nhóm",
+ "settings.groupAlerts": "Thông báo hoạt động nhóm",
+ "settings.groupAlertsInfo": "Thông báo khi thành viên khác thêm, sửa hoặc xóa xe. Khi ứng dụng đóng, thông báo có thể đến trễ vài phút.",
+ "crop.title": "Chỉnh ảnh",
+ "crop.rotate": "Xoay",
+ "crop.reset": "Căn giữa",
+ "crop.hint": "Chụm hai ngón để phóng to, kéo để di chuyển",
+ "crop.original": "Gốc",
+ "crop.use": "Dùng ảnh",
+ "crop.adjust": "Chỉnh ảnh (thu phóng và cắt)"
 }

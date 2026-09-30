@@ -336,5 +336,19 @@
  "pro.devDisabled": "Razvijalski Pro izklopljen",
  "type.truck": "Tovornjak",
  "type.trucks": "Tovornjaki",
- "deadline.tax": "Letna dajatev za vozila"
+ "deadline.tax": "Letna dajatev za vozila",
+ "groupAct.someone": "Član skupine",
+ "groupAct.added": "{who} je dodal {vehicle}",
+ "groupAct.edited": "{who} je spremenil {vehicle}",
+ "groupAct.deleted": "{who} je izbrisal {vehicle}",
+ "groupAct.many": "{n} sprememb vozil skupine",
+ "settings.groupAlerts": "Obvestila o dejavnosti skupin",
+ "settings.groupAlertsInfo": "Obvesti vas, ko drug član doda, spremeni ali izbriše vozilo. Ko je aplikacija zaprta, lahko obvestilo pride nekaj minut pozneje.",
+ "crop.title": "Prilagodi fotografijo",
+ "crop.rotate": "Zasukaj",
+ "crop.reset": "Na sredino",
+ "crop.hint": "Razprite prsta za povečavo, povlecite za premik",
+ "crop.original": "Izvirno",
+ "crop.use": "Uporabi fotografijo",
+ "crop.adjust": "Prilagodi fotografijo (povečava in obrezovanje)"
 }

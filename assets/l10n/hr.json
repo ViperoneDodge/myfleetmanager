@@ -336,5 +336,19 @@
  "pro.devDisabled": "Razvojni Pro isključen",
  "type.truck": "Kamion",
  "type.trucks": "Kamioni",
- "deadline.tax": "Porez na vozilo"
+ "deadline.tax": "Porez na vozilo",
+ "groupAct.someone": "Član grupe",
+ "groupAct.added": "{who} je dodao {vehicle}",
+ "groupAct.edited": "{who} je izmijenio {vehicle}",
+ "groupAct.deleted": "{who} je obrisao {vehicle}",
+ "groupAct.many": "{n} izmjena vozila grupe",
+ "settings.groupAlerts": "Obavijesti o aktivnosti grupa",
+ "settings.groupAlertsInfo": "Obavještava kad drugi član doda, izmijeni ili obriše vozilo. Kad je aplikacija zatvorena, obavijest može stići nekoliko minuta kasnije.",
+ "crop.title": "Prilagodi fotografiju",
+ "crop.rotate": "Zakreni",
+ "crop.reset": "Centriraj",
+ "crop.hint": "Raširite dva prsta za povećanje, povucite za pomicanje",
+ "crop.original": "Izvorno",
+ "crop.use": "Koristi fotografiju",
+ "crop.adjust": "Prilagodi fotografiju (zum i obrezivanje)"
 }

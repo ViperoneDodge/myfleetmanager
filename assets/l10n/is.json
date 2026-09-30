@@ -336,5 +336,19 @@
  "pro.devDisabled": "Slökkt á þróunar-Pro",
  "type.truck": "Vörubíll",
  "type.trucks": "Vörubílar",
- "deadline.tax": "Bifreiðagjald"
+ "deadline.tax": "Bifreiðagjald",
+ "groupAct.someone": "Meðlimur hópsins",
+ "groupAct.added": "{who} bætti við {vehicle}",
+ "groupAct.edited": "{who} breytti {vehicle}",
+ "groupAct.deleted": "{who} eyddi {vehicle}",
+ "groupAct.many": "{n} breytingar á ökutækjum hópsins",
+ "settings.groupAlerts": "Tilkynningar um virkni hópa",
+ "settings.groupAlertsInfo": "Lætur vita þegar annar meðlimur bætir við, breytir eða eyðir ökutæki. Þegar appið er lokað getur tilkynningin borist nokkrum mínútum síðar.",
+ "crop.title": "Laga mynd",
+ "crop.rotate": "Snúa",
+ "crop.reset": "Miðja",
+ "crop.hint": "Klíptu til að þysja, dragðu til að færa",
+ "crop.original": "Upprunaleg",
+ "crop.use": "Nota mynd",
+ "crop.adjust": "Laga mynd (aðdráttur og skurður)"
 }

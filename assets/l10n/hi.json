@@ -336,5 +336,19 @@
  "pro.devDisabled": "डेवलपमेंट Pro बंद हुआ",
  "type.truck": "ट्रक",
  "type.trucks": "ट्रक",
- "deadline.tax": "रोड टैक्स"
+ "deadline.tax": "रोड टैक्स",
+ "groupAct.someone": "समूह का एक सदस्य",
+ "groupAct.added": "{who} ने {vehicle} जोड़ा",
+ "groupAct.edited": "{who} ने {vehicle} बदला",
+ "groupAct.deleted": "{who} ने {vehicle} हटाया",
+ "groupAct.many": "समूह के वाहनों में {n} बदलाव",
+ "settings.groupAlerts": "समूह गतिविधि सूचनाएँ",
+ "settings.groupAlertsInfo": "जब कोई दूसरा सदस्य वाहन जोड़ता, बदलता या हटाता है तो सूचित करता है। ऐप बंद होने पर सूचना कुछ मिनट देर से आ सकती है।",
+ "crop.title": "फ़ोटो समायोजित करें",
+ "crop.rotate": "घुमाएँ",
+ "crop.reset": "बीच में करें",
+ "crop.hint": "ज़ूम के लिए दो उँगलियाँ फैलाएँ, खिसकाने के लिए खींचें",
+ "crop.original": "मूल",
+ "crop.use": "फ़ोटो इस्तेमाल करें",
+ "crop.adjust": "फ़ोटो समायोजित करें (ज़ूम और क्रॉप)"
 }

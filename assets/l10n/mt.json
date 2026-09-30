@@ -336,5 +336,19 @@
  "pro.devDisabled": "Pro tal-iżvilupp mitfi",
  "type.truck": "Trakk",
  "type.trucks": "Trakkijiet",
- "deadline.tax": "Liċenzja tat-triq"
+ "deadline.tax": "Liċenzja tat-triq",
+ "groupAct.someone": "Membru tal-grupp",
+ "groupAct.added": "{who} żied {vehicle}",
+ "groupAct.edited": "{who} biddel {vehicle}",
+ "groupAct.deleted": "{who} ħassar {vehicle}",
+ "groupAct.many": "{n} bidliet fil-vetturi tal-grupp",
+ "settings.groupAlerts": "Avviżi dwar l-attività tal-gruppi",
+ "settings.groupAlertsInfo": "Javżak meta membru ieħor iżid, ibiddel jew iħassar vettura. Meta l-app tkun magħluqa, l-avviż jista' jasal ftit minuti tard.",
+ "crop.title": "Irranġa r-ritratt",
+ "crop.rotate": "Dawwar",
+ "crop.reset": "Iċċentra",
+ "crop.hint": "Ifred żewġ subgħajk biex tkabbar, kaxkar biex iċċaqlaq",
+ "crop.original": "Oriġinali",
+ "crop.use": "Uża r-ritratt",
+ "crop.adjust": "Irranġa r-ritratt (zoom u qtugħ)"
 }

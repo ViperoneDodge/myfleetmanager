@@ -336,5 +336,19 @@
  "pro.devDisabled": "Ontwikkelaars-Pro uitgeschakeld",
  "type.truck": "Vrachtwagen",
  "type.trucks": "Vrachtwagens",
- "deadline.tax": "Motorrijtuigenbelasting"
+ "deadline.tax": "Motorrijtuigenbelasting",
+ "groupAct.someone": "Een groepslid",
+ "groupAct.added": "{who} heeft {vehicle} toegevoegd",
+ "groupAct.edited": "{who} heeft {vehicle} gewijzigd",
+ "groupAct.deleted": "{who} heeft {vehicle} verwijderd",
+ "groupAct.many": "{n} wijzigingen aan de voertuigen van de groep",
+ "settings.groupAlerts": "Meldingen groepsactiviteit",
+ "settings.groupAlertsInfo": "Meldt wanneer een ander lid een voertuig toevoegt, wijzigt of verwijdert. Als de app gesloten is, kan de melding een paar minuten later komen.",
+ "crop.title": "Foto aanpassen",
+ "crop.rotate": "Draaien",
+ "crop.reset": "Centreren",
+ "crop.hint": "Knijp om te zoomen, sleep om te verplaatsen",
+ "crop.original": "Origineel",
+ "crop.use": "Foto gebruiken",
+ "crop.adjust": "Foto aanpassen (zoomen en bijsnijden)"
 }

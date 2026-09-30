@@ -336,5 +336,19 @@
  "pro.devDisabled": "Pro deweloperskie wyłączone",
  "type.truck": "Ciężarówka",
  "type.trucks": "Ciężarówki",
- "deadline.tax": "Podatek od pojazdu"
+ "deadline.tax": "Podatek od pojazdu",
+ "groupAct.someone": "Członek grupy",
+ "groupAct.added": "{who} dodał(a) {vehicle}",
+ "groupAct.edited": "{who} zmienił(a) {vehicle}",
+ "groupAct.deleted": "{who} usunął(ęła) {vehicle}",
+ "groupAct.many": "Zmiany pojazdów grupy: {n}",
+ "settings.groupAlerts": "Powiadomienia o aktywności grup",
+ "settings.groupAlertsInfo": "Powiadamia, gdy inny członek doda, zmieni lub usunie pojazd. Przy zamkniętej aplikacji powiadomienie może przyjść kilka minut później.",
+ "crop.title": "Dopasuj zdjęcie",
+ "crop.rotate": "Obróć",
+ "crop.reset": "Wyśrodkuj",
+ "crop.hint": "Rozsuń palce, aby powiększyć, przeciągnij, aby przesunąć",
+ "crop.original": "Oryginał",
+ "crop.use": "Użyj zdjęcia",
+ "crop.adjust": "Dopasuj zdjęcie (powiększenie i kadrowanie)"
 }

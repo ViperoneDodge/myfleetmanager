@@ -336,5 +336,19 @@
  "pro.devDisabled": "Pro de développement désactivée",
  "type.truck": "Camion",
  "type.trucks": "Camions",
- "deadline.tax": "Taxe sur le véhicule"
+ "deadline.tax": "Taxe sur le véhicule",
+ "groupAct.someone": "Un membre du groupe",
+ "groupAct.added": "{who} a ajouté {vehicle}",
+ "groupAct.edited": "{who} a modifié {vehicle}",
+ "groupAct.deleted": "{who} a supprimé {vehicle}",
+ "groupAct.many": "{n} modifications des véhicules du groupe",
+ "settings.groupAlerts": "Alertes d'activité des groupes",
+ "settings.groupAlertsInfo": "Vous avertit quand un autre membre ajoute, modifie ou supprime un véhicule. Application fermée, l'alerte peut arriver avec quelques minutes de retard.",
+ "crop.title": "Ajuster la photo",
+ "crop.rotate": "Pivoter",
+ "crop.reset": "Recentrer",
+ "crop.hint": "Pincez pour zoomer, faites glisser pour déplacer",
+ "crop.original": "Originale",
+ "crop.use": "Utiliser la photo",
+ "crop.adjust": "Ajuster la photo (zoom et recadrage)"
 }

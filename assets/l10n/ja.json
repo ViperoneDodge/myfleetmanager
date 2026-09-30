@@ -336,5 +336,19 @@
  "pro.devDisabled": "開発者 Pro をオフにしました",
  "type.truck": "トラック",
  "type.trucks": "トラック",
- "deadline.tax": "自動車税"
+ "deadline.tax": "自動車税",
+ "groupAct.someone": "グループのメンバー",
+ "groupAct.added": "{who}さんが{vehicle}を追加しました",
+ "groupAct.edited": "{who}さんが{vehicle}を編集しました",
+ "groupAct.deleted": "{who}さんが{vehicle}を削除しました",
+ "groupAct.many": "グループの車両に{n}件の変更",
+ "settings.groupAlerts": "グループのアクティビティ通知",
+ "settings.groupAlertsInfo": "他のメンバーが車両を追加・編集・削除したときに通知します。アプリを閉じているときは、数分遅れて届くことがあります。",
+ "crop.title": "写真を調整",
+ "crop.rotate": "回転",
+ "crop.reset": "中央に戻す",
+ "crop.hint": "ピンチで拡大、ドラッグで移動",
+ "crop.original": "オリジナル",
+ "crop.use": "この写真を使う",
+ "crop.adjust": "写真を調整（ズームと切り抜き）"
 }

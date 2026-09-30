@@ -336,5 +336,19 @@
  "pro.devDisabled": "Pro de desenvolvimento desativada",
  "type.truck": "Camião",
  "type.trucks": "Camiões",
- "deadline.tax": "Imposto de circulação (IUC)"
+ "deadline.tax": "Imposto de circulação (IUC)",
+ "groupAct.someone": "Um membro do grupo",
+ "groupAct.added": "{who} adicionou {vehicle}",
+ "groupAct.edited": "{who} alterou {vehicle}",
+ "groupAct.deleted": "{who} eliminou {vehicle}",
+ "groupAct.many": "{n} alterações nos veículos do grupo",
+ "settings.groupAlerts": "Alertas de atividade dos grupos",
+ "settings.groupAlertsInfo": "Avisa quando outro membro adiciona, altera ou elimina um veículo. Com a app fechada, o alerta pode chegar com alguns minutos de atraso.",
+ "crop.title": "Ajustar foto",
+ "crop.rotate": "Rodar",
+ "crop.reset": "Centrar",
+ "crop.hint": "Aproxime dois dedos para ampliar, arraste para mover",
+ "crop.original": "Original",
+ "crop.use": "Usar foto",
+ "crop.adjust": "Ajustar foto (zoom e recorte)"
 }

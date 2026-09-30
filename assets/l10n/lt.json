@@ -336,5 +336,19 @@
  "pro.devDisabled": "Kūrėjo Pro išjungta",
  "type.truck": "Sunkvežimis",
  "type.trucks": "Sunkvežimiai",
- "deadline.tax": "Transporto priemonės mokestis"
+ "deadline.tax": "Transporto priemonės mokestis",
+ "groupAct.someone": "Grupės narys",
+ "groupAct.added": "{who} pridėjo {vehicle}",
+ "groupAct.edited": "{who} pakeitė {vehicle}",
+ "groupAct.deleted": "{who} ištrynė {vehicle}",
+ "groupAct.many": "Grupės transporto priemonių pakeitimai: {n}",
+ "settings.groupAlerts": "Pranešimai apie grupių veiklą",
+ "settings.groupAlertsInfo": "Praneša, kai kitas narys prideda, pakeičia ar ištrina transporto priemonę. Uždarius programėlę, pranešimas gali ateiti keliomis minutėmis vėliau.",
+ "crop.title": "Pritaikyti nuotrauką",
+ "crop.rotate": "Pasukti",
+ "crop.reset": "Centruoti",
+ "crop.hint": "Suimkite pirštais, kad priartintumėte, vilkite, kad perkeltumėte",
+ "crop.original": "Originalas",
+ "crop.use": "Naudoti nuotrauką",
+ "crop.adjust": "Pritaikyti nuotrauką (priartinimas ir apkarpymas)"
 }

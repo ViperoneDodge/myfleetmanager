@@ -336,5 +336,19 @@
  "pro.devDisabled": "Pro pengembangan dinonaktifkan",
  "type.truck": "Truk",
  "type.trucks": "Truk",
- "deadline.tax": "Pajak kendaraan"
+ "deadline.tax": "Pajak kendaraan",
+ "groupAct.someone": "Anggota grup",
+ "groupAct.added": "{who} menambahkan {vehicle}",
+ "groupAct.edited": "{who} mengubah {vehicle}",
+ "groupAct.deleted": "{who} menghapus {vehicle}",
+ "groupAct.many": "{n} perubahan pada kendaraan grup",
+ "settings.groupAlerts": "Notifikasi aktivitas grup",
+ "settings.groupAlertsInfo": "Memberi tahu saat anggota lain menambah, mengubah, atau menghapus kendaraan. Saat aplikasi ditutup, notifikasi bisa datang beberapa menit terlambat.",
+ "crop.title": "Sesuaikan foto",
+ "crop.rotate": "Putar",
+ "crop.reset": "Tengahkan",
+ "crop.hint": "Cubit untuk memperbesar, seret untuk memindahkan",
+ "crop.original": "Asli",
+ "crop.use": "Gunakan foto",
+ "crop.adjust": "Sesuaikan foto (zoom dan potong)"
 }

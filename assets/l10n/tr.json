@@ -336,5 +336,19 @@
  "pro.devDisabled": "Geliştirici Pro kapatıldı",
  "type.truck": "Kamyon",
  "type.trucks": "Kamyonlar",
- "deadline.tax": "Motorlu taşıtlar vergisi (MTV)"
+ "deadline.tax": "Motorlu taşıtlar vergisi (MTV)",
+ "groupAct.someone": "Bir grup üyesi",
+ "groupAct.added": "{who}, {vehicle} ekledi",
+ "groupAct.edited": "{who}, {vehicle} düzenledi",
+ "groupAct.deleted": "{who}, {vehicle} sildi",
+ "groupAct.many": "Grup araçlarında {n} değişiklik",
+ "settings.groupAlerts": "Grup etkinliği bildirimleri",
+ "settings.groupAlertsInfo": "Başka bir üye araç eklediğinde, düzenlediğinde veya sildiğinde bildirir. Uygulama kapalıyken bildirim birkaç dakika gecikmeli gelebilir.",
+ "crop.title": "Fotoğrafı ayarla",
+ "crop.rotate": "Döndür",
+ "crop.reset": "Ortala",
+ "crop.hint": "Yakınlaştırmak için iki parmağınızı açın, taşımak için sürükleyin",
+ "crop.original": "Orijinal",
+ "crop.use": "Fotoğrafı kullan",
+ "crop.adjust": "Fotoğrafı ayarla (yakınlaştırma ve kırpma)"
 }

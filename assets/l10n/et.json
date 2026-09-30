@@ -336,5 +336,19 @@
  "pro.devDisabled": "Arendaja-Pro välja lülitatud",
  "type.truck": "Veoauto",
  "type.trucks": "Veoautod",
- "deadline.tax": "Mootorsõidukimaks"
+ "deadline.tax": "Mootorsõidukimaks",
+ "groupAct.someone": "Grupi liige",
+ "groupAct.added": "{who} lisas: {vehicle}",
+ "groupAct.edited": "{who} muutis: {vehicle}",
+ "groupAct.deleted": "{who} kustutas: {vehicle}",
+ "groupAct.many": "Grupi sõidukite muudatusi: {n}",
+ "settings.groupAlerts": "Grupi tegevuse teavitused",
+ "settings.groupAlertsInfo": "Teavitab, kui teine liige lisab, muudab või kustutab sõiduki. Suletud rakenduse korral võib teavitus tulla mõne minuti hilinemisega.",
+ "crop.title": "Kohanda fotot",
+ "crop.rotate": "Pööra",
+ "crop.reset": "Tsentreeri",
+ "crop.hint": "Suumimiseks näpista, liigutamiseks lohista",
+ "crop.original": "Originaal",
+ "crop.use": "Kasuta fotot",
+ "crop.adjust": "Kohanda fotot (suum ja kärpimine)"
 }

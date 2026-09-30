@@ -336,5 +336,19 @@
  "pro.devDisabled": "Pro di sviluppo disattivata",
  "type.truck": "Camion",
  "type.trucks": "Camion",
- "deadline.tax": "Bollo auto"
+ "deadline.tax": "Bollo auto",
+ "groupAct.someone": "Un membro del gruppo",
+ "groupAct.added": "{who} ha aggiunto {vehicle}",
+ "groupAct.edited": "{who} ha modificato {vehicle}",
+ "groupAct.deleted": "{who} ha eliminato {vehicle}",
+ "groupAct.many": "{n} modifiche ai veicoli del gruppo",
+ "settings.groupAlerts": "Avvisi attività dei gruppi",
+ "settings.groupAlertsInfo": "Avvisa quando un altro membro aggiunge, modifica o elimina un veicolo. Ad app chiusa l'avviso può arrivare con qualche minuto di ritardo.",
+ "crop.title": "Adatta foto",
+ "crop.rotate": "Ruota",
+ "crop.reset": "Ricentra",
+ "crop.hint": "Allarga con due dita per ingrandire, trascina per spostare",
+ "crop.original": "Originale",
+ "crop.use": "Usa foto",
+ "crop.adjust": "Adatta foto (zoom e ritaglio)"
 }

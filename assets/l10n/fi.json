@@ -336,5 +336,19 @@
  "pro.devDisabled": "Kehittäjä-Pro poistettu käytöstä",
  "type.truck": "Kuorma-auto",
  "type.trucks": "Kuorma-autot",
- "deadline.tax": "Ajoneuvovero"
+ "deadline.tax": "Ajoneuvovero",
+ "groupAct.someone": "Ryhmän jäsen",
+ "groupAct.added": "{who} lisäsi: {vehicle}",
+ "groupAct.edited": "{who} muokkasi: {vehicle}",
+ "groupAct.deleted": "{who} poisti: {vehicle}",
+ "groupAct.many": "Ryhmän ajoneuvojen muutokset: {n}",
+ "settings.groupAlerts": "Ryhmien toimintailmoitukset",
+ "settings.groupAlertsInfo": "Ilmoittaa, kun toinen jäsen lisää, muokkaa tai poistaa ajoneuvon. Kun sovellus on suljettu, ilmoitus voi tulla muutaman minuutin viiveellä.",
+ "crop.title": "Säädä kuvaa",
+ "crop.rotate": "Kierrä",
+ "crop.reset": "Keskitä",
+ "crop.hint": "Zoomaa nipistämällä, siirrä vetämällä",
+ "crop.original": "Alkuperäinen",
+ "crop.use": "Käytä kuvaa",
+ "crop.adjust": "Säädä kuvaa (zoomaus ja rajaus)"
 }

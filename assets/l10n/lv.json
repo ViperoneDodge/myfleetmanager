@@ -336,5 +336,19 @@
  "pro.devDisabled": "Izstrādātāja Pro izslēgts",
  "type.truck": "Kravas auto",
  "type.trucks": "Kravas auto",
- "deadline.tax": "Transportlīdzekļa ekspluatācijas nodoklis"
+ "deadline.tax": "Transportlīdzekļa ekspluatācijas nodoklis",
+ "groupAct.someone": "Grupas dalībnieks",
+ "groupAct.added": "{who} pievienoja {vehicle}",
+ "groupAct.edited": "{who} mainīja {vehicle}",
+ "groupAct.deleted": "{who} izdzēsa {vehicle}",
+ "groupAct.many": "Grupas transportlīdzekļu izmaiņas: {n}",
+ "settings.groupAlerts": "Paziņojumi par grupu aktivitāti",
+ "settings.groupAlertsInfo": "Paziņo, kad cits dalībnieks pievieno, maina vai izdzēš transportlīdzekli. Ja lietotne ir aizvērta, paziņojums var pienākt ar dažu minūšu nokavēšanos.",
+ "crop.title": "Pielāgot foto",
+ "crop.rotate": "Pagriezt",
+ "crop.reset": "Centrēt",
+ "crop.hint": "Savelciet pirkstus, lai tuvinātu, velciet, lai pārvietotu",
+ "crop.original": "Oriģināls",
+ "crop.use": "Izmantot foto",
+ "crop.adjust": "Pielāgot foto (tālummaiņa un apgriešana)"
 }

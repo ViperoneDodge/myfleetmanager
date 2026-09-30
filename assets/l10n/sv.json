@@ -336,5 +336,19 @@
  "pro.devDisabled": "Utvecklar-Pro avstängd",
  "type.truck": "Lastbil",
  "type.trucks": "Lastbilar",
- "deadline.tax": "Fordonsskatt"
+ "deadline.tax": "Fordonsskatt",
+ "groupAct.someone": "En gruppmedlem",
+ "groupAct.added": "{who} lade till {vehicle}",
+ "groupAct.edited": "{who} ändrade {vehicle}",
+ "groupAct.deleted": "{who} tog bort {vehicle}",
+ "groupAct.many": "{n} ändringar av gruppens fordon",
+ "settings.groupAlerts": "Aviseringar om gruppaktivitet",
+ "settings.groupAlertsInfo": "Meddelar dig när en annan medlem lägger till, ändrar eller tar bort ett fordon. När appen är stängd kan aviseringen komma några minuter senare.",
+ "crop.title": "Justera foto",
+ "crop.rotate": "Rotera",
+ "crop.reset": "Centrera",
+ "crop.hint": "Nyp för att zooma, dra för att flytta",
+ "crop.original": "Original",
+ "crop.use": "Använd foto",
+ "crop.adjust": "Justera foto (zoom och beskärning)"
 }

@@ -336,5 +336,19 @@
  "pro.devDisabled": "Múchadh Pro forbartha",
  "type.truck": "Trucail",
  "type.trucks": "Trucailí",
- "deadline.tax": "Cáin mhótair"
+ "deadline.tax": "Cáin mhótair",
+ "groupAct.someone": "Ball den ghrúpa",
+ "groupAct.added": "Chuir {who} {vehicle} leis",
+ "groupAct.edited": "Chuir {who} {vehicle} in eagar",
+ "groupAct.deleted": "Scrios {who} {vehicle}",
+ "groupAct.many": "{n} athrú ar fheithiclí an ghrúpa",
+ "settings.groupAlerts": "Foláirimh ghníomhaíochta grúpa",
+ "settings.groupAlertsInfo": "Cuireann sé in iúl duit nuair a chuireann ball eile feithicil leis, nuair a athraíonn sé í nó nuair a scriosann sé í. Nuair atá an aip dúnta, d'fhéadfadh an foláireamh teacht cúpla nóiméad déanach.",
+ "crop.title": "Coigeartaigh grianghraf",
+ "crop.rotate": "Rothlaigh",
+ "crop.reset": "Láraigh",
+ "crop.hint": "Fáisc chun súmáil, tarraing chun bogadh",
+ "crop.original": "Bunaidh",
+ "crop.use": "Úsáid grianghraf",
+ "crop.adjust": "Coigeartaigh grianghraf (súmáil agus bearradh)"
 }

@@ -336,5 +336,19 @@
  "pro.devDisabled": "Fejlesztői Pro kikapcsolva",
  "type.truck": "Teherautó",
  "type.trucks": "Teherautók",
- "deadline.tax": "Gépjárműadó"
+ "deadline.tax": "Gépjárműadó",
+ "groupAct.someone": "A csoport egyik tagja",
+ "groupAct.added": "{who} hozzáadta: {vehicle}",
+ "groupAct.edited": "{who} módosította: {vehicle}",
+ "groupAct.deleted": "{who} törölte: {vehicle}",
+ "groupAct.many": "A csoport járműveinek változásai: {n}",
+ "settings.groupAlerts": "Csoportaktivitás értesítések",
+ "settings.groupAlertsInfo": "Értesít, ha egy másik tag járművet ad hozzá, módosít vagy töröl. Bezárt alkalmazásnál az értesítés néhány perc késéssel érkezhet.",
+ "crop.title": "Fotó igazítása",
+ "crop.rotate": "Forgatás",
+ "crop.reset": "Középre",
+ "crop.hint": "Két ujjal nagyíthat, húzással mozgathat",
+ "crop.original": "Eredeti",
+ "crop.use": "Fotó használata",
+ "crop.adjust": "Fotó igazítása (nagyítás és vágás)"
 }

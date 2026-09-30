@@ -336,5 +336,19 @@
  "pro.devDisabled": "ปิด Pro สำหรับนักพัฒนาแล้ว",
  "type.truck": "รถบรรทุก",
  "type.trucks": "รถบรรทุก",
- "deadline.tax": "ภาษีรถยนต์ประจำปี"
+ "deadline.tax": "ภาษีรถยนต์ประจำปี",
+ "groupAct.someone": "สมาชิกในกลุ่ม",
+ "groupAct.added": "{who} เพิ่ม {vehicle}",
+ "groupAct.edited": "{who} แก้ไข {vehicle}",
+ "groupAct.deleted": "{who} ลบ {vehicle}",
+ "groupAct.many": "ยานพาหนะของกลุ่มมีการเปลี่ยนแปลง {n} รายการ",
+ "settings.groupAlerts": "แจ้งเตือนกิจกรรมกลุ่ม",
+ "settings.groupAlertsInfo": "แจ้งเมื่อสมาชิกคนอื่นเพิ่ม แก้ไข หรือลบยานพาหนะ เมื่อปิดแอป การแจ้งเตือนอาจมาช้าไม่กี่นาที",
+ "crop.title": "ปรับรูปภาพ",
+ "crop.rotate": "หมุน",
+ "crop.reset": "จัดกึ่งกลาง",
+ "crop.hint": "ใช้สองนิ้วเพื่อซูม ลากเพื่อย้าย",
+ "crop.original": "ต้นฉบับ",
+ "crop.use": "ใช้รูปนี้",
+ "crop.adjust": "ปรับรูปภาพ (ซูมและครอป)"
 }

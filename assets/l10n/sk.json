@@ -336,5 +336,19 @@
  "pro.devDisabled": "Vývojárske Pro vypnuté",
  "type.truck": "Nákladné auto",
  "type.trucks": "Nákladné autá",
- "deadline.tax": "Daň z motorových vozidiel"
+ "deadline.tax": "Daň z motorových vozidiel",
+ "groupAct.someone": "Člen skupiny",
+ "groupAct.added": "{who} pridal(a) {vehicle}",
+ "groupAct.edited": "{who} upravil(a) {vehicle}",
+ "groupAct.deleted": "{who} vymazal(a) {vehicle}",
+ "groupAct.many": "Zmeny vozidiel skupiny: {n}",
+ "settings.groupAlerts": "Upozornenia na aktivitu skupín",
+ "settings.groupAlertsInfo": "Upozorní, keď iný člen pridá, upraví alebo vymaže vozidlo. Pri zatvorenej aplikácii môže upozornenie prísť o niekoľko minút neskôr.",
+ "crop.title": "Upraviť fotku",
+ "crop.rotate": "Otočiť",
+ "crop.reset": "Vycentrovať",
+ "crop.hint": "Roztiahnutím prstov priblížite, ťahaním posuniete",
+ "crop.original": "Pôvodné",
+ "crop.use": "Použiť fotku",
+ "crop.adjust": "Upraviť fotku (priblíženie a orezanie)"
 }

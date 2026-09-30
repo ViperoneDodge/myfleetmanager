@@ -336,5 +336,19 @@
  "pro.devDisabled": "Utvikler-Pro slått av",
  "type.truck": "Lastebil",
  "type.trucks": "Lastebiler",
- "deadline.tax": "Trafikkforsikringsavgift"
+ "deadline.tax": "Trafikkforsikringsavgift",
+ "groupAct.someone": "Et gruppemedlem",
+ "groupAct.added": "{who} la til {vehicle}",
+ "groupAct.edited": "{who} endret {vehicle}",
+ "groupAct.deleted": "{who} slettet {vehicle}",
+ "groupAct.many": "{n} endringer i gruppens kjøretøy",
+ "settings.groupAlerts": "Varsler om gruppeaktivitet",
+ "settings.groupAlertsInfo": "Varsler når et annet medlem legger til, endrer eller sletter et kjøretøy. Når appen er lukket, kan varselet komme noen minutter senere.",
+ "crop.title": "Tilpass bilde",
+ "crop.rotate": "Roter",
+ "crop.reset": "Midtstill",
+ "crop.hint": "Knip for å zoome, dra for å flytte",
+ "crop.original": "Original",
+ "crop.use": "Bruk bilde",
+ "crop.adjust": "Tilpass bilde (zoom og beskjæring)"
 }

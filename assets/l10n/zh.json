@@ -336,5 +336,19 @@
  "pro.devDisabled": "开发者 Pro 已关闭",
  "type.truck": "卡车",
  "type.trucks": "卡车",
- "deadline.tax": "车船税"
+ "deadline.tax": "车船税",
+ "groupAct.someone": "一位群组成员",
+ "groupAct.added": "{who} 添加了 {vehicle}",
+ "groupAct.edited": "{who} 修改了 {vehicle}",
+ "groupAct.deleted": "{who} 删除了 {vehicle}",
+ "groupAct.many": "群组车辆有 {n} 处更改",
+ "settings.groupAlerts": "群组动态提醒",
+ "settings.groupAlertsInfo": "当其他成员添加、修改或删除车辆时通知你。应用关闭时，提醒可能会延迟几分钟。",
+ "crop.title": "调整照片",
+ "crop.rotate": "旋转",
+ "crop.reset": "居中",
+ "crop.hint": "双指缩放，拖动移动",
+ "crop.original": "原始",
+ "crop.use": "使用照片",
+ "crop.adjust": "调整照片（缩放和裁剪）"
 }

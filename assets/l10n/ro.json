@@ -336,5 +336,19 @@
  "pro.devDisabled": "Pro de dezvoltare dezactivat",
  "type.truck": "Camion",
  "type.trucks": "Camioane",
- "deadline.tax": "Impozit auto"
+ "deadline.tax": "Impozit auto",
+ "groupAct.someone": "Un membru al grupului",
+ "groupAct.added": "{who} a adăugat {vehicle}",
+ "groupAct.edited": "{who} a modificat {vehicle}",
+ "groupAct.deleted": "{who} a șters {vehicle}",
+ "groupAct.many": "{n} modificări la vehiculele grupului",
+ "settings.groupAlerts": "Alerte activitate grupuri",
+ "settings.groupAlertsInfo": "Te anunță când alt membru adaugă, modifică sau șterge un vehicul. Cu aplicația închisă, alerta poate sosi cu câteva minute întârziere.",
+ "crop.title": "Ajustează fotografia",
+ "crop.rotate": "Rotește",
+ "crop.reset": "Centrează",
+ "crop.hint": "Depărtează degetele pentru zoom, trage pentru a muta",
+ "crop.original": "Original",
+ "crop.use": "Folosește fotografia",
+ "crop.adjust": "Ajustează fotografia (zoom și decupare)"
 }
