@@ -1,17 +1,20 @@
 # MyFleetManager
 
-App Android/iOS per gestire il parco veicoli (auto, moto, furgoni e rimorchi) di famiglia.
+App Android/iOS per gestire veicoli (auto, moto, furgoni, camion e rimorchi) da soli o condivisi in gruppi.
 
 ## Funzioni
 
-- Veicoli **auto, moto, furgoni e rimorchi** con nome, targa e foto (fotocamera o galleria)
+- Veicoli **auto, moto, furgoni, camion e rimorchi** con nome, targa e foto (o sagoma predefinita)
+- **Versione gratuita**: fino a 3 veicoli (auto o moto) con scadenze e notifiche. **Pro** (acquisto unico, prodotto `myfleet_pro` in Play Console): veicoli illimitati, furgoni, camion, rimorchi, documenti, storico manutenzioni
+- **37 lingue** (tutte le europee, scandinave comprese, e le principali mondiali) in `assets/l10n/`; sorgenti di traduzione in `tool/l10n_src/`
+- **Pieghevoli e tablet**: vista a due pannelli che rispetta la cerniera
 - **Documenti** per ogni veicolo (libretto, polizza…) come foto o PDF, salvati sul telefono
 - Grafica a **taccuino ad anelli**, tema **chiaro / scuro / automatico**, 8 colori di copertina e 4 sfondi pagina (righe, quadretti, puntini, liscio)
-- Scadenze a scelta per ogni mezzo: **assicurazione**, **revisione**, **ultimo tagliando** (con promemoria del prossimo dopo 6/12/24 mesi) e **scadenze personalizzate** illimitate (bollo, gomme, ecc.)
+- Scadenze a scelta per ogni mezzo: **assicurazione**, **revisione**, **bollo**, **ultimo tagliando** (con promemoria del prossimo dopo 6/12/24 mesi) e **scadenze personalizzate** illimitate (bollo, gomme, ecc.)
 - **Notifiche** 1 mese, 1 settimana, 1 giorno prima e il giorno stesso (selezionabili, anche tutte), all'orario scelto
 - **Dati salvati sul telefono**: funziona anche senza internet (notifiche comprese)
 - Login con **utente e password** oppure **account Google** (all'app arriva solo l'email)
-- **Parco auto familiare**: più utenti vedono e modificano gli stessi veicoli tramite un codice invito; le modifiche fatte offline si sincronizzano appena torna la connessione
+- **Gruppi** (famiglia, amici, lavoro…): più utenti vedono e modificano gli stessi veicoli tramite un codice invito; i veicoli condivisi compaiono anche nell'elenco principale; le modifiche fatte offline si sincronizzano appena torna la connessione
 
 ## Come si ottiene l'APK
 

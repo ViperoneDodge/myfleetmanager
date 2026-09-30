@@ -10,7 +10,7 @@ String newId([int length = 16]) {
   return List.generate(length, (_) => chars[r.nextInt(chars.length)]).join();
 }
 
-enum VehicleType { auto, moto, furgone, rimorchio }
+enum VehicleType { auto, moto, furgone, camion, rimorchio }
 
 VehicleType vehicleTypeFrom(String? s) {
   for (final t in VehicleType.values) {
@@ -27,6 +27,8 @@ String vehicleTypeLabel(VehicleType t) {
       return tr('type.moto');
     case VehicleType.furgone:
       return tr('type.van');
+    case VehicleType.camion:
+      return tr('type.truck');
     case VehicleType.rimorchio:
       return tr('type.trailer');
   }
@@ -40,6 +42,8 @@ String vehicleTypePlural(VehicleType t) {
       return tr('type.motos');
     case VehicleType.furgone:
       return tr('type.vans');
+    case VehicleType.camion:
+      return tr('type.trucks');
     case VehicleType.rimorchio:
       return tr('type.trailers');
   }
@@ -89,7 +93,7 @@ class VehicleDocument {
       );
 }
 
-enum DeadlineKind { insurance, inspection, service, custom }
+enum DeadlineKind { insurance, inspection, service, tax, custom }
 
 DeadlineKind deadlineKindFrom(String? s) {
   switch (s) {
@@ -99,6 +103,8 @@ DeadlineKind deadlineKindFrom(String? s) {
       return DeadlineKind.inspection;
     case 'service':
       return DeadlineKind.service;
+    case 'tax':
+      return DeadlineKind.tax;
     default:
       return DeadlineKind.custom;
   }
@@ -112,6 +118,8 @@ String deadlineKindDefaultLabel(DeadlineKind k) {
       return tr('deadline.inspection');
     case DeadlineKind.service:
       return tr('deadline.service');
+    case DeadlineKind.tax:
+      return tr('deadline.tax');
     case DeadlineKind.custom:
       return tr('deadline.custom');
   }
@@ -284,6 +292,14 @@ class Vehicle {
         maintenance = maintenance ?? [],
         updatedAt = updatedAt ?? DateTime.now().millisecondsSinceEpoch;
 
+  /// Veicoli creati prima della 1.5: aggiunge il bollo (spento, da attivare).
+  static List<Deadline> _withTax(List<Deadline> list) {
+    if (list.isNotEmpty && !list.any((d) => d.kind == DeadlineKind.tax)) {
+      list.add(Deadline(kind: DeadlineKind.tax, enabled: false));
+    }
+    return list;
+  }
+
   static List<Deadline> defaultDeadlines(VehicleType t) => [
         Deadline(kind: DeadlineKind.insurance),
         Deadline(kind: DeadlineKind.inspection),
@@ -293,6 +309,7 @@ class Vehicle {
           // I rimorchi non hanno motore: tagliando disattivato di default.
           enabled: t != VehicleType.rimorchio,
         ),
+        Deadline(kind: DeadlineKind.tax),
       ];
 
   Uint8List? get photoBytes {
@@ -350,10 +367,10 @@ class Vehicle {
         name: j['name'] as String? ?? '',
         plate: j['plate'] as String? ?? '',
         photoB64: j['photoB64'] as String?,
-        deadlines: (j['deadlines'] as List?)
+        deadlines: _withTax((j['deadlines'] as List?)
                 ?.map((e) => Deadline.fromJson(Map<String, dynamic>.from(e as Map)))
                 .toList() ??
-            [],
+            []),
         documents: (j['documents'] as List?)
                 ?.map((e) => VehicleDocument.fromJson(Map<String, dynamic>.from(e as Map)))
                 .toList() ??

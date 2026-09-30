@@ -11,11 +11,21 @@ import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 import 'maintenance_screen.dart';
+import 'pro_screen.dart';
 import 'vehicle_edit_screen.dart';
 
 class VehicleDetailScreen extends StatelessWidget {
   final String vehicleId;
-  const VehicleDetailScreen({super.key, required this.vehicleId});
+
+  /// Mostrato nel pannello destro (pieghevoli/tablet): niente "indietro".
+  final bool embedded;
+  final VoidCallback? onClosed;
+  const VehicleDetailScreen({
+    super.key,
+    required this.vehicleId,
+    this.embedded = false,
+    this.onClosed,
+  });
 
   Future<void> _delete(BuildContext context, Vehicle v) async {
     final ok = await showDialog<bool>(
@@ -36,7 +46,11 @@ class VehicleDetailScreen extends StatelessWidget {
     );
     if (ok == true) {
       await appState.deleteVehicle(v.id);
-      if (context.mounted) Navigator.of(context).pop();
+      if (embedded) {
+        onClosed?.call();
+      } else if (context.mounted) {
+        Navigator.of(context).pop();
+      }
     }
   }
 
@@ -221,7 +235,7 @@ class VehicleDetailScreen extends StatelessWidget {
         final v = appState.vehicleById(vehicleId);
         if (v == null) {
           return Scaffold(
-              appBar: AppBar(),
+              appBar: AppBar(automaticallyImplyLeading: !embedded),
               body: NotebookPage(child: Center(child: Text(tr('vehicle.notFound')))));
         }
         final scheme = Theme.of(context).colorScheme;
@@ -229,6 +243,7 @@ class VehicleDetailScreen extends StatelessWidget {
         final tracked = v.deadlines.where((d) => d.enabled).toList();
         return Scaffold(
           appBar: AppBar(
+            automaticallyImplyLeading: !embedded,
             title: Text(v.name.isEmpty ? tr('vehicle.generic') : v.name),
             actions: [
               IconButton(
@@ -269,8 +284,9 @@ class VehicleDetailScreen extends StatelessWidget {
                               ? Image.memory(bytes, fit: BoxFit.cover)
                               : Container(
                                   color: scheme.primaryContainer,
-                                  child: Icon(vehicleIcon(v.type),
-                                      size: 80, color: scheme.onPrimaryContainer),
+                                  padding: const EdgeInsets.all(22),
+                                  child: VehicleSilhouette(
+                                      type: v.type, color: scheme.onPrimaryContainer),
                                 ),
                         ),
                       ),
@@ -319,7 +335,7 @@ class VehicleDetailScreen extends StatelessWidget {
                     ]),
                     if (appState.isCloud && appState.data.groups.isNotEmpty)
                       Row(mainAxisSize: MainAxisSize.min, children: [
-                        Icon(appState.isPersonal(v) ? Icons.person_outline : Icons.home_outlined,
+                        Icon(appState.isPersonal(v) ? Icons.person_outline : Icons.groups_outlined,
                             size: 18),
                         const SizedBox(width: 4),
                         Text(appState.fleetLabel(v)),
@@ -339,7 +355,12 @@ class VehicleDetailScreen extends StatelessWidget {
                   Expanded(
                       child: Text(tr('maint.title'), style: Theme.of(context).textTheme.titleLarge)),
                   TextButton.icon(
-                    onPressed: () => _openMaintenance(context, v, null),
+                    onPressed: () async {
+                      if (await requirePro(context, reason: tr('pro.reasonMaint')) &&
+                          context.mounted) {
+                        _openMaintenance(context, v, null);
+                      }
+                    },
                     icon: const Icon(Icons.add),
                     label: Text(tr('common.add')),
                   ),
@@ -366,7 +387,12 @@ class VehicleDetailScreen extends StatelessWidget {
                   Expanded(
                       child: Text(tr('doc.title'), style: Theme.of(context).textTheme.titleLarge)),
                   TextButton.icon(
-                    onPressed: () => _addDocument(context, v),
+                    onPressed: () async {
+                      if (await requirePro(context, reason: tr('pro.reasonDocs')) &&
+                          context.mounted) {
+                        await _addDocument(context, v);
+                      }
+                    },
                     icon: const Icon(Icons.add),
                     label: Text(tr('common.add')),
                   ),
@@ -458,6 +484,9 @@ class VehicleDetailScreen extends StatelessWidget {
         break;
       case DeadlineKind.service:
         icon = Icons.build_outlined;
+        break;
+      case DeadlineKind.tax:
+        icon = Icons.receipt_long_outlined;
         break;
       case DeadlineKind.custom:
         icon = Icons.event_note_outlined;

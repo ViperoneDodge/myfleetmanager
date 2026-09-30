@@ -222,12 +222,17 @@ class NotebookPage extends StatelessWidget {
   const NotebookPage({super.key, required this.child});
 
   static const double gutter = 34;
+  static const double maxPageWidth = 820;
 
   @override
   Widget build(BuildContext context) {
     final nb = NotebookColors.of(context);
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 2, 8, 8),
+    // Tablet e pieghevoli aperti: la pagina non si allarga oltre una misura
+    // comoda da leggere e resta centrata.
+    return LayoutBuilder(builder: (context, box) {
+      final extra = box.maxWidth > maxPageWidth ? (box.maxWidth - maxPageWidth) / 2 : 0.0;
+      return Padding(
+      padding: EdgeInsets.fromLTRB(16 + extra, 2, 8 + extra, 8),
       child: CustomPaint(
         painter: _PagePainter(nb),
         foregroundPainter: _RingsPainter(nb),
@@ -243,6 +248,7 @@ class NotebookPage extends StatelessWidget {
         ),
       ),
     );
+    });
   }
 }
 

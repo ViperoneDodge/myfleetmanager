@@ -27,16 +27,29 @@ class L10n {
     'el': 'Ελληνικά',
     'sv': 'Svenska',
     'da': 'Dansk',
+    'nb': 'Norsk',
     'fi': 'Suomi',
+    'is': 'Íslenska',
     'et': 'Eesti',
     'lv': 'Latviešu',
     'lt': 'Lietuvių',
     'mt': 'Malti',
     'ga': 'Gaeilge',
+    'uk': 'Українська',
+    'ru': 'Русский',
+    'tr': 'Türkçe',
+    'zh': '中文（简体）',
+    'ja': '日本語',
+    'ko': '한국어',
+    'hi': 'हिन्दी',
+    'ar': 'العربية',
+    'id': 'Bahasa Indonesia',
+    'vi': 'Tiếng Việt',
+    'th': 'ไทย',
   };
 
   /// Lingue con il file di traduzione incluso nell'app.
-  static const List<String> available = ['it', 'en', 'fr', 'de', 'es', 'hr'];
+  static final List<String> available = names.keys.toList();
 
   static String code = 'it';
   static Map<String, String> _cur = {};
@@ -47,7 +60,8 @@ class L10n {
   /// telefono se disponibile, altrimenti inglese.
   static String resolve(String? preferred) {
     if (preferred != null && available.contains(preferred)) return preferred;
-    final device = PlatformDispatcher.instance.locale.languageCode;
+    var device = PlatformDispatcher.instance.locale.languageCode;
+    if (device == 'no' || device == 'nn') device = 'nb'; // norvegese
     return available.contains(device) ? device : 'en';
   }
 

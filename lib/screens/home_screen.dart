@@ -1,3 +1,5 @@
+import 'dart:ui' show DisplayFeatureType;
+
 import 'package:flutter/material.dart';
 
 import '../l10n.dart';
@@ -7,6 +9,7 @@ import '../services/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 import 'family_screen.dart';
+import 'pro_screen.dart';
 import 'settings_screen.dart';
 import 'vehicle_detail_screen.dart';
 import 'vehicle_edit_screen.dart';
@@ -22,18 +25,84 @@ class _HomeScreenState extends State<HomeScreen> {
   int _tab = 0;
   VehicleType? _filter;
 
-  void _openAdd({String? fleetId}) {
+  /// Veicolo aperto nel pannello destro (schermi larghi / pieghevoli aperti).
+  String? _selectedId;
+  bool _twoPane = false;
+
+  Future<void> _openAdd({String? fleetId}) async {
+    if (!await ensureCanAddVehicle(context)) return;
+    if (!mounted) return;
+    var type = _filter ?? VehicleType.auto;
+    if (AppState.isProType(type) && !appState.isPro) type = VehicleType.auto;
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (_) => VehicleEditScreen(
-        vehicle: Vehicle(type: _filter ?? VehicleType.auto, fleetId: fleetId),
-      ),
+      builder: (_) => VehicleEditScreen(vehicle: Vehicle(type: type, fleetId: fleetId)),
     ));
   }
 
   void _openDetail(Vehicle v) {
+    if (_twoPane) {
+      setState(() => _selectedId = v.id);
+      return;
+    }
     Navigator.of(context).push(MaterialPageRoute(
       builder: (_) => VehicleDetailScreen(vehicleId: v.id),
     ));
+  }
+
+  /// Cerniera/piega verticale del pieghevole (libro aperto), se presente.
+  static Rect? _verticalHinge(MediaQueryData mq) {
+    for (final f in mq.displayFeatures) {
+      if (f.type == DisplayFeatureType.cutout) continue;
+      final b = f.bounds;
+      if (b.height >= b.width && b.left > 120 && b.right < mq.size.width - 120) return b;
+    }
+    return null;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context);
+    final hinge = _verticalHinge(mq);
+    final width = mq.size.width;
+    _twoPane = hinge != null || width >= 840;
+    if (!_twoPane) return _mainScaffold(context);
+
+    // Due pannelli: elenco a sinistra, dettaglio a destra (mai sopra la cerniera).
+    final leftWidth = hinge != null ? hinge.left : (width * 0.42).clamp(340.0, 480.0).toDouble();
+    final gap = hinge != null ? hinge.width : 0.0;
+    final selected = _selectedId == null ? null : appState.vehicleById(_selectedId!);
+    return Row(children: [
+      SizedBox(width: leftWidth, child: _mainScaffold(context)),
+      if (gap > 0) SizedBox(width: gap, child: ColoredBox(color: NotebookColors.of(context).cover)),
+      Expanded(
+        child: selected == null
+            ? _emptyDetail(context)
+            : VehicleDetailScreen(
+                key: ValueKey(selected.id),
+                vehicleId: selected.id,
+                embedded: true,
+                onClosed: () => setState(() => _selectedId = null),
+              ),
+      ),
+    ]);
+  }
+
+  Widget _emptyDetail(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Scaffold(
+      appBar: AppBar(automaticallyImplyLeading: false),
+      body: NotebookPage(
+        child: Center(
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Icon(Icons.touch_app_outlined, size: 64, color: scheme.outline),
+            const SizedBox(height: 12),
+            Text(tr('home.selectVehicle'),
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontFamily: handFont, fontSize: 24)),
+          ]),
+        ),
+      ),
+    );
   }
 
   Widget _syncIcon() {
@@ -54,12 +123,11 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  @override
-  Widget build(BuildContext context) {
+  Widget _mainScaffold(BuildContext context) {
     return ListenableBuilder(
       listenable: appState,
       builder: (context, _) {
-        final titles = [tr('fleet.mine'), tr('tab.family'), tr('tab.deadlines')];
+        final titles = [tr('tab.vehicles'), tr('tab.family'), tr('tab.deadlines')];
         Widget body;
         switch (_tab) {
           case 1:
@@ -99,10 +167,10 @@ class _HomeScreenState extends State<HomeScreen> {
               NavigationDestination(
                   icon: const Icon(Icons.garage_outlined),
                   selectedIcon: const Icon(Icons.garage),
-                  label: tr('tab.mine')),
+                  label: tr('tab.vehicles')),
               NavigationDestination(
-                  icon: const Icon(Icons.family_restroom_outlined),
-                  selectedIcon: const Icon(Icons.family_restroom),
+                  icon: const Icon(Icons.groups_outlined),
+                  selectedIcon: const Icon(Icons.groups),
                   label: tr('tab.family')),
               NavigationDestination(
                   icon: const Icon(Icons.event_outlined),
@@ -116,7 +184,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _vehiclesTab() {
-    final all = appState.myVehicles;
+    // Elenco principale: i propri veicoli E quelli condivisi nei gruppi.
+    final all = appState.vehicles;
     final list = _filter == null ? all : all.where((v) => v.type == _filter).toList();
     return RefreshIndicator(
       onRefresh: appState.retrySync,
@@ -163,6 +232,8 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ...list.map((v) => VehicleCard(
                 vehicle: v,
+                badge: appState.isPersonal(v) ? null : appState.fleetLabel(v),
+                selected: _twoPane && v.id == _selectedId,
                 onTap: () => _openDetail(v),
                 onLongPress: () => moveVehicleSheet(context, v),
               )),

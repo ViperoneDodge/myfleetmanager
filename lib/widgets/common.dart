@@ -53,6 +53,8 @@ IconData vehicleIcon(VehicleType t) {
     case VehicleType.moto:
       return Icons.two_wheeler;
     case VehicleType.furgone:
+      return Icons.airport_shuttle;
+    case VehicleType.camion:
       return Icons.local_shipping;
     case VehicleType.rimorchio:
       return Icons.rv_hookup;
@@ -76,11 +78,30 @@ class VehicleAvatar extends StatelessWidget {
         color: scheme.primaryContainer,
         child: bytes != null
             ? Image.memory(bytes, fit: BoxFit.cover, gaplessPlayback: true)
-            : Icon(vehicleIcon(vehicle.type),
-                size: size * 0.55, color: scheme.onPrimaryContainer),
+            : Padding(
+                padding: EdgeInsets.all(size * 0.1),
+                child: VehicleSilhouette(type: vehicle.type, color: scheme.onPrimaryContainer),
+              ),
       ),
     );
   }
+}
+
+/// Immagine predefinita (sagoma) per il tipo di veicolo, colorata con [color].
+class VehicleSilhouette extends StatelessWidget {
+  final VehicleType type;
+  final Color color;
+  const VehicleSilhouette({super.key, required this.type, required this.color});
+
+  @override
+  Widget build(BuildContext context) => Image.asset(
+        'assets/vehicles/${type.name}.png',
+        color: color,
+        colorBlendMode: BlendMode.srcIn,
+        fit: BoxFit.contain,
+        filterQuality: FilterQuality.medium,
+        errorBuilder: (_, __, ___) => FittedBox(child: Icon(vehicleIcon(type), color: color)),
+      );
 }
 
 class StatusChip extends StatelessWidget {
@@ -122,15 +143,30 @@ class VehicleCard extends StatelessWidget {
 
   /// Pressione prolungata: menu "aggiungi a nucleo familiare / sposta".
   final VoidCallback? onLongPress;
-  const VehicleCard({super.key, required this.vehicle, required this.onTap, this.onLongPress});
+
+  /// Nome del gruppo se il veicolo è condiviso (mostrato come etichetta).
+  final String? badge;
+
+  /// Evidenziato (selezionato nella vista a due pannelli dei pieghevoli).
+  final bool selected;
+  const VehicleCard({
+    super.key,
+    required this.vehicle,
+    required this.onTap,
+    this.onLongPress,
+    this.badge,
+    this.selected = false,
+  });
 
   @override
   Widget build(BuildContext context) {
     final v = vehicle;
     final next = v.nextDeadline;
+    final scheme = Theme.of(context).colorScheme;
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 5),
       clipBehavior: Clip.antiAlias,
+      color: selected ? scheme.secondaryContainer : null,
       child: InkWell(
         onTap: onTap,
         onLongPress: onLongPress,
@@ -150,6 +186,28 @@ class VehicleCard extends StatelessWidget {
                   const SizedBox(width: 4),
                   Text(v.plate.isEmpty ? '—' : v.plate,
                       style: const TextStyle(letterSpacing: 1.2)),
+                  if (badge != null) ...[
+                    const SizedBox(width: 8),
+                    Flexible(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+                        decoration: BoxDecoration(
+                          color: scheme.tertiaryContainer,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Row(mainAxisSize: MainAxisSize.min, children: [
+                          Icon(Icons.groups, size: 13, color: scheme.onTertiaryContainer),
+                          const SizedBox(width: 3),
+                          Flexible(
+                            child: Text(badge!,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                    fontSize: 11, color: scheme.onTertiaryContainer)),
+                          ),
+                        ]),
+                      ),
+                    ),
+                  ],
                 ]),
                 const SizedBox(height: 6),
                 if (next != null)

@@ -12,8 +12,10 @@ kts = APP / "build.gradle.kts"
 groovy = APP / "build.gradle"
 if kts.exists():
     g = kts.read_text()
-    g = re.sub(r"minSdk\s*=\s*flutter\.minSdkVersion", "minSdk = 23", g)
-    g = re.sub(r"ndkVersion\s*=\s*flutter\.ndkVersion", 'ndkVersion = "27.0.12077973"', g)
+    g = re.sub(r"minSdk\s*=\s*flutter\.minSdkVersion", "minSdk = maxOf(23, flutter.minSdkVersion)", g)
+    # Play Store: le nuove app devono puntare all'ultima versione di Android.
+    g = re.sub(r"targetSdk\s*=\s*flutter\.targetSdkVersion", "targetSdk = 36", g)
+    g = re.sub(r"compileSdk\s*=\s*flutter\.compileSdkVersion", "compileSdk = 36", g)
     if "isCoreLibraryDesugaringEnabled" not in g:
         g = g.replace("compileOptions {", "compileOptions {\n        isCoreLibraryDesugaringEnabled = true", 1)
     if "desugar_jdk_libs" not in g:
@@ -22,17 +24,29 @@ if kts.exists():
     # si installano sopra la versione precedente senza conflitti.
     if 'create("fleet")' not in g:
         g = g.replace("    buildTypes {", '''    signingConfigs {
+        // Chiave fissa del repository: l'APK si aggiorna sopra le versioni installate.
         create("fleet") {
             storeFile = file("../../keystore/debug.keystore")
             storePassword = "android"
             keyAlias = "androiddebugkey"
             keyPassword = "android"
         }
+        // Chiave di caricamento Play Store (dai Secrets di GitHub), usata per l'AAB.
+        create("upload") {
+            val ks = System.getenv("FLEET_KEYSTORE")
+            if (!ks.isNullOrEmpty() && file("../../" + ks).exists()) {
+                storeFile = file("../../" + ks)
+                storePassword = System.getenv("FLEET_STORE_PASS")
+                keyAlias = System.getenv("FLEET_KEY_ALIAS")
+                keyPassword = System.getenv("FLEET_KEY_PASS")
+            }
+        }
     }
 
     buildTypes {''', 1)
-        g = g.replace('signingConfigs.getByName("debug")', 'signingConfigs.getByName("fleet")')
-        if 'getByName("fleet")' not in g:
+        g = g.replace('signingConfigs.getByName("debug")',
+                      'signingConfigs.getByName(if (System.getenv("FLEET_SIGN") == "upload") "upload" else "fleet")')
+        if 'getByName(if (System.getenv("FLEET_SIGN")' not in g:
             raise SystemExit("Impossibile impostare la firma")
     kts.write_text(g)
     print("Patched", kts)
@@ -148,6 +162,9 @@ receivers = """
 if "ScheduledNotificationReceiver" not in m:
     m = m.replace("</application>", receivers + "    </application>", 1)
 m = re.sub(r'android:label="[^"]*"', 'android:label="MyFleetManager"', m, count=1)
+# Pieghevoli e multi-finestra: l'attività si adatta a ogni dimensione dello schermo.
+if "resizeableActivity" not in m:
+    m = m.replace("<activity", '<activity\n            android:resizeableActivity="true"', 1)
 man.write_text(m)
 print("Patched", man)
 

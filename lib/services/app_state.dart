@@ -9,6 +9,7 @@ import '../theme.dart';
 import 'auth_service.dart';
 import 'local_store.dart';
 import 'notification_service.dart';
+import 'pro_service.dart';
 import 'push_service.dart';
 import 'sync_service.dart';
 
@@ -20,6 +21,44 @@ class AppState extends ChangeNotifier {
   final NotificationService notifications = NotificationService();
   final SyncService sync = SyncService();
   final PushService push = PushService();
+  final ProService pro = ProService();
+
+  // ---------------- Versione Pro ----------------
+
+  /// Veicoli (personali) gestibili con la versione gratuita.
+  static const int freeVehicleLimit = 3;
+
+  /// Codice riservato allo sviluppo: sblocca la Pro senza acquisto.
+  static const String _devCode = 'PIPPOPUZZA';
+
+  /// Acquisto confermato dal Play Store (ricordato sul telefono).
+  bool purchasedPro = false;
+
+  /// Pro sbloccata con il codice sviluppatore.
+  bool devPro = false;
+
+  bool get isPro => purchasedPro || devPro;
+
+  /// Furgoni, camion e rimorchi sono riservati alla Pro.
+  static bool isProType(VehicleType t) =>
+      t == VehicleType.furgone || t == VehicleType.camion || t == VehicleType.rimorchio;
+
+  /// Con la versione gratuita si possono avere al massimo [freeVehicleLimit] veicoli propri.
+  bool get canAddVehicle => isPro || myVehicles.length < freeVehicleLimit;
+
+  bool unlockDev(String code) {
+    if (code.trim().toUpperCase() != _devCode) return false;
+    devPro = true;
+    _writeSettings();
+    notifyListeners();
+    return true;
+  }
+
+  void disableDev() {
+    devPro = false;
+    _writeSettings();
+    notifyListeners();
+  }
 
   bool loading = true;
   ThemeSettings theme = ThemeSettings();
@@ -70,7 +109,19 @@ class AppState extends ChangeNotifier {
     final settings = await store.readSettings();
     theme = ThemeSettings.fromJson(settings);
     langPref = settings?['lang'] as String?;
+    purchasedPro = settings?['pro'] == true;
+    devPro = settings?['devPro'] == true;
     notifyListeners();
+    // Acquisti: verifica/ripristino in background (non blocca l'avvio).
+    pro.init(
+      onOwned: () {
+        if (!purchasedPro) {
+          purchasedPro = true;
+          _writeSettings();
+        }
+      },
+      onChanged: notifyListeners,
+    );
     try {
       await notifications.init();
     } catch (_) {}
@@ -307,6 +358,8 @@ class AppState extends ChangeNotifier {
   Future<void> _writeSettings() => store.writeSettings({
         ...theme.toJson(),
         if (langPref != null) 'lang': langPref,
+        'pro': purchasedPro,
+        'devPro': devPro,
       });
 
   /// Cambia lingua ([code] null = automatica, come il telefono).

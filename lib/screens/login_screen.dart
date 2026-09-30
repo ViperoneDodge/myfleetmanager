@@ -187,7 +187,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       segments: [
                         ButtonSegment(
                             value: AccountMode.cloud,
-                            icon: const Icon(Icons.family_restroom),
+                            icon: const Icon(Icons.groups),
                             label: Text(tr('login.modeCloud'))),
                         ButtonSegment(
                             value: AccountMode.local,

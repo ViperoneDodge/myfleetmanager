@@ -5,9 +5,11 @@ import 'package:image_picker/image_picker.dart';
 
 import '../l10n.dart';
 import '../main.dart';
+import '../services/app_state.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import 'pro_screen.dart';
 
 class VehicleEditScreen extends StatefulWidget {
   /// Riceve una COPIA del veicolo (o uno nuovo): le modifiche si salvano solo con "Salva".
@@ -27,6 +29,27 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   bool _saving = false;
 
   bool get _isNew => appState.vehicleById(v.id) == null;
+
+  /// Tipo con cui il veicolo è stato aperto (un furgone già esistente resta modificabile).
+  late final VehicleType _originalType = v.type;
+
+  Future<void> _selectType(VehicleType t) async {
+    if (AppState.isProType(t) && t != _originalType && !appState.isPro) {
+      final ok = await requirePro(context,
+          reason: tr('pro.reasonType', {'type': vehicleTypeLabel(t)}));
+      if (!ok || !mounted) return;
+    }
+    setState(() {
+      v.type = t;
+      if (_isNew) {
+        for (final d in v.deadlines) {
+          if (d.kind == DeadlineKind.service) {
+            d.enabled = t != VehicleType.rimorchio;
+          }
+        }
+      }
+    });
+  }
 
   @override
   void dispose() {
@@ -109,6 +132,13 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
       showSnack(context, tr('edit.needNameOrPlate'));
       return;
     }
+    if (_isNew && !await ensureCanAddVehicle(context)) return;
+    if (!mounted) return;
+    if (_isNew && AppState.isProType(v.type) && !appState.isPro) {
+      final ok = await requirePro(context,
+          reason: tr('pro.reasonType', {'type': vehicleTypeLabel(v.type)}));
+      if (!ok || !mounted) return;
+    }
     setState(() => _saving = true);
     v.name = _name.text.trim();
     v.plate = _plate.text.trim().toUpperCase();
@@ -147,19 +177,14 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
             runSpacing: 6,
             children: VehicleType.values
                 .map((t) => ChoiceChip(
-                      avatar: Icon(vehicleIcon(t), size: 18),
+                      avatar: Icon(
+                          AppState.isProType(t) && !appState.isPro && t != _originalType
+                              ? Icons.lock_outline
+                              : vehicleIcon(t),
+                          size: 18),
                       label: Text(vehicleTypeLabel(t)),
                       selected: v.type == t,
-                      onSelected: (_) => setState(() {
-                        v.type = t;
-                        if (_isNew) {
-                          for (final d in v.deadlines) {
-                            if (d.kind == DeadlineKind.service) {
-                              d.enabled = t != VehicleType.rimorchio;
-                            }
-                          }
-                        }
-                      }),
+                      onSelected: (_) => _selectType(t),
                     ))
                 .toList(),
           ),

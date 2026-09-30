@@ -22,7 +22,7 @@ class FamilyTab extends StatelessWidget {
       return ListView(
         padding: const EdgeInsets.fromLTRB(10, 24, 12, 24),
         children: [
-          Icon(Icons.family_restroom, size: 72, color: scheme.primary),
+          Icon(Icons.groups, size: 72, color: scheme.primary),
           const SizedBox(height: 12),
           Text(tr('family.title'),
               textAlign: TextAlign.center, style: Theme.of(context).textTheme.headlineSmall),
@@ -55,7 +55,7 @@ class FamilyTab extends StatelessWidget {
         children: [
           if (groups.isEmpty) ...[
             const SizedBox(height: 24),
-            Icon(Icons.family_restroom, size: 72, color: scheme.primary),
+            Icon(Icons.groups, size: 72, color: scheme.primary),
             const SizedBox(height: 12),
             Text(tr('family.none'),
                 textAlign: TextAlign.center, style: Theme.of(context).textTheme.headlineSmall),
@@ -100,7 +100,7 @@ class FamilyTab extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 4),
             child: Row(children: [
-              Icon(Icons.home_outlined, color: scheme.primary),
+              Icon(Icons.groups_outlined, color: scheme.primary),
               const SizedBox(width: 8),
               Expanded(
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -179,7 +179,7 @@ Future<void> moveVehicleSheet(BuildContext context, Vehicle v) async {
             onTap: () => Navigator.pop(ctx),
           ),
         ...groups.map((g) => ListTile(
-              leading: const Icon(Icons.home_outlined),
+              leading: const Icon(Icons.groups_outlined),
               title: Text(g.name),
               subtitle: Text(trn('family.members', g.members.length)),
               onTap: () => Navigator.pop(ctx, g.id),
