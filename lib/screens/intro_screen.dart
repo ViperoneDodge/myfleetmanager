@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../l10n.dart';
 import '../theme.dart';
 
 /// Schermata di benvenuto animata mostrata all'apertura dell'app.
@@ -79,8 +80,8 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
                       offset: Offset(0, 20 * (1 - text.value)),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24),
-                        child: Column(mainAxisSize: MainAxisSize.min, children: const [
-                          FittedBox(
+                        child: Column(mainAxisSize: MainAxisSize.min, children: [
+                          const FittedBox(
                             fit: BoxFit.scaleDown,
                             child: Text('MyFleetManager',
                                 maxLines: 1,
@@ -90,10 +91,10 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
                                     color: Colors.white,
                                     letterSpacing: 0.5)),
                           ),
-                          SizedBox(height: 6),
-                          Text('Il taccuino delle scadenze dei tuoi veicoli',
+                          const SizedBox(height: 6),
+                          Text(tr('intro.tagline'),
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontFamily: handFont, fontSize: 22, color: Colors.white70)),
                         ]),
                       ),

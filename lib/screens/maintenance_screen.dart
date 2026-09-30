@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../theme.dart';
@@ -53,7 +54,7 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
     r.km = kmText.isEmpty ? null : int.tryParse(kmText);
     r.notes = _notes.text.trim();
     if (r.items.isEmpty && r.notes.isEmpty) {
-      showSnack(context, 'Seleziona almeno un intervento o scrivi una nota.');
+      showSnack(context, tr('maint.needItem'));
       return;
     }
     setState(() => _saving = true);
@@ -65,14 +66,14 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Eliminare l\'intervento?'),
-        content: Text('L\'intervento del ${fmtDate(r.date)} verrà tolto dallo storico.'),
+        title: Text(tr('maint.deleteTitle')),
+        content: Text(tr('maint.deleteBody', {'date': fmtDate(r.date)})),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Annulla')),
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
           FilledButton(
             style: FilledButton.styleFrom(backgroundColor: Colors.red.shade700),
             onPressed: () => Navigator.pop(ctx, true),
-            child: const Text('Elimina'),
+            child: Text(tr('common.delete')),
           ),
         ],
       ),
@@ -88,11 +89,11 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
     final scheme = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: Text(_isNew ? 'Nuova manutenzione' : 'Manutenzione'),
+        title: Text(_isNew ? tr('maint.newTitle') : tr('maint.editTitle')),
         actions: [
           if (!_isNew)
             IconButton(
-              tooltip: 'Elimina',
+              tooltip: tr('common.delete'),
               icon: const Icon(Icons.delete_outline),
               onPressed: _delete,
             ),
@@ -113,7 +114,7 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
             ListTile(
               contentPadding: EdgeInsets.zero,
               leading: const Icon(Icons.event),
-              title: const Text('Data'),
+              title: Text(tr('maint.date')),
               trailing: Text(fmtDate(r.date), style: const TextStyle(fontSize: 16)),
               onTap: _pickDate,
             ),
@@ -122,15 +123,15 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
               controller: _km,
               keyboardType: TextInputType.number,
               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-              decoration: const InputDecoration(
-                labelText: 'Chilometri',
+              decoration: InputDecoration(
+                labelText: tr('maint.km'),
                 suffixText: 'km',
-                border: OutlineInputBorder(),
-                prefixIcon: Icon(Icons.speed),
+                border: const OutlineInputBorder(),
+                prefixIcon: const Icon(Icons.speed),
               ),
             ),
             const SizedBox(height: 16),
-            Text('Interventi eseguiti', style: Theme.of(context).textTheme.titleMedium),
+            Text(tr('maint.items'), style: Theme.of(context).textTheme.titleMedium),
             ...maintenanceItems.map((k) => CheckboxListTile(
                   contentPadding: EdgeInsets.zero,
                   controlAffinity: ListTileControlAffinity.leading,
@@ -149,9 +150,9 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
               controller: _notes,
               maxLines: 3,
               textCapitalization: TextCapitalization.sentences,
-              decoration: const InputDecoration(
-                labelText: 'Note (officina, costo, altri ricambi…)',
-                border: OutlineInputBorder(),
+              decoration: InputDecoration(
+                labelText: tr('maint.notes'),
+                border: const OutlineInputBorder(),
                 alignLabelWithHint: true,
               ),
             ),
@@ -159,9 +160,8 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
               const SizedBox(height: 8),
               SwitchListTile(
                 contentPadding: EdgeInsets.zero,
-                title: const Text('Conta come tagliando'),
-                subtitle: const Text(
-                    'Aggiorna la data dell\'ultimo tagliando e il promemoria del prossimo'),
+                title: Text(tr('maint.asService')),
+                subtitle: Text(tr('maint.asServiceInfo')),
                 value: _asService,
                 onChanged: (b) => setState(() => _asService = b),
               ),
@@ -170,7 +170,7 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
             FilledButton.icon(
               onPressed: _saving ? null : _save,
               icon: const Icon(Icons.save),
-              label: const Text('Salva'),
+              label: Text(tr('common.save')),
             ),
           ],
         ),

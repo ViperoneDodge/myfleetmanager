@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../theme.dart';
@@ -48,18 +49,18 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           ListTile(
             leading: const Icon(Icons.photo_camera),
-            title: const Text('Scatta una foto'),
+            title: Text(tr('photo.camera')),
             onTap: () => Navigator.pop(ctx, ImageSource.camera),
           ),
           ListTile(
             leading: const Icon(Icons.photo_library),
-            title: const Text('Scegli dalla galleria'),
+            title: Text(tr('photo.gallery')),
             onTap: () => Navigator.pop(ctx, ImageSource.gallery),
           ),
           if (v.photoB64 != null)
             ListTile(
               leading: const Icon(Icons.delete_outline),
-              title: const Text('Rimuovi foto'),
+              title: Text(tr('photo.remove')),
               onTap: () {
                 setState(() => v.photoB64 = null);
                 Navigator.pop(ctx);
@@ -80,7 +81,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
       final bytes = await x.readAsBytes();
       setState(() => v.photoB64 = base64Encode(bytes));
     } catch (e) {
-      if (mounted) showSnack(context, 'Impossibile caricare la foto: $e');
+      if (mounted) showSnack(context, tr('photo.error', {'error': e}));
     }
   }
 
@@ -92,8 +93,8 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
       firstDate: DateTime(1980),
       lastDate: DateTime(now.year + 20),
       helpText: d.kind == DeadlineKind.service
-          ? 'Data ultimo tagliando'
-          : 'Data scadenza: ${d.label}',
+          ? tr('edit.lastServiceDate')
+          : tr('edit.deadlineDate', {'what': d.displayLabel}),
     );
     if (picked != null) {
       setState(() {
@@ -105,7 +106,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
 
   Future<void> _save() async {
     if (_name.text.trim().isEmpty && _plate.text.trim().isEmpty) {
-      showSnack(context, 'Inserisci almeno il nome o la targa.');
+      showSnack(context, tr('edit.needNameOrPlate'));
       return;
     }
     setState(() => _saving = true);
@@ -114,7 +115,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     v.notes = _notes.text.trim();
     for (final d in v.deadlines.where((d) => d.kind == DeadlineKind.custom)) {
       final t = _labelCtrl(d).text.trim();
-      d.label = t.isEmpty ? 'Scadenza personalizzata' : t;
+      d.label = t.isEmpty ? tr('edit.customDefault') : t;
     }
     await appState.saveVehicle(v);
     if (mounted) Navigator.of(context).pop();
@@ -126,12 +127,12 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     final bytes = v.photoBytes;
     return Scaffold(
       appBar: AppBar(
-        title: Text(_isNew ? 'Nuovo veicolo' : 'Modifica veicolo'),
+        title: Text(_isNew ? tr('edit.newTitle') : tr('edit.editTitle')),
         actions: [
           TextButton(
             onPressed: _saving ? null : _save,
             style: TextButton.styleFrom(foregroundColor: Colors.white),
-            child: const Text('Salva', style: TextStyle(fontFamily: handFont, fontSize: 22)),
+            child: Text(tr('common.save'), style: const TextStyle(fontFamily: handFont, fontSize: 22)),
           ),
         ],
       ),
@@ -139,7 +140,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
         child: ListView(
         padding: const EdgeInsets.fromLTRB(10, 14, 12, 16),
         children: [
-          Text('Tipo di veicolo', style: Theme.of(context).textTheme.titleMedium),
+          Text(tr('edit.type'), style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 6),
           Wrap(
             spacing: 8,
@@ -164,7 +165,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
           ),
           if (appState.isCloud && appState.data.groups.isNotEmpty) ...[
             const SizedBox(height: 16),
-            Text('Dove si trova', style: Theme.of(context).textTheme.titleMedium),
+            Text(tr('edit.where'), style: Theme.of(context).textTheme.titleMedium),
             const SizedBox(height: 6),
             DropdownButtonFormField<String?>(
               value: appState.data.groupById(v.fleetId) == null ? null : v.fleetId,
@@ -174,10 +175,10 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
                 prefixIcon: Icon(Icons.folder_shared_outlined),
               ),
               items: [
-                const DropdownMenuItem<String?>(value: null, child: Text('I miei veicoli')),
+                DropdownMenuItem<String?>(value: null, child: Text(tr('fleet.mine'))),
                 ...appState.data.groups.map((g) => DropdownMenuItem<String?>(
                       value: g.id,
-                      child: Text('Famiglia: ${g.name}', overflow: TextOverflow.ellipsis),
+                      child: Text(tr('edit.familyPrefix', {'name': g.name}), overflow: TextOverflow.ellipsis),
                     )),
               ],
               onChanged: (id) => setState(() => v.fleetId = id),
@@ -199,7 +200,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
                         : Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                             Icon(Icons.add_a_photo, size: 40, color: scheme.onPrimaryContainer),
                             const SizedBox(height: 6),
-                            Text('Aggiungi foto',
+                            Text(tr('photo.add'),
                                 style: TextStyle(color: scheme.onPrimaryContainer)),
                           ]),
                   ),
@@ -221,28 +222,28 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
           TextField(
             controller: _name,
             textCapitalization: TextCapitalization.sentences,
-            decoration: const InputDecoration(
-              labelText: 'Nome (es. Panda di Marco)',
+            decoration: InputDecoration(
+              labelText: tr('edit.nameHint'),
               filled: true,
-              border: OutlineInputBorder(),
-              prefixIcon: Icon(Icons.label_outline),
+              border: const OutlineInputBorder(),
+              prefixIcon: const Icon(Icons.label_outline),
             ),
           ),
           const SizedBox(height: 12),
           TextField(
             controller: _plate,
             textCapitalization: TextCapitalization.characters,
-            decoration: const InputDecoration(
-              labelText: 'Targa',
+            decoration: InputDecoration(
+              labelText: tr('edit.plate'),
               filled: true,
-              border: OutlineInputBorder(),
-              prefixIcon: Icon(Icons.pin_outlined),
+              border: const OutlineInputBorder(),
+              prefixIcon: const Icon(Icons.pin_outlined),
             ),
           ),
           const SizedBox(height: 24),
-          Text('Scadenze da monitorare', style: Theme.of(context).textTheme.titleMedium),
+          Text(tr('edit.deadlinesTitle'), style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 4),
-          Text('Attiva solo quelle che ti interessano. Riceverai le notifiche secondo le impostazioni.',
+          Text(tr('edit.deadlinesInfo'),
               style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
           const SizedBox(height: 8),
           ...v.deadlines.map(_deadlineCard),
@@ -253,27 +254,27 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
                   label: '',
                 ))),
             icon: const Icon(Icons.add),
-            label: const Text('Aggiungi scadenza personalizzata'),
+            label: Text(tr('edit.addCustom')),
           ),
           const SizedBox(height: 4),
-          Text('Es. bollo, gomme invernali, garanzia, cambio cinghia…',
+          Text(tr('edit.customExamples'),
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
           const SizedBox(height: 24),
           TextField(
             controller: _notes,
             maxLines: 3,
-            decoration: const InputDecoration(
-              labelText: 'Note (facoltative)',
+            decoration: InputDecoration(
+              labelText: tr('edit.notes'),
               filled: true,
-              border: OutlineInputBorder(),
+              border: const OutlineInputBorder(),
             ),
           ),
           const SizedBox(height: 24),
           FilledButton.icon(
             onPressed: _saving ? null : _save,
             icon: const Icon(Icons.save),
-            label: const Text('Salva'),
+            label: Text(tr('common.save')),
             style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 14)),
           ),
           const SizedBox(height: 24),
@@ -297,17 +298,17 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
               child: isCustom
                   ? TextField(
                       controller: _labelCtrl(d),
-                      decoration: const InputDecoration(
-                        hintText: 'Nome scadenza (es. Bollo)',
+                      decoration: InputDecoration(
+                        hintText: tr('edit.customName'),
                         isDense: true,
                       ),
                     )
-                  : Text(isService ? 'Ultimo tagliando' : d.label,
+                  : Text(isService ? tr('edit.lastService') : d.displayLabel,
                       style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
             ),
             if (isCustom)
               IconButton(
-                tooltip: 'Elimina',
+                tooltip: tr('common.delete'),
                 icon: const Icon(Icons.close),
                 onPressed: () => setState(() {
                   v.deadlines.remove(d);
@@ -325,28 +326,27 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
               OutlinedButton.icon(
                 onPressed: () => _pickDate(d),
                 icon: const Icon(Icons.calendar_month, size: 18),
-                label: Text(d.date == null ? 'Scegli data' : fmtDate(d.date)),
+                label: Text(d.date == null ? tr('edit.pickDate') : fmtDate(d.date)),
               ),
               if (d.date != null && !isService) StatusChip(due: d.date!),
             ]),
             if (isService) ...[
               const SizedBox(height: 8),
               Row(children: [
-                const Text('Promemoria prossimo: '),
+                Text(tr('edit.nextReminder')),
                 DropdownButton<int>(
                   value: const [0, 6, 12, 24].contains(d.intervalMonths) ? d.intervalMonths : 12,
-                  items: const [
-                    DropdownMenuItem(value: 0, child: Text('nessuno')),
-                    DropdownMenuItem(value: 6, child: Text('dopo 6 mesi')),
-                    DropdownMenuItem(value: 12, child: Text('dopo 12 mesi')),
-                    DropdownMenuItem(value: 24, child: Text('dopo 24 mesi')),
+                  items: [
+                    DropdownMenuItem(value: 0, child: Text(tr('edit.none'))),
+                    for (final m in const [6, 12, 24])
+                      DropdownMenuItem(value: m, child: Text(tr('edit.afterMonths', {'n': m}))),
                   ],
                   onChanged: (m) => setState(() => d.intervalMonths = m ?? 12),
                 ),
               ]),
               if (d.dueDate != null)
                 Wrap(crossAxisAlignment: WrapCrossAlignment.center, children: [
-                  Text('Prossimo tagliando: ${fmtDate(d.dueDate)}  ',
+                  Text('${tr('deadline.nextService')}: ${fmtDate(d.dueDate)}  ',
                       style: TextStyle(color: scheme.onSurfaceVariant)),
                   StatusChip(due: d.dueDate!, compact: true),
                 ]),

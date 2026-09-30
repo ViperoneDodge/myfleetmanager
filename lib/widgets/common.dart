@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../l10n.dart';
 import '../models.dart';
 
 final DateFormat dateFmt = DateFormat('dd/MM/yyyy');
@@ -36,13 +37,13 @@ DueStatus dueStatus(DateTime due) {
   final n = daysUntil(due);
   if (n < 0) {
     return DueStatus(Colors.red.shade700,
-        n == -1 ? 'Scaduta ieri' : 'Scaduta da ${-n} giorni', Icons.error);
+        n == -1 ? tr('due.yesterday') : tr('due.expiredDays', {'n': -n}), Icons.error);
   }
-  if (n == 0) return DueStatus(Colors.red.shade700, 'Scade oggi', Icons.error);
-  if (n == 1) return DueStatus(Colors.deepOrange, 'Scade domani', Icons.warning_amber);
-  if (n <= 7) return DueStatus(Colors.deepOrange, 'Tra $n giorni', Icons.warning_amber);
-  if (n <= 30) return DueStatus(Colors.orange.shade800, 'Tra $n giorni', Icons.schedule);
-  return DueStatus(Colors.green.shade700, 'Tra $n giorni', Icons.check_circle);
+  if (n == 0) return DueStatus(Colors.red.shade700, tr('due.today'), Icons.error);
+  if (n == 1) return DueStatus(Colors.deepOrange, tr('due.tomorrow'), Icons.warning_amber);
+  if (n <= 7) return DueStatus(Colors.deepOrange, tr('due.inDays', {'n': n}), Icons.warning_amber);
+  if (n <= 30) return DueStatus(Colors.orange.shade800, tr('due.inDays', {'n': n}), Icons.schedule);
+  return DueStatus(Colors.green.shade700, tr('due.inDays', {'n': n}), Icons.check_circle);
 }
 
 IconData vehicleIcon(VehicleType t) {
@@ -140,7 +141,7 @@ class VehicleCard extends StatelessWidget {
             const SizedBox(width: 12),
             Expanded(
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(v.name.isEmpty ? 'Senza nome' : v.name,
+                Text(v.name.isEmpty ? tr('vehicle.noName') : v.name,
                     style: const TextStyle(fontSize: 22, fontFamily: 'PatrickHand', height: 1.1),
                     overflow: TextOverflow.ellipsis),
                 const SizedBox(height: 2),
@@ -162,7 +163,7 @@ class VehicleCard extends StatelessWidget {
                     ],
                   )
                 else
-                  Text('Nessuna scadenza impostata',
+                  Text(tr('vehicle.noDeadlines'),
                       style: TextStyle(
                           fontSize: 12, color: Theme.of(context).colorScheme.outline)),
               ]),

@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 import '../firebase_config.dart';
+import '../l10n.dart';
 import '../models.dart';
 import 'local_store.dart';
 
@@ -36,10 +37,10 @@ class AuthService {
 
   Future<Session> registerLocal(String username, String password) async {
     final u = _normUser(username);
-    if (u.length < 3) throw AuthException('Il nome utente deve avere almeno 3 caratteri.');
-    if (password.length < 4) throw AuthException('La password deve avere almeno 4 caratteri.');
+    if (u.length < 3) throw AuthException(tr('auth.userShort'));
+    if (password.length < 4) throw AuthException(tr('auth.passShort'));
     final accounts = await store.readAccounts();
-    if (accounts.containsKey(u)) throw AuthException('Questo nome utente esiste già su questo telefono.');
+    if (accounts.containsKey(u)) throw AuthException(tr('auth.userExists'));
     final salt = newId(16);
     accounts[u] = {'salt': salt, 'hash': _hash(password, salt), 'display': username.trim()};
     await store.writeAccounts(accounts);
@@ -50,10 +51,10 @@ class AuthService {
     final u = _normUser(username);
     final accounts = await store.readAccounts();
     final a = accounts[u];
-    if (a == null) throw AuthException('Utente non trovato su questo telefono.');
+    if (a == null) throw AuthException(tr('auth.userNotFound'));
     final m = Map<String, dynamic>.from(a as Map);
     if (_hash(password, m['salt'] as String) != m['hash']) {
-      throw AuthException('Password errata.');
+      throw AuthException(tr('auth.wrongPass'));
     }
     return Session(
         mode: AccountMode.local, key: u, displayName: (m['display'] as String?) ?? u);
@@ -64,26 +65,33 @@ class AuthService {
   Session _fromUser(User user) => Session(
         mode: AccountMode.cloud,
         key: user.uid,
-        displayName: user.email ?? 'Utente',
+        displayName: user.email ?? tr('auth.user'),
         email: user.email,
       );
 
   String _firebaseError(FirebaseAuthException e) {
     switch (e.code) {
       case 'invalid-email':
-        return 'Email non valida.';
+        return tr('auth.invalidEmail');
       case 'user-not-found':
       case 'wrong-password':
       case 'invalid-credential':
-        return 'Email o password non corretti.';
+        return tr('auth.badCredentials');
       case 'email-already-in-use':
-        return 'Esiste già un account con questa email.';
+        return tr('auth.emailInUse');
       case 'weak-password':
-        return 'Password troppo debole (minimo 6 caratteri).';
+        return tr('auth.weakPass');
       case 'network-request-failed':
-        return 'Serve una connessione internet per il primo accesso online.';
+        return tr('auth.network');
+      case 'operation-not-allowed':
+        // Metodo Email/Password non attivato nella console Firebase.
+        return tr('auth.emailDisabled');
+      case 'too-many-requests':
+        return tr('auth.tooMany');
+      case 'user-disabled':
+        return tr('auth.userDisabled');
       default:
-        return 'Errore di accesso (${e.code}).';
+        return tr('auth.generic', {'code': e.code});
     }
   }
 
@@ -107,6 +115,15 @@ class AuthService {
     }
   }
 
+  /// Invia l'email per reimpostare la password dell'account online.
+  Future<void> resetPassword(String email) async {
+    try {
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: email.trim());
+    } on FirebaseAuthException catch (e) {
+      throw AuthException(_firebaseError(e));
+    }
+  }
+
   GoogleSignIn _google() => GoogleSignIn(
         scopes: const ['email'],
         serverClientId: FirebaseConfig.googleWebClientId.isEmpty
@@ -119,7 +136,7 @@ class AuthService {
     try {
       final g = _google();
       final account = await g.signIn();
-      if (account == null) throw AuthException('Accesso Google annullato.');
+      if (account == null) throw AuthException(tr('auth.googleCancelled'));
       final auth = await account.authentication;
       final cred = GoogleAuthProvider.credential(
         idToken: auth.idToken,
@@ -132,7 +149,7 @@ class AuthService {
     } on AuthException {
       rethrow;
     } catch (e) {
-      throw AuthException('Accesso Google non riuscito: $e');
+      throw AuthException(tr('auth.googleFailed', {'error': e}));
     }
   }
 

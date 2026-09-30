@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../theme.dart';
+import '../services/sync_service.dart' show cloudErrorMessage;
 import '../widgets/common.dart';
+import 'login_screen.dart';
 
 /// Scheda "Famiglia": veicoli dei nuclei familiari condivisi.
 class FamilyTab extends StatelessWidget {
@@ -21,19 +24,24 @@ class FamilyTab extends StatelessWidget {
         children: [
           Icon(Icons.family_restroom, size: 72, color: scheme.primary),
           const SizedBox(height: 12),
-          Text('Parco auto di famiglia',
+          Text(tr('family.title'),
               textAlign: TextAlign.center, style: Theme.of(context).textTheme.headlineSmall),
           const SizedBox(height: 12),
           Text(
-            appState.auth.cloudAvailable
-                ? 'Per vedere e condividere i veicoli con la famiglia serve un account online.\n\n'
-                    'Vai in Impostazioni → Esci, poi accedi con "Account online" '
-                    '(email oppure Google).'
-                : 'La condivisione online non è ancora attiva in questa versione dell\'app.\n\n'
-                    'Quando sarà attivata potrai creare un nucleo familiare, invitare i '
-                    'familiari con un codice e vedere qui i loro veicoli.',
+            appState.auth.cloudAvailable ? tr('family.needCloud') : tr('family.cloudOff'),
             textAlign: TextAlign.center,
           ),
+          if (appState.auth.cloudAvailable) ...[
+            const SizedBox(height: 16),
+            Center(
+              child: FilledButton.icon(
+                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => const LoginScreen(upgrade: true))),
+                icon: const Icon(Icons.cloud_upload_outlined),
+                label: Text(tr('upgrade.button')),
+              ),
+            ),
+          ],
         ],
       );
     }
@@ -49,14 +57,10 @@ class FamilyTab extends StatelessWidget {
             const SizedBox(height: 24),
             Icon(Icons.family_restroom, size: 72, color: scheme.primary),
             const SizedBox(height: 12),
-            Text('Nessun nucleo familiare',
+            Text(tr('family.none'),
                 textAlign: TextAlign.center, style: Theme.of(context).textTheme.headlineSmall),
             const SizedBox(height: 8),
-            const Text(
-              'Crea un nucleo e dai il codice invito ai familiari, oppure entra '
-              'nel nucleo di un familiare con il suo codice.',
-              textAlign: TextAlign.center,
-            ),
+            Text(tr('family.noneHint'), textAlign: TextAlign.center),
             const SizedBox(height: 20),
           ],
           ...groups.map((g) => _groupSection(context, g)),
@@ -69,12 +73,12 @@ class FamilyTab extends StatelessWidget {
               FilledButton.icon(
                 onPressed: () => createGroupDialog(context),
                 icon: const Icon(Icons.group_add),
-                label: const Text('Crea nucleo familiare'),
+                label: Text(tr('family.create')),
               ),
               OutlinedButton.icon(
                 onPressed: () => joinGroupDialog(context),
                 icon: const Icon(Icons.key),
-                label: const Text('Entra con un codice'),
+                label: Text(tr('family.joinCode')),
               ),
             ],
           ),
@@ -103,8 +107,7 @@ class FamilyTab extends StatelessWidget {
                   Text(g.name,
                       style: TextStyle(
                           fontFamily: handFont, fontSize: 26, color: scheme.primary, height: 1.1)),
-                  Text('${g.members.length} ${g.members.length == 1 ? 'membro' : 'membri'} · '
-                      '${list.length} ${list.length == 1 ? 'veicolo' : 'veicoli'}',
+                  Text('${trn('family.members', g.members.length)} · ${trn('family.vehicles', list.length)}',
                       style: Theme.of(context).textTheme.bodySmall),
                 ]),
               ),
@@ -115,7 +118,7 @@ class FamilyTab extends StatelessWidget {
         if (list.isEmpty)
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 6),
-            child: Text('Ancora nessun veicolo in questo nucleo.',
+            child: Text(tr('family.noVehicles'),
                 style: TextStyle(color: scheme.onSurfaceVariant)),
           ),
         ...list.map((v) => VehicleCard(
@@ -128,7 +131,7 @@ class FamilyTab extends StatelessWidget {
           child: TextButton.icon(
             onPressed: () => onAdd(g.id),
             icon: const Icon(Icons.add),
-            label: Text('Aggiungi veicolo a "${g.name}"'),
+            label: Text(tr('family.addTo', {'name': g.name})),
           ),
         ),
       ]),
@@ -143,49 +146,49 @@ class FamilyTab extends StatelessWidget {
 Future<void> moveVehicleSheet(BuildContext context, Vehicle v) async {
   HapticFeedback.mediumImpact();
   if (!appState.isCloud) {
-    showSnack(context, 'Per condividere un veicolo con la famiglia serve un account online.');
+    showSnack(context, tr('move.needCloud'));
     return;
   }
   const personalKey = '__personal__';
   final groups = appState.data.groups.where((g) => g.id != v.fleetId).toList();
   final personal = appState.isPersonal(v);
-  final name = v.name.isEmpty ? (v.plate.isEmpty ? 'Veicolo' : v.plate) : v.name;
+  final name = v.name.isEmpty ? (v.plate.isEmpty ? tr('vehicle.generic') : v.plate) : v.name;
   final dest = await showModalBottomSheet<String>(
     context: context,
     builder: (ctx) => SafeArea(
       child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
-          child: Text(personal ? 'Aggiungi "$name" a un nucleo' : 'Sposta "$name"',
+          child: Text(personal ? tr('move.addTitle', {'name': name}) : tr('move.moveTitle', {'name': name}),
               style: const TextStyle(fontFamily: handFont, fontSize: 24)),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
           child: Text(
             personal
-                ? 'Il veicolo passa nel nucleo scelto e tutti i membri lo vedranno e potranno modificarlo.'
-                : 'Il veicolo verrà tolto da "${appState.fleetLabel(v)}".',
+                ? tr('move.addInfo')
+                : tr('move.moveInfo', {'name': appState.fleetLabel(v)}),
             style: TextStyle(color: Theme.of(ctx).colorScheme.onSurfaceVariant),
           ),
         ),
         if (groups.isEmpty && personal)
           ListTile(
             leading: const Icon(Icons.info_outline),
-            title: const Text('Non fai ancora parte di nessun nucleo familiare'),
-            subtitle: const Text('Creane uno o entra con un codice dalla scheda Famiglia.'),
+            title: Text(tr('move.noGroups')),
+            subtitle: Text(tr('move.noGroupsHint')),
             onTap: () => Navigator.pop(ctx),
           ),
         ...groups.map((g) => ListTile(
               leading: const Icon(Icons.home_outlined),
               title: Text(g.name),
-              subtitle: Text('${g.members.length} ${g.members.length == 1 ? 'membro' : 'membri'}'),
+              subtitle: Text(trn('family.members', g.members.length)),
               onTap: () => Navigator.pop(ctx, g.id),
             )),
         if (!personal)
           ListTile(
             leading: const Icon(Icons.person_outline),
-            title: const Text('I miei veicoli'),
-            subtitle: const Text('Solo tu lo vedrai'),
+            title: Text(tr('fleet.mine')),
+            subtitle: Text(tr('move.onlyYou')),
             onTap: () => Navigator.pop(ctx, personalKey),
           ),
         const SizedBox(height: 8),
@@ -194,30 +197,32 @@ Future<void> moveVehicleSheet(BuildContext context, Vehicle v) async {
   );
   if (dest == null || !context.mounted) return;
   final target = dest == personalKey ? null : dest;
-  final label = target == null ? 'I miei veicoli' : (appState.data.groupById(target)?.name ?? 'Famiglia');
+  final label = target == null
+      ? tr('fleet.mine')
+      : (appState.data.groupById(target)?.name ?? tr('family.defaultName'));
   await appState.moveVehicle(v.id, target);
-  if (context.mounted) showSnack(context, '"$name" ora è in "$label"');
+  if (context.mounted) showSnack(context, tr('move.done', {'name': name, 'where': label}));
 }
 
 // ---------------------------------------------------------------- Dialoghi
 
 Future<void> createGroupDialog(BuildContext context) async {
-  final c = TextEditingController(text: 'Famiglia');
+  final c = TextEditingController(text: tr('family.defaultName'));
   final name = await showDialog<String>(
     context: context,
     builder: (ctx) => AlertDialog(
-      title: const Text('Nuovo nucleo familiare'),
+      title: Text(tr('family.newTitle')),
       content: TextField(
         controller: c,
         autofocus: true,
         textCapitalization: TextCapitalization.words,
-        decoration: const InputDecoration(
-            labelText: 'Nome (es. Famiglia Rossi)', border: OutlineInputBorder()),
+        decoration: InputDecoration(
+            labelText: tr('family.nameHint'), border: const OutlineInputBorder()),
       ),
       actions: [
-        TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Annulla')),
+        TextButton(onPressed: () => Navigator.pop(ctx), child: Text(tr('common.cancel'))),
         FilledButton(
-            onPressed: () => Navigator.pop(ctx, c.text.trim()), child: const Text('Crea')),
+            onPressed: () => Navigator.pop(ctx, c.text.trim()), child: Text(tr('common.create'))),
       ],
     ),
   );
@@ -226,8 +231,8 @@ Future<void> createGroupDialog(BuildContext context) async {
     final g = await appState.createGroup(name);
     if (!context.mounted) return;
     Navigator.of(context).push(MaterialPageRoute(builder: (_) => GroupScreen(groupId: g.id)));
-  } catch (_) {
-    if (context.mounted) showSnack(context, 'Serve una connessione internet per creare il nucleo.');
+  } catch (e) {
+    if (context.mounted) showSnack(context, cloudErrorMessage(e));
   }
 }
 
@@ -236,33 +241,31 @@ Future<void> joinGroupDialog(BuildContext context) async {
   final code = await showDialog<String>(
     context: context,
     builder: (ctx) => AlertDialog(
-      title: const Text('Codice invito'),
+      title: Text(tr('family.inviteCode')),
       content: Column(mainAxisSize: MainAxisSize.min, children: [
-        const Text('Inserisci il codice che ti ha dato un familiare.'),
+        Text(tr('family.enterCode')),
         const SizedBox(height: 12),
         TextField(
           controller: c,
           autofocus: true,
           textCapitalization: TextCapitalization.characters,
           decoration:
-              const InputDecoration(hintText: 'Es. AB12CD34EF', border: OutlineInputBorder()),
+              InputDecoration(hintText: tr('family.codeHint'), border: const OutlineInputBorder()),
         ),
       ]),
       actions: [
-        TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Annulla')),
+        TextButton(onPressed: () => Navigator.pop(ctx), child: Text(tr('common.cancel'))),
         FilledButton(
-            onPressed: () => Navigator.pop(ctx, c.text.trim()), child: const Text('Entra')),
+            onPressed: () => Navigator.pop(ctx, c.text.trim()), child: Text(tr('family.join'))),
       ],
     ),
   );
   if (code == null || code.isEmpty || !context.mounted) return;
   try {
     final g = await appState.joinGroup(code);
-    if (context.mounted) showSnack(context, 'Sei entrato in "${g.name}"!');
-  } catch (_) {
-    if (context.mounted) {
-      showSnack(context, 'Impossibile entrare: controlla il codice e la connessione.');
-    }
+    if (context.mounted) showSnack(context, tr('family.joined', {'name': g.name}));
+  } catch (e) {
+    if (context.mounted) showSnack(context, cloudErrorMessage(e));
   }
 }
 
@@ -281,7 +284,7 @@ class GroupScreen extends StatelessWidget {
         if (g == null) {
           return Scaffold(
             appBar: AppBar(),
-            body: const NotebookPage(child: Center(child: Text('Nucleo non disponibile.'))),
+            body: NotebookPage(child: Center(child: Text(tr('family.unavailable')))),
           );
         }
         final me = appState.session?.key;
@@ -293,7 +296,7 @@ class GroupScreen extends StatelessWidget {
             child: ListView(
               padding: const EdgeInsets.fromLTRB(8, 12, 10, 32),
               children: [
-                Text('Codice invito', style: Theme.of(context).textTheme.titleLarge),
+                Text(tr('family.inviteCode'), style: Theme.of(context).textTheme.titleLarge),
                 const SizedBox(height: 6),
                 Card(
                   child: Padding(
@@ -305,33 +308,32 @@ class GroupScreen extends StatelessWidget {
                                 fontSize: 24, letterSpacing: 3, fontWeight: FontWeight.bold)),
                       ),
                       IconButton(
-                        tooltip: 'Copia',
+                        tooltip: tr('common.copy'),
                         icon: const Icon(Icons.copy),
                         onPressed: () {
                           Clipboard.setData(ClipboardData(text: g.id));
-                          showSnack(context, 'Codice copiato: incollalo su WhatsApp o SMS');
+                          showSnack(context, tr('family.codeCopied'));
                         },
                       ),
                     ]),
                   ),
                 ),
                 Text(
-                  'Il familiare installa l\'app, accede con un account online, apre la scheda '
-                  'Famiglia → "Entra con un codice" e inserisce questo codice.',
+                  tr('family.inviteHowTo'),
                   style: TextStyle(fontSize: 13, color: scheme.onSurfaceVariant),
                 ),
                 const SizedBox(height: 20),
-                Text('Membri (${g.members.length})',
+                Text(tr('family.membersTitle', {'n': g.members.length}),
                     style: Theme.of(context).textTheme.titleLarge),
                 ...g.members.entries.map((m) => ListTile(
                       contentPadding: EdgeInsets.zero,
                       leading: Icon(m.key == g.ownerUid ? Icons.star : Icons.person_outline,
                           color: m.key == g.ownerUid ? Colors.amber.shade700 : null),
-                      title: Text(m.value + (m.key == me ? ' (tu)' : '')),
-                      subtitle: m.key == g.ownerUid ? const Text('Creatore') : null,
+                      title: Text(m.value + (m.key == me ? ' ${tr('family.you')}' : '')),
+                      subtitle: m.key == g.ownerUid ? Text(tr('family.owner')) : null,
                       trailing: isOwner && m.key != me
                           ? IconButton(
-                              tooltip: 'Rimuovi',
+                              tooltip: tr('common.remove'),
                               icon: const Icon(Icons.person_remove_outlined),
                               onPressed: () => _removeMember(context, g, m.key, m.value),
                             )
@@ -342,17 +344,17 @@ class GroupScreen extends StatelessWidget {
                   ListTile(
                     contentPadding: EdgeInsets.zero,
                     leading: const Icon(Icons.edit_outlined),
-                    title: const Text('Rinomina nucleo'),
+                    title: Text(tr('family.rename')),
                     onTap: () => _rename(context, g),
                   ),
                 ListTile(
                   contentPadding: EdgeInsets.zero,
                   leading: Icon(isOwner ? Icons.delete_forever_outlined : Icons.exit_to_app,
                       color: Colors.red.shade700),
-                  title: Text(isOwner ? 'Elimina nucleo' : 'Lascia il nucleo'),
+                  title: Text(isOwner ? tr('family.delete') : tr('family.leave')),
                   subtitle: Text(isOwner
-                      ? 'Tutti i membri perderanno l\'accesso ai veicoli del nucleo'
-                      : 'Non vedrai più i veicoli di questo nucleo'),
+                      ? tr('family.deleteInfo')
+                      : tr('family.leaveInfo')),
                   onTap: () => _leave(context, g, isOwner),
                 ),
               ],
@@ -368,20 +370,20 @@ class GroupScreen extends StatelessWidget {
     final name = await showDialog<String>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Nome del nucleo'),
+        title: Text(tr('family.nameTitle')),
         content: TextField(controller: c, autofocus: true),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Annulla')),
+          TextButton(onPressed: () => Navigator.pop(ctx), child: Text(tr('common.cancel'))),
           FilledButton(
-              onPressed: () => Navigator.pop(ctx, c.text.trim()), child: const Text('Salva')),
+              onPressed: () => Navigator.pop(ctx, c.text.trim()), child: Text(tr('common.save'))),
         ],
       ),
     );
     if (name == null || name.isEmpty) return;
     try {
       await appState.renameGroup(g.id, name);
-    } catch (_) {
-      if (context.mounted) showSnack(context, 'Serve una connessione internet.');
+    } catch (e) {
+      if (context.mounted) showSnack(context, cloudErrorMessage(e));
     }
   }
 
@@ -389,19 +391,19 @@ class GroupScreen extends StatelessWidget {
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Rimuovere il membro?'),
-        content: Text('$email non vedrà più i veicoli di "${g.name}".'),
+        title: Text(tr('family.removeTitle')),
+        content: Text(tr('family.removeBody', {'email': email, 'name': g.name})),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Annulla')),
-          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Rimuovi')),
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
+          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(tr('common.remove'))),
         ],
       ),
     );
     if (ok != true) return;
     try {
       await appState.removeMember(g.id, uid);
-    } catch (_) {
-      if (context.mounted) showSnack(context, 'Serve una connessione internet.');
+    } catch (e) {
+      if (context.mounted) showSnack(context, cloudErrorMessage(e));
     }
   }
 
@@ -409,16 +411,16 @@ class GroupScreen extends StatelessWidget {
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text(isOwner ? 'Eliminare il nucleo?' : 'Lasciare il nucleo?'),
+        title: Text(isOwner ? tr('family.deleteTitle') : tr('family.leaveTitle')),
         content: Text(isOwner
-            ? '"${g.name}" verrà eliminato per tutti i membri, insieme ai suoi veicoli.'
-            : 'I veicoli di "${g.name}" spariranno da questo telefono.'),
+            ? tr('family.deleteBody', {'name': g.name})
+            : tr('family.leaveBody', {'name': g.name})),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Annulla')),
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
           FilledButton(
             style: FilledButton.styleFrom(backgroundColor: Colors.red.shade700),
             onPressed: () => Navigator.pop(ctx, true),
-            child: Text(isOwner ? 'Elimina' : 'Lascia'),
+            child: Text(isOwner ? tr('common.delete') : tr('family.leaveShort')),
           ),
         ],
       ),
@@ -431,8 +433,8 @@ class GroupScreen extends StatelessWidget {
         await appState.leaveGroup(g.id);
       }
       if (context.mounted) Navigator.of(context).pop();
-    } catch (_) {
-      if (context.mounted) showSnack(context, 'Serve una connessione internet.');
+    } catch (e) {
+      if (context.mounted) showSnack(context, cloudErrorMessage(e));
     }
   }
 }

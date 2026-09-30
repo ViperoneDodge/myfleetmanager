@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../services/app_state.dart';
@@ -39,12 +40,12 @@ class _HomeScreenState extends State<HomeScreen> {
     if (!appState.isCloud) return const SizedBox.shrink();
     switch (appState.syncStatus) {
       case SyncStatus.online:
-        return const Tooltip(message: 'Sincronizzato', child: Icon(Icons.cloud_done));
+        return Tooltip(message: tr('sync.done'), child: const Icon(Icons.cloud_done));
       case SyncStatus.connecting:
-        return const Tooltip(message: 'Connessione…', child: Icon(Icons.cloud_sync));
+        return Tooltip(message: tr('sync.connecting'), child: const Icon(Icons.cloud_sync));
       case SyncStatus.offline:
         return IconButton(
-          tooltip: 'Offline: i dati sono salvati sul telefono. Tocca per riprovare.',
+          tooltip: tr('sync.offline'),
           icon: const Icon(Icons.cloud_off),
           onPressed: appState.retrySync,
         );
@@ -58,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return ListenableBuilder(
       listenable: appState,
       builder: (context, _) {
-        const titles = ['I miei veicoli', 'Famiglia', 'Scadenze'];
+        final titles = [tr('fleet.mine'), tr('tab.family'), tr('tab.deadlines')];
         Widget body;
         switch (_tab) {
           case 1:
@@ -76,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
             actions: [
               _syncIcon(),
               IconButton(
-                tooltip: 'Impostazioni',
+                tooltip: tr('settings.title'),
                 icon: const Icon(Icons.settings),
                 onPressed: () => Navigator.of(context)
                     .push(MaterialPageRoute(builder: (_) => const SettingsScreen())),
@@ -88,25 +89,25 @@ class _HomeScreenState extends State<HomeScreen> {
               ? FloatingActionButton.extended(
                   onPressed: () => _openAdd(),
                   icon: const Icon(Icons.add),
-                  label: const Text('Aggiungi'),
+                  label: Text(tr('common.add')),
                 )
               : null,
           bottomNavigationBar: NavigationBar(
             selectedIndex: _tab,
             onDestinationSelected: (i) => setState(() => _tab = i),
-            destinations: const [
+            destinations: [
               NavigationDestination(
-                  icon: Icon(Icons.garage_outlined),
-                  selectedIcon: Icon(Icons.garage),
-                  label: 'I miei'),
+                  icon: const Icon(Icons.garage_outlined),
+                  selectedIcon: const Icon(Icons.garage),
+                  label: tr('tab.mine')),
               NavigationDestination(
-                  icon: Icon(Icons.family_restroom_outlined),
-                  selectedIcon: Icon(Icons.family_restroom),
-                  label: 'Famiglia'),
+                  icon: const Icon(Icons.family_restroom_outlined),
+                  selectedIcon: const Icon(Icons.family_restroom),
+                  label: tr('tab.family')),
               NavigationDestination(
-                  icon: Icon(Icons.event_outlined),
-                  selectedIcon: Icon(Icons.event),
-                  label: 'Scadenze'),
+                  icon: const Icon(Icons.event_outlined),
+                  selectedIcon: const Icon(Icons.event),
+                  label: tr('tab.deadlines')),
             ],
           ),
         );
@@ -129,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.only(right: 6),
                 child: ChoiceChip(
-                  label: Text('Tutti (${all.length})'),
+                  label: Text(tr('filter.all', {'n': all.length})),
                   selected: _filter == null,
                   onSelected: (_) => setState(() => _filter = null),
                 ),
@@ -154,11 +155,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icon(Icons.garage_outlined,
                     size: 80, color: Theme.of(context).colorScheme.outline),
                 const SizedBox(height: 12),
-                const Text('Nessun veicolo',
-                    style: TextStyle(fontSize: 26, fontFamily: handFont)),
+                Text(tr('home.empty'),
+                    style: const TextStyle(fontSize: 26, fontFamily: handFont)),
                 const SizedBox(height: 4),
-                const Text('Tocca "Aggiungi" per inserire il primo veicolo.',
-                    textAlign: TextAlign.center),
+                Text(tr('home.emptyHint'), textAlign: TextAlign.center),
               ]),
             ),
           ...list.map((v) => VehicleCard(
@@ -170,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 10),
               child: Text(
-                'Tieni premuto un veicolo per aggiungerlo a un nucleo familiare.',
+                tr('home.longPressHint'),
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 12, color: Theme.of(context).colorScheme.outline),
               ),
@@ -189,7 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     items.sort((a, b) => a.d.dueDate!.compareTo(b.d.dueDate!));
     if (items.isEmpty) {
-      return const Center(child: Text('Nessuna scadenza impostata.'));
+      return Center(child: Text(tr('deadlines.empty')));
     }
     final showFleet = appState.isCloud && appState.data.groups.isNotEmpty;
     return ListView.separated(

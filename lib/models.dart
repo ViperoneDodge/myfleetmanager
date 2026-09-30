@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'dart:math';
 import 'dart:typed_data';
 
+import 'l10n.dart';
+
 String newId([int length = 16]) {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
   final r = Random.secure();
@@ -20,26 +22,26 @@ VehicleType vehicleTypeFrom(String? s) {
 String vehicleTypeLabel(VehicleType t) {
   switch (t) {
     case VehicleType.auto:
-      return 'Auto';
+      return tr('type.car');
     case VehicleType.moto:
-      return 'Moto';
+      return tr('type.moto');
     case VehicleType.furgone:
-      return 'Furgone';
+      return tr('type.van');
     case VehicleType.rimorchio:
-      return 'Rimorchio';
+      return tr('type.trailer');
   }
 }
 
 String vehicleTypePlural(VehicleType t) {
   switch (t) {
     case VehicleType.auto:
-      return 'Auto';
+      return tr('type.cars');
     case VehicleType.moto:
-      return 'Moto';
+      return tr('type.motos');
     case VehicleType.furgone:
-      return 'Furgoni';
+      return tr('type.vans');
     case VehicleType.rimorchio:
-      return 'Rimorchi';
+      return tr('type.trailers');
   }
 }
 
@@ -79,7 +81,7 @@ class VehicleDocument {
 
   factory VehicleDocument.fromJson(Map<String, dynamic> j) => VehicleDocument(
         id: j['id'] as String?,
-        name: j['name'] as String? ?? 'Documento',
+        name: j['name'] as String? ?? tr('doc.default'),
         fileName: j['fileName'] as String? ?? '',
         kind: j['kind'] as String? ?? 'image',
         addedAt: (j['addedAt'] as num?)?.toInt(),
@@ -105,13 +107,13 @@ DeadlineKind deadlineKindFrom(String? s) {
 String deadlineKindDefaultLabel(DeadlineKind k) {
   switch (k) {
     case DeadlineKind.insurance:
-      return 'Assicurazione';
+      return tr('deadline.insurance');
     case DeadlineKind.inspection:
-      return 'Revisione';
+      return tr('deadline.inspection');
     case DeadlineKind.service:
-      return 'Tagliando';
+      return tr('deadline.service');
     case DeadlineKind.custom:
-      return 'Personalizzata';
+      return tr('deadline.custom');
   }
 }
 
@@ -151,8 +153,11 @@ class Deadline {
     return date;
   }
 
-  String get dueLabel =>
-      kind == DeadlineKind.service ? 'Prossimo tagliando' : label;
+  /// Nome mostrato: le scadenze standard seguono la lingua scelta,
+  /// quelle personalizzate mostrano il nome scritto dall'utente.
+  String get displayLabel => kind == DeadlineKind.custom ? label : deadlineKindDefaultLabel(kind);
+
+  String get dueLabel => kind == DeadlineKind.service ? tr('deadline.nextService') : displayLabel;
 
   Map<String, dynamic> toJson() => {
         'id': id,
@@ -187,15 +192,11 @@ const List<String> maintenanceItems = [
 String maintenanceItemLabel(String k) {
   switch (k) {
     case 'oil':
-      return 'Olio motore';
     case 'oilFilter':
-      return 'Filtro olio';
     case 'airFilter':
-      return 'Filtro aria';
     case 'cabinFilter':
-      return 'Filtro abitacolo';
     case 'fuelFilter':
-      return 'Filtro carburante';
+      return tr('maint.$k');
     default:
       return k;
   }
@@ -423,7 +424,7 @@ class FleetGroup {
 
   factory FleetGroup.fromJson(Map<String, dynamic> j) => FleetGroup(
         id: j['id'] as String,
-        name: j['name'] as String? ?? 'Famiglia',
+        name: j['name'] as String? ?? tr('family.defaultName'),
         ownerUid: j['ownerUid'] as String? ?? '',
         members: Map<String, dynamic>.from((j['members'] as Map?) ?? {})
             .map((k, v) => MapEntry(k, v.toString())),

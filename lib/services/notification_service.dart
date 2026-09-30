@@ -7,6 +7,7 @@ import 'package:intl/intl.dart';
 import 'package:timezone/data/latest_all.dart' as tzdata;
 import 'package:timezone/timezone.dart' as tz;
 
+import '../l10n.dart';
 import '../models.dart';
 
 /// Notifiche programmate sul telefono: funzionano senza internet.
@@ -34,18 +35,37 @@ class NotificationService {
     if (a != null) {
       await a.createNotificationChannel(AndroidNotificationChannel(
         'scadenze',
-        'Scadenze veicoli',
-        description: 'Promemoria per assicurazione, revisione, tagliando e altre scadenze',
+        tr('channel.deadlines'),
+        description: tr('channel.deadlinesDesc'),
         importance: Importance.high,
       ));
       await a.createNotificationChannel(AndroidNotificationChannel(
         'famiglia',
-        'Attività famiglia',
-        description: 'Notifiche push sui veicoli condivisi nei nuclei familiari',
+        tr('channel.family'),
+        description: tr('channel.familyDesc'),
         importance: Importance.high,
       ));
     }
     _ready = true;
+  }
+
+  /// Aggiorna i nomi dei canali (visibili nelle impostazioni Android) dopo un cambio lingua.
+  Future<void> refreshChannels() async {
+    if (!_ready) return;
+    final a = _android;
+    if (a == null) return;
+    await a.createNotificationChannel(AndroidNotificationChannel(
+      'scadenze',
+      tr('channel.deadlines'),
+      description: tr('channel.deadlinesDesc'),
+      importance: Importance.high,
+    ));
+    await a.createNotificationChannel(AndroidNotificationChannel(
+      'famiglia',
+      tr('channel.family'),
+      description: tr('channel.familyDesc'),
+      importance: Importance.high,
+    ));
   }
 
   AndroidFlutterLocalNotificationsPlugin? get _android => Platform.isAndroid
@@ -96,40 +116,53 @@ class NotificationService {
   static String offsetLabel(int days) {
     switch (days) {
       case 30:
-        return '1 mese prima';
+        return tr('notify.before30');
       case 7:
-        return '1 settimana prima';
+        return tr('notify.before7');
       case 1:
-        return '1 giorno prima';
+        return tr('notify.before1');
       case 0:
-        return 'Il giorno della scadenza';
+        return tr('notify.before0');
       default:
-        return '$days giorni prima';
+        return tr('notify.beforeDays', {'n': days});
     }
   }
 
-  static const NotificationDetails _details = NotificationDetails(
+  static String _whenLabel(int days) {
+    switch (days) {
+      case 30:
+        return tr('notify.in30');
+      case 7:
+        return tr('notify.in7');
+      case 1:
+        return tr('notify.in1');
+      default:
+        return tr('notify.inDays', {'n': days});
+    }
+  }
+
+  static NotificationDetails get _details => NotificationDetails(
     android: AndroidNotificationDetails(
       'scadenze',
-      'Scadenze veicoli',
-      channelDescription: 'Promemoria per assicurazione, revisione, tagliando e altre scadenze',
+      tr('channel.deadlines'),
+      channelDescription: tr('channel.deadlinesDesc'),
       importance: Importance.high,
       priority: Priority.high,
-      color: Color(0xFF0257C3),
+      color: const Color(0xFF0257C3),
     ),
-    iOS: DarwinNotificationDetails(),
+    iOS: const DarwinNotificationDetails(),
   );
 
-  static const NotificationDetails _familyDetails = NotificationDetails(
+  static NotificationDetails get _familyDetails => NotificationDetails(
     android: AndroidNotificationDetails(
       'famiglia',
-      'Attività famiglia',
-      channelDescription: 'Notifiche push sui veicoli condivisi nei nuclei familiari',
+      tr('channel.family'),
+      channelDescription: tr('channel.familyDesc'),
       importance: Importance.high,
       priority: Priority.high,
-      color: Color(0xFF0257C3),
+      color: const Color(0xFF0257C3),
     ),
-    iOS: DarwinNotificationDetails(),
+    iOS: const DarwinNotificationDetails(),
   );
 
   // Identificativi: 1..99999 promemoria scadenze, 900001 prova programmata,
@@ -163,9 +196,10 @@ class NotificationService {
           if (!when.isAfter(now)) continue;
           final vName = v.name.isEmpty ? v.plate : '${v.name} (${v.plate})';
           final title = off == 0
-              ? '${d.dueLabel} scade oggi'
-              : '${d.dueLabel}: scadenza ${offsetLabel(off).replaceAll(' prima', '')}';
-          items.add(_Pending(when, title, '$vName · scade il ${fmt.format(due)}'));
+              ? tr('notify.titleToday', {'what': d.dueLabel})
+              : tr('notify.titleSoon', {'what': d.dueLabel, 'when': _whenLabel(off)});
+          items.add(_Pending(
+              when, title, tr('notify.body', {'vehicle': vName, 'date': fmt.format(due)})));
         }
       }
     }
@@ -196,8 +230,8 @@ class NotificationService {
     final when = tz.TZDateTime.now(tz.local).add(delay);
     await _plugin.zonedSchedule(
       _testId,
-      'Prova promemoria',
-      'Se leggi questo messaggio, i promemoria programmati funzionano anche ad app chiusa.',
+      tr('notify.testTitle'),
+      tr('notify.testBody'),
       when,
       _details,
       androidScheduleMode: await _mode(),
@@ -221,8 +255,8 @@ class NotificationService {
     await init();
     await _plugin.show(
       0,
-      'Notifiche attive',
-      'Riceverai i promemoria delle scadenze dei tuoi veicoli.',
+      tr('notify.activeTitle'),
+      tr('notify.activeBody'),
       _details,
     );
   }

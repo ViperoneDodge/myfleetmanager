@@ -1,8 +1,42 @@
 import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart' show FirebaseException;
 
+import '../l10n.dart';
 import '../models.dart';
+
+/// Errore con messaggio già pronto da mostrare all'utente.
+class FleetException implements Exception {
+  final String message;
+  FleetException(this.message);
+  @override
+  String toString() => message;
+}
+
+/// Traduce gli errori di Firestore in messaggi comprensibili.
+String cloudErrorMessage(Object e) {
+  if (e is FleetException) return e.message;
+  if (e is TimeoutException) return tr('cloud.offline');
+  if (e is FirebaseException) {
+    switch (e.code) {
+      case 'permission-denied':
+        return tr('cloud.permissionDenied');
+      case 'not-found':
+        return (e.message ?? '').contains('database')
+            ? tr('cloud.noDatabase')
+            : tr('family.badCode');
+      case 'unavailable':
+      case 'deadline-exceeded':
+        return tr('cloud.offline');
+      case 'unauthenticated':
+        return tr('cloud.unauthenticated');
+      default:
+        return tr('cloud.generic', {'code': e.code});
+    }
+  }
+  return tr('cloud.generic', {'code': e.toString()});
+}
 
 /// Sincronizzazione online con Firestore.
 ///
@@ -16,6 +50,8 @@ import '../models.dart';
 class SyncService {
   FirebaseFirestore get _db => FirebaseFirestore.instance;
   CollectionReference<Map<String, dynamic>> get _fleets => _db.collection('fleets');
+
+  static const Duration _timeout = Duration(seconds: 20);
 
   StreamSubscription? _groupsSub;
   final Map<String, StreamSubscription> _vehSubs = {};
@@ -48,27 +84,27 @@ class SyncService {
       'members': [s.key],
       'memberEmails': {s.key: email},
       'createdAt': DateTime.now().millisecondsSinceEpoch,
-    });
+    }).timeout(_timeout);
     return FleetGroup(id: id, name: name, ownerUid: s.key, members: {s.key: email});
   }
 
   /// Entra in un nucleo familiare con il codice invito.
   Future<FleetGroup> joinGroup(Session s, String code) async {
     final id = code.trim().toUpperCase().replaceAll(' ', '');
-    if (id.isEmpty || id == s.key) throw Exception('Codice non valido.');
+    if (id.isEmpty || id == s.key) throw FleetException(tr('family.badCode'));
     final ref = _fleets.doc(id);
-    final snap = await ref.get(const GetOptions(source: Source.server));
+    final snap = await ref.get(const GetOptions(source: Source.server)).timeout(_timeout);
     final data = snap.data();
     if (!snap.exists || data == null || data['personal'] == true) {
-      throw Exception('Codice non valido.');
+      throw FleetException(tr('family.badCode'));
     }
     await ref.update({
       'members': FieldValue.arrayUnion([s.key]),
       'memberEmails.${s.key}': s.email ?? s.displayName,
-    });
+    }).timeout(_timeout);
     return FleetGroup(
       id: id,
-      name: (data['name'] as String?) ?? 'Famiglia',
+      name: (data['name'] as String?) ?? tr('family.defaultName'),
       ownerUid: (data['ownerUid'] as String?) ?? '',
     );
   }
@@ -112,7 +148,7 @@ class SyncService {
         }
         groups.add(FleetGroup(
           id: d.id,
-          name: (data['name'] as String?) ?? 'Famiglia',
+          name: (data['name'] as String?) ?? tr('family.defaultName'),
           ownerUid: (data['ownerUid'] as String?) ?? '',
           members: members,
         ));

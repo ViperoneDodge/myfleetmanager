@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:open_filex/open_filex.dart';
 
+import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../theme.dart';
@@ -20,15 +21,15 @@ class VehicleDetailScreen extends StatelessWidget {
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Eliminare il veicolo?'),
-        content: Text('"${v.name.isEmpty ? v.plate : v.name}", le sue scadenze e i documenti '
-            'verranno eliminati${appState.isCloud ? ' (le scadenze anche per gli altri membri della famiglia)' : ''}.'),
+        title: Text(tr('vehicle.deleteTitle')),
+        content: Text(tr(appState.isCloud ? 'vehicle.deleteBodyCloud' : 'vehicle.deleteBody',
+            {'name': v.name.isEmpty ? v.plate : v.name})),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Annulla')),
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
           FilledButton(
             style: FilledButton.styleFrom(backgroundColor: Colors.red.shade700),
             onPressed: () => Navigator.pop(ctx, true),
-            child: const Text('Elimina'),
+            child: Text(tr('common.delete')),
           ),
         ],
       ),
@@ -43,18 +44,24 @@ class VehicleDetailScreen extends StatelessWidget {
 
   Future<String?> _askName(BuildContext context, {String initial = ''}) {
     final c = TextEditingController(text: initial);
-    const suggestions = ['Libretto', 'Polizza assicurazione', 'Certificato revisione', 'Bollo', 'Fattura tagliando'];
+    final suggestions = [
+      tr('doc.registration'),
+      tr('doc.policy'),
+      tr('doc.inspectionCert'),
+      tr('doc.tax'),
+      tr('doc.serviceInvoice'),
+    ];
     return showDialog<String>(
       context: context,
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setSt) => AlertDialog(
-          title: const Text('Nome del documento'),
+          title: Text(tr('doc.nameTitle')),
           content: Column(mainAxisSize: MainAxisSize.min, children: [
             TextField(
               controller: c,
               autofocus: true,
               textCapitalization: TextCapitalization.sentences,
-              decoration: const InputDecoration(border: OutlineInputBorder(), hintText: 'Es. Libretto'),
+              decoration: InputDecoration(border: const OutlineInputBorder(), hintText: tr('doc.nameHint')),
             ),
             const SizedBox(height: 10),
             Wrap(
@@ -69,10 +76,10 @@ class VehicleDetailScreen extends StatelessWidget {
             ),
           ]),
           actions: [
-            TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Annulla')),
+            TextButton(onPressed: () => Navigator.pop(ctx), child: Text(tr('common.cancel'))),
             FilledButton(
-              onPressed: () => Navigator.pop(ctx, c.text.trim().isEmpty ? 'Documento' : c.text.trim()),
-              child: const Text('Salva'),
+              onPressed: () => Navigator.pop(ctx, c.text.trim().isEmpty ? tr('doc.default') : c.text.trim()),
+              child: Text(tr('common.save')),
             ),
           ],
         ),
@@ -85,24 +92,24 @@ class VehicleDetailScreen extends StatelessWidget {
       context: context,
       builder: (ctx) => SafeArea(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
-          const Padding(
-            padding: EdgeInsets.all(12),
-            child: Text('Aggiungi documento', style: TextStyle(fontFamily: handFont, fontSize: 24)),
+          Padding(
+            padding: const EdgeInsets.all(12),
+            child: Text(tr('doc.addTitle'), style: const TextStyle(fontFamily: handFont, fontSize: 24)),
           ),
           ListTile(
             leading: const Icon(Icons.document_scanner_outlined),
-            title: const Text('Fotografa il documento'),
+            title: Text(tr('doc.camera')),
             onTap: () => Navigator.pop(ctx, 'camera'),
           ),
           ListTile(
             leading: const Icon(Icons.photo_library_outlined),
-            title: const Text('Immagine dalla galleria'),
+            title: Text(tr('doc.gallery')),
             onTap: () => Navigator.pop(ctx, 'gallery'),
           ),
           ListTile(
             leading: const Icon(Icons.picture_as_pdf_outlined),
-            title: const Text('File PDF o immagine'),
-            subtitle: const Text('Dai file del telefono, Drive, download…'),
+            title: Text(tr('doc.file')),
+            subtitle: Text(tr('doc.fileInfo')),
             onTap: () => Navigator.pop(ctx, 'file'),
           ),
         ]),
@@ -127,30 +134,30 @@ class VehicleDetailScreen extends StatelessWidget {
         path = x?.path;
       }
     } catch (e) {
-      if (context.mounted) showSnack(context, 'Impossibile aprire il file: $e');
+      if (context.mounted) showSnack(context, tr('doc.openError', {'error': e}));
       return;
     }
     if (path == null || !context.mounted) return;
-    final name = await _askName(context, initial: v.documents.isEmpty ? 'Libretto' : '');
+    final name = await _askName(context, initial: v.documents.isEmpty ? tr('doc.registration') : '');
     if (name == null) return;
     try {
       await appState.addDocument(v.id, path, name);
-      if (context.mounted) showSnack(context, 'Documento salvato');
+      if (context.mounted) showSnack(context, tr('doc.saved'));
     } catch (e) {
-      if (context.mounted) showSnack(context, 'Errore nel salvataggio: $e');
+      if (context.mounted) showSnack(context, tr('doc.saveError', {'error': e}));
     }
   }
 
   Future<void> _openDocument(BuildContext context, VehicleDocument d) async {
     final f = await appState.documentFile(d);
     if (!await f.exists()) {
-      if (context.mounted) showSnack(context, 'File non trovato sul telefono.');
+      if (context.mounted) showSnack(context, tr('doc.notFound'));
       return;
     }
     if (d.isPdf) {
       final r = await OpenFilex.open(f.path, type: 'application/pdf');
       if (r.type != ResultType.done && context.mounted) {
-        showSnack(context, 'Nessuna app per aprire i PDF: ${r.message}');
+        showSnack(context, tr('doc.noPdfApp', {'error': r.message}));
       }
     } else if (context.mounted) {
       Navigator.of(context).push(MaterialPageRoute(
@@ -166,17 +173,17 @@ class VehicleDetailScreen extends StatelessWidget {
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           ListTile(
             leading: const Icon(Icons.open_in_new),
-            title: const Text('Apri'),
+            title: Text(tr('doc.open')),
             onTap: () => Navigator.pop(ctx, 'open'),
           ),
           ListTile(
             leading: const Icon(Icons.drive_file_rename_outline),
-            title: const Text('Rinomina'),
+            title: Text(tr('doc.rename')),
             onTap: () => Navigator.pop(ctx, 'rename'),
           ),
           ListTile(
             leading: Icon(Icons.delete_outline, color: Colors.red.shade700),
-            title: const Text('Elimina'),
+            title: Text(tr('common.delete')),
             onTap: () => Navigator.pop(ctx, 'delete'),
           ),
         ]),
@@ -192,11 +199,11 @@ class VehicleDetailScreen extends StatelessWidget {
       final ok = await showDialog<bool>(
         context: context,
         builder: (ctx) => AlertDialog(
-          title: const Text('Eliminare il documento?'),
-          content: Text('"${d.name}" verrà cancellato dal telefono.'),
+          title: Text(tr('doc.deleteTitle')),
+          content: Text(tr('doc.deleteBody', {'name': d.name})),
           actions: [
-            TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Annulla')),
-            FilledButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Elimina')),
+            TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
+            FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(tr('common.delete'))),
           ],
         ),
       );
@@ -215,17 +222,17 @@ class VehicleDetailScreen extends StatelessWidget {
         if (v == null) {
           return Scaffold(
               appBar: AppBar(),
-              body: const NotebookPage(child: Center(child: Text('Veicolo non trovato.'))));
+              body: NotebookPage(child: Center(child: Text(tr('vehicle.notFound')))));
         }
         final scheme = Theme.of(context).colorScheme;
         final bytes = v.photoBytes;
         final tracked = v.deadlines.where((d) => d.enabled).toList();
         return Scaffold(
           appBar: AppBar(
-            title: Text(v.name.isEmpty ? 'Veicolo' : v.name),
+            title: Text(v.name.isEmpty ? tr('vehicle.generic') : v.name),
             actions: [
               IconButton(
-                tooltip: 'Elimina',
+                tooltip: tr('common.delete'),
                 icon: const Icon(Icons.delete_outline),
                 onPressed: () => _delete(context, v),
               ),
@@ -233,7 +240,7 @@ class VehicleDetailScreen extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton.extended(
             icon: const Icon(Icons.edit),
-            label: const Text('Modifica'),
+            label: Text(tr('common.edit')),
             onPressed: () => Navigator.of(context).push(MaterialPageRoute(
                 builder: (_) => VehicleEditScreen(vehicle: v.copy()))),
           ),
@@ -283,7 +290,7 @@ class VehicleDetailScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 18),
-                Text(v.name.isEmpty ? 'Senza nome' : v.name,
+                Text(v.name.isEmpty ? tr('vehicle.noName') : v.name,
                     style: Theme.of(context).textTheme.headlineSmall),
                 const SizedBox(height: 6),
                 Wrap(
@@ -320,27 +327,27 @@ class VehicleDetailScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 18),
-                Text('Scadenze', style: Theme.of(context).textTheme.titleLarge),
+                Text(tr('tab.deadlines'), style: Theme.of(context).textTheme.titleLarge),
                 if (tracked.isEmpty)
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 8),
-                    child: Text('Nessuna scadenza monitorata.'),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: Text(tr('vehicle.noTracked')),
                   ),
                 ...tracked.map((d) => _deadlineTile(context, d)),
                 const SizedBox(height: 16),
                 Row(children: [
                   Expanded(
-                      child: Text('Manutenzioni', style: Theme.of(context).textTheme.titleLarge)),
+                      child: Text(tr('maint.title'), style: Theme.of(context).textTheme.titleLarge)),
                   TextButton.icon(
                     onPressed: () => _openMaintenance(context, v, null),
                     icon: const Icon(Icons.add),
-                    label: const Text('Aggiungi'),
+                    label: Text(tr('common.add')),
                   ),
                 ]),
                 if (v.maintenance.isEmpty)
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8),
-                    child: Text('Registra qui tagliandi e interventi: data, km e filtri sostituiti.',
+                    child: Text(tr('maint.empty'),
                         style: TextStyle(color: scheme.onSurfaceVariant)),
                   ),
                 ...v.maintenanceSorted.map((m) => Card(
@@ -357,17 +364,17 @@ class VehicleDetailScreen extends StatelessWidget {
                 const SizedBox(height: 16),
                 Row(children: [
                   Expanded(
-                      child: Text('Documenti', style: Theme.of(context).textTheme.titleLarge)),
+                      child: Text(tr('doc.title'), style: Theme.of(context).textTheme.titleLarge)),
                   TextButton.icon(
                     onPressed: () => _addDocument(context, v),
                     icon: const Icon(Icons.add),
-                    label: const Text('Aggiungi'),
+                    label: Text(tr('common.add')),
                   ),
                 ]),
                 if (v.documents.isEmpty)
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8),
-                    child: Text('Salva qui libretto, polizza e altri documenti (foto o PDF).',
+                    child: Text(tr('doc.empty'),
                         style: TextStyle(color: scheme.onSurfaceVariant)),
                   ),
                 ...v.documents.map((d) => Card(
@@ -380,7 +387,7 @@ class VehicleDetailScreen extends StatelessWidget {
                         ),
                         title: Text(d.name),
                         subtitle: Text(
-                            '${d.isPdf ? 'PDF' : 'Immagine'} · ${_size(d.size)} · ${fmtDate(DateTime.fromMillisecondsSinceEpoch(d.addedAt))}'),
+                            '${d.isPdf ? 'PDF' : tr('doc.image')} · ${_size(d.size)} · ${fmtDate(DateTime.fromMillisecondsSinceEpoch(d.addedAt))}'),
                         onTap: () => _openDocument(context, d),
                         trailing: IconButton(
                           icon: const Icon(Icons.more_vert),
@@ -391,12 +398,12 @@ class VehicleDetailScreen extends StatelessWidget {
                 if (appState.isCloud && v.documents.isNotEmpty)
                   Padding(
                     padding: const EdgeInsets.only(top: 4),
-                    child: Text('I documenti restano solo su questo telefono.',
+                    child: Text(tr('doc.localOnly'),
                         style: TextStyle(fontSize: 12, color: scheme.outline)),
                   ),
                 if (v.notes.trim().isNotEmpty) ...[
                   const SizedBox(height: 16),
-                  Text('Note', style: Theme.of(context).textTheme.titleLarge),
+                  Text(tr('vehicle.notes'), style: Theme.of(context).textTheme.titleLarge),
                   const SizedBox(height: 4),
                   Text(v.notes, style: const TextStyle(fontFamily: handFont, fontSize: 20)),
                 ],
@@ -404,8 +411,10 @@ class VehicleDetailScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 16),
                     child: Text(
-                      'Ultima modifica: ${v.updatedBy} · '
-                      '${fmtDate(DateTime.fromMillisecondsSinceEpoch(v.updatedAt))}',
+                      tr('vehicle.lastEdit', {
+                        'who': v.updatedBy,
+                        'date': fmtDate(DateTime.fromMillisecondsSinceEpoch(v.updatedAt)),
+                      }),
                       style: TextStyle(fontSize: 12, color: scheme.outline),
                     ),
                   ),
@@ -456,12 +465,12 @@ class VehicleDetailScreen extends StatelessWidget {
     }
     String subtitle;
     if (d.kind == DeadlineKind.service) {
-      subtitle = 'Ultimo: ${fmtDate(d.date)}';
+      subtitle = tr('service.last', {'date': fmtDate(d.date)});
       if (d.dueDate != null) {
-        subtitle += '\nProssimo: ${fmtDate(d.dueDate)} (ogni ${d.intervalMonths} mesi)';
+        subtitle += '\n${tr('service.next', {'date': fmtDate(d.dueDate), 'n': d.intervalMonths})}';
       }
     } else {
-      subtitle = d.date == null ? 'Data non impostata' : 'Scade il ${fmtDate(d.date)}';
+      subtitle = d.date == null ? tr('deadline.noDate') : tr('deadline.expiresOn', {'date': fmtDate(d.date)});
     }
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6),
@@ -470,7 +479,7 @@ class VehicleDetailScreen extends StatelessWidget {
         const SizedBox(width: 10),
         Expanded(
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(d.label, style: const TextStyle(fontFamily: handFont, fontSize: 21, height: 1.1)),
+            Text(d.displayLabel, style: const TextStyle(fontFamily: handFont, fontSize: 21, height: 1.1)),
             Text(subtitle, style: Theme.of(context).textTheme.bodySmall),
             if (d.dueDate != null) ...[
               const SizedBox(height: 4),

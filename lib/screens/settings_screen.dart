@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../services/notification_service.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 import 'family_screen.dart';
+import 'login_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -23,32 +25,52 @@ class SettingsScreen extends StatelessWidget {
         final allOn = _offsets.every(n.offsets.contains);
         final scheme = Theme.of(context).colorScheme;
         return Scaffold(
-          appBar: AppBar(title: const Text('Impostazioni')),
+          appBar: AppBar(title: Text(tr('settings.title'))),
           body: NotebookPage(
             child: ListView(padding: const EdgeInsets.only(top: 6, right: 4), children: [
             // ---------------- Account ----------------
-            _header(context, 'Account'),
+            _header(context, tr('settings.account')),
             ListTile(
               leading: Icon(appState.isCloud ? Icons.cloud : Icons.phone_android),
               title: Text(s?.displayName ?? ''),
               subtitle: Text(appState.isCloud
-                  ? 'Account online · dati salvati sul telefono e condivisi con la famiglia'
-                  : 'Account solo su questo telefono'),
+                  ? tr('settings.accountCloud')
+                  : tr('settings.accountLocal')),
+            ),
+            if (!appState.isCloud && appState.auth.cloudAvailable)
+              ListTile(
+                leading: const Icon(Icons.cloud_upload_outlined),
+                title: Text(tr('upgrade.button')),
+                subtitle: Text(tr('upgrade.settingsInfo')),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => const LoginScreen(upgrade: true))),
+              ),
+
+            // ---------------- Lingua ----------------
+            _header(context, tr('settings.language')),
+            ListTile(
+              leading: const Icon(Icons.language),
+              title: Text(appState.langPref == null
+                  ? '${tr('settings.langAuto')} (${L10n.names[L10n.code]})'
+                  : (L10n.names[appState.langPref] ?? appState.langPref!)),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => _chooseLanguage(context),
             ),
 
             // ---------------- Aspetto ----------------
             ..._appearance(context),
 
             // ---------------- Notifiche ----------------
-            _header(context, 'Notifiche'),
+            _header(context, tr('settings.notifications')),
             const _NotifyStatus(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text('Quando vuoi essere avvisato prima di una scadenza?',
+              child: Text(tr('settings.whenNotify'),
                   style: TextStyle(color: scheme.onSurfaceVariant)),
             ),
             CheckboxListTile(
-              title: const Text('Tutti gli avvisi', style: TextStyle(fontWeight: FontWeight.w600)),
+              title: Text(tr('settings.allAlerts'), style: const TextStyle(fontWeight: FontWeight.w600)),
               value: allOn,
               onChanged: (b) {
                 final ns = NotifySettings(
@@ -75,7 +97,7 @@ class SettingsScreen extends StatelessWidget {
                 )),
             ListTile(
               leading: const Icon(Icons.access_time),
-              title: const Text('Orario delle notifiche'),
+              title: Text(tr('settings.notifyTime')),
               trailing: Text(
                   '${n.hour.toString().padLeft(2, '0')}:${n.minute.toString().padLeft(2, '0')}',
                   style: const TextStyle(fontSize: 16)),
@@ -92,81 +114,77 @@ class SettingsScreen extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.notifications_active_outlined),
-              title: const Text('Prova notifica'),
-              subtitle: const Text('Verifica che le notifiche siano permesse'),
+              title: Text(tr('settings.testNow')),
+              subtitle: Text(tr('settings.testNowInfo')),
               onTap: () async {
                 await appState.notifications.requestPermission();
                 await appState.notifications.showTest();
                 final count = await appState.notifications
                     .rescheduleAll(appState.data.vehicles, appState.data.notify);
                 if (context.mounted) {
-                  showSnack(context, 'Notifiche programmate: $count');
+                  showSnack(context, tr('settings.scheduledCount', {'n': count}));
                 }
               },
             ),
             ListTile(
               leading: const Icon(Icons.timer_outlined),
-              title: const Text('Prova promemoria tra 1 minuto'),
-              subtitle: const Text('Poi chiudi l\'app: se la notifica arriva, i promemoria funzionano'),
+              title: Text(tr('settings.test1min')),
+              subtitle: Text(tr('settings.test1minInfo')),
               onTap: () async {
                 await appState.notifications.requestPermission();
                 try {
                   await appState.notifications.scheduleTest(const Duration(minutes: 1));
                   if (context.mounted) {
-                    showSnack(context, 'Promemoria di prova programmato: chiudi pure l\'app.');
+                    showSnack(context, tr('settings.test1minDone'));
                   }
                 } catch (e) {
-                  if (context.mounted) showSnack(context, 'Impossibile programmare: $e');
+                  if (context.mounted) showSnack(context, tr('settings.testFailed', {'error': e}));
                 }
               },
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
               child: Text(
-                'Su alcuni telefoni (Xiaomi, Huawei, Samsung, Oppo…) il risparmio energetico '
-                'blocca i promemoria: in Impostazioni Android → App → MyFleetManager → Batteria '
-                'scegli "Nessuna restrizione".',
+                tr('settings.batteryHint'),
                 style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
               ),
             ),
             if (appState.isCloud) ...[
-              _header(context, 'Notifiche push'),
+              _header(context, tr('settings.push')),
               ListTile(
                 leading: Icon(
                   appState.push.registered ? Icons.cloud_done_outlined : Icons.cloud_off_outlined,
                   color: appState.push.registered ? Colors.green.shade700 : Colors.orange.shade800,
                 ),
                 title: Text(appState.push.registered
-                    ? 'Telefono registrato per le push'
-                    : 'Telefono non ancora registrato'),
+                    ? tr('settings.pushOk')
+                    : tr('settings.pushNo')),
                 subtitle: Text(appState.push.registered
-                    ? 'Tocca per copiare il codice del dispositivo (serve per una prova dalla console Firebase)'
-                    : 'Tocca per riprovare (serve internet)'),
+                    ? tr('settings.pushOkInfo')
+                    : tr('settings.pushNoInfo')),
                 onTap: () async {
                   if (!appState.push.registered) {
                     await appState.startPush();
                     if (context.mounted && !appState.push.registered) {
-                      showSnack(context, 'Registrazione non riuscita: controlla la connessione.');
+                      showSnack(context, tr('settings.pushFailed'));
                     }
                     return;
                   }
                   Clipboard.setData(ClipboardData(text: appState.push.token!));
-                  showSnack(context, 'Codice dispositivo copiato');
+                  showSnack(context, tr('settings.pushCopied'));
                 },
               ),
             ],
 
             // ---------------- Famiglia ----------------
-            _header(context, 'Nuclei familiari'),
+            _header(context, tr('settings.groups')),
             if (!appState.isCloud)
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Text(
                   appState.auth.cloudAvailable
-                      ? 'Per condividere i veicoli con la famiglia esci e accedi con un '
-                          'account online (email o Google).'
-                      : 'La condivisione con la famiglia non è ancora attiva in questa '
-                          'versione dell\'app: arriverà con un prossimo aggiornamento.',
+                      ? tr('settings.groupsNeedCloud')
+                      : tr('family.cloudOff'),
                   style: TextStyle(color: scheme.onSurfaceVariant),
                 ),
               )
@@ -177,8 +195,8 @@ class SettingsScreen extends StatelessWidget {
             const Divider(height: 32),
             ListTile(
               leading: const Icon(Icons.logout),
-              title: const Text('Esci'),
-              subtitle: const Text('I dati restano salvati sul telefono'),
+              title: Text(tr('settings.logout')),
+              subtitle: Text(tr('settings.logoutInfo')),
               onTap: () async {
                 Navigator.of(context).popUntil((r) => r.isFirst);
                 await appState.logout();
@@ -186,7 +204,7 @@ class SettingsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             Center(
-              child: Text('MyFleetManager 1.3.0',
+              child: Text('MyFleetManager 1.4.0',
                   style: TextStyle(fontSize: 12, color: scheme.outline)),
             ),
             const SizedBox(height: 24),
@@ -208,23 +226,28 @@ class SettingsScreen extends StatelessWidget {
     }
 
     return [
-      _header(context, 'Aspetto'),
+      _header(context, tr('settings.appearance')),
       Padding(
         padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
         child: SegmentedButton<ThemeMode>(
           showSelectedIcon: false,
-          segments: const [
-            ButtonSegment(value: ThemeMode.light, icon: Icon(Icons.light_mode), label: Text('Chiaro')),
-            ButtonSegment(value: ThemeMode.dark, icon: Icon(Icons.dark_mode), label: Text('Scuro')),
-            ButtonSegment(value: ThemeMode.system, icon: Icon(Icons.brightness_auto), label: Text('Auto')),
+          segments: [
+            ButtonSegment(
+                value: ThemeMode.light, icon: const Icon(Icons.light_mode), label: Text(tr('theme.light'))),
+            ButtonSegment(
+                value: ThemeMode.dark, icon: const Icon(Icons.dark_mode), label: Text(tr('theme.dark'))),
+            ButtonSegment(
+                value: ThemeMode.system,
+                icon: const Icon(Icons.brightness_auto),
+                label: Text(tr('theme.auto'))),
           ],
           selected: {t.mode},
           onSelectionChanged: (sel) => save(mode: sel.first),
         ),
       ),
-      const Padding(
-        padding: EdgeInsets.fromLTRB(16, 8, 16, 6),
-        child: Text('Colore copertina'),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(16, 8, 16, 6),
+        child: Text(tr('theme.cover')),
       ),
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -257,9 +280,9 @@ class SettingsScreen extends StatelessWidget {
           }),
         ),
       ),
-      const Padding(
-        padding: EdgeInsets.fromLTRB(16, 14, 16, 6),
-        child: Text('Sfondo delle pagine'),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(16, 14, 16, 6),
+        child: Text(tr('theme.paper')),
       ),
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -283,22 +306,57 @@ class SettingsScreen extends StatelessWidget {
       ...groups.map((g) => ListTile(
             leading: const Icon(Icons.home_outlined),
             title: Text(g.name),
-            subtitle: Text('${g.members.length} membri · codice ${g.id}'),
+            subtitle: Text('${trn('family.members', g.members.length)} · ${tr('settings.code', {'code': g.id})}'),
             trailing: const Icon(Icons.chevron_right),
             onTap: () => Navigator.of(context)
                 .push(MaterialPageRoute(builder: (_) => GroupScreen(groupId: g.id))),
           )),
       ListTile(
         leading: const Icon(Icons.group_add),
-        title: const Text('Crea nucleo familiare'),
+        title: Text(tr('family.create')),
         onTap: () => createGroupDialog(context),
       ),
       ListTile(
         leading: const Icon(Icons.key),
-        title: const Text('Entra con un codice invito'),
+        title: Text(tr('settings.joinInvite')),
         onTap: () => joinGroupDialog(context),
       ),
     ];
+  }
+
+  Future<void> _chooseLanguage(BuildContext context) async {
+    const auto = '__auto__';
+    final codes = [...L10n.available]..sort((a, b) => L10n.names[a]!.compareTo(L10n.names[b]!));
+    final sel = await showModalBottomSheet<String>(
+      context: context,
+      isScrollControlled: true,
+      builder: (ctx) => SafeArea(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxHeight: MediaQuery.of(ctx).size.height * 0.75),
+          child: ListView(shrinkWrap: true, children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+              child: Text(tr('settings.language'),
+                  style: const TextStyle(fontFamily: handFont, fontSize: 24)),
+            ),
+            ListTile(
+              leading: const Icon(Icons.phone_android),
+              title: Text(tr('settings.langAuto')),
+              trailing: appState.langPref == null ? const Icon(Icons.check) : null,
+              onTap: () => Navigator.pop(ctx, auto),
+            ),
+            const Divider(height: 1),
+            ...codes.map((c) => ListTile(
+                  title: Text(L10n.names[c]!),
+                  trailing: appState.langPref == c ? const Icon(Icons.check) : null,
+                  onTap: () => Navigator.pop(ctx, c),
+                )),
+          ]),
+        ),
+      ),
+    );
+    if (sel == null) return;
+    await appState.setLanguage(sel == auto ? null : sel);
   }
 
   Widget _header(BuildContext context, String t) => Padding(
@@ -355,9 +413,8 @@ class _NotifyStatusState extends State<_NotifyStatus> with WidgetsBindingObserve
     if (!st.enabled) {
       return ListTile(
         leading: Icon(Icons.notifications_off, color: Colors.red.shade700),
-        title: const Text('Notifiche bloccate', style: TextStyle(fontWeight: FontWeight.w600)),
-        subtitle: const Text('Tocca per consentirle. Se non compare nessuna richiesta: '
-            'Impostazioni Android → App → MyFleetManager → Notifiche → Consenti.'),
+        title: Text(tr('settings.blocked'), style: const TextStyle(fontWeight: FontWeight.w600)),
+        subtitle: Text(tr('settings.blockedInfo')),
         onTap: () async {
           await appState.notifications.requestPermission();
           await _load();
@@ -367,15 +424,14 @@ class _NotifyStatusState extends State<_NotifyStatus> with WidgetsBindingObserve
     if (!st.exact) {
       return ListTile(
         leading: Icon(Icons.alarm_off, color: Colors.orange.shade800),
-        title: const Text('Promemoria non puntuali', style: TextStyle(fontWeight: FontWeight.w600)),
-        subtitle: const Text('Android potrebbe ritardare gli avvisi. Tocca e attiva '
-            '"Sveglie e promemoria" per MyFleetManager.'),
+        title: Text(tr('settings.inexact'), style: const TextStyle(fontWeight: FontWeight.w600)),
+        subtitle: Text(tr('settings.inexactInfo')),
         onTap: () => appState.notifications.requestExactAlarms(),
       );
     }
     return ListTile(
       leading: Icon(Icons.notifications_active, color: Colors.green.shade700),
-      title: const Text('Notifiche consentite'),
+      title: Text(tr('settings.allowed')),
     );
   }
 }

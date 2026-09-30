@@ -3,16 +3,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'firebase_config.dart';
+import 'l10n.dart';
 import 'screens/home_screen.dart';
 import 'screens/intro_screen.dart';
 import 'screens/login_screen.dart';
 import 'services/app_state.dart';
+import 'services/local_store.dart';
 import 'theme.dart';
 
 late final AppState appState;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Lingua: quella scelta nelle impostazioni, altrimenti quella del telefono.
+  try {
+    final settings = await LocalStore().readSettings();
+    await L10n.load(L10n.resolve(settings?['lang'] as String?));
+  } catch (_) {
+    await L10n.load('en');
+  }
   if (FirebaseConfig.isConfigured) {
     try {
       // Android: configurazione letta da google-services.json (inserito dalla build).
@@ -74,11 +83,19 @@ class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
       listenable: appState,
       builder: (context, _) {
         final t = appState.theme;
+        // Calendario, orologio e pulsanti di sistema nella lingua dell'app
+        // (se Flutter non la conosce, ad es. maltese, si usa l'inglese).
+        final supported = <Locale>[
+          for (final c in L10n.available)
+            if (GlobalMaterialLocalizations.delegate.isSupported(Locale(c))) Locale(c),
+        ];
+        if (!supported.contains(const Locale('en'))) supported.add(const Locale('en'));
+        final current = Locale(L10n.code);
         return MaterialApp(
           title: 'MyFleetManager',
           debugShowCheckedModeBanner: false,
-          locale: const Locale('it', 'IT'),
-          supportedLocales: const [Locale('it', 'IT'), Locale('en', 'US')],
+          locale: supported.contains(current) ? current : const Locale('en'),
+          supportedLocales: supported,
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,

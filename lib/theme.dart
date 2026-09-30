@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'l10n.dart';
+
 // ============================================================================
 // Impostazioni tema (salvate sul telefono, valgono per tutti gli account)
 // ============================================================================
@@ -10,31 +12,33 @@ enum PaperStyle { righe, quadretti, puntini, liscio }
 String paperStyleLabel(PaperStyle p) {
   switch (p) {
     case PaperStyle.righe:
-      return 'Righe';
+      return tr('paper.lines');
     case PaperStyle.quadretti:
-      return 'Quadretti';
+      return tr('paper.grid');
     case PaperStyle.puntini:
-      return 'Puntini';
+      return tr('paper.dots');
     case PaperStyle.liscio:
-      return 'Liscio';
+      return tr('paper.plain');
   }
 }
 
 class AppPalette {
-  final String name;
+  final String key;
   final Color seed;
-  const AppPalette(this.name, this.seed);
+  const AppPalette(this.key, this.seed);
+
+  String get name => tr('palette.$key');
 }
 
 const List<AppPalette> palettes = [
-  AppPalette('Blu', Color(0xFF0257C3)),
-  AppPalette('Verde bosco', Color(0xFF2E7D32)),
-  AppPalette('Rosso corsa', Color(0xFFC62828)),
-  AppPalette('Arancio', Color(0xFFEF6C00)),
-  AppPalette('Petrolio', Color(0xFF00796B)),
-  AppPalette('Viola', Color(0xFF6A1B9A)),
-  AppPalette('Grafite', Color(0xFF455A64)),
-  AppPalette('Cuoio', Color(0xFF795548)),
+  AppPalette('blue', Color(0xFF0257C3)),
+  AppPalette('forest', Color(0xFF2E7D32)),
+  AppPalette('racing', Color(0xFFC62828)),
+  AppPalette('orange', Color(0xFFEF6C00)),
+  AppPalette('petrol', Color(0xFF00796B)),
+  AppPalette('violet', Color(0xFF6A1B9A)),
+  AppPalette('graphite', Color(0xFF455A64)),
+  AppPalette('leather', Color(0xFF795548)),
 ];
 
 class ThemeSettings {

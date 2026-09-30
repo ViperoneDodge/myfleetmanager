@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 
+import '../l10n.dart';
 import '../models.dart';
 import '../theme.dart';
 import 'auth_service.dart';
@@ -53,7 +54,7 @@ class AppState extends ChangeNotifier {
 
   /// Nome del parco a cui appartiene il veicolo.
   String fleetLabel(Vehicle v) =>
-      isPersonal(v) ? 'I miei veicoli' : (data.groupById(v.fleetId)?.name ?? 'Famiglia');
+      isPersonal(v) ? tr('fleet.mine') : (data.groupById(v.fleetId)?.name ?? tr('family.defaultName'));
 
   Vehicle? vehicleById(String id) {
     for (final v in data.vehicles) {
@@ -62,8 +63,13 @@ class AppState extends ChangeNotifier {
     return null;
   }
 
+  /// Lingua scelta nelle impostazioni (null = come il telefono).
+  String? langPref;
+
   Future<void> init() async {
-    theme = ThemeSettings.fromJson(await store.readSettings());
+    final settings = await store.readSettings();
+    theme = ThemeSettings.fromJson(settings);
+    langPref = settings?['lang'] as String?;
     notifyListeners();
     try {
       await notifications.init();
@@ -295,7 +301,73 @@ class AppState extends ChangeNotifier {
   Future<void> updateTheme(ThemeSettings t) async {
     theme = t;
     notifyListeners();
-    await store.writeSettings(t.toJson());
+    await _writeSettings();
+  }
+
+  Future<void> _writeSettings() => store.writeSettings({
+        ...theme.toJson(),
+        if (langPref != null) 'lang': langPref,
+      });
+
+  /// Cambia lingua ([code] null = automatica, come il telefono).
+  Future<void> setLanguage(String? code) async {
+    langPref = code;
+    await L10n.load(L10n.resolve(code));
+    notifyListeners();
+    await _writeSettings();
+    // Le notifiche già programmate vengono riscritte nella nuova lingua.
+    _scheduleNotifications();
+    try {
+      await notifications.refreshChannels();
+    } catch (_) {}
+  }
+
+  // ---------------- Passaggio da account locale ad account online ----------------
+
+  /// Passa all'account online [cloud] senza uscire. Con [bringVehicles] i veicoli
+  /// dell'account locale (con documenti e impostazioni notifiche) vengono copiati
+  /// nel parco personale online. L'account locale resta sul telefono intatto.
+  Future<int> switchToCloud(Session cloud, {required bool bringVehicles}) async {
+    final old = session;
+    final oldData = data;
+    final target = await store.readUserData(cloud);
+    var copied = 0;
+    if (bringVehicles && old != null && old.mode == AccountMode.local) {
+      final now = DateTime.now().millisecondsSinceEpoch;
+      for (final v in oldData.vehicles.where((v) => !v.deleted)) {
+        if (target.vehicles.any((x) => x.id == v.id)) continue;
+        final c = v.copy()
+          ..fleetId = null
+          ..updatedAt = now
+          ..updatedBy = cloud.displayName
+          ..documents = [];
+        // I file dei documenti vengono duplicati: i due account restano indipendenti.
+        for (final d in v.documents) {
+          try {
+            final src = await documentFile(d);
+            if (!await src.exists()) continue;
+            final dot = d.fileName.lastIndexOf('.');
+            final ext = dot >= 0 ? d.fileName.substring(dot + 1) : 'jpg';
+            final nd = VehicleDocument(name: d.name, fileName: '', kind: d.kind, size: d.size);
+            nd.fileName = '${c.id}_${nd.id}.$ext';
+            await src.copy((await documentFile(nd)).path);
+            c.documents.add(nd);
+          } catch (_) {}
+        }
+        target.vehicles.add(c);
+        copied++;
+      }
+      target.notify = oldData.notify;
+    }
+    await store.writeUserData(cloud, target);
+    sync.stop();
+    _retry?.cancel();
+    syncStatus = SyncStatus.off;
+    await store.writeSession(cloud);
+    await _open(cloud);
+    notifications.requestPermission();
+    notifyListeners();
+    return copied;
   }
 
   Future<void> updateNotify(NotifySettings n) async {
