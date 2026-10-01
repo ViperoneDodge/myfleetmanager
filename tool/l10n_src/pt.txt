@@ -8,7 +8,7 @@ Carrinhas
 Reboques
 Documento
 Seguro
-Inspeção
+Inspeção (IPO)
 Revisão
 Personalizado
 Próxima revisão
@@ -230,7 +230,7 @@ Eliminar o veículo?
 "{name}", os seus prazos e documentos serão eliminados (os prazos também para os outros membros do grupo).
 Documento único automóvel
 Apólice de seguro
-Certificado de inspeção
+Ficha de inspeção (IPO)
 Imposto de circulação
 Fatura da revisão
 Nome do documento
@@ -350,3 +350,23 @@ Aproxime dois dedos para ampliar, arraste para mover
 Original
 Usar foto
 Ajustar foto (zoom e recorte)
+Apoio e privacidade
+Comunicar um problema
+Enviar uma comunicação ao programador
+O seu nome
+Descreva o problema
+Abrir e-mail
+A sua app de e-mail vai abrir com a mensagem pronta (com a versão da app e o modelo do telemóvel): toque em Enviar.
+Nenhuma app de e-mail encontrada. Escreva para {email}
+Política de privacidade
+Que dados a app usa e como são tratados
+Pedir a eliminação dos dados
+Eliminar conta e dados online
+Elimina para sempre a conta e os dados guardados no servidor
+Eliminar a conta?
+A sua conta, os seus veículos online e os grupos que criou (com os respetivos veículos) serão eliminados para sempre. Sairá dos grupos criados por outros. Não é possível anular.
+Conta e dados eliminados.
+Dados eliminados. Para concluir a eliminação da conta, inicie sessão novamente e repita a operação.
+Grupo bloqueado: com a versão gratuita pode ver no máximo {n} veículos no total, incluindo os dos grupos.
+Desbloquear com Pro
+Ao entrar neste grupo ultrapassaria o limite de {n} veículos da versão gratuita. Com Pro pode entrar já.

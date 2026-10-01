@@ -73,6 +73,13 @@ class LocalStore {
     return j == null ? UserData() : UserData.fromJson(j);
   }
 
+  Future<void> deleteUserData(Session s) async {
+    try {
+      final f = await _file('data_${s.storageKey}.json');
+      if (await f.exists()) await f.delete();
+    } catch (_) {}
+  }
+
   Future<void> writeUserData(Session s, UserData d) =>
       _writeJson('data_${s.storageKey}.json', d.toJson());
 }

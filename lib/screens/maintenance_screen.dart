@@ -40,11 +40,14 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
       v != null && v.deadlines.any((d) => d.kind == DeadlineKind.service && d.enabled);
 
   Future<void> _pickDate() async {
+    // La data di un intervento non può essere successiva a oggi (data di inserimento).
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
     final d = await showDatePicker(
       context: context,
-      initialDate: r.date,
+      initialDate: r.date.isAfter(today) ? today : r.date,
       firstDate: DateTime(1980),
-      lastDate: DateTime.now().add(const Duration(days: 366)),
+      lastDate: today,
     );
     if (d != null) setState(() => r.date = d);
   }

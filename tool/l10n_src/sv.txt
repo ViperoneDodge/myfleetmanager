@@ -350,3 +350,23 @@ Nyp för att zooma, dra för att flytta
 Original
 Använd foto
 Justera foto (zoom och beskärning)
+Hjälp och integritet
+Rapportera ett problem
+Skicka en rapport till utvecklaren
+Ditt namn
+Beskriv problemet
+Öppna e-post
+Din e-postapp öppnas med meddelandet klart (med appversion och telefonmodell): tryck på Skicka.
+Ingen e-postapp hittades. Skriv till {email}
+Integritetspolicy
+Vilka uppgifter appen använder och hur de hanteras
+Begär radering av uppgifter
+Radera konto och onlinedata
+Raderar kontot och uppgifterna på servern permanent
+Radera kontot?
+Ditt konto, dina onlinefordon och grupperna du har skapat (med deras fordon) raderas permanent. Du lämnar grupper som andra har skapat. Det går inte att ångra.
+Konto och data har raderats.
+Uppgifterna har raderats. Logga in igen och upprepa åtgärden för att slutföra raderingen av kontot.
+Gruppen är låst: i gratisversionen kan du se högst {n} fordon totalt, även de i grupper.
+Lås upp med Pro
+Om du går med i gruppen överskrids gratisversionens gräns på {n} fordon. Med Pro kan du gå med direkt.

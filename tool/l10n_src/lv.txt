@@ -350,3 +350,23 @@ Savelciet pirkstus, lai tuvinātu, velciet, lai pārvietotu
 Oriģināls
 Izmantot foto
 Pielāgot foto (tālummaiņa un apgriešana)
+Atbalsts un privātums
+Ziņot par problēmu
+Nosūtīt ziņojumu izstrādātājam
+Tavs vārds
+Apraksti problēmu
+Atvērt e-pastu
+Atvērsies tava e-pasta lietotne ar sagatavotu ziņojumu (ar lietotnes versiju un tālruņa modeli): nospied Sūtīt.
+Netika atrasta e-pasta lietotne. Raksti uz {email}
+Privātuma politika
+Kādus datus lietotne izmanto un kā tos apstrādā
+Pieprasīt datu dzēšanu
+Dzēst kontu un tiešsaistes datus
+Neatgriezeniski dzēš kontu un serverī saglabātos datus
+Dzēst kontu?
+Tavs konts, tavi tiešsaistes transportlīdzekļi un tevis izveidotās grupas (ar to transportlīdzekļiem) tiks neatgriezeniski dzēstas. No citu izveidotajām grupām tu izstāsies. Darbību nevar atsaukt.
+Konts un dati dzēsti.
+Dati dzēsti. Lai pabeigtu konta dzēšanu, pieraksties vēlreiz un atkārto darbību.
+Grupa bloķēta: bezmaksas versijā kopā vari redzēt ne vairāk kā {n} transportlīdzekļus, ieskaitot grupās esošos.
+Atbloķēt ar Pro
+Pievienojoties šai grupai, tu pārsniegtu bezmaksas versijas {n} transportlīdzekļu limitu. Ar Pro vari pievienoties uzreiz.

@@ -350,3 +350,23 @@ Suumimiseks näpista, liigutamiseks lohista
 Originaal
 Kasuta fotot
 Kohanda fotot (suum ja kärpimine)
+Tugi ja privaatsus
+Teata probleemist
+Saada arendajale teade
+Sinu nimi
+Kirjelda probleemi
+Ava e-post
+Avaneb sinu e-posti rakendus valmis sõnumiga (rakenduse versiooni ja telefoni mudeliga): vajuta Saada.
+E-posti rakendust ei leitud. Kirjuta aadressile {email}
+Privaatsuspoliitika
+Milliseid andmeid rakendus kasutab ja kuidas neid töödeldakse
+Taotle andmete kustutamist
+Kustuta konto ja võrguandmed
+Kustutab konto ja serveris olevad andmed jäädavalt
+Kas kustutada konto?
+Sinu konto, võrgus olevad sõidukid ja sinu loodud grupid (koos sõidukitega) kustutatakse jäädavalt. Teiste loodud gruppidest lahkud. Toimingut ei saa tagasi võtta.
+Konto ja andmed kustutatud.
+Andmed kustutatud. Konto kustutamise lõpetamiseks logi uuesti sisse ja korda toimingut.
+Grupp on lukus: tasuta versioonis näed kokku kuni {n} sõidukit, sh gruppide omad.
+Ava Pro-ga
+Sellesse gruppi astudes ületaksid tasuta versiooni {n} sõiduki piirangu. Pro-ga saad kohe liituda.

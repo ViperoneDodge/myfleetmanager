@@ -350,3 +350,23 @@ Ifred żewġ subgħajk biex tkabbar, kaxkar biex iċċaqlaq
 Oriġinali
 Uża r-ritratt
 Irranġa r-ritratt (zoom u qtugħ)
+Għajnuna u privatezza
+Irrapporta problema
+Ibgħat rapport lill-iżviluppatur
+Ismek
+Iddeskrivi l-problema
+Iftaħ l-email
+L-app tal-email tiegħek tinfetaħ bil-messaġġ lest (bil-verżjoni tal-app u l-mudell tat-telefon): agħfas Ibgħat.
+Ma nstabet l-ebda app tal-email. Ikteb lil {email}
+Politika tal-privatezza
+Liema data tuża l-app u kif tiġi ttrattata
+Itlob it-tħassir tad-data
+Ħassar il-kont u d-data online
+Iħassar għal kollox il-kont u d-data maħżuna fuq is-server
+Tħassar il-kont?
+Il-kont tiegħek, il-vetturi tiegħek online u l-gruppi li ħloqt (bil-vetturi tagħhom) jitħassru għal kollox. Toħroġ mill-gruppi maħluqa minn oħrajn. Dan ma jistax jitreġġa' lura.
+Il-kont u d-data tħassru.
+Id-data tħassret. Biex tlesti t-tħassir tal-kont, idħol mill-ġdid u erġa' agħmel l-operazzjoni.
+Grupp imsakkar: bil-verżjoni b'xejn tista' tara massimu ta' {n} vetturi b'kollox, inklużi dawk fil-gruppi.
+Iftaħ b'Pro
+Jekk tidħol f'dan il-grupp taqbeż il-limitu ta' {n} vetturi tal-verżjoni b'xejn. B'Pro tista' tidħol minnufih.

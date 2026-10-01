@@ -350,3 +350,23 @@ Chụm hai ngón để phóng to, kéo để di chuyển
 Gốc
 Dùng ảnh
 Chỉnh ảnh (thu phóng và cắt)
+Hỗ trợ và quyền riêng tư
+Báo cáo sự cố
+Gửi báo cáo cho nhà phát triển
+Tên của bạn
+Mô tả sự cố
+Mở email
+Ứng dụng email sẽ mở với tin nhắn soạn sẵn (kèm phiên bản ứng dụng và mẫu điện thoại): chỉ cần nhấn Gửi.
+Không tìm thấy ứng dụng email. Hãy viết tới {email}
+Chính sách quyền riêng tư
+Ứng dụng sử dụng dữ liệu nào và xử lý ra sao
+Yêu cầu xóa dữ liệu
+Xóa tài khoản và dữ liệu trực tuyến
+Xóa vĩnh viễn tài khoản và dữ liệu lưu trên máy chủ
+Xóa tài khoản?
+Tài khoản, các xe trực tuyến của bạn và các nhóm bạn đã tạo (cùng xe của nhóm) sẽ bị xóa vĩnh viễn. Bạn sẽ rời khỏi các nhóm do người khác tạo. Không thể hoàn tác.
+Đã xóa tài khoản và dữ liệu.
+Đã xóa dữ liệu. Để hoàn tất việc xóa tài khoản, hãy đăng nhập lại và thực hiện lại thao tác.
+Nhóm bị khóa: với bản miễn phí bạn chỉ xem được tối đa {n} xe tổng cộng, kể cả xe trong nhóm.
+Mở khóa bằng Pro
+Tham gia nhóm này sẽ vượt giới hạn {n} xe của bản miễn phí. Với Pro bạn có thể tham gia ngay.

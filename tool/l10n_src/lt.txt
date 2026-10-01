@@ -350,3 +350,23 @@ Suimkite pirštais, kad priartintumėte, vilkite, kad perkeltumėte
 Originalas
 Naudoti nuotrauką
 Pritaikyti nuotrauką (priartinimas ir apkarpymas)
+Pagalba ir privatumas
+Pranešti apie problemą
+Siųsti pranešimą kūrėjui
+Jūsų vardas
+Aprašykite problemą
+Atidaryti el. paštą
+Atsidarys jūsų el. pašto programa su paruošta žinute (su programos versija ir telefono modeliu): paspauskite Siųsti.
+Nerasta el. pašto programa. Rašykite adresu {email}
+Privatumo politika
+Kokius duomenis naudoja programa ir kaip jie tvarkomi
+Prašyti ištrinti duomenis
+Ištrinti paskyrą ir internetinius duomenis
+Visam laikui ištrina paskyrą ir serveryje saugomus duomenis
+Ištrinti paskyrą?
+Jūsų paskyra, internetinės transporto priemonės ir jūsų sukurtos grupės (su jų transporto priemonėmis) bus ištrintos visam laikui. Iš kitų sukurtų grupių išeisite. Veiksmo atšaukti negalima.
+Paskyra ir duomenys ištrinti.
+Duomenys ištrinti. Kad užbaigtumėte paskyros ištrynimą, prisijunkite iš naujo ir pakartokite veiksmą.
+Grupė užrakinta: nemokamoje versijoje iš viso galite matyti ne daugiau kaip {n} transporto priemones, įskaitant esančias grupėse.
+Atrakinti su Pro
+Prisijungę prie šios grupės viršytumėte nemokamos versijos {n} transporto priemonių ribą. Su Pro galite prisijungti iš karto.

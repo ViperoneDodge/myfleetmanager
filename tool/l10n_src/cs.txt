@@ -8,7 +8,7 @@ Dodávky
 Přívěsy
 Dokument
 Pojištění
-Technická kontrola
+Technická kontrola (STK)
 Servis
 Vlastní
 Příští servis
@@ -230,7 +230,7 @@ Smazat vozidlo?
 „{name}“, jeho termíny a dokumenty budou smazány (termíny i ostatním členům skupiny).
 Technický průkaz
 Pojistná smlouva
-Protokol o technické kontrole
+Protokol o STK
 Silniční daň
 Faktura za servis
 Název dokumentu
@@ -350,3 +350,23 @@ Roztažením prstů přiblížíte, tažením posunete
 Původní
 Použít fotku
 Upravit fotku (přiblížení a oříznutí)
+Podpora a soukromí
+Nahlásit problém
+Poslat hlášení vývojáři
+Vaše jméno
+Popište problém
+Otevřít e-mail
+Otevře se vaše e-mailová aplikace s připravenou zprávou (s verzí aplikace a modelem telefonu): stiskněte Odeslat.
+Nebyla nalezena žádná e-mailová aplikace. Napište na {email}
+Zásady ochrany soukromí
+Jaká data aplikace používá a jak se s nimi zachází
+Požádat o smazání dat
+Smazat účet a online data
+Trvale smaže účet a data uložená na serveru
+Smazat účet?
+Váš účet, vaše online vozidla a skupiny, které jste vytvořili (i s jejich vozidly), budou trvale smazány. Ze skupin vytvořených jinými odejdete. Akci nelze vrátit.
+Účet a data byly smazány.
+Data byla smazána. Pro dokončení smazání účtu se znovu přihlaste a operaci zopakujte.
+Skupina je zamčená: v bezplatné verzi můžete vidět celkem nejvýše {n} vozidla včetně vozidel ve skupinách.
+Odemknout s Pro
+Vstupem do této skupiny byste překročili limit {n} vozidel bezplatné verze. S Pro můžete vstoupit hned.

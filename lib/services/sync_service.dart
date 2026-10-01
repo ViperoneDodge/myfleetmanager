@@ -109,6 +109,45 @@ class SyncService {
     );
   }
 
+  /// Veicoli (non eliminati) presenti in un gruppo, letti dal server.
+  Future<int> countGroupVehicles(String id) async {
+    final q = await _fleets
+        .doc(id)
+        .collection('vehicles')
+        .get(const GetOptions(source: Source.server))
+        .timeout(_timeout);
+    return q.docs.where((d) => d.data()['deleted'] != true).length;
+  }
+
+  /// Cancellazione dell'account: elimina i dati online dell'utente.
+  /// I gruppi creati da lui vengono eliminati (con i loro veicoli); da quelli
+  /// degli altri esce soltanto.
+  Future<void> deleteAllData(Session s, List<FleetGroup> groups) async {
+    final uid = s.key;
+    Future<void> wipe(String fleetId) async {
+      final q = await _fleets
+          .doc(fleetId)
+          .collection('vehicles')
+          .get(const GetOptions(source: Source.server))
+          .timeout(_timeout);
+      for (final d in q.docs) {
+        await d.reference.delete().timeout(_timeout);
+      }
+    }
+
+    for (final g in groups) {
+      if (g.ownerUid == uid) {
+        await wipe(g.id);
+        await _fleets.doc(g.id).delete().timeout(_timeout);
+      } else {
+        await leaveGroup(s, g.id).timeout(_timeout);
+      }
+    }
+    await wipe(uid);
+    await _fleets.doc(uid).delete().timeout(_timeout);
+    await _db.collection('users').doc(uid).delete().timeout(_timeout);
+  }
+
   Future<void> leaveGroup(Session s, String id) => _fleets.doc(id).update({
         'members': FieldValue.arrayRemove([s.key]),
         'memberEmails.${s.key}': FieldValue.delete(),

@@ -350,3 +350,23 @@ Fáisc chun súmáil, tarraing chun bogadh
 Bunaidh
 Úsáid grianghraf
 Coigeartaigh grianghraf (súmáil agus bearradh)
+Tacaíocht agus príobháideachas
+Tuairiscigh fadhb
+Seol tuairisc chuig an bhforbróir
+D'ainm
+Déan cur síos ar an bhfadhb
+Oscail ríomhphost
+Osclófar d'aip ríomhphoist leis an teachtaireacht réidh (le leagan na haipe agus samhail an fhóin): brúigh Seol.
+Níor aimsíodh aip ríomhphoist. Scríobh chuig {email}
+Polasaí príobháideachais
+Na sonraí a úsáideann an aip agus conas a láimhseáiltear iad
+Iarr scriosadh sonraí
+Scrios an cuntas agus na sonraí ar líne
+Scriostar an cuntas agus na sonraí ar an bhfreastalaí go buan
+An cuntas a scriosadh?
+Scriosfar go buan do chuntas, d'fheithiclí ar líne agus na grúpaí a chruthaigh tú (lena bhfeithiclí). Fágfaidh tú grúpaí a chruthaigh daoine eile. Ní féidir é seo a chealú.
+Cuntas agus sonraí scriosta.
+Sonraí scriosta. Chun scriosadh an chuntais a chríochnú, logáil isteach arís agus déan an oibríocht arís.
+Grúpa faoi ghlas: leis an leagan saor in aisce ní féidir leat ach {n} fheithicil ar a mhéad a fheiceáil san iomlán, lena n-áirítear iad siúd i ngrúpaí.
+Díghlasáil le Pro
+Dá rachfá isteach sa ghrúpa seo, sháródh tú teorainn {n} fheithicil an leagain saor in aisce. Le Pro is féidir leat dul isteach láithreach.

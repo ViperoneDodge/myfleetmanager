@@ -231,7 +231,7 @@ Slet køretøjet?
 Registreringsattest
 Forsikringspolice
 Synsrapport
-Vægtafgift
+Grøn ejerafgift
 Servicefaktura
 Dokumentets navn
 F.eks. Registreringsattest
@@ -335,7 +335,7 @@ Slå udvikler-Pro fra
 Udvikler-Pro slået fra
 Lastbil
 Lastbiler
-Ejerafgift
+Grøn ejerafgift
 Et gruppemedlem
 {who} tilføjede {vehicle}
 {who} ændrede {vehicle}
@@ -350,3 +350,23 @@ Knib for at zoome, træk for at flytte
 Original
 Brug foto
 Tilpas foto (zoom og beskæring)
+Hjælp og privatliv
+Rapportér et problem
+Send en rapport til udvikleren
+Dit navn
+Beskriv problemet
+Åbn e-mail
+Din e-mailapp åbnes med beskeden klar (med appversion og telefonmodel): tryk på Send.
+Ingen e-mailapp fundet. Skriv til {email}
+Privatlivspolitik
+Hvilke data appen bruger, og hvordan de behandles
+Anmod om sletning af data
+Slet konto og onlinedata
+Sletter kontoen og dataene på serveren permanent
+Slet kontoen?
+Din konto, dine onlinekøretøjer og de grupper, du har oprettet (med deres køretøjer), slettes permanent. Du forlader grupper oprettet af andre. Det kan ikke fortrydes.
+Konto og data er slettet.
+Dataene er slettet. Log ind igen, og gentag handlingen for at slette kontoen helt.
+Gruppen er låst: med gratisversionen kan du se højst {n} køretøjer i alt, også dem i grupper.
+Lås op med Pro
+Hvis du bliver medlem af gruppen, overskrider du gratisversionens grænse på {n} køretøjer. Med Pro kan du blive medlem med det samme.

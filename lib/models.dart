@@ -308,8 +308,36 @@ class Vehicle {
     return list;
   }
 
+  /// Ordine fisso delle scadenze: Assicurazione, Bollo, Revisione, Tagliando,
+  /// poi quelle personalizzate (nell'ordine in cui sono state create).
+  static int _rank(DeadlineKind k) {
+    switch (k) {
+      case DeadlineKind.insurance:
+        return 0;
+      case DeadlineKind.tax:
+        return 1;
+      case DeadlineKind.inspection:
+        return 2;
+      case DeadlineKind.service:
+        return 3;
+      case DeadlineKind.custom:
+        return 4;
+    }
+  }
+
+  /// Riordina (in modo stabile) anche le scadenze dei veicoli già esistenti.
+  static List<Deadline> _ordered(List<Deadline> list) {
+    final indexed = list.asMap().entries.toList()
+      ..sort((a, b) {
+        final r = _rank(a.value.kind).compareTo(_rank(b.value.kind));
+        return r != 0 ? r : a.key.compareTo(b.key);
+      });
+    return indexed.map((e) => e.value).toList();
+  }
+
   static List<Deadline> defaultDeadlines(VehicleType t) => [
         Deadline(kind: DeadlineKind.insurance),
+        Deadline(kind: DeadlineKind.tax),
         Deadline(kind: DeadlineKind.inspection),
         Deadline(
           kind: DeadlineKind.service,
@@ -317,7 +345,6 @@ class Vehicle {
           // I rimorchi non hanno motore: tagliando disattivato di default.
           enabled: t != VehicleType.rimorchio,
         ),
-        Deadline(kind: DeadlineKind.tax),
       ];
 
   Uint8List? get photoBytes {
@@ -377,10 +404,10 @@ class Vehicle {
         name: j['name'] as String? ?? '',
         plate: j['plate'] as String? ?? '',
         photoB64: j['photoB64'] as String?,
-        deadlines: _withTax((j['deadlines'] as List?)
+        deadlines: _ordered(_withTax((j['deadlines'] as List?)
                 ?.map((e) => Deadline.fromJson(Map<String, dynamic>.from(e as Map)))
                 .toList() ??
-            []),
+            [])),
         documents: (j['documents'] as List?)
                 ?.map((e) => VehicleDocument.fromJson(Map<String, dynamic>.from(e as Map)))
                 .toList() ??

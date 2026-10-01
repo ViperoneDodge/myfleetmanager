@@ -350,3 +350,23 @@ Két ujjal nagyíthat, húzással mozgathat
 Eredeti
 Fotó használata
 Fotó igazítása (nagyítás és vágás)
+Támogatás és adatvédelem
+Hiba bejelentése
+Bejelentés küldése a fejlesztőnek
+Neved
+Írd le a problémát
+E-mail megnyitása
+Megnyílik az e-mail-alkalmazásod a kész üzenettel (az alkalmazás verziójával és a telefon típusával): koppints a Küldés gombra.
+Nem található e-mail-alkalmazás. Írj ide: {email}
+Adatvédelmi tájékoztató
+Milyen adatokat használ az alkalmazás, és hogyan kezeli őket
+Adatok törlésének kérése
+Fiók és online adatok törlése
+Véglegesen törli a fiókot és a szerveren tárolt adatokat
+Törlöd a fiókot?
+A fiókod, az online járműveid és az általad létrehozott csoportok (járműveikkel együtt) véglegesen törlődnek. A mások által létrehozott csoportokból kilépsz. A művelet nem vonható vissza.
+Fiók és adatok törölve.
+Az adatok törölve. A fiók törlésének befejezéséhez jelentkezz be újra, és ismételd meg a műveletet.
+Csoport zárolva: az ingyenes verzióban összesen legfeljebb {n} járművet láthatsz, a csoportokéval együtt.
+Feloldás Pro-val
+Ha belépsz ebbe a csoportba, túllépnéd az ingyenes verzió {n} járműves korlátját. Pro-val azonnal beléphetsz.

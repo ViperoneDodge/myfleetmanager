@@ -350,3 +350,23 @@ Klíptu til að þysja, dragðu til að færa
 Upprunaleg
 Nota mynd
 Laga mynd (aðdráttur og skurður)
+Aðstoð og persónuvernd
+Tilkynna vandamál
+Senda tilkynningu til forritarans
+Nafnið þitt
+Lýstu vandamálinu
+Opna tölvupóst
+Tölvupóstforritið opnast með tilbúnum skilaboðum (með útgáfu forritsins og gerð símans): ýttu á Senda.
+Ekkert tölvupóstforrit fannst. Skrifaðu á {email}
+Persónuverndarstefna
+Hvaða gögn forritið notar og hvernig farið er með þau
+Biðja um eyðingu gagna
+Eyða aðgangi og netgögnum
+Eyðir aðganginum og gögnunum á þjóninum varanlega
+Eyða aðganginum?
+Aðganginum þínum, ökutækjunum þínum á netinu og hópunum sem þú stofnaðir (ásamt ökutækjum þeirra) verður eytt varanlega. Þú yfirgefur hópa sem aðrir stofnuðu. Ekki er hægt að afturkalla þetta.
+Aðgangi og gögnum eytt.
+Gögnum eytt. Skráðu þig inn aftur og endurtaktu aðgerðina til að ljúka eyðingu aðgangsins.
+Hópur læstur: í ókeypis útgáfunni sérðu að hámarki {n} ökutæki samtals, einnig þau í hópum.
+Opna með Pro
+Ef þú gengur í þennan hóp ferðu yfir {n} ökutækja hámark ókeypis útgáfunnar. Með Pro geturðu gengið strax í hann.

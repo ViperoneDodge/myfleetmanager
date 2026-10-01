@@ -1,5 +1,8 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
+
+import 'package:crypto/crypto.dart';
 
 import 'package:flutter/foundation.dart';
 
@@ -12,9 +15,16 @@ import 'notification_service.dart';
 import 'pro_service.dart';
 import 'group_watch.dart';
 import 'push_service.dart';
+import 'support_service.dart';
 import 'sync_service.dart';
 
 enum SyncStatus { off, connecting, online, offline }
+
+/// Ingresso in un gruppo negato: con la versione gratuita si supererebbe il limite.
+class ProLimitException implements Exception {
+  final String groupName;
+  ProLimitException(this.groupName);
+}
 
 class AppState extends ChangeNotifier {
   final LocalStore store = LocalStore();
@@ -32,8 +42,6 @@ class AppState extends ChangeNotifier {
   /// Veicoli (personali) gestibili con la versione gratuita.
   static const int freeVehicleLimit = 3;
 
-  /// Codice riservato allo sviluppo: sblocca la Pro senza acquisto.
-  static const String _devCode = 'PIPPOPUZZA';
 
   /// Acquisto confermato dal Play Store (ricordato sul telefono).
   bool purchasedPro = false;
@@ -47,24 +55,46 @@ class AppState extends ChangeNotifier {
   static bool isProType(VehicleType t) =>
       t == VehicleType.furgone || t == VehicleType.camion || t == VehicleType.rimorchio;
 
-  /// Veicoli che contano per il limite gratuito: quelli creati da me, ovunque si trovino
-  /// (anche spostati o aggiunti in un gruppo). I veicoli creati da altri membri
-  /// di un gruppo non contano. Per i veicoli vecchi senza autore contano quelli personali.
-  List<Vehicle> get ownedVehicles {
-    final me = session?.key ?? '';
-    return vehicles
-        .where((v) => v.createdBy.isNotEmpty ? v.createdBy == me : isPersonal(v))
-        .toList();
+  /// Gruppi bloccati nella versione gratuita. Il limite vale su TUTTI i veicoli
+  /// visibili: personali e dei gruppi (anche quelli aggiunti da altri membri).
+  /// I gruppi che farebbero superare il limite restano nascosti con l'invito alla
+  /// Pro; dopo l'acquisto tornano visibili da soli.
+  Set<String> get lockedGroupIds {
+    if (isPro) return const {};
+    final active = data.vehicles.where((v) => !v.deleted).toList();
+    var total = active.where(isPersonal).length;
+    final locked = <String>{};
+    for (final g in data.groups) {
+      final n = active.where((v) => v.fleetId == g.id).length;
+      if (n == 0) continue;
+      if (total + n > freeVehicleLimit) {
+        locked.add(g.id);
+      } else {
+        total += n;
+      }
+    }
+    return locked;
   }
 
-  /// Con la versione gratuita si possono avere al massimo [freeVehicleLimit] veicoli propri.
-  bool get canAddVehicle => isPro || ownedVehicles.length < freeVehicleLimit;
+  bool isGroupLocked(String id) => lockedGroupIds.contains(id);
 
+  /// Versione gratuita: al massimo [freeVehicleLimit] veicoli visibili in totale.
+  bool get canAddVehicle => isPro || vehicles.length < freeVehicleLimit;
+
+  /// Codice riservato ai test: sblocca la Pro senza acquisto. Nel sorgente (pubblico)
+  /// c'è solo la sua impronta SHA-256. A ogni sblocco parte un avviso via email.
   bool unlockDev(String code) {
-    if (code.trim().toUpperCase() != _devCode) return false;
+    final hash = sha256.convert(utf8.encode(code.trim().toUpperCase())).toString();
+    if (hash != SupportService.devCodeHash) return false;
     devPro = true;
     _writeSettings();
     notifyListeners();
+    final s = session;
+    SupportService.notifyDeveloper('MyFleetManager: Pro sbloccata con codice di test', {
+      'Account': s?.email ?? s?.displayName ?? '-',
+      'Tipo account': isCloud ? 'online' : 'solo telefono',
+      'Lingua': L10n.code,
+    });
     return true;
   }
 
@@ -85,7 +115,10 @@ class AppState extends ChangeNotifier {
   bool get isCloud => session?.mode == AccountMode.cloud;
 
   List<Vehicle> get vehicles {
-    final list = data.vehicles.where((v) => !v.deleted).toList();
+    final locked = lockedGroupIds;
+    final list = data.vehicles
+        .where((v) => !v.deleted && (v.fleetId == null || !locked.contains(v.fleetId)))
+        .toList();
     list.sort((a, b) {
       final da = a.nextDeadline?.dueDate;
       final db = b.nextDeadline?.dueDate;
@@ -272,6 +305,34 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Elimina l'account online e i dati sul server (richiesto dal Play Store).
+  /// Restituisce false se i dati sono stati eliminati ma Firebase chiede un
+  /// accesso recente per cancellare anche l'account: basta rientrare e ripetere.
+  Future<bool> deleteCloudAccount() async {
+    final s = session;
+    if (s == null || !isCloud) return true;
+    sync.stop();
+    _retry?.cancel();
+    await push.stop();
+    try {
+      await sync.deleteAllData(s, List.of(data.groups));
+    } catch (_) {
+      // Offline o errore del server: si riprende come prima, nulla è perso.
+      _startSync();
+      startPush();
+      rethrow;
+    }
+    var complete = true;
+    try {
+      await auth.deleteCloudAccount();
+    } on AuthException {
+      complete = false;
+    }
+    await store.deleteUserData(s);
+    await logout();
+    return complete;
+  }
+
   Future<void> _persist() async {
     final s = session;
     if (s == null) return;
@@ -282,7 +343,8 @@ class AppState extends ChangeNotifier {
     _notifyDebounce?.cancel();
     _notifyDebounce = Timer(const Duration(milliseconds: 800), () async {
       try {
-        await notifications.rescheduleAll(data.vehicles, data.notify);
+        // Solo i veicoli visibili (non quelli dei gruppi bloccati).
+        await notifications.rescheduleAll(vehicles, data.notify);
       } catch (_) {}
     });
   }
@@ -641,6 +703,20 @@ class AppState extends ChangeNotifier {
 
   Future<FleetGroup> joinGroup(String code) async {
     final g = await sync.joinGroup(session!, code);
+    // Versione gratuita: si contano i veicoli del gruppo prima di confermare l'ingresso.
+    // Se il totale supera il limite si esce subito e serve la Pro.
+    if (!isPro) {
+      var n = 0;
+      try {
+        n = await sync.countGroupVehicles(g.id);
+      } catch (_) {}
+      if (vehicles.length + n > freeVehicleLimit) {
+        try {
+          await sync.leaveGroup(session!, g.id);
+        } catch (_) {}
+        throw ProLimitException(g.name);
+      }
+    }
     if (data.groupById(g.id) == null) data.groups.add(g);
     await _persist();
     notifyListeners();

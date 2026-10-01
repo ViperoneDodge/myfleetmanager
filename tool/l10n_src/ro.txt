@@ -350,3 +350,23 @@ Depărtează degetele pentru zoom, trage pentru a muta
 Original
 Folosește fotografia
 Ajustează fotografia (zoom și decupare)
+Asistență și confidențialitate
+Raportează o problemă
+Trimite un raport dezvoltatorului
+Numele tău
+Descrie problema
+Deschide e-mailul
+Se va deschide aplicația de e-mail cu mesajul pregătit (cu versiunea aplicației și modelul telefonului): apasă Trimite.
+Nu s-a găsit nicio aplicație de e-mail. Scrie la {email}
+Politica de confidențialitate
+Ce date folosește aplicația și cum sunt prelucrate
+Solicită ștergerea datelor
+Șterge contul și datele online
+Șterge definitiv contul și datele salvate pe server
+Ștergi contul?
+Contul tău, vehiculele tale online și grupurile create de tine (cu vehiculele lor) vor fi șterse definitiv. Vei ieși din grupurile create de alții. Operațiunea nu poate fi anulată.
+Contul și datele au fost șterse.
+Datele au fost șterse. Pentru a finaliza ștergerea contului, conectează-te din nou și repetă operațiunea.
+Grup blocat: cu versiunea gratuită poți vedea în total cel mult {n} vehicule, inclusiv cele din grupuri.
+Deblochează cu Pro
+Intrând în acest grup ai depăși limita de {n} vehicule a versiunii gratuite. Cu Pro poți intra imediat.

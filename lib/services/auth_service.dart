@@ -160,6 +160,18 @@ class AuthService {
     return u != null && u.uid == s.key;
   }
 
+  /// Cancella definitivamente l'utente Firebase.
+  Future<void> deleteCloudAccount() async {
+    final u = FirebaseAuth.instance.currentUser;
+    if (u == null) return;
+    try {
+      await u.delete();
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'requires-recent-login') throw AuthException(tr('account.relogin'));
+      throw AuthException(_firebaseError(e));
+    }
+  }
+
   Future<void> logout(Session? s) async {
     if (s?.mode == AccountMode.cloud && cloudAvailable) {
       try {

@@ -350,3 +350,23 @@ Cubit untuk memperbesar, seret untuk memindahkan
 Asli
 Gunakan foto
 Sesuaikan foto (zoom dan potong)
+Bantuan dan privasi
+Laporkan masalah
+Kirim laporan ke pengembang
+Nama Anda
+Jelaskan masalahnya
+Buka email
+Aplikasi email Anda akan terbuka dengan pesan yang sudah siap (termasuk versi aplikasi dan model ponsel): ketuk Kirim.
+Tidak ada aplikasi email. Kirim email ke {email}
+Kebijakan privasi
+Data apa yang digunakan aplikasi dan cara pengelolaannya
+Minta penghapusan data
+Hapus akun dan data online
+Menghapus permanen akun dan data yang tersimpan di server
+Hapus akun?
+Akun Anda, kendaraan online Anda, dan grup yang Anda buat (beserta kendaraannya) akan dihapus permanen. Anda akan keluar dari grup buatan orang lain. Tindakan ini tidak dapat dibatalkan.
+Akun dan data telah dihapus.
+Data telah dihapus. Untuk menyelesaikan penghapusan akun, masuk lagi lalu ulangi tindakan ini.
+Grup terkunci: dengan versi gratis Anda hanya dapat melihat maksimal {n} kendaraan secara total, termasuk yang ada di grup.
+Buka dengan Pro
+Bergabung dengan grup ini akan melebihi batas {n} kendaraan versi gratis. Dengan Pro Anda bisa langsung bergabung.

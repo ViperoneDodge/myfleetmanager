@@ -231,7 +231,7 @@ Izbrišem vozilo?
 Prometno dovoljenje
 Zavarovalna polica
 Potrdilo o tehničnem pregledu
-Letna dajatev
+Potrdilo o letni dajatvi
 Račun za servis
 Ime dokumenta
 Npr. Prometno dovoljenje
@@ -350,3 +350,23 @@ Razprite prsta za povečavo, povlecite za premik
 Izvirno
 Uporabi fotografijo
 Prilagodi fotografijo (povečava in obrezovanje)
+Pomoč in zasebnost
+Prijavi težavo
+Pošlji prijavo razvijalcu
+Tvoje ime
+Opiši težavo
+Odpri e-pošto
+Odprla se bo tvoja aplikacija za e-pošto s pripravljenim sporočilom (z različico aplikacije in modelom telefona): pritisni Pošlji.
+Ni najdene aplikacije za e-pošto. Piši na {email}
+Pravilnik o zasebnosti
+Katere podatke uporablja aplikacija in kako jih obdeluje
+Zahtevaj izbris podatkov
+Izbriši račun in spletne podatke
+Trajno izbriše račun in podatke, shranjene na strežniku
+Izbrišem račun?
+Trajno bodo izbrisani tvoj račun, tvoja spletna vozila in skupine, ki si jih ustvaril (z njihovimi vozili). Izstopil boš iz skupin, ki so jih ustvarili drugi. Dejanja ni mogoče razveljaviti.
+Račun in podatki izbrisani.
+Podatki izbrisani. Za dokončanje izbrisa računa se znova prijavi in ponovi postopek.
+Skupina je zaklenjena: v brezplačni različici lahko skupaj vidiš največ {n} vozila, vključno s tistimi v skupinah.
+Odkleni s Pro
+Z vstopom v to skupino bi presegel omejitev {n} vozil brezplačne različice. S Pro lahko vstopiš takoj.

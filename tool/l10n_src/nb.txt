@@ -350,3 +350,23 @@ Knip for å zoome, dra for å flytte
 Original
 Bruk bilde
 Tilpass bilde (zoom og beskjæring)
+Hjelp og personvern
+Rapporter et problem
+Send en rapport til utvikleren
+Navnet ditt
+Beskriv problemet
+Åpne e-post
+E-postappen din åpnes med meldingen klar (med appversjon og telefonmodell): trykk på Send.
+Fant ingen e-postapp. Skriv til {email}
+Personvernerklæring
+Hvilke data appen bruker og hvordan de behandles
+Be om sletting av data
+Slett konto og nettdata
+Sletter kontoen og dataene på serveren for godt
+Slette kontoen?
+Kontoen din, kjøretøyene dine på nett og gruppene du har opprettet (med kjøretøyene deres) slettes for godt. Du forlater grupper som andre har opprettet. Dette kan ikke angres.
+Konto og data er slettet.
+Dataene er slettet. Logg inn igjen og gjenta handlingen for å fullføre slettingen av kontoen.
+Gruppen er låst: i gratisversjonen kan du se maks {n} kjøretøy totalt, også de i grupper.
+Lås opp med Pro
+Hvis du blir med i denne gruppen, overskrider du gratisversjonens grense på {n} kjøretøy. Med Pro kan du bli med med en gang.

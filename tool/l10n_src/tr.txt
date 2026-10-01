@@ -350,3 +350,23 @@ Yakınlaştırmak için iki parmağınızı açın, taşımak için sürükleyin
 Orijinal
 Fotoğrafı kullan
 Fotoğrafı ayarla (yakınlaştırma ve kırpma)
+Destek ve gizlilik
+Sorun bildir
+Geliştiriciye bildirim gönder
+Adınız
+Sorunu açıklayın
+E-postayı aç
+E-posta uygulamanız mesaj hazır olarak açılacak (uygulama sürümü ve telefon modeliyle birlikte): Gönder'e dokunun.
+E-posta uygulaması bulunamadı. {email} adresine yazın
+Gizlilik politikası
+Uygulamanın hangi verileri kullandığı ve nasıl işlendiği
+Verilerin silinmesini iste
+Hesabı ve çevrimiçi verileri sil
+Hesabı ve sunucudaki verileri kalıcı olarak siler
+Hesap silinsin mi?
+Hesabınız, çevrimiçi araçlarınız ve oluşturduğunuz gruplar (araçlarıyla birlikte) kalıcı olarak silinecek. Başkalarının oluşturduğu gruplardan çıkacaksınız. Bu işlem geri alınamaz.
+Hesap ve veriler silindi.
+Veriler silindi. Hesabın silinmesini tamamlamak için tekrar giriş yapın ve işlemi yineleyin.
+Grup kilitli: ücretsiz sürümde gruplardakiler dahil toplam en fazla {n} araç görebilirsiniz.
+Pro ile aç
+Bu gruba katılırsanız ücretsiz sürümün {n} araç sınırını aşarsınız. Pro ile hemen katılabilirsiniz.

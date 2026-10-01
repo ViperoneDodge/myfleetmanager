@@ -231,7 +231,7 @@ Usunąć pojazd?
 Dowód rejestracyjny
 Polisa ubezpieczeniowa
 Zaświadczenie z przeglądu
-Podatek drogowy
+Potwierdzenie zapłaty podatku
 Faktura za serwis
 Nazwa dokumentu
 Np. Dowód rejestracyjny
@@ -350,3 +350,23 @@ Rozsuń palce, aby powiększyć, przeciągnij, aby przesunąć
 Oryginał
 Użyj zdjęcia
 Dopasuj zdjęcie (powiększenie i kadrowanie)
+Pomoc i prywatność
+Zgłoś problem
+Wyślij zgłoszenie do twórcy aplikacji
+Twoje imię
+Opisz problem
+Otwórz e-mail
+Otworzy się aplikacja e-mail z gotową wiadomością (z wersją aplikacji i modelem telefonu): naciśnij Wyślij.
+Nie znaleziono aplikacji e-mail. Napisz na {email}
+Polityka prywatności
+Jakich danych używa aplikacja i jak są przetwarzane
+Poproś o usunięcie danych
+Usuń konto i dane online
+Trwale usuwa konto i dane zapisane na serwerze
+Usunąć konto?
+Twoje konto, pojazdy online i utworzone przez Ciebie grupy (wraz z ich pojazdami) zostaną trwale usunięte. Opuścisz grupy utworzone przez innych. Tej operacji nie można cofnąć.
+Konto i dane usunięte.
+Dane usunięte. Aby dokończyć usuwanie konta, zaloguj się ponownie i powtórz operację.
+Grupa zablokowana: w wersji bezpłatnej możesz widzieć łącznie maksymalnie {n} pojazdy, wliczając pojazdy w grupach.
+Odblokuj z Pro
+Dołączając do tej grupy, przekroczysz limit {n} pojazdów wersji bezpłatnej. Z Pro możesz dołączyć od razu.

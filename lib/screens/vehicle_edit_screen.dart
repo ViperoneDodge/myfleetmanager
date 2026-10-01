@@ -127,11 +127,17 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
 
   Future<void> _pickDate(Deadline d) async {
     final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    // Il tagliando registra la data dell'ULTIMO intervento: non può essere nel futuro.
+    final isService = d.kind == DeadlineKind.service;
+    final last = isService ? today : DateTime(now.year + 20);
+    var initial = d.date ?? today;
+    if (initial.isAfter(last)) initial = last;
     final picked = await showDatePicker(
       context: context,
-      initialDate: d.date ?? now,
+      initialDate: initial,
       firstDate: DateTime(1980),
-      lastDate: DateTime(now.year + 20),
+      lastDate: last,
       helpText: d.kind == DeadlineKind.service
           ? tr('edit.lastServiceDate')
           : tr('edit.deadlineDate', {'what': d.displayLabel}),

@@ -139,9 +139,22 @@ perms = """    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" android:maxSdkVersion="32"/>
 """
+# Android 11+: dichiarare le app esterne da aprire (email precompilata, link privacy).
+queries = """    <queries>
+        <intent>
+            <action android:name="android.intent.action.SENDTO"/>
+            <data android:scheme="mailto"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+"""
+if "android.intent.action.SENDTO" not in m:
+    m = m.replace("<application", queries + "    <application", 1)
 if "POST_NOTIFICATIONS" not in m:
     m = m.replace("<application", perms + "    <application", 1)
 receivers = """

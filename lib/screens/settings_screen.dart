@@ -7,6 +7,9 @@ import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../services/notification_service.dart';
+import '../services/support_service.dart';
+import '../services/sync_service.dart' show cloudErrorMessage;
+import '../version.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 import 'family_screen.dart';
@@ -217,6 +220,46 @@ class SettingsScreen extends StatelessWidget {
             else
               ..._familySection(context),
 
+            // ---------------- Assistenza e privacy ----------------
+            _header(context, tr('support.title')),
+            ListTile(
+              leading: const Icon(Icons.bug_report_outlined),
+              title: Text(tr('bug.title')),
+              subtitle: Text(tr('bug.subtitle')),
+              onTap: () => _bugReport(context),
+            ),
+            ListTile(
+              leading: const Icon(Icons.privacy_tip_outlined),
+              title: Text(tr('privacy.title')),
+              subtitle: Text(tr('privacy.subtitle')),
+              trailing: const Icon(Icons.open_in_new, size: 18),
+              onTap: () async {
+                final ok = await SupportService.openPrivacy();
+                if (!ok && context.mounted) showSnack(context, SupportService.privacyUrl);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.mail_outline),
+              title: Text(tr('privacy.deleteRequest')),
+              subtitle: Text(SupportService.email),
+              onTap: () async {
+                final ok = await SupportService.openEmail(
+                  subject: 'MyFleetManager - ${tr('privacy.deleteRequest')}',
+                  body: '${tr('login.email')}: ${appState.session?.email ?? appState.session?.displayName ?? ''}\n\n',
+                );
+                if (!ok && context.mounted) {
+                  showSnack(context, tr('bug.noMail', {'email': SupportService.email}));
+                }
+              },
+            ),
+            if (appState.isCloud)
+              ListTile(
+                leading: Icon(Icons.delete_forever_outlined, color: scheme.error),
+                title: Text(tr('account.delete'), style: TextStyle(color: scheme.error)),
+                subtitle: Text(tr('account.deleteInfo')),
+                onTap: () => _deleteAccount(context),
+              ),
+
             // ---------------- Esci ----------------
             const Divider(height: 32),
             ListTile(
@@ -230,7 +273,7 @@ class SettingsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             Center(
-              child: Text('MyFleetManager 1.6.0',
+              child: Text('MyFleetManager $appVersion',
                   style: TextStyle(fontSize: 12, color: scheme.outline)),
             ),
             const SizedBox(height: 24),
@@ -239,6 +282,94 @@ class SettingsScreen extends StatelessWidget {
         );
       },
     );
+  }
+
+  Future<void> _bugReport(BuildContext context) async {
+    final name = TextEditingController(
+        text: appState.session?.displayName ?? '');
+    final msg = TextEditingController();
+    final send = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(tr('bug.title')),
+        content: SingleChildScrollView(
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            TextField(
+              controller: name,
+              textCapitalization: TextCapitalization.words,
+              decoration: InputDecoration(
+                  labelText: tr('bug.name'), border: const OutlineInputBorder()),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: msg,
+              maxLines: 6,
+              minLines: 4,
+              autofocus: true,
+              textCapitalization: TextCapitalization.sentences,
+              decoration: InputDecoration(
+                  labelText: tr('bug.message'),
+                  alignLabelWithHint: true,
+                  border: const OutlineInputBorder()),
+            ),
+            const SizedBox(height: 8),
+            Text(tr('bug.info'), style: Theme.of(ctx).textTheme.bodySmall),
+          ]),
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
+          FilledButton.icon(
+            onPressed: () => Navigator.pop(ctx, true),
+            icon: const Icon(Icons.send),
+            label: Text(tr('bug.send')),
+          ),
+        ],
+      ),
+    );
+    if (send != true || msg.text.trim().isEmpty) return;
+    final device = await SupportService.deviceDescription();
+    final body = '${msg.text.trim()}\n\n'
+        '-----\n'
+        '${tr('bug.name')}: ${name.text.trim()}\n'
+        'App: MyFleetManager $appVersion${appState.isPro ? ' (Pro)' : ''}\n'
+        '${appState.isCloud ? 'Account online' : 'Account locale'} · ${L10n.code}\n'
+        '$device\n';
+    final ok = await SupportService.openEmail(
+      subject: 'MyFleetManager $appVersion - ${tr('bug.title')}',
+      body: body,
+    );
+    if (!ok && context.mounted) {
+      showSnack(context, tr('bug.noMail', {'email': SupportService.email}));
+    }
+  }
+
+  Future<void> _deleteAccount(BuildContext context) async {
+    final yes = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(tr('account.deleteTitle')),
+        content: Text(tr('account.deleteBody')),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
+          FilledButton(
+            style: FilledButton.styleFrom(backgroundColor: Theme.of(ctx).colorScheme.error),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: Text(tr('common.delete')),
+          ),
+        ],
+      ),
+    );
+    if (yes != true || !context.mounted) return;
+    final messenger = ScaffoldMessenger.of(context);
+    final nav = Navigator.of(context);
+    try {
+      final complete = await appState.deleteCloudAccount();
+      nav.popUntil((r) => r.isFirst);
+      messenger.showSnackBar(SnackBar(
+          content: Text(complete ? tr('account.deleted') : tr('account.relogin'))));
+    } catch (e) {
+      messenger.showSnackBar(SnackBar(content: Text(cloudErrorMessage(e))));
+    }
   }
 
   List<Widget> _appearance(BuildContext context) {
@@ -452,14 +583,8 @@ class _NotifyStatusState extends State<_NotifyStatus> with WidgetsBindingObserve
         },
       );
     }
-    if (!st.exact) {
-      return ListTile(
-        leading: Icon(Icons.alarm_off, color: Colors.orange.shade800),
-        title: Text(tr('settings.inexact'), style: const TextStyle(fontWeight: FontWeight.w600)),
-        subtitle: Text(tr('settings.inexactInfo')),
-        onTap: () => appState.notifications.requestExactAlarms(),
-      );
-    }
+    // Niente sveglie esatte (regole Play Store): i promemoria giornalieri possono
+    // arrivare con qualche minuto di tolleranza, quindi nessun avviso da mostrare.
     return ListTile(
       leading: Icon(Icons.notifications_active, color: Colors.green.shade700),
       title: Text(tr('settings.allowed')),

@@ -350,3 +350,23 @@ Zoomaa nipistämällä, siirrä vetämällä
 Alkuperäinen
 Käytä kuvaa
 Säädä kuvaa (zoomaus ja rajaus)
+Tuki ja tietosuoja
+Ilmoita ongelmasta
+Lähetä ilmoitus kehittäjälle
+Nimesi
+Kuvaile ongelma
+Avaa sähköposti
+Sähköpostisovellus avautuu valmiin viestin kanssa (sovelluksen versio ja puhelinmalli mukana): napauta Lähetä.
+Sähköpostisovellusta ei löytynyt. Kirjoita osoitteeseen {email}
+Tietosuojaseloste
+Mitä tietoja sovellus käyttää ja miten niitä käsitellään
+Pyydä tietojen poistamista
+Poista tili ja verkkotiedot
+Poistaa tilin ja palvelimelle tallennetut tiedot pysyvästi
+Poistetaanko tili?
+Tilisi, verkossa olevat ajoneuvosi ja luomasi ryhmät (ajoneuvoineen) poistetaan pysyvästi. Poistut muiden luomista ryhmistä. Toimintoa ei voi perua.
+Tili ja tiedot poistettu.
+Tiedot poistettu. Viimeistele tilin poisto kirjautumalla uudelleen ja toistamalla toiminto.
+Ryhmä on lukittu: ilmaisversiossa näet yhteensä enintään {n} ajoneuvoa, ryhmien ajoneuvot mukaan lukien.
+Avaa Pro-versiolla
+Liittymällä tähän ryhmään ylittäisit ilmaisversion {n} ajoneuvon rajan. Pro-versiolla voit liittyä heti.
