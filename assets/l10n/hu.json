@@ -313,7 +313,7 @@
  "pro.activeThanks": "Köszönjük, hogy támogatod a MyFleetManagert!",
  "pro.activeDev": "Pro feloldva fejlesztői kóddal",
  "pro.benefitVehicles": "Korlátlan számú jármű",
- "pro.benefitTypes": "Kisteherautók, teherautók és utánfutók",
+ "pro.benefitTypes": "Kisteherautók, teherautók, pótkocsik és mezőgazdasági járművek",
  "pro.benefitDocs": "Járműdokumentumok (forgalmi, kötvény…)",
  "pro.benefitMaint": "Karbantartási előzmények",
  "pro.benefitSupport": "Támogasd az alkalmazás fejlesztését",
@@ -370,5 +370,11 @@
  "account.relogin": "Az adatok törölve. A fiók törlésének befejezéséhez jelentkezz be újra, és ismételd meg a műveletet.",
  "pro.groupLocked": "Csoport zárolva: az ingyenes verzióban összesen legfeljebb {n} járművet láthatsz, a csoportokéval együtt.",
  "pro.groupLockedBtn": "Feloldás Pro-val",
- "pro.reasonJoin": "Ha belépsz ebbe a csoportba, túllépnéd az ingyenes verzió {n} járműves korlátját. Pro-val azonnal beléphetsz."
+ "pro.reasonJoin": "Ha belépsz ebbe a csoportba, túllépnéd az ingyenes verzió {n} járműves korlátját. Pro-val azonnal beléphetsz.",
+ "type.tractor": "Mezőgazdasági jármű",
+ "type.tractors": "Mezőgazdasági járművek",
+ "pro.limitedCard": "Pro-val elérhető",
+ "pro.reasonLimited": "Az ingyenes verzióban legfeljebb {n} autót vagy motort használhatsz. A többi jármű látható marad, de zárolva: válts Pro-ra, hogy mindet feloldd.",
+ "pro.devNeedCloud": "A fejlesztői kód használatához online fiók szükséges.",
+ "pro.devRevoked": "A fejlesztői kódot ennél a fióknál letiltották."
 }

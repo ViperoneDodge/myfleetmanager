@@ -58,6 +58,8 @@ IconData vehicleIcon(VehicleType t) {
       return Icons.local_shipping;
     case VehicleType.rimorchio:
       return Icons.rv_hookup;
+    case VehicleType.agricolo:
+      return Icons.agriculture;
   }
 }
 
@@ -149,6 +151,9 @@ class VehicleCard extends StatelessWidget {
 
   /// Evidenziato (selezionato nella vista a due pannelli dei pieghevoli).
   final bool selected;
+
+  /// Versione gratuita oltre il limite: scheda in grigio, senza scadenze.
+  final bool limited;
   const VehicleCard({
     super.key,
     required this.vehicle,
@@ -156,14 +161,23 @@ class VehicleCard extends StatelessWidget {
     this.onLongPress,
     this.badge,
     this.selected = false,
+    this.limited = false,
   });
+
+  /// Filtro che toglie quasi tutta la saturazione e schiarisce (scheda "spenta").
+  static const ColorFilter _greyFilter = ColorFilter.matrix(<double>[
+    0.2126, 0.7152, 0.0722, 0, 0, //
+    0.2126, 0.7152, 0.0722, 0, 0,
+    0.2126, 0.7152, 0.0722, 0, 0,
+    0, 0, 0, 0.55, 0,
+  ]);
 
   @override
   Widget build(BuildContext context) {
     final v = vehicle;
-    final next = v.nextDeadline;
+    final next = limited ? null : v.nextDeadline;
     final scheme = Theme.of(context).colorScheme;
-    return Card(
+    final card = Card(
       margin: const EdgeInsets.symmetric(vertical: 5),
       clipBehavior: Clip.antiAlias,
       color: selected ? scheme.secondaryContainer : null,
@@ -210,7 +224,17 @@ class VehicleCard extends StatelessWidget {
                   ],
                 ]),
                 const SizedBox(height: 6),
-                if (next != null)
+                if (limited)
+                  Row(children: [
+                    Icon(Icons.lock_outline, size: 14, color: scheme.outline),
+                    const SizedBox(width: 4),
+                    Flexible(
+                      child: Text(tr('pro.limitedCard'),
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(fontSize: 12, color: scheme.outline)),
+                    ),
+                  ])
+                else if (next != null)
                   Wrap(
                     crossAxisAlignment: WrapCrossAlignment.center,
                     spacing: 6,
@@ -226,10 +250,11 @@ class VehicleCard extends StatelessWidget {
                           fontSize: 12, color: Theme.of(context).colorScheme.outline)),
               ]),
             ),
-            const Icon(Icons.chevron_right),
+            Icon(limited ? Icons.lock_outline : Icons.chevron_right),
           ]),
         ),
       ),
     );
+    return limited ? ColorFiltered(colorFilter: _greyFilter, child: card) : card;
   }
 }

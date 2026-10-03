@@ -313,7 +313,7 @@
  "pro.activeThanks": "MyFleetManager を応援いただきありがとうございます！",
  "pro.activeDev": "開発者コードで Pro を解除しました",
  "pro.benefitVehicles": "車両数無制限",
- "pro.benefitTypes": "バン、トラック、トレーラー",
+ "pro.benefitTypes": "バン、トラック、トレーラー、農業車両",
  "pro.benefitDocs": "車両の書類（車検証、保険証券…）",
  "pro.benefitMaint": "整備履歴",
  "pro.benefitSupport": "アプリの開発を応援",
@@ -370,5 +370,11 @@
  "account.relogin": "データを削除しました。アカウントの削除を完了するには、もう一度ログインして操作を繰り返してください。",
  "pro.groupLocked": "グループはロックされています：無料版では、グループ内の車両を含めて合計 {n} 台まで表示できます。",
  "pro.groupLockedBtn": "Pro でロック解除",
- "pro.reasonJoin": "このグループに参加すると無料版の上限 {n} 台を超えます。Pro ならすぐに参加できます。"
+ "pro.reasonJoin": "このグループに参加すると無料版の上限 {n} 台を超えます。Pro ならすぐに参加できます。",
+ "type.tractor": "農業車両",
+ "type.tractors": "農業車両",
+ "pro.limitedCard": "Pro で利用可能",
+ "pro.reasonLimited": "無料版では自動車またはバイクを {n} 台まで利用できます。その他の車両は表示されますがロックされます。Pro ですべて解除できます。",
+ "pro.devNeedCloud": "開発者コードを使うにはオンラインアカウントが必要です。",
+ "pro.devRevoked": "このアカウントの開発者コードは無効化されました。"
 }

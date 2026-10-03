@@ -10,7 +10,7 @@ String newId([int length = 16]) {
   return List.generate(length, (_) => chars[r.nextInt(chars.length)]).join();
 }
 
-enum VehicleType { auto, moto, furgone, camion, rimorchio }
+enum VehicleType { auto, moto, furgone, camion, rimorchio, agricolo }
 
 VehicleType vehicleTypeFrom(String? s) {
   for (final t in VehicleType.values) {
@@ -31,6 +31,8 @@ String vehicleTypeLabel(VehicleType t) {
       return tr('type.truck');
     case VehicleType.rimorchio:
       return tr('type.trailer');
+    case VehicleType.agricolo:
+      return tr('type.tractor');
   }
 }
 
@@ -46,6 +48,8 @@ String vehicleTypePlural(VehicleType t) {
       return tr('type.trucks');
     case VehicleType.rimorchio:
       return tr('type.trailers');
+    case VehicleType.agricolo:
+      return tr('type.tractors');
   }
 }
 
@@ -270,6 +274,10 @@ class Vehicle {
 
   /// Chi ha creato il veicolo: conta per il limite della versione gratuita.
   String createdBy;
+
+  /// Quando è stato aggiunto (ms). Serve a stabilire quali sono i "primi" veicoli
+  /// nella versione gratuita. 0 per i veicoli creati prima della 1.8.
+  int createdAt;
   bool deleted;
 
   /// Parco a cui appartiene (null/personale = "I miei"; altrimenti id del nucleo familiare).
@@ -292,6 +300,7 @@ class Vehicle {
     this.updatedBy = '',
     this.updatedByUid = '',
     this.createdBy = '',
+    this.createdAt = 0,
     this.deleted = false,
     this.fleetId,
   })  : id = id ?? newId(),
@@ -394,6 +403,7 @@ class Vehicle {
         'updatedBy': updatedBy,
         'updatedByUid': updatedByUid,
         'createdBy': createdBy,
+        'createdAt': createdAt,
         'deleted': deleted,
         'fleetId': fleetId,
       };
@@ -421,6 +431,7 @@ class Vehicle {
         updatedBy: j['updatedBy'] as String? ?? '',
         updatedByUid: j['updatedByUid'] as String? ?? '',
         createdBy: j['createdBy'] as String? ?? '',
+        createdAt: (j['createdAt'] as num?)?.toInt() ?? 0,
         deleted: j['deleted'] as bool? ?? false,
         fleetId: j['fleetId'] as String?,
       );

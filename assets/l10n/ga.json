@@ -313,7 +313,7 @@
  "pro.activeThanks": "Go raibh maith agat as tacú le MyFleetManager!",
  "pro.activeDev": "Díghlasáladh Pro le cód an fhorbróra",
  "pro.benefitVehicles": "Feithiclí gan teorainn",
- "pro.benefitTypes": "Veaineanna, trucailí agus leantóirí",
+ "pro.benefitTypes": "Veaineanna, trucailí, leantóirí agus feithiclí talmhaíochta",
  "pro.benefitDocs": "Doiciméid feithicle (teastas clárúcháin, polasaí…)",
  "pro.benefitMaint": "Stair chothabhála",
  "pro.benefitSupport": "Tacaigh le forbairt na haipe",
@@ -370,5 +370,11 @@
  "account.relogin": "Sonraí scriosta. Chun scriosadh an chuntais a chríochnú, logáil isteach arís agus déan an oibríocht arís.",
  "pro.groupLocked": "Grúpa faoi ghlas: leis an leagan saor in aisce ní féidir leat ach {n} fheithicil ar a mhéad a fheiceáil san iomlán, lena n-áirítear iad siúd i ngrúpaí.",
  "pro.groupLockedBtn": "Díghlasáil le Pro",
- "pro.reasonJoin": "Dá rachfá isteach sa ghrúpa seo, sháródh tú teorainn {n} fheithicil an leagain saor in aisce. Le Pro is féidir leat dul isteach láithreach."
+ "pro.reasonJoin": "Dá rachfá isteach sa ghrúpa seo, sháródh tú teorainn {n} fheithicil an leagain saor in aisce. Le Pro is féidir leat dul isteach láithreach.",
+ "type.tractor": "Feithicil talmhaíochta",
+ "type.tractors": "Feithiclí talmhaíochta",
+ "pro.limitedCard": "Ar fáil le Pro",
+ "pro.reasonLimited": "Leis an leagan saor in aisce is féidir leat suas le {n} gcarr nó gluaisrothar a úsáid. Fanann na feithiclí eile le feiceáil ach faoi ghlas: faigh Pro chun iad go léir a dhíghlasáil.",
+ "pro.devNeedCloud": "Teastaíonn cuntas ar líne chun an cód forbróra a úsáid.",
+ "pro.devRevoked": "Díchumasaíodh an cód forbróra don chuntas seo."
 }

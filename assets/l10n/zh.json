@@ -313,7 +313,7 @@
  "pro.activeThanks": "感谢你支持 MyFleetManager！",
  "pro.activeDev": "已通过开发者代码解锁 Pro",
  "pro.benefitVehicles": "车辆数量不限",
- "pro.benefitTypes": "厢式货车、卡车和挂车",
+ "pro.benefitTypes": "厢式货车、卡车、挂车和农用车辆",
  "pro.benefitDocs": "车辆文件（行驶证、保险单…）",
  "pro.benefitMaint": "保养历史",
  "pro.benefitSupport": "支持应用开发",
@@ -370,5 +370,11 @@
  "account.relogin": "数据已删除。要完成账号删除，请重新登录并再次操作。",
  "pro.groupLocked": "群组已锁定：免费版总共最多只能查看 {n} 辆车，包括群组中的车辆。",
  "pro.groupLockedBtn": "用 Pro 解锁",
- "pro.reasonJoin": "加入此群组将超出免费版 {n} 辆车的上限。使用 Pro 可立即加入。"
+ "pro.reasonJoin": "加入此群组将超出免费版 {n} 辆车的上限。使用 Pro 可立即加入。",
+ "type.tractor": "农用车辆",
+ "type.tractors": "农用车辆",
+ "pro.limitedCard": "Pro 版可用",
+ "pro.reasonLimited": "免费版最多可使用 {n} 辆汽车或摩托车。其他车辆仍可见但已锁定：升级 Pro 即可全部解锁。",
+ "pro.devNeedCloud": "使用开发者代码需要在线账号。",
+ "pro.devRevoked": "此账号的开发者代码已被停用。"
 }

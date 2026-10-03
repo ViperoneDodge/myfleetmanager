@@ -187,6 +187,8 @@ class _HomeScreenState extends State<HomeScreen> {
     // Elenco principale: i propri veicoli E quelli condivisi nei gruppi.
     final all = appState.vehicles;
     final list = _filter == null ? all : all.where((v) => v.type == _filter).toList();
+    // Versione gratuita: oltre i primi 3 tra auto e moto le schede sono in grigio.
+    final limited = appState.limitedIds;
     return RefreshIndicator(
       onRefresh: appState.retrySync,
       child: ListView(
@@ -234,7 +236,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 vehicle: v,
                 badge: appState.isPersonal(v) ? null : appState.fleetLabel(v),
                 selected: _twoPane && v.id == _selectedId,
-                onTap: () => _openDetail(v),
+                limited: limited.contains(v.id),
+                onTap: () => limited.contains(v.id)
+                    ? requirePro(context,
+                        reason: tr('pro.reasonLimited', {'n': AppState.freeVehicleLimit}))
+                    : _openDetail(v),
                 onLongPress: () => moveVehicleSheet(context, v),
               )),
           if (list.isNotEmpty && appState.isCloud && appState.data.groups.isNotEmpty)
@@ -253,7 +259,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _deadlinesTab() {
     final items = <({Vehicle v, Deadline d})>[];
-    for (final v in appState.vehicles) {
+    // Solo i veicoli attivi: quelli in grigio non mostrano le scadenze.
+    for (final v in appState.activeVehicles) {
       for (final d in v.activeDeadlines) {
         items.add((v: v, d: d));
       }

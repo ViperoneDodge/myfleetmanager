@@ -313,7 +313,7 @@
  "pro.activeThanks": "Mulțumim că susții MyFleetManager!",
  "pro.activeDev": "Pro deblocat cu codul de dezvoltator",
  "pro.benefitVehicles": "Vehicule nelimitate",
- "pro.benefitTypes": "Dube, camioane și remorci",
+ "pro.benefitTypes": "Dube, camioane, remorci și vehicule agricole",
  "pro.benefitDocs": "Documentele vehiculului (certificat de înmatriculare, poliță…)",
  "pro.benefitMaint": "Istoric de întreținere",
  "pro.benefitSupport": "Susține dezvoltarea aplicației",
@@ -370,5 +370,11 @@
  "account.relogin": "Datele au fost șterse. Pentru a finaliza ștergerea contului, conectează-te din nou și repetă operațiunea.",
  "pro.groupLocked": "Grup blocat: cu versiunea gratuită poți vedea în total cel mult {n} vehicule, inclusiv cele din grupuri.",
  "pro.groupLockedBtn": "Deblochează cu Pro",
- "pro.reasonJoin": "Intrând în acest grup ai depăși limita de {n} vehicule a versiunii gratuite. Cu Pro poți intra imediat."
+ "pro.reasonJoin": "Intrând în acest grup ai depăși limita de {n} vehicule a versiunii gratuite. Cu Pro poți intra imediat.",
+ "type.tractor": "Vehicul agricol",
+ "type.tractors": "Vehicule agricole",
+ "pro.limitedCard": "Disponibil cu Pro",
+ "pro.reasonLimited": "Cu versiunea gratuită poți folosi până la {n} mașini sau motociclete. Celelalte vehicule rămân vizibile, dar blocate: treci la Pro ca să le deblochezi pe toate.",
+ "pro.devNeedCloud": "Pentru codul de dezvoltator ai nevoie de un cont online.",
+ "pro.devRevoked": "Codul de dezvoltator a fost dezactivat pentru acest cont."
 }

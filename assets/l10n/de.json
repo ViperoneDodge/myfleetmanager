@@ -313,7 +313,7 @@
  "pro.activeThanks": "Danke, dass du MyFleetManager unterstützt!",
  "pro.activeDev": "Pro mit dem Entwicklercode freigeschaltet",
  "pro.benefitVehicles": "Unbegrenzt viele Fahrzeuge",
- "pro.benefitTypes": "Transporter, Lkw und Anhänger",
+ "pro.benefitTypes": "Transporter, Lkw, Anhänger und Landmaschinen",
  "pro.benefitDocs": "Fahrzeugdokumente (Zulassung, Versicherung…)",
  "pro.benefitMaint": "Wartungshistorie",
  "pro.benefitSupport": "Unterstütze die Weiterentwicklung der App",
@@ -370,5 +370,11 @@
  "account.relogin": "Daten gelöscht. Um das Konto endgültig zu löschen, melde dich erneut an und wiederhole den Vorgang.",
  "pro.groupLocked": "Gruppe gesperrt: In der kostenlosen Version siehst du insgesamt höchstens {n} Fahrzeuge, einschließlich derer in Gruppen.",
  "pro.groupLockedBtn": "Mit Pro freischalten",
- "pro.reasonJoin": "Mit dem Beitritt zu dieser Gruppe würdest du das Limit von {n} Fahrzeugen der kostenlosen Version überschreiten. Mit Pro kannst du sofort beitreten."
+ "pro.reasonJoin": "Mit dem Beitritt zu dieser Gruppe würdest du das Limit von {n} Fahrzeugen der kostenlosen Version überschreiten. Mit Pro kannst du sofort beitreten.",
+ "type.tractor": "Landmaschine",
+ "type.tractors": "Landmaschinen",
+ "pro.limitedCard": "Mit Pro verfügbar",
+ "pro.reasonLimited": "In der kostenlosen Version kannst du bis zu {n} Autos oder Motorräder nutzen. Andere Fahrzeuge bleiben sichtbar, aber gesperrt: Mit Pro schaltest du alle frei.",
+ "pro.devNeedCloud": "Für den Entwicklercode ist ein Online-Konto nötig.",
+ "pro.devRevoked": "Der Entwicklercode wurde für dieses Konto deaktiviert."
 }

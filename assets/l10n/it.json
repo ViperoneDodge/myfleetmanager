@@ -313,7 +313,7 @@
  "pro.activeThanks": "Grazie per sostenere MyFleetManager!",
  "pro.activeDev": "Pro sbloccata con il codice sviluppatore",
  "pro.benefitVehicles": "Veicoli illimitati",
- "pro.benefitTypes": "Furgoni, camion e rimorchi",
+ "pro.benefitTypes": "Furgoni, camion, rimorchi e veicoli agricoli",
  "pro.benefitDocs": "Documenti del veicolo (libretto, polizza…)",
  "pro.benefitMaint": "Storico manutenzioni",
  "pro.benefitSupport": "Sostieni lo sviluppo dell'app",
@@ -370,5 +370,11 @@
  "account.relogin": "Dati eliminati. Per completare la cancellazione dell'account accedi di nuovo e ripeti l'operazione.",
  "pro.groupLocked": "Gruppo bloccato: con la versione gratuita puoi vedere al massimo {n} veicoli in totale, compresi quelli dei gruppi.",
  "pro.groupLockedBtn": "Sblocca con Pro",
- "pro.reasonJoin": "Entrando in questo gruppo supereresti il limite di {n} veicoli della versione gratuita. Con Pro puoi entrare subito."
+ "pro.reasonJoin": "Entrando in questo gruppo supereresti il limite di {n} veicoli della versione gratuita. Con Pro puoi entrare subito.",
+ "type.tractor": "Veicolo agricolo",
+ "type.tractors": "Veicoli agricoli",
+ "pro.limitedCard": "Disponibile con Pro",
+ "pro.reasonLimited": "Con la versione gratuita puoi usare fino a {n} auto o moto. Gli altri veicoli restano visibili ma bloccati: passa a Pro per sbloccarli tutti.",
+ "pro.devNeedCloud": "Per usare il codice sviluppatore serve un account online.",
+ "pro.devRevoked": "Il codice sviluppatore è stato disattivato per questo account."
 }

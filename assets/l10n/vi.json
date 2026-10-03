@@ -313,7 +313,7 @@
  "pro.activeThanks": "Cảm ơn bạn đã ủng hộ MyFleetManager!",
  "pro.activeDev": "Đã mở khóa Pro bằng mã nhà phát triển",
  "pro.benefitVehicles": "Không giới hạn số xe",
- "pro.benefitTypes": "Xe van, xe tải và rơ-moóc",
+ "pro.benefitTypes": "Xe van, xe tải, rơ-moóc và xe nông nghiệp",
  "pro.benefitDocs": "Tài liệu xe (giấy đăng ký, bảo hiểm…)",
  "pro.benefitMaint": "Lịch sử bảo dưỡng",
  "pro.benefitSupport": "Ủng hộ phát triển ứng dụng",
@@ -370,5 +370,11 @@
  "account.relogin": "Đã xóa dữ liệu. Để hoàn tất việc xóa tài khoản, hãy đăng nhập lại và thực hiện lại thao tác.",
  "pro.groupLocked": "Nhóm bị khóa: với bản miễn phí bạn chỉ xem được tối đa {n} xe tổng cộng, kể cả xe trong nhóm.",
  "pro.groupLockedBtn": "Mở khóa bằng Pro",
- "pro.reasonJoin": "Tham gia nhóm này sẽ vượt giới hạn {n} xe của bản miễn phí. Với Pro bạn có thể tham gia ngay."
+ "pro.reasonJoin": "Tham gia nhóm này sẽ vượt giới hạn {n} xe của bản miễn phí. Với Pro bạn có thể tham gia ngay.",
+ "type.tractor": "Xe nông nghiệp",
+ "type.tractors": "Xe nông nghiệp",
+ "pro.limitedCard": "Có trong bản Pro",
+ "pro.reasonLimited": "Bản miễn phí cho phép dùng tối đa {n} ô tô hoặc xe máy. Các xe khác vẫn hiển thị nhưng bị khóa: nâng cấp Pro để mở khóa tất cả.",
+ "pro.devNeedCloud": "Cần tài khoản trực tuyến để dùng mã nhà phát triển.",
+ "pro.devRevoked": "Mã nhà phát triển đã bị vô hiệu hóa cho tài khoản này."
 }

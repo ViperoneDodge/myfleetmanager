@@ -6,12 +6,14 @@ import 'package:flutter/services.dart';
 import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
+import '../services/app_state.dart' show AppState;
 import '../services/notification_service.dart';
 import '../services/support_service.dart';
 import '../services/sync_service.dart' show cloudErrorMessage;
 import '../version.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import 'admin_screen.dart';
 import 'family_screen.dart';
 import 'login_screen.dart';
 import 'pro_screen.dart';
@@ -142,7 +144,7 @@ class SettingsScreen extends StatelessWidget {
                 await appState.notifications.requestPermission();
                 await appState.notifications.showTest();
                 final count = await appState.notifications
-                    .rescheduleAll(appState.data.vehicles, appState.data.notify);
+                    .rescheduleAll(appState.activeVehicles, appState.data.notify);
                 if (context.mounted) {
                   showSnack(context, tr('settings.scheduledCount', {'n': count}));
                 }
@@ -222,6 +224,16 @@ class SettingsScreen extends StatelessWidget {
 
             // ---------------- Assistenza e privacy ----------------
             _header(context, tr('support.title')),
+            // Solo per l'account amministratore (appmyfleetmanager@gmail.com).
+            if (appState.isAdmin)
+              ListTile(
+                leading: Icon(Icons.admin_panel_settings_outlined, color: scheme.primary),
+                title: const Text('Amministrazione Pro'),
+                subtitle: const Text('Chi ha la Pro: acquisti e codici sviluppatore'),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (_) => const AdminScreen())),
+              ),
             ListTile(
               leading: const Icon(Icons.bug_report_outlined),
               title: Text(tr('bug.title')),
@@ -653,13 +665,23 @@ class _DevCodeFieldState extends State<_DevCodeField> {
     super.dispose();
   }
 
-  void _submit() {
-    if (appState.unlockDev(_c.text)) {
-      _c.clear();
-      FocusScope.of(context).unfocus();
-      showSnack(context, tr('pro.devUnlocked'));
-    } else {
-      showSnack(context, tr('pro.devWrong'));
+  Future<void> _submit() async {
+    final r = await appState.unlockDev(_c.text);
+    if (!mounted) return;
+    switch (r) {
+      case AppState.devOk:
+        _c.clear();
+        FocusScope.of(context).unfocus();
+        showSnack(context, tr('pro.devUnlocked'));
+        break;
+      case AppState.devNeedCloud:
+        showSnack(context, tr('pro.devNeedCloud'));
+        break;
+      case AppState.devRevoked:
+        showSnack(context, tr('pro.devRevoked'));
+        break;
+      default:
+        showSnack(context, tr('pro.devWrong'));
     }
   }
 

@@ -16,15 +16,12 @@ import 'pro_service.dart';
 import 'group_watch.dart';
 import 'push_service.dart';
 import 'support_service.dart';
+import 'update_service.dart';
+import '../version.dart';
 import 'sync_service.dart';
 
 enum SyncStatus { off, connecting, online, offline }
 
-/// Ingresso in un gruppo negato: con la versione gratuita si supererebbe il limite.
-class ProLimitException implements Exception {
-  final String groupName;
-  ProLimitException(this.groupName);
-}
 
 class AppState extends ChangeNotifier {
   final LocalStore store = LocalStore();
@@ -51,58 +48,150 @@ class AppState extends ChangeNotifier {
 
   bool get isPro => purchasedPro || devPro;
 
-  /// Furgoni, camion e rimorchi sono riservati alla Pro.
+  /// Furgoni, camion, rimorchi e veicoli agricoli sono riservati alla Pro.
   static bool isProType(VehicleType t) =>
-      t == VehicleType.furgone || t == VehicleType.camion || t == VehicleType.rimorchio;
+      t == VehicleType.furgone ||
+      t == VehicleType.camion ||
+      t == VehicleType.rimorchio ||
+      t == VehicleType.agricolo;
 
-  /// Gruppi bloccati nella versione gratuita. Il limite vale su TUTTI i veicoli
-  /// visibili: personali e dei gruppi (anche quelli aggiunti da altri membri).
-  /// I gruppi che farebbero superare il limite restano nascosti con l'invito alla
-  /// Pro; dopo l'acquisto tornano visibili da soli.
-  Set<String> get lockedGroupIds {
+  /// Versione gratuita: tutti i veicoli restano visibili (anche quelli dei gruppi),
+  /// ma solo i primi [freeVehicleLimit] tra auto e moto sono "attivi". Gli altri
+  /// compaiono in grigio, senza dettagli e senza notifiche delle scadenze.
+  /// Ordine: prima i veicoli personali, poi quelli dei gruppi; dentro ciascuno
+  /// dal più vecchio (data di creazione) al più recente.
+  Set<String> get limitedIds {
     if (isPro) return const {};
-    final active = data.vehicles.where((v) => !v.deleted).toList();
-    var total = active.where(isPersonal).length;
-    final locked = <String>{};
-    for (final g in data.groups) {
-      final n = active.where((v) => v.fleetId == g.id).length;
-      if (n == 0) continue;
-      if (total + n > freeVehicleLimit) {
-        locked.add(g.id);
+    final groupOrder = {for (var i = 0; i < data.groups.length; i++) data.groups[i].id: i};
+    int fleetRank(Vehicle v) => isPersonal(v) ? -1 : (groupOrder[v.fleetId] ?? 9999);
+    final ordered = data.vehicles.where((v) => !v.deleted).toList()
+      ..sort((a, b) {
+        final f = fleetRank(a).compareTo(fleetRank(b));
+        if (f != 0) return f;
+        final c = a.createdAt.compareTo(b.createdAt);
+        return c != 0 ? c : a.id.compareTo(b.id);
+      });
+    var active = 0;
+    final limited = <String>{};
+    for (final v in ordered) {
+      if (!isProType(v.type) && active < freeVehicleLimit) {
+        active++;
       } else {
-        total += n;
+        limited.add(v.id);
       }
     }
-    return locked;
+    return limited;
   }
 
-  bool isGroupLocked(String id) => lockedGroupIds.contains(id);
+  bool isLimited(Vehicle v) => limitedIds.contains(v.id);
 
-  /// Versione gratuita: al massimo [freeVehicleLimit] veicoli visibili in totale.
-  bool get canAddVehicle => isPro || vehicles.length < freeVehicleLimit;
+  /// Veicoli utilizzabili (non in grigio): usati per scadenze e notifiche.
+  List<Vehicle> get activeVehicles {
+    final limited = limitedIds;
+    return vehicles.where((v) => !limited.contains(v.id)).toList();
+  }
+
+  /// Versione gratuita: si può aggiungere un veicolo finché ci sono meno di
+  /// [freeVehicleLimit] veicoli attivi.
+  bool get canAddVehicle => isPro || activeVehicles.length < freeVehicleLimit;
+
+  // ---------------- Codice sviluppatore ----------------
+
+  /// Versione dell'app in cui è stato usato il codice: a ogni aggiornamento
+  /// la Pro di sviluppo si azzera e va sbloccata di nuovo.
+  String? devProVersion;
+
+  /// Esito dell'ultimo tentativo di sblocco (per i messaggi nella pagina).
+  static const String devOk = 'ok', devWrong = 'wrong', devNeedCloud = 'cloud', devRevoked = 'revoked';
 
   /// Codice riservato ai test: sblocca la Pro senza acquisto. Nel sorgente (pubblico)
-  /// c'è solo la sua impronta SHA-256. A ogni sblocco parte un avviso via email.
-  bool unlockDev(String code) {
+  /// c'è solo la sua impronta SHA-256. Serve un account online, così ogni sblocco
+  /// compare nell'elenco dell'amministratore e può essere revocato.
+  /// A ogni sblocco parte un avviso via email.
+  Future<String> unlockDev(String code) async {
     final hash = sha256.convert(utf8.encode(code.trim().toUpperCase())).toString();
-    if (hash != SupportService.devCodeHash) return false;
+    if (hash != SupportService.devCodeHash) return devWrong;
+    final s = session;
+    if (s == null || !isCloud) return devNeedCloud;
+    try {
+      if (await sync.isProRevoked(s)) return devRevoked;
+    } catch (_) {}
     devPro = true;
+    devProVersion = appVersion;
     _writeSettings();
     notifyListeners();
-    final s = session;
-    SupportService.notifyDeveloper('MyFleetManager: Pro sbloccata con codice di test', {
-      'Account': s?.email ?? s?.displayName ?? '-',
-      'Tipo account': isCloud ? 'online' : 'solo telefono',
+    _registerPro('devcode');
+    SupportService.notifyDeveloper('MyFleetManager: codice sviluppatore usato da ${s.email ?? s.displayName}', {
+      'Utente': s.displayName,
+      'Email': s.email ?? '-',
+      'UID': s.key,
       'Lingua': L10n.code,
     });
-    return true;
+    return devOk;
   }
 
   void disableDev() {
     devPro = false;
+    devProVersion = null;
     _writeSettings();
     notifyListeners();
+    _endPro('user');
   }
+
+  // ---------------- Registro Pro (pagina amministratore) ----------------
+
+  /// Account amministratore: vede chi ha la Pro e può revocare i codici sviluppatore.
+  /// L'accesso è garantito dalle regole di Firestore (email verificata).
+  static const String adminEmail = 'appmyfleetmanager@gmail.com';
+
+  bool get isAdmin => isCloud && session?.email?.toLowerCase() == adminEmail;
+
+  StreamSubscription? _proSub;
+
+  /// Registra (o aggiorna) la propria Pro nell'elenco online.
+  Future<void> _registerPro(String method) async {
+    final s = session;
+    if (s == null || !isCloud) return;
+    try {
+      await sync.registerPro(s, method: method, version: appVersion);
+    } catch (_) {}
+  }
+
+  Future<void> _endPro(String reason) async {
+    final s = session;
+    if (s == null || !isCloud) return;
+    try {
+      await sync.endPro(s, reason);
+    } catch (_) {}
+  }
+
+  /// Ascolta la propria voce nell'elenco: se l'amministratore revoca il codice
+  /// sviluppatore, la Pro di sviluppo si spegne subito.
+  void _watchProEntry() {
+    _proSub?.cancel();
+    final s = session;
+    if (s == null || !isCloud) return;
+    _proSub = sync.watchPro(s).listen((entry) {
+      if (entry != null && entry['revoked'] == true && devPro) {
+        devPro = false;
+        devProVersion = null;
+        _writeSettings();
+        notifyListeners();
+      }
+    }, onError: (_) {});
+    // Allinea l'elenco allo stato del telefono.
+    if (purchasedPro) {
+      _registerPro('purchase');
+    } else if (devPro) {
+      _registerPro('devcode');
+    }
+    if (_devExpiredOnUpdate) {
+      _devExpiredOnUpdate = false;
+      _endPro('update');
+    }
+  }
+
+  bool _devExpiredOnUpdate = false;
 
   bool loading = true;
   ThemeSettings theme = ThemeSettings();
@@ -115,10 +204,7 @@ class AppState extends ChangeNotifier {
   bool get isCloud => session?.mode == AccountMode.cloud;
 
   List<Vehicle> get vehicles {
-    final locked = lockedGroupIds;
-    final list = data.vehicles
-        .where((v) => !v.deleted && (v.fleetId == null || !locked.contains(v.fleetId)))
-        .toList();
+    final list = data.vehicles.where((v) => !v.deleted).toList();
     list.sort((a, b) {
       final da = a.nextDeadline?.dueDate;
       final db = b.nextDeadline?.dueDate;
@@ -158,6 +244,15 @@ class AppState extends ChangeNotifier {
     langPref = settings?['lang'] as String?;
     purchasedPro = settings?['pro'] == true;
     devPro = settings?['devPro'] == true;
+    devProVersion = settings?['devProVersion'] as String?;
+    // La Pro sbloccata con il codice sviluppatore vale solo per la versione
+    // in cui è stata attivata: dopo un aggiornamento si azzera.
+    if (devPro && devProVersion != appVersion) {
+      devPro = false;
+      devProVersion = null;
+      _devExpiredOnUpdate = true;
+      await _writeSettings();
+    }
     notifyListeners();
     // Acquisti: verifica/ripristino in background (non blocca l'avvio).
     pro.init(
@@ -166,6 +261,7 @@ class AppState extends ChangeNotifier {
           purchasedPro = true;
           _writeSettings();
         }
+        _registerPro('purchase');
       },
       onChanged: notifyListeners,
     );
@@ -191,6 +287,8 @@ class AppState extends ChangeNotifier {
         _scheduleNotifications();
       });
     }
+    // Aggiornamento obbligatorio dal Play Store + iscrizione alle notifiche "nuova versione".
+    UpdateService.instance.start(pushAvailable: auth.cloudAvailable);
   }
 
   Future<void> login(Session s) async {
@@ -208,6 +306,7 @@ class AppState extends ChangeNotifier {
       await _loadWatch(s);
       _startSync();
       startPush();
+      _watchProEntry();
     }
   }
 
@@ -289,6 +388,8 @@ class AppState extends ChangeNotifier {
 
   Future<void> logout() async {
     sync.stop();
+    _proSub?.cancel();
+    _proSub = null;
     await scheduleGroupWatch(false);
     watch = GroupWatchState();
     await watch.save();
@@ -343,8 +444,8 @@ class AppState extends ChangeNotifier {
     _notifyDebounce?.cancel();
     _notifyDebounce = Timer(const Duration(milliseconds: 800), () async {
       try {
-        // Solo i veicoli visibili (non quelli dei gruppi bloccati).
-        await notifications.rescheduleAll(vehicles, data.notify);
+        // Solo i veicoli attivi: quelli in grigio (versione gratuita) non avvisano.
+        await notifications.rescheduleAll(activeVehicles, data.notify);
       } catch (_) {}
     });
   }
@@ -357,6 +458,9 @@ class AppState extends ChangeNotifier {
     v.updatedBy = session?.displayName ?? '';
     v.updatedByUid = session?.key ?? '';
     if (v.createdBy.isEmpty && vehicleById(v.id) == null) v.createdBy = session?.key ?? '';
+    if (v.createdAt == 0 && vehicleById(v.id) == null) {
+      v.createdAt = DateTime.now().millisecondsSinceEpoch;
+    }
     if (v.fleetId == data.personalFleetId) v.fleetId = null;
     final i = data.vehicles.indexWhere((x) => x.id == v.id);
     if (i >= 0 && data.vehicles[i].fleetId != v.fleetId && isCloud) {
@@ -508,6 +612,7 @@ class AppState extends ChangeNotifier {
         if (langPref != null) 'lang': langPref,
         'pro': purchasedPro,
         'devPro': devPro,
+        if (devProVersion != null) 'devProVersion': devProVersion,
       });
 
   /// Cambia lingua ([code] null = automatica, come il telefono).
@@ -702,21 +807,9 @@ class AppState extends ChangeNotifier {
   }
 
   Future<FleetGroup> joinGroup(String code) async {
+    // Si entra sempre nel gruppo: nella versione gratuita i veicoli oltre il
+    // limite compaiono in grigio (vedi [limitedIds]).
     final g = await sync.joinGroup(session!, code);
-    // Versione gratuita: si contano i veicoli del gruppo prima di confermare l'ingresso.
-    // Se il totale supera il limite si esce subito e serve la Pro.
-    if (!isPro) {
-      var n = 0;
-      try {
-        n = await sync.countGroupVehicles(g.id);
-      } catch (_) {}
-      if (vehicles.length + n > freeVehicleLimit) {
-        try {
-          await sync.leaveGroup(session!, g.id);
-        } catch (_) {}
-        throw ProLimitException(g.name);
-      }
-    }
     if (data.groupById(g.id) == null) data.groups.add(g);
     await _persist();
     notifyListeners();

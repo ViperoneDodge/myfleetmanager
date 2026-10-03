@@ -313,7 +313,7 @@
  "pro.activeThanks": "MyFleetManager를 응원해 주셔서 감사합니다!",
  "pro.activeDev": "개발자 코드로 Pro 잠금 해제됨",
  "pro.benefitVehicles": "차량 무제한",
- "pro.benefitTypes": "밴, 트럭, 트레일러",
+ "pro.benefitTypes": "밴, 트럭, 트레일러 및 농업용 차량",
  "pro.benefitDocs": "차량 문서(자동차등록증, 보험증권…)",
  "pro.benefitMaint": "정비 이력",
  "pro.benefitSupport": "앱 개발 응원하기",
@@ -370,5 +370,11 @@
  "account.relogin": "데이터가 삭제되었습니다. 계정 삭제를 마치려면 다시 로그인한 후 다시 시도하세요.",
  "pro.groupLocked": "그룹이 잠겼습니다: 무료 버전에서는 그룹 차량을 포함해 총 {n}대까지만 볼 수 있습니다.",
  "pro.groupLockedBtn": "Pro로 잠금 해제",
- "pro.reasonJoin": "이 그룹에 참여하면 무료 버전의 {n}대 한도를 넘습니다. Pro로 바로 참여할 수 있습니다."
+ "pro.reasonJoin": "이 그룹에 참여하면 무료 버전의 {n}대 한도를 넘습니다. Pro로 바로 참여할 수 있습니다.",
+ "type.tractor": "농업용 차량",
+ "type.tractors": "농업용 차량",
+ "pro.limitedCard": "Pro에서 사용 가능",
+ "pro.reasonLimited": "무료 버전에서는 자동차 또는 오토바이를 최대 {n}대까지 사용할 수 있습니다. 다른 차량은 보이지만 잠겨 있습니다. Pro로 모두 잠금 해제하세요.",
+ "pro.devNeedCloud": "개발자 코드를 사용하려면 온라인 계정이 필요합니다.",
+ "pro.devRevoked": "이 계정의 개발자 코드가 비활성화되었습니다."
 }

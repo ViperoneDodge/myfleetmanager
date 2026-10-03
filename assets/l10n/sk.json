@@ -313,7 +313,7 @@
  "pro.activeThanks": "Ďakujeme, že podporujete MyFleetManager!",
  "pro.activeDev": "Pro odomknuté vývojárskym kódom",
  "pro.benefitVehicles": "Neobmedzený počet vozidiel",
- "pro.benefitTypes": "Dodávky, nákladné autá a prívesy",
+ "pro.benefitTypes": "Dodávky, nákladné autá, prívesy a poľnohospodárske vozidlá",
  "pro.benefitDocs": "Dokumenty vozidla (osvedčenie o evidencii, poistka…)",
  "pro.benefitMaint": "História údržby",
  "pro.benefitSupport": "Podporte vývoj aplikácie",
@@ -370,5 +370,11 @@
  "account.relogin": "Údaje boli vymazané. Na dokončenie vymazania účtu sa znova prihláste a operáciu zopakujte.",
  "pro.groupLocked": "Skupina je zamknutá: v bezplatnej verzii môžete vidieť spolu najviac {n} vozidlá vrátane vozidiel v skupinách.",
  "pro.groupLockedBtn": "Odomknúť s Pro",
- "pro.reasonJoin": "Vstupom do tejto skupiny by ste prekročili limit {n} vozidiel bezplatnej verzie. S Pro môžete vstúpiť hneď."
+ "pro.reasonJoin": "Vstupom do tejto skupiny by ste prekročili limit {n} vozidiel bezplatnej verzie. S Pro môžete vstúpiť hneď.",
+ "type.tractor": "Poľnohospodárske vozidlo",
+ "type.tractors": "Poľnohospodárske vozidlá",
+ "pro.limitedCard": "Dostupné s Pro",
+ "pro.reasonLimited": "V bezplatnej verzii môžete používať až {n} áut alebo motocyklov. Ostatné vozidlá zostanú viditeľné, ale zamknuté: prejdite na Pro a odomknite všetky.",
+ "pro.devNeedCloud": "Na použitie vývojárskeho kódu je potrebný online účet.",
+ "pro.devRevoked": "Vývojársky kód bol pre tento účet deaktivovaný."
 }

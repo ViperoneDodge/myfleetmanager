@@ -313,7 +313,7 @@
  "pro.activeThanks": "Grazzi talli tappoġġja lil MyFleetManager!",
  "pro.activeDev": "Pro miftuħ bil-kodiċi tal-iżviluppatur",
  "pro.benefitVehicles": "Vetturi bla limitu",
- "pro.benefitTypes": "Vans, trakkijiet u karrijiet",
+ "pro.benefitTypes": "Vannijiet, trakkijiet, karrijiet u vetturi agrikoli",
  "pro.benefitDocs": "Dokumenti tal-vettura (logbook, polza…)",
  "pro.benefitMaint": "Storja tal-manutenzjoni",
  "pro.benefitSupport": "Appoġġja l-iżvilupp tal-app",
@@ -370,5 +370,11 @@
  "account.relogin": "Id-data tħassret. Biex tlesti t-tħassir tal-kont, idħol mill-ġdid u erġa' agħmel l-operazzjoni.",
  "pro.groupLocked": "Grupp imsakkar: bil-verżjoni b'xejn tista' tara massimu ta' {n} vetturi b'kollox, inklużi dawk fil-gruppi.",
  "pro.groupLockedBtn": "Iftaħ b'Pro",
- "pro.reasonJoin": "Jekk tidħol f'dan il-grupp taqbeż il-limitu ta' {n} vetturi tal-verżjoni b'xejn. B'Pro tista' tidħol minnufih."
+ "pro.reasonJoin": "Jekk tidħol f'dan il-grupp taqbeż il-limitu ta' {n} vetturi tal-verżjoni b'xejn. B'Pro tista' tidħol minnufih.",
+ "type.tractor": "Vettura agrikola",
+ "type.tractors": "Vetturi agrikoli",
+ "pro.limitedCard": "Disponibbli b'Pro",
+ "pro.reasonLimited": "Bil-verżjoni b'xejn tista' tuża sa {n} karozzi jew muturi. Il-vetturi l-oħra jibqgħu jidhru iżda msakkra: għaddi għal Pro biex tiftaħhom kollha.",
+ "pro.devNeedCloud": "Biex tuża l-kodiċi tal-iżviluppatur għandek bżonn kont online.",
+ "pro.devRevoked": "Il-kodiċi tal-iżviluppatur ġie diżattivat għal dan il-kont."
 }

@@ -313,7 +313,7 @@
  "pro.activeThanks": "Dziękujemy za wspieranie MyFleetManager!",
  "pro.activeDev": "Pro odblokowane kodem dewelopera",
  "pro.benefitVehicles": "Nieograniczona liczba pojazdów",
- "pro.benefitTypes": "Furgony, ciężarówki i przyczepy",
+ "pro.benefitTypes": "Dostawczaki, ciężarówki, przyczepy i pojazdy rolnicze",
  "pro.benefitDocs": "Dokumenty pojazdu (dowód rejestracyjny, polisa…)",
  "pro.benefitMaint": "Historia serwisowa",
  "pro.benefitSupport": "Wspieraj rozwój aplikacji",
@@ -370,5 +370,11 @@
  "account.relogin": "Dane usunięte. Aby dokończyć usuwanie konta, zaloguj się ponownie i powtórz operację.",
  "pro.groupLocked": "Grupa zablokowana: w wersji bezpłatnej możesz widzieć łącznie maksymalnie {n} pojazdy, wliczając pojazdy w grupach.",
  "pro.groupLockedBtn": "Odblokuj z Pro",
- "pro.reasonJoin": "Dołączając do tej grupy, przekroczysz limit {n} pojazdów wersji bezpłatnej. Z Pro możesz dołączyć od razu."
+ "pro.reasonJoin": "Dołączając do tej grupy, przekroczysz limit {n} pojazdów wersji bezpłatnej. Z Pro możesz dołączyć od razu.",
+ "type.tractor": "Pojazd rolniczy",
+ "type.tractors": "Pojazdy rolnicze",
+ "pro.limitedCard": "Dostępne w Pro",
+ "pro.reasonLimited": "W wersji bezpłatnej możesz używać do {n} samochodów lub motocykli. Pozostałe pojazdy są widoczne, ale zablokowane: przejdź na Pro, aby odblokować wszystkie.",
+ "pro.devNeedCloud": "Do użycia kodu dewelopera potrzebne jest konto online.",
+ "pro.devRevoked": "Kod dewelopera został wyłączony dla tego konta."
 }

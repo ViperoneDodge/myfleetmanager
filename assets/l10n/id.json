@@ -313,7 +313,7 @@
  "pro.activeThanks": "Terima kasih telah mendukung MyFleetManager!",
  "pro.activeDev": "Pro dibuka dengan kode pengembang",
  "pro.benefitVehicles": "Kendaraan tanpa batas",
- "pro.benefitTypes": "Van, truk, dan trailer",
+ "pro.benefitTypes": "Van, truk, trailer, dan kendaraan pertanian",
  "pro.benefitDocs": "Dokumen kendaraan (STNK, polis…)",
  "pro.benefitMaint": "Riwayat perawatan",
  "pro.benefitSupport": "Dukung pengembangan aplikasi",
@@ -370,5 +370,11 @@
  "account.relogin": "Data telah dihapus. Untuk menyelesaikan penghapusan akun, masuk lagi lalu ulangi tindakan ini.",
  "pro.groupLocked": "Grup terkunci: dengan versi gratis Anda hanya dapat melihat maksimal {n} kendaraan secara total, termasuk yang ada di grup.",
  "pro.groupLockedBtn": "Buka dengan Pro",
- "pro.reasonJoin": "Bergabung dengan grup ini akan melebihi batas {n} kendaraan versi gratis. Dengan Pro Anda bisa langsung bergabung."
+ "pro.reasonJoin": "Bergabung dengan grup ini akan melebihi batas {n} kendaraan versi gratis. Dengan Pro Anda bisa langsung bergabung.",
+ "type.tractor": "Kendaraan pertanian",
+ "type.tractors": "Kendaraan pertanian",
+ "pro.limitedCard": "Tersedia dengan Pro",
+ "pro.reasonLimited": "Dengan versi gratis Anda dapat memakai hingga {n} mobil atau motor. Kendaraan lain tetap terlihat tetapi terkunci: beralih ke Pro untuk membuka semuanya.",
+ "pro.devNeedCloud": "Diperlukan akun online untuk memakai kode pengembang.",
+ "pro.devRevoked": "Kode pengembang telah dinonaktifkan untuk akun ini."
 }

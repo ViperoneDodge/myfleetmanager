@@ -313,7 +313,7 @@
  "pro.activeThanks": "Paldies, ka atbalsti MyFleetManager!",
  "pro.activeDev": "Pro atbloķēts ar izstrādātāja kodu",
  "pro.benefitVehicles": "Neierobežots transportlīdzekļu skaits",
- "pro.benefitTypes": "Furgoni, kravas auto un piekabes",
+ "pro.benefitTypes": "Furgoni, kravas auto, piekabes un lauksaimniecības tehnika",
  "pro.benefitDocs": "Transportlīdzekļa dokumenti (reģistrācijas apliecība, polise…)",
  "pro.benefitMaint": "Apkopju vēsture",
  "pro.benefitSupport": "Atbalsti lietotnes izstrādi",
@@ -370,5 +370,11 @@
  "account.relogin": "Dati dzēsti. Lai pabeigtu konta dzēšanu, pieraksties vēlreiz un atkārto darbību.",
  "pro.groupLocked": "Grupa bloķēta: bezmaksas versijā kopā vari redzēt ne vairāk kā {n} transportlīdzekļus, ieskaitot grupās esošos.",
  "pro.groupLockedBtn": "Atbloķēt ar Pro",
- "pro.reasonJoin": "Pievienojoties šai grupai, tu pārsniegtu bezmaksas versijas {n} transportlīdzekļu limitu. Ar Pro vari pievienoties uzreiz."
+ "pro.reasonJoin": "Pievienojoties šai grupai, tu pārsniegtu bezmaksas versijas {n} transportlīdzekļu limitu. Ar Pro vari pievienoties uzreiz.",
+ "type.tractor": "Lauksaimniecības tehnika",
+ "type.tractors": "Lauksaimniecības tehnika",
+ "pro.limitedCard": "Pieejams ar Pro",
+ "pro.reasonLimited": "Bezmaksas versijā vari izmantot līdz {n} automašīnām vai motocikliem. Pārējie transportlīdzekļi paliek redzami, bet bloķēti: pārej uz Pro, lai atbloķētu visus.",
+ "pro.devNeedCloud": "Izstrādātāja koda izmantošanai vajadzīgs tiešsaistes konts.",
+ "pro.devRevoked": "Šim kontam izstrādātāja kods ir atspējots."
 }

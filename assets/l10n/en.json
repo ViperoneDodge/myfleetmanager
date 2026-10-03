@@ -313,7 +313,7 @@
  "pro.activeThanks": "Thank you for supporting MyFleetManager!",
  "pro.activeDev": "Pro unlocked with the developer code",
  "pro.benefitVehicles": "Unlimited vehicles",
- "pro.benefitTypes": "Vans, trucks and trailers",
+ "pro.benefitTypes": "Vans, trucks, trailers and agricultural vehicles",
  "pro.benefitDocs": "Vehicle documents (registration, policy…)",
  "pro.benefitMaint": "Maintenance history",
  "pro.benefitSupport": "Support the app's development",
@@ -370,5 +370,11 @@
  "account.relogin": "Data deleted. To finish deleting the account, sign in again and repeat the operation.",
  "pro.groupLocked": "Group locked: with the free version you can see at most {n} vehicles in total, including those in groups.",
  "pro.groupLockedBtn": "Unlock with Pro",
- "pro.reasonJoin": "Joining this group would exceed the free version's limit of {n} vehicles. With Pro you can join right away."
+ "pro.reasonJoin": "Joining this group would exceed the free version's limit of {n} vehicles. With Pro you can join right away.",
+ "type.tractor": "Agricultural vehicle",
+ "type.tractors": "Agricultural vehicles",
+ "pro.limitedCard": "Available with Pro",
+ "pro.reasonLimited": "The free version lets you use up to {n} cars or motorbikes. Other vehicles stay visible but locked: go Pro to unlock them all.",
+ "pro.devNeedCloud": "An online account is needed to use the developer code.",
+ "pro.devRevoked": "The developer code has been disabled for this account."
 }

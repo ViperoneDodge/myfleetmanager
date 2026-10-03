@@ -313,7 +313,7 @@
  "pro.activeThanks": "Bedankt voor je steun aan MyFleetManager!",
  "pro.activeDev": "Pro ontgrendeld met de ontwikkelaarscode",
  "pro.benefitVehicles": "Onbeperkt aantal voertuigen",
- "pro.benefitTypes": "Bestelwagens, vrachtwagens en aanhangers",
+ "pro.benefitTypes": "Bestelwagens, vrachtwagens, aanhangers en landbouwvoertuigen",
  "pro.benefitDocs": "Voertuigdocumenten (kentekenbewijs, polis…)",
  "pro.benefitMaint": "Onderhoudsgeschiedenis",
  "pro.benefitSupport": "Steun de ontwikkeling van de app",
@@ -370,5 +370,11 @@
  "account.relogin": "Gegevens verwijderd. Meld je opnieuw aan en herhaal de handeling om het account definitief te verwijderen.",
  "pro.groupLocked": "Groep vergrendeld: met de gratis versie zie je in totaal maximaal {n} voertuigen, ook die in groepen.",
  "pro.groupLockedBtn": "Ontgrendelen met Pro",
- "pro.reasonJoin": "Door lid te worden van deze groep zou je de limiet van {n} voertuigen van de gratis versie overschrijden. Met Pro kun je meteen lid worden."
+ "pro.reasonJoin": "Door lid te worden van deze groep zou je de limiet van {n} voertuigen van de gratis versie overschrijden. Met Pro kun je meteen lid worden.",
+ "type.tractor": "Landbouwvoertuig",
+ "type.tractors": "Landbouwvoertuigen",
+ "pro.limitedCard": "Beschikbaar met Pro",
+ "pro.reasonLimited": "Met de gratis versie gebruik je maximaal {n} auto's of motoren. Andere voertuigen blijven zichtbaar maar vergrendeld: neem Pro om ze allemaal te ontgrendelen.",
+ "pro.devNeedCloud": "Voor de ontwikkelaarscode is een online account nodig.",
+ "pro.devRevoked": "De ontwikkelaarscode is voor dit account uitgeschakeld."
 }

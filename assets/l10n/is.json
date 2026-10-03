@@ -313,7 +313,7 @@
  "pro.activeThanks": "Takk fyrir að styðja MyFleetManager!",
  "pro.activeDev": "Pro opnað með þróunarkóða",
  "pro.benefitVehicles": "Ótakmörkuð ökutæki",
- "pro.benefitTypes": "Sendibílar, vörubílar og kerrur",
+ "pro.benefitTypes": "Sendibílar, vörubílar, eftirvagnar og landbúnaðartæki",
  "pro.benefitDocs": "Skjöl ökutækis (skráningarskírteini, trygging…)",
  "pro.benefitMaint": "Viðhaldssaga",
  "pro.benefitSupport": "Styddu þróun appsins",
@@ -370,5 +370,11 @@
  "account.relogin": "Gögnum eytt. Skráðu þig inn aftur og endurtaktu aðgerðina til að ljúka eyðingu aðgangsins.",
  "pro.groupLocked": "Hópur læstur: í ókeypis útgáfunni sérðu að hámarki {n} ökutæki samtals, einnig þau í hópum.",
  "pro.groupLockedBtn": "Opna með Pro",
- "pro.reasonJoin": "Ef þú gengur í þennan hóp ferðu yfir {n} ökutækja hámark ókeypis útgáfunnar. Með Pro geturðu gengið strax í hann."
+ "pro.reasonJoin": "Ef þú gengur í þennan hóp ferðu yfir {n} ökutækja hámark ókeypis útgáfunnar. Með Pro geturðu gengið strax í hann.",
+ "type.tractor": "Landbúnaðartæki",
+ "type.tractors": "Landbúnaðartæki",
+ "pro.limitedCard": "Í boði með Pro",
+ "pro.reasonLimited": "Í ókeypis útgáfunni geturðu notað allt að {n} bíla eða mótorhjól. Önnur ökutæki sjást en eru læst: fáðu Pro til að opna þau öll.",
+ "pro.devNeedCloud": "Netaðgangur þarf til að nota forritarakóðann.",
+ "pro.devRevoked": "Forritarakóðinn hefur verið gerður óvirkur fyrir þennan aðgang."
 }

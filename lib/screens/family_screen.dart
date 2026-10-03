@@ -5,7 +5,7 @@ import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../theme.dart';
-import '../services/app_state.dart' show AppState, ProLimitException;
+import '../services/app_state.dart' show AppState;
 import '../services/sync_service.dart' show cloudErrorMessage;
 import '../widgets/common.dart';
 import 'login_screen.dart';
@@ -92,7 +92,7 @@ class FamilyTab extends StatelessWidget {
   Widget _groupSection(BuildContext context, FleetGroup g) {
     final list = appState.groupVehicles(g.id);
     final scheme = Theme.of(context).colorScheme;
-    final locked = appState.isGroupLocked(g.id);
+    final limited = appState.limitedIds;
     return Padding(
       padding: const EdgeInsets.only(bottom: 18),
       child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
@@ -118,35 +118,7 @@ class FamilyTab extends StatelessWidget {
             ]),
           ),
         ),
-        if (locked)
-          // Gruppo oltre il limite della versione gratuita: veicoli nascosti.
-          Card(
-            color: scheme.tertiaryContainer,
-            child: Padding(
-              padding: const EdgeInsets.all(12),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-                Row(children: [
-                  Icon(Icons.lock_outline, color: scheme.onTertiaryContainer),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(tr('pro.groupLocked', {'n': AppState.freeVehicleLimit}),
-                        style: TextStyle(color: scheme.onTertiaryContainer)),
-                  ),
-                ]),
-                const SizedBox(height: 8),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: FilledButton.icon(
-                    onPressed: () => requirePro(context,
-                        reason: tr('pro.groupLocked', {'n': AppState.freeVehicleLimit})),
-                    icon: const Icon(Icons.workspace_premium),
-                    label: Text(tr('pro.groupLockedBtn')),
-                  ),
-                ),
-              ]),
-            ),
-          )
-        else if (list.isEmpty)
+        if (list.isEmpty)
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 6),
             child: Text(tr('family.noVehicles'),
@@ -154,10 +126,13 @@ class FamilyTab extends StatelessWidget {
           ),
         ...list.map((v) => VehicleCard(
               vehicle: v,
-              onTap: () => onOpen(v),
+              limited: limited.contains(v.id),
+              onTap: () => limited.contains(v.id)
+                  ? requirePro(context,
+                      reason: tr('pro.reasonLimited', {'n': AppState.freeVehicleLimit}))
+                  : onOpen(v),
               onLongPress: () => moveVehicleSheet(context, v),
             )),
-        if (!locked)
         Align(
           alignment: Alignment.centerLeft,
           child: TextButton.icon(
@@ -296,20 +271,6 @@ Future<void> joinGroupDialog(BuildContext context) async {
   try {
     final g = await appState.joinGroup(code);
     if (context.mounted) showSnack(context, tr('family.joined', {'name': g.name}));
-  } on ProLimitException {
-    // Versione gratuita: entrando si supererebbe il limite di veicoli.
-    if (context.mounted) {
-      final ok = await requirePro(context,
-          reason: tr('pro.reasonJoin', {'n': AppState.freeVehicleLimit}));
-      if (ok && context.mounted) {
-        try {
-          final g = await appState.joinGroup(code);
-          if (context.mounted) showSnack(context, tr('family.joined', {'name': g.name}));
-        } catch (e) {
-          if (context.mounted) showSnack(context, cloudErrorMessage(e));
-        }
-      }
-    }
   } catch (e) {
     if (context.mounted) showSnack(context, cloudErrorMessage(e));
   }

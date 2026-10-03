@@ -313,7 +313,7 @@
  "pro.activeThanks": "Ačiū, kad remiate MyFleetManager!",
  "pro.activeDev": "Pro atrakinta kūrėjo kodu",
  "pro.benefitVehicles": "Neribotas transporto priemonių skaičius",
- "pro.benefitTypes": "Furgonai, sunkvežimiai ir priekabos",
+ "pro.benefitTypes": "Furgonai, sunkvežimiai, priekabos ir žemės ūkio technika",
  "pro.benefitDocs": "Transporto priemonės dokumentai (registracijos liudijimas, polisas…)",
  "pro.benefitMaint": "Priežiūros istorija",
  "pro.benefitSupport": "Paremkite programėlės kūrimą",
@@ -370,5 +370,11 @@
  "account.relogin": "Duomenys ištrinti. Kad užbaigtumėte paskyros ištrynimą, prisijunkite iš naujo ir pakartokite veiksmą.",
  "pro.groupLocked": "Grupė užrakinta: nemokamoje versijoje iš viso galite matyti ne daugiau kaip {n} transporto priemones, įskaitant esančias grupėse.",
  "pro.groupLockedBtn": "Atrakinti su Pro",
- "pro.reasonJoin": "Prisijungę prie šios grupės viršytumėte nemokamos versijos {n} transporto priemonių ribą. Su Pro galite prisijungti iš karto."
+ "pro.reasonJoin": "Prisijungę prie šios grupės viršytumėte nemokamos versijos {n} transporto priemonių ribą. Su Pro galite prisijungti iš karto.",
+ "type.tractor": "Žemės ūkio technika",
+ "type.tractors": "Žemės ūkio technika",
+ "pro.limitedCard": "Prieinama su Pro",
+ "pro.reasonLimited": "Nemokamoje versijoje galite naudoti iki {n} automobilių ar motociklų. Kitos transporto priemonės lieka matomos, bet užrakintos: pereikite prie Pro ir atrakinkite visas.",
+ "pro.devNeedCloud": "Kūrėjo kodui naudoti reikia internetinės paskyros.",
+ "pro.devRevoked": "Šiai paskyrai kūrėjo kodas išjungtas."
 }

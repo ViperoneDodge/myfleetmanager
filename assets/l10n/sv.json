@@ -313,7 +313,7 @@
  "pro.activeThanks": "Tack för att du stöder MyFleetManager!",
  "pro.activeDev": "Pro upplåst med utvecklarkoden",
  "pro.benefitVehicles": "Obegränsat antal fordon",
- "pro.benefitTypes": "Skåpbilar, lastbilar och släpvagnar",
+ "pro.benefitTypes": "Skåpbilar, lastbilar, släpvagnar och jordbruksfordon",
  "pro.benefitDocs": "Fordonsdokument (registreringsbevis, försäkring…)",
  "pro.benefitMaint": "Underhållshistorik",
  "pro.benefitSupport": "Stöd utvecklingen av appen",
@@ -370,5 +370,11 @@
  "account.relogin": "Uppgifterna har raderats. Logga in igen och upprepa åtgärden för att slutföra raderingen av kontot.",
  "pro.groupLocked": "Gruppen är låst: i gratisversionen kan du se högst {n} fordon totalt, även de i grupper.",
  "pro.groupLockedBtn": "Lås upp med Pro",
- "pro.reasonJoin": "Om du går med i gruppen överskrids gratisversionens gräns på {n} fordon. Med Pro kan du gå med direkt."
+ "pro.reasonJoin": "Om du går med i gruppen överskrids gratisversionens gräns på {n} fordon. Med Pro kan du gå med direkt.",
+ "type.tractor": "Jordbruksfordon",
+ "type.tractors": "Jordbruksfordon",
+ "pro.limitedCard": "Ingår i Pro",
+ "pro.reasonLimited": "I gratisversionen kan du använda upp till {n} bilar eller motorcyklar. Övriga fordon syns men är låsta: skaffa Pro för att låsa upp alla.",
+ "pro.devNeedCloud": "Du behöver ett onlinekonto för att använda utvecklarkoden.",
+ "pro.devRevoked": "Utvecklarkoden har inaktiverats för det här kontot."
 }

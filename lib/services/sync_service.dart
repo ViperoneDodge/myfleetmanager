@@ -109,6 +109,77 @@ class SyncService {
     );
   }
 
+  // ---------------- Registro Pro (collezione "pro", una voce per utente) ----------------
+  // Campi: uid, email, name, method ('purchase' | 'devcode'), active, since,
+  // updatedAt, appVersion, revoked, revokedAt, endedReason ('user' | 'update').
+
+  CollectionReference<Map<String, dynamic>> get _pro => _db.collection('pro');
+
+  Future<void> registerPro(Session s, {required String method, required String version}) async {
+    final ref = _pro.doc(s.key);
+    final snap = await ref.get().timeout(_timeout);
+    final now = DateTime.now().millisecondsSinceEpoch;
+    final old = snap.data();
+    // Un acquisto vale più del codice: non si torna da "purchase" a "devcode".
+    final m = (old?['method'] == 'purchase') ? 'purchase' : method;
+    final data = <String, dynamic>{
+      'uid': s.key,
+      'email': s.email ?? '',
+      'name': s.displayName,
+      'method': m,
+      'active': true,
+      'updatedAt': now,
+      'appVersion': version,
+      'endedReason': null,
+    };
+    if (old == null) {
+      data['since'] = now;
+      data['revoked'] = false;
+    } else if (old['active'] != true) {
+      data['since'] = now;
+    }
+    await ref.set(data, SetOptions(merge: true)).timeout(_timeout);
+  }
+
+  Future<void> endPro(Session s, String reason) async {
+    final ref = _pro.doc(s.key);
+    final snap = await ref.get().timeout(_timeout);
+    final old = snap.data();
+    if (old == null || old['method'] == 'purchase') return;
+    await ref.set({
+      'active': false,
+      'endedReason': reason,
+      'updatedAt': DateTime.now().millisecondsSinceEpoch,
+    }, SetOptions(merge: true)).timeout(_timeout);
+  }
+
+  Future<bool> isProRevoked(Session s) async {
+    final snap = await _pro.doc(s.key).get(const GetOptions(source: Source.server)).timeout(_timeout);
+    return snap.data()?['revoked'] == true;
+  }
+
+  Stream<Map<String, dynamic>?> watchPro(Session s) =>
+      _pro.doc(s.key).snapshots().map((d) => d.data());
+
+  /// Solo amministratore: tutte le voci del registro.
+  Stream<List<Map<String, dynamic>>> watchAllPro() =>
+      _pro.snapshots().map((q) => q.docs.map((d) => {...d.data(), 'uid': d.id}).toList());
+
+  /// Solo amministratore: toglie la Pro di sviluppo a un utente.
+  Future<void> revokeDevPro(String uid) => _pro.doc(uid).set({
+        'revoked': true,
+        'active': false,
+        'revokedAt': DateTime.now().millisecondsSinceEpoch,
+        'updatedAt': DateTime.now().millisecondsSinceEpoch,
+      }, SetOptions(merge: true)).timeout(_timeout);
+
+  /// Solo amministratore: annulla la revoca (l'utente potrà riusare il codice).
+  Future<void> restoreDevPro(String uid) => _pro.doc(uid).set({
+        'revoked': false,
+        'revokedAt': null,
+        'updatedAt': DateTime.now().millisecondsSinceEpoch,
+      }, SetOptions(merge: true)).timeout(_timeout);
+
   /// Veicoli (non eliminati) presenti in un gruppo, letti dal server.
   Future<int> countGroupVehicles(String id) async {
     final q = await _fleets
@@ -146,6 +217,9 @@ class SyncService {
     await wipe(uid);
     await _fleets.doc(uid).delete().timeout(_timeout);
     await _db.collection('users').doc(uid).delete().timeout(_timeout);
+    try {
+      await _pro.doc(uid).delete().timeout(_timeout);
+    } catch (_) {}
   }
 
   Future<void> leaveGroup(Session s, String id) => _fleets.doc(id).update({

@@ -313,7 +313,7 @@
  "pro.activeThanks": "Hvala što podržavaš MyFleetManager!",
  "pro.activeDev": "Pro otključan razvojnim kodom",
  "pro.benefitVehicles": "Neograničen broj vozila",
- "pro.benefitTypes": "Kombiji, kamioni i prikolice",
+ "pro.benefitTypes": "Kombiji, kamioni, prikolice i poljoprivredna vozila",
  "pro.benefitDocs": "Dokumenti vozila (prometna, polica…)",
  "pro.benefitMaint": "Povijest održavanja",
  "pro.benefitSupport": "Podrži razvoj aplikacije",
@@ -370,5 +370,11 @@
  "account.relogin": "Podaci izbrisani. Za dovršetak brisanja računa ponovno se prijavi i ponovi postupak.",
  "pro.groupLocked": "Grupa je zaključana: u besplatnoj verziji možeš vidjeti najviše {n} vozila ukupno, uključujući ona u grupama.",
  "pro.groupLockedBtn": "Otključaj uz Pro",
- "pro.reasonJoin": "Ulaskom u ovu grupu premašio bi ograničenje od {n} vozila besplatne verzije. Uz Pro možeš ući odmah."
+ "pro.reasonJoin": "Ulaskom u ovu grupu premašio bi ograničenje od {n} vozila besplatne verzije. Uz Pro možeš ući odmah.",
+ "type.tractor": "Poljoprivredno vozilo",
+ "type.tractors": "Poljoprivredna vozila",
+ "pro.limitedCard": "Dostupno uz Pro",
+ "pro.reasonLimited": "U besplatnoj verziji možeš koristiti do {n} automobila ili motocikla. Ostala vozila ostaju vidljiva, ali zaključana: uz Pro otključavaš sva.",
+ "pro.devNeedCloud": "Za kod za razvojne programere potreban je online račun.",
+ "pro.devRevoked": "Kod za razvojne programere deaktiviran je za ovaj račun."
 }

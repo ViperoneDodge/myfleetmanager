@@ -313,7 +313,7 @@
  "pro.activeThanks": "Kiitos, että tuet MyFleetManageria!",
  "pro.activeDev": "Pro avattu kehittäjäkoodilla",
  "pro.benefitVehicles": "Rajattomasti ajoneuvoja",
- "pro.benefitTypes": "Pakettiautot, kuorma-autot ja perävaunut",
+ "pro.benefitTypes": "Pakettiautot, kuorma-autot, perävaunut ja maatalousajoneuvot",
  "pro.benefitDocs": "Ajoneuvon asiakirjat (rekisteröintitodistus, vakuutus…)",
  "pro.benefitMaint": "Huoltohistoria",
  "pro.benefitSupport": "Tue sovelluksen kehitystä",
@@ -370,5 +370,11 @@
  "account.relogin": "Tiedot poistettu. Viimeistele tilin poisto kirjautumalla uudelleen ja toistamalla toiminto.",
  "pro.groupLocked": "Ryhmä on lukittu: ilmaisversiossa näet yhteensä enintään {n} ajoneuvoa, ryhmien ajoneuvot mukaan lukien.",
  "pro.groupLockedBtn": "Avaa Pro-versiolla",
- "pro.reasonJoin": "Liittymällä tähän ryhmään ylittäisit ilmaisversion {n} ajoneuvon rajan. Pro-versiolla voit liittyä heti."
+ "pro.reasonJoin": "Liittymällä tähän ryhmään ylittäisit ilmaisversion {n} ajoneuvon rajan. Pro-versiolla voit liittyä heti.",
+ "type.tractor": "Maatalousajoneuvo",
+ "type.tractors": "Maatalousajoneuvot",
+ "pro.limitedCard": "Saatavilla Pro-versiossa",
+ "pro.reasonLimited": "Ilmaisversiossa voit käyttää enintään {n} autoa tai moottoripyörää. Muut ajoneuvot näkyvät mutta ovat lukittuja: avaa kaikki Pro-versiolla.",
+ "pro.devNeedCloud": "Kehittäjäkoodin käyttö vaatii verkkotilin.",
+ "pro.devRevoked": "Kehittäjäkoodi on poistettu käytöstä tältä tililtä."
 }

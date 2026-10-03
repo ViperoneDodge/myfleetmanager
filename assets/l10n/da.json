@@ -313,7 +313,7 @@
  "pro.activeThanks": "Tak fordi du støtter MyFleetManager!",
  "pro.activeDev": "Pro låst op med udviklerkoden",
  "pro.benefitVehicles": "Ubegrænset antal køretøjer",
- "pro.benefitTypes": "Varevogne, lastbiler og trailere",
+ "pro.benefitTypes": "Varevogne, lastbiler, trailere og landbrugskøretøjer",
  "pro.benefitDocs": "Køretøjsdokumenter (registreringsattest, police…)",
  "pro.benefitMaint": "Vedligeholdelseshistorik",
  "pro.benefitSupport": "Støt udviklingen af appen",
@@ -370,5 +370,11 @@
  "account.relogin": "Dataene er slettet. Log ind igen, og gentag handlingen for at slette kontoen helt.",
  "pro.groupLocked": "Gruppen er låst: med gratisversionen kan du se højst {n} køretøjer i alt, også dem i grupper.",
  "pro.groupLockedBtn": "Lås op med Pro",
- "pro.reasonJoin": "Hvis du bliver medlem af gruppen, overskrider du gratisversionens grænse på {n} køretøjer. Med Pro kan du blive medlem med det samme."
+ "pro.reasonJoin": "Hvis du bliver medlem af gruppen, overskrider du gratisversionens grænse på {n} køretøjer. Med Pro kan du blive medlem med det samme.",
+ "type.tractor": "Landbrugskøretøj",
+ "type.tractors": "Landbrugskøretøjer",
+ "pro.limitedCard": "Tilgængelig med Pro",
+ "pro.reasonLimited": "I gratisversionen kan du bruge op til {n} biler eller motorcykler. Andre køretøjer er synlige, men låst: opgrader til Pro for at låse dem alle op.",
+ "pro.devNeedCloud": "Du skal have en onlinekonto for at bruge udviklerkoden.",
+ "pro.devRevoked": "Udviklerkoden er deaktiveret for denne konto."
 }

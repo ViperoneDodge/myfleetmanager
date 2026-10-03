@@ -313,7 +313,7 @@
  "pro.activeThanks": "Obrigado por apoiar o MyFleetManager!",
  "pro.activeDev": "Pro desbloqueada com o código de programador",
  "pro.benefitVehicles": "Veículos ilimitados",
- "pro.benefitTypes": "Carrinhas, camiões e reboques",
+ "pro.benefitTypes": "Carrinhas, camiões, reboques e veículos agrícolas",
  "pro.benefitDocs": "Documentos do veículo (documento único, apólice…)",
  "pro.benefitMaint": "Histórico de manutenção",
  "pro.benefitSupport": "Apoie o desenvolvimento da app",
@@ -370,5 +370,11 @@
  "account.relogin": "Dados eliminados. Para concluir a eliminação da conta, inicie sessão novamente e repita a operação.",
  "pro.groupLocked": "Grupo bloqueado: com a versão gratuita pode ver no máximo {n} veículos no total, incluindo os dos grupos.",
  "pro.groupLockedBtn": "Desbloquear com Pro",
- "pro.reasonJoin": "Ao entrar neste grupo ultrapassaria o limite de {n} veículos da versão gratuita. Com Pro pode entrar já."
+ "pro.reasonJoin": "Ao entrar neste grupo ultrapassaria o limite de {n} veículos da versão gratuita. Com Pro pode entrar já.",
+ "type.tractor": "Veículo agrícola",
+ "type.tractors": "Veículos agrícolas",
+ "pro.limitedCard": "Disponível com Pro",
+ "pro.reasonLimited": "Na versão gratuita pode usar até {n} carros ou motas. Os outros veículos ficam visíveis mas bloqueados: passe a Pro para os desbloquear todos.",
+ "pro.devNeedCloud": "É necessária uma conta online para usar o código de programador.",
+ "pro.devRevoked": "O código de programador foi desativado para esta conta."
 }
