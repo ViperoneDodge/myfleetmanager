@@ -370,3 +370,9 @@ account.relogin
 pro.groupLocked
 pro.groupLockedBtn
 pro.reasonJoin
+type.tractor
+type.tractors
+pro.limitedCard
+pro.reasonLimited
+pro.devNeedCloud
+pro.devRevoked

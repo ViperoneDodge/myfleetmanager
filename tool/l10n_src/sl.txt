@@ -312,7 +312,7 @@ Različica Pro je aktivna
 Hvala, ker podpirate MyFleetManager!
 Pro odklenjen z razvijalsko kodo
 Neomejeno število vozil
-Kombiji, tovornjaki in prikolice
+Kombiji, tovornjaki, prikolice in kmetijska vozila
 Dokumenti vozila (prometno dovoljenje, polica…)
 Zgodovina vzdrževanja
 Podprite razvoj aplikacije
@@ -370,3 +370,9 @@ Podatki izbrisani. Za dokončanje izbrisa računa se znova prijavi in ponovi pos
 Skupina je zaklenjena: v brezplačni različici lahko skupaj vidiš največ {n} vozila, vključno s tistimi v skupinah.
 Odkleni s Pro
 Z vstopom v to skupino bi presegel omejitev {n} vozil brezplačne različice. S Pro lahko vstopiš takoj.
+Kmetijsko vozilo
+Kmetijska vozila
+Na voljo s Pro
+V brezplačni različici lahko uporabljaš do {n} avtomobilov ali motociklov. Druga vozila ostanejo vidna, a zaklenjena: s Pro jih odkleneš vse.
+Za razvijalsko kodo potrebuješ spletni račun.
+Razvijalska koda je bila za ta račun onemogočena.

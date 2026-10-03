@@ -312,7 +312,7 @@ Pro versija aktyvi
 Ačiū, kad remiate MyFleetManager!
 Pro atrakinta kūrėjo kodu
 Neribotas transporto priemonių skaičius
-Furgonai, sunkvežimiai ir priekabos
+Furgonai, sunkvežimiai, priekabos ir žemės ūkio technika
 Transporto priemonės dokumentai (registracijos liudijimas, polisas…)
 Priežiūros istorija
 Paremkite programėlės kūrimą
@@ -370,3 +370,9 @@ Duomenys ištrinti. Kad užbaigtumėte paskyros ištrynimą, prisijunkite iš na
 Grupė užrakinta: nemokamoje versijoje iš viso galite matyti ne daugiau kaip {n} transporto priemones, įskaitant esančias grupėse.
 Atrakinti su Pro
 Prisijungę prie šios grupės viršytumėte nemokamos versijos {n} transporto priemonių ribą. Su Pro galite prisijungti iš karto.
+Žemės ūkio technika
+Žemės ūkio technika
+Prieinama su Pro
+Nemokamoje versijoje galite naudoti iki {n} automobilių ar motociklų. Kitos transporto priemonės lieka matomos, bet užrakintos: pereikite prie Pro ir atrakinkite visas.
+Kūrėjo kodui naudoti reikia internetinės paskyros.
+Šiai paskyrai kūrėjo kodas išjungtas.

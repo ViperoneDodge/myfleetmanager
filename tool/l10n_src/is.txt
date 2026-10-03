@@ -312,7 +312,7 @@ Pro-útgáfa virk
 Takk fyrir að styðja MyFleetManager!
 Pro opnað með þróunarkóða
 Ótakmörkuð ökutæki
-Sendibílar, vörubílar og kerrur
+Sendibílar, vörubílar, eftirvagnar og landbúnaðartæki
 Skjöl ökutækis (skráningarskírteini, trygging…)
 Viðhaldssaga
 Styddu þróun appsins
@@ -370,3 +370,9 @@ Gögnum eytt. Skráðu þig inn aftur og endurtaktu aðgerðina til að ljúka e
 Hópur læstur: í ókeypis útgáfunni sérðu að hámarki {n} ökutæki samtals, einnig þau í hópum.
 Opna með Pro
 Ef þú gengur í þennan hóp ferðu yfir {n} ökutækja hámark ókeypis útgáfunnar. Með Pro geturðu gengið strax í hann.
+Landbúnaðartæki
+Landbúnaðartæki
+Í boði með Pro
+Í ókeypis útgáfunni geturðu notað allt að {n} bíla eða mótorhjól. Önnur ökutæki sjást en eru læst: fáðu Pro til að opna þau öll.
+Netaðgangur þarf til að nota forritarakóðann.
+Forritarakóðinn hefur verið gerður óvirkur fyrir þennan aðgang.

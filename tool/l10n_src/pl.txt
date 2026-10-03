@@ -312,7 +312,7 @@ Wersja Pro aktywna
 Dziękujemy za wspieranie MyFleetManager!
 Pro odblokowane kodem dewelopera
 Nieograniczona liczba pojazdów
-Furgony, ciężarówki i przyczepy
+Dostawczaki, ciężarówki, przyczepy i pojazdy rolnicze
 Dokumenty pojazdu (dowód rejestracyjny, polisa…)
 Historia serwisowa
 Wspieraj rozwój aplikacji
@@ -370,3 +370,9 @@ Dane usunięte. Aby dokończyć usuwanie konta, zaloguj się ponownie i powtórz
 Grupa zablokowana: w wersji bezpłatnej możesz widzieć łącznie maksymalnie {n} pojazdy, wliczając pojazdy w grupach.
 Odblokuj z Pro
 Dołączając do tej grupy, przekroczysz limit {n} pojazdów wersji bezpłatnej. Z Pro możesz dołączyć od razu.
+Pojazd rolniczy
+Pojazdy rolnicze
+Dostępne w Pro
+W wersji bezpłatnej możesz używać do {n} samochodów lub motocykli. Pozostałe pojazdy są widoczne, ale zablokowane: przejdź na Pro, aby odblokować wszystkie.
+Do użycia kodu dewelopera potrzebne jest konto online.
+Kod dewelopera został wyłączony dla tego konta.

@@ -312,7 +312,7 @@ Pro-version aktiv
 Tak fordi du støtter MyFleetManager!
 Pro låst op med udviklerkoden
 Ubegrænset antal køretøjer
-Varevogne, lastbiler og trailere
+Varevogne, lastbiler, trailere og landbrugskøretøjer
 Køretøjsdokumenter (registreringsattest, police…)
 Vedligeholdelseshistorik
 Støt udviklingen af appen
@@ -370,3 +370,9 @@ Dataene er slettet. Log ind igen, og gentag handlingen for at slette kontoen hel
 Gruppen er låst: med gratisversionen kan du se højst {n} køretøjer i alt, også dem i grupper.
 Lås op med Pro
 Hvis du bliver medlem af gruppen, overskrider du gratisversionens grænse på {n} køretøjer. Med Pro kan du blive medlem med det samme.
+Landbrugskøretøj
+Landbrugskøretøjer
+Tilgængelig med Pro
+I gratisversionen kan du bruge op til {n} biler eller motorcykler. Andre køretøjer er synlige, men låst: opgrader til Pro for at låse dem alle op.
+Du skal have en onlinekonto for at bruge udviklerkoden.
+Udviklerkoden er deaktiveret for denne konto.

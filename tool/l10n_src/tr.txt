@@ -312,7 +312,7 @@ Pro sürüm etkin
 MyFleetManager'ı desteklediğin için teşekkürler!
 Pro, geliştirici koduyla açıldı
 Sınırsız araç
-Panelvanlar, kamyonlar ve römorklar
+Kamyonetler, kamyonlar, römorklar ve tarım araçları
 Araç belgeleri (ruhsat, poliçe…)
 Bakım geçmişi
 Uygulamanın geliştirilmesini destekle
@@ -370,3 +370,9 @@ Veriler silindi. Hesabın silinmesini tamamlamak için tekrar giriş yapın ve i
 Grup kilitli: ücretsiz sürümde gruplardakiler dahil toplam en fazla {n} araç görebilirsiniz.
 Pro ile aç
 Bu gruba katılırsanız ücretsiz sürümün {n} araç sınırını aşarsınız. Pro ile hemen katılabilirsiniz.
+Tarım aracı
+Tarım araçları
+Pro ile kullanılabilir
+Ücretsiz sürümde en fazla {n} otomobil veya motosiklet kullanabilirsiniz. Diğer araçlar görünür ama kilitli kalır: hepsini açmak için Pro'ya geçin.
+Geliştirici kodunu kullanmak için çevrimiçi hesap gerekir.
+Bu hesap için geliştirici kodu devre dışı bırakıldı.

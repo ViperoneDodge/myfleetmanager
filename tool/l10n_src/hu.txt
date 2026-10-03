@@ -312,7 +312,7 @@ Pro verzió aktív
 Köszönjük, hogy támogatod a MyFleetManagert!
 Pro feloldva fejlesztői kóddal
 Korlátlan számú jármű
-Kisteherautók, teherautók és utánfutók
+Kisteherautók, teherautók, pótkocsik és mezőgazdasági járművek
 Járműdokumentumok (forgalmi, kötvény…)
 Karbantartási előzmények
 Támogasd az alkalmazás fejlesztését
@@ -370,3 +370,9 @@ Az adatok törölve. A fiók törlésének befejezéséhez jelentkezz be újra, 
 Csoport zárolva: az ingyenes verzióban összesen legfeljebb {n} járművet láthatsz, a csoportokéval együtt.
 Feloldás Pro-val
 Ha belépsz ebbe a csoportba, túllépnéd az ingyenes verzió {n} járműves korlátját. Pro-val azonnal beléphetsz.
+Mezőgazdasági jármű
+Mezőgazdasági járművek
+Pro-val elérhető
+Az ingyenes verzióban legfeljebb {n} autót vagy motort használhatsz. A többi jármű látható marad, de zárolva: válts Pro-ra, hogy mindet feloldd.
+A fejlesztői kód használatához online fiók szükséges.
+A fejlesztői kódot ennél a fióknál letiltották.

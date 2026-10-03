@@ -312,7 +312,7 @@ Verżjoni Pro attiva
 Grazzi talli tappoġġja lil MyFleetManager!
 Pro miftuħ bil-kodiċi tal-iżviluppatur
 Vetturi bla limitu
-Vans, trakkijiet u karrijiet
+Vannijiet, trakkijiet, karrijiet u vetturi agrikoli
 Dokumenti tal-vettura (logbook, polza…)
 Storja tal-manutenzjoni
 Appoġġja l-iżvilupp tal-app
@@ -370,3 +370,9 @@ Id-data tħassret. Biex tlesti t-tħassir tal-kont, idħol mill-ġdid u erġa' a
 Grupp imsakkar: bil-verżjoni b'xejn tista' tara massimu ta' {n} vetturi b'kollox, inklużi dawk fil-gruppi.
 Iftaħ b'Pro
 Jekk tidħol f'dan il-grupp taqbeż il-limitu ta' {n} vetturi tal-verżjoni b'xejn. B'Pro tista' tidħol minnufih.
+Vettura agrikola
+Vetturi agrikoli
+Disponibbli b'Pro
+Bil-verżjoni b'xejn tista' tuża sa {n} karozzi jew muturi. Il-vetturi l-oħra jibqgħu jidhru iżda msakkra: għaddi għal Pro biex tiftaħhom kollha.
+Biex tuża l-kodiċi tal-iżviluppatur għandek bżonn kont online.
+Il-kodiċi tal-iżviluppatur ġie diżattivat għal dan il-kont.

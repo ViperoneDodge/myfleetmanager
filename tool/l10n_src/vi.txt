@@ -312,7 +312,7 @@ Bản Pro đang hoạt động
 Cảm ơn bạn đã ủng hộ MyFleetManager!
 Đã mở khóa Pro bằng mã nhà phát triển
 Không giới hạn số xe
-Xe van, xe tải và rơ-moóc
+Xe van, xe tải, rơ-moóc và xe nông nghiệp
 Tài liệu xe (giấy đăng ký, bảo hiểm…)
 Lịch sử bảo dưỡng
 Ủng hộ phát triển ứng dụng
@@ -370,3 +370,9 @@ Tài khoản, các xe trực tuyến của bạn và các nhóm bạn đã tạo
 Nhóm bị khóa: với bản miễn phí bạn chỉ xem được tối đa {n} xe tổng cộng, kể cả xe trong nhóm.
 Mở khóa bằng Pro
 Tham gia nhóm này sẽ vượt giới hạn {n} xe của bản miễn phí. Với Pro bạn có thể tham gia ngay.
+Xe nông nghiệp
+Xe nông nghiệp
+Có trong bản Pro
+Bản miễn phí cho phép dùng tối đa {n} ô tô hoặc xe máy. Các xe khác vẫn hiển thị nhưng bị khóa: nâng cấp Pro để mở khóa tất cả.
+Cần tài khoản trực tuyến để dùng mã nhà phát triển.
+Mã nhà phát triển đã bị vô hiệu hóa cho tài khoản này.

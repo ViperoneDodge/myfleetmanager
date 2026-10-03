@@ -312,7 +312,7 @@ Leagan Pro gníomhach
 Go raibh maith agat as tacú le MyFleetManager!
 Díghlasáladh Pro le cód an fhorbróra
 Feithiclí gan teorainn
-Veaineanna, trucailí agus leantóirí
+Veaineanna, trucailí, leantóirí agus feithiclí talmhaíochta
 Doiciméid feithicle (teastas clárúcháin, polasaí…)
 Stair chothabhála
 Tacaigh le forbairt na haipe
@@ -370,3 +370,9 @@ Sonraí scriosta. Chun scriosadh an chuntais a chríochnú, logáil isteach arí
 Grúpa faoi ghlas: leis an leagan saor in aisce ní féidir leat ach {n} fheithicil ar a mhéad a fheiceáil san iomlán, lena n-áirítear iad siúd i ngrúpaí.
 Díghlasáil le Pro
 Dá rachfá isteach sa ghrúpa seo, sháródh tú teorainn {n} fheithicil an leagain saor in aisce. Le Pro is féidir leat dul isteach láithreach.
+Feithicil talmhaíochta
+Feithiclí talmhaíochta
+Ar fáil le Pro
+Leis an leagan saor in aisce is féidir leat suas le {n} gcarr nó gluaisrothar a úsáid. Fanann na feithiclí eile le feiceáil ach faoi ghlas: faigh Pro chun iad go léir a dhíghlasáil.
+Teastaíonn cuntas ar líne chun an cód forbróra a úsáid.
+Díchumasaíodh an cód forbróra don chuntas seo.

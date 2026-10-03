@@ -3,6 +3,26 @@ service cloud.firestore {
   match /databases/{database}/documents {
     function signedIn() { return request.auth != null; }
 
+    // Amministratore: account Google appmyfleetmanager@gmail.com (email verificata).
+    function isAdmin() {
+      return signedIn()
+        && request.auth.token.email == 'appmyfleetmanager@gmail.com'
+        && request.auth.token.email_verified == true;
+    }
+
+    // pro/{uid} = registro della versione Pro (acquisto o codice sviluppatore).
+    // L'utente scrive solo la propria voce e non può annullare una revoca;
+    // l'amministratore vede tutto e può revocare.
+    match /pro/{uid} {
+      allow read: if isAdmin() || (signedIn() && request.auth.uid == uid);
+      allow create: if signedIn() && request.auth.uid == uid
+        && request.resource.data.revoked == false;
+      allow update: if isAdmin() || (signedIn() && request.auth.uid == uid
+        && request.resource.data.revoked == resource.data.revoked);
+      // Cancellazione account: anche l'utente può eliminare la propria voce.
+      allow delete: if isAdmin() || (signedIn() && request.auth.uid == uid);
+    }
+
     // users/{uid} = token dei telefoni per le notifiche push (solo il proprietario)
     match /users/{uid} {
       allow read, write: if signedIn() && request.auth.uid == uid;

@@ -156,11 +156,13 @@ queries = """    <queries>
 # Permessi foto/video aggiunti in automatico da alcuni plugin: non servono (foto e
 # documenti si scelgono con i selettori di sistema, senza permessi) e Google Play
 # li concede solo alle app di gallerie/editor. Vengono rimossi dal manifest finale.
+# Rimosso anche AD_ID (ID pubblicità): l'app non ha pubblicità né statistiche.
 if "xmlns:tools" not in m:
     m = m.replace("<manifest ", '<manifest xmlns:tools="http://schemas.android.com/tools" ', 1)
 media_remove = """    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" tools:node="remove"/>
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" tools:node="remove"/>
     <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" tools:node="remove"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
 """
 if "READ_MEDIA_IMAGES" not in m:
     m = m.replace("<application", media_remove + "    <application", 1)

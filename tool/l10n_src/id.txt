@@ -312,7 +312,7 @@ Versi Pro aktif
 Terima kasih telah mendukung MyFleetManager!
 Pro dibuka dengan kode pengembang
 Kendaraan tanpa batas
-Van, truk, dan trailer
+Van, truk, trailer, dan kendaraan pertanian
 Dokumen kendaraan (STNK, polis…)
 Riwayat perawatan
 Dukung pengembangan aplikasi
@@ -370,3 +370,9 @@ Data telah dihapus. Untuk menyelesaikan penghapusan akun, masuk lagi lalu ulangi
 Grup terkunci: dengan versi gratis Anda hanya dapat melihat maksimal {n} kendaraan secara total, termasuk yang ada di grup.
 Buka dengan Pro
 Bergabung dengan grup ini akan melebihi batas {n} kendaraan versi gratis. Dengan Pro Anda bisa langsung bergabung.
+Kendaraan pertanian
+Kendaraan pertanian
+Tersedia dengan Pro
+Dengan versi gratis Anda dapat memakai hingga {n} mobil atau motor. Kendaraan lain tetap terlihat tetapi terkunci: beralih ke Pro untuk membuka semuanya.
+Diperlukan akun online untuk memakai kode pengembang.
+Kode pengembang telah dinonaktifkan untuk akun ini.

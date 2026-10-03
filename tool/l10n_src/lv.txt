@@ -312,7 +312,7 @@ Pro versija ir aktīva
 Paldies, ka atbalsti MyFleetManager!
 Pro atbloķēts ar izstrādātāja kodu
 Neierobežots transportlīdzekļu skaits
-Furgoni, kravas auto un piekabes
+Furgoni, kravas auto, piekabes un lauksaimniecības tehnika
 Transportlīdzekļa dokumenti (reģistrācijas apliecība, polise…)
 Apkopju vēsture
 Atbalsti lietotnes izstrādi
@@ -370,3 +370,9 @@ Dati dzēsti. Lai pabeigtu konta dzēšanu, pieraksties vēlreiz un atkārto dar
 Grupa bloķēta: bezmaksas versijā kopā vari redzēt ne vairāk kā {n} transportlīdzekļus, ieskaitot grupās esošos.
 Atbloķēt ar Pro
 Pievienojoties šai grupai, tu pārsniegtu bezmaksas versijas {n} transportlīdzekļu limitu. Ar Pro vari pievienoties uzreiz.
+Lauksaimniecības tehnika
+Lauksaimniecības tehnika
+Pieejams ar Pro
+Bezmaksas versijā vari izmantot līdz {n} automašīnām vai motocikliem. Pārējie transportlīdzekļi paliek redzami, bet bloķēti: pārej uz Pro, lai atbloķētu visus.
+Izstrādātāja koda izmantošanai vajadzīgs tiešsaistes konts.
+Šim kontam izstrādātāja kods ir atspējots.

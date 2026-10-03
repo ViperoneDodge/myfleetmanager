@@ -312,7 +312,7 @@ Versão Pro ativa
 Obrigado por apoiar o MyFleetManager!
 Pro desbloqueada com o código de programador
 Veículos ilimitados
-Carrinhas, camiões e reboques
+Carrinhas, camiões, reboques e veículos agrícolas
 Documentos do veículo (documento único, apólice…)
 Histórico de manutenção
 Apoie o desenvolvimento da app
@@ -370,3 +370,9 @@ Dados eliminados. Para concluir a eliminação da conta, inicie sessão novament
 Grupo bloqueado: com a versão gratuita pode ver no máximo {n} veículos no total, incluindo os dos grupos.
 Desbloquear com Pro
 Ao entrar neste grupo ultrapassaria o limite de {n} veículos da versão gratuita. Com Pro pode entrar já.
+Veículo agrícola
+Veículos agrícolas
+Disponível com Pro
+Na versão gratuita pode usar até {n} carros ou motas. Os outros veículos ficam visíveis mas bloqueados: passe a Pro para os desbloquear todos.
+É necessária uma conta online para usar o código de programador.
+O código de programador foi desativado para esta conta.

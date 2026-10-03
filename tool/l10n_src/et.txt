@@ -312,7 +312,7 @@ Pro-versioon on aktiivne
 Aitäh, et toetad MyFleetManagerit!
 Pro avatud arendaja koodiga
 Piiramatult sõidukeid
-Kaubikud, veoautod ja haagised
+Kaubikud, veokid, haagised ja põllumajandusmasinad
 Sõiduki dokumendid (registreerimistunnistus, poliis…)
 Hoolduste ajalugu
 Toeta rakenduse arendamist
@@ -370,3 +370,9 @@ Andmed kustutatud. Konto kustutamise lõpetamiseks logi uuesti sisse ja korda to
 Grupp on lukus: tasuta versioonis näed kokku kuni {n} sõidukit, sh gruppide omad.
 Ava Pro-ga
 Sellesse gruppi astudes ületaksid tasuta versiooni {n} sõiduki piirangu. Pro-ga saad kohe liituda.
+Põllumajandusmasin
+Põllumajandusmasinad
+Saadaval Pro-ga
+Tasuta versioonis saad kasutada kuni {n} autot või mootorratast. Teised sõidukid on nähtavad, kuid lukus: vali Pro, et need kõik avada.
+Arendajakoodi kasutamiseks on vaja võrgukontot.
+Arendajakood on selle konto jaoks keelatud.

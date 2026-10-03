@@ -312,7 +312,7 @@ Verze Pro aktivní
 Děkujeme, že podporujete MyFleetManager!
 Pro odemčeno vývojářským kódem
 Neomezený počet vozidel
-Dodávky, nákladní auta a přívěsy
+Dodávky, nákladní auta, přívěsy a zemědělská vozidla
 Dokumenty vozidla (technický průkaz, pojistka…)
 Historie údržby
 Podpořte vývoj aplikace
@@ -370,3 +370,9 @@ Data byla smazána. Pro dokončení smazání účtu se znovu přihlaste a opera
 Skupina je zamčená: v bezplatné verzi můžete vidět celkem nejvýše {n} vozidla včetně vozidel ve skupinách.
 Odemknout s Pro
 Vstupem do této skupiny byste překročili limit {n} vozidel bezplatné verze. S Pro můžete vstoupit hned.
+Zemědělské vozidlo
+Zemědělská vozidla
+Dostupné s Pro
+V bezplatné verzi můžete používat až {n} aut nebo motocyklů. Ostatní vozidla zůstanou viditelná, ale zamčená: přejděte na Pro a odemkněte všechna.
+K použití vývojářského kódu je potřeba online účet.
+Vývojářský kód byl pro tento účet deaktivován.

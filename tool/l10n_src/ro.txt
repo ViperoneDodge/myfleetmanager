@@ -312,7 +312,7 @@ Versiunea Pro este activă
 Mulțumim că susții MyFleetManager!
 Pro deblocat cu codul de dezvoltator
 Vehicule nelimitate
-Dube, camioane și remorci
+Dube, camioane, remorci și vehicule agricole
 Documentele vehiculului (certificat de înmatriculare, poliță…)
 Istoric de întreținere
 Susține dezvoltarea aplicației
@@ -370,3 +370,9 @@ Datele au fost șterse. Pentru a finaliza ștergerea contului, conectează-te di
 Grup blocat: cu versiunea gratuită poți vedea în total cel mult {n} vehicule, inclusiv cele din grupuri.
 Deblochează cu Pro
 Intrând în acest grup ai depăși limita de {n} vehicule a versiunii gratuite. Cu Pro poți intra imediat.
+Vehicul agricol
+Vehicule agricole
+Disponibil cu Pro
+Cu versiunea gratuită poți folosi până la {n} mașini sau motociclete. Celelalte vehicule rămân vizibile, dar blocate: treci la Pro ca să le deblochezi pe toate.
+Pentru codul de dezvoltator ai nevoie de un cont online.
+Codul de dezvoltator a fost dezactivat pentru acest cont.
