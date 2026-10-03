@@ -3,10 +3,6 @@ import 'package:flutter/services.dart';
 
 import 'l10n.dart';
 
-// ============================================================================
-// Impostazioni tema (salvate sul telefono, valgono per tutti gli account)
-// ============================================================================
-
 enum PaperStyle { righe, quadretti, puntini, liscio }
 
 String paperStyleLabel(PaperStyle p) {
@@ -74,17 +70,13 @@ class ThemeSettings {
   }
 }
 
-// ============================================================================
-// Colori del taccuino
-// ============================================================================
-
 class NotebookColors extends ThemeExtension<NotebookColors> {
-  final Color cover; // copertina (sfondo dietro la pagina)
+  final Color cover;
   final Color onCover;
-  final Color paper; // colore della carta
-  final Color line; // righe / quadretti
-  final Color margin; // linea rossa del margine
-  final Color hole; // fori degli anelli
+  final Color paper;
+  final Color line;
+  final Color margin;
+  final Color hole;
   final Color ringLight;
   final Color ringDark;
   final PaperStyle style;
@@ -212,11 +204,6 @@ ThemeData buildTheme(ThemeSettings s, Brightness b) {
   );
 }
 
-// ============================================================================
-// Pagina del taccuino ad anelli
-// ============================================================================
-
-/// Avvolge il contenuto di ogni schermata in una pagina di quaderno ad anelli.
 class NotebookPage extends StatelessWidget {
   final Widget child;
   const NotebookPage({super.key, required this.child});
@@ -227,8 +214,6 @@ class NotebookPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final nb = NotebookColors.of(context);
-    // Tablet e pieghevoli aperti: la pagina non si allarga oltre una misura
-    // comoda da leggere e resta centrata.
     return LayoutBuilder(builder: (context, box) {
       final extra = box.maxWidth > maxPageWidth ? (box.maxWidth - maxPageWidth) / 2 : 0.0;
       return Padding(
@@ -266,7 +251,6 @@ class _PagePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final rect = Offset.zero & size;
-    // Pagine sottostanti (spessore del quaderno)
     for (var i = 2; i >= 1; i--) {
       final r = _radius.toRRect(rect.translate(i * 2.5, i * 2.0));
       canvas.drawRRect(r, Paint()..color = Color.lerp(nb.paper, nb.cover, 0.25 * i)!);
@@ -308,7 +292,6 @@ class _PagePainter extends CustomPainter {
       case PaperStyle.liscio:
         break;
     }
-    // Margine rosso
     final m = Paint()
       ..color = nb.margin
       ..strokeWidth = 1.2;
@@ -334,9 +317,7 @@ class _RingsPainter extends CustomPainter {
     final start = (size.height - (count - 1) * spacing) / 2;
     for (var i = 0; i < count; i++) {
       final y = start + i * spacing;
-      // foro nella carta
       canvas.drawCircle(Offset(12, y), 4.2, holePaint);
-      // anello metallico
       final path = Path()
         ..moveTo(12, y)
         ..cubicTo(8, y - 11, -12, y - 11, -13, y - 1);

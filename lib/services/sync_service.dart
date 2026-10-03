@@ -6,7 +6,6 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseException;
 import '../l10n.dart';
 import '../models.dart';
 
-/// Errore con messaggio già pronto da mostrare all'utente.
 class FleetException implements Exception {
   final String message;
   FleetException(this.message);
@@ -14,7 +13,6 @@ class FleetException implements Exception {
   String toString() => message;
 }
 
-/// Traduce gli errori di Firestore in messaggi comprensibili.
 String cloudErrorMessage(Object e) {
   if (e is FleetException) return e.message;
   if (e is TimeoutException) return tr('cloud.offline');
@@ -38,15 +36,6 @@ String cloudErrorMessage(Object e) {
   return tr('cloud.generic', {'code': e.toString()});
 }
 
-/// Sincronizzazione online con Firestore.
-///
-/// Struttura:
-///  fleets/{uid}              parco personale dell'utente (personal: true)
-///  fleets/{codice}           nucleo familiare condiviso (il codice è l'invito)
-///  fleets/{id}/vehicles/{v}  veicoli del parco
-///
-/// I dati restano sempre salvati in locale; Firestore tiene in coda le modifiche
-/// fatte offline e le invia appena torna la connessione.
 class SyncService {
   FirebaseFirestore get _db => FirebaseFirestore.instance;
   CollectionReference<Map<String, dynamic>> get _fleets => _db.collection('fleets');
@@ -57,7 +46,6 @@ class SyncService {
   final Map<String, StreamSubscription> _vehSubs = {};
   final Set<String> _initialPushDone = {};
 
-  /// Crea (se manca) il parco personale. Richiede connessione.
   Future<String> ensurePersonal(Session s) async {
     final ref = _fleets.doc(s.key);
     final snap = await ref.get(const GetOptions(source: Source.server));
@@ -88,7 +76,6 @@ class SyncService {
     return FleetGroup(id: id, name: name, ownerUid: s.key, members: {s.key: email});
   }
 
-  /// Entra in un nucleo familiare con il codice invito.
   Future<FleetGroup> joinGroup(Session s, String code) async {
     final id = code.trim().toUpperCase().replaceAll(' ', '');
     if (id.isEmpty || id == s.key) throw FleetException(tr('family.badCode'));
@@ -109,10 +96,6 @@ class SyncService {
     );
   }
 
-  // ---------------- Registro Pro (collezione "pro", una voce per utente) ----------------
-  // Campi: uid, email, name, method ('purchase' | 'devcode'), active, since,
-  // updatedAt, appVersion, revoked, revokedAt, endedReason ('user' | 'update').
-
   CollectionReference<Map<String, dynamic>> get _pro => _db.collection('pro');
 
   Future<void> registerPro(Session s, {required String method, required String version}) async {
@@ -120,7 +103,6 @@ class SyncService {
     final snap = await ref.get().timeout(_timeout);
     final now = DateTime.now().millisecondsSinceEpoch;
     final old = snap.data();
-    // Un acquisto vale più del codice: non si torna da "purchase" a "devcode".
     final m = (old?['method'] == 'purchase') ? 'purchase' : method;
     final data = <String, dynamic>{
       'uid': s.key,
@@ -153,6 +135,16 @@ class SyncService {
     }, SetOptions(merge: true)).timeout(_timeout);
   }
 
+  Future<bool> checkUnlockCode(String code) async {
+    if (code.contains('/') || code == '.' || code == '..' || code.length > 100) return false;
+    final snap = await _db
+        .collection('unlock')
+        .doc(code)
+        .get(const GetOptions(source: Source.server))
+        .timeout(_timeout);
+    return snap.exists && snap.data()?['active'] != false;
+  }
+
   Future<bool> isProRevoked(Session s) async {
     final snap = await _pro.doc(s.key).get(const GetOptions(source: Source.server)).timeout(_timeout);
     return snap.data()?['revoked'] == true;
@@ -161,11 +153,9 @@ class SyncService {
   Stream<Map<String, dynamic>?> watchPro(Session s) =>
       _pro.doc(s.key).snapshots().map((d) => d.data());
 
-  /// Solo amministratore: tutte le voci del registro.
   Stream<List<Map<String, dynamic>>> watchAllPro() =>
       _pro.snapshots().map((q) => q.docs.map((d) => {...d.data(), 'uid': d.id}).toList());
 
-  /// Solo amministratore: toglie la Pro di sviluppo a un utente.
   Future<void> revokeDevPro(String uid) => _pro.doc(uid).set({
         'revoked': true,
         'active': false,
@@ -173,14 +163,12 @@ class SyncService {
         'updatedAt': DateTime.now().millisecondsSinceEpoch,
       }, SetOptions(merge: true)).timeout(_timeout);
 
-  /// Solo amministratore: annulla la revoca (l'utente potrà riusare il codice).
   Future<void> restoreDevPro(String uid) => _pro.doc(uid).set({
         'revoked': false,
         'revokedAt': null,
         'updatedAt': DateTime.now().millisecondsSinceEpoch,
       }, SetOptions(merge: true)).timeout(_timeout);
 
-  /// Veicoli (non eliminati) presenti in un gruppo, letti dal server.
   Future<int> countGroupVehicles(String id) async {
     final q = await _fleets
         .doc(id)
@@ -190,9 +178,6 @@ class SyncService {
     return q.docs.where((d) => d.data()['deleted'] != true).length;
   }
 
-  /// Cancellazione dell'account: elimina i dati online dell'utente.
-  /// I gruppi creati da lui vengono eliminati (con i loro veicoli); da quelli
-  /// degli altri esce soltanto.
   Future<void> deleteAllData(Session s, List<FleetGroup> groups) async {
     final uid = s.key;
     Future<void> wipe(String fleetId) async {
@@ -236,7 +221,6 @@ class SyncService {
 
   Future<void> renameGroup(String id, String name) => _fleets.doc(id).update({'name': name});
 
-  /// Ascolta: elenco dei miei nuclei + veicoli di ogni parco (personale e nuclei).
   void start({
     required Session session,
     required String personalId,
@@ -266,7 +250,6 @@ class SyncService {
           members: members,
         ));
       }
-      // Aggiorna gli ascolti dei veicoli dei nuclei
       final wanted = {personalId, ...groups.map((g) => g.id)};
       for (final id in _vehSubs.keys.toList()) {
         if (!wanted.contains(id)) {

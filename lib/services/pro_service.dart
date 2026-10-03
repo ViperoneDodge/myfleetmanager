@@ -2,11 +2,6 @@ import 'dart:async';
 
 import 'package:in_app_purchase/in_app_purchase.dart';
 
-/// Versione Pro: acquisto unico (prodotto "non consumabile") sul Play Store.
-///
-/// Nella Play Console va creato un prodotto in-app con ID [productId].
-/// Finché l'app non è pubblicata sul Play Store l'acquisto non è disponibile:
-/// per le prove si usa il codice sviluppatore dalle impostazioni.
 class ProService {
   static const String productId = 'myfleet_pro';
 
@@ -18,8 +13,6 @@ class ProService {
   bool busy = false;
   String? lastError;
 
-  /// [onOwned] viene chiamato quando il Play Store conferma l'acquisto
-  /// (nuovo o ripristinato).
   Future<void> init({required void Function() onOwned, required void Function() onChanged}) async {
     try {
       _sub ??= _iap.purchaseStream.listen((list) async {
@@ -38,7 +31,7 @@ class ProService {
             case PurchaseStatus.pending:
               busy = true;
               break;
-            default: // annullato
+            default:
               busy = false;
           }
           if (p.pendingCompletePurchase) {
@@ -56,7 +49,6 @@ class ProService {
       if (storeAvailable) {
         final r = await _iap.queryProductDetails({productId});
         if (r.productDetails.isNotEmpty) product = r.productDetails.first;
-        // Ripristina in silenzio un acquisto già fatto (es. dopo reinstallazione).
         await _iap.restorePurchases();
       }
     } catch (_) {
@@ -65,7 +57,6 @@ class ProService {
     onChanged();
   }
 
-  /// Avvia l'acquisto. Restituisce false se il prodotto non è disponibile.
   Future<bool> buy() async {
     final p = product;
     if (!storeAvailable || p == null) return false;

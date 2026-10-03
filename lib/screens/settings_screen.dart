@@ -36,7 +36,6 @@ class SettingsScreen extends StatelessWidget {
           appBar: AppBar(title: Text(tr('settings.title'))),
           body: NotebookPage(
             child: ListView(padding: const EdgeInsets.only(top: 6, right: 4), children: [
-            // ---------------- Account ----------------
             _header(context, tr('settings.account')),
             ListTile(
               leading: Icon(appState.isCloud ? Icons.cloud : Icons.phone_android),
@@ -55,7 +54,6 @@ class SettingsScreen extends StatelessWidget {
                     builder: (_) => const LoginScreen(upgrade: true))),
               ),
 
-            // ---------------- Versione Pro ----------------
             _header(context, tr('pro.section')),
             ListTile(
               leading: Icon(Icons.workspace_premium,
@@ -71,7 +69,6 @@ class SettingsScreen extends StatelessWidget {
                   .push(MaterialPageRoute(builder: (_) => const ProScreen())),
             ),
 
-            // ---------------- Lingua ----------------
             _header(context, tr('settings.language')),
             ListTile(
               leading: const Icon(Icons.language),
@@ -82,10 +79,8 @@ class SettingsScreen extends StatelessWidget {
               onTap: () => _chooseLanguage(context),
             ),
 
-            // ---------------- Aspetto ----------------
             ..._appearance(context),
 
-            // ---------------- Notifiche ----------------
             _header(context, tr('settings.notifications')),
             const _NotifyStatus(),
             Padding(
@@ -207,7 +202,6 @@ class SettingsScreen extends StatelessWidget {
               ),
             ],
 
-            // ---------------- Famiglia ----------------
             _header(context, tr('settings.groups')),
             if (!appState.isCloud)
               Padding(
@@ -222,9 +216,7 @@ class SettingsScreen extends StatelessWidget {
             else
               ..._familySection(context),
 
-            // ---------------- Assistenza e privacy ----------------
             _header(context, tr('support.title')),
-            // Solo per l'account amministratore (appmyfleetmanager@gmail.com).
             if (appState.isAdmin)
               ListTile(
                 leading: Icon(Icons.admin_panel_settings_outlined, color: scheme.primary),
@@ -272,7 +264,6 @@ class SettingsScreen extends StatelessWidget {
                 onTap: () => _deleteAccount(context),
               ),
 
-            // ---------------- Esci ----------------
             const Divider(height: 32),
             ListTile(
               leading: const Icon(Icons.logout),
@@ -414,8 +405,6 @@ class SettingsScreen extends StatelessWidget {
           onSelectionChanged: (sel) => save(mode: sel.first),
         ),
       ),
-      // Tenendo premuta per 5 secondi questa etichetta compare il campo
-      // per il codice sviluppatore (sblocco Pro per le prove).
       _SecretLabel(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 6),
@@ -543,8 +532,6 @@ class SettingsScreen extends StatelessWidget {
       );
 }
 
-/// Stato dei permessi notifiche, aggiornato quando si torna nell'app
-/// (ad esempio dopo averli abilitati nelle impostazioni di Android).
 class _NotifyStatus extends StatefulWidget {
   const _NotifyStatus();
 
@@ -595,8 +582,6 @@ class _NotifyStatusState extends State<_NotifyStatus> with WidgetsBindingObserve
         },
       );
     }
-    // Niente sveglie esatte (regole Play Store): i promemoria giornalieri possono
-    // arrivare con qualche minuto di tolleranza, quindi nessun avviso da mostrare.
     return ListTile(
       leading: Icon(Icons.notifications_active, color: Colors.green.shade700),
       title: Text(tr('settings.allowed')),
@@ -604,11 +589,8 @@ class _NotifyStatusState extends State<_NotifyStatus> with WidgetsBindingObserve
   }
 }
 
-
-/// Rende visibile il campo del codice sviluppatore.
 final ValueNotifier<bool> _devFieldVisible = ValueNotifier(false);
 
-/// Etichetta che, tenuta premuta per 5 secondi, mostra il campo del codice.
 class _SecretLabel extends StatefulWidget {
   final Widget child;
   const _SecretLabel({required this.child});
@@ -679,6 +661,9 @@ class _DevCodeFieldState extends State<_DevCodeField> {
         break;
       case AppState.devRevoked:
         showSnack(context, tr('pro.devRevoked'));
+        break;
+      case AppState.devOffline:
+        showSnack(context, tr('cloud.offline'));
         break;
       default:
         showSnack(context, tr('pro.devWrong'));

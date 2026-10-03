@@ -10,7 +10,6 @@ import 'package:timezone/timezone.dart' as tz;
 import '../l10n.dart';
 import '../models.dart';
 
-/// Notifiche programmate sul telefono: funzionano senza internet.
 class NotificationService {
   final FlutterLocalNotificationsPlugin _plugin = FlutterLocalNotificationsPlugin();
   bool _ready = false;
@@ -49,7 +48,6 @@ class NotificationService {
     _ready = true;
   }
 
-  /// Aggiorna i nomi dei canali (visibili nelle impostazioni Android) dopo un cambio lingua.
   Future<void> refreshChannels() async {
     if (!_ready) return;
     final a = _android;
@@ -72,7 +70,6 @@ class NotificationService {
       ? _plugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
       : null;
 
-  /// Stato dei permessi: notifiche consentite e sveglie esatte (promemoria puntuali).
   Future<({bool enabled, bool exact})> status() async {
     await init();
     final a = _android;
@@ -88,7 +85,6 @@ class NotificationService {
     return (enabled: enabled, exact: exact);
   }
 
-  /// Apre la schermata di Android "Sveglie e promemoria".
   Future<void> requestExactAlarms() async {
     await init();
     try {
@@ -165,15 +161,11 @@ class NotificationService {
     iOS: const DarwinNotificationDetails(),
   );
 
-  // Identificativi: 1..99999 promemoria scadenze, 900001 prova programmata,
-  // da 100000 in su notifiche push ricevute ad app aperta.
   static const int _maxDeadlineId = 99999;
   static const int _testId = 900001;
 
-  /// Cancella e riprogramma tutte le notifiche in base ai veicoli attuali.
   Future<int> rescheduleAll(List<Vehicle> vehicles, NotifySettings s) async {
     await init();
-    // Cancella solo i promemoria scadenze (non la prova programmata).
     try {
       final pending = await _plugin.pendingNotificationRequests();
       for (final p in pending) {
@@ -204,7 +196,6 @@ class NotificationService {
       }
     }
     items.sort((a, b) => a.when.compareTo(b.when));
-    // iOS accetta al massimo 64 notifiche programmate: teniamo le più vicine.
     final max = Platform.isIOS ? 60 : 400;
     var id = 1;
     for (final p in items.take(max)) {
@@ -224,7 +215,6 @@ class NotificationService {
     return id - 1;
   }
 
-  /// Prova di un promemoria programmato: arriva anche ad app chiusa.
   Future<void> scheduleTest(Duration delay) async {
     await init();
     final when = tz.TZDateTime.now(tz.local).add(delay);
@@ -239,8 +229,6 @@ class NotificationService {
     );
   }
 
-  /// Mostra una notifica push arrivata mentre l'app è aperta
-  /// (quando l'app è chiusa ci pensa Android da solo).
   Future<void> showRemote(String? title, String? body) async {
     await init();
     await _plugin.show(

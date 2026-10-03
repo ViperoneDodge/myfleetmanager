@@ -5,7 +5,6 @@ import 'package:path_provider/path_provider.dart';
 
 import '../models.dart';
 
-/// Archivio su file JSON nella memoria privata dell'app (sempre offline).
 class LocalStore {
   Directory? _dir;
 
@@ -35,14 +34,12 @@ class LocalStore {
     await tmp.rename(f.path);
   }
 
-  // ---- Account locali ----
   Future<Map<String, dynamic>> readAccounts() async =>
       await _readJson('accounts.json') ?? <String, dynamic>{};
 
   Future<void> writeAccounts(Map<String, dynamic> a) =>
       _writeJson('accounts.json', a);
 
-  // ---- Sessione ----
   Future<Session?> readSession() async =>
       Session.fromJson(await _readJson('session.json'));
 
@@ -55,19 +52,16 @@ class LocalStore {
     await _writeJson('session.json', s.toJson());
   }
 
-  // ---- Impostazioni del telefono (tema) ----
   Future<Map<String, dynamic>?> readSettings() => _readJson('settings.json');
 
   Future<void> writeSettings(Map<String, dynamic> s) => _writeJson('settings.json', s);
 
-  // ---- Cartella documenti ----
   Future<Directory> docsDir() async {
     final d = Directory('${(await _base()).path}/documenti');
     if (!await d.exists()) await d.create(recursive: true);
     return d;
   }
 
-  // ---- Dati utente ----
   Future<UserData> readUserData(Session s) async {
     final j = await _readJson('data_${s.storageKey}.json');
     return j == null ? UserData() : UserData.fromJson(j);

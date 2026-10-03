@@ -16,7 +16,6 @@ late final AppState appState;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Lingua: quella scelta nelle impostazioni, altrimenti quella del telefono.
   try {
     final settings = await LocalStore().readSettings();
     await L10n.load(L10n.resolve(settings?['lang'] as String?));
@@ -25,7 +24,6 @@ Future<void> main() async {
   }
   if (FirebaseConfig.isConfigured) {
     try {
-      // Android: configurazione letta da google-services.json (inserito dalla build).
       await Firebase.initializeApp();
     } catch (_) {
       try {
@@ -85,8 +83,6 @@ class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
       listenable: appState,
       builder: (context, _) {
         final t = appState.theme;
-        // Calendario, orologio e pulsanti di sistema nella lingua dell'app
-        // (se Flutter non la conosce, ad es. maltese, si usa l'inglese).
         final supported = <Locale>[
           for (final c in L10n.available)
             if (GlobalMaterialLocalizations.delegate.isSupported(Locale(c))) Locale(c),

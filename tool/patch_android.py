@@ -7,21 +7,17 @@ import shutil
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 APP = ROOT / "android" / "app"
 
-# ---------------------------------------------------------------- Gradle
 kts = APP / "build.gradle.kts"
 groovy = APP / "build.gradle"
 if kts.exists():
     g = kts.read_text()
     g = re.sub(r"minSdk\s*=\s*flutter\.minSdkVersion", "minSdk = maxOf(23, flutter.minSdkVersion)", g)
-    # Play Store: le nuove app devono puntare all'ultima versione di Android.
     g = re.sub(r"targetSdk\s*=\s*flutter\.targetSdkVersion", "targetSdk = 36", g)
     g = re.sub(r"compileSdk\s*=\s*flutter\.compileSdkVersion", "compileSdk = 36", g)
     if "isCoreLibraryDesugaringEnabled" not in g:
         g = g.replace("compileOptions {", "compileOptions {\n        isCoreLibraryDesugaringEnabled = true", 1)
     if "desugar_jdk_libs" not in g:
         g += '\ndependencies {\n    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")\n}\n'
-    # Firma SEMPRE con la chiave del repository: così gli aggiornamenti
-    # si installano sopra la versione precedente senza conflitti.
     if 'create("fleet")' not in g:
         g = g.replace("    buildTypes {", '''    signingConfigs {
         // Chiave fissa del repository: l'APK si aggiorna sopra le versioni installate.
@@ -75,8 +71,6 @@ elif groovy.exists():
 else:
     raise SystemExit("build.gradle non trovato")
 
-
-# ---------------------------------------------------------------- Firebase (google-services)
 gjson = ROOT / "tool" / "google-services.json"
 if gjson.exists():
     shutil.copy(gjson, APP / "google-services.json")
@@ -116,7 +110,6 @@ if gjson.exists():
             groovy.write_text(t)
     print("Firebase google-services configurato")
 
-# Regole R8 per le notifiche programmate (evita crash in release)
 (APP / "proguard-rules.pro").write_text(
     """-keep class com.dexterous.** { *; }
 -keep class com.google.gson.** { *; }
@@ -132,7 +125,6 @@ if gjson.exists():
 """
 )
 
-# ---------------------------------------------------------------- Manifest
 man = APP / "src" / "main" / "AndroidManifest.xml"
 m = man.read_text()
 perms = """    <uses-permission android:name="android.permission.INTERNET"/>
@@ -141,7 +133,6 @@ perms = """    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" android:maxSdkVersion="32"/>
 """
-# Android 11+: dichiarare le app esterne da aprire (email precompilata, link privacy).
 queries = """    <queries>
         <intent>
             <action android:name="android.intent.action.SENDTO"/>
@@ -153,10 +144,6 @@ queries = """    <queries>
         </intent>
     </queries>
 """
-# Permessi foto/video aggiunti in automatico da alcuni plugin: non servono (foto e
-# documenti si scelgono con i selettori di sistema, senza permessi) e Google Play
-# li concede solo alle app di gallerie/editor. Vengono rimossi dal manifest finale.
-# Rimosso anche AD_ID (ID pubblicità): l'app non ha pubblicità né statistiche.
 if "xmlns:tools" not in m:
     m = m.replace("<manifest ", '<manifest xmlns:tools="http://schemas.android.com/tools" ', 1)
 media_remove = """    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" tools:node="remove"/>
@@ -188,13 +175,11 @@ receivers = """
 if "ScheduledNotificationReceiver" not in m:
     m = m.replace("</application>", receivers + "    </application>", 1)
 m = re.sub(r'android:label="[^"]*"', 'android:label="MyFleetManager"', m, count=1)
-# Pieghevoli e multi-finestra: l'attività si adatta a ogni dimensione dello schermo.
 if "resizeableActivity" not in m:
     m = m.replace("<activity", '<activity\n            android:resizeableActivity="true"', 1)
 man.write_text(m)
 print("Patched", man)
 
-# ---------------------------------------------------------------- Icone
 icons = ROOT / "tool" / "icons"
 res = APP / "src" / "main" / "res"
 if icons.exists():
@@ -204,8 +189,6 @@ if icons.exists():
             for f in d.iterdir():
                 shutil.copy(f, res / d.name / f.name)
     print("Icons copied")
-# Schermata di avvio nativa: SOLO sfondo blu. Il logo lo disegna l'intro animata:
-# così non ci sono due loghi di dimensioni diverse sovrapposti (Android 12+).
 launch = '''<?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item><color android:color="#0257C3"/></item>
@@ -252,7 +235,6 @@ print("Splash patched")
     'tools:keep="@drawable/ic_stat_notify,@drawable/splash_logo,@mipmap/ic_launcher*" />\n'
 )
 
-# ---------------------------------------------------------------- iOS
 plist = ROOT / "ios" / "Runner" / "Info.plist"
 if plist.exists():
     p = plist.read_text()

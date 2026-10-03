@@ -4,14 +4,6 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
-/// Notifiche PUSH tramite Firebase Cloud Messaging.
-///
-/// Ogni telefono ottiene un "token" (indirizzo del dispositivo) che viene
-/// salvato in Firestore in users/{uid}.tokens: il server lo usa per inviare
-/// le notifiche sulle attività dei nuclei familiari.
-///
-/// Quando l'app è chiusa o in secondo piano la notifica la mostra Android;
-/// quando è aperta la riceviamo qui e la mostriamo con [onForeground].
 class PushService {
   String? token;
   String? _uid;
@@ -27,7 +19,6 @@ class PushService {
     _uid = uid;
     try {
       final m = FirebaseMessaging.instance;
-      // Su Android il permesso lo chiede già il servizio notifiche locali.
       if (Platform.isIOS) {
         await m.requestPermission(alert: true, badge: true, sound: true);
       }
@@ -45,7 +36,6 @@ class PushService {
         );
       });
     } catch (_) {
-      // Offline o servizi Google assenti: si riprova al prossimo avvio/sincronizzazione.
     }
   }
 
@@ -60,7 +50,6 @@ class PushService {
     } catch (_) {}
   }
 
-  /// All'uscita dall'account: questo telefono non riceve più le push di quell'utente.
   Future<void> stop() async {
     final uid = _uid;
     final t = token;

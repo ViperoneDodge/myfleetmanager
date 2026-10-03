@@ -3,11 +3,7 @@ import 'dart:ui' show PlatformDispatcher;
 
 import 'package:flutter/services.dart' show rootBundle;
 
-/// Traduzioni dell'app. Ogni lingua è un file JSON in assets/l10n/<codice>.json
-/// (formato chiave → testo). Se manca una frase si usa l'inglese, poi l'italiano.
-/// Per aggiungere una lingua: creare il file JSON e aggiungere il codice in [available].
 class L10n {
-  /// Nome di ogni lingua scritto nella lingua stessa.
   static const Map<String, String> names = {
     'it': 'Italiano',
     'en': 'English',
@@ -47,7 +43,6 @@ class L10n {
     'th': 'ไทย',
   };
 
-  /// Lingue con il file di traduzione incluso nell'app.
   static final List<String> available = names.keys.toList();
 
   static String code = 'it';
@@ -55,12 +50,10 @@ class L10n {
   static Map<String, String> _en = {};
   static Map<String, String> _it = {};
 
-  /// Lingua da usare: quella scelta nelle impostazioni, altrimenti quella del
-  /// telefono se disponibile, altrimenti inglese.
   static String resolve(String? preferred) {
     if (preferred != null && available.contains(preferred)) return preferred;
     var device = PlatformDispatcher.instance.locale.languageCode;
-    if (device == 'no' || device == 'nn') device = 'nb'; // norvegese
+    if (device == 'no' || device == 'nn') device = 'nb';
     return available.contains(device) ? device : 'en';
   }
 
@@ -82,7 +75,6 @@ class L10n {
   }
 }
 
-/// Testo tradotto. I segnaposto {nome} vengono sostituiti con [args].
 String tr(String key, [Map<String, Object?>? args]) {
   var s = L10n._cur[key] ?? L10n._en[key] ?? L10n._it[key] ?? key;
   if (args != null) {
@@ -91,7 +83,5 @@ String tr(String key, [Map<String, Object?>? args]) {
   return s;
 }
 
-/// Come [tr] ma sceglie singolare/plurale: chiavi "<key>_one" e "<key>_other",
-/// con il numero nel segnaposto {n}.
 String trn(String key, int n, [Map<String, Object?>? args]) =>
     tr(n == 1 ? '${key}_one' : '${key}_other', {'n': n, ...?args});

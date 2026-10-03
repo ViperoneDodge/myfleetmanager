@@ -1,4 +1,3 @@
-# 1.6: avvisi attività dei gruppi, zoom/ritaglio foto.
 import json, pathlib
 S = pathlib.Path(__file__).resolve().parent
 L = S.parents[1] / 'assets' / 'l10n'

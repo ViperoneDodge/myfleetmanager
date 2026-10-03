@@ -1,8 +1,7 @@
 import 'dart:async';
-import 'dart:convert';
 import 'dart:io';
 
-import 'package:crypto/crypto.dart';
+import 'package:firebase_core/firebase_core.dart' show FirebaseException;
 
 import 'package:flutter/foundation.dart';
 
@@ -22,7 +21,6 @@ import 'sync_service.dart';
 
 enum SyncStatus { off, connecting, online, offline }
 
-
 class AppState extends ChangeNotifier {
   final LocalStore store = LocalStore();
   late final AuthService auth = AuthService(store);
@@ -30,36 +28,23 @@ class AppState extends ChangeNotifier {
   final SyncService sync = SyncService();
   final PushService push = PushService();
 
-  /// Avvisi quando altri membri modificano i veicoli dei gruppi.
   GroupWatchState watch = GroupWatchState();
   final ProService pro = ProService();
 
-  // ---------------- Versione Pro ----------------
-
-  /// Veicoli (personali) gestibili con la versione gratuita.
   static const int freeVehicleLimit = 3;
 
-
-  /// Acquisto confermato dal Play Store (ricordato sul telefono).
   bool purchasedPro = false;
 
-  /// Pro sbloccata con il codice sviluppatore.
   bool devPro = false;
 
   bool get isPro => purchasedPro || devPro;
 
-  /// Furgoni, camion, rimorchi e veicoli agricoli sono riservati alla Pro.
   static bool isProType(VehicleType t) =>
       t == VehicleType.furgone ||
       t == VehicleType.camion ||
       t == VehicleType.rimorchio ||
       t == VehicleType.agricolo;
 
-  /// Versione gratuita: tutti i veicoli restano visibili (anche quelli dei gruppi),
-  /// ma solo i primi [freeVehicleLimit] tra auto e moto sono "attivi". Gli altri
-  /// compaiono in grigio, senza dettagli e senza notifiche delle scadenze.
-  /// Ordine: prima i veicoli personali, poi quelli dei gruppi; dentro ciascuno
-  /// dal più vecchio (data di creazione) al più recente.
   Set<String> get limitedIds {
     if (isPro) return const {};
     final groupOrder = {for (var i = 0; i < data.groups.length; i++) data.groups[i].id: i};
@@ -85,34 +70,36 @@ class AppState extends ChangeNotifier {
 
   bool isLimited(Vehicle v) => limitedIds.contains(v.id);
 
-  /// Veicoli utilizzabili (non in grigio): usati per scadenze e notifiche.
   List<Vehicle> get activeVehicles {
     final limited = limitedIds;
     return vehicles.where((v) => !limited.contains(v.id)).toList();
   }
 
-  /// Versione gratuita: si può aggiungere un veicolo finché ci sono meno di
-  /// [freeVehicleLimit] veicoli attivi.
   bool get canAddVehicle => isPro || activeVehicles.length < freeVehicleLimit;
 
-  // ---------------- Codice sviluppatore ----------------
-
-  /// Versione dell'app in cui è stato usato il codice: a ogni aggiornamento
-  /// la Pro di sviluppo si azzera e va sbloccata di nuovo.
   String? devProVersion;
 
-  /// Esito dell'ultimo tentativo di sblocco (per i messaggi nella pagina).
-  static const String devOk = 'ok', devWrong = 'wrong', devNeedCloud = 'cloud', devRevoked = 'revoked';
+  static const String devOk = 'ok',
+      devWrong = 'wrong',
+      devNeedCloud = 'cloud',
+      devRevoked = 'revoked',
+      devOffline = 'offline';
 
-  /// Codice riservato ai test: sblocca la Pro senza acquisto. Nel sorgente (pubblico)
-  /// c'è solo la sua impronta SHA-256. Serve un account online, così ogni sblocco
-  /// compare nell'elenco dell'amministratore e può essere revocato.
-  /// A ogni sblocco parte un avviso via email.
   Future<String> unlockDev(String code) async {
-    final hash = sha256.convert(utf8.encode(code.trim().toUpperCase())).toString();
-    if (hash != SupportService.devCodeHash) return devWrong;
+    final c = code.trim().toUpperCase();
+    if (c.isEmpty) return devWrong;
     final s = session;
     if (s == null || !isCloud) return devNeedCloud;
+    try {
+      if (!await sync.checkUnlockCode(c)) return devWrong;
+    } on FirebaseException catch (e) {
+      if (e.code == 'unavailable' || e.code == 'deadline-exceeded') return devOffline;
+      return devWrong;
+    } on TimeoutException {
+      return devOffline;
+    } catch (_) {
+      return devWrong;
+    }
     try {
       if (await sync.isProRevoked(s)) return devRevoked;
     } catch (_) {}
@@ -138,17 +125,12 @@ class AppState extends ChangeNotifier {
     _endPro('user');
   }
 
-  // ---------------- Registro Pro (pagina amministratore) ----------------
-
-  /// Account amministratore: vede chi ha la Pro e può revocare i codici sviluppatore.
-  /// L'accesso è garantito dalle regole di Firestore (email verificata).
   static const String adminEmail = 'appmyfleetmanager@gmail.com';
 
   bool get isAdmin => isCloud && session?.email?.toLowerCase() == adminEmail;
 
   StreamSubscription? _proSub;
 
-  /// Registra (o aggiorna) la propria Pro nell'elenco online.
   Future<void> _registerPro(String method) async {
     final s = session;
     if (s == null || !isCloud) return;
@@ -165,8 +147,6 @@ class AppState extends ChangeNotifier {
     } catch (_) {}
   }
 
-  /// Ascolta la propria voce nell'elenco: se l'amministratore revoca il codice
-  /// sviluppatore, la Pro di sviluppo si spegne subito.
   void _watchProEntry() {
     _proSub?.cancel();
     final s = session;
@@ -179,7 +159,6 @@ class AppState extends ChangeNotifier {
         notifyListeners();
       }
     }, onError: (_) {});
-    // Allinea l'elenco allo stato del telefono.
     if (purchasedPro) {
       _registerPro('purchase');
     } else if (devPro) {
@@ -216,7 +195,6 @@ class AppState extends ChangeNotifier {
     return list;
   }
 
-  /// Veicolo del parco personale ("I miei").
   bool isPersonal(Vehicle v) => v.fleetId == null || v.fleetId == data.personalFleetId;
 
   List<Vehicle> get myVehicles => vehicles.where(isPersonal).toList();
@@ -224,7 +202,6 @@ class AppState extends ChangeNotifier {
   List<Vehicle> groupVehicles(String groupId) =>
       vehicles.where((v) => v.fleetId == groupId).toList();
 
-  /// Nome del parco a cui appartiene il veicolo.
   String fleetLabel(Vehicle v) =>
       isPersonal(v) ? tr('fleet.mine') : (data.groupById(v.fleetId)?.name ?? tr('family.defaultName'));
 
@@ -235,7 +212,6 @@ class AppState extends ChangeNotifier {
     return null;
   }
 
-  /// Lingua scelta nelle impostazioni (null = come il telefono).
   String? langPref;
 
   Future<void> init() async {
@@ -245,8 +221,6 @@ class AppState extends ChangeNotifier {
     purchasedPro = settings?['pro'] == true;
     devPro = settings?['devPro'] == true;
     devProVersion = settings?['devProVersion'] as String?;
-    // La Pro sbloccata con il codice sviluppatore vale solo per la versione
-    // in cui è stata attivata: dopo un aggiornamento si azzera.
     if (devPro && devProVersion != appVersion) {
       devPro = false;
       devProVersion = null;
@@ -254,7 +228,6 @@ class AppState extends ChangeNotifier {
       await _writeSettings();
     }
     notifyListeners();
-    // Acquisti: verifica/ripristino in background (non blocca l'avvio).
     pro.init(
       onOwned: () {
         if (!purchasedPro) {
@@ -278,8 +251,6 @@ class AppState extends ChangeNotifier {
     loading = false;
     notifyListeners();
     if (session != null) {
-      // Dopo l'intro: chiede il permesso notifiche (Android 13+) se non è già stato dato.
-      // Prima veniva chiesto solo al login, quindi chi aggiornava l'app restava senza.
       Future.delayed(const Duration(seconds: 3), () async {
         try {
           await notifications.requestPermission();
@@ -287,7 +258,6 @@ class AppState extends ChangeNotifier {
         _scheduleNotifications();
       });
     }
-    // Aggiornamento obbligatorio dal Play Store + iscrizione alle notifiche "nuova versione".
     UpdateService.instance.start(pushAvailable: auth.cloudAvailable);
   }
 
@@ -310,14 +280,38 @@ class AppState extends ChangeNotifier {
     }
   }
 
-  // ---------------- Attività dei gruppi ----------------
-
   Future<void> _loadWatch(Session s) async {
     watch = await GroupWatchState.load();
     if (watch.uid != s.key) watch = GroupWatchState(uid: s.key);
     watch.groups = {for (final g in data.groups) g.id: g.name};
+    if (isAdmin) {
+      if (watch.adminSince == 0) watch.adminSince = DateTime.now().millisecondsSinceEpoch;
+    } else {
+      watch.adminSince = 0;
+    }
     await watch.save();
-    await scheduleGroupWatch(watch.enabled && watch.groups.isNotEmpty);
+    await scheduleGroupWatch(_watchNeeded);
+    _watchAdmin();
+  }
+
+  bool get _watchNeeded => (watch.enabled && watch.groups.isNotEmpty) || watch.adminSince > 0;
+
+  StreamSubscription? _adminSub;
+
+  void _watchAdmin() {
+    _adminSub?.cancel();
+    _adminSub = null;
+    if (!isAdmin) return;
+    _adminSub = sync.watchAllPro().listen((entries) async {
+      final saved = await GroupWatchState.load();
+      final since = saved.adminSince > watch.adminSince ? saved.adminSince : watch.adminSince;
+      if (since == 0) return;
+      final fresh = newDevUnlocks(entries, since);
+      if (fresh.isEmpty) return;
+      watch.adminSince = latestUnlock(entries, since);
+      await watch.save();
+      await showDevUnlocks(notifications, fresh);
+    }, onError: (_) {});
   }
 
   Future<void> _watchChain = Future.value();
@@ -328,16 +322,14 @@ class AppState extends ChangeNotifier {
     watch.enabled = on;
     notifyListeners();
     await watch.save();
-    await scheduleGroupWatch(on && watch.groups.isNotEmpty);
+    await scheduleGroupWatch(_watchNeeded);
     if (on) notifications.requestPermission();
   }
 
-  /// Controlla le novità arrivate da Firestore per un gruppo e avvisa.
   Future<void> _checkGroupActivity(
       String fleetId, List<Vehicle> remote, Set<String> existedBefore) async {
     final s = session;
     if (s == null || !isCloud) return;
-    // Rilegge: il controllo in background potrebbe aver già avvisato.
     final fresh = await GroupWatchState.load();
     if (fresh.uid == s.key) {
       watch.seen = fresh.seen;
@@ -349,7 +341,6 @@ class AppState extends ChangeNotifier {
       if (r.updatedAt > maxTs) maxTs = r.updatedAt;
     }
     if (since == null) {
-      // Primo ascolto di questo gruppo: si parte da qui, senza avvisi arretrati.
       watch.seen[fleetId] = remote.isEmpty ? DateTime.now().millisecondsSinceEpoch : maxTs;
       for (final r in remote) {
         if (!r.deleted) watch.remember(r.id);
@@ -376,7 +367,6 @@ class AppState extends ChangeNotifier {
     }
   }
 
-  /// Registra il telefono per le notifiche push (solo account online).
   Future<void> startPush() async {
     final s = session;
     if (s == null || s.mode != AccountMode.cloud || !auth.cloudAvailable) return;
@@ -390,6 +380,8 @@ class AppState extends ChangeNotifier {
     sync.stop();
     _proSub?.cancel();
     _proSub = null;
+    _adminSub?.cancel();
+    _adminSub = null;
     await scheduleGroupWatch(false);
     watch = GroupWatchState();
     await watch.save();
@@ -406,9 +398,6 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Elimina l'account online e i dati sul server (richiesto dal Play Store).
-  /// Restituisce false se i dati sono stati eliminati ma Firebase chiede un
-  /// accesso recente per cancellare anche l'account: basta rientrare e ripetere.
   Future<bool> deleteCloudAccount() async {
     final s = session;
     if (s == null || !isCloud) return true;
@@ -418,7 +407,6 @@ class AppState extends ChangeNotifier {
     try {
       await sync.deleteAllData(s, List.of(data.groups));
     } catch (_) {
-      // Offline o errore del server: si riprende come prima, nulla è perso.
       _startSync();
       startPush();
       rethrow;
@@ -444,13 +432,10 @@ class AppState extends ChangeNotifier {
     _notifyDebounce?.cancel();
     _notifyDebounce = Timer(const Duration(milliseconds: 800), () async {
       try {
-        // Solo i veicoli attivi: quelli in grigio (versione gratuita) non avvisano.
         await notifications.rescheduleAll(activeVehicles, data.notify);
       } catch (_) {}
     });
   }
-
-  // ---------------- Veicoli ----------------
 
   Future<void> saveVehicle(Vehicle v) async {
     final now = DateTime.now().millisecondsSinceEpoch;
@@ -464,8 +449,6 @@ class AppState extends ChangeNotifier {
     if (v.fleetId == data.personalFleetId) v.fleetId = null;
     final i = data.vehicles.indexWhere((x) => x.id == v.id);
     if (i >= 0 && data.vehicles[i].fleetId != v.fleetId && isCloud) {
-      // Spostato in un altro parco: il vecchio viene eliminato per gli altri,
-      // il veicolo prosegue con un nuovo identificativo nel nuovo parco.
       final old = data.vehicles[i];
       final tomb = old.copy()
         ..deleted = true
@@ -502,8 +485,6 @@ class AppState extends ChangeNotifier {
     await saveVehicle(v);
   }
 
-  /// Sposta un veicolo in un altro parco (nucleo familiare o "I miei").
-  /// [fleetId] null = parco personale.
   Future<void> moveVehicle(String id, String? fleetId) async {
     final v = vehicleById(id);
     if (v == null) return;
@@ -511,10 +492,6 @@ class AppState extends ChangeNotifier {
     await saveVehicle(moved);
   }
 
-  // ---------------- Storico manutenzioni ----------------
-
-  /// Salva un intervento. Con [asService] aggiorna anche la data
-  /// dell'ultimo tagliando (e quindi il promemoria del prossimo).
   Future<void> saveMaintenance(String vehicleId, MaintenanceRecord r,
       {bool asService = false}) async {
     final v = vehicleById(vehicleId);
@@ -542,8 +519,6 @@ class AppState extends ChangeNotifier {
     v.maintenance.removeWhere((m) => m.id == recordId);
     await saveVehicle(v);
   }
-
-  // ---------------- Documenti (restano sul telefono) ----------------
 
   Future<File> documentFile(VehicleDocument d) async =>
       File('${(await store.docsDir()).path}/${d.fileName}');
@@ -599,8 +574,6 @@ class AppState extends ChangeNotifier {
     } catch (_) {}
   }
 
-  // ---------------- Tema ----------------
-
   Future<void> updateTheme(ThemeSettings t) async {
     theme = t;
     notifyListeners();
@@ -615,24 +588,17 @@ class AppState extends ChangeNotifier {
         if (devProVersion != null) 'devProVersion': devProVersion,
       });
 
-  /// Cambia lingua ([code] null = automatica, come il telefono).
   Future<void> setLanguage(String? code) async {
     langPref = code;
     await L10n.load(L10n.resolve(code));
     notifyListeners();
     await _writeSettings();
-    // Le notifiche già programmate vengono riscritte nella nuova lingua.
     _scheduleNotifications();
     try {
       await notifications.refreshChannels();
     } catch (_) {}
   }
 
-  // ---------------- Passaggio da account locale ad account online ----------------
-
-  /// Passa all'account online [cloud] senza uscire. Con [bringVehicles] i veicoli
-  /// dell'account locale (con documenti e impostazioni notifiche) vengono copiati
-  /// nel parco personale online. L'account locale resta sul telefono intatto.
   Future<int> switchToCloud(Session cloud, {required bool bringVehicles}) async {
     final old = session;
     final oldData = data;
@@ -649,7 +615,6 @@ class AppState extends ChangeNotifier {
           ..updatedByUid = cloud.key
           ..createdBy = cloud.key
           ..documents = [];
-        // I file dei documenti vengono duplicati: i due account restano indipendenti.
         for (final d in v.documents) {
           try {
             final src = await documentFile(d);
@@ -685,8 +650,6 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  // ---------------- Sincronizzazione e nuclei familiari ----------------
-
   String? _fleetOf(Vehicle v) => v.fleetId ?? data.personalFleetId;
 
   void _pushIfCloud(Vehicle v) {
@@ -712,7 +675,6 @@ class AppState extends ChangeNotifier {
         data.personalFleetId = await sync.ensurePersonal(s);
         await _persist();
       } catch (_) {
-        // Offline: si lavora in locale e si riprova tra un minuto.
         syncStatus = SyncStatus.offline;
         notifyListeners();
         _retry = Timer(const Duration(minutes: 1), _startSync);
@@ -739,14 +701,13 @@ class AppState extends ChangeNotifier {
     data.groups = groups;
     if (isCloud) {
       final names = {for (final g in groups) g.id: g.name};
-      final had = watch.groups.isNotEmpty;
+      final had = _watchNeeded;
       watch.groups = names;
       watch.seen.removeWhere((k, _) => !names.containsKey(k));
       watch.save();
-      if (had != names.isNotEmpty) scheduleGroupWatch(watch.enabled && names.isNotEmpty);
+      if (had != _watchNeeded) scheduleGroupWatch(_watchNeeded);
     }
     final valid = {data.personalFleetId, ...groups.map((g) => g.id)};
-    // Veicoli di nuclei da cui si è usciti (o eliminati): tolti dal telefono.
     final gone = data.vehicles
         .where((v) => v.fleetId != null && !valid.contains(v.fleetId))
         .toList();
@@ -768,7 +729,6 @@ class AppState extends ChangeNotifier {
     if (!personal) {
       final existed = data.vehicles.where((v) => !v.deleted).map((v) => v.id).toSet();
       final copy = List.of(remote);
-      // In fila: due aggiornamenti ravvicinati non devono avvisare due volte.
       _watchChain = _watchChain
           .then((_) => _checkGroupActivity(fleetId, copy, existed))
           .catchError((_) {});
@@ -781,7 +741,6 @@ class AppState extends ChangeNotifier {
         data.vehicles.add(r);
         changed = true;
       } else if (r.updatedAt > data.vehicles[i].updatedAt) {
-        // I documenti sono solo locali: si conservano quelli del telefono.
         r.documents = data.vehicles[i].documents;
         data.vehicles[i] = r;
         changed = true;
@@ -807,8 +766,6 @@ class AppState extends ChangeNotifier {
   }
 
   Future<FleetGroup> joinGroup(String code) async {
-    // Si entra sempre nel gruppo: nella versione gratuita i veicoli oltre il
-    // limite compaiono in grigio (vedi [limitedIds]).
     final g = await sync.joinGroup(session!, code);
     if (data.groupById(g.id) == null) data.groups.add(g);
     await _persist();

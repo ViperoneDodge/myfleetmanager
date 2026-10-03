@@ -1,4 +1,3 @@
-# 1.5 (seconda parte): camion, bollo, testo Pro aggiornato.
 import json, pathlib
 S = pathlib.Path(__file__).resolve().parent
 L = S.parents[1] / 'assets' / 'l10n'

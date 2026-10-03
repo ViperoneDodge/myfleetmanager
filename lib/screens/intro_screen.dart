@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import '../l10n.dart';
 import '../theme.dart';
 
-/// Schermata di benvenuto animata mostrata all'apertura dell'app.
-/// La schermata di avvio nativa è solo blu: il logo compare qui con un'animazione
-/// (evita il doppio logo sovrapposto che si vedeva su alcuni telefoni).
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
 
@@ -40,8 +37,6 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
             stops: [0, 0.45, 1],
           ),
         ),
-        // SafeArea + colonna: logo, testo e strada non possono sovrapporsi
-        // né finire sotto notch / barra di navigazione, su nessun telefono.
         child: SafeArea(
           child: AnimatedBuilder(
             animation: _c,
@@ -101,7 +96,6 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
                     ),
                   ),
                   const Spacer(flex: 4),
-                  // Strada con veicolo che la percorre
                   Opacity(
                     opacity: road.value.clamp(0.0, 1.0).toDouble(),
                     child: SizedBox(

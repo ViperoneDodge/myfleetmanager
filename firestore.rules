@@ -3,41 +3,36 @@ service cloud.firestore {
   match /databases/{database}/documents {
     function signedIn() { return request.auth != null; }
 
-    // Amministratore: account Google appmyfleetmanager@gmail.com (email verificata).
     function isAdmin() {
       return signedIn()
         && request.auth.token.email == 'appmyfleetmanager@gmail.com'
         && request.auth.token.email_verified == true;
     }
 
-    // pro/{uid} = registro della versione Pro (acquisto o codice sviluppatore).
-    // L'utente scrive solo la propria voce e non può annullare una revoca;
-    // l'amministratore vede tutto e può revocare.
+    match /unlock/{code} {
+      allow get: if signedIn();
+      allow list, write: if false;
+    }
+
     match /pro/{uid} {
       allow read: if isAdmin() || (signedIn() && request.auth.uid == uid);
       allow create: if signedIn() && request.auth.uid == uid
         && request.resource.data.revoked == false;
       allow update: if isAdmin() || (signedIn() && request.auth.uid == uid
         && request.resource.data.revoked == resource.data.revoked);
-      // Cancellazione account: anche l'utente può eliminare la propria voce.
       allow delete: if isAdmin() || (signedIn() && request.auth.uid == uid);
     }
 
-    // users/{uid} = token dei telefoni per le notifiche push (solo il proprietario)
     match /users/{uid} {
       allow read, write: if signedIn() && request.auth.uid == uid;
     }
 
-    // fleets/{uid}   = parco personale (personal: true)
-    // fleets/{code}  = nucleo familiare condiviso (il codice è l'invito)
     match /fleets/{fleetId} {
       function isMember() {
         return signedIn() && request.auth.uid in resource.data.members;
       }
 
-      // Lettura diretta tramite codice invito (serve per entrare nel nucleo)
       allow get: if signedIn();
-      // Ricerca: solo i parchi di cui si è membri
       allow list: if signedIn() && request.auth.uid in resource.data.members;
 
       allow create: if signedIn()
@@ -45,8 +40,6 @@ service cloud.firestore {
         && request.resource.data.members == [request.auth.uid]
         && (request.resource.data.personal != true || fleetId == request.auth.uid);
 
-      // I membri possono modificare; chi ha il codice può solo aggiungere se stesso
-      // (e solo ai nuclei condivisi, mai al parco personale di un altro).
       allow update: if isMember() || (
         signedIn()
         && resource.data.personal != true

@@ -53,15 +53,12 @@ String vehicleTypePlural(VehicleType t) {
   }
 }
 
-/// Documento allegato (libretto, polizza…): il file resta sul telefono.
 class VehicleDocument {
   String id;
   String name;
 
-  /// Nome del file nella cartella documenti dell'app.
   String fileName;
 
-  /// 'pdf' oppure 'image'.
   String kind;
   int addedAt;
   int size;
@@ -134,14 +131,10 @@ class Deadline {
   DeadlineKind kind;
   String label;
 
-  /// Per assicurazione/revisione/personalizzate: data di scadenza.
-  /// Per il tagliando: data dell'ULTIMO tagliando.
   DateTime? date;
 
-  /// Solo tagliando: ogni quanti mesi va rifatto (0 = nessun promemoria).
   int intervalMonths;
 
-  /// L'utente sceglie quali scadenze monitorare.
   bool enabled;
 
   Deadline({
@@ -154,7 +147,6 @@ class Deadline {
   })  : id = id ?? newId(8),
         label = label ?? deadlineKindDefaultLabel(kind);
 
-  /// Data in cui scatta la scadenza (usata per notifiche e colori).
   DateTime? get dueDate {
     if (date == null) return null;
     if (kind == DeadlineKind.service) {
@@ -165,8 +157,6 @@ class Deadline {
     return date;
   }
 
-  /// Nome mostrato: le scadenze standard seguono la lingua scelta,
-  /// quelle personalizzate mostrano il nome scritto dall'utente.
   String get displayLabel => kind == DeadlineKind.custom ? label : deadlineKindDefaultLabel(kind);
 
   String get dueLabel => kind == DeadlineKind.service ? tr('deadline.nextService') : displayLabel;
@@ -192,7 +182,6 @@ class Deadline {
   Deadline copy() => Deadline.fromJson(toJson());
 }
 
-/// Voci selezionabili (checkbox) in un intervento di manutenzione.
 const List<String> maintenanceItems = [
   'oil',
   'oilFilter',
@@ -214,13 +203,11 @@ String maintenanceItemLabel(String k) {
   }
 }
 
-/// Intervento nello storico manutenzioni di un veicolo.
 class MaintenanceRecord {
   String id;
   DateTime date;
   int? km;
 
-  /// Chiavi di [maintenanceItems] spuntate.
   Set<String> items;
   String notes;
 
@@ -258,29 +245,22 @@ class Vehicle {
   String name;
   String plate;
 
-  /// Foto compressa (JPEG) in base64: salvata in locale e sincronizzata.
   String? photoB64;
   List<Deadline> deadlines;
   List<VehicleDocument> documents;
 
-  /// Storico manutenzioni (sincronizzato con la famiglia).
   List<MaintenanceRecord> maintenance;
   String notes;
   int updatedAt;
   String updatedBy;
 
-  /// Chi ha fatto l'ultima modifica (uid online o utente locale).
   String updatedByUid;
 
-  /// Chi ha creato il veicolo: conta per il limite della versione gratuita.
   String createdBy;
 
-  /// Quando è stato aggiunto (ms). Serve a stabilire quali sono i "primi" veicoli
-  /// nella versione gratuita. 0 per i veicoli creati prima della 1.8.
   int createdAt;
   bool deleted;
 
-  /// Parco a cui appartiene (null/personale = "I miei"; altrimenti id del nucleo familiare).
   String? fleetId;
 
   Uint8List? _photoCache;
@@ -309,7 +289,6 @@ class Vehicle {
         maintenance = maintenance ?? [],
         updatedAt = updatedAt ?? DateTime.now().millisecondsSinceEpoch;
 
-  /// Veicoli creati prima della 1.5: aggiunge il bollo (spento, da attivare).
   static List<Deadline> _withTax(List<Deadline> list) {
     if (list.isNotEmpty && !list.any((d) => d.kind == DeadlineKind.tax)) {
       list.add(Deadline(kind: DeadlineKind.tax, enabled: false));
@@ -317,8 +296,6 @@ class Vehicle {
     return list;
   }
 
-  /// Ordine fisso delle scadenze: Assicurazione, Bollo, Revisione, Tagliando,
-  /// poi quelle personalizzate (nell'ordine in cui sono state create).
   static int _rank(DeadlineKind k) {
     switch (k) {
       case DeadlineKind.insurance:
@@ -334,7 +311,6 @@ class Vehicle {
     }
   }
 
-  /// Riordina (in modo stabile) anche le scadenze dei veicoli già esistenti.
   static List<Deadline> _ordered(List<Deadline> list) {
     final indexed = list.asMap().entries.toList()
       ..sort((a, b) {
@@ -351,7 +327,6 @@ class Vehicle {
         Deadline(
           kind: DeadlineKind.service,
           intervalMonths: 12,
-          // I rimorchi non hanno motore: tagliando disattivato di default.
           enabled: t != VehicleType.rimorchio,
         ),
       ];
@@ -369,7 +344,6 @@ class Vehicle {
     return _photoCache;
   }
 
-  /// Scadenze attive con data, ordinate dalla più vicina.
   List<Deadline> get activeDeadlines {
     final list = deadlines
         .where((d) => d.enabled && d.dueDate != null)
@@ -378,7 +352,6 @@ class Vehicle {
     return list;
   }
 
-  /// Manutenzioni dalla più recente.
   List<MaintenanceRecord> get maintenanceSorted =>
       List.of(maintenance)..sort((a, b) => b.date.compareTo(a.date));
 
@@ -387,8 +360,6 @@ class Vehicle {
     return a.isEmpty ? null : a.first;
   }
 
-  /// [includeDocs] = false per la sincronizzazione: i file dei documenti
-  /// restano solo sul telefono.
   Map<String, dynamic> toJson({bool includeDocs = true}) => {
         'id': id,
         'type': type.name,
@@ -440,7 +411,6 @@ class Vehicle {
 }
 
 class NotifySettings {
-  /// Giorni di anticipo: 30 = 1 mese, 7 = 1 settimana, 1 = 1 giorno, 0 = il giorno stesso.
   Set<int> offsets;
   int hour;
   int minute;
@@ -466,13 +436,11 @@ class NotifySettings {
   }
 }
 
-/// Nucleo familiare condiviso (parco auto di gruppo).
 class FleetGroup {
   final String id;
   String name;
   String ownerUid;
 
-  /// uid -> email dei membri.
   Map<String, String> members;
 
   FleetGroup({
@@ -498,12 +466,10 @@ class FleetGroup {
       );
 }
 
-/// Dati di un utente salvati sul telefono.
 class UserData {
   List<Vehicle> vehicles;
   NotifySettings notify;
 
-  /// Parco personale online (id = uid dell'utente).
   String? personalFleetId;
   List<FleetGroup> groups;
 
@@ -550,7 +516,6 @@ enum AccountMode { local, cloud }
 class Session {
   final AccountMode mode;
 
-  /// Locale: username. Cloud: uid Firebase.
   final String key;
   final String displayName;
   final String? email;
@@ -579,7 +544,6 @@ class Session {
     );
   }
 
-  /// Nome del file dati (un file per account).
   String get storageKey =>
       '${mode.name}_${key.replaceAll(RegExp(r'[^A-Za-z0-9_-]'), '_')}';
 }

@@ -6,12 +6,6 @@ import '../services/sync_service.dart' show cloudErrorMessage;
 import '../theme.dart';
 import '../widgets/common.dart';
 
-/// Pagina riservata all'amministratore (account appmyfleetmanager@gmail.com):
-/// elenco di chi ha la versione Pro, diviso tra acquisto e codice sviluppatore,
-/// con la possibilità di revocare i codici sviluppatore.
-/// La sicurezza vera è nelle regole di Firestore: per chiunque altro la lettura
-/// del registro viene rifiutata dal server.
-/// Testi solo in italiano: la pagina la vede solo lo sviluppatore.
 class AdminScreen extends StatelessWidget {
   const AdminScreen({super.key});
 

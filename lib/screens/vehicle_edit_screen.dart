@@ -14,7 +14,6 @@ import '../widgets/common.dart';
 import 'pro_screen.dart';
 
 class VehicleEditScreen extends StatefulWidget {
-  /// Riceve una COPIA del veicolo (o uno nuovo): le modifiche si salvano solo con "Salva".
   final Vehicle vehicle;
   const VehicleEditScreen({super.key, required this.vehicle});
 
@@ -32,7 +31,6 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
 
   bool get _isNew => appState.vehicleById(v.id) == null;
 
-  /// Tipo con cui il veicolo è stato aperto (un furgone già esistente resta modificabile).
   late final VehicleType _originalType = v.type;
 
   Future<void> _selectType(VehicleType t) async {
@@ -116,7 +114,6 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
         bytes = await x.readAsBytes();
       }
       if (bytes == null || !mounted) return;
-      // Zoom e ritaglio con le stesse proporzioni della foto nella scheda veicolo.
       final cropped = await cropPhoto(context, bytes, aspect: 25 / 16, maxSide: 1024, quality: 75);
       if (cropped == null || !mounted) return;
       setState(() => v.photoB64 = base64Encode(cropped));
@@ -128,7 +125,6 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   Future<void> _pickDate(Deadline d) async {
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
-    // Il tagliando registra la data dell'ULTIMO intervento: non può essere nel futuro.
     final isService = d.kind == DeadlineKind.service;
     final last = isService ? today : DateTime(now.year + 20);
     var initial = d.date ?? today;

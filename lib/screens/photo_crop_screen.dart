@@ -8,12 +8,6 @@ import 'package:image/image.dart' as img;
 
 import '../l10n.dart';
 
-/// Apre la schermata per ingrandire, spostare e ruotare una foto prima di salvarla.
-///
-/// [aspect] = rapporto larghezza/altezza fisso del ritaglio (es. 25/16 per la foto
-/// del veicolo). Se null l'utente può scegliere fra originale, 4:3, 3:4 e 1:1.
-/// Restituisce il JPEG ritagliato (lato maggiore al massimo [maxSide] px) oppure
-/// null se l'utente annulla.
 Future<Uint8List?> cropPhoto(
   BuildContext context,
   Uint8List bytes, {
@@ -50,10 +44,8 @@ class _PhotoCropScreenState extends State<PhotoCropScreen> {
   bool _busy = false;
   String? _error;
 
-  /// 0 = proporzioni originali della foto (solo se [widget.aspect] è null).
   double _freeAspect = 0;
 
-  // Misure dell'ultimo layout (servono per calcolare il ritaglio).
   Size _frame = Size.zero;
   double _baseScale = 1;
   Size? _lastFrame;
@@ -87,7 +79,6 @@ class _PhotoCropScreenState extends State<PhotoCropScreen> {
     return i.width / i.height;
   }
 
-  /// Ruota la foto di 90° in senso orario.
   Future<void> _rotate() async {
     final src = _img;
     if (src == null || _busy) return;
@@ -102,7 +93,7 @@ class _PhotoCropScreenState extends State<PhotoCropScreen> {
     setState(() {
       _img = out;
       _busy = false;
-      _lastFrame = null; // ricentra
+      _lastFrame = null;
     });
   }
 
@@ -113,7 +104,6 @@ class _PhotoCropScreenState extends State<PhotoCropScreen> {
     });
   }
 
-  /// Centra la foto nella cornice (all'apertura, dopo rotazione o cambio proporzioni).
   void _centerIfNeeded(Size frame, Size child) {
     if (_lastFrame == frame) return;
     _lastFrame = frame;
@@ -133,7 +123,6 @@ class _PhotoCropScreenState extends State<PhotoCropScreen> {
       final zoom = m.getMaxScaleOnAxis();
       final tx = m.getTranslation().x;
       final ty = m.getTranslation().y;
-      // Area visibile nella cornice, in pixel della foto.
       final k = 1 / (zoom * _baseScale);
       var sx = -tx * k;
       var sy = -ty * k;
@@ -268,7 +257,6 @@ class _PhotoCropScreenState extends State<PhotoCropScreen> {
       fw = fh * a;
     }
     final frame = Size(fw, fh);
-    // La foto copre sempre tutta la cornice (zoom minimo = riempimento).
     final base = math.max(fw / src.width, fh / src.height);
     final child = Size(src.width * base, src.height * base);
     _frame = frame;
@@ -295,7 +283,6 @@ class _PhotoCropScreenState extends State<PhotoCropScreen> {
             ),
           ),
         ),
-        // Cornice e griglia dei terzi (non intercettano i tocchi)
         Positioned.fill(
           child: IgnorePointer(
             child: CustomPaint(painter: _GridPainter()),

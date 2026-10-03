@@ -25,7 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
   int _tab = 0;
   VehicleType? _filter;
 
-  /// Veicolo aperto nel pannello destro (schermi larghi / pieghevoli aperti).
   String? _selectedId;
   bool _twoPane = false;
 
@@ -49,7 +48,6 @@ class _HomeScreenState extends State<HomeScreen> {
     ));
   }
 
-  /// Cerniera/piega verticale del pieghevole (libro aperto), se presente.
   static Rect? _verticalHinge(MediaQueryData mq) {
     for (final f in mq.displayFeatures) {
       if (f.type == DisplayFeatureType.cutout) continue;
@@ -67,7 +65,6 @@ class _HomeScreenState extends State<HomeScreen> {
     _twoPane = hinge != null || width >= 840;
     if (!_twoPane) return _mainScaffold(context);
 
-    // Due pannelli: elenco a sinistra, dettaglio a destra (mai sopra la cerniera).
     final leftWidth = hinge != null ? hinge.left : (width * 0.42).clamp(340.0, 480.0).toDouble();
     final gap = hinge != null ? hinge.width : 0.0;
     final selected = _selectedId == null ? null : appState.vehicleById(_selectedId!);
@@ -184,10 +181,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _vehiclesTab() {
-    // Elenco principale: i propri veicoli E quelli condivisi nei gruppi.
     final all = appState.vehicles;
     final list = _filter == null ? all : all.where((v) => v.type == _filter).toList();
-    // Versione gratuita: oltre i primi 3 tra auto e moto le schede sono in grigio.
     final limited = appState.limitedIds;
     return RefreshIndicator(
       onRefresh: appState.retrySync,
@@ -259,7 +254,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _deadlinesTab() {
     final items = <({Vehicle v, Deadline d})>[];
-    // Solo i veicoli attivi: quelli in grigio non mostrano le scadenze.
     for (final v in appState.activeVehicles) {
       for (final d in v.activeDeadlines) {
         items.add((v: v, d: d));

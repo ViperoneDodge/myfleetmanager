@@ -18,7 +18,6 @@ import 'vehicle_edit_screen.dart';
 class VehicleDetailScreen extends StatelessWidget {
   final String vehicleId;
 
-  /// Mostrato nel pannello destro (pieghevoli/tablet): niente "indietro".
   final bool embedded;
   final VoidCallback? onClosed;
   const VehicleDetailScreen({
@@ -54,8 +53,6 @@ class VehicleDetailScreen extends StatelessWidget {
       }
     }
   }
-
-  // ------------------------------------------------------------ Documenti
 
   Future<String?> _askName(BuildContext context, {String initial = ''}) {
     final c = TextEditingController(text: initial);
@@ -153,7 +150,6 @@ class VehicleDetailScreen extends StatelessWidget {
       return;
     }
     if (path == null || !context.mounted) return;
-    // Foto: zoom e ritaglio prima di salvarla (i PDF restano così come sono).
     final lower = path.toLowerCase();
     if (lower.endsWith('.jpg') ||
         lower.endsWith('.jpeg') ||
@@ -246,8 +242,6 @@ class VehicleDetailScreen extends StatelessWidget {
     }
   }
 
-  // ------------------------------------------------------------ UI
-
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
@@ -284,7 +278,6 @@ class VehicleDetailScreen extends StatelessWidget {
             child: ListView(
               padding: const EdgeInsets.fromLTRB(8, 14, 10, 96),
               children: [
-                // Foto stile "polaroid" fissata con lo scotch
                 Center(
                   child: Transform.rotate(
                     angle: -0.025,

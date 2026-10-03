@@ -11,7 +11,6 @@ import '../widgets/common.dart';
 import 'login_screen.dart';
 import 'pro_screen.dart';
 
-/// Scheda "Famiglia": veicoli dei nuclei familiari condivisi.
 class FamilyTab extends StatelessWidget {
   final void Function(Vehicle v) onOpen;
   final void Function(String groupId) onAdd;
@@ -146,10 +145,6 @@ class FamilyTab extends StatelessWidget {
   }
 }
 
-// ---------------------------------------------------------------- Sposta veicolo
-
-/// Menu della pressione prolungata su un veicolo: aggiungilo a un nucleo
-/// familiare (o spostalo in un altro nucleo / in "I miei").
 Future<void> moveVehicleSheet(BuildContext context, Vehicle v) async {
   HapticFeedback.mediumImpact();
   if (!appState.isCloud) {
@@ -210,8 +205,6 @@ Future<void> moveVehicleSheet(BuildContext context, Vehicle v) async {
   await appState.moveVehicle(v.id, target);
   if (context.mounted) showSnack(context, tr('move.done', {'name': name, 'where': label}));
 }
-
-// ---------------------------------------------------------------- Dialoghi
 
 Future<void> createGroupDialog(BuildContext context) async {
   final c = TextEditingController(text: tr('family.defaultName'));
@@ -275,8 +268,6 @@ Future<void> joinGroupDialog(BuildContext context) async {
     if (context.mounted) showSnack(context, cloudErrorMessage(e));
   }
 }
-
-// ---------------------------------------------------------------- Gestione nucleo
 
 class GroupScreen extends StatelessWidget {
   final String groupId;

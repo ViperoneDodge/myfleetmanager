@@ -22,8 +22,6 @@ class AuthService {
 
   bool get cloudAvailable => FirebaseConfig.isConfigured;
 
-  // ---------------- Account locale (solo su questo telefono) ----------------
-
   String _hash(String password, String salt) {
     var bytes = utf8.encode('$salt:$password');
     var digest = sha256.convert(bytes);
@@ -60,8 +58,6 @@ class AuthService {
         mode: AccountMode.local, key: u, displayName: (m['display'] as String?) ?? u);
   }
 
-  // ---------------- Account online (email o Google) ----------------
-
   Session _fromUser(User user) => Session(
         mode: AccountMode.cloud,
         key: user.uid,
@@ -84,7 +80,6 @@ class AuthService {
       case 'network-request-failed':
         return tr('auth.network');
       case 'operation-not-allowed':
-        // Metodo Email/Password non attivato nella console Firebase.
         return tr('auth.emailDisabled');
       case 'too-many-requests':
         return tr('auth.tooMany');
@@ -115,7 +110,6 @@ class AuthService {
     }
   }
 
-  /// Invia l'email per reimpostare la password dell'account online.
   Future<void> resetPassword(String email) async {
     try {
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email.trim());
@@ -131,7 +125,6 @@ class AuthService {
             : FirebaseConfig.googleWebClientId,
       );
 
-  /// Login Google: all'app viene condiviso solo l'indirizzo email.
   Future<Session> loginGoogle() async {
     try {
       final g = _google();
@@ -153,14 +146,12 @@ class AuthService {
     }
   }
 
-  /// Verifica che la sessione cloud salvata sia ancora valida (funziona offline).
   bool cloudSessionValid(Session s) {
     if (!cloudAvailable) return false;
     final u = FirebaseAuth.instance.currentUser;
     return u != null && u.uid == s.key;
   }
 
-  /// Cancella definitivamente l'utente Firebase.
   Future<void> deleteCloudAccount() async {
     final u = FirebaseAuth.instance.currentUser;
     if (u == null) return;

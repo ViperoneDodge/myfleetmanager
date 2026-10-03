@@ -7,8 +7,6 @@ import '../theme.dart';
 import '../widgets/common.dart';
 
 class LoginScreen extends StatefulWidget {
-  /// true = aperta dalle Impostazioni per passare da account locale a online
-  /// senza uscire (i veicoli possono essere portati nel nuovo account).
   final bool upgrade;
   const LoginScreen({super.key, this.upgrade = false});
 

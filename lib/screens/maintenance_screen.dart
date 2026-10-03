@@ -7,11 +7,9 @@ import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 
-/// Inserimento / modifica di un intervento nello storico manutenzioni.
 class MaintenanceEditScreen extends StatefulWidget {
   final String vehicleId;
 
-  /// null = nuovo intervento.
   final MaintenanceRecord? record;
   const MaintenanceEditScreen({super.key, required this.vehicleId, this.record});
 
@@ -40,7 +38,6 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
       v != null && v.deadlines.any((d) => d.kind == DeadlineKind.service && d.enabled);
 
   Future<void> _pickDate() async {
-    // La data di un intervento non può essere successiva a oggi (data di inserimento).
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
     final d = await showDatePicker(

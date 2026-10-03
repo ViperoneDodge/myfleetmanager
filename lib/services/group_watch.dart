@@ -16,28 +16,17 @@ import '../models.dart';
 import 'local_store.dart';
 import 'notification_service.dart';
 
-/// Avvisi sulle attività dei gruppi: quando un ALTRO membro aggiunge,
-/// modifica o elimina un veicolo di un gruppo.
-///
-/// Senza server:
-///  - ad app aperta (o rimasta in memoria) l'avviso parte subito, dall'ascolto Firestore;
-///  - ad app chiusa Android esegue [groupWatchDispatcher] circa ogni 15 minuti
-///    (Android può ritardarlo per risparmiare batteria).
-///
-/// Lo stato è in group_watch.json, condiviso fra app e controllo in background,
-/// così la stessa modifica non viene notificata due volte.
 class GroupWatchState {
   String uid;
   bool enabled;
 
-  /// Per ogni gruppo: updatedAt più recente già visto.
   Map<String, int> seen;
 
-  /// Gruppi da controllare (id → nome).
   Map<String, String> groups;
 
-  /// Veicoli già conosciuti (per distinguere "aggiunto" da "modificato").
   List<String> known;
+
+  int adminSince;
 
   GroupWatchState({
     this.uid = '',
@@ -45,6 +34,7 @@ class GroupWatchState {
     Map<String, int>? seen,
     Map<String, String>? groups,
     List<String>? known,
+    this.adminSince = 0,
   })  : seen = seen ?? {},
         groups = groups ?? {},
         known = known ?? [];
@@ -67,6 +57,7 @@ class GroupWatchState {
         groups: Map<String, dynamic>.from((j['groups'] as Map?) ?? {})
             .map((k, v) => MapEntry(k, v.toString())),
         known: ((j['known'] as List?) ?? []).map((e) => e.toString()).toList(),
+        adminSince: (j['adminSince'] as num?)?.toInt() ?? 0,
       );
     } catch (_) {
       return GroupWatchState();
@@ -84,6 +75,7 @@ class GroupWatchState {
         'seen': seen,
         'groups': groups,
         'known': known,
+        'adminSince': adminSince,
       }), flush: true);
       await tmp.rename(f.path);
     } catch (_) {}
@@ -116,8 +108,6 @@ class GroupActivity {
   }
 }
 
-/// Modifiche fatte da altri (non da [me]) più recenti di [since].
-/// [existed] dice se il veicolo era già conosciuto sul telefono.
 List<GroupActivity> findActivities({
   required String groupName,
   required String me,
@@ -137,14 +127,12 @@ List<GroupActivity> findActivities({
         : existed(r.id)
             ? GroupAction.edited
             : GroupAction.added;
-    // Un veicolo creato ed eliminato fra due controlli: niente da dire.
     if (action == GroupAction.deleted && !existed(r.id)) continue;
     out.add(GroupActivity(groupName, r.updatedBy, label, action));
   }
   return out;
 }
 
-/// Mostra gli avvisi: fino a 3 singoli per gruppo, altrimenti un riepilogo.
 Future<void> showActivities(NotificationService n, List<GroupActivity> acts) async {
   final byGroup = <String, List<GroupActivity>>{};
   for (final a in acts) {
@@ -161,9 +149,39 @@ Future<void> showActivities(NotificationService n, List<GroupActivity> acts) asy
   }
 }
 
+List<Map<String, dynamic>> newDevUnlocks(Iterable<Map<String, dynamic>> entries, int since) {
+  final out = entries
+      .where((e) => e['method'] == 'devcode' && ((e['since'] as num?)?.toInt() ?? 0) > since)
+      .toList()
+    ..sort((a, b) => ((a['since'] as num?) ?? 0).compareTo((b['since'] as num?) ?? 0));
+  return out;
+}
+
+int latestUnlock(Iterable<Map<String, dynamic>> entries, int since) {
+  var m = since;
+  for (final e in entries) {
+    final t = (e['since'] as num?)?.toInt() ?? 0;
+    if (e['method'] == 'devcode' && t > m) m = t;
+  }
+  return m;
+}
+
+Future<void> showDevUnlocks(NotificationService n, List<Map<String, dynamic>> list) async {
+  const title = 'Codice sviluppatore usato';
+  if (list.length > 3) {
+    await n.showRemote(title, '${list.length} utenti hanno sbloccato la Pro con il codice');
+    return;
+  }
+  for (final e in list) {
+    final name = (e['name'] as String?)?.trim() ?? '';
+    final email = (e['email'] as String?) ?? '';
+    final who = name.isEmpty ? (email.isEmpty ? 'Un utente' : email) : (email.isEmpty ? name : '$name ($email)');
+    await n.showRemote(title, '$who ha sbloccato la Pro (versione ${e['appVersion'] ?? '?'})');
+  }
+}
+
 const String groupWatchTask = 'myfleet-group-watch';
 
-/// Attiva (o disattiva) il controllo periodico ad app chiusa.
 Future<void> scheduleGroupWatch(bool on) async {
   if (!Platform.isAndroid) return;
   try {
@@ -181,7 +199,6 @@ Future<void> scheduleGroupWatch(bool on) async {
   } catch (_) {}
 }
 
-/// Da chiamare una volta in main().
 Future<void> initGroupWatch() async {
   if (!Platform.isAndroid) return;
   try {
@@ -203,7 +220,8 @@ Future<void> _backgroundCheck() async {
   WidgetsFlutterBinding.ensureInitialized();
   DartPluginRegistrant.ensureInitialized();
   final w = await GroupWatchState.load();
-  if (!w.enabled || w.uid.isEmpty || w.groups.isEmpty) return;
+  final groupsOn = w.enabled && w.groups.isNotEmpty;
+  if (w.uid.isEmpty || (!groupsOn && w.adminSince == 0)) return;
 
   final store = LocalStore();
   final settings = await store.readSettings();
@@ -227,7 +245,6 @@ Future<void> _backgroundCheck() async {
   final user = FirebaseAuth.instance.currentUser;
   if (user == null || user.uid != w.uid) return;
 
-  // Veicoli già presenti sul telefono (ultimo salvataggio dell'app).
   final session = await store.readSession();
   final localIds = <String>{};
   var myName = '';
@@ -239,9 +256,22 @@ Future<void> _backgroundCheck() async {
 
   final db = FirebaseFirestore.instance;
   final acts = <GroupActivity>[];
-  for (final g in w.groups.entries) {
+  var unlocks = <Map<String, dynamic>>[];
+  if (w.adminSince > 0) {
+    try {
+      final snap = await db
+          .collection('pro')
+          .where('since', isGreaterThan: w.adminSince)
+          .get(const GetOptions(source: Source.server))
+          .timeout(const Duration(seconds: 25));
+      final entries = snap.docs.map((d) => d.data()).toList();
+      unlocks = newDevUnlocks(entries, w.adminSince);
+      w.adminSince = latestUnlock(entries, w.adminSince);
+    } catch (_) {}
+  }
+  for (final g in (groupsOn ? w.groups : const <String, String>{}).entries) {
     final since = w.seen[g.key];
-    if (since == null) continue; // gruppo nuovo: lo inizializza l'app all'apertura
+    if (since == null) continue;
     try {
       final snap = await db
           .collection('fleets')
@@ -272,9 +302,17 @@ Future<void> _backgroundCheck() async {
       w.seen[g.key] = maxTs;
     } catch (_) {}
   }
-  // Rilegge lo stato: l'app potrebbe averlo aggiornato nel frattempo.
   final latest = await GroupWatchState.load();
-  if (!latest.enabled || latest.uid != w.uid) return;
+  if (latest.uid != w.uid) return;
+  final freshUnlocks = latest.adminSince > 0
+      ? unlocks.where((e) => ((e['since'] as num?)?.toInt() ?? 0) > latest.adminSince).toList()
+      : <Map<String, dynamic>>[];
+  if (latest.adminSince > 0 && w.adminSince > latest.adminSince) latest.adminSince = w.adminSince;
+  if (!latest.enabled) {
+    await latest.save();
+    if (freshUnlocks.isNotEmpty) await showDevUnlocks(NotificationService(), freshUnlocks);
+    return;
+  }
   for (final e in w.seen.entries) {
     latest.seen[e.key] = math.max(latest.seen[e.key] ?? 0, e.value);
   }
@@ -282,5 +320,6 @@ Future<void> _backgroundCheck() async {
     latest.remember(id);
   }
   await latest.save();
+  if (freshUnlocks.isNotEmpty) await showDevUnlocks(NotificationService(), freshUnlocks);
   if (acts.isNotEmpty) await showActivities(NotificationService(), acts);
 }

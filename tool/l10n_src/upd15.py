@@ -1,4 +1,3 @@
-# Aggiornamento 1.5: gruppi generici + Pro + nuove chiavi, per le 6 lingue esistenti.
 import json, pathlib
 L = pathlib.Path(__file__).resolve().parents[2] / 'assets' / 'l10n'
 U = {}

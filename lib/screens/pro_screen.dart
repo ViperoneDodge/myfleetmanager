@@ -6,14 +6,12 @@ import '../services/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 
-/// Apre la pagina Pro se serve. Restituisce true se l'utente ha (o ha appena ottenuto) la Pro.
 Future<bool> requirePro(BuildContext context, {String? reason}) async {
   if (appState.isPro) return true;
   await Navigator.of(context).push(MaterialPageRoute(builder: (_) => ProScreen(reason: reason)));
   return appState.isPro;
 }
 
-/// Controlla il limite di veicoli della versione gratuita prima di aggiungerne uno.
 Future<bool> ensureCanAddVehicle(BuildContext context) async {
   if (appState.canAddVehicle) return true;
   return requirePro(context,

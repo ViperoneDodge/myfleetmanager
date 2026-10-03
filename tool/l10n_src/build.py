@@ -13,7 +13,6 @@ for lang in sys.argv[1:]:
         lines.pop()
     if len(lines) != len(keys):
         print(f'{lang}: {len(lines)} righe invece di {len(keys)}')
-        # trova il primo punto di disallineamento tramite i segnaposto
         for i, (k, v) in enumerate(zip(keys, lines)):
             if set(re.findall(r'\{\w+\}', en[k])) != set(re.findall(r'\{\w+\}', v)):
                 print('  primo sospetto:', i + 1, k, '|', v); break

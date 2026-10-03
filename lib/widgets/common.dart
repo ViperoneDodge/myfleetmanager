@@ -8,7 +8,6 @@ final DateFormat dateFmt = DateFormat('dd/MM/yyyy');
 
 String fmtDate(DateTime? d) => d == null ? '—' : dateFmt.format(d);
 
-/// 123456 -> "123.456 km"
 String fmtKm(int km) {
   final s = km.toString();
   final b = StringBuffer();
@@ -89,7 +88,6 @@ class VehicleAvatar extends StatelessWidget {
   }
 }
 
-/// Immagine predefinita (sagoma) per il tipo di veicolo, colorata con [color].
 class VehicleSilhouette extends StatelessWidget {
   final VehicleType type;
   final Color color;
@@ -138,21 +136,16 @@ void showSnack(BuildContext context, String msg) {
     ..showSnackBar(SnackBar(content: Text(msg)));
 }
 
-/// Scheda di un veicolo nelle liste.
 class VehicleCard extends StatelessWidget {
   final Vehicle vehicle;
   final VoidCallback onTap;
 
-  /// Pressione prolungata: menu "aggiungi a nucleo familiare / sposta".
   final VoidCallback? onLongPress;
 
-  /// Nome del gruppo se il veicolo è condiviso (mostrato come etichetta).
   final String? badge;
 
-  /// Evidenziato (selezionato nella vista a due pannelli dei pieghevoli).
   final bool selected;
 
-  /// Versione gratuita oltre il limite: scheda in grigio, senza scadenze.
   final bool limited;
   const VehicleCard({
     super.key,
@@ -164,9 +157,8 @@ class VehicleCard extends StatelessWidget {
     this.limited = false,
   });
 
-  /// Filtro che toglie quasi tutta la saturazione e schiarisce (scheda "spenta").
   static const ColorFilter _greyFilter = ColorFilter.matrix(<double>[
-    0.2126, 0.7152, 0.0722, 0, 0, //
+    0.2126, 0.7152, 0.0722, 0, 0,
     0.2126, 0.7152, 0.0722, 0, 0,
     0.2126, 0.7152, 0.0722, 0, 0,
     0, 0, 0, 0.55, 0,
