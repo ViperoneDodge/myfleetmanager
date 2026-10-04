@@ -135,6 +135,66 @@ class SyncService {
     }, SetOptions(merge: true)).timeout(_timeout);
   }
 
+  Future<void> saveProfile(Session s) => _db.collection('users').doc(s.key).set({
+        'name': s.displayName,
+        'email': s.email ?? '',
+        'seenAt': DateTime.now().millisecondsSinceEpoch,
+      }, SetOptions(merge: true)).timeout(_timeout);
+
+  Stream<List<Map<String, dynamic>>> watchAllUsers() => _db
+      .collection('users')
+      .snapshots()
+      .map((q) => q.docs.map((d) => {...d.data(), 'uid': d.id}..remove('tokens')).toList());
+
+  Stream<List<Map<String, dynamic>>> watchAllFleets() =>
+      _fleets.snapshots().map((q) => q.docs.map((d) => {...d.data(), 'id': d.id}).toList());
+
+  Stream<List<Vehicle>> watchAllVehicles() =>
+      _db.collectionGroup('vehicles').snapshots().map((q) {
+        final out = <Vehicle>[];
+        for (final d in q.docs) {
+          final fleet = d.reference.parent.parent?.id;
+          if (fleet == null) continue;
+          try {
+            final v = Vehicle.fromJson(d.data())..fleetId = fleet;
+            if (!v.deleted) out.add(v);
+          } catch (_) {}
+        }
+        return out;
+      });
+
+  Future<void> reassignVehicle(Vehicle v, String toUid,
+      {required bool personal, required Session admin}) async {
+    final now = DateTime.now().millisecondsSinceEpoch;
+    final from = v.fleetId!;
+    final updated = Vehicle.fromJson(v.toJson(includeDocs: false))
+      ..createdBy = toUid
+      ..updatedAt = now
+      ..updatedBy = admin.displayName
+      ..updatedByUid = admin.key
+      ..documents = [];
+    if (!personal) {
+      await _fleets
+          .doc(from)
+          .collection('vehicles')
+          .doc(v.id)
+          .set(updated.toJson(includeDocs: false))
+          .timeout(_timeout);
+      return;
+    }
+    final moved = updated..id = newId();
+    final tomb = Vehicle.fromJson(v.toJson(includeDocs: false))
+      ..deleted = true
+      ..photoB64 = null
+      ..updatedAt = now
+      ..updatedBy = admin.displayName
+      ..updatedByUid = admin.key;
+    final batch = _db.batch()
+      ..set(_fleets.doc(toUid).collection('vehicles').doc(moved.id), moved.toJson(includeDocs: false))
+      ..set(_fleets.doc(from).collection('vehicles').doc(v.id), tomb.toJson(includeDocs: false));
+    await batch.commit().timeout(_timeout);
+  }
+
   Future<bool> checkUnlockCode(String code) async {
     if (code.contains('/') || code == '.' || code == '..' || code.length > 100) return false;
     final snap = await _db

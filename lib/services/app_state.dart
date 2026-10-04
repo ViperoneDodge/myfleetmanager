@@ -37,7 +37,7 @@ class AppState extends ChangeNotifier {
 
   bool devPro = false;
 
-  bool get isPro => purchasedPro || devPro;
+  bool get isPro => purchasedPro || devPro || isAdmin;
 
   static bool isProType(VehicleType t) =>
       t == VehicleType.furgone ||
@@ -133,7 +133,7 @@ class AppState extends ChangeNotifier {
 
   Future<void> _registerPro(String method) async {
     final s = session;
-    if (s == null || !isCloud) return;
+    if (s == null || !isCloud || isAdmin) return;
     try {
       await sync.registerPro(s, method: method, version: appVersion);
     } catch (_) {}
@@ -141,7 +141,7 @@ class AppState extends ChangeNotifier {
 
   Future<void> _endPro(String reason) async {
     final s = session;
-    if (s == null || !isCloud) return;
+    if (s == null || !isCloud || isAdmin) return;
     try {
       await sync.endPro(s, reason);
     } catch (_) {}
@@ -317,6 +317,7 @@ class AppState extends ChangeNotifier {
     data = await store.readUserData(s);
     _scheduleNotifications();
     if (s.mode == AccountMode.cloud) {
+      sync.saveProfile(s).catchError((_) {});
       await _loadWatch(s);
       _startSync();
       startPush();
