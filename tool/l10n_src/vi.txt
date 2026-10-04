@@ -379,3 +379,9 @@ Mã nhà phát triển đã bị vô hiệu hóa cho tài khoản này.
 Xem xe của nhóm
 và
 {what}: hết hạn hôm nay
+Của tôi
+xe
+Ngày đăng ký lần đầu
+Nhập ngày đăng ký lần đầu
+Cũ nhất trước
+Mới nhất trước

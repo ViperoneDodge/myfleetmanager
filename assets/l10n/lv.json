@@ -379,5 +379,11 @@
  "pro.devRevoked": "Šim kontam izstrādātāja kods ir atspējots.",
  "home.groupsHint": "Skatīt grupu transportlīdzekļus",
  "notify.and": "un",
- "notify.groupToday": "{what}: termiņš šodien"
+ "notify.groupToday": "{what}: termiņš šodien",
+ "tab.myTop": "Mani",
+ "tab.myBottom": "transportlīdzekļi",
+ "vehicle.regDate": "Pirmās reģistrācijas datums",
+ "edit.regDateNeeded": "Ievadiet pirmās reģistrācijas datumu",
+ "sort.oldest": "Vecākie vispirms",
+ "sort.newest": "Jaunākie vispirms"
 }

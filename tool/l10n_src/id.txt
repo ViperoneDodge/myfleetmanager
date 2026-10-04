@@ -379,3 +379,9 @@ Kode pengembang telah dinonaktifkan untuk akun ini.
 Lihat kendaraan grup
 dan
 {what}: jatuh tempo hari ini
+Milik saya
+kendaraan
+Tanggal registrasi pertama
+Masukkan tanggal registrasi pertama
+Terlama dulu
+Terbaru dulu

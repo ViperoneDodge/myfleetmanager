@@ -379,5 +379,11 @@
  "pro.devRevoked": "Udviklerkoden er deaktiveret for denne konto.",
  "home.groupsHint": "Se gruppernes køretøjer",
  "notify.and": "og",
- "notify.groupToday": "{what}: udløber i dag"
+ "notify.groupToday": "{what}: udløber i dag",
+ "tab.myTop": "Mine",
+ "tab.myBottom": "køretøjer",
+ "vehicle.regDate": "Første registreringsdato",
+ "edit.regDateNeeded": "Angiv første registreringsdato",
+ "sort.oldest": "Ældste først",
+ "sort.newest": "Nyeste først"
 }

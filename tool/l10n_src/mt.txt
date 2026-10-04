@@ -379,3 +379,9 @@ Il-kodiċi tal-iżviluppatur ġie diżattivat għal dan il-kont.
 Ara l-vetturi tal-gruppi
 u
 {what}: jiskadu llum
+Tiegħi
+vetturi
+Data tal-ewwel reġistrazzjoni
+Daħħal id-data tal-ewwel reġistrazzjoni
+L-eqdem l-ewwel
+L-aktar ġodda l-ewwel

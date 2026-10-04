@@ -379,5 +379,11 @@
  "pro.devRevoked": "Bu hesap için geliştirici kodu devre dışı bırakıldı.",
  "home.groupsHint": "Grup araçlarını gör",
  "notify.and": "ve",
- "notify.groupToday": "{what}: bugün sona eriyor"
+ "notify.groupToday": "{what}: bugün sona eriyor",
+ "tab.myTop": "Benim",
+ "tab.myBottom": "araçlarım",
+ "vehicle.regDate": "İlk tescil tarihi",
+ "edit.regDateNeeded": "İlk tescil tarihini girin",
+ "sort.oldest": "Önce en eski",
+ "sort.newest": "Önce en yeni"
 }

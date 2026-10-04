@@ -379,5 +379,11 @@
  "pro.devRevoked": "Код разработчика отключён для этого аккаунта.",
  "home.groupsHint": "Транспорт групп",
  "notify.and": "и",
- "notify.groupToday": "{what}: истекает сегодня"
+ "notify.groupToday": "{what}: истекает сегодня",
+ "tab.myTop": "Мой",
+ "tab.myBottom": "транспорт",
+ "vehicle.regDate": "Дата первой регистрации",
+ "edit.regDateNeeded": "Укажите дату первой регистрации",
+ "sort.oldest": "Сначала старые",
+ "sort.newest": "Сначала новые"
 }

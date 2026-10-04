@@ -379,5 +379,11 @@
  "pro.devRevoked": "Der Entwicklercode wurde für dieses Konto deaktiviert.",
  "home.groupsHint": "Fahrzeuge der Gruppen ansehen",
  "notify.and": "und",
- "notify.groupToday": "{what}: heute fällig"
+ "notify.groupToday": "{what}: heute fällig",
+ "tab.myTop": "Meine",
+ "tab.myBottom": "Fahrzeuge",
+ "vehicle.regDate": "Erstzulassung",
+ "edit.regDateNeeded": "Gib das Datum der Erstzulassung ein",
+ "sort.oldest": "Älteste zuerst",
+ "sort.newest": "Neueste zuerst"
 }

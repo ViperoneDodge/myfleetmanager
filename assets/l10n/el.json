@@ -379,5 +379,11 @@
  "pro.devRevoked": "Ο κωδικός προγραμματιστή απενεργοποιήθηκε για αυτόν τον λογαριασμό.",
  "home.groupsHint": "Δες τα οχήματα των ομάδων",
  "notify.and": "και",
- "notify.groupToday": "{what}: λήγει σήμερα"
+ "notify.groupToday": "{what}: λήγει σήμερα",
+ "tab.myTop": "Τα δικά μου",
+ "tab.myBottom": "οχήματα",
+ "vehicle.regDate": "Ημερομηνία πρώτης ταξινόμησης",
+ "edit.regDateNeeded": "Εισαγάγετε την ημερομηνία πρώτης ταξινόμησης",
+ "sort.oldest": "Πρώτα τα παλαιότερα",
+ "sort.newest": "Πρώτα τα νεότερα"
 }

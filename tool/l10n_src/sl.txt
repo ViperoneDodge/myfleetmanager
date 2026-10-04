@@ -379,3 +379,9 @@ Razvijalska koda je bila za ta račun onemogočena.
 Prikaži vozila skupin
 in
 {what}: poteče danes
+Moja
+vozila
+Datum prve registracije
+Vnesite datum prve registracije
+Najstarejša najprej
+Najnovejša najprej

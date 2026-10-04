@@ -379,3 +379,9 @@ pro.devRevoked
 home.groupsHint
 notify.and
 notify.groupToday
+tab.myTop
+tab.myBottom
+vehicle.regDate
+edit.regDateNeeded
+sort.oldest
+sort.newest

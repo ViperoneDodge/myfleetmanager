@@ -379,3 +379,9 @@ A fejlesztői kódot ennél a fióknál letiltották.
 Csoportok járművei
 és
 {what}: ma lejár
+Saját
+járművek
+Első forgalomba helyezés
+Add meg az első forgalomba helyezés dátumát
+Legrégebbiek elöl
+Legújabbak elöl

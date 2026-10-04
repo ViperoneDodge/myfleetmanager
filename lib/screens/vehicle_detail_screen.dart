@@ -347,6 +347,11 @@ class VehicleDetailScreen extends StatelessWidget {
                       const SizedBox(width: 4),
                       Text(vehicleTypeLabel(v.type)),
                     ]),
+                    Row(mainAxisSize: MainAxisSize.min, children: [
+                      const Icon(Icons.event_note_outlined, size: 18),
+                      const SizedBox(width: 4),
+                      Flexible(child: Text('${tr('vehicle.regDate')}: ${fmtDate(v.registrationDate)}')),
+                    ]),
                     if (appState.isCloud && appState.data.groups.isNotEmpty)
                       Row(mainAxisSize: MainAxisSize.min, children: [
                         Icon(appState.isPersonal(v) ? Icons.person_outline : Icons.groups_outlined,

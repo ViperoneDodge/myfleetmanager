@@ -379,5 +379,11 @@
  "pro.devRevoked": "Kod za razvojne programere deaktiviran je za ovaj račun.",
  "home.groupsHint": "Pogledaj vozila grupa",
  "notify.and": "i",
- "notify.groupToday": "{what}: ističe danas"
+ "notify.groupToday": "{what}: ističe danas",
+ "tab.myTop": "Moja",
+ "tab.myBottom": "vozila",
+ "vehicle.regDate": "Datum prve registracije",
+ "edit.regDateNeeded": "Unesite datum prve registracije",
+ "sort.oldest": "Najstarija prva",
+ "sort.newest": "Najnovija prva"
 }

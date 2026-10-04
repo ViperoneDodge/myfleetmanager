@@ -379,3 +379,9 @@ Utviklerkoden er deaktivert for denne kontoen.
 Se gruppenes kjøretøy
 og
 {what}: forfaller i dag
+Mine
+kjøretøy
+Første registreringsdato
+Skriv inn første registreringsdato
+Eldste først
+Nyeste først

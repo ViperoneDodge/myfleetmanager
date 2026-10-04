@@ -379,3 +379,9 @@ Kūrėjo kodui naudoti reikia internetinės paskyros.
 Žiūrėti grupių transporto priemones
 ir
 {what}: baigiasi šiandien
+Mano
+transporto priemonės
+Pirmosios registracijos data
+Įveskite pirmosios registracijos datą
+Seniausios pirma
+Naujausios pirma

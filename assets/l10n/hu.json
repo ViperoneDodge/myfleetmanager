@@ -379,5 +379,11 @@
  "pro.devRevoked": "A fejlesztői kódot ennél a fióknál letiltották.",
  "home.groupsHint": "Csoportok járművei",
  "notify.and": "és",
- "notify.groupToday": "{what}: ma lejár"
+ "notify.groupToday": "{what}: ma lejár",
+ "tab.myTop": "Saját",
+ "tab.myBottom": "járművek",
+ "vehicle.regDate": "Első forgalomba helyezés",
+ "edit.regDateNeeded": "Add meg az első forgalomba helyezés dátumát",
+ "sort.oldest": "Legrégebbiek elöl",
+ "sort.newest": "Legújabbak elöl"
 }

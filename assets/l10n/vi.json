@@ -379,5 +379,11 @@
  "pro.devRevoked": "Mã nhà phát triển đã bị vô hiệu hóa cho tài khoản này.",
  "home.groupsHint": "Xem xe của nhóm",
  "notify.and": "và",
- "notify.groupToday": "{what}: hết hạn hôm nay"
+ "notify.groupToday": "{what}: hết hạn hôm nay",
+ "tab.myTop": "Của tôi",
+ "tab.myBottom": "xe",
+ "vehicle.regDate": "Ngày đăng ký lần đầu",
+ "edit.regDateNeeded": "Nhập ngày đăng ký lần đầu",
+ "sort.oldest": "Cũ nhất trước",
+ "sort.newest": "Mới nhất trước"
 }

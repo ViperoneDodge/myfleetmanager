@@ -379,3 +379,9 @@ De ontwikkelaarscode is voor dit account uitgeschakeld.
 Voertuigen van groepen bekijken
 en
 {what}: vandaag verlopen
+Mijn
+voertuigen
+Datum eerste toelating
+Vul de datum van eerste toelating in
+Oudste eerst
+Nieuwste eerst

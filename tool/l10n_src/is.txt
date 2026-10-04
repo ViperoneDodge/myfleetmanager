@@ -379,3 +379,9 @@ Forritarakóðinn hefur verið gerður óvirkur fyrir þennan aðgang.
 Sjá ökutæki hópa
 og
 {what}: rennur út í dag
+Mín
+ökutæki
+Fyrsti skráningardagur
+Sláðu inn fyrsta skráningardag
+Elst fyrst
+Nýjust fyrst

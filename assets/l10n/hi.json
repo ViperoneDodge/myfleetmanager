@@ -379,5 +379,11 @@
  "pro.devRevoked": "इस खाते के लिए डेवलपर कोड बंद कर दिया गया है।",
  "home.groupsHint": "समूहों के वाहन देखें",
  "notify.and": "और",
- "notify.groupToday": "{what}: आज समाप्त"
+ "notify.groupToday": "{what}: आज समाप्त",
+ "tab.myTop": "मेरे",
+ "tab.myBottom": "वाहन",
+ "vehicle.regDate": "पंजीकरण तिथि",
+ "edit.regDateNeeded": "पंजीकरण तिथि दर्ज करें",
+ "sort.oldest": "सबसे पुराने पहले",
+ "sort.newest": "सबसे नए पहले"
 }

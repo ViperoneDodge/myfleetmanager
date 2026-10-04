@@ -379,5 +379,11 @@
  "pro.devRevoked": "Kehittäjäkoodi on poistettu käytöstä tältä tililtä.",
  "home.groupsHint": "Näytä ryhmien ajoneuvot",
  "notify.and": "ja",
- "notify.groupToday": "{what}: erääntyy tänään"
+ "notify.groupToday": "{what}: erääntyy tänään",
+ "tab.myTop": "Omat",
+ "tab.myBottom": "ajoneuvot",
+ "vehicle.regDate": "Ensirekisteröintipäivä",
+ "edit.regDateNeeded": "Anna ensirekisteröintipäivä",
+ "sort.oldest": "Vanhimmat ensin",
+ "sort.newest": "Uusimmat ensin"
 }

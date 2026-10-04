@@ -379,3 +379,9 @@ Kehittäjäkoodi on poistettu käytöstä tältä tililtä.
 Näytä ryhmien ajoneuvot
 ja
 {what}: erääntyy tänään
+Omat
+ajoneuvot
+Ensirekisteröintipäivä
+Anna ensirekisteröintipäivä
+Vanhimmat ensin
+Uusimmat ensin

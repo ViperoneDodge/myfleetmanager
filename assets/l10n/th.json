@@ -379,5 +379,11 @@
  "pro.devRevoked": "รหัสนักพัฒนาถูกปิดใช้งานสำหรับบัญชีนี้แล้ว",
  "home.groupsHint": "ดูรถของกลุ่ม",
  "notify.and": "และ",
- "notify.groupToday": "{what}: ครบกำหนดวันนี้"
+ "notify.groupToday": "{what}: ครบกำหนดวันนี้",
+ "tab.myTop": "ของฉัน",
+ "tab.myBottom": "ยานพาหนะ",
+ "vehicle.regDate": "วันที่จดทะเบียนครั้งแรก",
+ "edit.regDateNeeded": "กรอกวันที่จดทะเบียนครั้งแรก",
+ "sort.oldest": "เก่าสุดก่อน",
+ "sort.newest": "ใหม่สุดก่อน"
 }

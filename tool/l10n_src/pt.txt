@@ -379,3 +379,9 @@ O código de programador foi desativado para esta conta.
 Ver veículos dos grupos
 e
 {what}: vencem hoje
+Os meus
+veículos
+Data da primeira matrícula
+Introduza a data da primeira matrícula
+Mais antigos primeiro
+Mais recentes primeiro

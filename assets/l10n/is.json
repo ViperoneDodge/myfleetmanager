@@ -379,5 +379,11 @@
  "pro.devRevoked": "Forritarakóðinn hefur verið gerður óvirkur fyrir þennan aðgang.",
  "home.groupsHint": "Sjá ökutæki hópa",
  "notify.and": "og",
- "notify.groupToday": "{what}: rennur út í dag"
+ "notify.groupToday": "{what}: rennur út í dag",
+ "tab.myTop": "Mín",
+ "tab.myBottom": "ökutæki",
+ "vehicle.regDate": "Fyrsti skráningardagur",
+ "edit.regDateNeeded": "Sláðu inn fyrsta skráningardag",
+ "sort.oldest": "Elst fyrst",
+ "sort.newest": "Nýjust fyrst"
 }

@@ -379,3 +379,9 @@ Izstrādātāja koda izmantošanai vajadzīgs tiešsaistes konts.
 Skatīt grupu transportlīdzekļus
 un
 {what}: termiņš šodien
+Mani
+transportlīdzekļi
+Pirmās reģistrācijas datums
+Ievadiet pirmās reģistrācijas datumu
+Vecākie vispirms
+Jaunākie vispirms

@@ -379,5 +379,11 @@
  "pro.devRevoked": "このアカウントの開発者コードは無効化されました。",
  "home.groupsHint": "グループの車両を見る",
  "notify.and": "と",
- "notify.groupToday": "{what}：本日期限"
+ "notify.groupToday": "{what}：本日期限",
+ "tab.myTop": "マイ",
+ "tab.myBottom": "車両",
+ "vehicle.regDate": "初度登録年月日",
+ "edit.regDateNeeded": "初度登録年月日を入力してください",
+ "sort.oldest": "古い順",
+ "sort.newest": "新しい順"
 }

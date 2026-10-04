@@ -379,3 +379,9 @@ Vývojársky kód bol pre tento účet deaktivovaný.
 Zobraziť vozidlá skupín
 a
 {what}: vyprší dnes
+Moje
+vozidlá
+Dátum prvej evidencie
+Zadajte dátum prvej evidencie
+Od najstarších
+Od najnovších

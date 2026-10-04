@@ -379,5 +379,11 @@
  "pro.devRevoked": "The developer code has been disabled for this account.",
  "home.groupsHint": "See group vehicles",
  "notify.and": "and",
- "notify.groupToday": "{what}: due today"
+ "notify.groupToday": "{what}: due today",
+ "tab.myTop": "My",
+ "tab.myBottom": "vehicles",
+ "vehicle.regDate": "Registration date",
+ "edit.regDateNeeded": "Enter the registration date",
+ "sort.oldest": "Oldest first",
+ "sort.newest": "Newest first"
 }

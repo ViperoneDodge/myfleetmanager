@@ -379,5 +379,11 @@
  "pro.devRevoked": "Arendajakood on selle konto jaoks keelatud.",
  "home.groupsHint": "Vaata gruppide sõidukeid",
  "notify.and": "ja",
- "notify.groupToday": "{what}: tähtaeg täna"
+ "notify.groupToday": "{what}: tähtaeg täna",
+ "tab.myTop": "Minu",
+ "tab.myBottom": "sõidukid",
+ "vehicle.regDate": "Esmase registreerimise kuupäev",
+ "edit.regDateNeeded": "Sisesta esmase registreerimise kuupäev",
+ "sort.oldest": "Vanimad eespool",
+ "sort.newest": "Uusimad eespool"
 }

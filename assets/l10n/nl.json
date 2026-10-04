@@ -379,5 +379,11 @@
  "pro.devRevoked": "De ontwikkelaarscode is voor dit account uitgeschakeld.",
  "home.groupsHint": "Voertuigen van groepen bekijken",
  "notify.and": "en",
- "notify.groupToday": "{what}: vandaag verlopen"
+ "notify.groupToday": "{what}: vandaag verlopen",
+ "tab.myTop": "Mijn",
+ "tab.myBottom": "voertuigen",
+ "vehicle.regDate": "Datum eerste toelating",
+ "edit.regDateNeeded": "Vul de datum van eerste toelating in",
+ "sort.oldest": "Oudste eerst",
+ "sort.newest": "Nieuwste eerst"
 }

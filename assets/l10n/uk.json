@@ -379,5 +379,11 @@
  "pro.devRevoked": "Код розробника для цього акаунта вимкнено.",
  "home.groupsHint": "Транспорт груп",
  "notify.and": "та",
- "notify.groupToday": "{what}: спливає сьогодні"
+ "notify.groupToday": "{what}: спливає сьогодні",
+ "tab.myTop": "Мій",
+ "tab.myBottom": "транспорт",
+ "vehicle.regDate": "Дата першої реєстрації",
+ "edit.regDateNeeded": "Вкажіть дату першої реєстрації",
+ "sort.oldest": "Спочатку старіші",
+ "sort.newest": "Спочатку новіші"
 }

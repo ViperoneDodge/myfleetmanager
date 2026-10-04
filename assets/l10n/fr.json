@@ -379,5 +379,11 @@
  "pro.devRevoked": "Le code développeur a été désactivé pour ce compte.",
  "home.groupsHint": "Voir les véhicules des groupes",
  "notify.and": "et",
- "notify.groupToday": "{what} : échéance aujourd'hui"
+ "notify.groupToday": "{what} : échéance aujourd'hui",
+ "tab.myTop": "Mes",
+ "tab.myBottom": "véhicules",
+ "vehicle.regDate": "Date de première immatriculation",
+ "edit.regDateNeeded": "Saisissez la date de première immatriculation",
+ "sort.oldest": "Plus anciens d'abord",
+ "sort.newest": "Plus récents d'abord"
 }

@@ -379,3 +379,9 @@ Codul de dezvoltator a fost dezactivat pentru acest cont.
 Vezi vehiculele grupurilor
 și
 {what}: expiră azi
+Ale mele
+vehicule
+Data primei înmatriculări
+Introdu data primei înmatriculări
+Cele mai vechi întâi
+Cele mai noi întâi

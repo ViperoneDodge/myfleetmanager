@@ -379,3 +379,9 @@ Arendajakood on selle konto jaoks keelatud.
 Vaata gruppide sõidukeid
 ja
 {what}: tähtaeg täna
+Minu
+sõidukid
+Esmase registreerimise kuupäev
+Sisesta esmase registreerimise kuupäev
+Vanimad eespool
+Uusimad eespool

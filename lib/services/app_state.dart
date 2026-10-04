@@ -48,7 +48,7 @@ class AppState extends ChangeNotifier {
   Set<String> get limitedIds {
     if (isPro) return const {};
     final groupOrder = {for (var i = 0; i < data.groups.length; i++) data.groups[i].id: i};
-    int fleetRank(Vehicle v) => isPersonal(v) ? -1 : (groupOrder[v.fleetId] ?? 9999);
+    int fleetRank(Vehicle v) => isMine(v) ? -1 : (groupOrder[v.fleetId] ?? 9999);
     final ordered = data.vehicles.where((v) => !v.deleted).toList()
       ..sort((a, b) {
         final f = fleetRank(a).compareTo(fleetRank(b));
@@ -197,10 +197,44 @@ class AppState extends ChangeNotifier {
 
   bool isPersonal(Vehicle v) => v.fleetId == null || v.fleetId == data.personalFleetId;
 
-  List<Vehicle> get myVehicles => vehicles.where(isPersonal).toList();
+  bool isMine(Vehicle v) {
+    if (!isCloud) return true;
+    if (v.createdBy.isNotEmpty) return v.createdBy == session?.key;
+    return isPersonal(v);
+  }
+
+  bool sortNewestFirst = false;
+
+  Future<void> setSortNewestFirst(bool on) async {
+    sortNewestFirst = on;
+    notifyListeners();
+    await _writeSettings();
+  }
+
+  List<Vehicle> sortedForList(Iterable<Vehicle> list) {
+    final out = list.toList()
+      ..sort((a, b) {
+        final t = a.type.index.compareTo(b.type.index);
+        if (t != 0) return t;
+        final ra = a.registrationDate, rb = b.registrationDate;
+        if (ra != null && rb != null) {
+          final c = sortNewestFirst ? rb.compareTo(ra) : ra.compareTo(rb);
+          if (c != 0) return c;
+        } else if (ra != null) {
+          return -1;
+        } else if (rb != null) {
+          return 1;
+        }
+        final n = a.name.toLowerCase().compareTo(b.name.toLowerCase());
+        return n != 0 ? n : a.plate.compareTo(b.plate);
+      });
+    return out;
+  }
+
+  List<Vehicle> get myVehicles => sortedForList(vehicles.where(isMine));
 
   List<Vehicle> groupVehicles(String groupId) =>
-      vehicles.where((v) => v.fleetId == groupId).toList();
+      sortedForList(vehicles.where((v) => v.fleetId == groupId));
 
   String fleetLabel(Vehicle v) =>
       isPersonal(v) ? tr('fleet.mine') : (data.groupById(v.fleetId)?.name ?? tr('family.defaultName'));
@@ -221,6 +255,7 @@ class AppState extends ChangeNotifier {
     purchasedPro = settings?['pro'] == true;
     devPro = settings?['devPro'] == true;
     devProVersion = settings?['devProVersion'] as String?;
+    sortNewestFirst = settings?['sortNewest'] == true;
     if (devPro && devProVersion != appVersion) {
       devPro = false;
       devProVersion = null;
@@ -586,6 +621,7 @@ class AppState extends ChangeNotifier {
         'pro': purchasedPro,
         'devPro': devPro,
         if (devProVersion != null) 'devProVersion': devProVersion,
+        'sortNewest': sortNewestFirst,
       });
 
   Future<void> setLanguage(String? code) async {

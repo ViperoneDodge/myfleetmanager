@@ -379,5 +379,11 @@
  "pro.devRevoked": "Šiai paskyrai kūrėjo kodas išjungtas.",
  "home.groupsHint": "Žiūrėti grupių transporto priemones",
  "notify.and": "ir",
- "notify.groupToday": "{what}: baigiasi šiandien"
+ "notify.groupToday": "{what}: baigiasi šiandien",
+ "tab.myTop": "Mano",
+ "tab.myBottom": "transporto priemonės",
+ "vehicle.regDate": "Pirmosios registracijos data",
+ "edit.regDateNeeded": "Įveskite pirmosios registracijos datą",
+ "sort.oldest": "Seniausios pirma",
+ "sort.newest": "Naujausios pirma"
 }

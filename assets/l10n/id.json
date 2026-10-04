@@ -379,5 +379,11 @@
  "pro.devRevoked": "Kode pengembang telah dinonaktifkan untuk akun ini.",
  "home.groupsHint": "Lihat kendaraan grup",
  "notify.and": "dan",
- "notify.groupToday": "{what}: jatuh tempo hari ini"
+ "notify.groupToday": "{what}: jatuh tempo hari ini",
+ "tab.myTop": "Milik saya",
+ "tab.myBottom": "kendaraan",
+ "vehicle.regDate": "Tanggal registrasi pertama",
+ "edit.regDateNeeded": "Masukkan tanggal registrasi pertama",
+ "sort.oldest": "Terlama dulu",
+ "sort.newest": "Terbaru dulu"
 }

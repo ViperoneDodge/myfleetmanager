@@ -379,5 +379,11 @@
  "pro.devRevoked": "Kod dewelopera został wyłączony dla tego konta.",
  "home.groupsHint": "Zobacz pojazdy grup",
  "notify.and": "i",
- "notify.groupToday": "{what}: upływa dziś"
+ "notify.groupToday": "{what}: upływa dziś",
+ "tab.myTop": "Moje",
+ "tab.myBottom": "pojazdy",
+ "vehicle.regDate": "Data pierwszej rejestracji",
+ "edit.regDateNeeded": "Wpisz datę pierwszej rejestracji",
+ "sort.oldest": "Od najstarszych",
+ "sort.newest": "Od najnowszych"
 }

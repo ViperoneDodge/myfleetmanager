@@ -379,3 +379,9 @@ Udviklerkoden er deaktiveret for denne konto.
 Se gruppernes køretøjer
 og
 {what}: udløber i dag
+Mine
+køretøjer
+Første registreringsdato
+Angiv første registreringsdato
+Ældste først
+Nyeste først

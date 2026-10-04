@@ -379,5 +379,11 @@
  "pro.devRevoked": "Il codice sviluppatore è stato disattivato per questo account.",
  "home.groupsHint": "Vedi i veicoli dei gruppi",
  "notify.and": "e",
- "notify.groupToday": "{what}: scadenza oggi"
+ "notify.groupToday": "{what}: scadenza oggi",
+ "tab.myTop": "I miei",
+ "tab.myBottom": "veicoli",
+ "vehicle.regDate": "Data di immatricolazione",
+ "edit.regDateNeeded": "Inserisci la data di immatricolazione",
+ "sort.oldest": "Dal più vecchio",
+ "sort.newest": "Dal più recente"
 }

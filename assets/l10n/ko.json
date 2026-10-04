@@ -379,5 +379,11 @@
  "pro.devRevoked": "이 계정의 개발자 코드가 비활성화되었습니다.",
  "home.groupsHint": "그룹 차량 보기",
  "notify.and": "및",
- "notify.groupToday": "{what}: 오늘 만료"
+ "notify.groupToday": "{what}: 오늘 만료",
+ "tab.myTop": "내",
+ "tab.myBottom": "차량",
+ "vehicle.regDate": "최초 등록일",
+ "edit.regDateNeeded": "최초 등록일을 입력하세요",
+ "sort.oldest": "오래된 순",
+ "sort.newest": "최신 순"
 }

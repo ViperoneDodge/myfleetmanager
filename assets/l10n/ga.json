@@ -379,5 +379,11 @@
  "pro.devRevoked": "Díchumasaíodh an cód forbróra don chuntas seo.",
  "home.groupsHint": "Féach ar fheithiclí na ngrúpaí",
  "notify.and": "agus",
- "notify.groupToday": "{what}: dlite inniu"
+ "notify.groupToday": "{what}: dlite inniu",
+ "tab.myTop": "Mo",
+ "tab.myBottom": "fheithiclí",
+ "vehicle.regDate": "Dáta an chéad chláraithe",
+ "edit.regDateNeeded": "Cuir isteach dáta an chéad chláraithe",
+ "sort.oldest": "Na cinn is sine ar dtús",
+ "sort.newest": "Na cinn is nuaí ar dtús"
 }

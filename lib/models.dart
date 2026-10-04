@@ -262,6 +262,8 @@ class Vehicle {
 
   List<MaintenanceRecord> maintenance;
   String notes;
+
+  DateTime? registrationDate;
   int updatedAt;
   String updatedBy;
 
@@ -287,6 +289,7 @@ class Vehicle {
     List<VehicleDocument>? documents,
     List<MaintenanceRecord>? maintenance,
     this.notes = '',
+    this.registrationDate,
     int? updatedAt,
     this.updatedBy = '',
     this.updatedByUid = '',
@@ -381,6 +384,7 @@ class Vehicle {
         if (includeDocs) 'documents': documents.map((d) => d.toJson()).toList(),
         'maintenance': maintenance.map((m) => m.toJson()).toList(),
         'notes': notes,
+        'regDate': registrationDate?.toIso8601String(),
         'updatedAt': updatedAt,
         'updatedBy': updatedBy,
         'updatedByUid': updatedByUid,
@@ -409,6 +413,7 @@ class Vehicle {
                 .toList() ??
             [],
         notes: j['notes'] as String? ?? '',
+        registrationDate: j['regDate'] == null ? null : DateTime.tryParse(j['regDate'] as String),
         updatedAt: (j['updatedAt'] as num?)?.toInt() ?? 0,
         updatedBy: j['updatedBy'] as String? ?? '',
         updatedByUid: j['updatedByUid'] as String? ?? '',

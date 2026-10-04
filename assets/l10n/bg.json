@@ -379,5 +379,11 @@
  "pro.devRevoked": "Кодът за разработчици е деактивиран за този профил.",
  "home.groupsHint": "Виж превозните средства на групите",
  "notify.and": "и",
- "notify.groupToday": "{what}: изтича днес"
+ "notify.groupToday": "{what}: изтича днес",
+ "tab.myTop": "Моите",
+ "tab.myBottom": "превозни средства",
+ "vehicle.regDate": "Дата на първа регистрация",
+ "edit.regDateNeeded": "Въведи датата на първа регистрация",
+ "sort.oldest": "Първо най-старите",
+ "sort.newest": "Първо най-новите"
 }

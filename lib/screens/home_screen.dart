@@ -157,33 +157,91 @@ class _HomeScreenState extends State<HomeScreen> {
                   label: Text(tr('common.add')),
                 )
               : null,
-          bottomNavigationBar: NavigationBar(
-            selectedIndex: _tab,
-            onDestinationSelected: (i) => setState(() => _tab = i),
-            destinations: [
-              NavigationDestination(
-                  icon: const Icon(Icons.garage_outlined),
-                  selectedIcon: const Icon(Icons.garage),
-                  label: tr('tab.vehicles')),
-              NavigationDestination(
-                  icon: const Icon(Icons.groups_outlined),
-                  selectedIcon: const Icon(Icons.groups),
-                  label: tr('tab.family')),
-              NavigationDestination(
-                  icon: const Icon(Icons.event_outlined),
-                  selectedIcon: const Icon(Icons.event),
-                  label: tr('tab.deadlines')),
-            ],
-          ),
+          bottomNavigationBar: _bottomBar(context),
         );
       },
     );
   }
 
+  Widget _bottomBar(BuildContext context) {
+    final theme = Theme.of(context);
+    final nav = theme.navigationBarTheme;
+    final nb = NotebookColors.of(context);
+    Widget item(int i, IconData icon, IconData selectedIcon, Widget Function(Color) label, String semantics) {
+      final sel = _tab == i;
+      final color = sel ? Colors.white : Colors.white70;
+      return Expanded(
+        child: Semantics(
+          selected: sel,
+          button: true,
+          label: semantics,
+          excludeSemantics: true,
+          child: InkWell(
+            onTap: () => setState(() => _tab = i),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(4, 10, 4, 6),
+              child: Column(mainAxisSize: MainAxisSize.min, children: [
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 200),
+                  width: 64,
+                  height: 32,
+                  decoration: BoxDecoration(
+                    color: sel ? (nav.indicatorColor ?? nb.paper) : Colors.transparent,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Icon(sel ? selectedIcon : icon,
+                      color: sel ? theme.colorScheme.primary : Colors.white70),
+                ),
+                const SizedBox(height: 2),
+                SizedBox(height: 34, child: Center(child: label(color))),
+              ]),
+            ),
+          ),
+        ),
+      );
+    }
+
+    Widget oneLine(String text, Color color) => FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(text,
+              maxLines: 1, style: TextStyle(fontFamily: handFont, fontSize: 16, color: color)),
+        );
+
+    return Material(
+      color: nav.backgroundColor ?? nb.cover,
+      child: SafeArea(
+        top: false,
+        child: Row(children: [
+          item(
+            0,
+            Icons.garage_outlined,
+            Icons.garage,
+            (c) => FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Column(mainAxisSize: MainAxisSize.min, children: [
+                Text(tr('tab.myTop'),
+                    maxLines: 1,
+                    style: TextStyle(fontFamily: handFont, fontSize: 12, height: 1, color: c)),
+                Text(tr('tab.myBottom'),
+                    maxLines: 1,
+                    style: TextStyle(fontFamily: handFont, fontSize: 18, height: 1.05, color: c)),
+              ]),
+            ),
+            tr('fleet.mine'),
+          ),
+          item(1, Icons.groups_outlined, Icons.groups, (c) => oneLine(tr('tab.family'), c),
+              tr('tab.family')),
+          item(2, Icons.event_outlined, Icons.event, (c) => oneLine(tr('tab.deadlines'), c),
+              tr('tab.deadlines')),
+        ]),
+      ),
+    );
+  }
+
   Widget _vehiclesTab() {
-    final all = appState.vehicles.where(appState.isPersonal).toList();
+    final all = appState.myVehicles;
     final list = _filter == null ? all : all.where((v) => v.type == _filter).toList();
-    final hasGroupVehicles = appState.vehicles.any((v) => !appState.isPersonal(v));
+    final hasGroupVehicles = appState.vehicles.any((v) => !appState.isMine(v));
     final limited = appState.limitedIds;
     return RefreshIndicator(
       onRefresh: appState.retrySync,
@@ -214,7 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   )),
             ]),
           ),
-          const SizedBox(height: 8),
+          if (list.length > 1) sortOrderButton(context) else const SizedBox(height: 8),
           if (list.isEmpty)
             Padding(
               padding: const EdgeInsets.only(top: 80),

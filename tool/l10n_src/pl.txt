@@ -379,3 +379,9 @@ Kod dewelopera został wyłączony dla tego konta.
 Zobacz pojazdy grup
 i
 {what}: upływa dziś
+Moje
+pojazdy
+Data pierwszej rejestracji
+Wpisz datę pierwszej rejestracji
+Od najstarszych
+Od najnowszych

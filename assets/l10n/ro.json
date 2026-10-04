@@ -379,5 +379,11 @@
  "pro.devRevoked": "Codul de dezvoltator a fost dezactivat pentru acest cont.",
  "home.groupsHint": "Vezi vehiculele grupurilor",
  "notify.and": "și",
- "notify.groupToday": "{what}: expiră azi"
+ "notify.groupToday": "{what}: expiră azi",
+ "tab.myTop": "Ale mele",
+ "tab.myBottom": "vehicule",
+ "vehicle.regDate": "Data primei înmatriculări",
+ "edit.regDateNeeded": "Introdu data primei înmatriculări",
+ "sort.oldest": "Cele mai vechi întâi",
+ "sort.newest": "Cele mai noi întâi"
 }

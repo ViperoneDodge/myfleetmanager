@@ -379,3 +379,9 @@ Bu hesap için geliştirici kodu devre dışı bırakıldı.
 Grup araçlarını gör
 ve
 {what}: bugün sona eriyor
+Benim
+araçlarım
+İlk tescil tarihi
+İlk tescil tarihini girin
+Önce en eski
+Önce en yeni

@@ -379,5 +379,11 @@
  "pro.devRevoked": "此账号的开发者代码已被停用。",
  "home.groupsHint": "查看群组车辆",
  "notify.and": "和",
- "notify.groupToday": "{what}：今天到期"
+ "notify.groupToday": "{what}：今天到期",
+ "tab.myTop": "我的",
+ "tab.myBottom": "车辆",
+ "vehicle.regDate": "首次登记日期",
+ "edit.regDateNeeded": "请输入首次登记日期",
+ "sort.oldest": "最旧优先",
+ "sort.newest": "最新优先"
 }

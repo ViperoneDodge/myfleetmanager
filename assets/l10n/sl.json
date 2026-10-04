@@ -379,5 +379,11 @@
  "pro.devRevoked": "Razvijalska koda je bila za ta račun onemogočena.",
  "home.groupsHint": "Prikaži vozila skupin",
  "notify.and": "in",
- "notify.groupToday": "{what}: poteče danes"
+ "notify.groupToday": "{what}: poteče danes",
+ "tab.myTop": "Moja",
+ "tab.myBottom": "vozila",
+ "vehicle.regDate": "Datum prve registracije",
+ "edit.regDateNeeded": "Vnesite datum prve registracije",
+ "sort.oldest": "Najstarejša najprej",
+ "sort.newest": "Najnovejša najprej"
 }

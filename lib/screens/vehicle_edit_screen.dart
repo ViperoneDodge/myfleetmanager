@@ -28,6 +28,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   late final TextEditingController _notes = TextEditingController(text: v.notes);
   final Map<String, TextEditingController> _labels = {};
   bool _saving = false;
+  late bool _regMissing = !_isNew && v.registrationDate == null;
 
   bool get _isNew => appState.vehicleById(v.id) == null;
 
@@ -146,9 +147,36 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     }
   }
 
+  Future<void> _pickRegistration() async {
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    var initial = v.registrationDate ?? today;
+    if (initial.isAfter(today)) initial = today;
+    final picked = await showDatePicker(
+      context: context,
+      initialDate: initial,
+      firstDate: DateTime(1900),
+      lastDate: today,
+      initialDatePickerMode: v.registrationDate == null ? DatePickerMode.year : DatePickerMode.day,
+      helpText: tr('vehicle.regDate'),
+    );
+    if (picked != null) {
+      setState(() {
+        v.registrationDate = picked;
+        _regMissing = false;
+      });
+    }
+  }
+
   Future<void> _save() async {
     if (_name.text.trim().isEmpty && _plate.text.trim().isEmpty) {
       showSnack(context, tr('edit.needNameOrPlate'));
+      return;
+    }
+    if (v.registrationDate == null) {
+      setState(() => _regMissing = true);
+      showSnack(context, tr('edit.regDateNeeded'));
+      _pickRegistration();
       return;
     }
     if (_isNew && !await ensureCanAddVehicle(context)) return;
@@ -282,6 +310,23 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
               filled: true,
               border: const OutlineInputBorder(),
               prefixIcon: const Icon(Icons.pin_outlined),
+            ),
+          ),
+          const SizedBox(height: 12),
+          InkWell(
+            onTap: _pickRegistration,
+            borderRadius: BorderRadius.circular(4),
+            child: InputDecorator(
+              isEmpty: v.registrationDate == null,
+              decoration: InputDecoration(
+                labelText: '${tr('vehicle.regDate')} *',
+                filled: true,
+                border: const OutlineInputBorder(),
+                prefixIcon: const Icon(Icons.event_note_outlined),
+                suffixIcon: const Icon(Icons.calendar_month),
+                errorText: _regMissing ? tr('edit.regDateNeeded') : null,
+              ),
+              child: Text(v.registrationDate == null ? '' : fmtDate(v.registrationDate)),
             ),
           ),
           const SizedBox(height: 24),

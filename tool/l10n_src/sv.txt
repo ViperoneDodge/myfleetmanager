@@ -379,3 +379,9 @@ Utvecklarkoden har inaktiverats för det här kontot.
 Visa gruppernas fordon
 och
 {what}: förfaller i dag
+Mina
+fordon
+Första registreringsdatum
+Ange första registreringsdatum
+Äldst först
+Nyast först

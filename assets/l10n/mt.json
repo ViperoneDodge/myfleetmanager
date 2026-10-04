@@ -379,5 +379,11 @@
  "pro.devRevoked": "Il-kodiċi tal-iżviluppatur ġie diżattivat għal dan il-kont.",
  "home.groupsHint": "Ara l-vetturi tal-gruppi",
  "notify.and": "u",
- "notify.groupToday": "{what}: jiskadu llum"
+ "notify.groupToday": "{what}: jiskadu llum",
+ "tab.myTop": "Tiegħi",
+ "tab.myBottom": "vetturi",
+ "vehicle.regDate": "Data tal-ewwel reġistrazzjoni",
+ "edit.regDateNeeded": "Daħħal id-data tal-ewwel reġistrazzjoni",
+ "sort.oldest": "L-eqdem l-ewwel",
+ "sort.newest": "L-aktar ġodda l-ewwel"
 }

@@ -379,5 +379,11 @@
  "pro.devRevoked": "Vývojářský kód byl pro tento účet deaktivován.",
  "home.groupsHint": "Zobrazit vozidla skupin",
  "notify.and": "a",
- "notify.groupToday": "{what}: vyprší dnes"
+ "notify.groupToday": "{what}: vyprší dnes",
+ "tab.myTop": "Moje",
+ "tab.myBottom": "vozidla",
+ "vehicle.regDate": "Datum první registrace",
+ "edit.regDateNeeded": "Zadejte datum první registrace",
+ "sort.oldest": "Od nejstarších",
+ "sort.newest": "Od nejnovějších"
 }

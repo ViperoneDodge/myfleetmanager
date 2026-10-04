@@ -64,6 +64,7 @@ class FamilyTab extends StatelessWidget {
             Text(tr('family.noneHint'), textAlign: TextAlign.center),
             const SizedBox(height: 20),
           ],
+          if (groups.any((g) => appState.groupVehicles(g.id).length > 1)) sortOrderButton(context),
           ...groups.map((g) => _groupSection(context, g)),
           const SizedBox(height: 12),
           Wrap(
@@ -143,6 +144,18 @@ class FamilyTab extends StatelessWidget {
       ]),
     );
   }
+}
+
+Widget sortOrderButton(BuildContext context) {
+  final newest = appState.sortNewestFirst;
+  return Align(
+    alignment: Alignment.centerRight,
+    child: TextButton.icon(
+      onPressed: () => appState.setSortNewestFirst(!newest),
+      icon: const Icon(Icons.swap_vert, size: 18),
+      label: Text(newest ? tr('sort.newest') : tr('sort.oldest')),
+    ),
+  );
 }
 
 Future<void> moveVehicleSheet(BuildContext context, Vehicle v) async {

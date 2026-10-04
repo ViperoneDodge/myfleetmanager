@@ -379,3 +379,9 @@ Vývojářský kód byl pro tento účet deaktivován.
 Zobrazit vozidla skupin
 a
 {what}: vyprší dnes
+Moje
+vozidla
+Datum první registrace
+Zadejte datum první registrace
+Od nejstarších
+Od nejnovějších

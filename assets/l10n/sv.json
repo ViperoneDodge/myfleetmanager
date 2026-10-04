@@ -379,5 +379,11 @@
  "pro.devRevoked": "Utvecklarkoden har inaktiverats för det här kontot.",
  "home.groupsHint": "Visa gruppernas fordon",
  "notify.and": "och",
- "notify.groupToday": "{what}: förfaller i dag"
+ "notify.groupToday": "{what}: förfaller i dag",
+ "tab.myTop": "Mina",
+ "tab.myBottom": "fordon",
+ "vehicle.regDate": "Första registreringsdatum",
+ "edit.regDateNeeded": "Ange första registreringsdatum",
+ "sort.oldest": "Äldst först",
+ "sort.newest": "Nyast först"
 }
