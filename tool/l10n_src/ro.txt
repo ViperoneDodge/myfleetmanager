@@ -385,3 +385,13 @@ Data primei înmatriculări
 Introdu data primei înmatriculări
 Cele mai vechi întâi
 Cele mai noi întâi
+Toate
+În curând
+Niciun termen apropiat
+Exportă PDF
+Se creează PDF-ul…
+Creat la {date}
+PDF-ul nu a putut fi creat: {error}
+Note
+Nicio întreținere înregistrată
+Exportul PDF este disponibil în versiunea Pro.

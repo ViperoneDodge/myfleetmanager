@@ -6,6 +6,7 @@ import '../main.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../services/app_state.dart' show AppState;
+import '../services/pdf_export.dart';
 import '../services/sync_service.dart' show cloudErrorMessage;
 import '../widgets/common.dart';
 import 'login_screen.dart';
@@ -114,6 +115,12 @@ class FamilyTab extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodySmall),
                 ]),
               ),
+              if (list.isNotEmpty)
+                IconButton(
+                  tooltip: tr('pdf.export'),
+                  icon: const Icon(Icons.picture_as_pdf_outlined),
+                  onPressed: () => exportPdf(context, g.name, list),
+                ),
               const Icon(Icons.settings_outlined, size: 20),
             ]),
           ),
@@ -143,6 +150,16 @@ class FamilyTab extends StatelessWidget {
         ),
       ]),
     );
+  }
+}
+
+Future<void> exportPdf(BuildContext context, String title, List<Vehicle> vehicles) async {
+  if (!await requirePro(context, reason: tr('pro.reasonPdf')) || !context.mounted) return;
+  showSnack(context, tr('pdf.creating'));
+  try {
+    await PdfExport.share(title: title, vehicles: vehicles);
+  } catch (e) {
+    if (context.mounted) showSnack(context, tr('pdf.error', {'error': e}));
   }
 }
 

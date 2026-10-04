@@ -385,3 +385,13 @@ Datum eerste toelating
 Vul de datum van eerste toelating in
 Oudste eerst
 Nieuwste eerst
+Alle
+Binnenkort
+Geen naderende termijnen
+PDF exporteren
+PDF wordt gemaakt…
+Gemaakt op {date}
+Kan de PDF niet maken: {error}
+Notities
+Geen onderhoud geregistreerd
+Exporteren naar PDF is beschikbaar in de Pro-versie.

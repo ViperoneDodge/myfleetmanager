@@ -140,6 +140,12 @@ class _HomeScreenState extends State<HomeScreen> {
           appBar: AppBar(
             title: Text(titles[_tab]),
             actions: [
+              if (_tab == 0 && appState.myVehicles.isNotEmpty)
+                IconButton(
+                  tooltip: tr('pdf.export'),
+                  icon: const Icon(Icons.picture_as_pdf_outlined),
+                  onPressed: () => exportPdf(context, tr('fleet.mine'), appState.myVehicles),
+                ),
               _syncIcon(),
               IconButton(
                 tooltip: tr('settings.title'),
@@ -319,22 +325,60 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _deadlinesTab() {
+    final soonOnly = appState.deadlinesSoonOnly;
     final groups = <({Vehicle v, List<Deadline> ds})>[];
+    var any = false;
     for (final v in appState.activeVehicles) {
-      final ds = v.activeDeadlines.toList()..sort((a, b) => a.dueDate!.compareTo(b.dueDate!));
+      final all = v.activeDeadlines;
+      if (all.isNotEmpty) any = true;
+      final ds = (soonOnly ? all.where((d) => daysUntil(d.dueDate!) < dueWarnDays) : all).toList()
+        ..sort((a, b) => a.dueDate!.compareTo(b.dueDate!));
       if (ds.isNotEmpty) groups.add((v: v, ds: ds));
     }
     groups.sort((a, b) => a.ds.first.dueDate!.compareTo(b.ds.first.dueDate!));
-    if (groups.isEmpty) {
+    if (!any) {
       return Center(child: Text(tr('deadlines.empty')));
     }
     final showFleet = appState.isCloud && appState.data.groups.isNotEmpty;
     final scheme = Theme.of(context).colorScheme;
+    final filter = Padding(
+      padding: const EdgeInsets.only(bottom: 6),
+      child: Center(
+        child: SegmentedButton<bool>(
+          showSelectedIcon: false,
+          segments: [
+            ButtonSegment(value: false, label: Text(tr('deadlines.all'))),
+            ButtonSegment(
+                value: true,
+                icon: const Icon(Icons.warning_amber, size: 18),
+                label: Text(tr('deadlines.soon'))),
+          ],
+          selected: {soonOnly},
+          onSelectionChanged: (sel) => appState.setDeadlinesSoonOnly(sel.first),
+        ),
+      ),
+    );
+    if (groups.isEmpty) {
+      return ListView(padding: const EdgeInsets.fromLTRB(6, 8, 10, 24), children: [
+        filter,
+        Padding(
+          padding: const EdgeInsets.only(top: 60),
+          child: Column(children: [
+            Icon(Icons.check_circle_outline, size: 64, color: scheme.outline),
+            const SizedBox(height: 10),
+            Text(tr('deadlines.noneSoon'),
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontFamily: handFont, fontSize: 24)),
+          ]),
+        ),
+      ]);
+    }
     return ListView.builder(
       padding: const EdgeInsets.fromLTRB(6, 8, 10, 24),
-      itemCount: groups.length,
-      itemBuilder: (context, i) {
-        final g = groups[i];
+      itemCount: groups.length + 1,
+      itemBuilder: (context, index) {
+        if (index == 0) return filter;
+        final g = groups[index - 1];
         final name = g.v.name.isEmpty ? g.v.plate : g.v.name;
         return Card(
           margin: const EdgeInsets.symmetric(vertical: 5),

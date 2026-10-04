@@ -385,3 +385,13 @@ araçlarım
 İlk tescil tarihini girin
 Önce en eski
 Önce en yeni
+Tümü
+Yaklaşan
+Yaklaşan son tarih yok
+PDF'e aktar
+PDF oluşturuluyor…
+Oluşturulma: {date}
+PDF oluşturulamadı: {error}
+Notlar
+Kayıtlı bakım yok
+PDF'e aktarma Pro sürümde kullanılabilir.

@@ -385,5 +385,15 @@
  "vehicle.regDate": "Esmase registreerimise kuupäev",
  "edit.regDateNeeded": "Sisesta esmase registreerimise kuupäev",
  "sort.oldest": "Vanimad eespool",
- "sort.newest": "Uusimad eespool"
+ "sort.newest": "Uusimad eespool",
+ "deadlines.all": "Kõik",
+ "deadlines.soon": "Peagi",
+ "deadlines.noneSoon": "Lähenevaid tähtaegu pole",
+ "pdf.export": "Ekspordi PDF",
+ "pdf.creating": "PDF-i loomine…",
+ "pdf.generated": "Loodud {date}",
+ "pdf.error": "PDF-i loomine ebaõnnestus: {error}",
+ "pdf.notes": "Märkmed",
+ "pdf.noMaint": "Hooldust pole registreeritud",
+ "pro.reasonPdf": "PDF-eksport on saadaval Pro-versioonis."
 }

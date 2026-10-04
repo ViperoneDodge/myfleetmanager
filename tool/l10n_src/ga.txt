@@ -385,3 +385,13 @@ Dáta an chéad chláraithe
 Cuir isteach dáta an chéad chláraithe
 Na cinn is sine ar dtús
 Na cinn is nuaí ar dtús
+Gach ceann
+Go luath
+Níl aon spriocdháta ag druidim
+Easpórtáil PDF
+PDF á chruthú…
+Cruthaithe {date}
+Níorbh fhéidir an PDF a chruthú: {error}
+Nótaí
+Níl aon chothabháil taifeadta
+Tá easpórtáil PDF ar fáil sa leagan Pro.

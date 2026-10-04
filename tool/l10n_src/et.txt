@@ -385,3 +385,13 @@ Esmase registreerimise kuupäev
 Sisesta esmase registreerimise kuupäev
 Vanimad eespool
 Uusimad eespool
+Kõik
+Peagi
+Lähenevaid tähtaegu pole
+Ekspordi PDF
+PDF-i loomine…
+Loodud {date}
+PDF-i loomine ebaõnnestus: {error}
+Märkmed
+Hooldust pole registreeritud
+PDF-eksport on saadaval Pro-versioonis.

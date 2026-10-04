@@ -385,3 +385,13 @@ Dátum prvej evidencie
 Zadajte dátum prvej evidencie
 Od najstarších
 Od najnovších
+Všetky
+Čoskoro
+Žiadne blížiace sa termíny
+Exportovať PDF
+Vytváranie PDF…
+Vytvorené {date}
+PDF sa nepodarilo vytvoriť: {error}
+Poznámky
+Žiadna zaznamenaná údržba
+Export do PDF je dostupný vo verzii Pro.

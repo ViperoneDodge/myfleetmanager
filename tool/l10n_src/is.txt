@@ -385,3 +385,13 @@ Fyrsti skráningardagur
 Sláðu inn fyrsta skráningardag
 Elst fyrst
 Nýjust fyrst
+Allt
+Á næstunni
+Engir frestar á næstunni
+Flytja út PDF
+Bý til PDF…
+Búið til {date}
+Ekki tókst að búa til PDF: {error}
+Athugasemdir
+Ekkert viðhald skráð
+PDF-útflutningur er í Pro-útgáfunni.

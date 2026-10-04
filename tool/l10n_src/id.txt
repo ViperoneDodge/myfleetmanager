@@ -385,3 +385,13 @@ Tanggal registrasi pertama
 Masukkan tanggal registrasi pertama
 Terlama dulu
 Terbaru dulu
+Semua
+Segera jatuh tempo
+Tidak ada tenggat dalam waktu dekat
+Ekspor PDF
+Membuat PDF…
+Dibuat {date}
+Gagal membuat PDF: {error}
+Catatan
+Belum ada perawatan tercatat
+Ekspor PDF tersedia di versi Pro.

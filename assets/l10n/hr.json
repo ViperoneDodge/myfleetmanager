@@ -385,5 +385,15 @@
  "vehicle.regDate": "Datum prve registracije",
  "edit.regDateNeeded": "Unesite datum prve registracije",
  "sort.oldest": "Najstarija prva",
- "sort.newest": "Najnovija prva"
+ "sort.newest": "Najnovija prva",
+ "deadlines.all": "Svi",
+ "deadlines.soon": "Uskoro ističu",
+ "deadlines.noneSoon": "Nema rokova koji uskoro ističu",
+ "pdf.export": "Izvezi PDF",
+ "pdf.creating": "Izrada PDF-a…",
+ "pdf.generated": "Izrađeno {date}",
+ "pdf.error": "PDF nije moguće izraditi: {error}",
+ "pdf.notes": "Bilješke",
+ "pdf.noMaint": "Nema zabilježenog održavanja",
+ "pro.reasonPdf": "Izvoz u PDF dostupan je u Pro verziji."
 }

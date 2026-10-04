@@ -385,3 +385,13 @@ vehicle.regDate
 edit.regDateNeeded
 sort.oldest
 sort.newest
+deadlines.all
+deadlines.soon
+deadlines.noneSoon
+pdf.export
+pdf.creating
+pdf.generated
+pdf.error
+pdf.notes
+pdf.noMaint
+pro.reasonPdf

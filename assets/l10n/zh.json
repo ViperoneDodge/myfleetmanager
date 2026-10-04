@@ -385,5 +385,15 @@
  "vehicle.regDate": "首次登记日期",
  "edit.regDateNeeded": "请输入首次登记日期",
  "sort.oldest": "最旧优先",
- "sort.newest": "最新优先"
+ "sort.newest": "最新优先",
+ "deadlines.all": "全部",
+ "deadlines.soon": "即将到期",
+ "deadlines.noneSoon": "没有即将到期的事项",
+ "pdf.export": "导出 PDF",
+ "pdf.creating": "正在创建 PDF…",
+ "pdf.generated": "创建于 {date}",
+ "pdf.error": "无法创建 PDF：{error}",
+ "pdf.notes": "备注",
+ "pdf.noMaint": "没有保养记录",
+ "pro.reasonPdf": "PDF 导出功能仅在专业版中提供。"
 }

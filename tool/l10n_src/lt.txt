@@ -385,3 +385,13 @@ Pirmosios registracijos data
 Įveskite pirmosios registracijos datą
 Seniausios pirma
 Naujausios pirma
+Visi
+Netrukus
+Artėjančių terminų nėra
+Eksportuoti PDF
+Kuriamas PDF…
+Sukurta {date}
+Nepavyko sukurti PDF: {error}
+Pastabos
+Priežiūros įrašų nėra
+PDF eksportas galimas Pro versijoje.

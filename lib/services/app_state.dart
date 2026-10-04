@@ -205,6 +205,14 @@ class AppState extends ChangeNotifier {
 
   bool sortNewestFirst = false;
 
+  bool deadlinesSoonOnly = false;
+
+  Future<void> setDeadlinesSoonOnly(bool on) async {
+    deadlinesSoonOnly = on;
+    notifyListeners();
+    await _writeSettings();
+  }
+
   Future<void> setSortNewestFirst(bool on) async {
     sortNewestFirst = on;
     notifyListeners();
@@ -256,6 +264,7 @@ class AppState extends ChangeNotifier {
     devPro = settings?['devPro'] == true;
     devProVersion = settings?['devProVersion'] as String?;
     sortNewestFirst = settings?['sortNewest'] == true;
+    deadlinesSoonOnly = settings?['deadlinesSoon'] == true;
     if (devPro && devProVersion != appVersion) {
       devPro = false;
       devProVersion = null;
@@ -622,6 +631,7 @@ class AppState extends ChangeNotifier {
         'devPro': devPro,
         if (devProVersion != null) 'devProVersion': devProVersion,
         'sortNewest': sortNewestFirst,
+        'deadlinesSoon': deadlinesSoonOnly,
       });
 
   Future<void> setLanguage(String? code) async {

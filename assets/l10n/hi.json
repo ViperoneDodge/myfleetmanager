@@ -385,5 +385,15 @@
  "vehicle.regDate": "पंजीकरण तिथि",
  "edit.regDateNeeded": "पंजीकरण तिथि दर्ज करें",
  "sort.oldest": "सबसे पुराने पहले",
- "sort.newest": "सबसे नए पहले"
+ "sort.newest": "सबसे नए पहले",
+ "deadlines.all": "सभी",
+ "deadlines.soon": "जल्द समाप्त",
+ "deadlines.noneSoon": "कोई निकट समय-सीमा नहीं",
+ "pdf.export": "PDF निर्यात करें",
+ "pdf.creating": "PDF बन रहा है…",
+ "pdf.generated": "{date} को बनाया गया",
+ "pdf.error": "PDF नहीं बन सका: {error}",
+ "pdf.notes": "नोट्स",
+ "pdf.noMaint": "कोई रखरखाव दर्ज नहीं",
+ "pro.reasonPdf": "PDF निर्यात Pro संस्करण में उपलब्ध है।"
 }

@@ -385,5 +385,15 @@
  "vehicle.regDate": "Pirmosios registracijos data",
  "edit.regDateNeeded": "Įveskite pirmosios registracijos datą",
  "sort.oldest": "Seniausios pirma",
- "sort.newest": "Naujausios pirma"
+ "sort.newest": "Naujausios pirma",
+ "deadlines.all": "Visi",
+ "deadlines.soon": "Netrukus",
+ "deadlines.noneSoon": "Artėjančių terminų nėra",
+ "pdf.export": "Eksportuoti PDF",
+ "pdf.creating": "Kuriamas PDF…",
+ "pdf.generated": "Sukurta {date}",
+ "pdf.error": "Nepavyko sukurti PDF: {error}",
+ "pdf.notes": "Pastabos",
+ "pdf.noMaint": "Priežiūros įrašų nėra",
+ "pro.reasonPdf": "PDF eksportas galimas Pro versijoje."
 }

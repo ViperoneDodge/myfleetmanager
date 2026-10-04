@@ -385,5 +385,15 @@
  "vehicle.regDate": "Data tal-ewwel reġistrazzjoni",
  "edit.regDateNeeded": "Daħħal id-data tal-ewwel reġistrazzjoni",
  "sort.oldest": "L-eqdem l-ewwel",
- "sort.newest": "L-aktar ġodda l-ewwel"
+ "sort.newest": "L-aktar ġodda l-ewwel",
+ "deadlines.all": "Kollha",
+ "deadlines.soon": "Dalwaqt",
+ "deadlines.noneSoon": "M'hemm l-ebda skadenza qrib",
+ "pdf.export": "Esporta PDF",
+ "pdf.creating": "Qed jinħoloq il-PDF…",
+ "pdf.generated": "Maħluq fis-{date}",
+ "pdf.error": "Ma setax jinħoloq il-PDF: {error}",
+ "pdf.notes": "Noti",
+ "pdf.noMaint": "M'hemm l-ebda manutenzjoni rreġistrata",
+ "pro.reasonPdf": "L-esportazzjoni f'PDF hija disponibbli fil-verżjoni Pro."
 }

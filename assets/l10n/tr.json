@@ -385,5 +385,15 @@
  "vehicle.regDate": "İlk tescil tarihi",
  "edit.regDateNeeded": "İlk tescil tarihini girin",
  "sort.oldest": "Önce en eski",
- "sort.newest": "Önce en yeni"
+ "sort.newest": "Önce en yeni",
+ "deadlines.all": "Tümü",
+ "deadlines.soon": "Yaklaşan",
+ "deadlines.noneSoon": "Yaklaşan son tarih yok",
+ "pdf.export": "PDF'e aktar",
+ "pdf.creating": "PDF oluşturuluyor…",
+ "pdf.generated": "Oluşturulma: {date}",
+ "pdf.error": "PDF oluşturulamadı: {error}",
+ "pdf.notes": "Notlar",
+ "pdf.noMaint": "Kayıtlı bakım yok",
+ "pro.reasonPdf": "PDF'e aktarma Pro sürümde kullanılabilir."
 }

@@ -385,5 +385,15 @@
  "vehicle.regDate": "Fyrsti skráningardagur",
  "edit.regDateNeeded": "Sláðu inn fyrsta skráningardag",
  "sort.oldest": "Elst fyrst",
- "sort.newest": "Nýjust fyrst"
+ "sort.newest": "Nýjust fyrst",
+ "deadlines.all": "Allt",
+ "deadlines.soon": "Á næstunni",
+ "deadlines.noneSoon": "Engir frestar á næstunni",
+ "pdf.export": "Flytja út PDF",
+ "pdf.creating": "Bý til PDF…",
+ "pdf.generated": "Búið til {date}",
+ "pdf.error": "Ekki tókst að búa til PDF: {error}",
+ "pdf.notes": "Athugasemdir",
+ "pdf.noMaint": "Ekkert viðhald skráð",
+ "pro.reasonPdf": "PDF-útflutningur er í Pro-útgáfunni."
 }

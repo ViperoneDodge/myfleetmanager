@@ -385,5 +385,15 @@
  "vehicle.regDate": "Дата на първа регистрация",
  "edit.regDateNeeded": "Въведи датата на първа регистрация",
  "sort.oldest": "Първо най-старите",
- "sort.newest": "Първо най-новите"
+ "sort.newest": "Първо най-новите",
+ "deadlines.all": "Всички",
+ "deadlines.soon": "Скоро изтичащи",
+ "deadlines.noneSoon": "Няма наближаващи срокове",
+ "pdf.export": "Експорт в PDF",
+ "pdf.creating": "Създаване на PDF…",
+ "pdf.generated": "Създаден на {date}",
+ "pdf.error": "PDF файлът не можа да бъде създаден: {error}",
+ "pdf.notes": "Бележки",
+ "pdf.noMaint": "Няма записано обслужване",
+ "pro.reasonPdf": "Експортът в PDF е наличен във версия Pro."
 }

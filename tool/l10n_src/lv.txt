@@ -385,3 +385,13 @@ Pirmās reģistrācijas datums
 Ievadiet pirmās reģistrācijas datumu
 Vecākie vispirms
 Jaunākie vispirms
+Visi
+Drīz
+Nav tuvojošos termiņu
+Eksportēt PDF
+Veido PDF…
+Izveidots {date}
+Neizdevās izveidot PDF: {error}
+Piezīmes
+Nav reģistrētas apkopes
+PDF eksports ir pieejams Pro versijā.

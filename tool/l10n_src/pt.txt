@@ -385,3 +385,13 @@ Data da primeira matrícula
 Introduza a data da primeira matrícula
 Mais antigos primeiro
 Mais recentes primeiro
+Todos
+A vencer
+Sem prazos próximos
+Exportar PDF
+A criar o PDF…
+Criado a {date}
+Não foi possível criar o PDF: {error}
+Notas
+Nenhuma manutenção registada
+A exportação em PDF está disponível na versão Pro.

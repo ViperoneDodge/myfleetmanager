@@ -385,5 +385,15 @@
  "vehicle.regDate": "최초 등록일",
  "edit.regDateNeeded": "최초 등록일을 입력하세요",
  "sort.oldest": "오래된 순",
- "sort.newest": "최신 순"
+ "sort.newest": "최신 순",
+ "deadlines.all": "전체",
+ "deadlines.soon": "만료 임박",
+ "deadlines.noneSoon": "임박한 만료일이 없습니다",
+ "pdf.export": "PDF 내보내기",
+ "pdf.creating": "PDF 만드는 중…",
+ "pdf.generated": "작성일 {date}",
+ "pdf.error": "PDF를 만들 수 없습니다: {error}",
+ "pdf.notes": "메모",
+ "pdf.noMaint": "기록된 정비가 없습니다",
+ "pro.reasonPdf": "PDF 내보내기는 Pro 버전에서 사용할 수 있습니다."
 }

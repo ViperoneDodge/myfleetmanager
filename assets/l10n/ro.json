@@ -385,5 +385,15 @@
  "vehicle.regDate": "Data primei înmatriculări",
  "edit.regDateNeeded": "Introdu data primei înmatriculări",
  "sort.oldest": "Cele mai vechi întâi",
- "sort.newest": "Cele mai noi întâi"
+ "sort.newest": "Cele mai noi întâi",
+ "deadlines.all": "Toate",
+ "deadlines.soon": "În curând",
+ "deadlines.noneSoon": "Niciun termen apropiat",
+ "pdf.export": "Exportă PDF",
+ "pdf.creating": "Se creează PDF-ul…",
+ "pdf.generated": "Creat la {date}",
+ "pdf.error": "PDF-ul nu a putut fi creat: {error}",
+ "pdf.notes": "Note",
+ "pdf.noMaint": "Nicio întreținere înregistrată",
+ "pro.reasonPdf": "Exportul PDF este disponibil în versiunea Pro."
 }

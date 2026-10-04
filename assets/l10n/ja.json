@@ -385,5 +385,15 @@
  "vehicle.regDate": "初度登録年月日",
  "edit.regDateNeeded": "初度登録年月日を入力してください",
  "sort.oldest": "古い順",
- "sort.newest": "新しい順"
+ "sort.newest": "新しい順",
+ "deadlines.all": "すべて",
+ "deadlines.soon": "期限間近",
+ "deadlines.noneSoon": "期限間近の項目はありません",
+ "pdf.export": "PDF を書き出す",
+ "pdf.creating": "PDF を作成中…",
+ "pdf.generated": "作成日 {date}",
+ "pdf.error": "PDF を作成できませんでした：{error}",
+ "pdf.notes": "メモ",
+ "pdf.noMaint": "整備記録はありません",
+ "pro.reasonPdf": "PDF の書き出しは Pro 版で利用できます。"
 }

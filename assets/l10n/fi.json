@@ -385,5 +385,15 @@
  "vehicle.regDate": "Ensirekisteröintipäivä",
  "edit.regDateNeeded": "Anna ensirekisteröintipäivä",
  "sort.oldest": "Vanhimmat ensin",
- "sort.newest": "Uusimmat ensin"
+ "sort.newest": "Uusimmat ensin",
+ "deadlines.all": "Kaikki",
+ "deadlines.soon": "Pian",
+ "deadlines.noneSoon": "Ei lähestyviä määräaikoja",
+ "pdf.export": "Vie PDF",
+ "pdf.creating": "Luodaan PDF…",
+ "pdf.generated": "Luotu {date}",
+ "pdf.error": "PDF:n luominen epäonnistui: {error}",
+ "pdf.notes": "Muistiinpanot",
+ "pdf.noMaint": "Ei kirjattuja huoltoja",
+ "pro.reasonPdf": "PDF-vienti on käytettävissä Pro-versiossa."
 }

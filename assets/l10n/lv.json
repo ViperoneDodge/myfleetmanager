@@ -385,5 +385,15 @@
  "vehicle.regDate": "Pirmās reģistrācijas datums",
  "edit.regDateNeeded": "Ievadiet pirmās reģistrācijas datumu",
  "sort.oldest": "Vecākie vispirms",
- "sort.newest": "Jaunākie vispirms"
+ "sort.newest": "Jaunākie vispirms",
+ "deadlines.all": "Visi",
+ "deadlines.soon": "Drīz",
+ "deadlines.noneSoon": "Nav tuvojošos termiņu",
+ "pdf.export": "Eksportēt PDF",
+ "pdf.creating": "Veido PDF…",
+ "pdf.generated": "Izveidots {date}",
+ "pdf.error": "Neizdevās izveidot PDF: {error}",
+ "pdf.notes": "Piezīmes",
+ "pdf.noMaint": "Nav reģistrētas apkopes",
+ "pro.reasonPdf": "PDF eksports ir pieejams Pro versijā."
 }

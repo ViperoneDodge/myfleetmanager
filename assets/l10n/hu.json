@@ -385,5 +385,15 @@
  "vehicle.regDate": "Első forgalomba helyezés",
  "edit.regDateNeeded": "Add meg az első forgalomba helyezés dátumát",
  "sort.oldest": "Legrégebbiek elöl",
- "sort.newest": "Legújabbak elöl"
+ "sort.newest": "Legújabbak elöl",
+ "deadlines.all": "Mind",
+ "deadlines.soon": "Hamarosan lejár",
+ "deadlines.noneSoon": "Nincs közelgő határidő",
+ "pdf.export": "PDF exportálása",
+ "pdf.creating": "PDF készítése…",
+ "pdf.generated": "Készült: {date}",
+ "pdf.error": "Nem sikerült a PDF elkészítése: {error}",
+ "pdf.notes": "Megjegyzések",
+ "pdf.noMaint": "Nincs rögzített karbantartás",
+ "pro.reasonPdf": "A PDF-exportálás a Pro verzióban érhető el."
 }

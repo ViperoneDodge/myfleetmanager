@@ -385,3 +385,13 @@ Data tal-ewwel reġistrazzjoni
 Daħħal id-data tal-ewwel reġistrazzjoni
 L-eqdem l-ewwel
 L-aktar ġodda l-ewwel
+Kollha
+Dalwaqt
+M'hemm l-ebda skadenza qrib
+Esporta PDF
+Qed jinħoloq il-PDF…
+Maħluq fis-{date}
+Ma setax jinħoloq il-PDF: {error}
+Noti
+M'hemm l-ebda manutenzjoni rreġistrata
+L-esportazzjoni f'PDF hija disponibbli fil-verżjoni Pro.

@@ -385,5 +385,15 @@
  "vehicle.regDate": "Date de première immatriculation",
  "edit.regDateNeeded": "Saisissez la date de première immatriculation",
  "sort.oldest": "Plus anciens d'abord",
- "sort.newest": "Plus récents d'abord"
+ "sort.newest": "Plus récents d'abord",
+ "deadlines.all": "Toutes",
+ "deadlines.soon": "Bientôt dues",
+ "deadlines.noneSoon": "Aucune échéance proche",
+ "pdf.export": "Exporter en PDF",
+ "pdf.creating": "Création du PDF…",
+ "pdf.generated": "Créé le {date}",
+ "pdf.error": "Impossible de créer le PDF : {error}",
+ "pdf.notes": "Notes",
+ "pdf.noMaint": "Aucun entretien enregistré",
+ "pro.reasonPdf": "L'export PDF est disponible dans la version Pro."
 }

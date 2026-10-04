@@ -385,5 +385,15 @@
  "vehicle.regDate": "Datum první registrace",
  "edit.regDateNeeded": "Zadejte datum první registrace",
  "sort.oldest": "Od nejstarších",
- "sort.newest": "Od nejnovějších"
+ "sort.newest": "Od nejnovějších",
+ "deadlines.all": "Vše",
+ "deadlines.soon": "Brzy",
+ "deadlines.noneSoon": "Žádné blížící se termíny",
+ "pdf.export": "Exportovat PDF",
+ "pdf.creating": "Vytváření PDF…",
+ "pdf.generated": "Vytvořeno {date}",
+ "pdf.error": "PDF se nepodařilo vytvořit: {error}",
+ "pdf.notes": "Poznámky",
+ "pdf.noMaint": "Žádná zaznamenaná údržba",
+ "pro.reasonPdf": "Export do PDF je dostupný ve verzi Pro."
 }

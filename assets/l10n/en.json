@@ -385,5 +385,15 @@
  "vehicle.regDate": "Registration date",
  "edit.regDateNeeded": "Enter the registration date",
  "sort.oldest": "Oldest first",
- "sort.newest": "Newest first"
+ "sort.newest": "Newest first",
+ "deadlines.all": "All",
+ "deadlines.soon": "Due soon",
+ "deadlines.noneSoon": "No upcoming deadlines",
+ "pdf.export": "Export PDF",
+ "pdf.creating": "Creating PDF…",
+ "pdf.generated": "Created on {date}",
+ "pdf.error": "Could not create the PDF: {error}",
+ "pdf.notes": "Notes",
+ "pdf.noMaint": "No maintenance recorded",
+ "pro.reasonPdf": "PDF export is available in the Pro version."
 }

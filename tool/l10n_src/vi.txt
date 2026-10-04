@@ -385,3 +385,13 @@ Ngày đăng ký lần đầu
 Nhập ngày đăng ký lần đầu
 Cũ nhất trước
 Mới nhất trước
+Tất cả
+Sắp đến hạn
+Không có hạn nào sắp đến
+Xuất PDF
+Đang tạo PDF…
+Tạo ngày {date}
+Không thể tạo PDF: {error}
+Ghi chú
+Chưa có bảo dưỡng nào
+Xuất PDF có trong phiên bản Pro.

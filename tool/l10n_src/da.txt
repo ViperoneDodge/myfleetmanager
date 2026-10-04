@@ -385,3 +385,13 @@ Første registreringsdato
 Angiv første registreringsdato
 Ældste først
 Nyeste først
+Alle
+Snart
+Ingen kommende frister
+Eksportér PDF
+Opretter PDF…
+Oprettet {date}
+PDF kunne ikke oprettes: {error}
+Noter
+Ingen vedligeholdelse registreret
+PDF-eksport findes i Pro-versionen.

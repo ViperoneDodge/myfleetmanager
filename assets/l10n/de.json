@@ -385,5 +385,15 @@
  "vehicle.regDate": "Erstzulassung",
  "edit.regDateNeeded": "Gib das Datum der Erstzulassung ein",
  "sort.oldest": "Älteste zuerst",
- "sort.newest": "Neueste zuerst"
+ "sort.newest": "Neueste zuerst",
+ "deadlines.all": "Alle",
+ "deadlines.soon": "Bald fällig",
+ "deadlines.noneSoon": "Keine anstehenden Fristen",
+ "pdf.export": "PDF exportieren",
+ "pdf.creating": "PDF wird erstellt…",
+ "pdf.generated": "Erstellt am {date}",
+ "pdf.error": "PDF konnte nicht erstellt werden: {error}",
+ "pdf.notes": "Notizen",
+ "pdf.noMaint": "Keine Wartung erfasst",
+ "pro.reasonPdf": "Der PDF-Export ist in der Pro-Version verfügbar."
 }

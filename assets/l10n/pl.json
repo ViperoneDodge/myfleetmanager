@@ -385,5 +385,15 @@
  "vehicle.regDate": "Data pierwszej rejestracji",
  "edit.regDateNeeded": "Wpisz datę pierwszej rejestracji",
  "sort.oldest": "Od najstarszych",
- "sort.newest": "Od najnowszych"
+ "sort.newest": "Od najnowszych",
+ "deadlines.all": "Wszystkie",
+ "deadlines.soon": "Wkrótce",
+ "deadlines.noneSoon": "Brak zbliżających się terminów",
+ "pdf.export": "Eksportuj PDF",
+ "pdf.creating": "Tworzenie PDF…",
+ "pdf.generated": "Utworzono {date}",
+ "pdf.error": "Nie udało się utworzyć PDF: {error}",
+ "pdf.notes": "Uwagi",
+ "pdf.noMaint": "Brak zapisanych przeglądów",
+ "pro.reasonPdf": "Eksport do PDF jest dostępny w wersji Pro."
 }

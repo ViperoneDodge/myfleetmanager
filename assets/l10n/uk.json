@@ -385,5 +385,15 @@
  "vehicle.regDate": "Дата першої реєстрації",
  "edit.regDateNeeded": "Вкажіть дату першої реєстрації",
  "sort.oldest": "Спочатку старіші",
- "sort.newest": "Спочатку новіші"
+ "sort.newest": "Спочатку новіші",
+ "deadlines.all": "Усі",
+ "deadlines.soon": "Скоро",
+ "deadlines.noneSoon": "Немає найближчих термінів",
+ "pdf.export": "Експорт у PDF",
+ "pdf.creating": "Створення PDF…",
+ "pdf.generated": "Створено {date}",
+ "pdf.error": "Не вдалося створити PDF: {error}",
+ "pdf.notes": "Нотатки",
+ "pdf.noMaint": "Немає записів про обслуговування",
+ "pro.reasonPdf": "Експорт у PDF доступний у версії Pro."
 }

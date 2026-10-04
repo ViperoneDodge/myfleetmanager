@@ -385,3 +385,13 @@ Első forgalomba helyezés
 Add meg az első forgalomba helyezés dátumát
 Legrégebbiek elöl
 Legújabbak elöl
+Mind
+Hamarosan lejár
+Nincs közelgő határidő
+PDF exportálása
+PDF készítése…
+Készült: {date}
+Nem sikerült a PDF elkészítése: {error}
+Megjegyzések
+Nincs rögzített karbantartás
+A PDF-exportálás a Pro verzióban érhető el.

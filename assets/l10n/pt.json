@@ -385,5 +385,15 @@
  "vehicle.regDate": "Data da primeira matrícula",
  "edit.regDateNeeded": "Introduza a data da primeira matrícula",
  "sort.oldest": "Mais antigos primeiro",
- "sort.newest": "Mais recentes primeiro"
+ "sort.newest": "Mais recentes primeiro",
+ "deadlines.all": "Todos",
+ "deadlines.soon": "A vencer",
+ "deadlines.noneSoon": "Sem prazos próximos",
+ "pdf.export": "Exportar PDF",
+ "pdf.creating": "A criar o PDF…",
+ "pdf.generated": "Criado a {date}",
+ "pdf.error": "Não foi possível criar o PDF: {error}",
+ "pdf.notes": "Notas",
+ "pdf.noMaint": "Nenhuma manutenção registada",
+ "pro.reasonPdf": "A exportação em PDF está disponível na versão Pro."
 }

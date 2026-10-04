@@ -385,5 +385,15 @@
  "vehicle.regDate": "Tanggal registrasi pertama",
  "edit.regDateNeeded": "Masukkan tanggal registrasi pertama",
  "sort.oldest": "Terlama dulu",
- "sort.newest": "Terbaru dulu"
+ "sort.newest": "Terbaru dulu",
+ "deadlines.all": "Semua",
+ "deadlines.soon": "Segera jatuh tempo",
+ "deadlines.noneSoon": "Tidak ada tenggat dalam waktu dekat",
+ "pdf.export": "Ekspor PDF",
+ "pdf.creating": "Membuat PDF…",
+ "pdf.generated": "Dibuat {date}",
+ "pdf.error": "Gagal membuat PDF: {error}",
+ "pdf.notes": "Catatan",
+ "pdf.noMaint": "Belum ada perawatan tercatat",
+ "pro.reasonPdf": "Ekspor PDF tersedia di versi Pro."
 }

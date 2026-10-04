@@ -385,5 +385,15 @@
  "vehicle.regDate": "Ημερομηνία πρώτης ταξινόμησης",
  "edit.regDateNeeded": "Εισαγάγετε την ημερομηνία πρώτης ταξινόμησης",
  "sort.oldest": "Πρώτα τα παλαιότερα",
- "sort.newest": "Πρώτα τα νεότερα"
+ "sort.newest": "Πρώτα τα νεότερα",
+ "deadlines.all": "Όλες",
+ "deadlines.soon": "Λήγουν σύντομα",
+ "deadlines.noneSoon": "Δεν υπάρχουν επερχόμενες προθεσμίες",
+ "pdf.export": "Εξαγωγή PDF",
+ "pdf.creating": "Δημιουργία PDF…",
+ "pdf.generated": "Δημιουργήθηκε στις {date}",
+ "pdf.error": "Δεν ήταν δυνατή η δημιουργία του PDF: {error}",
+ "pdf.notes": "Σημειώσεις",
+ "pdf.noMaint": "Δεν έχει καταγραφεί συντήρηση",
+ "pro.reasonPdf": "Η εξαγωγή PDF είναι διαθέσιμη στην έκδοση Pro."
 }

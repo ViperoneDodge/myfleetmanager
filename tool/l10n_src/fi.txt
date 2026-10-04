@@ -385,3 +385,13 @@ Ensirekisteröintipäivä
 Anna ensirekisteröintipäivä
 Vanhimmat ensin
 Uusimmat ensin
+Kaikki
+Pian
+Ei lähestyviä määräaikoja
+Vie PDF
+Luodaan PDF…
+Luotu {date}
+PDF:n luominen epäonnistui: {error}
+Muistiinpanot
+Ei kirjattuja huoltoja
+PDF-vienti on käytettävissä Pro-versiossa.

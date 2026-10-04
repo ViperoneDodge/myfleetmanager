@@ -385,3 +385,13 @@ Datum první registrace
 Zadejte datum první registrace
 Od nejstarších
 Od nejnovějších
+Vše
+Brzy
+Žádné blížící se termíny
+Exportovat PDF
+Vytváření PDF…
+Vytvořeno {date}
+PDF se nepodařilo vytvořit: {error}
+Poznámky
+Žádná zaznamenaná údržba
+Export do PDF je dostupný ve verzi Pro.

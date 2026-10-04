@@ -385,5 +385,15 @@
  "vehicle.regDate": "Ngày đăng ký lần đầu",
  "edit.regDateNeeded": "Nhập ngày đăng ký lần đầu",
  "sort.oldest": "Cũ nhất trước",
- "sort.newest": "Mới nhất trước"
+ "sort.newest": "Mới nhất trước",
+ "deadlines.all": "Tất cả",
+ "deadlines.soon": "Sắp đến hạn",
+ "deadlines.noneSoon": "Không có hạn nào sắp đến",
+ "pdf.export": "Xuất PDF",
+ "pdf.creating": "Đang tạo PDF…",
+ "pdf.generated": "Tạo ngày {date}",
+ "pdf.error": "Không thể tạo PDF: {error}",
+ "pdf.notes": "Ghi chú",
+ "pdf.noMaint": "Chưa có bảo dưỡng nào",
+ "pro.reasonPdf": "Xuất PDF có trong phiên bản Pro."
 }

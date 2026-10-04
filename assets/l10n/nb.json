@@ -385,5 +385,15 @@
  "vehicle.regDate": "Første registreringsdato",
  "edit.regDateNeeded": "Skriv inn første registreringsdato",
  "sort.oldest": "Eldste først",
- "sort.newest": "Nyeste først"
+ "sort.newest": "Nyeste først",
+ "deadlines.all": "Alle",
+ "deadlines.soon": "Snart",
+ "deadlines.noneSoon": "Ingen kommende frister",
+ "pdf.export": "Eksporter PDF",
+ "pdf.creating": "Lager PDF…",
+ "pdf.generated": "Opprettet {date}",
+ "pdf.error": "Kunne ikke lage PDF: {error}",
+ "pdf.notes": "Notater",
+ "pdf.noMaint": "Ikke noe vedlikehold registrert",
+ "pro.reasonPdf": "PDF-eksport er tilgjengelig i Pro-versjonen."
 }

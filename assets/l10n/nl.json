@@ -385,5 +385,15 @@
  "vehicle.regDate": "Datum eerste toelating",
  "edit.regDateNeeded": "Vul de datum van eerste toelating in",
  "sort.oldest": "Oudste eerst",
- "sort.newest": "Nieuwste eerst"
+ "sort.newest": "Nieuwste eerst",
+ "deadlines.all": "Alle",
+ "deadlines.soon": "Binnenkort",
+ "deadlines.noneSoon": "Geen naderende termijnen",
+ "pdf.export": "PDF exporteren",
+ "pdf.creating": "PDF wordt gemaakt…",
+ "pdf.generated": "Gemaakt op {date}",
+ "pdf.error": "Kan de PDF niet maken: {error}",
+ "pdf.notes": "Notities",
+ "pdf.noMaint": "Geen onderhoud geregistreerd",
+ "pro.reasonPdf": "Exporteren naar PDF is beschikbaar in de Pro-versie."
 }

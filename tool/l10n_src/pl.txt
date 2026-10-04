@@ -385,3 +385,13 @@ Data pierwszej rejestracji
 Wpisz datę pierwszej rejestracji
 Od najstarszych
 Od najnowszych
+Wszystkie
+Wkrótce
+Brak zbliżających się terminów
+Eksportuj PDF
+Tworzenie PDF…
+Utworzono {date}
+Nie udało się utworzyć PDF: {error}
+Uwagi
+Brak zapisanych przeglądów
+Eksport do PDF jest dostępny w wersji Pro.

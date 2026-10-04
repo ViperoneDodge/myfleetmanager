@@ -385,5 +385,15 @@
  "vehicle.regDate": "วันที่จดทะเบียนครั้งแรก",
  "edit.regDateNeeded": "กรอกวันที่จดทะเบียนครั้งแรก",
  "sort.oldest": "เก่าสุดก่อน",
- "sort.newest": "ใหม่สุดก่อน"
+ "sort.newest": "ใหม่สุดก่อน",
+ "deadlines.all": "ทั้งหมด",
+ "deadlines.soon": "ใกล้ครบกำหนด",
+ "deadlines.noneSoon": "ไม่มีรายการใกล้ครบกำหนด",
+ "pdf.export": "ส่งออก PDF",
+ "pdf.creating": "กำลังสร้าง PDF…",
+ "pdf.generated": "สร้างเมื่อ {date}",
+ "pdf.error": "สร้าง PDF ไม่ได้: {error}",
+ "pdf.notes": "หมายเหตุ",
+ "pdf.noMaint": "ยังไม่มีการบำรุงรักษาที่บันทึกไว้",
+ "pro.reasonPdf": "การส่งออก PDF ใช้ได้ในเวอร์ชัน Pro"
 }

@@ -385,3 +385,13 @@ Første registreringsdato
 Skriv inn første registreringsdato
 Eldste først
 Nyeste først
+Alle
+Snart
+Ingen kommende frister
+Eksporter PDF
+Lager PDF…
+Opprettet {date}
+Kunne ikke lage PDF: {error}
+Notater
+Ikke noe vedlikehold registrert
+PDF-eksport er tilgjengelig i Pro-versjonen.

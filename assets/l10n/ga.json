@@ -385,5 +385,15 @@
  "vehicle.regDate": "Dáta an chéad chláraithe",
  "edit.regDateNeeded": "Cuir isteach dáta an chéad chláraithe",
  "sort.oldest": "Na cinn is sine ar dtús",
- "sort.newest": "Na cinn is nuaí ar dtús"
+ "sort.newest": "Na cinn is nuaí ar dtús",
+ "deadlines.all": "Gach ceann",
+ "deadlines.soon": "Go luath",
+ "deadlines.noneSoon": "Níl aon spriocdháta ag druidim",
+ "pdf.export": "Easpórtáil PDF",
+ "pdf.creating": "PDF á chruthú…",
+ "pdf.generated": "Cruthaithe {date}",
+ "pdf.error": "Níorbh fhéidir an PDF a chruthú: {error}",
+ "pdf.notes": "Nótaí",
+ "pdf.noMaint": "Níl aon chothabháil taifeadta",
+ "pro.reasonPdf": "Tá easpórtáil PDF ar fáil sa leagan Pro."
 }

@@ -385,3 +385,13 @@ Första registreringsdatum
 Ange första registreringsdatum
 Äldst först
 Nyast först
+Alla
+Snart
+Inga kommande datum
+Exportera PDF
+Skapar PDF…
+Skapad {date}
+Det gick inte att skapa PDF: {error}
+Anteckningar
+Inget underhåll registrerat
+PDF-export finns i Pro-versionen.

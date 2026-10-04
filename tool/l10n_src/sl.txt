@@ -385,3 +385,13 @@ Datum prve registracije
 Vnesite datum prve registracije
 Najstarejša najprej
 Najnovejša najprej
+Vsi
+Kmalu zapadejo
+Ni bližajočih se rokov
+Izvozi PDF
+Ustvarjanje PDF-ja…
+Ustvarjeno {date}
+PDF-ja ni mogoče ustvariti: {error}
+Opombe
+Ni zabeleženega vzdrževanja
+Izvoz v PDF je na voljo v različici Pro.

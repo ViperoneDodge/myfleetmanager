@@ -385,5 +385,15 @@
  "vehicle.regDate": "Dátum prvej evidencie",
  "edit.regDateNeeded": "Zadajte dátum prvej evidencie",
  "sort.oldest": "Od najstarších",
- "sort.newest": "Od najnovších"
+ "sort.newest": "Od najnovších",
+ "deadlines.all": "Všetky",
+ "deadlines.soon": "Čoskoro",
+ "deadlines.noneSoon": "Žiadne blížiace sa termíny",
+ "pdf.export": "Exportovať PDF",
+ "pdf.creating": "Vytváranie PDF…",
+ "pdf.generated": "Vytvorené {date}",
+ "pdf.error": "PDF sa nepodarilo vytvoriť: {error}",
+ "pdf.notes": "Poznámky",
+ "pdf.noMaint": "Žiadna zaznamenaná údržba",
+ "pro.reasonPdf": "Export do PDF je dostupný vo verzii Pro."
 }
