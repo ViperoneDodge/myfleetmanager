@@ -376,5 +376,8 @@
  "pro.limitedCard": "Disponibil cu Pro",
  "pro.reasonLimited": "Cu versiunea gratuită poți folosi până la {n} mașini sau motociclete. Celelalte vehicule rămân vizibile, dar blocate: treci la Pro ca să le deblochezi pe toate.",
  "pro.devNeedCloud": "Pentru codul de dezvoltator ai nevoie de un cont online.",
- "pro.devRevoked": "Codul de dezvoltator a fost dezactivat pentru acest cont."
+ "pro.devRevoked": "Codul de dezvoltator a fost dezactivat pentru acest cont.",
+ "home.groupsHint": "Vezi vehiculele grupurilor",
+ "notify.and": "și",
+ "notify.groupToday": "{what}: expiră azi"
 }

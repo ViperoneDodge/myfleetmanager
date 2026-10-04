@@ -376,5 +376,8 @@
  "pro.limitedCard": "Pro-val elérhető",
  "pro.reasonLimited": "Az ingyenes verzióban legfeljebb {n} autót vagy motort használhatsz. A többi jármű látható marad, de zárolva: válts Pro-ra, hogy mindet feloldd.",
  "pro.devNeedCloud": "A fejlesztői kód használatához online fiók szükséges.",
- "pro.devRevoked": "A fejlesztői kódot ennél a fióknál letiltották."
+ "pro.devRevoked": "A fejlesztői kódot ennél a fióknál letiltották.",
+ "home.groupsHint": "Csoportok járművei",
+ "notify.and": "és",
+ "notify.groupToday": "{what}: ma lejár"
 }

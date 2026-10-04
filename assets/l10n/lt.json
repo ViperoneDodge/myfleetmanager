@@ -376,5 +376,8 @@
  "pro.limitedCard": "Prieinama su Pro",
  "pro.reasonLimited": "Nemokamoje versijoje galite naudoti iki {n} automobilių ar motociklų. Kitos transporto priemonės lieka matomos, bet užrakintos: pereikite prie Pro ir atrakinkite visas.",
  "pro.devNeedCloud": "Kūrėjo kodui naudoti reikia internetinės paskyros.",
- "pro.devRevoked": "Šiai paskyrai kūrėjo kodas išjungtas."
+ "pro.devRevoked": "Šiai paskyrai kūrėjo kodas išjungtas.",
+ "home.groupsHint": "Žiūrėti grupių transporto priemones",
+ "notify.and": "ir",
+ "notify.groupToday": "{what}: baigiasi šiandien"
 }

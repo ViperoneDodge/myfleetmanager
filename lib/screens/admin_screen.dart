@@ -21,7 +21,13 @@ class AdminScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Amministrazione Pro'),
-          bottom: const TabBar(tabs: [
+          bottom: const TabBar(
+              labelColor: Colors.white,
+              unselectedLabelColor: Colors.white70,
+              indicatorColor: Colors.white,
+              indicatorWeight: 3,
+              labelStyle: TextStyle(fontWeight: FontWeight.w600),
+              tabs: [
             Tab(icon: Icon(Icons.shopping_bag_outlined), text: 'Acquistata'),
             Tab(icon: Icon(Icons.key_outlined), text: 'Codice sviluppatore'),
           ]),

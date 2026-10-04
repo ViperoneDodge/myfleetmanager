@@ -376,5 +376,8 @@
  "pro.limitedCard": "Dostupné s Pro",
  "pro.reasonLimited": "V bezplatnej verzii môžete používať až {n} áut alebo motocyklov. Ostatné vozidlá zostanú viditeľné, ale zamknuté: prejdite na Pro a odomknite všetky.",
  "pro.devNeedCloud": "Na použitie vývojárskeho kódu je potrebný online účet.",
- "pro.devRevoked": "Vývojársky kód bol pre tento účet deaktivovaný."
+ "pro.devRevoked": "Vývojársky kód bol pre tento účet deaktivovaný.",
+ "home.groupsHint": "Zobraziť vozidlá skupín",
+ "notify.and": "a",
+ "notify.groupToday": "{what}: vyprší dnes"
 }

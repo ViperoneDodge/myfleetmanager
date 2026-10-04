@@ -376,3 +376,6 @@ Pieejams ar Pro
 Bezmaksas versijā vari izmantot līdz {n} automašīnām vai motocikliem. Pārējie transportlīdzekļi paliek redzami, bet bloķēti: pārej uz Pro, lai atbloķētu visus.
 Izstrādātāja koda izmantošanai vajadzīgs tiešsaistes konts.
 Šim kontam izstrādātāja kods ir atspējots.
+Skatīt grupu transportlīdzekļus
+un
+{what}: termiņš šodien

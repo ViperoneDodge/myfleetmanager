@@ -29,20 +29,68 @@ class DueStatus {
   final Color color;
   final String text;
   final IconData icon;
-  DueStatus(this.color, this.text, this.icon);
+  final String line1;
+  final String line2;
+  DueStatus(this.color, this.text, this.icon, {String? line1, this.line2 = ''})
+      : line1 = line1 ?? text;
+}
+
+const int dueWarnDays = 15;
+const Color dueRed = Color(0xFFC62828);
+const Color dueYellow = Color(0xFFB07A00);
+const Color dueGreen = Color(0xFF2E7D32);
+
+(String, String) _splitAround(String key, int n) {
+  const mark = '\u0001';
+  final t = tr(key, {'n': mark});
+  final i = t.indexOf(mark);
+  if (i < 0) return (tr(key, {'n': n}), '');
+  final before = t.substring(0, i).trim();
+  final after = t.substring(i + mark.length);
+  if (before.isNotEmpty) return (before, '$n$after'.trim());
+  final rest = after.trim();
+  final sp = rest.indexOf(' ');
+  if (sp < 0) return ('$n$after'.trim(), '');
+  return ('$n ${rest.substring(0, sp)}', rest.substring(sp + 1).trim());
+}
+
+(String, String) _splitWords(String t) {
+  final sp = t.indexOf(' ');
+  if (sp < 0) return (t, '');
+  return (t.substring(0, sp), t.substring(sp + 1));
 }
 
 DueStatus dueStatus(DateTime due) {
   final n = daysUntil(due);
+  final Color color;
+  final IconData icon;
+  final String text;
+  final (String, String) lines;
   if (n < 0) {
-    return DueStatus(Colors.red.shade700,
-        n == -1 ? tr('due.yesterday') : tr('due.expiredDays', {'n': -n}), Icons.error);
+    color = dueRed;
+    icon = Icons.error;
+    if (n == -1) {
+      text = tr('due.yesterday');
+      lines = _splitWords(text);
+    } else {
+      text = tr('due.expiredDays', {'n': -n});
+      lines = _splitAround('due.expiredDays', -n);
+    }
+  } else {
+    color = n < dueWarnDays ? dueYellow : dueGreen;
+    icon = n < dueWarnDays ? Icons.warning_amber : Icons.check_circle;
+    if (n == 0) {
+      text = tr('due.today');
+      lines = _splitWords(text);
+    } else if (n == 1) {
+      text = tr('due.tomorrow');
+      lines = _splitWords(text);
+    } else {
+      text = tr('due.inDays', {'n': n});
+      lines = _splitAround('due.inDays', n);
+    }
   }
-  if (n == 0) return DueStatus(Colors.red.shade700, tr('due.today'), Icons.error);
-  if (n == 1) return DueStatus(Colors.deepOrange, tr('due.tomorrow'), Icons.warning_amber);
-  if (n <= 7) return DueStatus(Colors.deepOrange, tr('due.inDays', {'n': n}), Icons.warning_amber);
-  if (n <= 30) return DueStatus(Colors.orange.shade800, tr('due.inDays', {'n': n}), Icons.schedule);
-  return DueStatus(Colors.green.shade700, tr('due.inDays', {'n': n}), Icons.check_circle);
+  return DueStatus(color, text, icon, line1: lines.$1, line2: lines.$2);
 }
 
 IconData vehicleIcon(VehicleType t) {
@@ -107,24 +155,32 @@ class VehicleSilhouette extends StatelessWidget {
 class StatusChip extends StatelessWidget {
   final DateTime due;
   final bool compact;
-  const StatusChip({super.key, required this.due, this.compact = false});
+  final bool twoLines;
+  const StatusChip({super.key, required this.due, this.compact = false, this.twoLines = false});
 
   @override
   Widget build(BuildContext context) {
-    final st = dueStatus(due);
+    final s = dueStatus(due);
     final dark = Theme.of(context).brightness == Brightness.dark;
-    final s = dark ? DueStatus(Color.lerp(st.color, Colors.white, 0.35)!, st.text, st.icon) : st;
+    final color = dark ? Color.lerp(s.color, Colors.white, 0.4)! : s.color;
+    final style = TextStyle(color: color, fontSize: 12, fontWeight: FontWeight.w600, height: 1.25);
+    final split = twoLines && s.line2.isNotEmpty;
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: compact ? 6 : 8, vertical: 3),
+      padding: EdgeInsets.symmetric(horizontal: compact ? 6 : 8, vertical: split ? 4 : 3),
       decoration: BoxDecoration(
-        color: s.color.withValues(alpha: 0.12),
-        borderRadius: BorderRadius.circular(20),
+        color: color.withValues(alpha: dark ? 0.18 : 0.12),
+        borderRadius: BorderRadius.circular(split ? 12 : 20),
       ),
       child: Row(mainAxisSize: MainAxisSize.min, children: [
-        Icon(s.icon, size: 14, color: s.color),
+        Icon(s.icon, size: 14, color: color),
         const SizedBox(width: 4),
-        Text(s.text,
-            style: TextStyle(color: s.color, fontSize: 12, fontWeight: FontWeight.w600)),
+        split
+            ? Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [Text(s.line1, style: style), Text(s.line2, style: style)],
+              )
+            : Text(s.text, style: style),
       ]),
     );
   }

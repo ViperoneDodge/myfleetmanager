@@ -376,5 +376,8 @@
  "pro.limitedCard": "Mit Pro verfügbar",
  "pro.reasonLimited": "In der kostenlosen Version kannst du bis zu {n} Autos oder Motorräder nutzen. Andere Fahrzeuge bleiben sichtbar, aber gesperrt: Mit Pro schaltest du alle frei.",
  "pro.devNeedCloud": "Für den Entwicklercode ist ein Online-Konto nötig.",
- "pro.devRevoked": "Der Entwicklercode wurde für dieses Konto deaktiviert."
+ "pro.devRevoked": "Der Entwicklercode wurde für dieses Konto deaktiviert.",
+ "home.groupsHint": "Fahrzeuge der Gruppen ansehen",
+ "notify.and": "und",
+ "notify.groupToday": "{what}: heute fällig"
 }

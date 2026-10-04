@@ -376,3 +376,6 @@ Disponível com Pro
 Na versão gratuita pode usar até {n} carros ou motas. Os outros veículos ficam visíveis mas bloqueados: passe a Pro para os desbloquear todos.
 É necessária uma conta online para usar o código de programador.
 O código de programador foi desativado para esta conta.
+Ver veículos dos grupos
+e
+{what}: vencem hoje

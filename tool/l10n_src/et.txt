@@ -376,3 +376,6 @@ Saadaval Pro-ga
 Tasuta versioonis saad kasutada kuni {n} autot või mootorratast. Teised sõidukid on nähtavad, kuid lukus: vali Pro, et need kõik avada.
 Arendajakoodi kasutamiseks on vaja võrgukontot.
 Arendajakood on selle konto jaoks keelatud.
+Vaata gruppide sõidukeid
+ja
+{what}: tähtaeg täna

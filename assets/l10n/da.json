@@ -376,5 +376,8 @@
  "pro.limitedCard": "Tilgængelig med Pro",
  "pro.reasonLimited": "I gratisversionen kan du bruge op til {n} biler eller motorcykler. Andre køretøjer er synlige, men låst: opgrader til Pro for at låse dem alle op.",
  "pro.devNeedCloud": "Du skal have en onlinekonto for at bruge udviklerkoden.",
- "pro.devRevoked": "Udviklerkoden er deaktiveret for denne konto."
+ "pro.devRevoked": "Udviklerkoden er deaktiveret for denne konto.",
+ "home.groupsHint": "Se gruppernes køretøjer",
+ "notify.and": "og",
+ "notify.groupToday": "{what}: udløber i dag"
 }

@@ -376,5 +376,8 @@
  "pro.limitedCard": "Available with Pro",
  "pro.reasonLimited": "The free version lets you use up to {n} cars or motorbikes. Other vehicles stay visible but locked: go Pro to unlock them all.",
  "pro.devNeedCloud": "An online account is needed to use the developer code.",
- "pro.devRevoked": "The developer code has been disabled for this account."
+ "pro.devRevoked": "The developer code has been disabled for this account.",
+ "home.groupsHint": "See group vehicles",
+ "notify.and": "and",
+ "notify.groupToday": "{what}: due today"
 }

@@ -376,5 +376,8 @@
  "pro.limitedCard": "Í boði með Pro",
  "pro.reasonLimited": "Í ókeypis útgáfunni geturðu notað allt að {n} bíla eða mótorhjól. Önnur ökutæki sjást en eru læst: fáðu Pro til að opna þau öll.",
  "pro.devNeedCloud": "Netaðgangur þarf til að nota forritarakóðann.",
- "pro.devRevoked": "Forritarakóðinn hefur verið gerður óvirkur fyrir þennan aðgang."
+ "pro.devRevoked": "Forritarakóðinn hefur verið gerður óvirkur fyrir þennan aðgang.",
+ "home.groupsHint": "Sjá ökutæki hópa",
+ "notify.and": "og",
+ "notify.groupToday": "{what}: rennur út í dag"
 }

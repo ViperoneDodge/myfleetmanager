@@ -376,3 +376,6 @@ Tilgjengelig med Pro
 I gratisversjonen kan du bruke opptil {n} biler eller motorsykler. Andre kjøretøy er synlige, men låst: skaff Pro for å låse opp alle.
 Du trenger en nettkonto for å bruke utviklerkoden.
 Utviklerkoden er deaktivert for denne kontoen.
+Se gruppenes kjøretøy
+og
+{what}: forfaller i dag

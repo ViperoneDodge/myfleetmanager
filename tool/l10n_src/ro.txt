@@ -376,3 +376,6 @@ Disponibil cu Pro
 Cu versiunea gratuită poți folosi până la {n} mașini sau motociclete. Celelalte vehicule rămân vizibile, dar blocate: treci la Pro ca să le deblochezi pe toate.
 Pentru codul de dezvoltator ai nevoie de un cont online.
 Codul de dezvoltator a fost dezactivat pentru acest cont.
+Vezi vehiculele grupurilor
+și
+{what}: expiră azi

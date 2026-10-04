@@ -40,11 +40,13 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
   Future<void> _pickDate() async {
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
+    final inserted = r.insertedOn;
+    final last = (inserted != null && inserted.isBefore(today)) ? inserted : today;
     final d = await showDatePicker(
       context: context,
-      initialDate: r.date.isAfter(today) ? today : r.date,
+      initialDate: r.date.isAfter(last) ? last : r.date,
       firstDate: DateTime(1980),
-      lastDate: today,
+      lastDate: last,
     );
     if (d != null) setState(() => r.date = d);
   }

@@ -376,3 +376,6 @@ Beschikbaar met Pro
 Met de gratis versie gebruik je maximaal {n} auto's of motoren. Andere voertuigen blijven zichtbaar maar vergrendeld: neem Pro om ze allemaal te ontgrendelen.
 Voor de ontwikkelaarscode is een online account nodig.
 De ontwikkelaarscode is voor dit account uitgeschakeld.
+Voertuigen van groepen bekijken
+en
+{what}: vandaag verlopen

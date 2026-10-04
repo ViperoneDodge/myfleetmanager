@@ -376,3 +376,6 @@ Dostupné s Pro
 V bezplatnej verzii môžete používať až {n} áut alebo motocyklov. Ostatné vozidlá zostanú viditeľné, ale zamknuté: prejdite na Pro a odomknite všetky.
 Na použitie vývojárskeho kódu je potrebný online účet.
 Vývojársky kód bol pre tento účet deaktivovaný.
+Zobraziť vozidlá skupín
+a
+{what}: vyprší dnes

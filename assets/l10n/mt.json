@@ -376,5 +376,8 @@
  "pro.limitedCard": "Disponibbli b'Pro",
  "pro.reasonLimited": "Bil-verżjoni b'xejn tista' tuża sa {n} karozzi jew muturi. Il-vetturi l-oħra jibqgħu jidhru iżda msakkra: għaddi għal Pro biex tiftaħhom kollha.",
  "pro.devNeedCloud": "Biex tuża l-kodiċi tal-iżviluppatur għandek bżonn kont online.",
- "pro.devRevoked": "Il-kodiċi tal-iżviluppatur ġie diżattivat għal dan il-kont."
+ "pro.devRevoked": "Il-kodiċi tal-iżviluppatur ġie diżattivat għal dan il-kont.",
+ "home.groupsHint": "Ara l-vetturi tal-gruppi",
+ "notify.and": "u",
+ "notify.groupToday": "{what}: jiskadu llum"
 }

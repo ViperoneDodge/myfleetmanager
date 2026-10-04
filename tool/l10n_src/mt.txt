@@ -376,3 +376,6 @@ Disponibbli b'Pro
 Bil-verżjoni b'xejn tista' tuża sa {n} karozzi jew muturi. Il-vetturi l-oħra jibqgħu jidhru iżda msakkra: għaddi għal Pro biex tiftaħhom kollha.
 Biex tuża l-kodiċi tal-iżviluppatur għandek bżonn kont online.
 Il-kodiċi tal-iżviluppatur ġie diżattivat għal dan il-kont.
+Ara l-vetturi tal-gruppi
+u
+{what}: jiskadu llum

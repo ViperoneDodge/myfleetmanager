@@ -376,3 +376,6 @@ Có trong bản Pro
 Bản miễn phí cho phép dùng tối đa {n} ô tô hoặc xe máy. Các xe khác vẫn hiển thị nhưng bị khóa: nâng cấp Pro để mở khóa tất cả.
 Cần tài khoản trực tuyến để dùng mã nhà phát triển.
 Mã nhà phát triển đã bị vô hiệu hóa cho tài khoản này.
+Xem xe của nhóm
+và
+{what}: hết hạn hôm nay

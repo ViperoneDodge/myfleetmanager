@@ -376,3 +376,6 @@ pro.limitedCard
 pro.reasonLimited
 pro.devNeedCloud
 pro.devRevoked
+home.groupsHint
+notify.and
+notify.groupToday

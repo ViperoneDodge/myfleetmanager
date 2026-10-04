@@ -376,3 +376,6 @@ Landbúnaðartæki
 Í ókeypis útgáfunni geturðu notað allt að {n} bíla eða mótorhjól. Önnur ökutæki sjást en eru læst: fáðu Pro til að opna þau öll.
 Netaðgangur þarf til að nota forritarakóðann.
 Forritarakóðinn hefur verið gerður óvirkur fyrir þennan aðgang.
+Sjá ökutæki hópa
+og
+{what}: rennur út í dag

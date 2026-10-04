@@ -376,5 +376,8 @@
  "pro.limitedCard": "Disponible con Pro",
  "pro.reasonLimited": "Con la versión gratuita puedes usar hasta {n} coches o motos. Los demás vehículos siguen visibles pero bloqueados: pásate a Pro para desbloquearlos todos.",
  "pro.devNeedCloud": "Para usar el código de desarrollador necesitas una cuenta en línea.",
- "pro.devRevoked": "El código de desarrollador se ha desactivado para esta cuenta."
+ "pro.devRevoked": "El código de desarrollador se ha desactivado para esta cuenta.",
+ "home.groupsHint": "Ver vehículos de los grupos",
+ "notify.and": "y",
+ "notify.groupToday": "{what}: vencen hoy"
 }

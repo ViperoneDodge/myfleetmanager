@@ -376,3 +376,6 @@ Pro-val elérhető
 Az ingyenes verzióban legfeljebb {n} autót vagy motort használhatsz. A többi jármű látható marad, de zárolva: válts Pro-ra, hogy mindet feloldd.
 A fejlesztői kód használatához online fiók szükséges.
 A fejlesztői kódot ennél a fióknál letiltották.
+Csoportok járművei
+és
+{what}: ma lejár

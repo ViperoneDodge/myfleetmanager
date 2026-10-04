@@ -376,3 +376,6 @@ Tersedia dengan Pro
 Dengan versi gratis Anda dapat memakai hingga {n} mobil atau motor. Kendaraan lain tetap terlihat tetapi terkunci: beralih ke Pro untuk membuka semuanya.
 Diperlukan akun online untuk memakai kode pengembang.
 Kode pengembang telah dinonaktifkan untuk akun ini.
+Lihat kendaraan grup
+dan
+{what}: jatuh tempo hari ini

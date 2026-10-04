@@ -376,5 +376,8 @@
  "pro.limitedCard": "Có trong bản Pro",
  "pro.reasonLimited": "Bản miễn phí cho phép dùng tối đa {n} ô tô hoặc xe máy. Các xe khác vẫn hiển thị nhưng bị khóa: nâng cấp Pro để mở khóa tất cả.",
  "pro.devNeedCloud": "Cần tài khoản trực tuyến để dùng mã nhà phát triển.",
- "pro.devRevoked": "Mã nhà phát triển đã bị vô hiệu hóa cho tài khoản này."
+ "pro.devRevoked": "Mã nhà phát triển đã bị vô hiệu hóa cho tài khoản này.",
+ "home.groupsHint": "Xem xe của nhóm",
+ "notify.and": "và",
+ "notify.groupToday": "{what}: hết hạn hôm nay"
 }

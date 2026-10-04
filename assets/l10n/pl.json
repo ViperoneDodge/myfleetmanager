@@ -376,5 +376,8 @@
  "pro.limitedCard": "Dostępne w Pro",
  "pro.reasonLimited": "W wersji bezpłatnej możesz używać do {n} samochodów lub motocykli. Pozostałe pojazdy są widoczne, ale zablokowane: przejdź na Pro, aby odblokować wszystkie.",
  "pro.devNeedCloud": "Do użycia kodu dewelopera potrzebne jest konto online.",
- "pro.devRevoked": "Kod dewelopera został wyłączony dla tego konta."
+ "pro.devRevoked": "Kod dewelopera został wyłączony dla tego konta.",
+ "home.groupsHint": "Zobacz pojazdy grup",
+ "notify.and": "i",
+ "notify.groupToday": "{what}: upływa dziś"
 }

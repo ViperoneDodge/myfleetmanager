@@ -376,5 +376,8 @@
  "pro.limitedCard": "Tersedia dengan Pro",
  "pro.reasonLimited": "Dengan versi gratis Anda dapat memakai hingga {n} mobil atau motor. Kendaraan lain tetap terlihat tetapi terkunci: beralih ke Pro untuk membuka semuanya.",
  "pro.devNeedCloud": "Diperlukan akun online untuk memakai kode pengembang.",
- "pro.devRevoked": "Kode pengembang telah dinonaktifkan untuk akun ini."
+ "pro.devRevoked": "Kode pengembang telah dinonaktifkan untuk akun ini.",
+ "home.groupsHint": "Lihat kendaraan grup",
+ "notify.and": "dan",
+ "notify.groupToday": "{what}: jatuh tempo hari ini"
 }

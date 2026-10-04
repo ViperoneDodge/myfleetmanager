@@ -376,5 +376,8 @@
  "pro.limitedCard": "Na voljo s Pro",
  "pro.reasonLimited": "V brezplačni različici lahko uporabljaš do {n} avtomobilov ali motociklov. Druga vozila ostanejo vidna, a zaklenjena: s Pro jih odkleneš vse.",
  "pro.devNeedCloud": "Za razvijalsko kodo potrebuješ spletni račun.",
- "pro.devRevoked": "Razvijalska koda je bila za ta račun onemogočena."
+ "pro.devRevoked": "Razvijalska koda je bila za ta račun onemogočena.",
+ "home.groupsHint": "Prikaži vozila skupin",
+ "notify.and": "in",
+ "notify.groupToday": "{what}: poteče danes"
 }

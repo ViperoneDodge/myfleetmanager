@@ -376,3 +376,6 @@ Ingår i Pro
 I gratisversionen kan du använda upp till {n} bilar eller motorcyklar. Övriga fordon syns men är låsta: skaffa Pro för att låsa upp alla.
 Du behöver ett onlinekonto för att använda utvecklarkoden.
 Utvecklarkoden har inaktiverats för det här kontot.
+Visa gruppernas fordon
+och
+{what}: förfaller i dag

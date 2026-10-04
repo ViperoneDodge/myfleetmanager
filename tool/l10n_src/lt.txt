@@ -376,3 +376,6 @@ Prieinama su Pro
 Nemokamoje versijoje galite naudoti iki {n} automobilių ar motociklų. Kitos transporto priemonės lieka matomos, bet užrakintos: pereikite prie Pro ir atrakinkite visas.
 Kūrėjo kodui naudoti reikia internetinės paskyros.
 Šiai paskyrai kūrėjo kodas išjungtas.
+Žiūrėti grupių transporto priemones
+ir
+{what}: baigiasi šiandien

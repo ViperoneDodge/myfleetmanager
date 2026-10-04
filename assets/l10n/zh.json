@@ -376,5 +376,8 @@
  "pro.limitedCard": "Pro 版可用",
  "pro.reasonLimited": "免费版最多可使用 {n} 辆汽车或摩托车。其他车辆仍可见但已锁定：升级 Pro 即可全部解锁。",
  "pro.devNeedCloud": "使用开发者代码需要在线账号。",
- "pro.devRevoked": "此账号的开发者代码已被停用。"
+ "pro.devRevoked": "此账号的开发者代码已被停用。",
+ "home.groupsHint": "查看群组车辆",
+ "notify.and": "和",
+ "notify.groupToday": "{what}：今天到期"
 }

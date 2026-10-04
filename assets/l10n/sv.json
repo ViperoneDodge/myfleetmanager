@@ -376,5 +376,8 @@
  "pro.limitedCard": "Ingår i Pro",
  "pro.reasonLimited": "I gratisversionen kan du använda upp till {n} bilar eller motorcyklar. Övriga fordon syns men är låsta: skaffa Pro för att låsa upp alla.",
  "pro.devNeedCloud": "Du behöver ett onlinekonto för att använda utvecklarkoden.",
- "pro.devRevoked": "Utvecklarkoden har inaktiverats för det här kontot."
+ "pro.devRevoked": "Utvecklarkoden har inaktiverats för det här kontot.",
+ "home.groupsHint": "Visa gruppernas fordon",
+ "notify.and": "och",
+ "notify.groupToday": "{what}: förfaller i dag"
 }

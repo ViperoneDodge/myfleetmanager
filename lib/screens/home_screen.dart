@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return ListenableBuilder(
       listenable: appState,
       builder: (context, _) {
-        final titles = [tr('tab.vehicles'), tr('tab.family'), tr('tab.deadlines')];
+        final titles = [tr('fleet.mine'), tr('tab.family'), tr('tab.deadlines')];
         Widget body;
         switch (_tab) {
           case 1:
@@ -181,8 +181,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _vehiclesTab() {
-    final all = appState.vehicles;
+    final all = appState.vehicles.where(appState.isPersonal).toList();
     final list = _filter == null ? all : all.where((v) => v.type == _filter).toList();
+    final hasGroupVehicles = appState.vehicles.any((v) => !appState.isPersonal(v));
     final limited = appState.limitedIds;
     return RefreshIndicator(
       onRefresh: appState.retrySync,
@@ -225,11 +226,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: const TextStyle(fontSize: 26, fontFamily: handFont)),
                 const SizedBox(height: 4),
                 Text(tr('home.emptyHint'), textAlign: TextAlign.center),
+                if (all.isEmpty && hasGroupVehicles) ...[
+                  const SizedBox(height: 16),
+                  OutlinedButton.icon(
+                    icon: const Icon(Icons.groups_outlined),
+                    label: Text(tr('home.groupsHint')),
+                    onPressed: () => setState(() => _tab = 1),
+                  ),
+                ],
               ]),
             ),
           ...list.map((v) => VehicleCard(
                 vehicle: v,
-                badge: appState.isPersonal(v) ? null : appState.fleetLabel(v),
                 selected: _twoPane && v.id == _selectedId,
                 limited: limited.contains(v.id),
                 onTap: () => limited.contains(v.id)
@@ -253,33 +261,79 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _deadlinesTab() {
-    final items = <({Vehicle v, Deadline d})>[];
+    final groups = <({Vehicle v, List<Deadline> ds})>[];
     for (final v in appState.activeVehicles) {
-      for (final d in v.activeDeadlines) {
-        items.add((v: v, d: d));
-      }
+      final ds = v.activeDeadlines.toList()..sort((a, b) => a.dueDate!.compareTo(b.dueDate!));
+      if (ds.isNotEmpty) groups.add((v: v, ds: ds));
     }
-    items.sort((a, b) => a.d.dueDate!.compareTo(b.d.dueDate!));
-    if (items.isEmpty) {
+    groups.sort((a, b) => a.ds.first.dueDate!.compareTo(b.ds.first.dueDate!));
+    if (groups.isEmpty) {
       return Center(child: Text(tr('deadlines.empty')));
     }
     final showFleet = appState.isCloud && appState.data.groups.isNotEmpty;
-    return ListView.separated(
-      padding: const EdgeInsets.fromLTRB(4, 8, 8, 24),
-      itemCount: items.length,
-      separatorBuilder: (_, __) => const Divider(height: 1),
+    final scheme = Theme.of(context).colorScheme;
+    return ListView.builder(
+      padding: const EdgeInsets.fromLTRB(6, 8, 10, 24),
+      itemCount: groups.length,
       itemBuilder: (context, i) {
-        final it = items[i];
-        final name = it.v.name.isEmpty ? it.v.plate : it.v.name;
-        return ListTile(
-          contentPadding: const EdgeInsets.symmetric(horizontal: 8),
-          leading: VehicleAvatar(vehicle: it.v, size: 44),
-          title: Text(it.d.dueLabel,
-              style: const TextStyle(fontFamily: handFont, fontSize: 20)),
-          subtitle: Text(
-              '$name · ${fmtDate(it.d.dueDate)}${showFleet ? '\n${appState.fleetLabel(it.v)}' : ''}'),
-          trailing: StatusChip(due: it.d.dueDate!, compact: true),
-          onTap: () => _openDetail(it.v),
+        final g = groups[i];
+        final name = g.v.name.isEmpty ? g.v.plate : g.v.name;
+        return Card(
+          margin: const EdgeInsets.symmetric(vertical: 5),
+          clipBehavior: Clip.antiAlias,
+          child: Column(children: [
+            InkWell(
+              onTap: () => _openDetail(g.v),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(10, 10, 10, 8),
+                child: Row(children: [
+                  VehicleAvatar(vehicle: g.v, size: 44),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(name,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(fontFamily: handFont, fontSize: 22)),
+                      if (showFleet)
+                        Text(appState.fleetLabel(g.v),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
+                    ]),
+                  ),
+                ]),
+              ),
+            ),
+            const Divider(height: 1),
+            for (var k = 0; k < g.ds.length; k++) ...[
+              if (k > 0) Divider(height: 1, indent: 12, endIndent: 12, color: scheme.outlineVariant),
+              InkWell(
+                onTap: () => _openDetail(g.v),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(14, 8, 10, 8),
+                  child: Row(children: [
+                    Expanded(
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        FittedBox(
+                          fit: BoxFit.scaleDown,
+                          alignment: Alignment.centerLeft,
+                          child: Text(g.ds[k].dueLabel,
+                              maxLines: 1,
+                              softWrap: false,
+                              style: const TextStyle(fontFamily: handFont, fontSize: 19)),
+                        ),
+                        Text(fmtDate(g.ds[k].dueDate),
+                            style: TextStyle(fontSize: 13, color: scheme.onSurfaceVariant)),
+                      ]),
+                    ),
+                    const SizedBox(width: 8),
+                    StatusChip(due: g.ds[k].dueDate!, compact: true, twoLines: true),
+                  ]),
+                ),
+              ),
+            ],
+          ]),
         );
       },
     );

@@ -210,6 +210,7 @@ class MaintenanceRecord {
 
   Set<String> items;
   String notes;
+  int createdAt;
 
   MaintenanceRecord({
     String? id,
@@ -217,8 +218,10 @@ class MaintenanceRecord {
     this.km,
     Set<String>? items,
     this.notes = '',
+    int? createdAt,
   })  : id = id ?? newId(8),
-        items = items ?? <String>{};
+        items = items ?? <String>{},
+        createdAt = createdAt ?? DateTime.now().millisecondsSinceEpoch;
 
   Map<String, dynamic> toJson() => {
         'id': id,
@@ -226,6 +229,7 @@ class MaintenanceRecord {
         'km': km,
         'items': items.toList(),
         'notes': notes,
+        'createdAt': createdAt,
       };
 
   factory MaintenanceRecord.fromJson(Map<String, dynamic> j) => MaintenanceRecord(
@@ -234,7 +238,14 @@ class MaintenanceRecord {
         km: (j['km'] as num?)?.toInt(),
         items: ((j['items'] as List?) ?? const []).map((e) => e.toString()).toSet(),
         notes: j['notes'] as String? ?? '',
+        createdAt: (j['createdAt'] as num?)?.toInt() ?? 0,
       );
+
+  DateTime? get insertedOn {
+    if (createdAt <= 0) return null;
+    final c = DateTime.fromMillisecondsSinceEpoch(createdAt);
+    return DateTime(c.year, c.month, c.day);
+  }
 
   MaintenanceRecord copy() => MaintenanceRecord.fromJson(toJson());
 }

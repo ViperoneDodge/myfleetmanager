@@ -376,3 +376,6 @@ Pro ile kullanılabilir
 Ücretsiz sürümde en fazla {n} otomobil veya motosiklet kullanabilirsiniz. Diğer araçlar görünür ama kilitli kalır: hepsini açmak için Pro'ya geçin.
 Geliştirici kodunu kullanmak için çevrimiçi hesap gerekir.
 Bu hesap için geliştirici kodu devre dışı bırakıldı.
+Grup araçlarını gör
+ve
+{what}: bugün sona eriyor

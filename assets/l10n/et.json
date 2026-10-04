@@ -376,5 +376,8 @@
  "pro.limitedCard": "Saadaval Pro-ga",
  "pro.reasonLimited": "Tasuta versioonis saad kasutada kuni {n} autot või mootorratast. Teised sõidukid on nähtavad, kuid lukus: vali Pro, et need kõik avada.",
  "pro.devNeedCloud": "Arendajakoodi kasutamiseks on vaja võrgukontot.",
- "pro.devRevoked": "Arendajakood on selle konto jaoks keelatud."
+ "pro.devRevoked": "Arendajakood on selle konto jaoks keelatud.",
+ "home.groupsHint": "Vaata gruppide sõidukeid",
+ "notify.and": "ja",
+ "notify.groupToday": "{what}: tähtaeg täna"
 }

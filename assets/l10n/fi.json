@@ -376,5 +376,8 @@
  "pro.limitedCard": "Saatavilla Pro-versiossa",
  "pro.reasonLimited": "Ilmaisversiossa voit käyttää enintään {n} autoa tai moottoripyörää. Muut ajoneuvot näkyvät mutta ovat lukittuja: avaa kaikki Pro-versiolla.",
  "pro.devNeedCloud": "Kehittäjäkoodin käyttö vaatii verkkotilin.",
- "pro.devRevoked": "Kehittäjäkoodi on poistettu käytöstä tältä tililtä."
+ "pro.devRevoked": "Kehittäjäkoodi on poistettu käytöstä tältä tililtä.",
+ "home.groupsHint": "Näytä ryhmien ajoneuvot",
+ "notify.and": "ja",
+ "notify.groupToday": "{what}: erääntyy tänään"
 }

@@ -376,5 +376,8 @@
  "pro.limitedCard": "Pro ile kullanılabilir",
  "pro.reasonLimited": "Ücretsiz sürümde en fazla {n} otomobil veya motosiklet kullanabilirsiniz. Diğer araçlar görünür ama kilitli kalır: hepsini açmak için Pro'ya geçin.",
  "pro.devNeedCloud": "Geliştirici kodunu kullanmak için çevrimiçi hesap gerekir.",
- "pro.devRevoked": "Bu hesap için geliştirici kodu devre dışı bırakıldı."
+ "pro.devRevoked": "Bu hesap için geliştirici kodu devre dışı bırakıldı.",
+ "home.groupsHint": "Grup araçlarını gör",
+ "notify.and": "ve",
+ "notify.groupToday": "{what}: bugün sona eriyor"
 }

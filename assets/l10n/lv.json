@@ -376,5 +376,8 @@
  "pro.limitedCard": "Pieejams ar Pro",
  "pro.reasonLimited": "Bezmaksas versijā vari izmantot līdz {n} automašīnām vai motocikliem. Pārējie transportlīdzekļi paliek redzami, bet bloķēti: pārej uz Pro, lai atbloķētu visus.",
  "pro.devNeedCloud": "Izstrādātāja koda izmantošanai vajadzīgs tiešsaistes konts.",
- "pro.devRevoked": "Šim kontam izstrādātāja kods ir atspējots."
+ "pro.devRevoked": "Šim kontam izstrādātāja kods ir atspējots.",
+ "home.groupsHint": "Skatīt grupu transportlīdzekļus",
+ "notify.and": "un",
+ "notify.groupToday": "{what}: termiņš šodien"
 }

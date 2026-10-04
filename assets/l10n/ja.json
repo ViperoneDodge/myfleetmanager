@@ -376,5 +376,8 @@
  "pro.limitedCard": "Pro で利用可能",
  "pro.reasonLimited": "無料版では自動車またはバイクを {n} 台まで利用できます。その他の車両は表示されますがロックされます。Pro ですべて解除できます。",
  "pro.devNeedCloud": "開発者コードを使うにはオンラインアカウントが必要です。",
- "pro.devRevoked": "このアカウントの開発者コードは無効化されました。"
+ "pro.devRevoked": "このアカウントの開発者コードは無効化されました。",
+ "home.groupsHint": "グループの車両を見る",
+ "notify.and": "と",
+ "notify.groupToday": "{what}：本日期限"
 }

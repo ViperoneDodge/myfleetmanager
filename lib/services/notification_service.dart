@@ -180,18 +180,31 @@ class NotificationService {
     final fmt = DateFormat('dd/MM/yyyy');
 
     for (final v in vehicles.where((v) => !v.deleted)) {
+      final vName = v.name.isEmpty ? v.plate : '${v.name} (${v.plate})';
+      final buckets = <String, ({tz.TZDateTime when, int off, DateTime due, List<String> what})>{};
       for (final d in v.activeDeadlines) {
         final due = d.dueDate!;
         for (final off in s.offsets) {
           final day = DateTime(due.year, due.month, due.day - off);
           final when = tz.TZDateTime(tz.local, day.year, day.month, day.day, s.hour, s.minute);
           if (!when.isAfter(now)) continue;
-          final vName = v.name.isEmpty ? v.plate : '${v.name} (${v.plate})';
-          final title = off == 0
-              ? tr('notify.titleToday', {'what': d.dueLabel})
-              : tr('notify.titleSoon', {'what': d.dueLabel, 'when': _whenLabel(off)});
+          final key = '${when.millisecondsSinceEpoch}|$off';
+          buckets.putIfAbsent(key, () => (when: when, off: off, due: due, what: <String>[])).what.add(d.dueLabel);
+        }
+      }
+      for (final b in buckets.values) {
+        if (b.what.length == 1) {
+          final title = b.off == 0
+              ? tr('notify.titleToday', {'what': b.what.first})
+              : tr('notify.titleSoon', {'what': b.what.first, 'when': _whenLabel(b.off)});
           items.add(_Pending(
-              when, title, tr('notify.body', {'vehicle': vName, 'date': fmt.format(due)})));
+              b.when, title, tr('notify.body', {'vehicle': vName, 'date': fmt.format(b.due)})));
+        } else {
+          final list = '${b.what.sublist(0, b.what.length - 1).join(', ')} ${tr('notify.and')} ${b.what.last}';
+          final body = b.off == 0
+              ? tr('notify.groupToday', {'what': list})
+              : tr('notify.titleSoon', {'what': list, 'when': _whenLabel(b.off)});
+          items.add(_Pending(b.when, vName, '$body · ${fmt.format(b.due)}'));
         }
       }
     }

@@ -376,5 +376,8 @@
  "pro.limitedCard": "Beschikbaar met Pro",
  "pro.reasonLimited": "Met de gratis versie gebruik je maximaal {n} auto's of motoren. Andere voertuigen blijven zichtbaar maar vergrendeld: neem Pro om ze allemaal te ontgrendelen.",
  "pro.devNeedCloud": "Voor de ontwikkelaarscode is een online account nodig.",
- "pro.devRevoked": "De ontwikkelaarscode is voor dit account uitgeschakeld."
+ "pro.devRevoked": "De ontwikkelaarscode is voor dit account uitgeschakeld.",
+ "home.groupsHint": "Voertuigen van groepen bekijken",
+ "notify.and": "en",
+ "notify.groupToday": "{what}: vandaag verlopen"
 }

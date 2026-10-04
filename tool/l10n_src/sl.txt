@@ -376,3 +376,6 @@ Na voljo s Pro
 V brezplačni različici lahko uporabljaš do {n} avtomobilov ali motociklov. Druga vozila ostanejo vidna, a zaklenjena: s Pro jih odkleneš vse.
 Za razvijalsko kodo potrebuješ spletni račun.
 Razvijalska koda je bila za ta račun onemogočena.
+Prikaži vozila skupin
+in
+{what}: poteče danes
