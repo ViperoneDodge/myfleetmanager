@@ -424,3 +424,5 @@ Sid attwali: {name}
 {name} issa huwa s-sid ta' {vehicle}
 Rwol ta' {name}
 Agħfas fuq membru biex tibdel ir-rwol tiegħu. Min jidħol bil-kodiċi tal-istedina jista' biss jara.
+Test moqri
+Test ikkopjat

@@ -424,5 +424,7 @@
  "role.currentOwner": "Sid attwali: {name}",
  "role.ownerAssigned": "{name} issa huwa s-sid ta' {vehicle}",
  "role.changeFor": "Rwol ta' {name}",
- "role.hint": "Agħfas fuq membru biex tibdel ir-rwol tiegħu. Min jidħol bil-kodiċi tal-istedina jista' biss jara."
+ "role.hint": "Agħfas fuq membru biex tibdel ir-rwol tiegħu. Min jidħol bil-kodiċi tal-istedina jista' biss jara.",
+ "ocr.rawText": "Test moqri",
+ "ocr.rawCopied": "Test ikkopjat"
 }

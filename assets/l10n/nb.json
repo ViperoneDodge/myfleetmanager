@@ -424,5 +424,7 @@
  "role.currentOwner": "Nåværende eier: {name}",
  "role.ownerAssigned": "{name} eier nå {vehicle}",
  "role.changeFor": "Rolle for {name}",
- "role.hint": "Trykk på et medlem for å endre rollen. De som blir med via invitasjonskoden, har bare visning."
+ "role.hint": "Trykk på et medlem for å endre rollen. De som blir med via invitasjonskoden, har bare visning.",
+ "ocr.rawText": "Lest tekst",
+ "ocr.rawCopied": "Tekst kopiert"
 }

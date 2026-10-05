@@ -424,5 +424,7 @@
  "role.currentOwner": "Praegune omanik: {name}",
  "role.ownerAssigned": "{name} on nüüd sõiduki {vehicle} omanik",
  "role.changeFor": "Roll: {name}",
- "role.hint": "Puuduta liiget, et tema rolli muuta. Kutsekoodiga liitujad saavad ainult vaadata."
+ "role.hint": "Puuduta liiget, et tema rolli muuta. Kutsekoodiga liitujad saavad ainult vaadata.",
+ "ocr.rawText": "Loetud tekst",
+ "ocr.rawCopied": "Tekst kopeeritud"
 }

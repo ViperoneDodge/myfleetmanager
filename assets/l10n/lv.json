@@ -424,5 +424,7 @@
  "role.currentOwner": "Pašreizējais īpašnieks: {name}",
  "role.ownerAssigned": "{name} tagad ir {vehicle} īpašnieks",
  "role.changeFor": "Loma: {name}",
- "role.hint": "Pieskarieties dalībniekam, lai mainītu lomu. Ar ielūguma kodu pievienojušies var tikai skatīt."
+ "role.hint": "Pieskarieties dalībniekam, lai mainītu lomu. Ar ielūguma kodu pievienojušies var tikai skatīt.",
+ "ocr.rawText": "Nolasītais teksts",
+ "ocr.rawCopied": "Teksts nokopēts"
 }

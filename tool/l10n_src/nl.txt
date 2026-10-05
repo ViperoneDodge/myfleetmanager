@@ -424,3 +424,5 @@ Huidige eigenaar: {name}
 {name} is nu eigenaar van {vehicle}
 Rol van {name}
 Tik op een lid om de rol te wijzigen. Wie met de uitnodigingscode lid wordt, kan alleen bekijken.
+Gelezen tekst
+Tekst gekopieerd

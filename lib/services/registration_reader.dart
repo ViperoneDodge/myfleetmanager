@@ -75,7 +75,14 @@ class RegistrationReader {
       s.length == 17 &&
       RegExp(r'^[A-HJ-NPR-Z0-9]{17}$').hasMatch(s) &&
       RegExp(r'\d').allMatches(s).length >= 4 &&
-      RegExp(r'[A-Z]').allMatches(s).length >= 2;
+      RegExp(r'[A-Z]').allMatches(s).length >= 2 &&
+      RegExp(r'\d{4}$').hasMatch(s);
+
+  static String? _vinFrom(String raw) {
+    if (raw.length != 17 || RegExp(r'\d').allMatches(raw).length < 3) return null;
+    final v = _vinFix(raw);
+    return _vinOk(v) ? v : null;
+  }
 
   static String _num(String s) =>
       s.replaceAll(',', '.').replaceAll(RegExp(r'\.0+$'), '').replaceFirst(RegExp(r'^0+(?=\d)'), '');
@@ -119,14 +126,18 @@ class RegistrationReader {
 
     final eLabel = RegExp(r'(?:^|[\s(])E\s?[.)]?\s*[:\-]?\s*([A-Z0-9][A-Z0-9 ]{16,22})').firstMatch(flat);
     final eVin = eLabel == null ? '' : eLabel.group(1)!.replaceAll(' ', '');
-    if (eVin.length >= 17 && _vinOk(_vinFix(eVin.substring(0, 17)))) {
-      data.vin = _vinFix(eVin.substring(0, 17));
-    } else {
-      for (final m in RegExp(r'\b[A-Z0-9]{17}\b').allMatches(flat)) {
-        final v = _vinFix(m.group(0)!);
-        if (_vinOk(v)) {
-          data.vin = v;
-          break;
+    if (eVin.length >= 17) data.vin = _vinFrom(eVin.substring(0, 17));
+    if (data.vin == null) {
+      final tokens = RegExp(r'[A-Z0-9]+').allMatches(flat).map((m) => m.group(0)!).toList();
+      for (var i = 0; i < tokens.length && data.vin == null; i++) {
+        var joined = '';
+        for (var k = i; k < tokens.length && k < i + 3; k++) {
+          joined += tokens[k];
+          if (joined.length > 17) break;
+          if (joined.length == 17) {
+            data.vin = _vinFrom(joined);
+            break;
+          }
         }
       }
     }

@@ -424,3 +424,5 @@ Nuværende ejer: {name}
 {name} ejer nu {vehicle}
 Rolle for {name}
 Tryk på et medlem for at ændre rollen. Den, der deltager med invitationskoden, har kun visning.
+Læst tekst
+Tekst kopieret

@@ -424,3 +424,5 @@ Mevcut sahip: {name}
 {name} artık {vehicle} aracının sahibi
 Rol: {name}
 Rolünü değiştirmek için bir üyeye dokunun. Davet koduyla katılanlar yalnızca görüntüleyebilir.
+Okunan metin
+Metin kopyalandı

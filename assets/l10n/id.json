@@ -424,5 +424,7 @@
  "role.currentOwner": "Pemilik saat ini: {name}",
  "role.ownerAssigned": "{name} sekarang pemilik {vehicle}",
  "role.changeFor": "Peran {name}",
- "role.hint": "Ketuk anggota untuk mengubah perannya. Yang bergabung dengan kode undangan hanya dapat melihat."
+ "role.hint": "Ketuk anggota untuk mengubah perannya. Yang bergabung dengan kode undangan hanya dapat melihat.",
+ "ocr.rawText": "Teks terbaca",
+ "ocr.rawCopied": "Teks disalin"
 }

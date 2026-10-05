@@ -424,5 +424,7 @@
  "role.currentOwner": "Proprietar actual: {name}",
  "role.ownerAssigned": "{name} este acum proprietarul vehiculului {vehicle}",
  "role.changeFor": "Rolul lui {name}",
- "role.hint": "Atinge un membru pentru a-i schimba rolul. Cine intră cu codul de invitație are doar vizualizare."
+ "role.hint": "Atinge un membru pentru a-i schimba rolul. Cine intră cu codul de invitație are doar vizualizare.",
+ "ocr.rawText": "Text citit",
+ "ocr.rawCopied": "Text copiat"
 }

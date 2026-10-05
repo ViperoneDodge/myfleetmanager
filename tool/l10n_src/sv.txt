@@ -424,3 +424,5 @@ Nuvarande ägare: {name}
 {name} äger nu {vehicle}
 Roll för {name}
 Tryck på en medlem för att ändra rollen. Den som går med via inbjudningskoden får endast visning.
+Läst text
+Texten kopierad

@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:open_filex/open_filex.dart';
 
@@ -539,8 +540,10 @@ class VehicleDetailScreen extends StatelessWidget {
       ),
     );
     RegistrationData data;
+    String raw;
     try {
-      data = RegistrationReader.parse(await RegistrationReader.readText(f.path));
+      raw = await RegistrationReader.readText(f.path);
+      data = RegistrationReader.parse(raw);
     } catch (e) {
       if (context.mounted) {
         Navigator.of(context, rootNavigator: true).pop();
@@ -551,7 +554,16 @@ class VehicleDetailScreen extends StatelessWidget {
     if (!context.mounted) return;
     Navigator.of(context, rootNavigator: true).pop();
     if (data.isEmpty) {
-      showSnack(context, tr('ocr.none'));
+      await showDialog<void>(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          content: Text(tr('ocr.none')),
+          actions: [
+            TextButton(onPressed: () => _showRawText(ctx, raw), child: Text(tr('ocr.rawText'))),
+            FilledButton(onPressed: () => Navigator.pop(ctx), child: Text(tr('common.ok'))),
+          ],
+        ),
+      );
       return;
     }
     final rows = <({String key, String label, String value})>[
@@ -584,6 +596,7 @@ class VehicleDetailScreen extends StatelessWidget {
             ]),
           ),
           actions: [
+            TextButton(onPressed: () => _showRawText(ctx, raw), child: Text(tr('ocr.rawText'))),
             TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
             FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(tr('ocr.apply'))),
           ],
@@ -606,6 +619,30 @@ class VehicleDetailScreen extends StatelessWidget {
     await appState.saveVehicle(c);
     if (context.mounted) showSnack(context, tr('ocr.saved'));
   }
+
+  Future<void> _showRawText(BuildContext context, String raw) => showDialog<void>(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          title: Text(tr('ocr.rawText')),
+          content: SizedBox(
+            width: double.maxFinite,
+            child: SingleChildScrollView(
+              child: SelectableText(raw.trim().isEmpty ? '—' : raw.trim(),
+                  style: const TextStyle(fontFamily: 'monospace', fontSize: 12)),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Clipboard.setData(ClipboardData(text: raw));
+                showSnack(ctx, tr('ocr.rawCopied'));
+              },
+              child: Text(tr('common.copy')),
+            ),
+            FilledButton(onPressed: () => Navigator.pop(ctx), child: Text(tr('common.ok'))),
+          ],
+        ),
+      );
 
   Future<void> _assignOwner(BuildContext context, Vehicle v, FleetGroup g) async {
     final members = g.members.entries.where((m) => m.key != v.createdBy).toList()

@@ -424,3 +424,5 @@ Nykyinen omistaja: {name}
 {name} omistaa nyt ajoneuvon {vehicle}
 Rooli: {name}
 Napauta jäsentä vaihtaaksesi roolin. Kutsukoodilla liittyvät saavat vain katseluoikeuden.
+Luettu teksti
+Teksti kopioitu

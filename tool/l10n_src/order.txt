@@ -424,3 +424,5 @@ role.currentOwner
 role.ownerAssigned
 role.changeFor
 role.hint
+ocr.rawText
+ocr.rawCopied

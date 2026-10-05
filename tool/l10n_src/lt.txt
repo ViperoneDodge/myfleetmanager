@@ -424,3 +424,5 @@ Dabartinis savininkas: {name}
 {name} dabar yra {vehicle} savininkas
 Vaidmuo: {name}
 Bakstelėkite narį, kad pakeistumėte vaidmenį. Prisijungę pakvietimo kodu gali tik peržiūrėti.
+Nuskaitytas tekstas
+Tekstas nukopijuotas

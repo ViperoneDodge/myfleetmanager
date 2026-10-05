@@ -424,3 +424,5 @@ Proprietar actual: {name}
 {name} este acum proprietarul vehiculului {vehicle}
 Rolul lui {name}
 Atinge un membru pentru a-i schimba rolul. Cine intră cu codul de invitație are doar vizualizare.
+Text citit
+Text copiat

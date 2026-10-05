@@ -424,5 +424,7 @@
  "role.currentOwner": "Dabartinis savininkas: {name}",
  "role.ownerAssigned": "{name} dabar yra {vehicle} savininkas",
  "role.changeFor": "Vaidmuo: {name}",
- "role.hint": "Bakstelėkite narį, kad pakeistumėte vaidmenį. Prisijungę pakvietimo kodu gali tik peržiūrėti."
+ "role.hint": "Bakstelėkite narį, kad pakeistumėte vaidmenį. Prisijungę pakvietimo kodu gali tik peržiūrėti.",
+ "ocr.rawText": "Nuskaitytas tekstas",
+ "ocr.rawCopied": "Tekstas nukopijuotas"
 }

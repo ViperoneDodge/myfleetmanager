@@ -424,3 +424,5 @@ Obecny właściciel: {name}
 {name} jest teraz właścicielem pojazdu {vehicle}
 Rola: {name}
 Dotknij członka, aby zmienić rolę. Osoby dołączające kodem zaproszenia mają tylko podgląd.
+Odczytany tekst
+Tekst skopiowany

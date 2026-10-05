@@ -424,3 +424,5 @@ Sann úinéir
 Is é {name} úinéir {vehicle} anois
 Ról: {name}
 Tapáil ball chun a ról a athrú. Is amharc amháin atá ag na daoine a thagann isteach le cód cuiridh.
+Téacs léite
+Téacs cóipeáilte

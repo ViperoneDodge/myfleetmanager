@@ -424,5 +424,7 @@
  "role.currentOwner": "Nykyinen omistaja: {name}",
  "role.ownerAssigned": "{name} omistaa nyt ajoneuvon {vehicle}",
  "role.changeFor": "Rooli: {name}",
- "role.hint": "Napauta jäsentä vaihtaaksesi roolin. Kutsukoodilla liittyvät saavat vain katseluoikeuden."
+ "role.hint": "Napauta jäsentä vaihtaaksesi roolin. Kutsukoodilla liittyvät saavat vain katseluoikeuden.",
+ "ocr.rawText": "Luettu teksti",
+ "ocr.rawCopied": "Teksti kopioitu"
 }

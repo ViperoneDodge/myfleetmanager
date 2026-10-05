@@ -424,5 +424,7 @@
  "role.currentOwner": "Current owner: {name}",
  "role.ownerAssigned": "{name} is now the owner of {vehicle}",
  "role.changeFor": "Role of {name}",
- "role.hint": "Tap a member to change their role. People who join with the invite code are view only."
+ "role.hint": "Tap a member to change their role. People who join with the invite code are view only.",
+ "ocr.rawText": "Text read",
+ "ocr.rawCopied": "Text copied"
 }

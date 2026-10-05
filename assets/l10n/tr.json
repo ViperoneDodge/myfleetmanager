@@ -424,5 +424,7 @@
  "role.currentOwner": "Mevcut sahip: {name}",
  "role.ownerAssigned": "{name} artık {vehicle} aracının sahibi",
  "role.changeFor": "Rol: {name}",
- "role.hint": "Rolünü değiştirmek için bir üyeye dokunun. Davet koduyla katılanlar yalnızca görüntüleyebilir."
+ "role.hint": "Rolünü değiştirmek için bir üyeye dokunun. Davet koduyla katılanlar yalnızca görüntüleyebilir.",
+ "ocr.rawText": "Okunan metin",
+ "ocr.rawCopied": "Metin kopyalandı"
 }

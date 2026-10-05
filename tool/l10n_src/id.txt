@@ -424,3 +424,5 @@ Pemilik saat ini: {name}
 {name} sekarang pemilik {vehicle}
 Peran {name}
 Ketuk anggota untuk mengubah perannya. Yang bergabung dengan kode undangan hanya dapat melihat.
+Teks terbaca
+Teks disalin

@@ -424,5 +424,7 @@
  "role.currentOwner": "Núverandi eigandi: {name}",
  "role.ownerAssigned": "{name} á nú {vehicle}",
  "role.changeFor": "Hlutverk: {name}",
- "role.hint": "Ýttu á meðlim til að breyta hlutverki hans. Þeir sem ganga í hópinn með boðskóða fá aðeins skoðun."
+ "role.hint": "Ýttu á meðlim til að breyta hlutverki hans. Þeir sem ganga í hópinn með boðskóða fá aðeins skoðun.",
+ "ocr.rawText": "Lesinn texti",
+ "ocr.rawCopied": "Texti afritaður"
 }

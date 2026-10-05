@@ -424,3 +424,5 @@ Proprietário atual: {name}
 {name} é agora o proprietário de {vehicle}
 Função de {name}
 Toque num membro para mudar a função. Quem entra com o código de convite fica só com visualização.
+Texto lido
+Texto copiado

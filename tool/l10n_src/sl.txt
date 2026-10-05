@@ -424,3 +424,5 @@ Trenutni lastnik: {name}
 {name} je zdaj lastnik vozila {vehicle}
 Vloga: {name}
 Tapnite člana, da spremenite vlogo. Kdor se pridruži s kodo povabila, ima samo ogled.
+Prebrano besedilo
+Besedilo kopirano

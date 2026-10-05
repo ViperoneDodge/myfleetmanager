@@ -424,5 +424,7 @@
  "role.currentOwner": "現在の所有者：{name}",
  "role.ownerAssigned": "{name} が {vehicle} の所有者になりました",
  "role.changeFor": "{name} の役割",
- "role.hint": "メンバーをタップして役割を変更します。招待コードで参加した人は閲覧のみです。"
+ "role.hint": "メンバーをタップして役割を変更します。招待コードで参加した人は閲覧のみです。",
+ "ocr.rawText": "読み取ったテキスト",
+ "ocr.rawCopied": "テキストをコピーしました"
 }

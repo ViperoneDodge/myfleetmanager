@@ -424,5 +424,7 @@
  "role.currentOwner": "Proprietário atual: {name}",
  "role.ownerAssigned": "{name} é agora o proprietário de {vehicle}",
  "role.changeFor": "Função de {name}",
- "role.hint": "Toque num membro para mudar a função. Quem entra com o código de convite fica só com visualização."
+ "role.hint": "Toque num membro para mudar a função. Quem entra com o código de convite fica só com visualização.",
+ "ocr.rawText": "Texto lido",
+ "ocr.rawCopied": "Texto copiado"
 }

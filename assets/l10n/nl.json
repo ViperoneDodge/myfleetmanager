@@ -424,5 +424,7 @@
  "role.currentOwner": "Huidige eigenaar: {name}",
  "role.ownerAssigned": "{name} is nu eigenaar van {vehicle}",
  "role.changeFor": "Rol van {name}",
- "role.hint": "Tik op een lid om de rol te wijzigen. Wie met de uitnodigingscode lid wordt, kan alleen bekijken."
+ "role.hint": "Tik op een lid om de rol te wijzigen. Wie met de uitnodigingscode lid wordt, kan alleen bekijken.",
+ "ocr.rawText": "Gelezen tekst",
+ "ocr.rawCopied": "Tekst gekopieerd"
 }

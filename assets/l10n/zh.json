@@ -424,5 +424,7 @@
  "role.currentOwner": "当前车主：{name}",
  "role.ownerAssigned": "{name} 现在是 {vehicle} 的车主",
  "role.changeFor": "{name} 的角色",
- "role.hint": "点按成员以更改其角色。通过邀请码加入的人仅可查看。"
+ "role.hint": "点按成员以更改其角色。通过邀请码加入的人仅可查看。",
+ "ocr.rawText": "识别的文本",
+ "ocr.rawCopied": "文本已复制"
 }

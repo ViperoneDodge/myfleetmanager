@@ -424,3 +424,5 @@ Núverandi eigandi: {name}
 {name} á nú {vehicle}
 Hlutverk: {name}
 Ýttu á meðlim til að breyta hlutverki hans. Þeir sem ganga í hópinn með boðskóða fá aðeins skoðun.
+Lesinn texti
+Texti afritaður

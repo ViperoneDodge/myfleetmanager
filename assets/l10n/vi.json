@@ -424,5 +424,7 @@
  "role.currentOwner": "Chủ sở hữu hiện tại: {name}",
  "role.ownerAssigned": "{name} hiện là chủ sở hữu của {vehicle}",
  "role.changeFor": "Vai trò của {name}",
- "role.hint": "Chạm vào thành viên để đổi vai trò. Người tham gia bằng mã mời chỉ có quyền xem."
+ "role.hint": "Chạm vào thành viên để đổi vai trò. Người tham gia bằng mã mời chỉ có quyền xem.",
+ "ocr.rawText": "Văn bản đã đọc",
+ "ocr.rawCopied": "Đã sao chép văn bản"
 }

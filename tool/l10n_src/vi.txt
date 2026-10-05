@@ -424,3 +424,5 @@ Chủ sở hữu hiện tại: {name}
 {name} hiện là chủ sở hữu của {vehicle}
 Vai trò của {name}
 Chạm vào thành viên để đổi vai trò. Người tham gia bằng mã mời chỉ có quyền xem.
+Văn bản đã đọc
+Đã sao chép văn bản

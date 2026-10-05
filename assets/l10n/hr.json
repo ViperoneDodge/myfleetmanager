@@ -424,5 +424,7 @@
  "role.currentOwner": "Trenutni vlasnik: {name}",
  "role.ownerAssigned": "{name} je sada vlasnik vozila {vehicle}",
  "role.changeFor": "Uloga: {name}",
- "role.hint": "Dodirnite člana za promjenu uloge. Tko uđe s pozivnim kodom, ima samo pregled."
+ "role.hint": "Dodirnite člana za promjenu uloge. Tko uđe s pozivnim kodom, ima samo pregled.",
+ "ocr.rawText": "Pročitani tekst",
+ "ocr.rawCopied": "Tekst kopiran"
 }

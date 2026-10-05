@@ -424,5 +424,7 @@
  "role.currentOwner": "Jelenlegi tulajdonos: {name}",
  "role.ownerAssigned": "{name} mostantól a(z) {vehicle} tulajdonosa",
  "role.changeFor": "{name} szerepe",
- "role.hint": "Koppints egy tagra a szerepe módosításához. A meghívókóddal csatlakozók csak megtekinthetnek."
+ "role.hint": "Koppints egy tagra a szerepe módosításához. A meghívókóddal csatlakozók csak megtekinthetnek.",
+ "ocr.rawText": "Beolvasott szöveg",
+ "ocr.rawCopied": "Szöveg másolva"
 }

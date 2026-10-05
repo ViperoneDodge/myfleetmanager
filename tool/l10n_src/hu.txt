@@ -424,3 +424,5 @@ Jelenlegi tulajdonos: {name}
 {name} mostantól a(z) {vehicle} tulajdonosa
 {name} szerepe
 Koppints egy tagra a szerepe módosításához. A meghívókóddal csatlakozók csak megtekinthetnek.
+Beolvasott szöveg
+Szöveg másolva

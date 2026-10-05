@@ -424,5 +424,7 @@
  "role.currentOwner": "Úinéir reatha: {name}",
  "role.ownerAssigned": "Is é {name} úinéir {vehicle} anois",
  "role.changeFor": "Ról: {name}",
- "role.hint": "Tapáil ball chun a ról a athrú. Is amharc amháin atá ag na daoine a thagann isteach le cód cuiridh."
+ "role.hint": "Tapáil ball chun a ról a athrú. Is amharc amháin atá ag na daoine a thagann isteach le cód cuiridh.",
+ "ocr.rawText": "Téacs léite",
+ "ocr.rawCopied": "Téacs cóipeáilte"
 }

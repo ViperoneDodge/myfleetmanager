@@ -424,5 +424,7 @@
  "role.currentOwner": "Súčasný vlastník: {name}",
  "role.ownerAssigned": "{name} je teraz vlastníkom vozidla {vehicle}",
  "role.changeFor": "Rola: {name}",
- "role.hint": "Ťuknutím na člena zmeníte jeho rolu. Kto sa pripojí kódom pozvánky, má len prezeranie."
+ "role.hint": "Ťuknutím na člena zmeníte jeho rolu. Kto sa pripojí kódom pozvánky, má len prezeranie.",
+ "ocr.rawText": "Prečítaný text",
+ "ocr.rawCopied": "Text skopírovaný"
 }

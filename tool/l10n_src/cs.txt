@@ -424,3 +424,5 @@ Současný vlastník: {name}
 {name} je nyní vlastníkem vozidla {vehicle}
 Role: {name}
 Klepnutím na člena změníte jeho roli. Kdo se připojí kódem pozvánky, má jen prohlížení.
+Přečtený text
+Text zkopírován

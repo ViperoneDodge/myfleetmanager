@@ -424,3 +424,5 @@ Praegune omanik: {name}
 {name} on nüüd sõiduki {vehicle} omanik
 Roll: {name}
 Puuduta liiget, et tema rolli muuta. Kutsekoodiga liitujad saavad ainult vaadata.
+Loetud tekst
+Tekst kopeeritud

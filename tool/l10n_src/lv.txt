@@ -424,3 +424,5 @@ Pašreizējais īpašnieks: {name}
 {name} tagad ir {vehicle} īpašnieks
 Loma: {name}
 Pieskarieties dalībniekam, lai mainītu lomu. Ar ielūguma kodu pievienojušies var tikai skatīt.
+Nolasītais teksts
+Teksts nokopēts

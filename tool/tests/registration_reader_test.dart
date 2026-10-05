@@ -103,5 +103,26 @@ ZR17 M/C 69W''';
     expect(d.engineCc, '649');
     expect(d.tyres, '120/70 ZR17 58W; 160/60 ZR17 69W');
   });
+  test('ordine OCR a colonne e intestazione ingannevole', () {
+    const t = '''COMUNITA EUROPEAMINISTERODEL
+REPUBBLICA ITALIANA
+(D.1)
+(D.2)
+(D.3)
+(E)
+(F.1)
+ALFA ROMEO
+952 AEA2 5
+GIULIA
+ZAR952000H 1234567
+(P.1) 1598,00 (P.2)096,00''';
+    final d = RegistrationReader.parse(t);
+    expect(d.vin, 'ZAR952000H1234567');
+    expect(d.powerKw, '96');
+  });
+  test('telaio moto con O al posto di 0, lontano da (E)', () {
+    const t = '(E)\n(F.1)\n(I) 21.04.2008\nJKAER65OAAAO12345\nPARTE I AV 0000000';
+    expect(RegistrationReader.parse(t).vin, 'JKAER650AAA012345');
+  });
   test('vuoto', () => expect(RegistrationReader.parse('ciao').isEmpty, true));
 }
