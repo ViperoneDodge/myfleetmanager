@@ -25,6 +25,11 @@ service cloud.firestore {
 
     match /users/{uid} {
       allow read, write: if signedIn() && request.auth.uid == uid;
+      allow read: if isAdmin();
+    }
+
+    match /{path=**}/vehicles/{vehicleId} {
+      allow read: if isAdmin();
     }
 
     match /fleets/{fleetId} {
@@ -33,7 +38,7 @@ service cloud.firestore {
       }
 
       allow get: if signedIn();
-      allow list: if signedIn() && request.auth.uid in resource.data.members;
+      allow list: if isAdmin() || (signedIn() && request.auth.uid in resource.data.members);
 
       allow create: if signedIn()
         && request.resource.data.ownerUid == request.auth.uid
@@ -51,8 +56,8 @@ service cloud.firestore {
       allow delete: if signedIn() && resource.data.ownerUid == request.auth.uid;
 
       match /vehicles/{vehicleId} {
-        allow read, write: if signedIn()
-          && request.auth.uid in get(/databases/$(database)/documents/fleets/$(fleetId)).data.members;
+        allow read, write: if isAdmin() || (signedIn()
+          && request.auth.uid in get(/databases/$(database)/documents/fleets/$(fleetId)).data.members);
       }
     }
   }
