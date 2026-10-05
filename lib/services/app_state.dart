@@ -37,7 +37,7 @@ class AppState extends ChangeNotifier {
 
   bool devPro = false;
 
-  bool get isPro => purchasedPro || devPro;
+  bool get isPro => purchasedPro || devPro || isAdmin;
 
   static bool isProType(VehicleType t) =>
       t == VehicleType.furgone ||
@@ -159,10 +159,12 @@ class AppState extends ChangeNotifier {
         notifyListeners();
       }
     }, onError: (_) {});
-    if (purchasedPro) {
-      _registerPro('purchase');
-    } else if (devPro) {
-      _registerPro('devcode');
+    if (!isAdmin) {
+      if (purchasedPro) {
+        _registerPro('purchase');
+      } else if (devPro) {
+        _registerPro('devcode');
+      }
     }
     if (_devExpiredOnUpdate) {
       _devExpiredOnUpdate = false;
