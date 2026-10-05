@@ -103,15 +103,18 @@ class FamilyTab extends StatelessWidget {
           onTap: () => Navigator.of(context)
               .push(MaterialPageRoute(builder: (_) => GroupScreen(groupId: g.id))),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 4),
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 6),
             child: Row(children: [
               Icon(Icons.groups_outlined, color: scheme.primary),
               const SizedBox(width: 8),
               Expanded(
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                   Text(g.name,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                          fontFamily: handFont, fontSize: 26, color: scheme.primary, height: 1.1)),
+                          fontFamily: handFont, fontSize: 26, color: scheme.primary, height: 1.35)),
+                  const SizedBox(height: 2),
                   Text(
                       '${trn('family.members', g.members.length)} · ${trn('family.vehicles', list.length)} · '
                       '${groupRoleLabel(g.roleOf(appState.session?.key))}',
