@@ -395,3 +395,32 @@ Ma setax jinħoloq il-PDF: {error}
 Noti
 M'hemm l-ebda manutenzjoni rreġistrata
 L-esportazzjoni f'PDF hija disponibbli fil-verżjoni Pro.
+Dettalji tekniċi
+Numru tax-xażi (VIN)
+Tajers
+Qawwa (kW)
+Kapaċità tal-magna (cm³)
+Aqra d-dettalji mil-liċenzja tal-vettura
+Qed jinqara d-dokument…
+Dettalji misjuba fid-dokument
+Agħżel id-dettalji li jiġu ssejvjati fil-karta tal-vettura u iċċekkjahom: il-qari awtomatiku jista' jiżbalja.
+Ma ġie rikonoxxut l-ebda dettall. Ipprova ritratt aktar ċar, dritt u mdawwal sew.
+Issejvja fil-karta
+Id-dettalji ġew issejvjati fil-karta tal-vettura
+Il-qari ma rnexxiex: {error}
+Il-grupp {group} diġà għandu vettura bin-numru {plate}.
+Amministratur
+Jista' jimmodifika
+Ara biss
+Jamministra l-membri u r-rwoli, jassenja u jimmodifika l-vetturi
+Iżid, jimmodifika u jħassar il-vetturi
+Jara l-vetturi u l-iskadenzi mingħajr ma jibdilhom
+Tista' biss tara l-vetturi ta' dan il-grupp. Itlob lil amministratur tal-grupp il-permess biex timmodifika.
+Ir-rwol ta' amministratur jista' jitneħħa biss mill-appoġġ tal-app.
+Ikkuntattja l-appoġġ
+Assenja s-sid
+Sid ġdid
+Sid attwali: {name}
+{name} issa huwa s-sid ta' {vehicle}
+Rwol ta' {name}
+Agħfas fuq membru biex tibdel ir-rwol tiegħu. Min jidħol bil-kodiċi tal-istedina jista' biss jara.

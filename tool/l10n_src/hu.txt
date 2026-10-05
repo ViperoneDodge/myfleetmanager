@@ -395,3 +395,32 @@ Nem sikerült a PDF elkészítése: {error}
 Megjegyzések
 Nincs rögzített karbantartás
 A PDF-exportálás a Pro verzióban érhető el.
+Műszaki adatok
+Alvázszám (VIN)
+Gumiabroncsok
+Teljesítmény (kW)
+Hengerűrtartalom (cm³)
+Adatok beolvasása a forgalmi engedélyből
+Dokumentum olvasása…
+A dokumentumban talált adatok
+Válaszd ki a jármű adatlapjára mentendő adatokat, és ellenőrizd őket: az automatikus olvasás tévedhet.
+Nem sikerült adatot felismerni. Próbálj élesebb, egyenes és jól megvilágított fotót.
+Mentés az adatlapra
+Adatok elmentve a jármű adatlapjára
+Sikertelen olvasás: {error}
+A(z) {group} csoportban már van {plate} rendszámú jármű.
+Adminisztrátor
+Szerkeszthet
+Csak megtekintés
+Kezeli a tagokat és szerepeket, hozzárendeli és szerkeszti a járműveket
+Járműveket ad hozzá, szerkeszt és töröl
+Látja a járműveket és határidőket, de nem módosíthatja
+Ennek a csoportnak a járműveit csak megtekintheted. Kérj szerkesztési jogot a csoport adminisztrátorától.
+Az adminisztrátori szerepet csak az alkalmazás ügyfélszolgálata veheti el.
+Kapcsolatfelvétel
+Tulajdonos hozzárendelése
+Új tulajdonos
+Jelenlegi tulajdonos: {name}
+{name} mostantól a(z) {vehicle} tulajdonosa
+{name} szerepe
+Koppints egy tagra a szerepe módosításához. A meghívókóddal csatlakozók csak megtekinthetnek.

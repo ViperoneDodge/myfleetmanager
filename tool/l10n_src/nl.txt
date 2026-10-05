@@ -395,3 +395,32 @@ Kan de PDF niet maken: {error}
 Notities
 Geen onderhoud geregistreerd
 Exporteren naar PDF is beschikbaar in de Pro-versie.
+Technische gegevens
+Chassisnummer (VIN)
+Banden
+Vermogen (kW)
+Cilinderinhoud (cm³)
+Gegevens uit het kentekenbewijs lezen
+Document wordt gelezen…
+Gevonden gegevens
+Kies welke gegevens je in de voertuigkaart wilt opslaan en controleer ze: automatisch lezen kan fouten maken.
+Geen gegevens herkend. Probeer een scherpere, rechte en goed belichte foto.
+Opslaan in de kaart
+Gegevens opgeslagen in de voertuigkaart
+Lezen mislukt: {error}
+De groep {group} heeft al een voertuig met kenteken {plate}.
+Beheerder
+Mag bewerken
+Alleen bekijken
+Beheert leden en rollen, wijst voertuigen toe en bewerkt ze
+Voegt voertuigen toe, bewerkt en verwijdert ze
+Ziet voertuigen en termijnen zonder ze te wijzigen
+Je kunt de voertuigen van deze groep alleen bekijken. Vraag een groepsbeheerder om bewerkrechten.
+De beheerdersrol kan alleen door de app-ondersteuning worden ingetrokken.
+Contact met ondersteuning
+Eigenaar toewijzen
+Nieuwe eigenaar
+Huidige eigenaar: {name}
+{name} is nu eigenaar van {vehicle}
+Rol van {name}
+Tik op een lid om de rol te wijzigen. Wie met de uitnodigingscode lid wordt, kan alleen bekijken.

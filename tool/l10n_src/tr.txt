@@ -395,3 +395,32 @@ PDF oluşturulamadı: {error}
 Notlar
 Kayıtlı bakım yok
 PDF'e aktarma Pro sürümde kullanılabilir.
+Teknik bilgiler
+Şasi numarası (VIN)
+Lastikler
+Güç (kW)
+Motor hacmi (cm³)
+Ruhsattan bilgileri oku
+Belge okunuyor…
+Belgede bulunan bilgiler
+Araç kartına kaydedilecek bilgileri seçin ve kontrol edin: otomatik okuma hata yapabilir.
+Hiçbir bilgi tanınmadı. Daha net, düz ve iyi aydınlatılmış bir fotoğraf deneyin.
+Karta kaydet
+Bilgiler araç kartına kaydedildi
+Okuma başarısız: {error}
+{group} grubunda {plate} plakalı bir araç zaten var.
+Yönetici
+Düzenleyebilir
+Yalnızca görüntüleme
+Üyeleri ve rolleri yönetir, araç atar ve düzenler
+Araç ekler, düzenler ve siler
+Araçları ve tarihleri değiştirmeden görür
+Bu grubun araçlarını yalnızca görüntüleyebilirsiniz. Düzenleme izni için bir grup yöneticisine başvurun.
+Yönetici rolü yalnızca uygulama desteği tarafından kaldırılabilir.
+Destekle iletişime geç
+Sahip ata
+Yeni sahip
+Mevcut sahip: {name}
+{name} artık {vehicle} aracının sahibi
+Rol: {name}
+Rolünü değiştirmek için bir üyeye dokunun. Davet koduyla katılanlar yalnızca görüntüleyebilir.

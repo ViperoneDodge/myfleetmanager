@@ -395,3 +395,32 @@ Não foi possível criar o PDF: {error}
 Notas
 Nenhuma manutenção registada
 A exportação em PDF está disponível na versão Pro.
+Dados técnicos
+Número do quadro (VIN)
+Pneus
+Potência (kW)
+Cilindrada (cm³)
+Ler dados do documento único
+A ler o documento…
+Dados encontrados no documento
+Selecione os dados a guardar na ficha do veículo e confirme-os: a leitura automática pode errar.
+Nenhum dado reconhecido. Tente uma foto mais nítida, direita e bem iluminada.
+Guardar na ficha
+Dados guardados na ficha do veículo
+Falha na leitura: {error}
+O grupo {group} já tem um veículo com a matrícula {plate}.
+Administrador
+Pode editar
+Só visualização
+Gere membros e funções, atribui e edita veículos
+Adiciona, edita e elimina veículos
+Vê veículos e prazos sem os alterar
+Só pode ver os veículos deste grupo. Peça permissão de edição a um administrador do grupo.
+A função de administrador só pode ser retirada pelo suporte da app.
+Contactar o suporte
+Atribuir proprietário
+Novo proprietário
+Proprietário atual: {name}
+{name} é agora o proprietário de {vehicle}
+Função de {name}
+Toque num membro para mudar a função. Quem entra com o código de convite fica só com visualização.

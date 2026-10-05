@@ -7,6 +7,7 @@ import '../models.dart';
 import '../theme.dart';
 import '../services/app_state.dart' show AppState;
 import '../services/pdf_export.dart';
+import '../services/support_service.dart';
 import '../services/sync_service.dart' show cloudErrorMessage;
 import '../widgets/common.dart';
 import 'login_screen.dart';
@@ -111,7 +112,9 @@ class FamilyTab extends StatelessWidget {
                   Text(g.name,
                       style: TextStyle(
                           fontFamily: handFont, fontSize: 26, color: scheme.primary, height: 1.1)),
-                  Text('${trn('family.members', g.members.length)} · ${trn('family.vehicles', list.length)}',
+                  Text(
+                      '${trn('family.members', g.members.length)} · ${trn('family.vehicles', list.length)} · '
+                      '${groupRoleLabel(g.roleOf(appState.session?.key))}',
                       style: Theme.of(context).textTheme.bodySmall),
                 ]),
               ),
@@ -140,14 +143,15 @@ class FamilyTab extends StatelessWidget {
                   : onOpen(v),
               onLongPress: () => moveVehicleSheet(context, v),
             )),
-        Align(
-          alignment: Alignment.centerLeft,
-          child: TextButton.icon(
-            onPressed: () => onAdd(g.id),
-            icon: const Icon(Icons.add),
-            label: Text(tr('family.addTo', {'name': g.name})),
+        if (appState.canAddTo(g.id))
+          Align(
+            alignment: Alignment.centerLeft,
+            child: TextButton.icon(
+              onPressed: () => onAdd(g.id),
+              icon: const Icon(Icons.add),
+              label: Text(tr('family.addTo', {'name': g.name})),
+            ),
           ),
-        ),
       ]),
     );
   }
@@ -181,8 +185,13 @@ Future<void> moveVehicleSheet(BuildContext context, Vehicle v) async {
     showSnack(context, tr('move.needCloud'));
     return;
   }
+  if (!appState.canEdit(v)) {
+    showSnack(context, tr('role.readOnly'));
+    return;
+  }
   const personalKey = '__personal__';
-  final groups = appState.data.groups.where((g) => g.id != v.fleetId).toList();
+  final groups =
+      appState.data.groups.where((g) => g.id != v.fleetId && appState.canAddTo(g.id)).toList();
   final personal = appState.isPersonal(v);
   final name = v.name.isEmpty ? (v.plate.isEmpty ? tr('vehicle.generic') : v.plate) : v.name;
   final dest = await showModalBottomSheet<String>(
@@ -229,6 +238,11 @@ Future<void> moveVehicleSheet(BuildContext context, Vehicle v) async {
   );
   if (dest == null || !context.mounted) return;
   final target = dest == personalKey ? null : dest;
+  final dup = appState.duplicatePlateGroup(v, target);
+  if (dup != null) {
+    showSnack(context, tr('vehicle.plateDuplicate', {'plate': v.plate, 'group': dup}));
+    return;
+  }
   final label = target == null
       ? tr('fleet.mine')
       : (appState.data.groupById(target)?.name ?? tr('family.defaultName'));
@@ -317,6 +331,7 @@ class GroupScreen extends StatelessWidget {
         }
         final me = appState.session?.key;
         final isOwner = g.ownerUid == me;
+        final manage = appState.canManage(g);
         final scheme = Theme.of(context).colorScheme;
         return Scaffold(
           appBar: AppBar(title: Text(g.name)),
@@ -353,22 +368,43 @@ class GroupScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 Text(tr('family.membersTitle', {'n': g.members.length}),
                     style: Theme.of(context).textTheme.titleLarge),
-                ...g.members.entries.map((m) => ListTile(
-                      contentPadding: EdgeInsets.zero,
-                      leading: Icon(m.key == g.ownerUid ? Icons.star : Icons.person_outline,
-                          color: m.key == g.ownerUid ? Colors.amber.shade700 : null),
-                      title: Text(m.value + (m.key == me ? ' ${tr('family.you')}' : '')),
-                      subtitle: m.key == g.ownerUid ? Text(tr('family.owner')) : null,
-                      trailing: isOwner && m.key != me
-                          ? IconButton(
-                              tooltip: tr('common.remove'),
-                              icon: const Icon(Icons.person_remove_outlined),
-                              onPressed: () => _removeMember(context, g, m.key, m.value),
-                            )
-                          : null,
-                    )),
+                ...g.members.entries.map((m) {
+                  final role = g.roleOf(m.key);
+                  return ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    leading: Icon(
+                        m.key == g.ownerUid
+                            ? Icons.star
+                            : (role == GroupRole.admin
+                                ? Icons.admin_panel_settings_outlined
+                                : (role == GroupRole.viewer ? Icons.visibility_outlined : Icons.person_outline)),
+                        color: m.key == g.ownerUid ? Colors.amber.shade700 : null),
+                    title: Text(m.value + (m.key == me ? ' ${tr('family.you')}' : '')),
+                    subtitle: Text(m.key == g.ownerUid
+                        ? '${tr('family.owner')} · ${groupRoleLabel(role)}'
+                        : groupRoleLabel(role)),
+                    onTap: manage && m.key != g.ownerUid && m.key != me
+                        ? () => _changeRole(context, g, m.key, m.value)
+                        : null,
+                    trailing: manage && m.key != me && m.key != g.ownerUid
+                        ? IconButton(
+                            tooltip: tr('common.remove'),
+                            icon: const Icon(Icons.person_remove_outlined),
+                            onPressed: () => role == GroupRole.admin && !appState.isAdmin
+                                ? _adminLocked(context, g, m.value)
+                                : _removeMember(context, g, m.key, m.value),
+                          )
+                        : null,
+                  );
+                }),
+                if (manage)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4),
+                    child: Text(tr('role.hint'),
+                        style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
+                  ),
                 const SizedBox(height: 20),
-                if (isOwner)
+                if (manage)
                   ListTile(
                     contentPadding: EdgeInsets.zero,
                     leading: const Icon(Icons.edit_outlined),
@@ -391,6 +427,63 @@ class GroupScreen extends StatelessWidget {
         );
       },
     );
+  }
+
+  Future<void> _changeRole(BuildContext context, FleetGroup g, String uid, String name) async {
+    final current = g.roleOf(uid);
+    final picked = await showDialog<GroupRole>(
+      context: context,
+      builder: (ctx) => SimpleDialog(
+        title: Text(tr('role.changeFor', {'name': name})),
+        children: GroupRole.values
+            .map((r) => SimpleDialogOption(
+                  onPressed: () => Navigator.pop(ctx, r),
+                  child: Row(children: [
+                    Icon(r == current ? Icons.radio_button_checked : Icons.radio_button_unchecked, size: 20),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        Text(groupRoleLabel(r)),
+                        Text(tr('role.${r.name}Info'),
+                            style: TextStyle(fontSize: 12, color: Theme.of(ctx).colorScheme.onSurfaceVariant)),
+                      ]),
+                    ),
+                  ]),
+                ))
+            .toList(),
+      ),
+    );
+    if (picked == null || picked == current || !context.mounted) return;
+    if (current == GroupRole.admin && !appState.isAdmin) {
+      await _adminLocked(context, g, name);
+      return;
+    }
+    try {
+      await appState.setRole(g, uid, picked);
+    } catch (e) {
+      if (context.mounted) showSnack(context, cloudErrorMessage(e));
+    }
+  }
+
+  Future<void> _adminLocked(BuildContext context, FleetGroup g, String name) async {
+    final contact = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(tr('role.admin')),
+        content: Text(tr('role.adminLocked')),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
+          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(tr('role.contactSupport'))),
+        ],
+      ),
+    );
+    if (contact != true) return;
+    final ok = await SupportService.openEmail(
+      subject: 'MyFleetManager - ${tr('role.adminLocked')}',
+      body: '${tr('family.inviteCode')}: ${g.id}\n${g.name}\n$name\n\n'
+          '${appState.session?.email ?? appState.session?.displayName ?? ''}\n',
+    );
+    if (!ok && context.mounted) showSnack(context, SupportService.email);
   }
 
   Future<void> _rename(BuildContext context, FleetGroup g) async {

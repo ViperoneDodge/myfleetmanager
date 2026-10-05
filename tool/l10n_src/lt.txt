@@ -395,3 +395,32 @@ Nepavyko sukurti PDF: {error}
 Pastabos
 Priežiūros įrašų nėra
 PDF eksportas galimas Pro versijoje.
+Techniniai duomenys
+Kėbulo numeris (VIN)
+Padangos
+Galia (kW)
+Darbinis tūris (cm³)
+Nuskaityti duomenis iš registracijos liudijimo
+Skaitomas dokumentas…
+Dokumente rasti duomenys
+Pasirinkite duomenis, kuriuos išsaugoti transporto priemonės kortelėje, ir juos patikrinkite: automatinis nuskaitymas gali klysti.
+Duomenų neatpažinta. Bandykite ryškesnę, tiesią ir gerai apšviestą nuotrauką.
+Išsaugoti kortelėje
+Duomenys išsaugoti transporto priemonės kortelėje
+Nuskaityti nepavyko: {error}
+Grupėje {group} jau yra transporto priemonė su numeriu {plate}.
+Administratorius
+Gali redaguoti
+Tik peržiūra
+Tvarko narius ir vaidmenis, priskiria ir redaguoja transporto priemones
+Prideda, redaguoja ir šalina transporto priemones
+Mato transporto priemones ir terminus jų nekeisdamas
+Šios grupės transporto priemones galite tik peržiūrėti. Paprašykite grupės administratoriaus redagavimo teisių.
+Administratoriaus vaidmenį gali atimti tik programėlės pagalba.
+Susisiekti su pagalba
+Priskirti savininką
+Naujas savininkas
+Dabartinis savininkas: {name}
+{name} dabar yra {vehicle} savininkas
+Vaidmuo: {name}
+Bakstelėkite narį, kad pakeistumėte vaidmenį. Prisijungę pakvietimo kodu gali tik peržiūrėti.

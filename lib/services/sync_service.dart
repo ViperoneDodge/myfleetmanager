@@ -71,9 +71,11 @@ class SyncService {
       'ownerUid': s.key,
       'members': [s.key],
       'memberEmails': {s.key: email},
+      'admins': [s.key],
+      'viewers': [],
       'createdAt': DateTime.now().millisecondsSinceEpoch,
     }).timeout(_timeout);
-    return FleetGroup(id: id, name: name, ownerUid: s.key, members: {s.key: email});
+    return FleetGroup(id: id, name: name, ownerUid: s.key, members: {s.key: email}, admins: {s.key});
   }
 
   Future<FleetGroup> joinGroup(Session s, String code) async {
@@ -85,14 +87,19 @@ class SyncService {
     if (!snap.exists || data == null || data['personal'] == true) {
       throw FleetException(tr('family.badCode'));
     }
-    await ref.update({
-      'members': FieldValue.arrayUnion([s.key]),
-      'memberEmails.${s.key}': s.email ?? s.displayName,
-    }).timeout(_timeout);
+    final already = ((data['members'] as List?) ?? const []).contains(s.key);
+    if (!already) {
+      await ref.update({
+        'members': FieldValue.arrayUnion([s.key]),
+        'memberEmails.${s.key}': s.email ?? s.displayName,
+        'viewers': FieldValue.arrayUnion([s.key]),
+      }).timeout(_timeout);
+    }
     return FleetGroup(
       id: id,
       name: (data['name'] as String?) ?? tr('family.defaultName'),
       ownerUid: (data['ownerUid'] as String?) ?? '',
+      viewers: already ? {} : {s.key},
     );
   }
 
@@ -270,12 +277,31 @@ class SyncService {
   Future<void> leaveGroup(Session s, String id) => _fleets.doc(id).update({
         'members': FieldValue.arrayRemove([s.key]),
         'memberEmails.${s.key}': FieldValue.delete(),
+        'viewers': FieldValue.arrayRemove([s.key]),
+        'admins': FieldValue.arrayRemove([s.key]),
       });
 
   Future<void> removeMember(String groupId, String uid) => _fleets.doc(groupId).update({
         'members': FieldValue.arrayRemove([uid]),
         'memberEmails.$uid': FieldValue.delete(),
+        'viewers': FieldValue.arrayRemove([uid]),
       });
+
+  Future<void> setRole(String groupId, String uid, GroupRole role) {
+    final Map<String, dynamic> change;
+    switch (role) {
+      case GroupRole.admin:
+        change = {'admins': FieldValue.arrayUnion([uid]), 'viewers': FieldValue.arrayRemove([uid])};
+        break;
+      case GroupRole.editor:
+        change = {'admins': FieldValue.arrayRemove([uid]), 'viewers': FieldValue.arrayRemove([uid])};
+        break;
+      case GroupRole.viewer:
+        change = {'admins': FieldValue.arrayRemove([uid]), 'viewers': FieldValue.arrayUnion([uid])};
+        break;
+    }
+    return _fleets.doc(groupId).update(change).timeout(_timeout);
+  }
 
   Future<void> deleteGroup(String id) => _fleets.doc(id).delete();
 
@@ -308,6 +334,8 @@ class SyncService {
           name: (data['name'] as String?) ?? tr('family.defaultName'),
           ownerUid: (data['ownerUid'] as String?) ?? '',
           members: members,
+          admins: ((data['admins'] as List?) ?? const []).map((e) => e.toString()).toSet(),
+          viewers: ((data['viewers'] as List?) ?? const []).map((e) => e.toString()).toSet(),
         ));
       }
       final wanted = {personalId, ...groups.map((g) => g.id)};

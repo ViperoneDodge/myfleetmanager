@@ -395,3 +395,32 @@ Nie udało się utworzyć PDF: {error}
 Uwagi
 Brak zapisanych przeglądów
 Eksport do PDF jest dostępny w wersji Pro.
+Dane techniczne
+Numer nadwozia (VIN)
+Opony
+Moc (kW)
+Pojemność (cm³)
+Odczytaj dane z dowodu rejestracyjnego
+Odczytywanie dokumentu…
+Dane znalezione w dokumencie
+Wybierz dane do zapisania w karcie pojazdu i sprawdź je: automatyczny odczyt może się mylić.
+Nie rozpoznano danych. Spróbuj ostrzejszego, prostego i dobrze oświetlonego zdjęcia.
+Zapisz w karcie
+Dane zapisane w karcie pojazdu
+Odczyt nieudany: {error}
+W grupie {group} jest już pojazd o numerze {plate}.
+Administrator
+Może edytować
+Tylko podgląd
+Zarządza członkami i rolami, przypisuje i edytuje pojazdy
+Dodaje, edytuje i usuwa pojazdy
+Widzi pojazdy i terminy bez ich zmieniania
+Możesz tylko przeglądać pojazdy tej grupy. Poproś administratora grupy o prawo edycji.
+Rolę administratora może odebrać tylko wsparcie aplikacji.
+Skontaktuj się ze wsparciem
+Przypisz właściciela
+Nowy właściciel
+Obecny właściciel: {name}
+{name} jest teraz właścicielem pojazdu {vehicle}
+Rola: {name}
+Dotknij członka, aby zmienić rolę. Osoby dołączające kodem zaproszenia mają tylko podgląd.

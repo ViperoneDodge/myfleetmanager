@@ -26,6 +26,10 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   late final TextEditingController _name = TextEditingController(text: v.name);
   late final TextEditingController _plate = TextEditingController(text: v.plate);
   late final TextEditingController _notes = TextEditingController(text: v.notes);
+  late final TextEditingController _vin = TextEditingController(text: v.vin);
+  late final TextEditingController _tyres = TextEditingController(text: v.tyres);
+  late final TextEditingController _power = TextEditingController(text: v.powerKw);
+  late final TextEditingController _cc = TextEditingController(text: v.engineCc);
   final Map<String, TextEditingController> _labels = {};
   bool _saving = false;
   late bool _regMissing = !_isNew && v.registrationDate == null;
@@ -57,6 +61,10 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     _name.dispose();
     _plate.dispose();
     _notes.dispose();
+    _vin.dispose();
+    _tyres.dispose();
+    _power.dispose();
+    _cc.dispose();
     for (final c in _labels.values) {
       c.dispose();
     }
@@ -186,10 +194,23 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
           reason: tr('pro.reasonType', {'type': vehicleTypeLabel(v.type)}));
       if (!ok || !mounted) return;
     }
+    v.plate = _plate.text.trim().toUpperCase();
+    final dup = appState.duplicatePlateGroup(v, v.fleetId);
+    if (dup != null) {
+      showSnack(context, tr('vehicle.plateDuplicate', {'plate': v.plate, 'group': dup}));
+      return;
+    }
+    if (!appState.canAddTo(v.fleetId)) {
+      showSnack(context, tr('role.readOnly'));
+      return;
+    }
     setState(() => _saving = true);
     v.name = _name.text.trim();
-    v.plate = _plate.text.trim().toUpperCase();
     v.notes = _notes.text.trim();
+    v.vin = _vin.text.trim().toUpperCase();
+    v.tyres = _tyres.text.trim();
+    v.powerKw = _power.text.trim();
+    v.engineCc = _cc.text.trim();
     for (final d in v.deadlines.where((d) => d.kind == DeadlineKind.custom)) {
       final t = _labelCtrl(d).text.trim();
       d.label = t.isEmpty ? tr('edit.customDefault') : t;
@@ -248,7 +269,9 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
               ),
               items: [
                 DropdownMenuItem<String?>(value: null, child: Text(tr('fleet.mine'))),
-                ...appState.data.groups.map((g) => DropdownMenuItem<String?>(
+                ...appState.data.groups
+                    .where((g) => g.id == v.fleetId || appState.canAddTo(g.id))
+                    .map((g) => DropdownMenuItem<String?>(
                       value: g.id,
                       child: Text(tr('edit.familyPrefix', {'name': g.name}), overflow: TextOverflow.ellipsis),
                     )),
@@ -330,6 +353,16 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
             ),
           ),
           const SizedBox(height: 24),
+          Text(tr('tech.title'), style: Theme.of(context).textTheme.titleMedium),
+          const SizedBox(height: 8),
+          _techField(_vin, tr('tech.vin'), Icons.qr_code_2, caps: true),
+          _techField(_tyres, tr('tech.tyres'), Icons.tire_repair_outlined),
+          Row(children: [
+            Expanded(child: _techField(_power, tr('tech.power'), Icons.speed, number: true)),
+            const SizedBox(width: 10),
+            Expanded(child: _techField(_cc, tr('tech.engine'), Icons.settings_outlined, number: true)),
+          ]),
+          const SizedBox(height: 16),
           Text(tr('edit.deadlinesTitle'), style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 4),
           Text(tr('edit.deadlinesInfo'),
@@ -372,6 +405,24 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
       ),
     );
   }
+
+  Widget _techField(TextEditingController c, String label, IconData icon,
+          {bool caps = false, bool number = false}) =>
+      Padding(
+        padding: const EdgeInsets.only(bottom: 10),
+        child: TextField(
+          controller: c,
+          textCapitalization: caps ? TextCapitalization.characters : TextCapitalization.none,
+          keyboardType: number ? const TextInputType.numberWithOptions(decimal: true) : TextInputType.text,
+          decoration: InputDecoration(
+            labelText: label,
+            filled: true,
+            isDense: true,
+            border: const OutlineInputBorder(),
+            prefixIcon: Icon(icon),
+          ),
+        ),
+      );
 
   Widget _deadlineCard(Deadline d) {
     final isCustom = d.kind == DeadlineKind.custom;

@@ -13,6 +13,7 @@ import '../theme.dart';
 import '../widgets/common.dart';
 import 'maintenance_screen.dart';
 import 'pro_screen.dart';
+import '../services/registration_reader.dart';
 import 'vehicle_edit_screen.dart';
 
 class VehicleDetailScreen extends StatelessWidget {
@@ -207,6 +208,12 @@ class VehicleDetailScreen extends StatelessWidget {
             title: Text(tr('doc.open')),
             onTap: () => Navigator.pop(ctx, 'open'),
           ),
+          if (appState.canEdit(v))
+            ListTile(
+              leading: const Icon(Icons.document_scanner_outlined),
+              title: Text(tr('ocr.read')),
+              onTap: () => Navigator.pop(ctx, 'ocr'),
+            ),
           ListTile(
             leading: const Icon(Icons.drive_file_rename_outline),
             title: Text(tr('doc.rename')),
@@ -223,6 +230,8 @@ class VehicleDetailScreen extends StatelessWidget {
     if (!context.mounted) return;
     if (a == 'open') {
       await _openDocument(context, d);
+    } else if (a == 'ocr') {
+      await _readRegistration(context, v, d);
     } else if (a == 'rename') {
       final n = await _askName(context, initial: d.name);
       if (n != null) await appState.renameDocument(v.id, d.id, n);
@@ -256,28 +265,49 @@ class VehicleDetailScreen extends StatelessWidget {
         final scheme = Theme.of(context).colorScheme;
         final bytes = v.photoBytes;
         final tracked = v.deadlines.where((d) => d.enabled).toList();
+        final canEdit = appState.canEdit(v);
+        final group = appState.isPersonal(v) ? null : appState.data.groupById(v.fleetId);
+        final canAssign = group != null && appState.canManage(group);
         return Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: !embedded,
             title: Text(v.name.isEmpty ? tr('vehicle.generic') : v.name),
             actions: [
-              IconButton(
-                tooltip: tr('common.delete'),
-                icon: const Icon(Icons.delete_outline),
-                onPressed: () => _delete(context, v),
-              ),
+              if (canAssign)
+                IconButton(
+                  tooltip: tr('role.assignOwner'),
+                  icon: const Icon(Icons.manage_accounts_outlined),
+                  onPressed: () => _assignOwner(context, v, group),
+                ),
+              if (canEdit)
+                IconButton(
+                  tooltip: tr('common.delete'),
+                  icon: const Icon(Icons.delete_outline),
+                  onPressed: () => _delete(context, v),
+                ),
             ],
           ),
-          floatingActionButton: FloatingActionButton.extended(
-            icon: const Icon(Icons.edit),
-            label: Text(tr('common.edit')),
-            onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (_) => VehicleEditScreen(vehicle: v.copy()))),
-          ),
+          floatingActionButton: !canEdit
+              ? null
+              : FloatingActionButton.extended(
+                  icon: const Icon(Icons.edit),
+                  label: Text(tr('common.edit')),
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => VehicleEditScreen(vehicle: v.copy()))),
+                ),
           body: NotebookPage(
             child: ListView(
               padding: const EdgeInsets.fromLTRB(8, 14, 10, 96),
               children: [
+                if (!canEdit)
+                  Card(
+                    color: scheme.secondaryContainer,
+                    child: ListTile(
+                      leading: const Icon(Icons.visibility_outlined),
+                      title: Text(tr('role.viewer')),
+                      subtitle: Text(tr('role.readOnly')),
+                    ),
+                  ),
                 Center(
                   child: Transform.rotate(
                     angle: -0.025,
@@ -362,6 +392,13 @@ class VehicleDetailScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 18),
+                Text(tr('tech.title'), style: Theme.of(context).textTheme.titleLarge),
+                const SizedBox(height: 4),
+                _techRow(context, tr('tech.vin'), v.vin),
+                _techRow(context, tr('tech.tyres'), v.tyres),
+                _techRow(context, tr('tech.power'), v.powerKw),
+                _techRow(context, tr('tech.engine'), v.engineCc),
+                const SizedBox(height: 18),
                 Text(tr('tab.deadlines'), style: Theme.of(context).textTheme.titleLarge),
                 if (tracked.isEmpty)
                   Padding(
@@ -373,6 +410,7 @@ class VehicleDetailScreen extends StatelessWidget {
                 Row(children: [
                   Expanded(
                       child: Text(tr('maint.title'), style: Theme.of(context).textTheme.titleLarge)),
+                  if (canEdit)
                   TextButton.icon(
                     onPressed: () async {
                       if (await requirePro(context, reason: tr('pro.reasonMaint')) &&
@@ -398,7 +436,7 @@ class VehicleDetailScreen extends StatelessWidget {
                             '${fmtDate(m.date)}${m.km != null ? ' · ${fmtKm(m.km!)}' : ''}'),
                         subtitle: Text(_maintSummary(m),
                             maxLines: 3, overflow: TextOverflow.ellipsis),
-                        onTap: () => _openMaintenance(context, v, m),
+                        onTap: canEdit ? () => _openMaintenance(context, v, m) : null,
                       ),
                     )),
                 const SizedBox(height: 16),
@@ -469,6 +507,142 @@ class VehicleDetailScreen extends StatelessWidget {
         );
       },
     );
+  }
+
+  Widget _techRow(BuildContext context, String label, String value) => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 2),
+        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          SizedBox(
+            width: 150,
+            child: Text(label, style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant)),
+          ),
+          Expanded(child: Text(value.isEmpty ? '—' : value)),
+        ]),
+      );
+
+  Future<void> _readRegistration(BuildContext context, Vehicle v, VehicleDocument d) async {
+    final f = await appState.documentFile(d);
+    if (!await f.exists()) {
+      if (context.mounted) showSnack(context, tr('doc.notFound'));
+      return;
+    }
+    if (!context.mounted) return;
+    showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) => AlertDialog(
+        content: Row(children: [
+          const CircularProgressIndicator(),
+          const SizedBox(width: 18),
+          Expanded(child: Text(tr('ocr.reading'))),
+        ]),
+      ),
+    );
+    RegistrationData data;
+    try {
+      data = RegistrationReader.parse(await RegistrationReader.readText(f.path));
+    } catch (e) {
+      if (context.mounted) {
+        Navigator.of(context, rootNavigator: true).pop();
+        showSnack(context, tr('ocr.error', {'error': e}));
+      }
+      return;
+    }
+    if (!context.mounted) return;
+    Navigator.of(context, rootNavigator: true).pop();
+    if (data.isEmpty) {
+      showSnack(context, tr('ocr.none'));
+      return;
+    }
+    final rows = <({String key, String label, String value})>[
+      if (data.plate != null) (key: 'plate', label: tr('edit.plate'), value: data.plate!),
+      if (data.registrationDate != null)
+        (key: 'reg', label: tr('vehicle.regDate'), value: fmtDate(data.registrationDate)),
+      if (data.vin != null) (key: 'vin', label: tr('tech.vin'), value: data.vin!),
+      if (data.tyres != null) (key: 'tyres', label: tr('tech.tyres'), value: data.tyres!),
+      if (data.powerKw != null) (key: 'power', label: tr('tech.power'), value: data.powerKw!),
+      if (data.engineCc != null) (key: 'cc', label: tr('tech.engine'), value: data.engineCc!),
+    ];
+    final chosen = rows.map((r) => r.key).toSet();
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setSt) => AlertDialog(
+          title: Text(tr('ocr.found')),
+          content: SingleChildScrollView(
+            child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(tr('ocr.foundHint'), style: const TextStyle(fontSize: 13)),
+              const SizedBox(height: 8),
+              ...rows.map((r) => CheckboxListTile(
+                    dense: true,
+                    contentPadding: EdgeInsets.zero,
+                    value: chosen.contains(r.key),
+                    onChanged: (b) => setSt(() => b == true ? chosen.add(r.key) : chosen.remove(r.key)),
+                    title: Text(r.value),
+                    subtitle: Text(r.label),
+                  )),
+            ]),
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
+            FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(tr('ocr.apply'))),
+          ],
+        ),
+      ),
+    );
+    if (ok != true || chosen.isEmpty) return;
+    final c = v.copy();
+    if (chosen.contains('plate')) c.plate = data.plate!;
+    if (chosen.contains('reg')) c.registrationDate = data.registrationDate;
+    if (chosen.contains('vin')) c.vin = data.vin!;
+    if (chosen.contains('tyres')) c.tyres = data.tyres!;
+    if (chosen.contains('power')) c.powerKw = data.powerKw!;
+    if (chosen.contains('cc')) c.engineCc = data.engineCc!;
+    final dup = appState.duplicatePlateGroup(c, c.fleetId);
+    if (dup != null) {
+      if (context.mounted) showSnack(context, tr('vehicle.plateDuplicate', {'plate': c.plate, 'group': dup}));
+      return;
+    }
+    await appState.saveVehicle(c);
+    if (context.mounted) showSnack(context, tr('ocr.saved'));
+  }
+
+  Future<void> _assignOwner(BuildContext context, Vehicle v, FleetGroup g) async {
+    final members = g.members.entries.where((m) => m.key != v.createdBy).toList()
+      ..sort((a, b) => a.value.toLowerCase().compareTo(b.value.toLowerCase()));
+    final current = g.members[v.createdBy];
+    final picked = await showDialog<MapEntry<String, String>>(
+      context: context,
+      builder: (ctx) => SimpleDialog(
+        title: Text(tr('role.pickOwner')),
+        children: [
+          if (current != null)
+            Padding(
+              padding: const EdgeInsets.fromLTRB(24, 0, 24, 8),
+              child: Text(tr('role.currentOwner', {'name': current}),
+                  style: TextStyle(color: Theme.of(ctx).colorScheme.onSurfaceVariant)),
+            ),
+          ...members.map((m) => SimpleDialogOption(
+                onPressed: () => Navigator.pop(ctx, m),
+                child: Row(children: [
+                  const Icon(Icons.person_outline, size: 20),
+                  const SizedBox(width: 10),
+                  Expanded(child: Text(m.value)),
+                ]),
+              )),
+        ],
+      ),
+    );
+    if (picked == null || !context.mounted) return;
+    final name = v.name.isEmpty ? v.plate : v.name;
+    try {
+      await appState.assignOwner(v, picked.key);
+      if (context.mounted) {
+        showSnack(context, tr('role.ownerAssigned', {'name': picked.value, 'vehicle': name}));
+      }
+    } catch (e) {
+      if (context.mounted) showSnack(context, '$e');
+    }
   }
 
   void _openMaintenance(BuildContext context, Vehicle v, MaintenanceRecord? m) {

@@ -7,6 +7,10 @@ App Android/iOS per gestire veicoli (auto, moto, furgoni, camion e rimorchi) da 
 - Veicoli **auto, moto, furgoni, camion e rimorchi** con nome, targa e foto (o sagoma predefinita); le foto si possono **ingrandire, spostare e ruotare** prima di salvarle
 - **Data di immatricolazione** obbligatoria per ogni nuovo veicolo; elenchi ordinati per tipo e per data di immatricolazione (dal più vecchio o dal più recente)
 - **I miei veicoli**: tutti i veicoli creati da te, anche quelli condivisi in un gruppo
+- Pagina Scadenze con filtro **Tutte / In scadenza**
+- **Esportazione PDF** (Pro) dei miei veicoli o di un gruppo, compatta, da condividere, salvare o stampare
+- **Lettura del libretto** (Pro): targa, immatricolazione, telaio, pneumatici, potenza e cilindrata da foto o PDF, direttamente sul telefono
+- **Ruoli nei gruppi**: amministratore, può modificare, solo visualizzazione; chi entra con il codice invito è in sola visualizzazione; targa unica per gruppo
 - **Versione gratuita**: fino a 3 veicoli (auto o moto) con scadenze e notifiche. **Pro** (acquisto unico, prodotto `myfleet_pro` in Play Console): veicoli illimitati, furgoni, camion, rimorchi, documenti, storico manutenzioni
 - **36 lingue** (tutte le europee, scandinave comprese, e le principali mondiali) in `assets/l10n/`; sorgenti di traduzione in `tool/l10n_src/`
 - **Pieghevoli e tablet**: vista a due pannelli che rispetta la cerniera

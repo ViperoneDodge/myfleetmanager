@@ -395,3 +395,32 @@ Det gick inte att skapa PDF: {error}
 Anteckningar
 Inget underhåll registrerat
 PDF-export finns i Pro-versionen.
+Tekniska data
+Chassinummer (VIN)
+Däck
+Effekt (kW)
+Slagvolym (cm³)
+Läs data från registreringsbeviset
+Läser dokumentet…
+Data som hittades i dokumentet
+Välj vilka data som ska sparas i fordonskortet och kontrollera dem: den automatiska läsningen kan göra fel.
+Inga data kändes igen. Prova ett skarpare, rakt och väl belyst foto.
+Spara i kortet
+Data sparade i fordonskortet
+Läsningen misslyckades: {error}
+Gruppen {group} har redan ett fordon med registreringsnummer {plate}.
+Administratör
+Får redigera
+Endast visning
+Hanterar medlemmar och roller, tilldelar och redigerar fordon
+Lägger till, redigerar och tar bort fordon
+Ser fordon och datum utan att ändra dem
+Du kan bara visa fordonen i den här gruppen. Be en gruppadministratör om redigeringsbehörighet.
+Administratörsrollen kan bara tas bort av appens support.
+Kontakta support
+Tilldela ägare
+Ny ägare
+Nuvarande ägare: {name}
+{name} äger nu {vehicle}
+Roll för {name}
+Tryck på en medlem för att ändra rollen. Den som går med via inbjudningskoden får endast visning.

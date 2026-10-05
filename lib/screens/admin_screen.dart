@@ -18,11 +18,13 @@ class AdminScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Amministrazione Pro'),
           bottom: const TabBar(
+              isScrollable: true,
+              tabAlignment: TabAlignment.start,
               labelColor: Colors.white,
               unselectedLabelColor: Colors.white70,
               indicatorColor: Colors.white,
@@ -32,6 +34,7 @@ class AdminScreen extends StatelessWidget {
             Tab(icon: Icon(Icons.shopping_bag_outlined), text: 'Acquistata'),
             Tab(icon: Icon(Icons.key_outlined), text: 'Codice sviluppatore'),
             Tab(icon: Icon(Icons.directions_car_outlined), text: 'Veicoli'),
+            Tab(icon: Icon(Icons.groups_outlined), text: 'Gruppi'),
           ]),
         ),
         body: NotebookPage(
@@ -39,6 +42,7 @@ class AdminScreen extends StatelessWidget {
             _proTab(dev: false),
             _proTab(dev: true),
             const AdminVehiclesTab(),
+            const AdminGroupsTab(),
           ]),
         ),
       ),
@@ -428,5 +432,101 @@ class _UserPickerState extends State<_UserPicker> {
         TextButton(onPressed: () => Navigator.pop(context), child: const Text('Annulla')),
       ],
     );
+  }
+}
+
+class AdminGroupsTab extends StatelessWidget {
+  const AdminGroupsTab({super.key});
+
+  static String _role(GroupRole r) =>
+      r == GroupRole.admin ? 'Amministratore' : (r == GroupRole.editor ? 'Può modificare' : 'Solo visualizzazione');
+
+  FleetGroup _group(Map<String, dynamic> f) {
+    final emails = Map<String, dynamic>.from((f['memberEmails'] as Map?) ?? {});
+    return FleetGroup(
+      id: f['id'] as String,
+      name: (f['name'] as String?) ?? (f['id'] as String),
+      ownerUid: (f['ownerUid'] as String?) ?? '',
+      members: {
+        for (final uid in ((f['members'] as List?) ?? const [])) uid.toString(): (emails[uid] ?? uid).toString()
+      },
+      admins: ((f['admins'] as List?) ?? const []).map((e) => e.toString()).toSet(),
+      viewers: ((f['viewers'] as List?) ?? const []).map((e) => e.toString()).toSet(),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return StreamBuilder<List<Map<String, dynamic>>>(
+      stream: appState.sync.watchAllFleets(),
+      builder: (context, snap) {
+        if (snap.hasError) return AdminScreen._error(snap.error!);
+        if (!snap.hasData) return const Center(child: CircularProgressIndicator());
+        final groups = snap.data!.where((f) => f['personal'] != true).map(_group).toList()
+          ..sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
+        return ListView(
+          padding: const EdgeInsets.fromLTRB(8, 12, 10, 24),
+          children: [
+            Text('Gruppi: ${groups.length}',
+                style: TextStyle(fontFamily: handFont, fontSize: 22, color: scheme.primary)),
+            Padding(
+              padding: const EdgeInsets.only(top: 4, bottom: 8),
+              child: Text(
+                'Tocca un membro per cambiarne il ruolo. Solo da qui si può togliere il ruolo di amministratore. '
+                'Il creatore del gruppo resta sempre amministratore.',
+                style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
+              ),
+            ),
+            ...groups.map((g) => Card(
+                  margin: const EdgeInsets.symmetric(vertical: 4),
+                  child: ExpansionTile(
+                    leading: Icon(Icons.groups_outlined, color: scheme.primary),
+                    title: Text(g.name),
+                    subtitle: Text('${g.members.length} membri · codice ${g.id}', style: const TextStyle(fontSize: 12)),
+                    children: g.members.entries.map((m) {
+                      final role = g.roleOf(m.key);
+                      final owner = m.key == g.ownerUid;
+                      return ListTile(
+                        dense: true,
+                        leading: Icon(owner ? Icons.star : Icons.person_outline,
+                            color: owner ? Colors.amber.shade700 : null),
+                        title: Text(m.value),
+                        subtitle: Text(owner ? 'Creatore · ${_role(role)}' : _role(role)),
+                        onTap: owner ? null : () => _change(context, g, m.key, m.value, role),
+                      );
+                    }).toList(),
+                  ),
+                )),
+          ],
+        );
+      },
+    );
+  }
+
+  Future<void> _change(BuildContext context, FleetGroup g, String uid, String name, GroupRole current) async {
+    final picked = await showDialog<GroupRole>(
+      context: context,
+      builder: (ctx) => SimpleDialog(
+        title: Text('Ruolo di $name in "${g.name}"'),
+        children: GroupRole.values
+            .map((r) => SimpleDialogOption(
+                  onPressed: () => Navigator.pop(ctx, r),
+                  child: Row(children: [
+                    Icon(r == current ? Icons.radio_button_checked : Icons.radio_button_unchecked, size: 20),
+                    const SizedBox(width: 10),
+                    Text(_role(r)),
+                  ]),
+                ))
+            .toList(),
+      ),
+    );
+    if (picked == null || picked == current) return;
+    try {
+      await appState.sync.setRole(g.id, uid, picked);
+      if (context.mounted) showSnack(context, '$name: ${_role(picked)}');
+    } catch (err) {
+      if (context.mounted) showSnack(context, cloudErrorMessage(err));
+    }
   }
 }

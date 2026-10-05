@@ -264,6 +264,11 @@ class Vehicle {
   String notes;
 
   DateTime? registrationDate;
+
+  String vin;
+  String tyres;
+  String powerKw;
+  String engineCc;
   int updatedAt;
   String updatedBy;
 
@@ -290,6 +295,10 @@ class Vehicle {
     List<MaintenanceRecord>? maintenance,
     this.notes = '',
     this.registrationDate,
+    this.vin = '',
+    this.tyres = '',
+    this.powerKw = '',
+    this.engineCc = '',
     int? updatedAt,
     this.updatedBy = '',
     this.updatedByUid = '',
@@ -385,6 +394,10 @@ class Vehicle {
         'maintenance': maintenance.map((m) => m.toJson()).toList(),
         'notes': notes,
         'regDate': registrationDate?.toIso8601String(),
+        'vin': vin,
+        'tyres': tyres,
+        'powerKw': powerKw,
+        'engineCc': engineCc,
         'updatedAt': updatedAt,
         'updatedBy': updatedBy,
         'updatedByUid': updatedByUid,
@@ -414,6 +427,10 @@ class Vehicle {
             [],
         notes: j['notes'] as String? ?? '',
         registrationDate: j['regDate'] == null ? null : DateTime.tryParse(j['regDate'] as String),
+        vin: j['vin'] as String? ?? '',
+        tyres: j['tyres'] as String? ?? '',
+        powerKw: j['powerKw'] as String? ?? '',
+        engineCc: j['engineCc'] as String? ?? '',
         updatedAt: (j['updatedAt'] as num?)?.toInt() ?? 0,
         updatedBy: j['updatedBy'] as String? ?? '',
         updatedByUid: j['updatedByUid'] as String? ?? '',
@@ -452,6 +469,19 @@ class NotifySettings {
   }
 }
 
+enum GroupRole { admin, editor, viewer }
+
+String groupRoleLabel(GroupRole r) {
+  switch (r) {
+    case GroupRole.admin:
+      return tr('role.admin');
+    case GroupRole.editor:
+      return tr('role.editor');
+    case GroupRole.viewer:
+      return tr('role.viewer');
+  }
+}
+
 class FleetGroup {
   final String id;
   String name;
@@ -459,18 +489,35 @@ class FleetGroup {
 
   Map<String, String> members;
 
+  Set<String> admins;
+
+  Set<String> viewers;
+
   FleetGroup({
     required this.id,
     required this.name,
     this.ownerUid = '',
     Map<String, String>? members,
-  }) : members = members ?? {};
+    Set<String>? admins,
+    Set<String>? viewers,
+  })  : members = members ?? {},
+        admins = admins ?? {},
+        viewers = viewers ?? {};
+
+  GroupRole roleOf(String? uid) {
+    if (uid == null) return GroupRole.viewer;
+    if (uid == ownerUid || admins.contains(uid)) return GroupRole.admin;
+    if (viewers.contains(uid)) return GroupRole.viewer;
+    return GroupRole.editor;
+  }
 
   Map<String, dynamic> toJson() => {
         'id': id,
         'name': name,
         'ownerUid': ownerUid,
         'members': members,
+        'admins': admins.toList(),
+        'viewers': viewers.toList(),
       };
 
   factory FleetGroup.fromJson(Map<String, dynamic> j) => FleetGroup(
@@ -479,6 +526,8 @@ class FleetGroup {
         ownerUid: j['ownerUid'] as String? ?? '',
         members: Map<String, dynamic>.from((j['members'] as Map?) ?? {})
             .map((k, v) => MapEntry(k, v.toString())),
+        admins: ((j['admins'] as List?) ?? const []).map((e) => e.toString()).toSet(),
+        viewers: ((j['viewers'] as List?) ?? const []).map((e) => e.toString()).toSet(),
       );
 }
 

@@ -395,3 +395,32 @@ PDF:n luominen epäonnistui: {error}
 Muistiinpanot
 Ei kirjattuja huoltoja
 PDF-vienti on käytettävissä Pro-versiossa.
+Tekniset tiedot
+Valmistenumero (VIN)
+Renkaat
+Teho (kW)
+Iskutilavuus (cm³)
+Lue tiedot rekisteriotteesta
+Luetaan asiakirjaa…
+Asiakirjasta löydetyt tiedot
+Valitse ajoneuvokorttiin tallennettavat tiedot ja tarkista ne: automaattinen luku voi erehtyä.
+Tietoja ei tunnistettu. Kokeile terävämpää, suoraa ja hyvin valaistua kuvaa.
+Tallenna korttiin
+Tiedot tallennettu ajoneuvokorttiin
+Luku epäonnistui: {error}
+Ryhmässä {group} on jo ajoneuvo rekisterinumerolla {plate}.
+Ylläpitäjä
+Voi muokata
+Vain katselu
+Hallitsee jäseniä ja rooleja, määrittää ja muokkaa ajoneuvoja
+Lisää, muokkaa ja poistaa ajoneuvoja
+Näkee ajoneuvot ja määräajat muuttamatta niitä
+Voit vain katsella tämän ryhmän ajoneuvoja. Pyydä ryhmän ylläpitäjältä muokkausoikeutta.
+Ylläpitäjän roolin voi poistaa vain sovelluksen tuki.
+Ota yhteyttä tukeen
+Määritä omistaja
+Uusi omistaja
+Nykyinen omistaja: {name}
+{name} omistaa nyt ajoneuvon {vehicle}
+Rooli: {name}
+Napauta jäsentä vaihtaaksesi roolin. Kutsukoodilla liittyvät saavat vain katseluoikeuden.

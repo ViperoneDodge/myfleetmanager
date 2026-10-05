@@ -395,3 +395,32 @@ PDF kunne ikke oprettes: {error}
 Noter
 Ingen vedligeholdelse registreret
 PDF-eksport findes i Pro-versionen.
+Tekniske data
+Stelnummer (VIN)
+Dæk
+Effekt (kW)
+Slagvolumen (cm³)
+Læs data fra registreringsattesten
+Læser dokumentet…
+Data fundet i dokumentet
+Vælg de data, der skal gemmes i køretøjskortet, og kontrollér dem: automatisk læsning kan tage fejl.
+Ingen data genkendt. Prøv et skarpere, lige og godt belyst foto.
+Gem i kortet
+Data gemt i køretøjskortet
+Læsning mislykkedes: {error}
+Gruppen {group} har allerede et køretøj med nummerplade {plate}.
+Administrator
+Må redigere
+Kun visning
+Styrer medlemmer og roller, tildeler og redigerer køretøjer
+Tilføjer, redigerer og sletter køretøjer
+Ser køretøjer og frister uden at ændre dem
+Du kan kun se køretøjerne i denne gruppe. Bed en gruppeadministrator om redigeringsret.
+Administratorrollen kan kun fjernes af appens support.
+Kontakt support
+Tildel ejer
+Ny ejer
+Nuværende ejer: {name}
+{name} ejer nu {vehicle}
+Rolle for {name}
+Tryk på et medlem for at ændre rollen. Den, der deltager med invitationskoden, har kun visning.

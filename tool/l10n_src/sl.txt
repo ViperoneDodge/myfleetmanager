@@ -395,3 +395,32 @@ PDF-ja ni mogoče ustvariti: {error}
 Opombe
 Ni zabeleženega vzdrževanja
 Izvoz v PDF je na voljo v različici Pro.
+Tehnični podatki
+Številka šasije (VIN)
+Pnevmatike
+Moč (kW)
+Prostornina (cm³)
+Preberi podatke iz prometnega dovoljenja
+Branje dokumenta…
+Najdeni podatki
+Izberite podatke za shranjevanje v kartico vozila in jih preverite: samodejno branje se lahko zmoti.
+Ni prepoznanih podatkov. Poskusite z ostrejšo, ravno in dobro osvetljeno fotografijo.
+Shrani v kartico
+Podatki shranjeni v kartico vozila
+Branje ni uspelo: {error}
+Skupina {group} že ima vozilo z registrsko številko {plate}.
+Skrbnik
+Lahko ureja
+Samo ogled
+Upravlja člane in vloge, dodeljuje in ureja vozila
+Dodaja, ureja in briše vozila
+Vidi vozila in roke brez spreminjanja
+Vozila te skupine si lahko samo ogledate. Za pravice urejanja prosite skrbnika skupine.
+Vlogo skrbnika lahko odstrani samo podpora aplikacije.
+Stik s podporo
+Dodeli lastnika
+Nov lastnik
+Trenutni lastnik: {name}
+{name} je zdaj lastnik vozila {vehicle}
+Vloga: {name}
+Tapnite člana, da spremenite vlogo. Kdor se pridruži s kodo povabila, ima samo ogled.

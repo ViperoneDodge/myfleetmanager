@@ -395,3 +395,32 @@ PDF sa nepodarilo vytvoriť: {error}
 Poznámky
 Žiadna zaznamenaná údržba
 Export do PDF je dostupný vo verzii Pro.
+Technické údaje
+Číslo karosérie (VIN)
+Pneumatiky
+Výkon (kW)
+Zdvihový objem (cm³)
+Načítať údaje z osvedčenia o evidencii
+Čítanie dokumentu…
+Údaje nájdené v dokumente
+Vyberte údaje, ktoré sa uložia do karty vozidla, a skontrolujte ich: automatické čítanie sa môže pomýliť.
+Neboli rozpoznané žiadne údaje. Skúste ostrejšiu, rovnú a dobre osvetlenú fotku.
+Uložiť do karty
+Údaje uložené do karty vozidla
+Čítanie zlyhalo: {error}
+Skupina {group} už má vozidlo s evidenčným číslom {plate}.
+Správca
+Môže upravovať
+Len prezeranie
+Spravuje členov a roly, prideľuje a upravuje vozidlá
+Pridáva, upravuje a maže vozidlá
+Vidí vozidlá a termíny bez možnosti zmien
+Vozidlá tejto skupiny môžete len prezerať. Požiadajte správcu skupiny o oprávnenie upravovať.
+Rolu správcu môže odobrať len podpora aplikácie.
+Kontaktovať podporu
+Priradiť vlastníka
+Nový vlastník
+Súčasný vlastník: {name}
+{name} je teraz vlastníkom vozidla {vehicle}
+Rola: {name}
+Ťuknutím na člena zmeníte jeho rolu. Kto sa pripojí kódom pozvánky, má len prezeranie.

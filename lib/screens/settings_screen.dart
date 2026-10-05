@@ -279,6 +279,15 @@ class SettingsScreen extends StatelessWidget {
               child: Text('MyFleetManager $appVersion',
                   style: TextStyle(fontSize: 12, color: scheme.outline)),
             ),
+            const SizedBox(height: 14),
+            Center(
+              child: Image.asset('assets/gian_trip_logo.png', width: 96, height: 96, filterQuality: FilterQuality.medium),
+            ),
+            const SizedBox(height: 6),
+            Center(
+              child: Text('© 2026 Gian Trip Apps',
+                  style: TextStyle(fontSize: 12, color: scheme.outline)),
+            ),
             const SizedBox(height: 24),
           ]),
           ),

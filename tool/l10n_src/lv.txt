@@ -395,3 +395,32 @@ Neizdevās izveidot PDF: {error}
 Piezīmes
 Nav reģistrētas apkopes
 PDF eksports ir pieejams Pro versijā.
+Tehniskie dati
+Šasijas numurs (VIN)
+Riepas
+Jauda (kW)
+Motora tilpums (cm³)
+Nolasīt datus no reģistrācijas apliecības
+Notiek dokumenta nolasīšana…
+Dokumentā atrastie dati
+Izvēlieties datus, ko saglabāt transportlīdzekļa kartītē, un pārbaudiet tos: automātiskā nolasīšana var kļūdīties.
+Dati netika atpazīti. Mēģiniet asāku, taisnu un labi apgaismotu fotoattēlu.
+Saglabāt kartītē
+Dati saglabāti transportlīdzekļa kartītē
+Nolasīšana neizdevās: {error}
+Grupā {group} jau ir transportlīdzeklis ar numuru {plate}.
+Administrators
+Var rediģēt
+Tikai skatīšana
+Pārvalda dalībniekus un lomas, piešķir un rediģē transportlīdzekļus
+Pievieno, rediģē un dzēš transportlīdzekļus
+Redz transportlīdzekļus un termiņus, tos nemainot
+Šīs grupas transportlīdzekļus varat tikai skatīt. Lūdziet grupas administratoram rediģēšanas tiesības.
+Administratora lomu var noņemt tikai lietotnes atbalsts.
+Sazināties ar atbalstu
+Piešķirt īpašnieku
+Jauns īpašnieks
+Pašreizējais īpašnieks: {name}
+{name} tagad ir {vehicle} īpašnieks
+Loma: {name}
+Pieskarieties dalībniekam, lai mainītu lomu. Ar ielūguma kodu pievienojušies var tikai skatīt.

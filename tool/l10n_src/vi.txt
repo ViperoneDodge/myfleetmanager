@@ -395,3 +395,32 @@ Không thể tạo PDF: {error}
 Ghi chú
 Chưa có bảo dưỡng nào
 Xuất PDF có trong phiên bản Pro.
+Thông số kỹ thuật
+Số khung (VIN)
+Lốp xe
+Công suất (kW)
+Dung tích (cm³)
+Đọc dữ liệu từ giấy đăng ký
+Đang đọc tài liệu…
+Dữ liệu tìm thấy trong tài liệu
+Chọn dữ liệu cần lưu vào thẻ xe và kiểm tra lại: đọc tự động có thể sai.
+Không nhận dạng được dữ liệu. Hãy thử ảnh rõ hơn, thẳng và đủ sáng.
+Lưu vào thẻ
+Đã lưu dữ liệu vào thẻ xe
+Đọc thất bại: {error}
+Nhóm {group} đã có xe mang biển số {plate}.
+Quản trị viên
+Có thể chỉnh sửa
+Chỉ xem
+Quản lý thành viên và vai trò, gán và chỉnh sửa xe
+Thêm, chỉnh sửa và xóa xe
+Xem xe và hạn mà không thay đổi
+Bạn chỉ có thể xem xe của nhóm này. Hãy xin quản trị viên nhóm quyền chỉnh sửa.
+Chỉ bộ phận hỗ trợ của ứng dụng mới có thể gỡ vai trò quản trị viên.
+Liên hệ hỗ trợ
+Gán chủ sở hữu
+Chủ sở hữu mới
+Chủ sở hữu hiện tại: {name}
+{name} hiện là chủ sở hữu của {vehicle}
+Vai trò của {name}
+Chạm vào thành viên để đổi vai trò. Người tham gia bằng mã mời chỉ có quyền xem.

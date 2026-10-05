@@ -395,3 +395,32 @@ PDF-i loomine ebaõnnestus: {error}
 Märkmed
 Hooldust pole registreeritud
 PDF-eksport on saadaval Pro-versioonis.
+Tehnilised andmed
+Šassii number (VIN)
+Rehvid
+Võimsus (kW)
+Töömaht (cm³)
+Loe andmed registreerimistunnistuselt
+Dokumendi lugemine…
+Dokumendist leitud andmed
+Vali sõidukikaardile salvestatavad andmed ja kontrolli neid: automaatne lugemine võib eksida.
+Andmeid ei tuvastatud. Proovi teravamat, sirget ja hästi valgustatud fotot.
+Salvesta kaardile
+Andmed salvestati sõidukikaardile
+Lugemine ebaõnnestus: {error}
+Grupis {group} on juba sõiduk numbriga {plate}.
+Administraator
+Võib muuta
+Ainult vaatamine
+Haldab liikmeid ja rolle, määrab ja muudab sõidukeid
+Lisab, muudab ja kustutab sõidukeid
+Näeb sõidukeid ja tähtaegu neid muutmata
+Saad selle grupi sõidukeid ainult vaadata. Küsi grupi administraatorilt muutmisõigust.
+Administraatori rolli saab eemaldada ainult rakenduse tugi.
+Võta toega ühendust
+Määra omanik
+Uus omanik
+Praegune omanik: {name}
+{name} on nüüd sõiduki {vehicle} omanik
+Roll: {name}
+Puuduta liiget, et tema rolli muuta. Kutsekoodiga liitujad saavad ainult vaadata.

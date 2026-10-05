@@ -395,3 +395,32 @@ Gagal membuat PDF: {error}
 Catatan
 Belum ada perawatan tercatat
 Ekspor PDF tersedia di versi Pro.
+Data teknis
+Nomor rangka (VIN)
+Ban
+Daya (kW)
+Kapasitas mesin (cm³)
+Baca data dari STNK
+Membaca dokumen…
+Data yang ditemukan di dokumen
+Pilih data yang akan disimpan ke kartu kendaraan dan periksa: pembacaan otomatis bisa salah.
+Tidak ada data yang dikenali. Coba foto yang lebih tajam, lurus, dan terang.
+Simpan ke kartu
+Data disimpan ke kartu kendaraan
+Gagal membaca: {error}
+Grup {group} sudah memiliki kendaraan dengan pelat {plate}.
+Admin
+Dapat mengedit
+Hanya melihat
+Mengelola anggota dan peran, menetapkan dan mengedit kendaraan
+Menambah, mengedit, dan menghapus kendaraan
+Melihat kendaraan dan tenggat tanpa mengubahnya
+Anda hanya dapat melihat kendaraan grup ini. Minta izin edit kepada admin grup.
+Peran admin hanya dapat dicabut oleh dukungan aplikasi.
+Hubungi dukungan
+Tetapkan pemilik
+Pemilik baru
+Pemilik saat ini: {name}
+{name} sekarang pemilik {vehicle}
+Peran {name}
+Ketuk anggota untuk mengubah perannya. Yang bergabung dengan kode undangan hanya dapat melihat.

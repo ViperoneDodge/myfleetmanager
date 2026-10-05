@@ -395,3 +395,32 @@ PDF se nepodařilo vytvořit: {error}
 Poznámky
 Žádná zaznamenaná údržba
 Export do PDF je dostupný ve verzi Pro.
+Technické údaje
+Číslo karoserie (VIN)
+Pneumatiky
+Výkon (kW)
+Zdvihový objem (cm³)
+Načíst údaje z technického průkazu
+Čtení dokumentu…
+Údaje nalezené v dokumentu
+Vyberte údaje, které se uloží do karty vozidla, a zkontrolujte je: automatické čtení se může splést.
+Nebyly rozpoznány žádné údaje. Zkuste ostřejší, rovnou a dobře osvětlenou fotku.
+Uložit do karty
+Údaje uloženy do karty vozidla
+Čtení se nezdařilo: {error}
+Skupina {group} už má vozidlo se značkou {plate}.
+Správce
+Může upravovat
+Jen prohlížení
+Spravuje členy a role, přiřazuje a upravuje vozidla
+Přidává, upravuje a maže vozidla
+Vidí vozidla a termíny bez možnosti změn
+Vozidla této skupiny můžete jen prohlížet. Požádejte správce skupiny o oprávnění k úpravám.
+Roli správce může odebrat jen podpora aplikace.
+Kontaktovat podporu
+Přiřadit vlastníka
+Nový vlastník
+Současný vlastník: {name}
+{name} je nyní vlastníkem vozidla {vehicle}
+Role: {name}
+Klepnutím na člena změníte jeho roli. Kdo se připojí kódem pozvánky, má jen prohlížení.

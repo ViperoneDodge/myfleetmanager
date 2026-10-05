@@ -205,6 +205,47 @@ class AppState extends ChangeNotifier {
     return isPersonal(v);
   }
 
+  GroupRole roleIn(String? fleetId) {
+    if (isAdmin || fleetId == null || fleetId == data.personalFleetId) return GroupRole.admin;
+    final g = data.groupById(fleetId);
+    return g == null ? GroupRole.viewer : g.roleOf(session?.key);
+  }
+
+  bool canEdit(Vehicle v) => roleIn(isPersonal(v) ? null : v.fleetId) != GroupRole.viewer;
+
+  bool canAddTo(String? fleetId) => roleIn(fleetId) != GroupRole.viewer;
+
+  bool canManage(FleetGroup g) => isAdmin || g.roleOf(session?.key) == GroupRole.admin;
+
+  static String normalizePlate(String p) => p.toUpperCase().replaceAll(RegExp(r'[^A-Z0-9]'), '');
+
+  String? duplicatePlateGroup(Vehicle v, String? fleetId) {
+    if (fleetId == null || fleetId == data.personalFleetId) return null;
+    final plate = normalizePlate(v.plate);
+    if (plate.isEmpty) return null;
+    for (final o in vehicles) {
+      if (o.id != v.id && o.fleetId == fleetId && normalizePlate(o.plate) == plate) {
+        return data.groupById(fleetId)?.name ?? tr('family.defaultName');
+      }
+    }
+    return null;
+  }
+
+  Future<void> setRole(FleetGroup g, String uid, GroupRole role) async {
+    await sync.setRole(g.id, uid, role);
+    g.admins.remove(uid);
+    g.viewers.remove(uid);
+    if (role == GroupRole.admin) g.admins.add(uid);
+    if (role == GroupRole.viewer) g.viewers.add(uid);
+    await _persist();
+    notifyListeners();
+  }
+
+  Future<void> assignOwner(Vehicle v, String uid) async {
+    final c = v.copy()..createdBy = uid;
+    await saveVehicle(c);
+  }
+
   bool sortNewestFirst = false;
 
   bool deadlinesSoonOnly = false;

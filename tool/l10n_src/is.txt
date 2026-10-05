@@ -395,3 +395,32 @@ Ekki tókst að búa til PDF: {error}
 Athugasemdir
 Ekkert viðhald skráð
 PDF-útflutningur er í Pro-útgáfunni.
+Tæknilegar upplýsingar
+Verksmiðjunúmer (VIN)
+Dekk
+Afl (kW)
+Slagrými (cm³)
+Lesa gögn úr skráningarskírteini
+Les skjalið…
+Gögn sem fundust í skjalinu
+Veldu gögnin sem vista á í ökutækjaspjaldið og athugaðu þau: sjálfvirkur lestur getur gert mistök.
+Engin gögn þekktust. Prófaðu skýrari, beina og vel lýsta mynd.
+Vista í spjaldið
+Gögn vistuð í ökutækjaspjaldið
+Lestur mistókst: {error}
+Hópurinn {group} er nú þegar með ökutæki með númerið {plate}.
+Stjórnandi
+Má breyta
+Aðeins skoðun
+Stýrir meðlimum og hlutverkum, úthlutar og breytir ökutækjum
+Bætir við, breytir og eyðir ökutækjum
+Sér ökutæki og fresti án þess að breyta þeim
+Þú getur aðeins skoðað ökutæki þessa hóps. Biddu stjórnanda hópsins um breytingarheimild.
+Aðeins þjónusta appsins getur fjarlægt stjórnandahlutverk.
+Hafa samband við þjónustu
+Úthluta eiganda
+Nýr eigandi
+Núverandi eigandi: {name}
+{name} á nú {vehicle}
+Hlutverk: {name}
+Ýttu á meðlim til að breyta hlutverki hans. Þeir sem ganga í hópinn með boðskóða fá aðeins skoðun.

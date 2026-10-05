@@ -395,3 +395,32 @@ PDF-ul nu a putut fi creat: {error}
 Note
 Nicio întreținere înregistrată
 Exportul PDF este disponibil în versiunea Pro.
+Date tehnice
+Serie șasiu (VIN)
+Anvelope
+Putere (kW)
+Capacitate cilindrică (cm³)
+Citește datele din certificatul de înmatriculare
+Se citește documentul…
+Date găsite în document
+Selectează datele de salvat în fișa vehiculului și verifică-le: citirea automată poate greși.
+Nu a fost recunoscută nicio dată. Încearcă o fotografie mai clară, dreaptă și bine luminată.
+Salvează în fișă
+Date salvate în fișa vehiculului
+Citirea a eșuat: {error}
+Grupul {group} are deja un vehicul cu numărul {plate}.
+Administrator
+Poate modifica
+Doar vizualizare
+Gestionează membrii și rolurile, atribuie și modifică vehicule
+Adaugă, modifică și șterge vehicule
+Vede vehiculele și termenele fără să le modifice
+Poți doar vizualiza vehiculele acestui grup. Cere unui administrator al grupului permisiunea de modificare.
+Rolul de administrator poate fi retras doar de asistența aplicației.
+Contactează asistența
+Atribuie proprietarul
+Proprietar nou
+Proprietar actual: {name}
+{name} este acum proprietarul vehiculului {vehicle}
+Rolul lui {name}
+Atinge un membru pentru a-i schimba rolul. Cine intră cu codul de invitație are doar vizualizare.

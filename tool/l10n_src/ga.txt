@@ -395,3 +395,32 @@ Níorbh fhéidir an PDF a chruthú: {error}
 Nótaí
 Níl aon chothabháil taifeadta
 Tá easpórtáil PDF ar fáil sa leagan Pro.
+Sonraí teicniúla
+Uimhir fhonnaidh (VIN)
+Boinn
+Cumhacht (kW)
+Toilleadh innill (cm³)
+Léigh sonraí ón deimhniú clárúcháin
+An doiciméad á léamh…
+Sonraí aimsithe sa doiciméad
+Roghnaigh na sonraí le sábháil i gcárta na feithicle agus seiceáil iad: d'fhéadfadh botúin a bheith sa léamh uathoibríoch.
+Níor aithníodh aon sonraí. Bain triail as grianghraf níos géire, díreach agus soilsithe go maith.
+Sábháil sa chárta
+Sonraí sábháilte i gcárta na feithicle
+Theip ar an léamh: {error}
+Tá feithicil le huimhir {plate} sa ghrúpa {group} cheana.
+Riarthóir
+Is féidir eagarthóireacht
+Amharc amháin
+Bainistíonn baill agus róil, sannann agus cuireann feithiclí in eagar
+Cuireann feithiclí leis, in eagar agus scriosann iad
+Feiceann feithiclí agus spriocdhátaí gan iad a athrú
+Ní féidir leat ach feithiclí an ghrúpa seo a fheiceáil. Iarr cead eagarthóireachta ar riarthóir an ghrúpa.
+Ní féidir ach le tacaíocht na haipe ról an riarthóra a bhaint.
+Déan teagmháil le tacaíocht
+Sann úinéir
+Úinéir nua
+Úinéir reatha: {name}
+Is é {name} úinéir {vehicle} anois
+Ról: {name}
+Tapáil ball chun a ról a athrú. Is amharc amháin atá ag na daoine a thagann isteach le cód cuiridh.

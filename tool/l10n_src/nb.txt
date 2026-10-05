@@ -395,3 +395,32 @@ Kunne ikke lage PDF: {error}
 Notater
 Ikke noe vedlikehold registrert
 PDF-eksport er tilgjengelig i Pro-versjonen.
+Tekniske data
+Understellsnummer (VIN)
+Dekk
+Effekt (kW)
+Slagvolum (cm³)
+Les data fra vognkortet
+Leser dokumentet…
+Data funnet i dokumentet
+Velg dataene som skal lagres i kjøretøykortet, og kontroller dem: automatisk lesing kan ta feil.
+Ingen data gjenkjent. Prøv et skarpere, rett og godt belyst bilde.
+Lagre i kortet
+Data lagret i kjøretøykortet
+Lesing mislyktes: {error}
+Gruppen {group} har allerede et kjøretøy med skilt {plate}.
+Administrator
+Kan redigere
+Bare visning
+Styrer medlemmer og roller, tildeler og redigerer kjøretøy
+Legger til, redigerer og sletter kjøretøy
+Ser kjøretøy og frister uten å endre dem
+Du kan bare se kjøretøyene i denne gruppen. Be en gruppeadministrator om redigeringstilgang.
+Administratorrollen kan bare fjernes av appens support.
+Kontakt support
+Tildel eier
+Ny eier
+Nåværende eier: {name}
+{name} eier nå {vehicle}
+Rolle for {name}
+Trykk på et medlem for å endre rollen. De som blir med via invitasjonskoden, har bare visning.
