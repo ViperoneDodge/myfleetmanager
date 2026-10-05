@@ -77,7 +77,8 @@ class RegistrationReader {
       RegExp(r'\d').allMatches(s).length >= 4 &&
       RegExp(r'[A-Z]').allMatches(s).length >= 2;
 
-  static String _num(String s) => s.replaceAll(',', '.').replaceAll(RegExp(r'\.0+$'), '');
+  static String _num(String s) =>
+      s.replaceAll(',', '.').replaceAll(RegExp(r'\.0+$'), '').replaceFirst(RegExp(r'^0+(?=\d)'), '');
 
   static RegistrationData parse(String raw) {
     final text = raw.toUpperCase().replaceAll('\r', '');
@@ -86,16 +87,19 @@ class RegistrationReader {
 
     final plateRe = RegExp(r'\b([A-HJ-NPR-TV-Z]{2})\s?(\d{3})\s?([A-HJ-NPR-TV-Z]{2})\b');
     final motoRe = RegExp(r'\b([A-HJ-NPR-TV-Z]{2})\s?(\d{5})\b');
-    final afterA = RegExp(r'(?:^|[\s(])A\s?[.)]?\s*[:\-]?\s*([A-Z0-9 ]{5,10})').firstMatch(text);
     String? plateFrom(String s) {
       final m = plateRe.firstMatch(s);
-      if (m != null) return '${m.group(1)}${m.group(2)}${m.group(3)}';
       final mm = motoRe.firstMatch(s);
+      if (m != null && (mm == null || m.start <= mm.start)) return '${m.group(1)}${m.group(2)}${m.group(3)}';
       if (mm != null) return '${mm.group(1)}${mm.group(2)}';
       return null;
     }
 
-    data.plate = (afterA == null ? null : plateFrom(afterA.group(1)!)) ?? plateFrom(flat);
+    for (final a in RegExp(r'(?:^|[\s(])A\s?[.)]\s*[:\-]?\s*([A-Z0-9 ]{5,10})').allMatches(flat)) {
+      data.plate = plateFrom(a.group(1)!);
+      if (data.plate != null) break;
+    }
+    data.plate ??= plateFrom(flat);
 
     final bLabel = RegExp(r'(?:^|[\s(])B\s?[.)]?\s*[:\-]?\s*' + _date.pattern).firstMatch(flat);
     if (bLabel != null) {
@@ -128,7 +132,7 @@ class RegistrationReader {
     }
 
     final tyreRe = RegExp(
-        r'\b(\d{3})\s?/\s?(\d{2})\s?(Z?R)\s?F?\s?(\d{2})(C)?(?:\s*(\d{2,3}(?:/\d{2,3})?)\s?([A-Z]))?');
+        r'\b(\d{3})\s?/\s?(\d{2})\s?(Z?R)\s?F?\s?(\d{2})(C)?(?:\s?M\s?/\s?C)?(?:\s*(\d{2,3}(?:/\d{2,3})?)\s?([A-Z]))?');
     final tyres = <String>[];
     for (final m in tyreRe.allMatches(flat)) {
       var t = '${m.group(1)}/${m.group(2)} ${m.group(3)}${m.group(4)}${m.group(5) ?? ''}';

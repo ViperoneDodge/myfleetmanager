@@ -73,5 +73,35 @@ ELENCO PNEUMATICI AMMESSI
     final d = RegistrationReader.parse('NATO IL 12.05.1986 A CUORGNE IMMATRICOLAZIONE 17.05.2017 (I) 03.07.2025');
     expect(d.registrationDate, DateTime(2017, 5, 17));
   });
+  test('libretto moto Kawasaki', () {
+    const t = '''CARTA DI CIRCOLAZIONE - PARTE I AV 0358438
+N° M000822AT06 (A) CX29215
+(B) 13.07.2006
+(C.2.1) D'AGOSTINO
+NATO IL 06.08.1974
+A ASTI (AT)
+N° M000822AT06 (A) CX29215
+(D.1) KAWASAKI HEAVY INDUSTRIES LTD
+ER650A
+(D.3) ER-6N
+(E) JKAER650AAA007663
+(F.2) 376 (F.3) (G)
+(I) 13.07.2006
+(J) L3
+(P.1) 649 (P.2) 053,00 (P.3) BENZ
+(P.5) ER650AE
+(U.1) 94 (U.2) 4250
+PNEUMATICI:
+ANTERIORI 120/70 ZR17 M/C 58W
+SEGUE PNEUMATICI: POSTERIORI 160/60
+ZR17 M/C 69W''';
+    final d = RegistrationReader.parse(t);
+    expect(d.plate, 'CX29215');
+    expect(d.registrationDate, DateTime(2006, 7, 13));
+    expect(d.vin, 'JKAER650AAA007663');
+    expect(d.powerKw, '53');
+    expect(d.engineCc, '649');
+    expect(d.tyres, '120/70 ZR17 58W; 160/60 ZR17 69W');
+  });
   test('vuoto', () => expect(RegistrationReader.parse('ciao').isEmpty, true));
 }
