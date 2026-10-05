@@ -86,7 +86,7 @@ class RegistrationReader {
 
     final plateRe = RegExp(r'\b([A-HJ-NPR-TV-Z]{2})\s?(\d{3})\s?([A-HJ-NPR-TV-Z]{2})\b');
     final motoRe = RegExp(r'\b([A-HJ-NPR-TV-Z]{2})\s?(\d{5})\b');
-    final afterA = RegExp(r'(?:^|\n|\s)A[.)]?\s*[:\-]?\s*([A-Z0-9 ]{5,10})').firstMatch(text);
+    final afterA = RegExp(r'(?:^|[\s(])A\s?[.)]?\s*[:\-]?\s*([A-Z0-9 ]{5,10})').firstMatch(text);
     String? plateFrom(String s) {
       final m = plateRe.firstMatch(s);
       if (m != null) return '${m.group(1)}${m.group(2)}${m.group(3)}';
@@ -97,7 +97,7 @@ class RegistrationReader {
 
     data.plate = (afterA == null ? null : plateFrom(afterA.group(1)!)) ?? plateFrom(flat);
 
-    final bLabel = RegExp(r'(?:^|\s)B[.)]?\s*[:\-]?\s*' + _date.pattern).firstMatch(flat);
+    final bLabel = RegExp(r'(?:^|[\s(])B\s?[.)]?\s*[:\-]?\s*' + _date.pattern).firstMatch(flat);
     if (bLabel != null) {
       final m = _date.firstMatch(flat.substring(bLabel.start));
       if (m != null) data.registrationDate = _toDate(m);
@@ -105,15 +105,18 @@ class RegistrationReader {
     if (data.registrationDate == null) {
       DateTime? best;
       for (final m in _date.allMatches(flat)) {
+        final before = flat.substring(m.start < 20 ? 0 : m.start - 20, m.start);
+        if (RegExp(r'NAT[OA]|NASC').hasMatch(before)) continue;
         final d = _toDate(m);
         if (d != null && d.year >= 1950 && (best == null || d.isBefore(best))) best = d;
       }
       data.registrationDate = best;
     }
 
-    final eLabel = RegExp(r'(?:^|\s)E[.)]?\s*[:\-]?\s*([A-Z0-9]{17})\b').firstMatch(flat);
-    if (eLabel != null && _vinOk(_vinFix(eLabel.group(1)!))) {
-      data.vin = _vinFix(eLabel.group(1)!);
+    final eLabel = RegExp(r'(?:^|[\s(])E\s?[.)]?\s*[:\-]?\s*([A-Z0-9][A-Z0-9 ]{16,22})').firstMatch(flat);
+    final eVin = eLabel == null ? '' : eLabel.group(1)!.replaceAll(' ', '');
+    if (eVin.length >= 17 && _vinOk(_vinFix(eVin.substring(0, 17)))) {
+      data.vin = _vinFix(eVin.substring(0, 17));
     } else {
       for (final m in RegExp(r'\b[A-Z0-9]{17}\b').allMatches(flat)) {
         final v = _vinFix(m.group(0)!);
