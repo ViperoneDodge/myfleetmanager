@@ -72,11 +72,11 @@ void setupData() {
     'u9': 'paolo.bianchi@example.com',
     me: 'marco.rossi@example.com',
   });
-  final giulia = v('g1', 'Giulia', 'FK387AG', VehicleType.auto, DateTime(2017, 5, 17), [269, 298, 9, 40], maint: 4)
-    ..vin = 'ZARFAEBN7H7556012'
-    ..tyres = '225/45 R18 95W; 255/40 R18 99W'
-    ..powerKw = '132'
-    ..engineCc = '2143';
+  final giulia = v('g1', 'Giulia', 'GD452RT', VehicleType.auto, DateTime(2019, 3, 14), [269, 298, 9, 40], maint: 4)
+    ..vin = 'ZAR952000H1234567'
+    ..tyres = '205/55 R16 91V'
+    ..powerKw = '96'
+    ..engineCc = '1598';
   appState.data = UserData(
     personalFleetId: me,
     groups: [fam, work],
@@ -167,12 +167,12 @@ void main() {
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '07_ocr', then: () async {
           final ctx = tester.element(find.byType(VehicleDetailScreen));
           final rows = [
-            (tr('edit.plate'), 'FK387AG'),
-            (tr('vehicle.regDate'), '17/05/2017'),
-            (tr('tech.vin'), 'ZARFAEBN7H7556012'),
-            (tr('tech.tyres'), '225/45 R18 95W; 255/40 R18 99W'),
-            (tr('tech.power'), '132'),
-            (tr('tech.engine'), '2143'),
+            (tr('edit.plate'), 'GD452RT'),
+            (tr('vehicle.regDate'), '14/03/2019'),
+            (tr('tech.vin'), 'ZAR952000H1234567'),
+            (tr('tech.tyres'), '205/55 R16 91V'),
+            (tr('tech.power'), '96'),
+            (tr('tech.engine'), '1598'),
           ];
           showDialog<void>(
             context: ctx,
