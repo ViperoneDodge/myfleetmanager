@@ -11,8 +11,6 @@ import '../models.dart';
 import '../widgets/common.dart';
 
 class PdfExport {
-  static const int _longHistory = 4;
-
   static Future<pw.Font> _asset(String name) async =>
       pw.Font.ttf(await rootBundle.load('assets/fonts/$name'));
 
@@ -65,7 +63,37 @@ class PdfExport {
     await Printing.sharePdf(bytes: bytes, filename: _fileName(title));
   }
 
+  static const double _pageHeight = 842 - 32 - 32 - 24;
+
+  static int _lines(String text, int perLine) => text.isEmpty ? 1 : (text.length / perLine).ceil();
+
+  static double _estimate(Vehicle v) {
+    final deadlines = v.activeDeadlines.length;
+    final top = 24 + (deadlines * 15.0 > 92 ? deadlines * 15.0 : 92);
+    var table = 24.0;
+    final records = v.maintenance;
+    if (records.isEmpty) {
+      table += 14;
+    } else {
+      table += 16;
+      for (final r in records) {
+        final itemsText = r.items.map(maintenanceItemLabel).join(', ');
+        final l = [_lines(itemsText, 34), _lines(r.notes, 34)].reduce((a, b) => a > b ? a : b);
+        table += 5 + 11.5 * l;
+      }
+    }
+    return top + table + 20;
+  }
+
   static Future<Uint8List> build({required String title, required List<Vehicle> vehicles}) async {
+    try {
+      return await _build(title, vehicles, flowAll: false);
+    } catch (_) {
+      return _build(title, vehicles, flowAll: true);
+    }
+  }
+
+  static Future<Uint8List> _build(String title, List<Vehicle> vehicles, {required bool flowAll}) async {
     final theme = await _theme();
     final images = <String, pw.ImageProvider?>{};
     for (final v in vehicles) {
@@ -75,54 +103,44 @@ class PdfExport {
     const accent = PdfColor.fromInt(0xFF1E4F8C);
     final grey = PdfColors.grey700;
 
-    doc.addPage(pw.Page(
-      pageFormat: PdfPageFormat.a4,
-      margin: const pw.EdgeInsets.all(48),
-      build: (ctx) => pw.Center(
-        child: pw.Column(mainAxisSize: pw.MainAxisSize.min, children: [
-          pw.Text('MyFleetManager', style: pw.TextStyle(fontSize: 16, color: grey)),
-          pw.SizedBox(height: 18),
-          pw.Text(title,
-              textAlign: pw.TextAlign.center,
-              style: pw.TextStyle(fontSize: 34, fontWeight: pw.FontWeight.bold, color: accent)),
-          pw.SizedBox(height: 14),
-          pw.Container(width: 120, height: 2, color: accent),
-          pw.SizedBox(height: 14),
-          pw.Text(tr('pdf.generated', {'date': fmtDate(DateTime.now())}),
-              style: const pw.TextStyle(fontSize: 14)),
-          pw.SizedBox(height: 6),
-          pw.Text(trn('family.vehicles', vehicles.length), style: const pw.TextStyle(fontSize: 14)),
+    final body = <pw.Widget>[
+      pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.end, children: [
+        pw.Expanded(
+          child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+            pw.Text('MyFleetManager', style: pw.TextStyle(fontSize: 10, color: grey)),
+            pw.Text(title, style: pw.TextStyle(fontSize: 22, fontWeight: pw.FontWeight.bold, color: accent)),
+          ]),
+        ),
+        pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.end, children: [
+          pw.Text(tr('pdf.generated', {'date': fmtDate(DateTime.now())}), style: const pw.TextStyle(fontSize: 10)),
+          pw.Text(trn('family.vehicles', vehicles.length), style: const pw.TextStyle(fontSize: 10)),
         ]),
-      ),
-    ));
+      ]),
+      pw.Container(height: 2, color: accent, margin: const pw.EdgeInsets.only(top: 6, bottom: 4)),
+    ];
 
-    if (vehicles.isEmpty) return doc.save();
-
-    final body = <pw.Widget>[];
-    var onPage = 0;
     for (final v in vehicles) {
-      final long = v.maintenance.length > _longHistory;
-      if (onPage >= 2 || (long && onPage > 0)) {
+      final parts = _vehicle(v, images[v.id], accent, grey);
+      if (flowAll) {
+        body.addAll(parts);
+      } else if (_estimate(v) > _pageHeight - 40) {
         body.add(pw.NewPage());
-        onPage = 0;
-      } else if (onPage == 1) {
-        body.add(pw.Padding(
-          padding: const pw.EdgeInsets.symmetric(vertical: 12),
-          child: pw.Divider(color: PdfColors.grey400, thickness: 0.8),
-        ));
+        body.addAll(parts);
+      } else {
+        body.add(pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+          pw.Expanded(child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.stretch, children: parts)),
+        ]));
       }
-      body.addAll(_vehicle(v, images[v.id], accent, grey));
-      onPage = long ? 2 : onPage + 1;
     }
 
     doc.addPage(pw.MultiPage(
       pageFormat: PdfPageFormat.a4,
-      margin: const pw.EdgeInsets.fromLTRB(36, 32, 36, 32),
+      margin: const pw.EdgeInsets.fromLTRB(32, 32, 32, 32),
       footer: (ctx) => pw.Container(
         alignment: pw.Alignment.centerRight,
-        margin: const pw.EdgeInsets.only(top: 8),
+        margin: const pw.EdgeInsets.only(top: 6),
         child: pw.Text('$title · ${ctx.pageNumber} / ${ctx.pagesCount}',
-            style: pw.TextStyle(fontSize: 9, color: grey)),
+            style: pw.TextStyle(fontSize: 8, color: grey)),
       ),
       build: (ctx) => body,
     ));
@@ -132,33 +150,33 @@ class PdfExport {
   static List<pw.Widget> _vehicle(Vehicle v, pw.ImageProvider? image, PdfColor accent, PdfColor grey) {
     final name = v.name.isEmpty ? (v.plate.isEmpty ? tr('vehicle.generic') : v.plate) : v.name;
     pw.Widget info(String label, String value) => pw.Padding(
-          padding: const pw.EdgeInsets.only(bottom: 3),
+          padding: const pw.EdgeInsets.only(top: 2),
           child: pw.RichText(
             text: pw.TextSpan(children: [
-              pw.TextSpan(text: '$label: ', style: pw.TextStyle(color: grey, fontSize: 10)),
-              pw.TextSpan(text: value, style: const pw.TextStyle(fontSize: 11)),
+              pw.TextSpan(text: '$label: ', style: pw.TextStyle(color: grey, fontSize: 8.5)),
+              pw.TextSpan(text: value, style: const pw.TextStyle(fontSize: 9.5)),
             ]),
           ),
         );
 
-    final header = pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+    final left = pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
       pw.Container(
-        width: 130,
-        height: 83,
-        padding: v.photoBytes == null ? const pw.EdgeInsets.all(10) : null,
+        width: 104,
+        height: 66,
+        padding: v.photoBytes == null ? const pw.EdgeInsets.all(8) : null,
         decoration: pw.BoxDecoration(
           color: v.photoBytes == null ? PdfColors.blueGrey400 : PdfColors.grey200,
-          border: pw.Border.all(color: PdfColors.grey400, width: 0.5),
         ),
         child: image == null
             ? null
             : pw.Image(image, fit: v.photoBytes != null ? pw.BoxFit.cover : pw.BoxFit.contain),
       ),
-      pw.SizedBox(width: 14),
+      pw.SizedBox(width: 8),
       pw.Expanded(
         child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-          pw.Text(name, style: pw.TextStyle(fontSize: 18, fontWeight: pw.FontWeight.bold, color: accent)),
-          pw.SizedBox(height: 6),
+          pw.Text(name,
+              maxLines: 2,
+              style: pw.TextStyle(fontSize: 14, fontWeight: pw.FontWeight.bold, color: accent)),
           info(tr('edit.type'), vehicleTypeLabel(v.type)),
           info(tr('edit.plate'), v.plate.isEmpty ? '—' : v.plate),
           info(tr('vehicle.regDate'), fmtDate(v.registrationDate)),
@@ -167,53 +185,62 @@ class PdfExport {
     ]);
 
     final deadlines = v.activeDeadlines;
-    final dl = <pw.Widget>[
-      pw.SizedBox(height: 10),
-      pw.Text(tr('tab.deadlines'), style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold)),
-      pw.SizedBox(height: 4),
-      if (deadlines.isEmpty) pw.Text(tr('vehicle.noTracked'), style: pw.TextStyle(fontSize: 10, color: grey)),
+    final right = pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+      pw.Text(tr('tab.deadlines'), style: pw.TextStyle(fontSize: 10.5, fontWeight: pw.FontWeight.bold)),
+      pw.SizedBox(height: 3),
+      if (deadlines.isEmpty) pw.Text(tr('vehicle.noTracked'), style: pw.TextStyle(fontSize: 9, color: grey)),
       ...deadlines.map((d) {
         final s = dueStatus(d.dueDate!);
+        final c = _color(s.color.toARGB32());
         return pw.Padding(
           padding: const pw.EdgeInsets.symmetric(vertical: 1.5),
           child: pw.Row(children: [
-            pw.Container(
-              width: 7,
-              height: 7,
-              decoration: pw.BoxDecoration(color: _color(s.color.toARGB32()), shape: pw.BoxShape.circle),
-            ),
-            pw.SizedBox(width: 6),
-            pw.Expanded(child: pw.Text(d.dueLabel, style: const pw.TextStyle(fontSize: 10.5))),
-            pw.SizedBox(width: 70, child: pw.Text(fmtDate(d.dueDate), style: const pw.TextStyle(fontSize: 10.5))),
+            pw.Container(width: 6, height: 6, decoration: pw.BoxDecoration(color: c, shape: pw.BoxShape.circle)),
+            pw.SizedBox(width: 5),
+            pw.Expanded(child: pw.Text(d.dueLabel, maxLines: 1, style: const pw.TextStyle(fontSize: 9))),
+            pw.SizedBox(width: 48, child: pw.Text(fmtDate(d.dueDate), style: const pw.TextStyle(fontSize: 9))),
             pw.SizedBox(
-              width: 150,
-              child: pw.Text(s.text,
-                  textAlign: pw.TextAlign.right,
-                  style: pw.TextStyle(fontSize: 10, color: _color(s.color.toARGB32()))),
+              width: 92,
+              child: pw.Text(s.text, textAlign: pw.TextAlign.right, maxLines: 1, style: pw.TextStyle(fontSize: 8.5, color: c)),
             ),
           ]),
         );
       }),
-    ];
+    ]);
+
+    final top = pw.Padding(
+      padding: const pw.EdgeInsets.only(top: 12),
+      child: pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
+        pw.Expanded(flex: 9, child: left),
+        pw.Container(
+          width: 2,
+          height: deadlines.length * 15.0 + 20 > 66 ? deadlines.length * 15.0 + 20 : 66,
+          color: PdfColors.black,
+          margin: const pw.EdgeInsets.symmetric(horizontal: 10),
+        ),
+        pw.Expanded(flex: 12, child: right),
+      ]),
+    );
 
     final records = v.maintenanceSorted;
-    final mt = <pw.Widget>[
-      pw.SizedBox(height: 10),
-      pw.Text(tr('maint.title'), style: pw.TextStyle(fontSize: 12, fontWeight: pw.FontWeight.bold)),
-      pw.SizedBox(height: 4),
+    final out = <pw.Widget>[
+      top,
+      pw.SizedBox(height: 6),
+      pw.Text(tr('maint.title'), style: pw.TextStyle(fontSize: 10.5, fontWeight: pw.FontWeight.bold)),
+      pw.SizedBox(height: 3),
     ];
     if (records.isEmpty) {
-      mt.add(pw.Text(tr('pdf.noMaint'), style: pw.TextStyle(fontSize: 10, color: grey)));
+      out.add(pw.Text(tr('pdf.noMaint'), style: pw.TextStyle(fontSize: 9, color: grey)));
     } else {
-      final head = pw.TextStyle(fontSize: 9.5, fontWeight: pw.FontWeight.bold, color: PdfColors.white);
-      const cell = pw.TextStyle(fontSize: 9.5);
+      final head = pw.TextStyle(fontSize: 8.5, fontWeight: pw.FontWeight.bold, color: PdfColors.white);
+      const cell = pw.TextStyle(fontSize: 8.5);
       pw.Widget c(String t, pw.TextStyle st) =>
-          pw.Padding(padding: const pw.EdgeInsets.symmetric(horizontal: 4, vertical: 3), child: pw.Text(t, style: st));
-      mt.add(pw.Table(
+          pw.Padding(padding: const pw.EdgeInsets.symmetric(horizontal: 4, vertical: 2), child: pw.Text(t, style: st));
+      out.add(pw.Table(
         border: pw.TableBorder.all(color: PdfColors.grey400, width: 0.5),
         columnWidths: const {
-          0: pw.FixedColumnWidth(62),
-          1: pw.FixedColumnWidth(62),
+          0: pw.FixedColumnWidth(56),
+          1: pw.FixedColumnWidth(58),
           2: pw.FlexColumnWidth(3),
           3: pw.FlexColumnWidth(3),
         },
@@ -241,9 +268,10 @@ class PdfExport {
         ],
       ));
     }
-    return [
-      pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [header, ...dl]),
-      ...mt,
-    ];
+    out.add(pw.Padding(
+      padding: const pw.EdgeInsets.only(top: 10),
+      child: pw.Divider(color: PdfColors.grey400, thickness: 0.6, height: 1),
+    ));
+    return out;
   }
 }
