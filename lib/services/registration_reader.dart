@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui' show Rect;
 
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'package:printing/printing.dart';
@@ -42,7 +43,10 @@ class RegistrationReader {
       final out = StringBuffer();
       for (final p in images) {
         final r = await recognizer.processImage(InputImage.fromFilePath(p));
-        out.writeln(r.text);
+        out.writeln(layoutLines([
+          for (final b in r.blocks)
+            for (final l in b.lines) (text: l.text, box: l.boundingBox),
+        ]));
       }
       return out.toString();
     } finally {
@@ -53,6 +57,29 @@ class RegistrationReader {
         } catch (_) {}
       }
     }
+  }
+
+  static String layoutLines(List<({String text, Rect box})> lines) {
+    final sorted = lines.where((l) => l.text.trim().isNotEmpty).toList()
+      ..sort((a, b) => a.box.center.dy.compareTo(b.box.center.dy));
+    final rows = <List<({String text, Rect box})>>[];
+    var rowCy = 0.0;
+    var rowH = 0.0;
+    for (final l in sorted) {
+      final h = l.box.height;
+      if (rows.isNotEmpty && (l.box.center.dy - rowCy).abs() <= 0.5 * (h > rowH ? h : rowH)) {
+        final row = rows.last..add(l);
+        rowCy = row.map((e) => e.box.center.dy).reduce((a, b) => a + b) / row.length;
+        rowH = row.map((e) => e.box.height).reduce((a, b) => a > b ? a : b);
+      } else {
+        rows.add([l]);
+        rowCy = l.box.center.dy;
+        rowH = h;
+      }
+    }
+    return rows
+        .map((r) => (r..sort((a, b) => a.box.left.compareTo(b.box.left))).map((e) => e.text.trim()).join('   '))
+        .join('\n');
   }
 
   static final RegExp _date = RegExp(r'(\d{1,2})\s?[/.\-]\s?(\d{1,2})\s?[/.\-]\s?(\d{4}|\d{2})\b');

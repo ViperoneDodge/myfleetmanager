@@ -1,3 +1,5 @@
+import 'dart:ui' show Rect;
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:myfleetmanager/services/registration_reader.dart';
 
@@ -123,6 +125,29 @@ ZAR952000H 1234567
   test('telaio moto con O al posto di 0, lontano da (E)', () {
     const t = '(E)\n(F.1)\n(I) 21.04.2008\nJKAER65OAAAO12345\nPARTE I AV 0000000';
     expect(RegistrationReader.parse(t).vin, 'JKAER650AAA012345');
+  });
+  test('righe ricostruite dalla posizione (colonne separate)', () {
+    Rect r(double x, double y, double w) => Rect.fromLTWH(x, y, w, 20);
+    final text = RegistrationReader.layoutLines([
+      (text: '(D.1)', box: r(700, 140, 60)),
+      (text: '(D.3)', box: r(700, 260, 60)),
+      (text: '(E)', box: r(700, 318, 40)),
+      (text: '(P.1)', box: r(700, 770, 60)),
+      (text: '(P.2)', box: r(990, 771, 60)),
+      (text: 'ALFA ROMEO', box: r(870, 141, 170)),
+      (text: 'GIULIA', box: r(870, 262, 100)),
+      (text: 'ZAR952000H1234567', box: r(835, 320, 290)),
+      (text: '1598,00', box: r(780, 768, 100)),
+      (text: '096,00', box: r(1060, 772, 90)),
+      (text: '(B) 14.03.2019', box: r(80, 400, 230)),
+      (text: 'NATO IL 03.03.1980', box: r(75, 572, 300)),
+    ]);
+    expect(text.split('\n').firstWhere((l) => l.contains('(E)')), '(E)   ZAR952000H1234567');
+    final d = RegistrationReader.parse(text);
+    expect(d.vin, 'ZAR952000H1234567');
+    expect(d.registrationDate, DateTime(2019, 3, 14));
+    expect(d.engineCc, '1598');
+    expect(d.powerKw, '96');
   });
   test('vuoto', () => expect(RegistrationReader.parse('ciao').isEmpty, true));
 }
