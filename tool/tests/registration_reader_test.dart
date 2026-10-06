@@ -123,4 +123,24 @@ P.1 1461   P.2 85   P.3 GO''';
     expect(d.engineCc, '1598');
     expect(d.powerKw, '96');
   });
+
+  test('rimorchio: data con cifre in più, telaio corto, testo che inizia con E', () {
+    const t = '''REPUBBLICA ITALIANA   1   N° XX0000XX00   (A)   PVBRD461
+CARTA DI CIRCOLAZIONE   DD 0000000   (D.2)
+N° XX0000XX00   (A)   PVa20461   (E) ZFA TRL01ABCD1234
+(F.2)   1.500 (F.3)
+(B) 3.5.77.1991   (I)   12. 03.2025
+(J.1) RIMORCHIO PER TRASPORTO COSE
+(P.1)   (P.2)   (E3)
+N   (A   3   NO   ()   4
+TO ELET. CON INSTALLAZIONI APPROVATE
+E CARATTERIsSTICHE COMPATIBILI CON
+MASSA COMPL. E LARGH. SOPRA INDICATE''';
+    final d = RegistrationReader.parse(t);
+    expect(d.plate, 'PVA20461');
+    expect(d.registrationDate, DateTime(1991, 5, 3));
+    expect(d.vin, null);
+    expect(d.engineCc, null);
+    expect(d.powerKw, null);
+  });
 }

@@ -140,20 +140,29 @@ class RegistrationReader {
     final values = labelValues(raw.replaceAll('\r', ''));
     final data = RegistrationData();
 
+    var plateDigits = -1;
     for (final v in values['A'] ?? const <String>[]) {
       final p = v.replaceAll(RegExp(r'[\s\-.]'), '');
       if (RegExp(r'^[A-Z0-9]{4,10}$').hasMatch(p) && RegExp(r'\d').hasMatch(p) && RegExp(r'[A-Z]').hasMatch(p)) {
-        data.plate = p;
-        break;
+        final n = RegExp(r'\d').allMatches(p).length;
+        if (n > plateDigits) {
+          data.plate = p;
+          plateDigits = n;
+        }
       }
     }
 
     for (final v in values['B'] ?? const <String>[]) {
       final iso = _isoDate.firstMatch(v);
       final m = _date.firstMatch(v);
+      final nums = RegExp(r'\d+').allMatches(v).map((e) => e.group(0)!).toList();
+      final yi = nums.indexWhere((e) => e.length == 4);
       final d = iso != null
           ? _toDate(RegExp(r'(\d+)-(\d+)-(\d+)').firstMatch('${iso.group(3)}-${iso.group(2)}-${iso.group(1)}')!)
-          : (m == null ? null : _toDate(m));
+          : (yi >= 2
+                  ? _toDate(RegExp(r'(\d+)-(\d+)-(\d+)').firstMatch('${nums[0]}-${nums[1]}-${nums[yi]}')!)
+                  : null) ??
+              (m == null ? null : _toDate(m));
       if (d != null) {
         data.registrationDate = d;
         break;
@@ -161,8 +170,11 @@ class RegistrationReader {
     }
 
     for (final v in values['E'] ?? const <String>[]) {
-      final c = _vinFix(v.replaceAll(RegExp(r'[^A-Z0-9]'), ''));
-      if (c.length >= 17 && RegExp(r'^[A-HJ-NPR-Z0-9]{17}$').hasMatch(c.substring(0, 17)) && RegExp(r'\d').hasMatch(c.substring(0, 17))) {
+      final raw = v.replaceAll(RegExp(r'[^A-Z0-9]'), '');
+      final c = _vinFix(raw);
+      if (c.length >= 17 &&
+          RegExp(r'^[A-HJ-NPR-Z0-9]{17}$').hasMatch(c.substring(0, 17)) &&
+          RegExp(r'\d.*\d').hasMatch(raw.substring(0, 17))) {
         data.vin = c.substring(0, 17);
         break;
       }
