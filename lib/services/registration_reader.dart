@@ -8,7 +8,6 @@ class RegistrationData {
   String? plate;
   DateTime? registrationDate;
   String? vin;
-  String? tyres;
   String? powerKw;
   String? engineCc;
 
@@ -16,7 +15,6 @@ class RegistrationData {
       plate == null &&
       registrationDate == null &&
       vin == null &&
-      tyres == null &&
       powerKw == null &&
       engineCc == null;
 }
@@ -98,95 +96,79 @@ class RegistrationReader {
 
   static String _vinFix(String s) => s.replaceAll('O', '0').replaceAll('Q', '0').replaceAll('I', '1');
 
-  static bool _vinOk(String s) =>
-      s.length == 17 &&
-      RegExp(r'^[A-HJ-NPR-Z0-9]{17}$').hasMatch(s) &&
-      RegExp(r'\d').allMatches(s).length >= 4 &&
-      RegExp(r'[A-Z]').allMatches(s).length >= 2 &&
-      RegExp(r'\d{4}$').hasMatch(s);
-
-  static String? _vinFrom(String raw) {
-    if (raw.length != 17 || RegExp(r'\d').allMatches(raw).length < 3) return null;
-    final v = _vinFix(raw);
-    return _vinOk(v) ? v : null;
-  }
-
   static String _num(String s) =>
       s.replaceAll(',', '.').replaceAll(RegExp(r'\.0+$'), '').replaceFirst(RegExp(r'^0+(?=\d)'), '');
 
+  static final RegExp _label = RegExp(r'\(\s*([A-Z0-9])\s*(?:[.,]\s*(\d+)\s*)*\)');
+
+  static String? _code(RegExpMatch m) {
+    final letter = m.group(1)! == '8' ? 'B' : m.group(1)!;
+    final full = m.group(0)!.replaceAll(RegExp(r'[\s()]'), '').replaceAll(',', '.');
+    if (letter == 'P' && (full == 'P.1' || full == 'P1')) return 'P.1';
+    if (letter == 'P' && (full == 'P.2' || full == 'P2')) return 'P.2';
+    if (full == letter || (letter == 'B' && full == '8')) return letter;
+    return null;
+  }
+
+  static Map<String, List<String>> labelValues(String text) {
+    final out = <String, List<String>>{};
+    for (final line in text.toUpperCase().split('\n')) {
+      final labels = _label.allMatches(line).toList();
+      for (var i = 0; i < labels.length; i++) {
+        final code = _code(labels[i]);
+        if (code == null) continue;
+        final stop = i + 1 < labels.length ? labels[i + 1].start : line.length;
+        final value = line.substring(labels[i].end, stop).trim().split(RegExp(r'\s{2,}')).first.trim();
+        if (value.isNotEmpty) out.putIfAbsent(code, () => []).add(value);
+      }
+    }
+    return out;
+  }
+
   static RegistrationData parse(String raw) {
-    final text = raw.toUpperCase().replaceAll('\r', '');
-    final flat = text.replaceAll('\n', ' ');
+    final values = labelValues(raw.replaceAll('\r', ''));
     final data = RegistrationData();
 
-    final plateRe = RegExp(r'\b([A-HJ-NPR-TV-Z]{2})\s?(\d{3})\s?([A-HJ-NPR-TV-Z]{2})\b');
-    final motoRe = RegExp(r'\b([A-HJ-NPR-TV-Z]{2})\s?(\d{5})\b');
-    String? plateFrom(String s) {
-      final m = plateRe.firstMatch(s);
-      final mm = motoRe.firstMatch(s);
-      if (m != null && (mm == null || m.start <= mm.start)) return '${m.group(1)}${m.group(2)}${m.group(3)}';
-      if (mm != null) return '${mm.group(1)}${mm.group(2)}';
-      return null;
-    }
-
-    for (final a in RegExp(r'(?:^|[\s(])A\s?[.)]\s*[:\-]?\s*([A-Z0-9 ]{5,10})').allMatches(flat)) {
-      data.plate = plateFrom(a.group(1)!);
-      if (data.plate != null) break;
-    }
-    data.plate ??= plateFrom(flat);
-
-    final bLabel = RegExp(r'(?:^|[\s(])B\s?[.)]?\s*[:\-]?\s*' + _date.pattern).firstMatch(flat);
-    if (bLabel != null) {
-      final m = _date.firstMatch(flat.substring(bLabel.start));
-      if (m != null) data.registrationDate = _toDate(m);
-    }
-    if (data.registrationDate == null) {
-      DateTime? best;
-      for (final m in _date.allMatches(flat)) {
-        final before = flat.substring(m.start < 20 ? 0 : m.start - 20, m.start);
-        if (RegExp(r'NAT[OA]|NASC').hasMatch(before)) continue;
-        final d = _toDate(m);
-        if (d != null && d.year >= 1950 && (best == null || d.isBefore(best))) best = d;
-      }
-      data.registrationDate = best;
-    }
-
-    final eLabel = RegExp(r'(?:^|[\s(])E\s?[.)]?\s*[:\-]?\s*([A-Z0-9][A-Z0-9 ]{16,22})').firstMatch(flat);
-    final eVin = eLabel == null ? '' : eLabel.group(1)!.replaceAll(' ', '');
-    if (eVin.length >= 17) data.vin = _vinFrom(eVin.substring(0, 17));
-    if (data.vin == null) {
-      final tokens = RegExp(r'[A-Z0-9]+').allMatches(flat).map((m) => m.group(0)!).toList();
-      for (var i = 0; i < tokens.length && data.vin == null; i++) {
-        var joined = '';
-        for (var k = i; k < tokens.length && k < i + 3; k++) {
-          joined += tokens[k];
-          if (joined.length > 17) break;
-          if (joined.length == 17) {
-            data.vin = _vinFrom(joined);
-            break;
-          }
-        }
+    for (final v in values['A'] ?? const <String>[]) {
+      final p = v.replaceAll(RegExp(r'[\s\-.]'), '');
+      if (RegExp(r'^[A-Z0-9]{4,10}$').hasMatch(p) && RegExp(r'\d').hasMatch(p) && RegExp(r'[A-Z]').hasMatch(p)) {
+        data.plate = p;
+        break;
       }
     }
 
-    final tyreRe = RegExp(
-        r'\b(\d{3})\s?/\s?(\d{2})\s?(Z?R)\s?F?\s?(\d{2})(C)?(?:\s?M\s?/\s?C)?(?:\s*(\d{2,3}(?:/\d{2,3})?)\s?([A-Z]))?');
-    final tyres = <String>[];
-    for (final m in tyreRe.allMatches(flat)) {
-      var t = '${m.group(1)}/${m.group(2)} ${m.group(3)}${m.group(4)}${m.group(5) ?? ''}';
-      if (m.group(6) != null) t += ' ${m.group(6)}${m.group(7)}';
-      if (!tyres.contains(t)) tyres.add(t);
+    for (final v in values['B'] ?? const <String>[]) {
+      final m = _date.firstMatch(v);
+      final d = m == null ? null : _toDate(m);
+      if (d != null) {
+        data.registrationDate = d;
+        break;
+      }
     }
-    if (tyres.isNotEmpty) data.tyres = tyres.join('; ');
 
-    final p2 = RegExp(r'P\s?\.?\s?2\s?\)?\s*[:\-]?\s*(\d{2,3}(?:[.,]\d{1,2})?)').firstMatch(flat) ??
-        RegExp(r'\b(\d{2,3}(?:[.,]\d{1,2})?)\s?KW\b').firstMatch(flat) ??
-        RegExp(r'\bKW\s*[:\-]?\s*(\d{2,3}(?:[.,]\d{1,2})?)').firstMatch(flat);
-    if (p2 != null) data.powerKw = _num(p2.group(1)!);
+    for (final v in values['E'] ?? const <String>[]) {
+      final c = _vinFix(v.replaceAll(RegExp(r'[^A-Z0-9]'), ''));
+      if (c.length >= 17 && RegExp(r'^[A-HJ-NPR-Z0-9]{17}$').hasMatch(c.substring(0, 17)) && RegExp(r'\d').hasMatch(c.substring(0, 17))) {
+        data.vin = c.substring(0, 17);
+        break;
+      }
+    }
 
-    final p1 = RegExp(r'P\s?\.?\s?1\s?\)?\s*[:\-]?\s*(\d{2,4})\b').firstMatch(flat) ??
-        RegExp(r'\b(\d{3,4})\s?(?:CM3|CM³|CC)\b').firstMatch(flat);
-    if (p1 != null) data.engineCc = p1.group(1);
+    for (final v in values['P.1'] ?? const <String>[]) {
+      final m = RegExp(r'^(\d{2,5})(?:[.,]\d+)?').firstMatch(v);
+      if (m != null) {
+        data.engineCc = _num(m.group(1)!);
+        break;
+      }
+    }
+
+    for (final v in values['P.2'] ?? const <String>[]) {
+      final m = RegExp(r'^(\d{1,4}(?:[.,]\d+)?)').firstMatch(v);
+      if (m != null) {
+        data.powerKw = _num(m.group(1)!);
+        break;
+      }
+    }
 
     return data;
   }

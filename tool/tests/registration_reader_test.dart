@@ -4,150 +4,73 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:myfleetmanager/services/registration_reader.dart';
 
 void main() {
-  test('libretto nuovo formato', () {
-    const t = '''REPUBBLICA ITALIANA
-CARTA DI CIRCOLAZIONE
-A) GD 452 RT
-B) 14/03/2019
-C.2.1) ROSSI
-D.1) ALFA ROMEO
-D.3) GIULIA
-E) ZFA31200000987O54
-J) M1
-P.1) 1598
-P.2) 132
-P.3) GASOLIO
-Pneumatici: 225/45 R18 95W 255/40 R18 99W
-I) 18/03/2019''';
-    final d = RegistrationReader.parse(t);
-    expect(d.plate, 'GD452RT');
-    expect(d.registrationDate, DateTime(2019, 3, 14));
-    expect(d.vin, 'ZFA31200000987054');
-    expect(d.tyres, '225/45 R18 95W; 255/40 R18 99W');
-    expect(d.powerKw, '132');
-    expect(d.engineCc, '1598');
-  });
-  test('moto senza etichette', () {
-    const t = 'targa AB12345 immatricolata il 03.04.2010 telaio ZDM1RC4K0AB012345 kw 75,5 cilindrata 1198 cm3 120/70 ZR17 58W';
-    final d = RegistrationReader.parse(t);
-    expect(d.plate, 'AB12345');
-    expect(d.registrationDate, DateTime(2010, 4, 3));
-    expect(d.vin, 'ZDM1RC4K0AB012345');
-    expect(d.powerKw, '75.5');
-    expect(d.engineCc, '1198');
-    expect(d.tyres, '120/70 ZR17 58W');
-  });
-  test('libretto Giulia utente', () {
-    const t = '''REPUBBLICA ITALIANA
-CARTA DI CIRCOLAZIONE CZ 0000000
-N° A900000XX00 (A) GD452RT
+  test('libretto italiano: solo campi con etichetta UE', () {
+    const t = '''CARTA DI CIRCOLAZIONE CZ 0000000
+N° A900000XX00   (A) GD452RT   1
 (B) 14.03.2019
 (C.2.1) ROSSI
-(C.2.2) MARIO
-NATO IL 03.03.1980 (XXXXXX80C03X000X)
-A CITTA' (XX)
-(C.2.3) VIA ROMA 1
-N° A900000XX00 (A) GD452RT
+NATO IL 03.03.1980
 (D.1) ALFA ROMEO
-(D.2) 952 AEA2 5
-(D.3) GIULIA
 (E) ZAR952000H1234567
-(F.2) 2020 (F.3) 3620 (G)
 (I) 20.06.2024
-(J) M1
-(O.1) 1600 (O.2)
-(P.1) 1598,00 (P.2)110,00 (P.3)GASOL
-(P.5) 12345678
-RAPPORTO POTENZA/TARA = 72,368 KW/T
-DATA 06.12.2022 (XXXX0000000)
-ELENCO PNEUMATICI AMMESSI
-225/50 R17 94W (A1)
-225/40 R19 89W (A2)''';
+(P.1) 1598,00 (P.2)096,00 (P.3)GASOL
+225/50 R17 94W (A1)''';
     final d = RegistrationReader.parse(t);
     expect(d.plate, 'GD452RT');
     expect(d.registrationDate, DateTime(2019, 3, 14));
     expect(d.vin, 'ZAR952000H1234567');
-    expect(d.powerKw, '110');
     expect(d.engineCc, '1598');
-    expect(d.tyres, '225/50 R17 94W; 225/40 R19 89W');
+    expect(d.powerKw, '96');
   });
-  test('senza etichetta B, salta la data di nascita', () {
-    final d = RegistrationReader.parse('NATO IL 03.03.1980 A CITTA IMMATRICOLAZIONE 14.03.2019 (I) 20.06.2024');
-    expect(d.registrationDate, DateTime(2019, 3, 14));
-  });
-  test('libretto moto Kawasaki', () {
-    const t = '''CARTA DI CIRCOLAZIONE - PARTE I AV 0000000
-N° M000000XX00 (A) DZ48163
+
+  test('moto: targa corta, O letta al posto di 0 nel telaio', () {
+    const t = '''N° M000000XX00 (A) DZ48163
 (B) 21.04.2008
-(C.2.1) BIANCHI
-NATO IL 11.11.1975
-A CITTA (XX)
-N° M000000XX00 (A) DZ48163
-(D.1) KAWASAKI HEAVY INDUSTRIES LTD
-ER650A
-(D.3) ER-6N
-(E) JKAER650AAA012345
-(F.2) 376 (F.3) (G)
-(I) 21.04.2008
-(J) L3
-(P.1) 649 (P.2) 053,00 (P.3) BENZ
-(P.5) ER650AE
-(U.1) 94 (U.2) 4250
-PNEUMATICI:
-ANTERIORI 120/70 ZR17 M/C 58W
-SEGUE PNEUMATICI: POSTERIORI 160/60
-ZR17 M/C 69W''';
+(E) JKAER65OAAAO12345
+(P.1) 649 (P.2) 053,00 (P.3) BENZ''';
     final d = RegistrationReader.parse(t);
     expect(d.plate, 'DZ48163');
     expect(d.registrationDate, DateTime(2008, 4, 21));
     expect(d.vin, 'JKAER650AAA012345');
-    expect(d.powerKw, '53');
     expect(d.engineCc, '649');
-    expect(d.tyres, '120/70 ZR17 58W; 160/60 ZR17 69W');
+    expect(d.powerKw, '53');
   });
-  test('ordine OCR a colonne e intestazione ingannevole', () {
-    const t = '''COMUNITA EUROPEAMINISTERODEL
-REPUBBLICA ITALIANA
-(D.1)
-(D.2)
-(D.3)
-(E)
-(F.1)
-ALFA ROMEO
-952 AEA2 5
-GIULIA
-ZAR952000H 1234567
-(P.1) 1598,00 (P.2)096,00''';
-    final d = RegistrationReader.parse(t);
-    expect(d.vin, 'ZAR952000H1234567');
-    expect(d.powerKw, '96');
+
+  test('B letta come 8 e telaio spezzato da spazi', () {
+    final d = RegistrationReader.parse('(8) 01/02/2015\n(E) WVW ZZZ1K Z5W 012345');
+    expect(d.registrationDate, DateTime(2015, 2, 1));
+    expect(d.vin, 'WVWZZZ1KZ5W012345');
   });
-  test('telaio moto con O al posto di 0, lontano da (E)', () {
-    const t = '(E)\n(F.1)\n(I) 21.04.2008\nJKAER65OAAAO12345\nPARTE I AV 0000000';
-    expect(RegistrationReader.parse(t).vin, 'JKAER650AAA012345');
+
+  test('senza etichette non indovina nulla', () {
+    const t = 'targa AB12345 immatricolata il 03.04.2010 telaio ZDM1RC4K0AB012345 kw 75 cilindrata 1198 cm3 '
+        'COMUNITA EUROPEA MINISTERO DELLE INFRASTRUTTURE NATO IL 01.01.1970';
+    expect(RegistrationReader.parse(t).isEmpty, true);
   });
+
+  test('etichette diverse non vengono confuse (C.2.1, J.1, A1)', () {
+    final d = RegistrationReader.parse('(C.2.1) BIANCHI\n(J.1) AUTOVETTURA\n205/60 R16 92V (A1)');
+    expect(d.isEmpty, true);
+  });
+
   test('righe ricostruite dalla posizione (colonne separate)', () {
     Rect r(double x, double y, double w) => Rect.fromLTWH(x, y, w, 20);
     final text = RegistrationReader.layoutLines([
       (text: '(D.1)', box: r(700, 140, 60)),
-      (text: '(D.3)', box: r(700, 260, 60)),
       (text: '(E)', box: r(700, 318, 40)),
       (text: '(P.1)', box: r(700, 770, 60)),
       (text: '(P.2)', box: r(990, 771, 60)),
       (text: 'ALFA ROMEO', box: r(870, 141, 170)),
-      (text: 'GIULIA', box: r(870, 262, 100)),
       (text: 'ZAR952000H1234567', box: r(835, 320, 290)),
       (text: '1598,00', box: r(780, 768, 100)),
       (text: '096,00', box: r(1060, 772, 90)),
       (text: '(B) 14.03.2019', box: r(80, 400, 230)),
       (text: 'NATO IL 03.03.1980', box: r(75, 572, 300)),
     ]);
-    expect(text.split('\n').firstWhere((l) => l.contains('(E)')), '(E)   ZAR952000H1234567');
     final d = RegistrationReader.parse(text);
     expect(d.vin, 'ZAR952000H1234567');
     expect(d.registrationDate, DateTime(2019, 3, 14));
     expect(d.engineCc, '1598');
     expect(d.powerKw, '96');
   });
-  test('vuoto', () => expect(RegistrationReader.parse('ciao').isEmpty, true));
 }

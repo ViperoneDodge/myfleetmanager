@@ -571,7 +571,6 @@ class VehicleDetailScreen extends StatelessWidget {
       if (data.registrationDate != null)
         (key: 'reg', label: tr('vehicle.regDate'), value: fmtDate(data.registrationDate)),
       if (data.vin != null) (key: 'vin', label: tr('tech.vin'), value: data.vin!),
-      if (data.tyres != null) (key: 'tyres', label: tr('tech.tyres'), value: data.tyres!),
       if (data.powerKw != null) (key: 'power', label: tr('tech.power'), value: data.powerKw!),
       if (data.engineCc != null) (key: 'cc', label: tr('tech.engine'), value: data.engineCc!),
     ];
@@ -625,7 +624,6 @@ class VehicleDetailScreen extends StatelessWidget {
     if (chosen.contains('plate')) c.plate = data.plate!;
     if (chosen.contains('reg')) c.registrationDate = data.registrationDate;
     if (chosen.contains('vin')) c.vin = data.vin!;
-    if (chosen.contains('tyres')) c.tyres = data.tyres!;
     if (chosen.contains('power')) c.powerKw = data.powerKw!;
     if (chosen.contains('cc')) c.engineCc = data.engineCc!;
     final dup = appState.duplicatePlateGroup(c, c.fleetId);
