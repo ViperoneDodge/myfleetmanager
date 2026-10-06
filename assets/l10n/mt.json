@@ -401,7 +401,7 @@
  "tech.tyres": "Tajers",
  "tech.power": "Qawwa (kW)",
  "tech.engine": "Kapaċità tal-magna (cm³)",
- "ocr.read": "Aqra d-dettalji mil-liċenzja tal-vettura",
+ "ocr.read": "Aqra d-dettalji mil-liċenzja tal-vettura (beta)",
  "ocr.reading": "Qed jinqara d-dokument…",
  "ocr.found": "Dettalji misjuba fid-dokument",
  "ocr.foundHint": "Agħżel id-dettalji li jiġu ssejvjati fil-karta tal-vettura u iċċekkjahom: il-qari awtomatiku jista' jiżbalja.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Rwol ta' {name}",
  "role.hint": "Agħfas fuq membru biex tibdel ir-rwol tiegħu. Min jidħol bil-kodiċi tal-istedina jista' biss jara.",
  "ocr.rawText": "Test moqri",
- "ocr.rawCopied": "Test ikkopjat"
+ "ocr.rawCopied": "Test ikkopjat",
+ "ocr.disclaimer": "Funzjoni ta' prova: il-qari awtomatiku jista' jiżbalja. Qabbel kull dettall mal-liċenzja tal-vettura qabel ma tissejvjah."
 }

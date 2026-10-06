@@ -401,7 +401,7 @@
  "tech.tyres": "Banden",
  "tech.power": "Vermogen (kW)",
  "tech.engine": "Cilinderinhoud (cm³)",
- "ocr.read": "Gegevens uit het kentekenbewijs lezen",
+ "ocr.read": "Gegevens uit het kentekenbewijs lezen (beta)",
  "ocr.reading": "Document wordt gelezen…",
  "ocr.found": "Gevonden gegevens",
  "ocr.foundHint": "Kies welke gegevens je in de voertuigkaart wilt opslaan en controleer ze: automatisch lezen kan fouten maken.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Rol van {name}",
  "role.hint": "Tik op een lid om de rol te wijzigen. Wie met de uitnodigingscode lid wordt, kan alleen bekijken.",
  "ocr.rawText": "Gelezen tekst",
- "ocr.rawCopied": "Tekst gekopieerd"
+ "ocr.rawCopied": "Tekst gekopieerd",
+ "ocr.disclaimer": "Testfunctie: automatisch lezen kan fouten maken. Vergelijk elk gegeven met het kentekenbewijs voordat je het opslaat."
 }

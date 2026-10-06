@@ -401,7 +401,7 @@
  "tech.tyres": "Tyres",
  "tech.power": "Power (kW)",
  "tech.engine": "Engine size (cm³)",
- "ocr.read": "Read data from registration",
+ "ocr.read": "Read data from registration (beta)",
  "ocr.reading": "Reading the document…",
  "ocr.found": "Data found in the document",
  "ocr.foundHint": "Select the data to save to the vehicle card and check it: automatic reading can make mistakes.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Role of {name}",
  "role.hint": "Tap a member to change their role. People who join with the invite code are view only.",
  "ocr.rawText": "Text read",
- "ocr.rawCopied": "Text copied"
+ "ocr.rawCopied": "Text copied",
+ "ocr.disclaimer": "Trial feature: automatic reading can make mistakes. Compare every value with the registration document before saving it."
 }

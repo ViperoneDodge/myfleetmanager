@@ -400,7 +400,7 @@ Kėbulo numeris (VIN)
 Padangos
 Galia (kW)
 Darbinis tūris (cm³)
-Nuskaityti duomenis iš registracijos liudijimo
+Nuskaityti duomenis iš registracijos liudijimo (beta)
 Skaitomas dokumentas…
 Dokumente rasti duomenys
 Pasirinkite duomenis, kuriuos išsaugoti transporto priemonės kortelėje, ir juos patikrinkite: automatinis nuskaitymas gali klysti.
@@ -426,3 +426,4 @@ Vaidmuo: {name}
 Bakstelėkite narį, kad pakeistumėte vaidmenį. Prisijungę pakvietimo kodu gali tik peržiūrėti.
 Nuskaitytas tekstas
 Tekstas nukopijuotas
+Bandomoji funkcija: automatinis nuskaitymas gali klysti. Prieš išsaugodami palyginkite kiekvieną duomenį su registracijos liudijimu.

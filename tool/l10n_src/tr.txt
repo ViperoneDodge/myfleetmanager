@@ -400,7 +400,7 @@ Teknik bilgiler
 Lastikler
 Güç (kW)
 Motor hacmi (cm³)
-Ruhsattan bilgileri oku
+Ruhsattan bilgileri oku (beta)
 Belge okunuyor…
 Belgede bulunan bilgiler
 Araç kartına kaydedilecek bilgileri seçin ve kontrol edin: otomatik okuma hata yapabilir.
@@ -426,3 +426,4 @@ Rol: {name}
 Rolünü değiştirmek için bir üyeye dokunun. Davet koduyla katılanlar yalnızca görüntüleyebilir.
 Okunan metin
 Metin kopyalandı
+Deneme özelliği: otomatik okuma hata yapabilir. Kaydetmeden önce her değeri ruhsatla karşılaştırın.

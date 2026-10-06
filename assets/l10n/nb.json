@@ -401,7 +401,7 @@
  "tech.tyres": "Dekk",
  "tech.power": "Effekt (kW)",
  "tech.engine": "Slagvolum (cm³)",
- "ocr.read": "Les data fra vognkortet",
+ "ocr.read": "Les data fra vognkortet (beta)",
  "ocr.reading": "Leser dokumentet…",
  "ocr.found": "Data funnet i dokumentet",
  "ocr.foundHint": "Velg dataene som skal lagres i kjøretøykortet, og kontroller dem: automatisk lesing kan ta feil.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Rolle for {name}",
  "role.hint": "Trykk på et medlem for å endre rollen. De som blir med via invitasjonskoden, har bare visning.",
  "ocr.rawText": "Lest tekst",
- "ocr.rawCopied": "Tekst kopiert"
+ "ocr.rawCopied": "Tekst kopiert",
+ "ocr.disclaimer": "Testfunksjon: automatisk lesing kan ta feil. Sammenlign hver verdi med vognkortet før du lagrer den."
 }

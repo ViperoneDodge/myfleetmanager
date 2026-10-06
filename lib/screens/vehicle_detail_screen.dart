@@ -583,6 +583,23 @@ class VehicleDetailScreen extends StatelessWidget {
           title: Text(tr('ocr.found')),
           content: SingleChildScrollView(
             child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFFF3CD),
+                  border: Border.all(color: const Color(0xFFB07A00)),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  const Icon(Icons.warning_amber_rounded, color: Color(0xFFB07A00)),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(tr('ocr.disclaimer'),
+                        style: const TextStyle(fontSize: 13, color: Color(0xFF5A3E00), fontWeight: FontWeight.w600)),
+                  ),
+                ]),
+              ),
+              const SizedBox(height: 10),
               Text(tr('ocr.foundHint'), style: const TextStyle(fontSize: 13)),
               const SizedBox(height: 8),
               ...rows.map((r) => CheckboxListTile(

@@ -401,7 +401,7 @@
  "tech.tyres": "Boinn",
  "tech.power": "Cumhacht (kW)",
  "tech.engine": "Toilleadh innill (cm³)",
- "ocr.read": "Léigh sonraí ón deimhniú clárúcháin",
+ "ocr.read": "Léigh sonraí ón deimhniú clárúcháin (beta)",
  "ocr.reading": "An doiciméad á léamh…",
  "ocr.found": "Sonraí aimsithe sa doiciméad",
  "ocr.foundHint": "Roghnaigh na sonraí le sábháil i gcárta na feithicle agus seiceáil iad: d'fhéadfadh botúin a bheith sa léamh uathoibríoch.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Ról: {name}",
  "role.hint": "Tapáil ball chun a ról a athrú. Is amharc amháin atá ag na daoine a thagann isteach le cód cuiridh.",
  "ocr.rawText": "Téacs léite",
- "ocr.rawCopied": "Téacs cóipeáilte"
+ "ocr.rawCopied": "Téacs cóipeáilte",
+ "ocr.disclaimer": "Gné thrialach: d'fhéadfadh botúin a bheith sa léamh uathoibríoch. Cuir gach luach i gcomparáid leis an deimhniú clárúcháin sula sábhálann tú é."
 }

@@ -401,7 +401,7 @@
  "tech.tyres": "Ban",
  "tech.power": "Daya (kW)",
  "tech.engine": "Kapasitas mesin (cm³)",
- "ocr.read": "Baca data dari STNK",
+ "ocr.read": "Baca data dari STNK (beta)",
  "ocr.reading": "Membaca dokumen…",
  "ocr.found": "Data yang ditemukan di dokumen",
  "ocr.foundHint": "Pilih data yang akan disimpan ke kartu kendaraan dan periksa: pembacaan otomatis bisa salah.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Peran {name}",
  "role.hint": "Ketuk anggota untuk mengubah perannya. Yang bergabung dengan kode undangan hanya dapat melihat.",
  "ocr.rawText": "Teks terbaca",
- "ocr.rawCopied": "Teks disalin"
+ "ocr.rawCopied": "Teks disalin",
+ "ocr.disclaimer": "Fitur uji coba: pembacaan otomatis bisa salah. Cocokkan setiap data dengan STNK sebelum menyimpannya."
 }

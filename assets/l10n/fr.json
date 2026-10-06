@@ -401,7 +401,7 @@
  "tech.tyres": "Pneus",
  "tech.power": "Puissance (kW)",
  "tech.engine": "Cylindrée (cm³)",
- "ocr.read": "Lire les données de la carte grise",
+ "ocr.read": "Lire les données de la carte grise (beta)",
  "ocr.reading": "Lecture du document…",
  "ocr.found": "Données trouvées dans le document",
  "ocr.foundHint": "Sélectionnez les données à enregistrer dans la fiche du véhicule et vérifiez-les : la lecture automatique peut se tromper.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Rôle de {name}",
  "role.hint": "Touchez un membre pour changer son rôle. Ceux qui rejoignent avec le code d'invitation sont en lecture seule.",
  "ocr.rawText": "Texte lu",
- "ocr.rawCopied": "Texte copié"
+ "ocr.rawCopied": "Texte copié",
+ "ocr.disclaimer": "Fonction en test : la lecture automatique peut se tromper. Comparez chaque donnée avec la carte grise avant de l'enregistrer."
 }

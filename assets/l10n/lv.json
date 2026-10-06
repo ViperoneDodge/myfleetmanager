@@ -401,7 +401,7 @@
  "tech.tyres": "Riepas",
  "tech.power": "Jauda (kW)",
  "tech.engine": "Motora tilpums (cm³)",
- "ocr.read": "Nolasīt datus no reģistrācijas apliecības",
+ "ocr.read": "Nolasīt datus no reģistrācijas apliecības (beta)",
  "ocr.reading": "Notiek dokumenta nolasīšana…",
  "ocr.found": "Dokumentā atrastie dati",
  "ocr.foundHint": "Izvēlieties datus, ko saglabāt transportlīdzekļa kartītē, un pārbaudiet tos: automātiskā nolasīšana var kļūdīties.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Loma: {name}",
  "role.hint": "Pieskarieties dalībniekam, lai mainītu lomu. Ar ielūguma kodu pievienojušies var tikai skatīt.",
  "ocr.rawText": "Nolasītais teksts",
- "ocr.rawCopied": "Teksts nokopēts"
+ "ocr.rawCopied": "Teksts nokopēts",
+ "ocr.disclaimer": "Izmēģinājuma funkcija: automātiskā nolasīšana var kļūdīties. Pirms saglabāšanas salīdziniet katru datu ar reģistrācijas apliecību."
 }

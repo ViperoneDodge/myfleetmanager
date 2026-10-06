@@ -401,7 +401,7 @@
  "tech.tyres": "Däck",
  "tech.power": "Effekt (kW)",
  "tech.engine": "Slagvolym (cm³)",
- "ocr.read": "Läs data från registreringsbeviset",
+ "ocr.read": "Läs data från registreringsbeviset (beta)",
  "ocr.reading": "Läser dokumentet…",
  "ocr.found": "Data som hittades i dokumentet",
  "ocr.foundHint": "Välj vilka data som ska sparas i fordonskortet och kontrollera dem: den automatiska läsningen kan göra fel.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Roll för {name}",
  "role.hint": "Tryck på en medlem för att ändra rollen. Den som går med via inbjudningskoden får endast visning.",
  "ocr.rawText": "Läst text",
- "ocr.rawCopied": "Texten kopierad"
+ "ocr.rawCopied": "Texten kopierad",
+ "ocr.disclaimer": "Testfunktion: den automatiska läsningen kan göra fel. Jämför varje uppgift med registreringsbeviset innan du sparar den."
 }

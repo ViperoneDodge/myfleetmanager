@@ -400,7 +400,7 @@ Verksmiðjunúmer (VIN)
 Dekk
 Afl (kW)
 Slagrými (cm³)
-Lesa gögn úr skráningarskírteini
+Lesa gögn úr skráningarskírteini (beta)
 Les skjalið…
 Gögn sem fundust í skjalinu
 Veldu gögnin sem vista á í ökutækjaspjaldið og athugaðu þau: sjálfvirkur lestur getur gert mistök.
@@ -426,3 +426,4 @@ Hlutverk: {name}
 Ýttu á meðlim til að breyta hlutverki hans. Þeir sem ganga í hópinn með boðskóða fá aðeins skoðun.
 Lesinn texti
 Texti afritaður
+Prufueiginleiki: sjálfvirkur lestur getur gert mistök. Berðu hvert gildi saman við skráningarskírteinið áður en þú vistar.

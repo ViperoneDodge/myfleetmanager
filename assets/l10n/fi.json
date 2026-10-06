@@ -401,7 +401,7 @@
  "tech.tyres": "Renkaat",
  "tech.power": "Teho (kW)",
  "tech.engine": "Iskutilavuus (cm³)",
- "ocr.read": "Lue tiedot rekisteriotteesta",
+ "ocr.read": "Lue tiedot rekisteriotteesta (beta)",
  "ocr.reading": "Luetaan asiakirjaa…",
  "ocr.found": "Asiakirjasta löydetyt tiedot",
  "ocr.foundHint": "Valitse ajoneuvokorttiin tallennettavat tiedot ja tarkista ne: automaattinen luku voi erehtyä.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Rooli: {name}",
  "role.hint": "Napauta jäsentä vaihtaaksesi roolin. Kutsukoodilla liittyvät saavat vain katseluoikeuden.",
  "ocr.rawText": "Luettu teksti",
- "ocr.rawCopied": "Teksti kopioitu"
+ "ocr.rawCopied": "Teksti kopioitu",
+ "ocr.disclaimer": "Testitoiminto: automaattinen luku voi erehtyä. Vertaa jokaista tietoa rekisteriotteeseen ennen tallentamista."
 }

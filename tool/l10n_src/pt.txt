@@ -400,7 +400,7 @@ Número do quadro (VIN)
 Pneus
 Potência (kW)
 Cilindrada (cm³)
-Ler dados do documento único
+Ler dados do documento único (beta)
 A ler o documento…
 Dados encontrados no documento
 Selecione os dados a guardar na ficha do veículo e confirme-os: a leitura automática pode errar.
@@ -426,3 +426,4 @@ Função de {name}
 Toque num membro para mudar a função. Quem entra com o código de convite fica só com visualização.
 Texto lido
 Texto copiado
+Funcionalidade em teste: a leitura automática pode errar. Compare cada dado com o documento do veículo antes de o guardar.

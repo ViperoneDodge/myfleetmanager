@@ -401,7 +401,7 @@
  "tech.tyres": "Pneumatiky",
  "tech.power": "Výkon (kW)",
  "tech.engine": "Zdvihový objem (cm³)",
- "ocr.read": "Načítať údaje z osvedčenia o evidencii",
+ "ocr.read": "Načítať údaje z osvedčenia o evidencii (beta)",
  "ocr.reading": "Čítanie dokumentu…",
  "ocr.found": "Údaje nájdené v dokumente",
  "ocr.foundHint": "Vyberte údaje, ktoré sa uložia do karty vozidla, a skontrolujte ich: automatické čítanie sa môže pomýliť.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Rola: {name}",
  "role.hint": "Ťuknutím na člena zmeníte jeho rolu. Kto sa pripojí kódom pozvánky, má len prezeranie.",
  "ocr.rawText": "Prečítaný text",
- "ocr.rawCopied": "Text skopírovaný"
+ "ocr.rawCopied": "Text skopírovaný",
+ "ocr.disclaimer": "Skúšobná funkcia: automatické čítanie sa môže pomýliť. Pred uložením porovnajte každý údaj s osvedčením o evidencii."
 }

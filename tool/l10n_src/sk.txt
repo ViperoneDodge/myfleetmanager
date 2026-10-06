@@ -400,7 +400,7 @@ Technické údaje
 Pneumatiky
 Výkon (kW)
 Zdvihový objem (cm³)
-Načítať údaje z osvedčenia o evidencii
+Načítať údaje z osvedčenia o evidencii (beta)
 Čítanie dokumentu…
 Údaje nájdené v dokumente
 Vyberte údaje, ktoré sa uložia do karty vozidla, a skontrolujte ich: automatické čítanie sa môže pomýliť.
@@ -426,3 +426,4 @@ Rola: {name}
 Ťuknutím na člena zmeníte jeho rolu. Kto sa pripojí kódom pozvánky, má len prezeranie.
 Prečítaný text
 Text skopírovaný
+Skúšobná funkcia: automatické čítanie sa môže pomýliť. Pred uložením porovnajte každý údaj s osvedčením o evidencii.

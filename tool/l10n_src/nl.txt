@@ -400,7 +400,7 @@ Chassisnummer (VIN)
 Banden
 Vermogen (kW)
 Cilinderinhoud (cm³)
-Gegevens uit het kentekenbewijs lezen
+Gegevens uit het kentekenbewijs lezen (beta)
 Document wordt gelezen…
 Gevonden gegevens
 Kies welke gegevens je in de voertuigkaart wilt opslaan en controleer ze: automatisch lezen kan fouten maken.
@@ -426,3 +426,4 @@ Rol van {name}
 Tik op een lid om de rol te wijzigen. Wie met de uitnodigingscode lid wordt, kan alleen bekijken.
 Gelezen tekst
 Tekst gekopieerd
+Testfunctie: automatisch lezen kan fouten maken. Vergelijk elk gegeven met het kentekenbewijs voordat je het opslaat.

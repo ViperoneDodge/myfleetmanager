@@ -401,7 +401,7 @@
  "tech.tyres": "Anvelope",
  "tech.power": "Putere (kW)",
  "tech.engine": "Capacitate cilindrică (cm³)",
- "ocr.read": "Citește datele din certificatul de înmatriculare",
+ "ocr.read": "Citește datele din certificatul de înmatriculare (beta)",
  "ocr.reading": "Se citește documentul…",
  "ocr.found": "Date găsite în document",
  "ocr.foundHint": "Selectează datele de salvat în fișa vehiculului și verifică-le: citirea automată poate greși.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Rolul lui {name}",
  "role.hint": "Atinge un membru pentru a-i schimba rolul. Cine intră cu codul de invitație are doar vizualizare.",
  "ocr.rawText": "Text citit",
- "ocr.rawCopied": "Text copiat"
+ "ocr.rawCopied": "Text copiat",
+ "ocr.disclaimer": "Funcție în test: citirea automată poate greși. Compară fiecare dată cu certificatul de înmatriculare înainte de salvare."
 }

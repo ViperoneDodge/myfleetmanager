@@ -400,7 +400,7 @@ Valmistenumero (VIN)
 Renkaat
 Teho (kW)
 Iskutilavuus (cm³)
-Lue tiedot rekisteriotteesta
+Lue tiedot rekisteriotteesta (beta)
 Luetaan asiakirjaa…
 Asiakirjasta löydetyt tiedot
 Valitse ajoneuvokorttiin tallennettavat tiedot ja tarkista ne: automaattinen luku voi erehtyä.
@@ -426,3 +426,4 @@ Rooli: {name}
 Napauta jäsentä vaihtaaksesi roolin. Kutsukoodilla liittyvät saavat vain katseluoikeuden.
 Luettu teksti
 Teksti kopioitu
+Testitoiminto: automaattinen luku voi erehtyä. Vertaa jokaista tietoa rekisteriotteeseen ennen tallentamista.

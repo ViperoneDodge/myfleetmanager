@@ -401,7 +401,7 @@
  "tech.tyres": "Lốp xe",
  "tech.power": "Công suất (kW)",
  "tech.engine": "Dung tích (cm³)",
- "ocr.read": "Đọc dữ liệu từ giấy đăng ký",
+ "ocr.read": "Đọc dữ liệu từ giấy đăng ký (beta)",
  "ocr.reading": "Đang đọc tài liệu…",
  "ocr.found": "Dữ liệu tìm thấy trong tài liệu",
  "ocr.foundHint": "Chọn dữ liệu cần lưu vào thẻ xe và kiểm tra lại: đọc tự động có thể sai.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Vai trò của {name}",
  "role.hint": "Chạm vào thành viên để đổi vai trò. Người tham gia bằng mã mời chỉ có quyền xem.",
  "ocr.rawText": "Văn bản đã đọc",
- "ocr.rawCopied": "Đã sao chép văn bản"
+ "ocr.rawCopied": "Đã sao chép văn bản",
+ "ocr.disclaimer": "Tính năng thử nghiệm: đọc tự động có thể sai. Hãy đối chiếu từng dữ liệu với giấy đăng ký trước khi lưu."
 }

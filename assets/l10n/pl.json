@@ -401,7 +401,7 @@
  "tech.tyres": "Opony",
  "tech.power": "Moc (kW)",
  "tech.engine": "Pojemność (cm³)",
- "ocr.read": "Odczytaj dane z dowodu rejestracyjnego",
+ "ocr.read": "Odczytaj dane z dowodu rejestracyjnego (beta)",
  "ocr.reading": "Odczytywanie dokumentu…",
  "ocr.found": "Dane znalezione w dokumencie",
  "ocr.foundHint": "Wybierz dane do zapisania w karcie pojazdu i sprawdź je: automatyczny odczyt może się mylić.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Rola: {name}",
  "role.hint": "Dotknij członka, aby zmienić rolę. Osoby dołączające kodem zaproszenia mają tylko podgląd.",
  "ocr.rawText": "Odczytany tekst",
- "ocr.rawCopied": "Tekst skopiowany"
+ "ocr.rawCopied": "Tekst skopiowany",
+ "ocr.disclaimer": "Funkcja testowa: automatyczny odczyt może się mylić. Przed zapisaniem porównaj każdą wartość z dowodem rejestracyjnym."
 }

@@ -401,7 +401,7 @@
  "tech.tyres": "Gume",
  "tech.power": "Snaga (kW)",
  "tech.engine": "Obujam motora (cm³)",
- "ocr.read": "Pročitaj podatke iz prometne dozvole",
+ "ocr.read": "Pročitaj podatke iz prometne dozvole (beta)",
  "ocr.reading": "Čitanje dokumenta…",
  "ocr.found": "Podaci pronađeni u dokumentu",
  "ocr.foundHint": "Odaberite podatke za spremanje u karticu vozila i provjerite ih: automatsko čitanje može pogriješiti.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Uloga: {name}",
  "role.hint": "Dodirnite člana za promjenu uloge. Tko uđe s pozivnim kodom, ima samo pregled.",
  "ocr.rawText": "Pročitani tekst",
- "ocr.rawCopied": "Tekst kopiran"
+ "ocr.rawCopied": "Tekst kopiran",
+ "ocr.disclaimer": "Probna funkcija: automatsko čitanje može pogriješiti. Usporedite svaki podatak s prometnom dozvolom prije spremanja."
 }

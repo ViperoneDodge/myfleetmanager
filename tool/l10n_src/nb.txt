@@ -400,7 +400,7 @@ Understellsnummer (VIN)
 Dekk
 Effekt (kW)
 Slagvolum (cm³)
-Les data fra vognkortet
+Les data fra vognkortet (beta)
 Leser dokumentet…
 Data funnet i dokumentet
 Velg dataene som skal lagres i kjøretøykortet, og kontroller dem: automatisk lesing kan ta feil.
@@ -426,3 +426,4 @@ Rolle for {name}
 Trykk på et medlem for å endre rollen. De som blir med via invitasjonskoden, har bare visning.
 Lest tekst
 Tekst kopiert
+Testfunksjon: automatisk lesing kan ta feil. Sammenlign hver verdi med vognkortet før du lagrer den.

@@ -401,7 +401,7 @@
  "tech.tyres": "Pneumatici",
  "tech.power": "Potenza (kW)",
  "tech.engine": "Cilindrata (cm³)",
- "ocr.read": "Leggi dati dal libretto",
+ "ocr.read": "Leggi dati dal libretto (beta)",
  "ocr.reading": "Lettura del documento…",
  "ocr.found": "Dati trovati nel documento",
  "ocr.foundHint": "Seleziona i dati da salvare nella scheda del veicolo e controllali: la lettura automatica può sbagliare.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Ruolo di {name}",
  "role.hint": "Tocca un membro per cambiarne il ruolo. Chi entra con il codice invito è in sola visualizzazione.",
  "ocr.rawText": "Testo letto",
- "ocr.rawCopied": "Testo copiato"
+ "ocr.rawCopied": "Testo copiato",
+ "ocr.disclaimer": "Funzione in prova: la lettura automatica può sbagliare. Confronta ogni dato con il libretto prima di salvarlo."
 }

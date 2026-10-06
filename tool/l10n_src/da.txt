@@ -400,7 +400,7 @@ Stelnummer (VIN)
 Dæk
 Effekt (kW)
 Slagvolumen (cm³)
-Læs data fra registreringsattesten
+Læs data fra registreringsattesten (beta)
 Læser dokumentet…
 Data fundet i dokumentet
 Vælg de data, der skal gemmes i køretøjskortet, og kontrollér dem: automatisk læsning kan tage fejl.
@@ -426,3 +426,4 @@ Rolle for {name}
 Tryk på et medlem for at ændre rollen. Den, der deltager med invitationskoden, har kun visning.
 Læst tekst
 Tekst kopieret
+Testfunktion: automatisk læsning kan tage fejl. Sammenlign hver værdi med registreringsattesten, før du gemmer den.

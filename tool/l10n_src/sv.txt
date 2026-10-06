@@ -400,7 +400,7 @@ Chassinummer (VIN)
 Däck
 Effekt (kW)
 Slagvolym (cm³)
-Läs data från registreringsbeviset
+Läs data från registreringsbeviset (beta)
 Läser dokumentet…
 Data som hittades i dokumentet
 Välj vilka data som ska sparas i fordonskortet och kontrollera dem: den automatiska läsningen kan göra fel.
@@ -426,3 +426,4 @@ Roll för {name}
 Tryck på en medlem för att ändra rollen. Den som går med via inbjudningskoden får endast visning.
 Läst text
 Texten kopierad
+Testfunktion: den automatiska läsningen kan göra fel. Jämför varje uppgift med registreringsbeviset innan du sparar den.

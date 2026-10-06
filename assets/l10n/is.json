@@ -401,7 +401,7 @@
  "tech.tyres": "Dekk",
  "tech.power": "Afl (kW)",
  "tech.engine": "Slagrými (cm³)",
- "ocr.read": "Lesa gögn úr skráningarskírteini",
+ "ocr.read": "Lesa gögn úr skráningarskírteini (beta)",
  "ocr.reading": "Les skjalið…",
  "ocr.found": "Gögn sem fundust í skjalinu",
  "ocr.foundHint": "Veldu gögnin sem vista á í ökutækjaspjaldið og athugaðu þau: sjálfvirkur lestur getur gert mistök.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Hlutverk: {name}",
  "role.hint": "Ýttu á meðlim til að breyta hlutverki hans. Þeir sem ganga í hópinn með boðskóða fá aðeins skoðun.",
  "ocr.rawText": "Lesinn texti",
- "ocr.rawCopied": "Texti afritaður"
+ "ocr.rawCopied": "Texti afritaður",
+ "ocr.disclaimer": "Prufueiginleiki: sjálfvirkur lestur getur gert mistök. Berðu hvert gildi saman við skráningarskírteinið áður en þú vistar."
 }

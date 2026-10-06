@@ -401,7 +401,7 @@
  "tech.tyres": "Gumiabroncsok",
  "tech.power": "Teljesítmény (kW)",
  "tech.engine": "Hengerűrtartalom (cm³)",
- "ocr.read": "Adatok beolvasása a forgalmi engedélyből",
+ "ocr.read": "Adatok beolvasása a forgalmi engedélyből (beta)",
  "ocr.reading": "Dokumentum olvasása…",
  "ocr.found": "A dokumentumban talált adatok",
  "ocr.foundHint": "Válaszd ki a jármű adatlapjára mentendő adatokat, és ellenőrizd őket: az automatikus olvasás tévedhet.",
@@ -426,5 +426,6 @@
  "role.changeFor": "{name} szerepe",
  "role.hint": "Koppints egy tagra a szerepe módosításához. A meghívókóddal csatlakozók csak megtekinthetnek.",
  "ocr.rawText": "Beolvasott szöveg",
- "ocr.rawCopied": "Szöveg másolva"
+ "ocr.rawCopied": "Szöveg másolva",
+ "ocr.disclaimer": "Próbafunkció: az automatikus olvasás tévedhet. Mentés előtt vess össze minden adatot a forgalmi engedéllyel."
 }

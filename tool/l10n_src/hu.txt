@@ -400,7 +400,7 @@ Alvázszám (VIN)
 Gumiabroncsok
 Teljesítmény (kW)
 Hengerűrtartalom (cm³)
-Adatok beolvasása a forgalmi engedélyből
+Adatok beolvasása a forgalmi engedélyből (beta)
 Dokumentum olvasása…
 A dokumentumban talált adatok
 Válaszd ki a jármű adatlapjára mentendő adatokat, és ellenőrizd őket: az automatikus olvasás tévedhet.
@@ -426,3 +426,4 @@ Jelenlegi tulajdonos: {name}
 Koppints egy tagra a szerepe módosításához. A meghívókóddal csatlakozók csak megtekinthetnek.
 Beolvasott szöveg
 Szöveg másolva
+Próbafunkció: az automatikus olvasás tévedhet. Mentés előtt vess össze minden adatot a forgalmi engedéllyel.

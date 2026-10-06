@@ -401,7 +401,7 @@
  "tech.tyres": "Pnevmatike",
  "tech.power": "Moč (kW)",
  "tech.engine": "Prostornina (cm³)",
- "ocr.read": "Preberi podatke iz prometnega dovoljenja",
+ "ocr.read": "Preberi podatke iz prometnega dovoljenja (beta)",
  "ocr.reading": "Branje dokumenta…",
  "ocr.found": "Najdeni podatki",
  "ocr.foundHint": "Izberite podatke za shranjevanje v kartico vozila in jih preverite: samodejno branje se lahko zmoti.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Vloga: {name}",
  "role.hint": "Tapnite člana, da spremenite vlogo. Kdor se pridruži s kodo povabila, ima samo ogled.",
  "ocr.rawText": "Prebrano besedilo",
- "ocr.rawCopied": "Besedilo kopirano"
+ "ocr.rawCopied": "Besedilo kopirano",
+ "ocr.disclaimer": "Preizkusna funkcija: samodejno branje se lahko zmoti. Pred shranjevanjem vsak podatek primerjajte s prometnim dovoljenjem."
 }

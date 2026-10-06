@@ -400,7 +400,7 @@ Numer nadwozia (VIN)
 Opony
 Moc (kW)
 Pojemność (cm³)
-Odczytaj dane z dowodu rejestracyjnego
+Odczytaj dane z dowodu rejestracyjnego (beta)
 Odczytywanie dokumentu…
 Dane znalezione w dokumencie
 Wybierz dane do zapisania w karcie pojazdu i sprawdź je: automatyczny odczyt może się mylić.
@@ -426,3 +426,4 @@ Rola: {name}
 Dotknij członka, aby zmienić rolę. Osoby dołączające kodem zaproszenia mają tylko podgląd.
 Odczytany tekst
 Tekst skopiowany
+Funkcja testowa: automatyczny odczyt może się mylić. Przed zapisaniem porównaj każdą wartość z dowodem rejestracyjnym.

@@ -401,7 +401,7 @@
  "tech.tyres": "Rehvid",
  "tech.power": "Võimsus (kW)",
  "tech.engine": "Töömaht (cm³)",
- "ocr.read": "Loe andmed registreerimistunnistuselt",
+ "ocr.read": "Loe andmed registreerimistunnistuselt (beta)",
  "ocr.reading": "Dokumendi lugemine…",
  "ocr.found": "Dokumendist leitud andmed",
  "ocr.foundHint": "Vali sõidukikaardile salvestatavad andmed ja kontrolli neid: automaatne lugemine võib eksida.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Roll: {name}",
  "role.hint": "Puuduta liiget, et tema rolli muuta. Kutsekoodiga liitujad saavad ainult vaadata.",
  "ocr.rawText": "Loetud tekst",
- "ocr.rawCopied": "Tekst kopeeritud"
+ "ocr.rawCopied": "Tekst kopeeritud",
+ "ocr.disclaimer": "Testfunktsioon: automaatne lugemine võib eksida. Võrdle enne salvestamist iga andmet registreerimistunnistusega."
 }

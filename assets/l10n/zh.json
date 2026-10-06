@@ -401,7 +401,7 @@
  "tech.tyres": "轮胎",
  "tech.power": "功率 (kW)",
  "tech.engine": "排量 (cm³)",
- "ocr.read": "从行驶证读取数据",
+ "ocr.read": "从行驶证读取数据 (beta)",
  "ocr.reading": "正在读取文档…",
  "ocr.found": "文档中找到的数据",
  "ocr.foundHint": "选择要保存到车辆卡片的数据并检查：自动识别可能有误。",
@@ -426,5 +426,6 @@
  "role.changeFor": "{name} 的角色",
  "role.hint": "点按成员以更改其角色。通过邀请码加入的人仅可查看。",
  "ocr.rawText": "识别的文本",
- "ocr.rawCopied": "文本已复制"
+ "ocr.rawCopied": "文本已复制",
+ "ocr.disclaimer": "试用功能：自动识别可能出错。保存前请将每项数据与行驶证核对。"
 }

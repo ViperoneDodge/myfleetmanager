@@ -400,7 +400,7 @@ Serie șasiu (VIN)
 Anvelope
 Putere (kW)
 Capacitate cilindrică (cm³)
-Citește datele din certificatul de înmatriculare
+Citește datele din certificatul de înmatriculare (beta)
 Se citește documentul…
 Date găsite în document
 Selectează datele de salvat în fișa vehiculului și verifică-le: citirea automată poate greși.
@@ -426,3 +426,4 @@ Rolul lui {name}
 Atinge un membru pentru a-i schimba rolul. Cine intră cu codul de invitație are doar vizualizare.
 Text citit
 Text copiat
+Funcție în test: citirea automată poate greși. Compară fiecare dată cu certificatul de înmatriculare înainte de salvare.

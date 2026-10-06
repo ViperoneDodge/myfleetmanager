@@ -400,7 +400,7 @@ Numru tax-xażi (VIN)
 Tajers
 Qawwa (kW)
 Kapaċità tal-magna (cm³)
-Aqra d-dettalji mil-liċenzja tal-vettura
+Aqra d-dettalji mil-liċenzja tal-vettura (beta)
 Qed jinqara d-dokument…
 Dettalji misjuba fid-dokument
 Agħżel id-dettalji li jiġu ssejvjati fil-karta tal-vettura u iċċekkjahom: il-qari awtomatiku jista' jiżbalja.
@@ -426,3 +426,4 @@ Rwol ta' {name}
 Agħfas fuq membru biex tibdel ir-rwol tiegħu. Min jidħol bil-kodiċi tal-istedina jista' biss jara.
 Test moqri
 Test ikkopjat
+Funzjoni ta' prova: il-qari awtomatiku jista' jiżbalja. Qabbel kull dettall mal-liċenzja tal-vettura qabel ma tissejvjah.

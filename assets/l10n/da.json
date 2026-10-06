@@ -401,7 +401,7 @@
  "tech.tyres": "Dæk",
  "tech.power": "Effekt (kW)",
  "tech.engine": "Slagvolumen (cm³)",
- "ocr.read": "Læs data fra registreringsattesten",
+ "ocr.read": "Læs data fra registreringsattesten (beta)",
  "ocr.reading": "Læser dokumentet…",
  "ocr.found": "Data fundet i dokumentet",
  "ocr.foundHint": "Vælg de data, der skal gemmes i køretøjskortet, og kontrollér dem: automatisk læsning kan tage fejl.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Rolle for {name}",
  "role.hint": "Tryk på et medlem for at ændre rollen. Den, der deltager med invitationskoden, har kun visning.",
  "ocr.rawText": "Læst tekst",
- "ocr.rawCopied": "Tekst kopieret"
+ "ocr.rawCopied": "Tekst kopieret",
+ "ocr.disclaimer": "Testfunktion: automatisk læsning kan tage fejl. Sammenlign hver værdi med registreringsattesten, før du gemmer den."
 }

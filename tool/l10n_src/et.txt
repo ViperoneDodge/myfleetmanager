@@ -400,7 +400,7 @@ Tehnilised andmed
 Rehvid
 Võimsus (kW)
 Töömaht (cm³)
-Loe andmed registreerimistunnistuselt
+Loe andmed registreerimistunnistuselt (beta)
 Dokumendi lugemine…
 Dokumendist leitud andmed
 Vali sõidukikaardile salvestatavad andmed ja kontrolli neid: automaatne lugemine võib eksida.
@@ -426,3 +426,4 @@ Roll: {name}
 Puuduta liiget, et tema rolli muuta. Kutsekoodiga liitujad saavad ainult vaadata.
 Loetud tekst
 Tekst kopeeritud
+Testfunktsioon: automaatne lugemine võib eksida. Võrdle enne salvestamist iga andmet registreerimistunnistusega.

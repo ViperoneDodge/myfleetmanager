@@ -400,7 +400,7 @@ Số khung (VIN)
 Lốp xe
 Công suất (kW)
 Dung tích (cm³)
-Đọc dữ liệu từ giấy đăng ký
+Đọc dữ liệu từ giấy đăng ký (beta)
 Đang đọc tài liệu…
 Dữ liệu tìm thấy trong tài liệu
 Chọn dữ liệu cần lưu vào thẻ xe và kiểm tra lại: đọc tự động có thể sai.
@@ -426,3 +426,4 @@ Vai trò của {name}
 Chạm vào thành viên để đổi vai trò. Người tham gia bằng mã mời chỉ có quyền xem.
 Văn bản đã đọc
 Đã sao chép văn bản
+Tính năng thử nghiệm: đọc tự động có thể sai. Hãy đối chiếu từng dữ liệu với giấy đăng ký trước khi lưu.

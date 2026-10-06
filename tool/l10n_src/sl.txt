@@ -400,7 +400,7 @@ Tehnični podatki
 Pnevmatike
 Moč (kW)
 Prostornina (cm³)
-Preberi podatke iz prometnega dovoljenja
+Preberi podatke iz prometnega dovoljenja (beta)
 Branje dokumenta…
 Najdeni podatki
 Izberite podatke za shranjevanje v kartico vozila in jih preverite: samodejno branje se lahko zmoti.
@@ -426,3 +426,4 @@ Vloga: {name}
 Tapnite člana, da spremenite vlogo. Kdor se pridruži s kodo povabila, ima samo ogled.
 Prebrano besedilo
 Besedilo kopirano
+Preizkusna funkcija: samodejno branje se lahko zmoti. Pred shranjevanjem vsak podatek primerjajte s prometnim dovoljenjem.

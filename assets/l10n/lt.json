@@ -401,7 +401,7 @@
  "tech.tyres": "Padangos",
  "tech.power": "Galia (kW)",
  "tech.engine": "Darbinis tūris (cm³)",
- "ocr.read": "Nuskaityti duomenis iš registracijos liudijimo",
+ "ocr.read": "Nuskaityti duomenis iš registracijos liudijimo (beta)",
  "ocr.reading": "Skaitomas dokumentas…",
  "ocr.found": "Dokumente rasti duomenys",
  "ocr.foundHint": "Pasirinkite duomenis, kuriuos išsaugoti transporto priemonės kortelėje, ir juos patikrinkite: automatinis nuskaitymas gali klysti.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Vaidmuo: {name}",
  "role.hint": "Bakstelėkite narį, kad pakeistumėte vaidmenį. Prisijungę pakvietimo kodu gali tik peržiūrėti.",
  "ocr.rawText": "Nuskaitytas tekstas",
- "ocr.rawCopied": "Tekstas nukopijuotas"
+ "ocr.rawCopied": "Tekstas nukopijuotas",
+ "ocr.disclaimer": "Bandomoji funkcija: automatinis nuskaitymas gali klysti. Prieš išsaugodami palyginkite kiekvieną duomenį su registracijos liudijimu."
 }

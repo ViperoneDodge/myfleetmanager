@@ -400,7 +400,7 @@ Nomor rangka (VIN)
 Ban
 Daya (kW)
 Kapasitas mesin (cm³)
-Baca data dari STNK
+Baca data dari STNK (beta)
 Membaca dokumen…
 Data yang ditemukan di dokumen
 Pilih data yang akan disimpan ke kartu kendaraan dan periksa: pembacaan otomatis bisa salah.
@@ -426,3 +426,4 @@ Peran {name}
 Ketuk anggota untuk mengubah perannya. Yang bergabung dengan kode undangan hanya dapat melihat.
 Teks terbaca
 Teks disalin
+Fitur uji coba: pembacaan otomatis bisa salah. Cocokkan setiap data dengan STNK sebelum menyimpannya.

@@ -400,7 +400,7 @@ Tehniskie dati
 Riepas
 Jauda (kW)
 Motora tilpums (cm³)
-Nolasīt datus no reģistrācijas apliecības
+Nolasīt datus no reģistrācijas apliecības (beta)
 Notiek dokumenta nolasīšana…
 Dokumentā atrastie dati
 Izvēlieties datus, ko saglabāt transportlīdzekļa kartītē, un pārbaudiet tos: automātiskā nolasīšana var kļūdīties.
@@ -426,3 +426,4 @@ Loma: {name}
 Pieskarieties dalībniekam, lai mainītu lomu. Ar ielūguma kodu pievienojušies var tikai skatīt.
 Nolasītais teksts
 Teksts nokopēts
+Izmēģinājuma funkcija: automātiskā nolasīšana var kļūdīties. Pirms saglabāšanas salīdziniet katru datu ar reģistrācijas apliecību.

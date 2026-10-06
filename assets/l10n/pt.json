@@ -401,7 +401,7 @@
  "tech.tyres": "Pneus",
  "tech.power": "Potência (kW)",
  "tech.engine": "Cilindrada (cm³)",
- "ocr.read": "Ler dados do documento único",
+ "ocr.read": "Ler dados do documento único (beta)",
  "ocr.reading": "A ler o documento…",
  "ocr.found": "Dados encontrados no documento",
  "ocr.foundHint": "Selecione os dados a guardar na ficha do veículo e confirme-os: a leitura automática pode errar.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Função de {name}",
  "role.hint": "Toque num membro para mudar a função. Quem entra com o código de convite fica só com visualização.",
  "ocr.rawText": "Texto lido",
- "ocr.rawCopied": "Texto copiado"
+ "ocr.rawCopied": "Texto copiado",
+ "ocr.disclaimer": "Funcionalidade em teste: a leitura automática pode errar. Compare cada dado com o documento do veículo antes de o guardar."
 }

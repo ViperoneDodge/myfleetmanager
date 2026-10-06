@@ -401,7 +401,7 @@
  "tech.tyres": "Neumáticos",
  "tech.power": "Potencia (kW)",
  "tech.engine": "Cilindrada (cm³)",
- "ocr.read": "Leer datos del permiso de circulación",
+ "ocr.read": "Leer datos del permiso de circulación (beta)",
  "ocr.reading": "Leyendo el documento…",
  "ocr.found": "Datos encontrados en el documento",
  "ocr.foundHint": "Selecciona los datos que quieres guardar en la ficha del vehículo y revísalos: la lectura automática puede equivocarse.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Rol de {name}",
  "role.hint": "Toca un miembro para cambiar su rol. Quien entra con el código de invitación es de solo lectura.",
  "ocr.rawText": "Texto leído",
- "ocr.rawCopied": "Texto copiado"
+ "ocr.rawCopied": "Texto copiado",
+ "ocr.disclaimer": "Función en pruebas: la lectura automática puede equivocarse. Compara cada dato con el permiso de circulación antes de guardarlo."
 }

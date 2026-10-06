@@ -401,7 +401,7 @@
  "tech.tyres": "Reifen",
  "tech.power": "Leistung (kW)",
  "tech.engine": "Hubraum (cm³)",
- "ocr.read": "Daten aus dem Fahrzeugschein lesen",
+ "ocr.read": "Daten aus dem Fahrzeugschein lesen (beta)",
  "ocr.reading": "Dokument wird gelesen…",
  "ocr.found": "Im Dokument gefundene Daten",
  "ocr.foundHint": "Wähle die Daten aus, die im Fahrzeug gespeichert werden sollen, und prüfe sie: Die automatische Erkennung kann sich irren.",
@@ -426,5 +426,6 @@
  "role.changeFor": "Rolle von {name}",
  "role.hint": "Tippe auf ein Mitglied, um seine Rolle zu ändern. Wer mit dem Einladungscode beitritt, kann nur ansehen.",
  "ocr.rawText": "Gelesener Text",
- "ocr.rawCopied": "Text kopiert"
+ "ocr.rawCopied": "Text kopiert",
+ "ocr.disclaimer": "Testfunktion: Die automatische Erkennung kann sich irren. Vergleiche jeden Wert mit dem Fahrzeugschein, bevor du ihn speicherst."
 }

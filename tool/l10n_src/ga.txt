@@ -400,7 +400,7 @@ Uimhir fhonnaidh (VIN)
 Boinn
 Cumhacht (kW)
 Toilleadh innill (cm³)
-Léigh sonraí ón deimhniú clárúcháin
+Léigh sonraí ón deimhniú clárúcháin (beta)
 An doiciméad á léamh…
 Sonraí aimsithe sa doiciméad
 Roghnaigh na sonraí le sábháil i gcárta na feithicle agus seiceáil iad: d'fhéadfadh botúin a bheith sa léamh uathoibríoch.
@@ -426,3 +426,4 @@ Ról: {name}
 Tapáil ball chun a ról a athrú. Is amharc amháin atá ag na daoine a thagann isteach le cód cuiridh.
 Téacs léite
 Téacs cóipeáilte
+Gné thrialach: d'fhéadfadh botúin a bheith sa léamh uathoibríoch. Cuir gach luach i gcomparáid leis an deimhniú clárúcháin sula sábhálann tú é.
