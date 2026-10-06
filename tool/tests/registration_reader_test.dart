@@ -53,6 +53,56 @@ NATO IL 03.03.1980
     expect(d.isEmpty, true);
   });
 
+  test('Germania: codici senza parentesi, P.2/P.4', () {
+    const t = '''ZULASSUNGSBESCHEINIGUNG TEIL I
+A   M-AB 1234
+B   14.03.2019
+E   WVWZZZ1KZ5W012345
+P.1   1598
+P.2/P.4   85/5000
+P.3   BENZIN''';
+    final d = RegistrationReader.parse(t);
+    expect(d.plate, 'MAB1234');
+    expect(d.registrationDate, DateTime(2019, 3, 14));
+    expect(d.vin, 'WVWZZZ1KZ5W012345');
+    expect(d.engineCc, '1598');
+    expect(d.powerKw, '85');
+  });
+
+  test('Francia: codici con il punto', () {
+    const t = '''CERTIFICAT D'IMMATRICULATION
+A. AB-123-CD   B. 14/03/2019
+E. VF1RFB00X12345678
+P.1 1461   P.2 85   P.3 GO''';
+    final d = RegistrationReader.parse(t);
+    expect(d.plate, 'AB123CD');
+    expect(d.registrationDate, DateTime(2019, 3, 14));
+    expect(d.vin, 'VF1RFB00X12345678');
+    expect(d.engineCc, '1461');
+    expect(d.powerKw, '85');
+  });
+
+  test('Spagna: due punti e targa numeri-lettere', () {
+    const t = 'A: 1234 BCD\nB: 14/03/2019\nE: VSSZZZ6JZ9R012345\nP.1: 1390\nP.2: 63';
+    final d = RegistrationReader.parse(t);
+    expect(d.plate, '1234BCD');
+    expect(d.registrationDate, DateTime(2019, 3, 14));
+    expect(d.vin, 'VSSZZZ6JZ9R012345');
+    expect(d.engineCc, '1390');
+    expect(d.powerKw, '63');
+  });
+
+  test('etichetta a fine riga con valore nella riga sotto', () {
+    final d = RegistrationReader.parse('E\nTMBJJ7NE8K0012345\nB\n2019-03-14');
+    expect(d.vin, 'TMBJJ7NE8K0012345');
+    expect(d.registrationDate, DateTime(2019, 3, 14));
+  });
+
+  test('lettere isolate nel testo non diventano dati', () {
+    final d = RegistrationReader.parse("NATO IL 03.03.1980\nA CITTA' (XX)\nE ROSSI MARIO\nVIA ROMA 1 A ASTI");
+    expect(d.isEmpty, true);
+  });
+
   test('righe ricostruite dalla posizione (colonne separate)', () {
     Rect r(double x, double y, double w) => Rect.fromLTWH(x, y, w, 20);
     final text = RegistrationReader.layoutLines([

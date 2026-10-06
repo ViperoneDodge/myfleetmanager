@@ -82,6 +82,8 @@ class RegistrationReader {
 
   static final RegExp _date = RegExp(r'(\d{1,2})\s?[/.\-]\s?(\d{1,2})\s?[/.\-]\s?(\d{4}|\d{2})\b');
 
+  static final RegExp _isoDate = RegExp(r'\b(\d{4})-(\d{2})-(\d{2})\b');
+
   static DateTime? _toDate(RegExpMatch m) {
     final d = int.tryParse(m.group(1)!);
     final mo = int.tryParse(m.group(2)!);
@@ -99,26 +101,35 @@ class RegistrationReader {
   static String _num(String s) =>
       s.replaceAll(',', '.').replaceAll(RegExp(r'\.0+$'), '').replaceFirst(RegExp(r'^0+(?=\d)'), '');
 
-  static final RegExp _label = RegExp(r'\(\s*([A-Z0-9])\s*(?:[.,]\s*(\d+)\s*)*\)');
+  static final RegExp _label = RegExp(
+      r'(?<![A-Z0-9.])(?:\(\s*8\s*\)|[(\[]?\s*(?:P\s*[.,]?\s*[12](?:\s*/\s*P\s*[.,]?\s*\d)?|[ABE])\s*(?:[)\].:]|(?=\s|$)))');
 
-  static String? _code(RegExpMatch m) {
-    final letter = m.group(1)! == '8' ? 'B' : m.group(1)!;
-    final full = m.group(0)!.replaceAll(RegExp(r'[\s()]'), '').replaceAll(',', '.');
-    if (letter == 'P' && (full == 'P.1' || full == 'P1')) return 'P.1';
-    if (letter == 'P' && (full == 'P.2' || full == 'P2')) return 'P.2';
-    if (full == letter || (letter == 'B' && full == '8')) return letter;
-    return null;
+  static String _code(String m) {
+    final t = m.replaceAll(RegExp(r'[\s()\[\].:,]'), '');
+    if (t == '8' || t == 'B') return 'B';
+    if (t.startsWith('P1')) return 'P.1';
+    if (t.startsWith('P2')) return 'P.2';
+    return t;
   }
+
+  static String _firstSegment(String s) =>
+      s.trim().replaceFirst(RegExp(r'^[:.\-]+'), '').trim().split(RegExp(r'\s{2,}')).first.trim();
 
   static Map<String, List<String>> labelValues(String text) {
     final out = <String, List<String>>{};
-    for (final line in text.toUpperCase().split('\n')) {
+    final lines = text.toUpperCase().split('\n');
+    for (var li = 0; li < lines.length; li++) {
+      final line = lines[li];
       final labels = _label.allMatches(line).toList();
       for (var i = 0; i < labels.length; i++) {
-        final code = _code(labels[i]);
-        if (code == null) continue;
+        final code = _code(labels[i].group(0)!);
         final stop = i + 1 < labels.length ? labels[i + 1].start : line.length;
-        final value = line.substring(labels[i].end, stop).trim().split(RegExp(r'\s{2,}')).first.trim();
+        var value = _firstSegment(line.substring(labels[i].end, stop));
+        if (value.isEmpty && i == labels.length - 1 && li + 1 < lines.length) {
+          final next = lines[li + 1];
+          final nl = _label.firstMatch(next);
+          value = _firstSegment(nl == null ? next : next.substring(0, nl.start));
+        }
         if (value.isNotEmpty) out.putIfAbsent(code, () => []).add(value);
       }
     }
@@ -138,8 +149,11 @@ class RegistrationReader {
     }
 
     for (final v in values['B'] ?? const <String>[]) {
+      final iso = _isoDate.firstMatch(v);
       final m = _date.firstMatch(v);
-      final d = m == null ? null : _toDate(m);
+      final d = iso != null
+          ? _toDate(RegExp(r'(\d+)-(\d+)-(\d+)').firstMatch('${iso.group(3)}-${iso.group(2)}-${iso.group(1)}')!)
+          : (m == null ? null : _toDate(m));
       if (d != null) {
         data.registrationDate = d;
         break;
