@@ -427,3 +427,5 @@ Agħfas fuq membru biex tibdel ir-rwol tiegħu. Min jidħol bil-kodiċi tal-iste
 Test moqri
 Test ikkopjat
 Funzjoni ta' prova: il-qari awtomatiku jista' jiżbalja. Qabbel kull dettall mal-liċenzja tal-vettura qabel ma tissejvjah.
+Il-ħin eżatt mitfi
+In-notifiki jistgħu jaslu tard jew ma jaslux. Agħfas u ixgħel "Allarmi u tfakkiriet" għal MyFleetManager.

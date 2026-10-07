@@ -427,5 +427,7 @@
  "role.hint": "Ťuknutím na člena zmeníte jeho rolu. Kto sa pripojí kódom pozvánky, má len prezeranie.",
  "ocr.rawText": "Prečítaný text",
  "ocr.rawCopied": "Text skopírovaný",
- "ocr.disclaimer": "Skúšobná funkcia: automatické čítanie sa môže pomýliť. Pred uložením porovnajte každý údaj s osvedčením o evidencii."
+ "ocr.disclaimer": "Skúšobná funkcia: automatické čítanie sa môže pomýliť. Pred uložením porovnajte každý údaj s osvedčením o evidencii.",
+ "settings.exactOff": "Presný čas je vypnutý",
+ "settings.exactOffInfo": "Upozornenia môžu prísť neskoro alebo vôbec. Ťuknite a zapnite „Budíky a pripomenutia“ pre MyFleetManager."
 }

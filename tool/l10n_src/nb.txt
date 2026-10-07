@@ -427,3 +427,5 @@ Trykk på et medlem for å endre rollen. De som blir med via invitasjonskoden, h
 Lest tekst
 Tekst kopiert
 Testfunksjon: automatisk lesing kan ta feil. Sammenlign hver verdi med vognkortet før du lagrer den.
+Nøyaktig tid er slått av
+Varsler kan komme sent eller ikke i det hele tatt. Trykk og slå på «Alarmer og påminnelser» for MyFleetManager.

@@ -427,5 +427,7 @@
  "role.hint": "Ýttu á meðlim til að breyta hlutverki hans. Þeir sem ganga í hópinn með boðskóða fá aðeins skoðun.",
  "ocr.rawText": "Lesinn texti",
  "ocr.rawCopied": "Texti afritaður",
- "ocr.disclaimer": "Prufueiginleiki: sjálfvirkur lestur getur gert mistök. Berðu hvert gildi saman við skráningarskírteinið áður en þú vistar."
+ "ocr.disclaimer": "Prufueiginleiki: sjálfvirkur lestur getur gert mistök. Berðu hvert gildi saman við skráningarskírteinið áður en þú vistar.",
+ "settings.exactOff": "Nákvæm tímasetning er óvirk",
+ "settings.exactOffInfo": "Tilkynningar geta borist seint eða alls ekki. Ýttu og kveiktu á „Vekjarar og áminningar“ fyrir MyFleetManager."
 }

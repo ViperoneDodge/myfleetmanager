@@ -427,5 +427,7 @@
  "role.hint": "Tocca un membro per cambiarne il ruolo. Chi entra con il codice invito è in sola visualizzazione.",
  "ocr.rawText": "Testo letto",
  "ocr.rawCopied": "Testo copiato",
- "ocr.disclaimer": "Funzione in prova: la lettura automatica può sbagliare. Confronta ogni dato con il libretto prima di salvarlo."
+ "ocr.disclaimer": "Funzione in prova: la lettura automatica può sbagliare. Confronta ogni dato con il libretto prima di salvarlo.",
+ "settings.exactOff": "Orario preciso disattivato",
+ "settings.exactOffInfo": "Le notifiche possono arrivare in ritardo o non arrivare. Tocca e attiva \"Sveglie e promemoria\" per MyFleetManager."
 }

@@ -427,5 +427,7 @@
  "role.hint": "Trykk på et medlem for å endre rollen. De som blir med via invitasjonskoden, har bare visning.",
  "ocr.rawText": "Lest tekst",
  "ocr.rawCopied": "Tekst kopiert",
- "ocr.disclaimer": "Testfunksjon: automatisk lesing kan ta feil. Sammenlign hver verdi med vognkortet før du lagrer den."
+ "ocr.disclaimer": "Testfunksjon: automatisk lesing kan ta feil. Sammenlign hver verdi med vognkortet før du lagrer den.",
+ "settings.exactOff": "Nøyaktig tid er slått av",
+ "settings.exactOffInfo": "Varsler kan komme sent eller ikke i det hele tatt. Trykk og slå på «Alarmer og påminnelser» for MyFleetManager."
 }

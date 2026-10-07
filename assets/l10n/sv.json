@@ -427,5 +427,7 @@
  "role.hint": "Tryck på en medlem för att ändra rollen. Den som går med via inbjudningskoden får endast visning.",
  "ocr.rawText": "Läst text",
  "ocr.rawCopied": "Texten kopierad",
- "ocr.disclaimer": "Testfunktion: den automatiska läsningen kan göra fel. Jämför varje uppgift med registreringsbeviset innan du sparar den."
+ "ocr.disclaimer": "Testfunktion: den automatiska läsningen kan göra fel. Jämför varje uppgift med registreringsbeviset innan du sparar den.",
+ "settings.exactOff": "Exakt tid avstängd",
+ "settings.exactOffInfo": "Aviseringar kan komma sent eller inte alls. Tryck och slå på ”Alarm och påminnelser” för MyFleetManager."
 }

@@ -427,3 +427,5 @@ Tapnite člana, da spremenite vlogo. Kdor se pridruži s kodo povabila, ima samo
 Prebrano besedilo
 Besedilo kopirano
 Preizkusna funkcija: samodejno branje se lahko zmoti. Pred shranjevanjem vsak podatek primerjajte s prometnim dovoljenjem.
+Točen čas je izklopljen
+Obvestila lahko pridejo pozno ali sploh ne. Tapnite in vklopite »Alarmi in opomniki« za MyFleetManager.

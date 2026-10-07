@@ -427,5 +427,7 @@
  "role.hint": "Dotknij członka, aby zmienić rolę. Osoby dołączające kodem zaproszenia mają tylko podgląd.",
  "ocr.rawText": "Odczytany tekst",
  "ocr.rawCopied": "Tekst skopiowany",
- "ocr.disclaimer": "Funkcja testowa: automatyczny odczyt może się mylić. Przed zapisaniem porównaj każdą wartość z dowodem rejestracyjnym."
+ "ocr.disclaimer": "Funkcja testowa: automatyczny odczyt może się mylić. Przed zapisaniem porównaj każdą wartość z dowodem rejestracyjnym.",
+ "settings.exactOff": "Dokładna godzina wyłączona",
+ "settings.exactOffInfo": "Powiadomienia mogą przychodzić z opóźnieniem lub wcale. Dotknij i włącz „Alarmy i przypomnienia” dla MyFleetManager."
 }

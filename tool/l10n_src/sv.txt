@@ -427,3 +427,5 @@ Tryck på en medlem för att ändra rollen. Den som går med via inbjudningskode
 Läst text
 Texten kopierad
 Testfunktion: den automatiska läsningen kan göra fel. Jämför varje uppgift med registreringsbeviset innan du sparar den.
+Exakt tid avstängd
+Aviseringar kan komma sent eller inte alls. Tryck och slå på ”Alarm och påminnelser” för MyFleetManager.

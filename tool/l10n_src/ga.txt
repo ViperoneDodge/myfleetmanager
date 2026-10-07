@@ -427,3 +427,5 @@ Tapáil ball chun a ról a athrú. Is amharc amháin atá ag na daoine a thagann
 Téacs léite
 Téacs cóipeáilte
 Gné thrialach: d'fhéadfadh botúin a bheith sa léamh uathoibríoch. Cuir gach luach i gcomparáid leis an deimhniú clárúcháin sula sábhálann tú é.
+Tá an t-am cruinn múchta
+D'fhéadfadh fógraí teacht go déanach nó gan teacht ar chor ar bith. Tapáil agus cas air "Aláraim agus meabhrúcháin" do MyFleetManager.

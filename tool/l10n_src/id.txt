@@ -427,3 +427,5 @@ Ketuk anggota untuk mengubah perannya. Yang bergabung dengan kode undangan hanya
 Teks terbaca
 Teks disalin
 Fitur uji coba: pembacaan otomatis bisa salah. Cocokkan setiap data dengan STNK sebelum menyimpannya.
+Waktu tepat dinonaktifkan
+Notifikasi bisa terlambat atau tidak datang. Ketuk dan aktifkan "Alarm & pengingat" untuk MyFleetManager.

@@ -427,3 +427,5 @@ Napauta jäsentä vaihtaaksesi roolin. Kutsukoodilla liittyvät saavat vain kats
 Luettu teksti
 Teksti kopioitu
 Testitoiminto: automaattinen luku voi erehtyä. Vertaa jokaista tietoa rekisteriotteeseen ennen tallentamista.
+Tarkka ajoitus pois päältä
+Ilmoitukset voivat tulla myöhässä tai jäädä tulematta. Napauta ja ota käyttöön ”Herätykset ja muistutukset” MyFleetManagerille.

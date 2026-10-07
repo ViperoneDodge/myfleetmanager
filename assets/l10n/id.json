@@ -427,5 +427,7 @@
  "role.hint": "Ketuk anggota untuk mengubah perannya. Yang bergabung dengan kode undangan hanya dapat melihat.",
  "ocr.rawText": "Teks terbaca",
  "ocr.rawCopied": "Teks disalin",
- "ocr.disclaimer": "Fitur uji coba: pembacaan otomatis bisa salah. Cocokkan setiap data dengan STNK sebelum menyimpannya."
+ "ocr.disclaimer": "Fitur uji coba: pembacaan otomatis bisa salah. Cocokkan setiap data dengan STNK sebelum menyimpannya.",
+ "settings.exactOff": "Waktu tepat dinonaktifkan",
+ "settings.exactOffInfo": "Notifikasi bisa terlambat atau tidak datang. Ketuk dan aktifkan \"Alarm & pengingat\" untuk MyFleetManager."
 }

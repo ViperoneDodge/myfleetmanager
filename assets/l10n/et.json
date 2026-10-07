@@ -427,5 +427,7 @@
  "role.hint": "Puuduta liiget, et tema rolli muuta. Kutsekoodiga liitujad saavad ainult vaadata.",
  "ocr.rawText": "Loetud tekst",
  "ocr.rawCopied": "Tekst kopeeritud",
- "ocr.disclaimer": "Testfunktsioon: automaatne lugemine võib eksida. Võrdle enne salvestamist iga andmet registreerimistunnistusega."
+ "ocr.disclaimer": "Testfunktsioon: automaatne lugemine võib eksida. Võrdle enne salvestamist iga andmet registreerimistunnistusega.",
+ "settings.exactOff": "Täpne aeg on välja lülitatud",
+ "settings.exactOffInfo": "Märguanded võivad hilineda või jääda tulemata. Puuduta ja lülita MyFleetManageri jaoks sisse „Äratused ja meeldetuletused“."
 }

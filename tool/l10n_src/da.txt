@@ -427,3 +427,5 @@ Tryk på et medlem for at ændre rollen. Den, der deltager med invitationskoden,
 Læst tekst
 Tekst kopieret
 Testfunktion: automatisk læsning kan tage fejl. Sammenlign hver værdi med registreringsattesten, før du gemmer den.
+Præcist tidspunkt slået fra
+Notifikationer kan komme for sent eller slet ikke. Tryk og slå "Alarmer og påmindelser" til for MyFleetManager.

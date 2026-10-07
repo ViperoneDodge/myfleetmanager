@@ -572,7 +572,11 @@ class _NotifyStatusState extends State<_NotifyStatus> with WidgetsBindingObserve
   Future<void> _load() async {
     try {
       final s = await appState.notifications.status();
+      final before = _st;
       if (mounted) setState(() => _st = s);
+      if (before != null && (before.exact != s.exact || before.enabled != s.enabled)) {
+        await appState.notifications.rescheduleAll(appState.activeVehicles, appState.data.notify);
+      }
     } catch (_) {}
   }
 
@@ -587,6 +591,17 @@ class _NotifyStatusState extends State<_NotifyStatus> with WidgetsBindingObserve
         subtitle: Text(tr('settings.blockedInfo')),
         onTap: () async {
           await appState.notifications.requestPermission();
+          await _load();
+        },
+      );
+    }
+    if (!st.exact) {
+      return ListTile(
+        leading: Icon(Icons.alarm_off, color: Colors.orange.shade800),
+        title: Text(tr('settings.exactOff'), style: const TextStyle(fontWeight: FontWeight.w600)),
+        subtitle: Text(tr('settings.exactOffInfo')),
+        onTap: () async {
+          await appState.notifications.requestExactAlarms();
           await _load();
         },
       );

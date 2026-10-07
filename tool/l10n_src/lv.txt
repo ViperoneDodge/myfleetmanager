@@ -427,3 +427,5 @@ Pieskarieties dalībniekam, lai mainītu lomu. Ar ielūguma kodu pievienojušies
 Nolasītais teksts
 Teksts nokopēts
 Izmēģinājuma funkcija: automātiskā nolasīšana var kļūdīties. Pirms saglabāšanas salīdziniet katru datu ar reģistrācijas apliecību.
+Precīzs laiks ir izslēgts
+Paziņojumi var pienākt ar nokavēšanos vai nepienākt vispār. Pieskarieties un ieslēdziet “Signāli un atgādinājumi” lietotnei MyFleetManager.

@@ -427,5 +427,7 @@
  "role.hint": "Toque num membro para mudar a função. Quem entra com o código de convite fica só com visualização.",
  "ocr.rawText": "Texto lido",
  "ocr.rawCopied": "Texto copiado",
- "ocr.disclaimer": "Funcionalidade em teste: a leitura automática pode errar. Compare cada dado com o documento do veículo antes de o guardar."
+ "ocr.disclaimer": "Funcionalidade em teste: a leitura automática pode errar. Compare cada dado com o documento do veículo antes de o guardar.",
+ "settings.exactOff": "Hora exata desativada",
+ "settings.exactOffInfo": "As notificações podem chegar atrasadas ou não chegar. Toque e ative «Alarmes e lembretes» para o MyFleetManager."
 }

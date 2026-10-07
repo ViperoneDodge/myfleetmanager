@@ -427,5 +427,7 @@
  "role.hint": "Tap a member to change their role. People who join with the invite code are view only.",
  "ocr.rawText": "Text read",
  "ocr.rawCopied": "Text copied",
- "ocr.disclaimer": "Trial feature: automatic reading can make mistakes. Compare every value with the registration document before saving it."
+ "ocr.disclaimer": "Trial feature: automatic reading can make mistakes. Compare every value with the registration document before saving it.",
+ "settings.exactOff": "Exact timing turned off",
+ "settings.exactOffInfo": "Notifications may arrive late or not at all. Tap and turn on \"Alarms & reminders\" for MyFleetManager."
 }

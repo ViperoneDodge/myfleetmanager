@@ -427,3 +427,5 @@ Rola: {name}
 Prečítaný text
 Text skopírovaný
 Skúšobná funkcia: automatické čítanie sa môže pomýliť. Pred uložením porovnajte každý údaj s osvedčením o evidencii.
+Presný čas je vypnutý
+Upozornenia môžu prísť neskoro alebo vôbec. Ťuknite a zapnite „Budíky a pripomenutia“ pre MyFleetManager.

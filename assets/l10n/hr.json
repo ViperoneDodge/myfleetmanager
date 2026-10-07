@@ -427,5 +427,7 @@
  "role.hint": "Dodirnite člana za promjenu uloge. Tko uđe s pozivnim kodom, ima samo pregled.",
  "ocr.rawText": "Pročitani tekst",
  "ocr.rawCopied": "Tekst kopiran",
- "ocr.disclaimer": "Probna funkcija: automatsko čitanje može pogriješiti. Usporedite svaki podatak s prometnom dozvolom prije spremanja."
+ "ocr.disclaimer": "Probna funkcija: automatsko čitanje može pogriješiti. Usporedite svaki podatak s prometnom dozvolom prije spremanja.",
+ "settings.exactOff": "Točno vrijeme isključeno",
+ "settings.exactOffInfo": "Obavijesti mogu kasniti ili ne stići. Dodirnite i uključite \"Alarmi i podsjetnici\" za MyFleetManager."
 }

@@ -427,5 +427,7 @@
  "role.hint": "Tippe auf ein Mitglied, um seine Rolle zu ändern. Wer mit dem Einladungscode beitritt, kann nur ansehen.",
  "ocr.rawText": "Gelesener Text",
  "ocr.rawCopied": "Text kopiert",
- "ocr.disclaimer": "Testfunktion: Die automatische Erkennung kann sich irren. Vergleiche jeden Wert mit dem Fahrzeugschein, bevor du ihn speicherst."
+ "ocr.disclaimer": "Testfunktion: Die automatische Erkennung kann sich irren. Vergleiche jeden Wert mit dem Fahrzeugschein, bevor du ihn speicherst.",
+ "settings.exactOff": "Genaue Uhrzeit deaktiviert",
+ "settings.exactOffInfo": "Benachrichtigungen können verspätet oder gar nicht ankommen. Tippe und aktiviere „Wecker und Erinnerungen“ für MyFleetManager."
 }

@@ -427,3 +427,5 @@ Klepnutím na člena změníte jeho roli. Kdo se připojí kódem pozvánky, má
 Přečtený text
 Text zkopírován
 Zkušební funkce: automatické čtení se může splést. Před uložením porovnejte každý údaj s technickým průkazem.
+Přesný čas je vypnutý
+Oznámení mohou přijít pozdě nebo vůbec. Klepněte a zapněte „Budíky a připomenutí“ pro MyFleetManager.

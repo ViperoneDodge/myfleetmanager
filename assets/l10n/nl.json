@@ -427,5 +427,7 @@
  "role.hint": "Tik op een lid om de rol te wijzigen. Wie met de uitnodigingscode lid wordt, kan alleen bekijken.",
  "ocr.rawText": "Gelezen tekst",
  "ocr.rawCopied": "Tekst gekopieerd",
- "ocr.disclaimer": "Testfunctie: automatisch lezen kan fouten maken. Vergelijk elk gegeven met het kentekenbewijs voordat je het opslaat."
+ "ocr.disclaimer": "Testfunctie: automatisch lezen kan fouten maken. Vergelijk elk gegeven met het kentekenbewijs voordat je het opslaat.",
+ "settings.exactOff": "Exacte tijd uitgeschakeld",
+ "settings.exactOffInfo": "Meldingen kunnen te laat of helemaal niet aankomen. Tik en zet \"Wekkers en herinneringen\" aan voor MyFleetManager."
 }

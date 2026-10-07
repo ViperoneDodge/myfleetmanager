@@ -427,3 +427,5 @@ Dotknij członka, aby zmienić rolę. Osoby dołączające kodem zaproszenia maj
 Odczytany tekst
 Tekst skopiowany
 Funkcja testowa: automatyczny odczyt może się mylić. Przed zapisaniem porównaj każdą wartość z dowodem rejestracyjnym.
+Dokładna godzina wyłączona
+Powiadomienia mogą przychodzić z opóźnieniem lub wcale. Dotknij i włącz „Alarmy i przypomnienia” dla MyFleetManager.

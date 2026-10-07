@@ -427,5 +427,7 @@
  "role.hint": "Touchez un membre pour changer son rôle. Ceux qui rejoignent avec le code d'invitation sont en lecture seule.",
  "ocr.rawText": "Texte lu",
  "ocr.rawCopied": "Texte copié",
- "ocr.disclaimer": "Fonction en test : la lecture automatique peut se tromper. Comparez chaque donnée avec la carte grise avant de l'enregistrer."
+ "ocr.disclaimer": "Fonction en test : la lecture automatique peut se tromper. Comparez chaque donnée avec la carte grise avant de l'enregistrer.",
+ "settings.exactOff": "Heure précise désactivée",
+ "settings.exactOffInfo": "Les notifications peuvent arriver en retard ou pas du tout. Touchez et activez « Alarmes et rappels » pour MyFleetManager."
 }

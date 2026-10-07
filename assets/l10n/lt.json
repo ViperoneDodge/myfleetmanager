@@ -427,5 +427,7 @@
  "role.hint": "Bakstelėkite narį, kad pakeistumėte vaidmenį. Prisijungę pakvietimo kodu gali tik peržiūrėti.",
  "ocr.rawText": "Nuskaitytas tekstas",
  "ocr.rawCopied": "Tekstas nukopijuotas",
- "ocr.disclaimer": "Bandomoji funkcija: automatinis nuskaitymas gali klysti. Prieš išsaugodami palyginkite kiekvieną duomenį su registracijos liudijimu."
+ "ocr.disclaimer": "Bandomoji funkcija: automatinis nuskaitymas gali klysti. Prieš išsaugodami palyginkite kiekvieną duomenį su registracijos liudijimu.",
+ "settings.exactOff": "Tikslus laikas išjungtas",
+ "settings.exactOffInfo": "Pranešimai gali vėluoti arba neateiti. Palieskite ir įjunkite „Signalai ir priminimai“ programai MyFleetManager."
 }

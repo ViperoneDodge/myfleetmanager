@@ -427,5 +427,7 @@
  "role.hint": "Tryk på et medlem for at ændre rollen. Den, der deltager med invitationskoden, har kun visning.",
  "ocr.rawText": "Læst tekst",
  "ocr.rawCopied": "Tekst kopieret",
- "ocr.disclaimer": "Testfunktion: automatisk læsning kan tage fejl. Sammenlign hver værdi med registreringsattesten, før du gemmer den."
+ "ocr.disclaimer": "Testfunktion: automatisk læsning kan tage fejl. Sammenlign hver værdi med registreringsattesten, før du gemmer den.",
+ "settings.exactOff": "Præcist tidspunkt slået fra",
+ "settings.exactOffInfo": "Notifikationer kan komme for sent eller slet ikke. Tryk og slå \"Alarmer og påmindelser\" til for MyFleetManager."
 }

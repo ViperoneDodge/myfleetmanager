@@ -427,3 +427,5 @@ Puuduta liiget, et tema rolli muuta. Kutsekoodiga liitujad saavad ainult vaadata
 Loetud tekst
 Tekst kopeeritud
 Testfunktsioon: automaatne lugemine võib eksida. Võrdle enne salvestamist iga andmet registreerimistunnistusega.
+Täpne aeg on välja lülitatud
+Märguanded võivad hilineda või jääda tulemata. Puuduta ja lülita MyFleetManageri jaoks sisse „Äratused ja meeldetuletused“.

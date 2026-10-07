@@ -427,5 +427,7 @@
  "role.hint": "Napauta jäsentä vaihtaaksesi roolin. Kutsukoodilla liittyvät saavat vain katseluoikeuden.",
  "ocr.rawText": "Luettu teksti",
  "ocr.rawCopied": "Teksti kopioitu",
- "ocr.disclaimer": "Testitoiminto: automaattinen luku voi erehtyä. Vertaa jokaista tietoa rekisteriotteeseen ennen tallentamista."
+ "ocr.disclaimer": "Testitoiminto: automaattinen luku voi erehtyä. Vertaa jokaista tietoa rekisteriotteeseen ennen tallentamista.",
+ "settings.exactOff": "Tarkka ajoitus pois päältä",
+ "settings.exactOffInfo": "Ilmoitukset voivat tulla myöhässä tai jäädä tulematta. Napauta ja ota käyttöön ”Herätykset ja muistutukset” MyFleetManagerille."
 }

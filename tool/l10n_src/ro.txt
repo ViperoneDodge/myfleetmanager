@@ -427,3 +427,5 @@ Atinge un membru pentru a-i schimba rolul. Cine intră cu codul de invitație ar
 Text citit
 Text copiat
 Funcție în test: citirea automată poate greși. Compară fiecare dată cu certificatul de înmatriculare înainte de salvare.
+Ora exactă dezactivată
+Notificările pot întârzia sau pot lipsi. Atinge și activează „Alarme și mementouri” pentru MyFleetManager.

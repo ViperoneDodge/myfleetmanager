@@ -427,5 +427,7 @@
  "role.hint": "Tapnite člana, da spremenite vlogo. Kdor se pridruži s kodo povabila, ima samo ogled.",
  "ocr.rawText": "Prebrano besedilo",
  "ocr.rawCopied": "Besedilo kopirano",
- "ocr.disclaimer": "Preizkusna funkcija: samodejno branje se lahko zmoti. Pred shranjevanjem vsak podatek primerjajte s prometnim dovoljenjem."
+ "ocr.disclaimer": "Preizkusna funkcija: samodejno branje se lahko zmoti. Pred shranjevanjem vsak podatek primerjajte s prometnim dovoljenjem.",
+ "settings.exactOff": "Točen čas je izklopljen",
+ "settings.exactOffInfo": "Obvestila lahko pridejo pozno ali sploh ne. Tapnite in vklopite »Alarmi in opomniki« za MyFleetManager."
 }

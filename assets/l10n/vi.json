@@ -427,5 +427,7 @@
  "role.hint": "Chạm vào thành viên để đổi vai trò. Người tham gia bằng mã mời chỉ có quyền xem.",
  "ocr.rawText": "Văn bản đã đọc",
  "ocr.rawCopied": "Đã sao chép văn bản",
- "ocr.disclaimer": "Tính năng thử nghiệm: đọc tự động có thể sai. Hãy đối chiếu từng dữ liệu với giấy đăng ký trước khi lưu."
+ "ocr.disclaimer": "Tính năng thử nghiệm: đọc tự động có thể sai. Hãy đối chiếu từng dữ liệu với giấy đăng ký trước khi lưu.",
+ "settings.exactOff": "Đã tắt giờ chính xác",
+ "settings.exactOffInfo": "Thông báo có thể đến trễ hoặc không đến. Chạm và bật \"Báo thức và lời nhắc\" cho MyFleetManager."
 }

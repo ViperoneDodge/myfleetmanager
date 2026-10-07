@@ -427,3 +427,5 @@ Chạm vào thành viên để đổi vai trò. Người tham gia bằng mã m�
 Văn bản đã đọc
 Đã sao chép văn bản
 Tính năng thử nghiệm: đọc tự động có thể sai. Hãy đối chiếu từng dữ liệu với giấy đăng ký trước khi lưu.
+Đã tắt giờ chính xác
+Thông báo có thể đến trễ hoặc không đến. Chạm và bật "Báo thức và lời nhắc" cho MyFleetManager.

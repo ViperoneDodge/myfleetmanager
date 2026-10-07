@@ -427,5 +427,7 @@
  "role.hint": "Atinge un membru pentru a-i schimba rolul. Cine intră cu codul de invitație are doar vizualizare.",
  "ocr.rawText": "Text citit",
  "ocr.rawCopied": "Text copiat",
- "ocr.disclaimer": "Funcție în test: citirea automată poate greși. Compară fiecare dată cu certificatul de înmatriculare înainte de salvare."
+ "ocr.disclaimer": "Funcție în test: citirea automată poate greși. Compară fiecare dată cu certificatul de înmatriculare înainte de salvare.",
+ "settings.exactOff": "Ora exactă dezactivată",
+ "settings.exactOffInfo": "Notificările pot întârzia sau pot lipsi. Atinge și activează „Alarme și mementouri” pentru MyFleetManager."
 }

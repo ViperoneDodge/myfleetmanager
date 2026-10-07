@@ -427,3 +427,5 @@ Bakstelėkite narį, kad pakeistumėte vaidmenį. Prisijungę pakvietimo kodu ga
 Nuskaitytas tekstas
 Tekstas nukopijuotas
 Bandomoji funkcija: automatinis nuskaitymas gali klysti. Prieš išsaugodami palyginkite kiekvieną duomenį su registracijos liudijimu.
+Tikslus laikas išjungtas
+Pranešimai gali vėluoti arba neateiti. Palieskite ir įjunkite „Signalai ir priminimai“ programai MyFleetManager.
