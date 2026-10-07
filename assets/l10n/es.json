@@ -435,5 +435,8 @@
  "family.scanQr": "Escanear QR",
  "family.qrFromImage": "Cargar imagen QR",
  "family.qrNotFound": "No se ha encontrado ningún QR de MyFleetManager en la imagen.",
- "family.cameraDenied": "Cámara no disponible. Permite el acceso a la cámara en los ajustes o carga una imagen del QR."
+ "family.cameraDenied": "Cámara no disponible. Permite el acceso a la cámara en los ajustes o carga una imagen del QR.",
+ "exact.dialogBody": "Para recibir los avisos de vencimiento a la hora elegida, MyFleetManager necesita el permiso «Alarmas y recordatorios». Sin él, Android puede entregarlos tarde o no entregarlos.",
+ "exact.later": "Más tarde",
+ "exact.allow": "Activar"
 }

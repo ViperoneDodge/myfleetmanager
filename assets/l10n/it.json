@@ -435,5 +435,8 @@
  "family.scanQr": "Inquadra QR",
  "family.qrFromImage": "Carica immagine QR",
  "family.qrNotFound": "Nessun QR di MyFleetManager trovato nell'immagine.",
- "family.cameraDenied": "Fotocamera non disponibile. Consenti l'accesso alla fotocamera nelle impostazioni oppure carica un'immagine del QR."
+ "family.cameraDenied": "Fotocamera non disponibile. Consenti l'accesso alla fotocamera nelle impostazioni oppure carica un'immagine del QR.",
+ "exact.dialogBody": "Per ricevere i promemoria delle scadenze all'ora che hai scelto, MyFleetManager ha bisogno del permesso \"Sveglie e promemoria\". Senza, Android può consegnarli in ritardo o non consegnarli.",
+ "exact.later": "Più tardi",
+ "exact.allow": "Attiva"
 }

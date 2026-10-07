@@ -435,3 +435,6 @@ Scan QR
 Indlæs QR-billede
 Ingen MyFleetManager-QR fundet i billedet.
 Kameraet er ikke tilgængeligt. Tillad kameraadgang i indstillingerne, eller indlæs et billede af QR-koden.
+For at få påmindelser om frister på det valgte tidspunkt skal MyFleetManager have tilladelsen "Alarmer og påmindelser". Uden den kan Android levere dem for sent eller slet ikke.
+Senere
+Tillad

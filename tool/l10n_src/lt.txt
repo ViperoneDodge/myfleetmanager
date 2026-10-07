@@ -435,3 +435,6 @@ Skenuoti QR
 Įkelti QR paveikslėlį
 Paveikslėlyje nerasta MyFleetManager QR kodo.
 Kamera nepasiekiama. Leiskite naudoti kamerą nustatymuose arba įkelkite QR kodo paveikslėlį.
+Kad terminų priminimai ateitų jūsų pasirinktu laiku, MyFleetManager reikia leidimo „Signalai ir priminimai“. Be jo Android gali juos pristatyti pavėluotai arba visai nepristatyti.
+Vėliau
+Leisti

@@ -435,5 +435,8 @@
  "family.scanQr": "Skanna QR",
  "family.qrFromImage": "Läs in QR-bild",
  "family.qrNotFound": "Ingen MyFleetManager-QR hittades i bilden.",
- "family.cameraDenied": "Kameran är inte tillgänglig. Tillåt kameraåtkomst i inställningarna eller läs in en bild av QR-koden."
+ "family.cameraDenied": "Kameran är inte tillgänglig. Tillåt kameraåtkomst i inställningarna eller läs in en bild av QR-koden.",
+ "exact.dialogBody": "För att få påminnelser om förfallodatum vid den tid du valt behöver MyFleetManager behörigheten ”Alarm och påminnelser”. Utan den kan Android leverera dem sent eller inte alls.",
+ "exact.later": "Senare",
+ "exact.allow": "Tillåt"
 }

@@ -435,5 +435,8 @@
  "family.scanQr": "Skanni QR",
  "family.qrFromImage": "Laadi QR-pilt",
  "family.qrNotFound": "Pildilt ei leitud MyFleetManageri QR-koodi.",
- "family.cameraDenied": "Kaamera pole saadaval. Luba seadetes juurdepääs kaamerale või laadi QR-koodi pilt."
+ "family.cameraDenied": "Kaamera pole saadaval. Luba seadetes juurdepääs kaamerale või laadi QR-koodi pilt.",
+ "exact.dialogBody": "Et tähtaegade meeldetuletused jõuaksid sinu valitud ajal, vajab MyFleetManager luba „Äratused ja meeldetuletused“. Ilma selleta võib Android need hilinemisega edastada või üldse mitte.",
+ "exact.later": "Hiljem",
+ "exact.allow": "Luba"
 }

@@ -435,5 +435,8 @@
  "family.scanQr": "Skennja QR",
  "family.qrFromImage": "Tella' immaġni QR",
  "family.qrNotFound": "Ma nstab l-ebda QR ta' MyFleetManager fl-immaġni.",
- "family.cameraDenied": "Il-kamera mhix disponibbli. Ippermetti l-aċċess għall-kamera fis-settings jew tella' immaġni tal-QR."
+ "family.cameraDenied": "Il-kamera mhix disponibbli. Ippermetti l-aċċess għall-kamera fis-settings jew tella' immaġni tal-QR.",
+ "exact.dialogBody": "Biex tirċievi t-tfakkiriet tal-iskadenzi fil-ħin li għażilt, MyFleetManager għandha bżonn il-permess \"Allarmi u tfakkiriet\". Mingħajru, Android jista' jwasslhom tard jew ma jwasslhomx.",
+ "exact.later": "Aktar tard",
+ "exact.allow": "Ippermetti"
 }

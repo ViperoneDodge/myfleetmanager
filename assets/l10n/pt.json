@@ -435,5 +435,8 @@
  "family.scanQr": "Ler QR",
  "family.qrFromImage": "Carregar imagem QR",
  "family.qrNotFound": "Nenhum QR do MyFleetManager encontrado na imagem.",
- "family.cameraDenied": "Câmara indisponível. Permite o acesso à câmara nas definições ou carrega uma imagem do QR."
+ "family.cameraDenied": "Câmara indisponível. Permite o acesso à câmara nas definições ou carrega uma imagem do QR.",
+ "exact.dialogBody": "Para receber os lembretes de prazos à hora escolhida, o MyFleetManager precisa da autorização «Alarmes e lembretes». Sem ela, o Android pode entregá-los atrasados ou não os entregar.",
+ "exact.later": "Mais tarde",
+ "exact.allow": "Ativar"
 }

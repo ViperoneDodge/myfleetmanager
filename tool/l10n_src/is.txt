@@ -435,3 +435,6 @@ Skanna QR
 Hlaða inn QR-mynd
 Enginn MyFleetManager QR-kóði fannst á myndinni.
 Myndavél ekki tiltæk. Leyfðu aðgang að myndavél í stillingum eða hlaðaðu inn mynd af QR-kóðanum.
+Til að fá áminningar um fresti á tímanum sem þú valdir þarf MyFleetManager heimildina „Vekjarar og áminningar“. Án hennar getur Android sent þær seint eða alls ekki.
+Seinna
+Leyfa

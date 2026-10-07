@@ -435,3 +435,6 @@ Skennja QR
 Tella' immaġni QR
 Ma nstab l-ebda QR ta' MyFleetManager fl-immaġni.
 Il-kamera mhix disponibbli. Ippermetti l-aċċess għall-kamera fis-settings jew tella' immaġni tal-QR.
+Biex tirċievi t-tfakkiriet tal-iskadenzi fil-ħin li għażilt, MyFleetManager għandha bżonn il-permess "Allarmi u tfakkiriet". Mingħajru, Android jista' jwasslhom tard jew ma jwasslhomx.
+Aktar tard
+Ippermetti

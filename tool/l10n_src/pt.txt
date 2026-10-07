@@ -435,3 +435,6 @@ Ler QR
 Carregar imagem QR
 Nenhum QR do MyFleetManager encontrado na imagem.
 Câmara indisponível. Permite o acesso à câmara nas definições ou carrega uma imagem do QR.
+Para receber os lembretes de prazos à hora escolhida, o MyFleetManager precisa da autorização «Alarmes e lembretes». Sem ela, o Android pode entregá-los atrasados ou não os entregar.
+Mais tarde
+Ativar

@@ -435,5 +435,8 @@
  "family.scanQr": "QR tara",
  "family.qrFromImage": "QR görseli yükle",
  "family.qrNotFound": "Görselde MyFleetManager QR kodu bulunamadı.",
- "family.cameraDenied": "Kamera kullanılamıyor. Ayarlardan kamera erişimine izin verin veya QR görselini yükleyin."
+ "family.cameraDenied": "Kamera kullanılamıyor. Ayarlardan kamera erişimine izin verin veya QR görselini yükleyin.",
+ "exact.dialogBody": "Son tarih hatırlatıcılarını seçtiğiniz saatte almak için MyFleetManager'ın \"Alarmlar ve hatırlatıcılar\" iznine ihtiyacı var. Bu izin olmadan Android bunları geç iletebilir veya hiç iletmeyebilir.",
+ "exact.later": "Daha sonra",
+ "exact.allow": "İzin ver"
 }

@@ -435,3 +435,6 @@ Skanna QR
 Läs in QR-bild
 Ingen MyFleetManager-QR hittades i bilden.
 Kameran är inte tillgänglig. Tillåt kameraåtkomst i inställningarna eller läs in en bild av QR-koden.
+För att få påminnelser om förfallodatum vid den tid du valt behöver MyFleetManager behörigheten ”Alarm och påminnelser”. Utan den kan Android leverera dem sent eller inte alls.
+Senare
+Tillåt

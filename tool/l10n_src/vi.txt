@@ -435,3 +435,6 @@ Quét QR
 Tải ảnh QR
 Không tìm thấy mã QR MyFleetManager trong ảnh.
 Không dùng được máy ảnh. Hãy cho phép truy cập máy ảnh trong cài đặt hoặc tải ảnh mã QR.
+Để nhận lời nhắc hạn đúng giờ bạn chọn, MyFleetManager cần quyền "Báo thức và lời nhắc". Nếu không có quyền này, Android có thể gửi trễ hoặc không gửi.
+Để sau
+Cho phép

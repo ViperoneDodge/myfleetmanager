@@ -435,3 +435,6 @@ QR scannen
 QR-afbeelding laden
 Geen MyFleetManager-QR gevonden in de afbeelding.
 Camera niet beschikbaar. Sta cameratoegang toe in de instellingen of laad een afbeelding van de QR.
+Om herinneringen voor vervaldatums op het gekozen tijdstip te krijgen, heeft MyFleetManager de toestemming "Wekkers en herinneringen" nodig. Zonder deze kan Android ze te laat of niet bezorgen.
+Later
+Toestaan

@@ -435,5 +435,8 @@
  "family.scanQr": "Quét QR",
  "family.qrFromImage": "Tải ảnh QR",
  "family.qrNotFound": "Không tìm thấy mã QR MyFleetManager trong ảnh.",
- "family.cameraDenied": "Không dùng được máy ảnh. Hãy cho phép truy cập máy ảnh trong cài đặt hoặc tải ảnh mã QR."
+ "family.cameraDenied": "Không dùng được máy ảnh. Hãy cho phép truy cập máy ảnh trong cài đặt hoặc tải ảnh mã QR.",
+ "exact.dialogBody": "Để nhận lời nhắc hạn đúng giờ bạn chọn, MyFleetManager cần quyền \"Báo thức và lời nhắc\". Nếu không có quyền này, Android có thể gửi trễ hoặc không gửi.",
+ "exact.later": "Để sau",
+ "exact.allow": "Cho phép"
 }

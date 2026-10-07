@@ -435,5 +435,8 @@
  "family.scanQr": "Skanna QR",
  "family.qrFromImage": "Hlaða inn QR-mynd",
  "family.qrNotFound": "Enginn MyFleetManager QR-kóði fannst á myndinni.",
- "family.cameraDenied": "Myndavél ekki tiltæk. Leyfðu aðgang að myndavél í stillingum eða hlaðaðu inn mynd af QR-kóðanum."
+ "family.cameraDenied": "Myndavél ekki tiltæk. Leyfðu aðgang að myndavél í stillingum eða hlaðaðu inn mynd af QR-kóðanum.",
+ "exact.dialogBody": "Til að fá áminningar um fresti á tímanum sem þú valdir þarf MyFleetManager heimildina „Vekjarar og áminningar“. Án hennar getur Android sent þær seint eða alls ekki.",
+ "exact.later": "Seinna",
+ "exact.allow": "Leyfa"
 }

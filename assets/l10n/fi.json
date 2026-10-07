@@ -435,5 +435,8 @@
  "family.scanQr": "Skannaa QR",
  "family.qrFromImage": "Lataa QR-kuva",
  "family.qrNotFound": "Kuvasta ei löytynyt MyFleetManager-QR-koodia.",
- "family.cameraDenied": "Kamera ei ole käytettävissä. Salli kameran käyttö asetuksista tai lataa kuva QR-koodista."
+ "family.cameraDenied": "Kamera ei ole käytettävissä. Salli kameran käyttö asetuksista tai lataa kuva QR-koodista.",
+ "exact.dialogBody": "Jotta määräaikamuistutukset tulevat valitsemaasi aikaan, MyFleetManager tarvitsee luvan ”Herätykset ja muistutukset”. Ilman sitä Android voi toimittaa ne myöhässä tai ei ollenkaan.",
+ "exact.later": "Myöhemmin",
+ "exact.allow": "Salli"
 }

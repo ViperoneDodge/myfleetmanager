@@ -435,5 +435,8 @@
  "family.scanQr": "QRを読み取る",
  "family.qrFromImage": "QR画像を読み込む",
  "family.qrNotFound": "画像に MyFleetManager のQRが見つかりません。",
- "family.cameraDenied": "カメラを使用できません。設定でカメラへのアクセスを許可するか、QRの画像を読み込んでください。"
+ "family.cameraDenied": "カメラを使用できません。設定でカメラへのアクセスを許可するか、QRの画像を読み込んでください。",
+ "exact.dialogBody": "選択した時刻に期限のリマインダーを受け取るには、MyFleetManager に「アラームとリマインダー」の許可が必要です。許可がないと、Android が通知を遅らせたり届けなかったりすることがあります。",
+ "exact.later": "後で",
+ "exact.allow": "許可する"
 }

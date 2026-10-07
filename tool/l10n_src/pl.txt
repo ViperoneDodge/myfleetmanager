@@ -435,3 +435,6 @@ Skanuj QR
 Wczytaj obraz QR
 Na obrazie nie znaleziono kodu QR MyFleetManager.
 Aparat niedostępny. Zezwól na dostęp do aparatu w ustawieniach lub wczytaj obraz kodu QR.
+Aby przypomnienia o terminach przychodziły o wybranej godzinie, MyFleetManager potrzebuje uprawnienia „Alarmy i przypomnienia”. Bez niego Android może dostarczyć je z opóźnieniem lub wcale.
+Później
+Włącz

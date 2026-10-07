@@ -435,5 +435,8 @@
  "family.scanQr": "Naskenovat QR",
  "family.qrFromImage": "Načíst obrázek QR",
  "family.qrNotFound": "V obrázku nebyl nalezen QR kód MyFleetManager.",
- "family.cameraDenied": "Fotoaparát není k dispozici. Povolte přístup k fotoaparátu v nastavení nebo načtěte obrázek QR kódu."
+ "family.cameraDenied": "Fotoaparát není k dispozici. Povolte přístup k fotoaparátu v nastavení nebo načtěte obrázek QR kódu.",
+ "exact.dialogBody": "Aby připomenutí termínů přicházela ve zvolený čas, potřebuje MyFleetManager oprávnění „Budíky a připomenutí“. Bez něj je Android může doručit pozdě nebo vůbec.",
+ "exact.later": "Později",
+ "exact.allow": "Povolit"
 }

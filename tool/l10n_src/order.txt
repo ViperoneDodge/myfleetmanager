@@ -435,3 +435,6 @@ family.scanQr
 family.qrFromImage
 family.qrNotFound
 family.cameraDenied
+exact.dialogBody
+exact.later
+exact.allow

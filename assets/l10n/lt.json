@@ -435,5 +435,8 @@
  "family.scanQr": "Skenuoti QR",
  "family.qrFromImage": "Įkelti QR paveikslėlį",
  "family.qrNotFound": "Paveikslėlyje nerasta MyFleetManager QR kodo.",
- "family.cameraDenied": "Kamera nepasiekiama. Leiskite naudoti kamerą nustatymuose arba įkelkite QR kodo paveikslėlį."
+ "family.cameraDenied": "Kamera nepasiekiama. Leiskite naudoti kamerą nustatymuose arba įkelkite QR kodo paveikslėlį.",
+ "exact.dialogBody": "Kad terminų priminimai ateitų jūsų pasirinktu laiku, MyFleetManager reikia leidimo „Signalai ir priminimai“. Be jo Android gali juos pristatyti pavėluotai arba visai nepristatyti.",
+ "exact.later": "Vėliau",
+ "exact.allow": "Leisti"
 }

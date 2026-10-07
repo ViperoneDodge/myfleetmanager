@@ -435,3 +435,6 @@ Skannaa QR
 Lataa QR-kuva
 Kuvasta ei löytynyt MyFleetManager-QR-koodia.
 Kamera ei ole käytettävissä. Salli kameran käyttö asetuksista tai lataa kuva QR-koodista.
+Jotta määräaikamuistutukset tulevat valitsemaasi aikaan, MyFleetManager tarvitsee luvan ”Herätykset ja muistutukset”. Ilman sitä Android voi toimittaa ne myöhässä tai ei ollenkaan.
+Myöhemmin
+Salli

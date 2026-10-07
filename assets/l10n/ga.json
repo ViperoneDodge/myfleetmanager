@@ -435,5 +435,8 @@
  "family.scanQr": "Scan QR",
  "family.qrFromImage": "Lódáil íomhá QR",
  "family.qrNotFound": "Níor aimsíodh QR MyFleetManager san íomhá.",
- "family.cameraDenied": "Níl an ceamara ar fáil. Ceadaigh rochtain ar an gceamara sna socruithe nó lódáil íomhá den QR."
+ "family.cameraDenied": "Níl an ceamara ar fáil. Ceadaigh rochtain ar an gceamara sna socruithe nó lódáil íomhá den QR.",
+ "exact.dialogBody": "Chun meabhrúcháin spriocdhátaí a fháil ag an am a roghnaigh tú, teastaíonn an cead \"Aláraim agus meabhrúcháin\" ó MyFleetManager. Gan é, d'fhéadfadh Android iad a sheachadadh go déanach nó gan iad a sheachadadh ar chor ar bith.",
+ "exact.later": "Níos déanaí",
+ "exact.allow": "Ceadaigh"
 }

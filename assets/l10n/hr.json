@@ -435,5 +435,8 @@
  "family.scanQr": "Skeniraj QR",
  "family.qrFromImage": "Učitaj sliku QR-a",
  "family.qrNotFound": "Na slici nije pronađen MyFleetManager QR.",
- "family.cameraDenied": "Kamera nije dostupna. Dopustite pristup kameri u postavkama ili učitajte sliku QR-a."
+ "family.cameraDenied": "Kamera nije dostupna. Dopustite pristup kameri u postavkama ili učitajte sliku QR-a.",
+ "exact.dialogBody": "Da biste podsjetnike na rokove primali u odabrano vrijeme, MyFleetManager treba dopuštenje \"Alarmi i podsjetnici\". Bez njega Android ih može isporučiti kasno ili nikako.",
+ "exact.later": "Kasnije",
+ "exact.allow": "Uključi"
 }

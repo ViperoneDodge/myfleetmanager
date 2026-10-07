@@ -435,3 +435,6 @@ Skeniraj QR
 Naloži sliko QR
 Na sliki ni bilo najdene kode QR MyFleetManager.
 Kamera ni na voljo. V nastavitvah dovolite dostop do kamere ali naložite sliko kode QR.
+Da boste opomnike na roke prejeli ob izbrani uri, MyFleetManager potrebuje dovoljenje »Alarmi in opomniki«. Brez njega jih Android lahko dostavi pozno ali sploh ne.
+Pozneje
+Vklopi

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui' show DisplayFeatureType;
 
 import 'package:flutter/material.dart';
@@ -23,6 +24,41 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _tab = 0;
+  late final AppLifecycleListener _life;
+  Timer? _exactTimer;
+
+  @override
+  void initState() {
+    super.initState();
+    _life = AppLifecycleListener(onResume: () => appState.refreshExact());
+    _exactTimer = Timer(const Duration(seconds: 5), _askExact);
+  }
+
+  @override
+  void dispose() {
+    _life.dispose();
+    _exactTimer?.cancel();
+    super.dispose();
+  }
+
+  Future<void> _askExact() async {
+    if (!mounted || !await appState.shouldAskExact() || !mounted) return;
+    await appState.markExactAsked();
+    if (!mounted) return;
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        icon: Icon(Icons.alarm, color: Colors.orange.shade800),
+        title: Text(tr('settings.exactOff')),
+        content: Text(tr('exact.dialogBody')),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('exact.later'))),
+          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(tr('exact.allow'))),
+        ],
+      ),
+    );
+    if (ok == true) await appState.notifications.requestExactAlarms();
+  }
   VehicleType? _filter;
 
   String? _selectedId;

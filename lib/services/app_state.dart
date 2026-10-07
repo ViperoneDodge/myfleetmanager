@@ -174,6 +174,34 @@ class AppState extends ChangeNotifier {
 
   bool _devExpiredOnUpdate = false;
 
+  bool exactAsked = false;
+  bool? _lastExact;
+
+  Future<bool> shouldAskExact() async {
+    if (exactAsked || session == null) return false;
+    try {
+      final st = await notifications.status();
+      _lastExact = st.exact;
+      return st.enabled && !st.exact;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  Future<void> markExactAsked() async {
+    exactAsked = true;
+    await _writeSettings();
+  }
+
+  Future<void> refreshExact() async {
+    if (session == null) return;
+    try {
+      final st = await notifications.status();
+      if (_lastExact != null && _lastExact != st.exact) _scheduleNotifications();
+      _lastExact = st.exact;
+    } catch (_) {}
+  }
+
   bool loading = true;
   ThemeSettings theme = ThemeSettings();
   Session? session;
@@ -308,6 +336,7 @@ class AppState extends ChangeNotifier {
     devProVersion = settings?['devProVersion'] as String?;
     sortNewestFirst = settings?['sortNewest'] == true;
     deadlinesSoonOnly = settings?['deadlinesSoon'] == true;
+    exactAsked = settings?['exactAsked'] == true;
     if (devPro && devProVersion != appVersion) {
       devPro = false;
       devProVersion = null;
@@ -676,6 +705,7 @@ class AppState extends ChangeNotifier {
         if (devProVersion != null) 'devProVersion': devProVersion,
         'sortNewest': sortNewestFirst,
         'deadlinesSoon': deadlinesSoonOnly,
+        'exactAsked': exactAsked,
       });
 
   Future<void> setLanguage(String? code) async {

@@ -435,5 +435,8 @@
  "family.scanQr": "Scanner le QR",
  "family.qrFromImage": "Charger une image du QR",
  "family.qrNotFound": "Aucun QR MyFleetManager trouvé dans l'image.",
- "family.cameraDenied": "Appareil photo indisponible. Autorisez l'accès à l'appareil photo dans les paramètres ou chargez une image du QR."
+ "family.cameraDenied": "Appareil photo indisponible. Autorisez l'accès à l'appareil photo dans les paramètres ou chargez une image du QR.",
+ "exact.dialogBody": "Pour recevoir les rappels d'échéance à l'heure choisie, MyFleetManager a besoin de l'autorisation « Alarmes et rappels ». Sans elle, Android peut les envoyer en retard ou pas du tout.",
+ "exact.later": "Plus tard",
+ "exact.allow": "Activer"
 }

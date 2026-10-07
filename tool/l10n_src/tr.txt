@@ -435,3 +435,6 @@ QR tara
 QR görseli yükle
 Görselde MyFleetManager QR kodu bulunamadı.
 Kamera kullanılamıyor. Ayarlardan kamera erişimine izin verin veya QR görselini yükleyin.
+Son tarih hatırlatıcılarını seçtiğiniz saatte almak için MyFleetManager'ın "Alarmlar ve hatırlatıcılar" iznine ihtiyacı var. Bu izin olmadan Android bunları geç iletebilir veya hiç iletmeyebilir.
+Daha sonra
+İzin ver

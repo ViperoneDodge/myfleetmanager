@@ -435,5 +435,8 @@
  "family.scanQr": "Scan QR",
  "family.qrFromImage": "Load QR image",
  "family.qrNotFound": "No MyFleetManager QR found in the image.",
- "family.cameraDenied": "Camera not available. Allow camera access in settings or load an image of the QR."
+ "family.cameraDenied": "Camera not available. Allow camera access in settings or load an image of the QR.",
+ "exact.dialogBody": "To get deadline reminders at the time you chose, MyFleetManager needs the \"Alarms & reminders\" permission. Without it, Android may deliver them late or not at all.",
+ "exact.later": "Later",
+ "exact.allow": "Allow"
 }

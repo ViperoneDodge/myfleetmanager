@@ -435,3 +435,6 @@ Pindai QR
 Muat gambar QR
 Tidak ditemukan QR MyFleetManager di gambar.
 Kamera tidak tersedia. Izinkan akses kamera di pengaturan atau muat gambar QR.
+Agar pengingat tenggat datang pada jam yang Anda pilih, MyFleetManager memerlukan izin "Alarm & pengingat". Tanpa izin ini, Android bisa mengirimkannya terlambat atau tidak sama sekali.
+Nanti
+Izinkan

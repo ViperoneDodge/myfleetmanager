@@ -435,5 +435,8 @@
  "family.scanQr": "Pindai QR",
  "family.qrFromImage": "Muat gambar QR",
  "family.qrNotFound": "Tidak ditemukan QR MyFleetManager di gambar.",
- "family.cameraDenied": "Kamera tidak tersedia. Izinkan akses kamera di pengaturan atau muat gambar QR."
+ "family.cameraDenied": "Kamera tidak tersedia. Izinkan akses kamera di pengaturan atau muat gambar QR.",
+ "exact.dialogBody": "Agar pengingat tenggat datang pada jam yang Anda pilih, MyFleetManager memerlukan izin \"Alarm & pengingat\". Tanpa izin ini, Android bisa mengirimkannya terlambat atau tidak sama sekali.",
+ "exact.later": "Nanti",
+ "exact.allow": "Izinkan"
 }

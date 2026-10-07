@@ -435,5 +435,8 @@
  "family.scanQr": "สแกน QR",
  "family.qrFromImage": "โหลดรูป QR",
  "family.qrNotFound": "ไม่พบ QR ของ MyFleetManager ในรูป",
- "family.cameraDenied": "ใช้กล้องไม่ได้ อนุญาตการเข้าถึงกล้องในการตั้งค่า หรือโหลดรูป QR"
+ "family.cameraDenied": "ใช้กล้องไม่ได้ อนุญาตการเข้าถึงกล้องในการตั้งค่า หรือโหลดรูป QR",
+ "exact.dialogBody": "เพื่อให้ได้รับการเตือนกำหนดเวลาตรงเวลาที่คุณเลือก MyFleetManager ต้องได้รับสิทธิ์ \"การปลุกและการช่วยเตือน\" หากไม่มีสิทธิ์นี้ Android อาจส่งการแจ้งเตือนช้าหรือไม่ส่งเลย",
+ "exact.later": "ภายหลัง",
+ "exact.allow": "อนุญาต"
 }

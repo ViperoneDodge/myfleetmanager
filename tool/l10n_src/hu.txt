@@ -435,3 +435,6 @@ QR beolvasása
 QR-kép betöltése
 A képen nem található MyFleetManager QR-kód.
 A kamera nem érhető el. Engedélyezd a kamerahozzáférést a beállításokban, vagy tölts be egy képet a QR-kódról.
+Ahhoz, hogy a határidő-emlékeztetők a választott időpontban érkezzenek, a MyFleetManagernek szüksége van az „Ébresztések és emlékeztetők” engedélyre. Nélküle az Android késve vagy egyáltalán nem kézbesítheti őket.
+Később
+Engedélyezés

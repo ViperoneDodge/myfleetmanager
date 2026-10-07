@@ -435,5 +435,8 @@
  "family.scanQr": "扫描二维码",
  "family.qrFromImage": "加载二维码图片",
  "family.qrNotFound": "图片中未找到 MyFleetManager 二维码。",
- "family.cameraDenied": "相机不可用。请在设置中允许访问相机，或加载二维码图片。"
+ "family.cameraDenied": "相机不可用。请在设置中允许访问相机，或加载二维码图片。",
+ "exact.dialogBody": "为了在你选择的时间收到到期提醒，MyFleetManager 需要“闹钟和提醒”权限。没有此权限，Android 可能会延迟发送或不发送提醒。",
+ "exact.later": "稍后",
+ "exact.allow": "允许"
 }

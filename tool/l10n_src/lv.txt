@@ -435,3 +435,6 @@ Skenēt QR
 Ielādēt QR attēlu
 Attēlā netika atrasts MyFleetManager QR kods.
 Kamera nav pieejama. Atļaujiet piekļuvi kamerai iestatījumos vai ielādējiet QR koda attēlu.
+Lai termiņu atgādinājumi pienāktu jūsu izvēlētajā laikā, MyFleetManager nepieciešama atļauja “Signāli un atgādinājumi”. Bez tās Android tos var piegādāt novēloti vai nepiegādāt vispār.
+Vēlāk
+Atļaut

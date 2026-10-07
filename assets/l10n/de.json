@@ -435,5 +435,8 @@
  "family.scanQr": "QR scannen",
  "family.qrFromImage": "QR-Bild laden",
  "family.qrNotFound": "Kein MyFleetManager-QR im Bild gefunden.",
- "family.cameraDenied": "Kamera nicht verfügbar. Erlaube den Kamerazugriff in den Einstellungen oder lade ein Bild des QR."
+ "family.cameraDenied": "Kamera nicht verfügbar. Erlaube den Kamerazugriff in den Einstellungen oder lade ein Bild des QR.",
+ "exact.dialogBody": "Damit Fristerinnerungen zur gewählten Uhrzeit kommen, braucht MyFleetManager die Berechtigung „Wecker und Erinnerungen“. Ohne sie kann Android sie verspätet oder gar nicht zustellen.",
+ "exact.later": "Später",
+ "exact.allow": "Aktivieren"
 }

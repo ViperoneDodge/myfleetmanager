@@ -435,5 +435,8 @@
  "family.scanQr": "QR beolvasása",
  "family.qrFromImage": "QR-kép betöltése",
  "family.qrNotFound": "A képen nem található MyFleetManager QR-kód.",
- "family.cameraDenied": "A kamera nem érhető el. Engedélyezd a kamerahozzáférést a beállításokban, vagy tölts be egy képet a QR-kódról."
+ "family.cameraDenied": "A kamera nem érhető el. Engedélyezd a kamerahozzáférést a beállításokban, vagy tölts be egy képet a QR-kódról.",
+ "exact.dialogBody": "Ahhoz, hogy a határidő-emlékeztetők a választott időpontban érkezzenek, a MyFleetManagernek szüksége van az „Ébresztések és emlékeztetők” engedélyre. Nélküle az Android késve vagy egyáltalán nem kézbesítheti őket.",
+ "exact.later": "Később",
+ "exact.allow": "Engedélyezés"
 }

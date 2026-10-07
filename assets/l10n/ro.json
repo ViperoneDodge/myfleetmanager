@@ -435,5 +435,8 @@
  "family.scanQr": "Scanează QR",
  "family.qrFromImage": "Încarcă imagine QR",
  "family.qrNotFound": "Nu s-a găsit niciun cod QR MyFleetManager în imagine.",
- "family.cameraDenied": "Camera nu este disponibilă. Permite accesul la cameră din setări sau încarcă o imagine a codului QR."
+ "family.cameraDenied": "Camera nu este disponibilă. Permite accesul la cameră din setări sau încarcă o imagine a codului QR.",
+ "exact.dialogBody": "Pentru a primi mementourile de termene la ora aleasă, MyFleetManager are nevoie de permisiunea „Alarme și mementouri”. Fără ea, Android le poate livra cu întârziere sau deloc.",
+ "exact.later": "Mai târziu",
+ "exact.allow": "Activează"
 }

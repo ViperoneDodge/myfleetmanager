@@ -435,3 +435,6 @@ Skanni QR
 Laadi QR-pilt
 Pildilt ei leitud MyFleetManageri QR-koodi.
 Kaamera pole saadaval. Luba seadetes juurdepääs kaamerale või laadi QR-koodi pilt.
+Et tähtaegade meeldetuletused jõuaksid sinu valitud ajal, vajab MyFleetManager luba „Äratused ja meeldetuletused“. Ilma selleta võib Android need hilinemisega edastada või üldse mitte.
+Hiljem
+Luba

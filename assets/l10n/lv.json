@@ -435,5 +435,8 @@
  "family.scanQr": "Skenēt QR",
  "family.qrFromImage": "Ielādēt QR attēlu",
  "family.qrNotFound": "Attēlā netika atrasts MyFleetManager QR kods.",
- "family.cameraDenied": "Kamera nav pieejama. Atļaujiet piekļuvi kamerai iestatījumos vai ielādējiet QR koda attēlu."
+ "family.cameraDenied": "Kamera nav pieejama. Atļaujiet piekļuvi kamerai iestatījumos vai ielādējiet QR koda attēlu.",
+ "exact.dialogBody": "Lai termiņu atgādinājumi pienāktu jūsu izvēlētajā laikā, MyFleetManager nepieciešama atļauja “Signāli un atgādinājumi”. Bez tās Android tos var piegādāt novēloti vai nepiegādāt vispār.",
+ "exact.later": "Vēlāk",
+ "exact.allow": "Atļaut"
 }

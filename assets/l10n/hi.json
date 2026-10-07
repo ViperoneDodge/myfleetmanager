@@ -435,5 +435,8 @@
  "family.scanQr": "QR स्कैन करें",
  "family.qrFromImage": "QR छवि लोड करें",
  "family.qrNotFound": "छवि में कोई MyFleetManager QR नहीं मिला।",
- "family.cameraDenied": "कैमरा उपलब्ध नहीं है। सेटिंग्स में कैमरा अनुमति दें या QR की छवि लोड करें।"
+ "family.cameraDenied": "कैमरा उपलब्ध नहीं है। सेटिंग्स में कैमरा अनुमति दें या QR की छवि लोड करें।",
+ "exact.dialogBody": "चुने गए समय पर समय-सीमा रिमाइंडर पाने के लिए MyFleetManager को \"अलार्म और रिमाइंडर\" अनुमति चाहिए। इसके बिना Android उन्हें देर से भेज सकता है या बिल्कुल नहीं भेज सकता।",
+ "exact.later": "बाद में",
+ "exact.allow": "अनुमति दें"
 }

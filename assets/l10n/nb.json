@@ -435,5 +435,8 @@
  "family.scanQr": "Skann QR",
  "family.qrFromImage": "Last inn QR-bilde",
  "family.qrNotFound": "Fant ingen MyFleetManager-QR i bildet.",
- "family.cameraDenied": "Kameraet er ikke tilgjengelig. Tillat kameratilgang i innstillingene, eller last inn et bilde av QR-koden."
+ "family.cameraDenied": "Kameraet er ikke tilgjengelig. Tillat kameratilgang i innstillingene, eller last inn et bilde av QR-koden.",
+ "exact.dialogBody": "For å få påminnelser om frister på tidspunktet du valgte, trenger MyFleetManager tillatelsen «Alarmer og påminnelser». Uten den kan Android levere dem sent eller ikke i det hele tatt.",
+ "exact.later": "Senere",
+ "exact.allow": "Tillat"
 }

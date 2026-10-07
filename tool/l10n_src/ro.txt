@@ -435,3 +435,6 @@ Scanează QR
 Încarcă imagine QR
 Nu s-a găsit niciun cod QR MyFleetManager în imagine.
 Camera nu este disponibilă. Permite accesul la cameră din setări sau încarcă o imagine a codului QR.
+Pentru a primi mementourile de termene la ora aleasă, MyFleetManager are nevoie de permisiunea „Alarme și mementouri”. Fără ea, Android le poate livra cu întârziere sau deloc.
+Mai târziu
+Activează

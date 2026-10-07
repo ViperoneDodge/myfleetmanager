@@ -435,3 +435,6 @@ Naskenovat QR
 Načíst obrázek QR
 V obrázku nebyl nalezen QR kód MyFleetManager.
 Fotoaparát není k dispozici. Povolte přístup k fotoaparátu v nastavení nebo načtěte obrázek QR kódu.
+Aby připomenutí termínů přicházela ve zvolený čas, potřebuje MyFleetManager oprávnění „Budíky a připomenutí“. Bez něj je Android může doručit pozdě nebo vůbec.
+Později
+Povolit

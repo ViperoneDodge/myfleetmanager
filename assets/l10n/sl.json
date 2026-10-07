@@ -435,5 +435,8 @@
  "family.scanQr": "Skeniraj QR",
  "family.qrFromImage": "Naloži sliko QR",
  "family.qrNotFound": "Na sliki ni bilo najdene kode QR MyFleetManager.",
- "family.cameraDenied": "Kamera ni na voljo. V nastavitvah dovolite dostop do kamere ali naložite sliko kode QR."
+ "family.cameraDenied": "Kamera ni na voljo. V nastavitvah dovolite dostop do kamere ali naložite sliko kode QR.",
+ "exact.dialogBody": "Da boste opomnike na roke prejeli ob izbrani uri, MyFleetManager potrebuje dovoljenje »Alarmi in opomniki«. Brez njega jih Android lahko dostavi pozno ali sploh ne.",
+ "exact.later": "Pozneje",
+ "exact.allow": "Vklopi"
 }
