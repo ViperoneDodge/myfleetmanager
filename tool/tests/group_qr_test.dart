@@ -6,6 +6,8 @@ void main() {
   test('codice letto dal QR', () {
     expect(codeFromQr(groupQrData('AB23CD45EF')), 'AB23CD45EF');
     expect(codeFromQr(' ab23cd45ef '), 'AB23CD45EF');
+    expect(codeFromQr('myfleetmanager:join:AB23CD45EF'), 'AB23CD45EF');
+    expect(groupQrData('AB23CD45EF'), startsWith('https://'));
     expect(codeFromQr('https://example.com/qualcosa'), null);
     expect(codeFromQr(null), null);
   });

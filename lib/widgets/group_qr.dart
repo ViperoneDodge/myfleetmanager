@@ -13,12 +13,18 @@ import '../l10n.dart';
 import 'common.dart';
 
 const String _qrPrefix = 'myfleetmanager:join:';
+const String _joinUrl = 'https://viperonedodge.github.io/myfleetmanager/join.html';
 
-String groupQrData(String code) => '$_qrPrefix$code';
+String groupQrData(String code) => '$_joinUrl?code=$code';
 
 String? codeFromQr(String? raw) {
   if (raw == null) return null;
   var t = raw.trim();
+  final uri = Uri.tryParse(t);
+  if (uri != null && uri.hasScheme && uri.host.isNotEmpty) {
+    if (!uri.host.endsWith('github.io') || !uri.path.endsWith('/join.html')) return null;
+    t = uri.queryParameters['code'] ?? '';
+  }
   if (t.toLowerCase().startsWith(_qrPrefix)) t = t.substring(_qrPrefix.length);
   t = t.toUpperCase().replaceAll(RegExp(r'\s'), '');
   return RegExp(r'^[A-Z0-9]{6,32}$').hasMatch(t) ? t : null;
