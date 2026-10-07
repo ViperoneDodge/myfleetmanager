@@ -12,6 +12,7 @@ import '../main.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/ruled.dart';
 import 'maintenance_screen.dart';
 import 'pro_screen.dart';
 import '../services/registration_reader.dart';
@@ -297,140 +298,137 @@ class VehicleDetailScreen extends StatelessWidget {
                       builder: (_) => VehicleEditScreen(vehicle: v.copy()))),
                 ),
           body: NotebookPage(
-            child: ListView(
+            lines: false,
+            child: RuledScroll(
               padding: const EdgeInsets.fromLTRB(8, 14, 10, 96),
               children: [
                 if (!canEdit)
-                  Card(
-                    color: scheme.secondaryContainer,
-                    child: ListTile(
-                      leading: const Icon(Icons.visibility_outlined),
-                      title: Text(tr('role.viewer')),
-                      subtitle: Text(tr('role.readOnly')),
+                  OnRule(
+                    center: true,
+                    child: Card(
+                      color: scheme.secondaryContainer,
+                      child: ListTile(
+                        leading: const Icon(Icons.visibility_outlined),
+                        title: Text(tr('role.viewer')),
+                        subtitle: Text(tr('role.readOnly')),
+                      ),
                     ),
                   ),
-                Center(
-                  child: Transform.rotate(
-                    angle: -0.025,
-                    child: Stack(clipBehavior: Clip.none, children: [
-                      Container(
-                        padding: const EdgeInsets.fromLTRB(8, 8, 8, 26),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          boxShadow: const [
-                            BoxShadow(color: Colors.black26, blurRadius: 6, offset: Offset(1, 3)),
-                          ],
-                          borderRadius: BorderRadius.circular(2),
-                        ),
-                        child: SizedBox(
-                          width: 250,
-                          height: 160,
-                          child: bytes != null
-                              ? Image.memory(bytes, fit: BoxFit.cover)
-                              : Container(
-                                  color: scheme.primaryContainer,
-                                  padding: const EdgeInsets.all(22),
-                                  child: VehicleSilhouette(
-                                      type: v.type, color: scheme.onPrimaryContainer),
-                                ),
-                        ),
-                      ),
-                      Positioned(
-                        top: -10,
-                        left: 95,
-                        child: Transform.rotate(
-                          angle: 0.06,
-                          child: Container(
-                            width: 76,
-                            height: 22,
-                            color: const Color(0xCCF3E7B3),
+                OnRule(
+                  center: true,
+                  child: Center(
+                    child: Transform.rotate(
+                      angle: -0.025,
+                      child: Stack(clipBehavior: Clip.none, children: [
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(8, 8, 8, 26),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            boxShadow: const [
+                              BoxShadow(color: Colors.black26, blurRadius: 6, offset: Offset(1, 3)),
+                            ],
+                            borderRadius: BorderRadius.circular(2),
+                          ),
+                          child: SizedBox(
+                            width: 250,
+                            height: 160,
+                            child: bytes != null
+                                ? Image.memory(bytes, fit: BoxFit.cover)
+                                : Container(
+                                    color: scheme.primaryContainer,
+                                    padding: const EdgeInsets.all(22),
+                                    child: VehicleSilhouette(
+                                        type: v.type, color: scheme.onPrimaryContainer),
+                                  ),
                           ),
                         ),
-                      ),
-                    ]),
+                        Positioned(
+                          top: -10,
+                          left: 95,
+                          child: Transform.rotate(
+                            angle: 0.06,
+                            child: Container(
+                              width: 76,
+                              height: 22,
+                              color: const Color(0xCCF3E7B3),
+                            ),
+                          ),
+                        ),
+                      ]),
+                    ),
                   ),
                 ),
-                const SizedBox(height: 18),
-                Text(v.name.isEmpty ? tr('vehicle.noName') : v.name,
-                    style: Theme.of(context).textTheme.headlineSmall),
-                const SizedBox(height: 6),
-                Wrap(
-                  spacing: 12,
-                  runSpacing: 6,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border.all(color: Colors.black87, width: 1.4),
-                        borderRadius: BorderRadius.circular(6),
+                const BlankLine(),
+                _title(context, v.name.isEmpty ? tr('vehicle.noName') : v.name,
+                    Theme.of(context).textTheme.headlineSmall),
+                OnRule(
+                  child: Wrap(
+                    spacing: 12,
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(color: Colors.black87, width: 1.4),
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        child: Text(v.plate.isEmpty ? '—' : v.plate,
+                            style: const TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 2,
+                                fontSize: 16,
+                                height: 1.0)),
                       ),
-                      child: Text(v.plate.isEmpty ? '—' : v.plate,
-                          style: const TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              letterSpacing: 2,
-                              fontSize: 16)),
-                    ),
-                    Row(mainAxisSize: MainAxisSize.min, children: [
-                      Icon(vehicleIcon(v.type)),
-                      const SizedBox(width: 4),
-                      Text(vehicleTypeLabel(v.type)),
-                    ]),
-                    Row(mainAxisSize: MainAxisSize.min, children: [
-                      const Icon(Icons.event_note_outlined, size: 18),
-                      const SizedBox(width: 4),
-                      Flexible(child: Text('${tr('vehicle.regDate')}: ${fmtDate(v.registrationDate)}')),
-                    ]),
-                    if (appState.isCloud && appState.data.groups.isNotEmpty)
                       Row(mainAxisSize: MainAxisSize.min, children: [
-                        Icon(appState.isPersonal(v) ? Icons.person_outline : Icons.groups_outlined,
-                            size: 18),
+                        Icon(vehicleIcon(v.type), size: 19),
                         const SizedBox(width: 4),
-                        Text(appState.fleetLabel(v)),
+                        Text(vehicleTypeLabel(v.type)),
                       ]),
-                  ],
+                    ],
+                  ),
                 ),
-                const SizedBox(height: 18),
-                Text(tr('tech.title'), style: Theme.of(context).textTheme.titleLarge),
-                const SizedBox(height: 4),
+                _line(context, Icons.event_note_outlined,
+                    '${tr('vehicle.regDate')}: ${fmtDate(v.registrationDate)}'),
+                if (appState.isCloud && appState.data.groups.isNotEmpty)
+                  _line(context, appState.isPersonal(v) ? Icons.person_outline : Icons.groups_outlined,
+                      appState.fleetLabel(v)),
+                const BlankLine(),
+                _title(context, tr('tech.title')),
                 _techRow(context, tr('tech.vin'), v.vin),
                 _techRow(context, tr('tech.tyres'), v.tyres),
                 _techRow(context, tr('tech.power'), v.powerKw),
                 _techRow(context, tr('tech.engine'), v.engineCc),
-                const SizedBox(height: 18),
-                Text(tr('tab.deadlines'), style: Theme.of(context).textTheme.titleLarge),
-                if (tracked.isEmpty)
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: Text(tr('vehicle.noTracked')),
-                  ),
-                ...tracked.map((d) => _deadlineTile(context, d)),
-                const SizedBox(height: 16),
-                Row(children: [
-                  Expanded(
-                      child: Text(tr('maint.title'), style: Theme.of(context).textTheme.titleLarge)),
-                  if (canEdit)
-                  TextButton.icon(
-                    onPressed: () async {
-                      if (await requirePro(context, reason: tr('pro.reasonMaint')) &&
-                          context.mounted) {
-                        _openMaintenance(context, v, null);
-                      }
-                    },
-                    icon: const Icon(Icons.add),
-                    label: Text(tr('common.add')),
-                  ),
-                ]),
+                const BlankLine(),
+                _title(context, tr('tab.deadlines')),
+                if (tracked.isEmpty) _text(context, tr('vehicle.noTracked')),
+                for (final d in tracked) ..._deadlineRows(context, d),
+                const BlankLine(),
+                OnRule(
+                  child: Row(children: [
+                    Expanded(child: _titleText(context, tr('maint.title'))),
+                    if (canEdit)
+                      TextButton.icon(
+                        style: _compactButton,
+                        onPressed: () async {
+                          if (await requirePro(context, reason: tr('pro.reasonMaint')) &&
+                              context.mounted) {
+                            _openMaintenance(context, v, null);
+                          }
+                        },
+                        icon: const Icon(Icons.add),
+                        label: Text(tr('common.add')),
+                      ),
+                  ]),
+                ),
                 if (v.maintenance.isEmpty)
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
-                    child: Text(tr('maint.empty'),
-                        style: TextStyle(color: scheme.onSurfaceVariant)),
-                  ),
-                ...v.maintenanceSorted.map((m) => Card(
-                      margin: const EdgeInsets.symmetric(vertical: 4),
+                  _text(context, tr('maint.empty'), color: scheme.onSurfaceVariant),
+                for (final m in v.maintenanceSorted)
+                  OnRule(
+                    center: true,
+                    child: Card(
+                      margin: const EdgeInsets.symmetric(vertical: 2),
                       child: ListTile(
                         leading: Icon(Icons.build_circle_outlined, color: scheme.primary, size: 30),
                         title: Text(
@@ -439,30 +437,32 @@ class VehicleDetailScreen extends StatelessWidget {
                             maxLines: 3, overflow: TextOverflow.ellipsis),
                         onTap: canEdit ? () => _openMaintenance(context, v, m) : null,
                       ),
-                    )),
-                const SizedBox(height: 16),
-                Row(children: [
-                  Expanded(
-                      child: Text(tr('doc.title'), style: Theme.of(context).textTheme.titleLarge)),
-                  TextButton.icon(
-                    onPressed: () async {
-                      if (await requirePro(context, reason: tr('pro.reasonDocs')) &&
-                          context.mounted) {
-                        await _addDocument(context, v);
-                      }
-                    },
-                    icon: const Icon(Icons.add),
-                    label: Text(tr('common.add')),
+                    ),
                   ),
-                ]),
+                const BlankLine(),
+                OnRule(
+                  child: Row(children: [
+                    Expanded(child: _titleText(context, tr('doc.title'))),
+                    TextButton.icon(
+                      style: _compactButton,
+                      onPressed: () async {
+                        if (await requirePro(context, reason: tr('pro.reasonDocs')) &&
+                            context.mounted) {
+                          await _addDocument(context, v);
+                        }
+                      },
+                      icon: const Icon(Icons.add),
+                      label: Text(tr('common.add')),
+                    ),
+                  ]),
+                ),
                 if (v.documents.isEmpty)
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
-                    child: Text(tr('doc.empty'),
-                        style: TextStyle(color: scheme.onSurfaceVariant)),
-                  ),
-                ...v.documents.map((d) => Card(
-                      margin: const EdgeInsets.symmetric(vertical: 4),
+                  _text(context, tr('doc.empty'), color: scheme.onSurfaceVariant),
+                for (final d in v.documents)
+                  OnRule(
+                    center: true,
+                    child: Card(
+                      margin: const EdgeInsets.symmetric(vertical: 2),
                       child: ListTile(
                         leading: Icon(
                           d.isPdf ? Icons.picture_as_pdf : Icons.image_outlined,
@@ -478,30 +478,27 @@ class VehicleDetailScreen extends StatelessWidget {
                           onPressed: () => _documentMenu(context, v, d),
                         ),
                       ),
-                    )),
-                if (appState.isCloud && v.documents.isNotEmpty)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 4),
-                    child: Text(tr('doc.localOnly'),
-                        style: TextStyle(fontSize: 12, color: scheme.outline)),
-                  ),
-                if (v.notes.trim().isNotEmpty) ...[
-                  const SizedBox(height: 16),
-                  Text(tr('vehicle.notes'), style: Theme.of(context).textTheme.titleLarge),
-                  const SizedBox(height: 4),
-                  Text(v.notes, style: const TextStyle(fontFamily: handFont, fontSize: 20)),
-                ],
-                if (appState.isCloud && v.updatedBy.isNotEmpty)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16),
-                    child: Text(
-                      tr('vehicle.lastEdit', {
-                        'who': v.updatedBy,
-                        'date': fmtDate(DateTime.fromMillisecondsSinceEpoch(v.updatedAt)),
-                      }),
-                      style: TextStyle(fontSize: 12, color: scheme.outline),
                     ),
                   ),
+                if (appState.isCloud && v.documents.isNotEmpty)
+                  _text(context, tr('doc.localOnly'), size: 12, color: scheme.outline),
+                if (v.notes.trim().isNotEmpty) ...[
+                  const BlankLine(),
+                  _title(context, tr('vehicle.notes')),
+                  _text(context, v.notes, size: 20, hand: true),
+                ],
+                if (appState.isCloud && v.updatedBy.isNotEmpty) ...[
+                  const BlankLine(),
+                  _text(
+                    context,
+                    tr('vehicle.lastEdit', {
+                      'who': v.updatedBy,
+                      'date': fmtDate(DateTime.fromMillisecondsSinceEpoch(v.updatedAt)),
+                    }),
+                    size: 12,
+                    color: scheme.outline,
+                  ),
+                ],
               ],
             ),
           ),
@@ -510,14 +507,47 @@ class VehicleDetailScreen extends StatelessWidget {
     );
   }
 
-  Widget _techRow(BuildContext context, String label, String value) => Padding(
-        padding: const EdgeInsets.symmetric(vertical: 2),
-        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+  static final ButtonStyle _compactButton = TextButton.styleFrom(
+    visualDensity: VisualDensity.compact,
+    tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+    padding: const EdgeInsets.symmetric(horizontal: 8),
+    minimumSize: const Size(0, 28),
+  );
+
+  Widget _titleText(BuildContext context, String text, [TextStyle? style]) {
+    final st = (style ?? Theme.of(context).textTheme.titleLarge)!;
+    return RuledText(text, style: st.copyWith(height: 1.0), size: st.fontSize ?? 22);
+  }
+
+  Widget _title(BuildContext context, String text, [TextStyle? style]) =>
+      OnRule(child: _titleText(context, text, style));
+
+  Widget _text(BuildContext context, String text,
+      {double size = 14, Color? color, bool hand = false}) {
+    return OnRule(
+      child: RuledText(
+        text,
+        style: TextStyle(fontSize: size, color: color, fontFamily: hand ? handFont : null),
+      ),
+    );
+  }
+
+  Widget _line(BuildContext context, IconData icon, String text) => OnRule(
+        child: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
+          Padding(padding: const EdgeInsets.only(bottom: 3), child: Icon(icon, size: 18)),
+          const SizedBox(width: 6),
+          Expanded(child: RuledText(text)),
+        ]),
+      );
+
+  Widget _techRow(BuildContext context, String label, String value) => OnRule(
+        child: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
           SizedBox(
             width: 150,
-            child: Text(label, style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant)),
+            child: RuledText(label,
+                style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant)),
           ),
-          Expanded(child: Text(value.isEmpty ? '—' : value)),
+          Expanded(child: RuledText(value.isEmpty ? '—' : value)),
         ]),
       );
 
@@ -718,7 +748,7 @@ class VehicleDetailScreen extends StatelessWidget {
     return '${(bytes / (1024 * 1024)).toStringAsFixed(1)} MB';
   }
 
-  Widget _deadlineTile(BuildContext context, Deadline d) {
+  List<Widget> _deadlineRows(BuildContext context, Deadline d) {
     IconData icon;
     switch (d.kind) {
       case DeadlineKind.insurance:
@@ -746,23 +776,27 @@ class VehicleDetailScreen extends StatelessWidget {
     } else {
       subtitle = d.date == null ? tr('deadline.noDate') : tr('deadline.expiresOn', {'date': fmtDate(d.date)});
     }
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 6),
-      child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Icon(icon),
-        const SizedBox(width: 10),
-        Expanded(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(d.displayLabel, style: const TextStyle(fontFamily: handFont, fontSize: 21, height: 1.1)),
-            Text(subtitle, style: Theme.of(context).textTheme.bodySmall),
-            if (d.dueDate != null) ...[
-              const SizedBox(height: 4),
-              StatusChip(due: d.dueDate!),
-            ],
-          ]),
+    final indent = const EdgeInsets.only(left: 34);
+    return [
+      OnRule(
+        child: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
+          Padding(padding: const EdgeInsets.only(bottom: 2), child: Icon(icon, size: 19)),
+          const SizedBox(width: 12),
+          Expanded(
+            child: RuledText(d.displayLabel,
+                style: const TextStyle(fontFamily: handFont, fontSize: 21, height: 1.0)),
+          ),
+        ]),
+      ),
+      OnRule(
+        child: Padding(
+          padding: indent,
+          child: RuledText(subtitle, style: Theme.of(context).textTheme.bodySmall, size: 12),
         ),
-      ]),
-    );
+      ),
+      if (d.dueDate != null)
+        OnRule(center: true, child: Padding(padding: indent, child: Align(alignment: Alignment.centerLeft, child: StatusChip(due: d.dueDate!)))),
+    ];
   }
 }
 

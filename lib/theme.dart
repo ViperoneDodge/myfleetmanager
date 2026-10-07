@@ -206,7 +206,8 @@ ThemeData buildTheme(ThemeSettings s, Brightness b) {
 
 class NotebookPage extends StatelessWidget {
   final Widget child;
-  const NotebookPage({super.key, required this.child});
+  final bool lines;
+  const NotebookPage({super.key, required this.child, this.lines = true});
 
   static const double gutter = 34;
   static const double maxPageWidth = 820;
@@ -219,7 +220,7 @@ class NotebookPage extends StatelessWidget {
       return Padding(
       padding: EdgeInsets.fromLTRB(16 + extra, 2, 8 + extra, 8),
       child: CustomPaint(
-        painter: _PagePainter(nb),
+        painter: _PagePainter(nb, lines),
         foregroundPainter: _RingsPainter(nb),
         child: ClipRRect(
           borderRadius: const BorderRadius.only(
@@ -239,7 +240,8 @@ class NotebookPage extends StatelessWidget {
 
 class _PagePainter extends CustomPainter {
   final NotebookColors nb;
-  _PagePainter(this.nb);
+  final bool lines;
+  _PagePainter(this.nb, this.lines);
 
   static const _radius = BorderRadius.only(
     topLeft: Radius.circular(4),
@@ -265,7 +267,7 @@ class _PagePainter extends CustomPainter {
       ..color = nb.line
       ..strokeWidth = 1;
     const step = 30.0;
-    switch (nb.style) {
+    switch (lines ? nb.style : PaperStyle.liscio) {
       case PaperStyle.righe:
         for (var y = 56.0; y < size.height; y += step) {
           canvas.drawLine(Offset(0, y), Offset(size.width, y), line);
@@ -302,7 +304,7 @@ class _PagePainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant _PagePainter old) => old.nb != nb;
+  bool shouldRepaint(covariant _PagePainter old) => old.nb != nb || old.lines != lines;
 }
 
 class _RingsPainter extends CustomPainter {
