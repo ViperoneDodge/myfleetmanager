@@ -261,7 +261,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
             Text(tr('edit.where'), style: Theme.of(context).textTheme.titleMedium),
             const SizedBox(height: 6),
             DropdownButtonFormField<String?>(
-              value: appState.data.groupById(v.fleetId) == null ? null : v.fleetId,
+              initialValue: appState.data.groupById(v.fleetId) == null ? null : v.fleetId,
               decoration: const InputDecoration(
                 filled: true,
                 border: OutlineInputBorder(),

@@ -1,5 +1,3 @@
-"""Adatta i file Android/iOS generati da `flutter create` alle esigenze dell'app.
-Eseguito automaticamente da GitHub Actions prima della compilazione."""
 import pathlib
 import re
 import shutil
@@ -175,6 +173,7 @@ receivers = """
         <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="famiglia"/>
         <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_stat_notify"/>
         <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/notify_color"/>
+        <meta-data android:name="com.google.mlkit.vision.DEPENDENCIES" android:value="barcode"/>
 """
 if "ScheduledNotificationReceiver" not in m:
     m = m.replace("</application>", receivers + "    </application>", 1)
@@ -251,3 +250,10 @@ if plist.exists():
         p = p.replace("<dict>", "<dict>\n" + extra, 1)
     plist.write_text(p)
     print("Patched", plist)
+
+props = ROOT / "android" / "gradle.properties"
+if props.exists():
+    gp = props.read_text()
+    if "mobile_scanner.useUnbundled" not in gp:
+        props.write_text(gp.rstrip("\n") + "\ndev.steenbakker.mobile_scanner.useUnbundled=true\n")
+    print("Patched", props)

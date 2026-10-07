@@ -1,6 +1,3 @@
-"""Converte tool/l10n_src/<lingua>.txt (un testo per riga, nello stesso ordine di
-order.txt / en.json) in assets/l10n/<lingua>.json, controllando numero di righe
-e segnaposto {..}."""
 import json, pathlib, re, sys
 S = pathlib.Path(__file__).resolve().parent
 L = S.parents[1] / 'assets' / 'l10n'

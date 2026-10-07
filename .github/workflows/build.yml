@@ -25,8 +25,6 @@ jobs:
           channel: stable
           cache: true
 
-      # Chiave di caricamento Play Store: arriva dai Secrets del repository
-      # (Settings → Secrets and variables → Actions). Senza, si usa la chiave di prova.
       - name: Chiave di firma
         shell: bash
         env:
@@ -39,9 +37,6 @@ jobs:
             echo "Nessuna chiave di caricamento: firma di prova"
           fi
 
-      # APK (installazione diretta): firmato SEMPRE con keystore/debug.keystore,
-      # così si aggiorna sopra le versioni già installate.
-      # AAB (Play Store): firmato con la chiave di caricamento, solo se presente nei Secrets.
       - name: Prepara progetto e compila
         id: build
         shell: bash
