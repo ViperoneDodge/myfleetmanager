@@ -429,5 +429,11 @@
  "ocr.rawCopied": "คัดลอกข้อความแล้ว",
  "ocr.disclaimer": "ฟีเจอร์ทดลอง: การอ่านอัตโนมัติอาจผิดพลาด ตรวจสอบข้อมูลแต่ละรายการกับใบคู่มือจดทะเบียนก่อนบันทึก",
  "settings.exactOff": "ปิดเวลาที่แม่นยำอยู่",
- "settings.exactOffInfo": "การแจ้งเตือนอาจมาช้าหรือไม่มาเลย แตะแล้วเปิด \"การปลุกและการช่วยเตือน\" สำหรับ MyFleetManager"
+ "settings.exactOffInfo": "การแจ้งเตือนอาจมาช้าหรือไม่มาเลย แตะแล้วเปิด \"การปลุกและการช่วยเตือน\" สำหรับ MyFleetManager",
+ "family.qrShare": "แชร์ QR",
+ "family.qrShareText": "เข้าร่วมกลุ่ม \"{name}\" ของฉันใน MyFleetManager: สแกน QR หรือใช้รหัส {code}",
+ "family.scanQr": "สแกน QR",
+ "family.qrFromImage": "โหลดรูป QR",
+ "family.qrNotFound": "ไม่พบ QR ของ MyFleetManager ในรูป",
+ "family.cameraDenied": "ใช้กล้องไม่ได้ อนุญาตการเข้าถึงกล้องในการตั้งค่า หรือโหลดรูป QR"
 }

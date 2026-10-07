@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Tekst skopiowany",
  "ocr.disclaimer": "Funkcja testowa: automatyczny odczyt może się mylić. Przed zapisaniem porównaj każdą wartość z dowodem rejestracyjnym.",
  "settings.exactOff": "Dokładna godzina wyłączona",
- "settings.exactOffInfo": "Powiadomienia mogą przychodzić z opóźnieniem lub wcale. Dotknij i włącz „Alarmy i przypomnienia” dla MyFleetManager."
+ "settings.exactOffInfo": "Powiadomienia mogą przychodzić z opóźnieniem lub wcale. Dotknij i włącz „Alarmy i przypomnienia” dla MyFleetManager.",
+ "family.qrShare": "Udostępnij QR",
+ "family.qrShareText": "Dołącz do mojej grupy „{name}” w MyFleetManager: zeskanuj QR lub użyj kodu {code}.",
+ "family.scanQr": "Skanuj QR",
+ "family.qrFromImage": "Wczytaj obraz QR",
+ "family.qrNotFound": "Na obrazie nie znaleziono kodu QR MyFleetManager.",
+ "family.cameraDenied": "Aparat niedostępny. Zezwól na dostęp do aparatu w ustawieniach lub wczytaj obraz kodu QR."
 }

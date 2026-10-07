@@ -429,3 +429,9 @@ Teks disalin
 Fitur uji coba: pembacaan otomatis bisa salah. Cocokkan setiap data dengan STNK sebelum menyimpannya.
 Waktu tepat dinonaktifkan
 Notifikasi bisa terlambat atau tidak datang. Ketuk dan aktifkan "Alarm & pengingat" untuk MyFleetManager.
+Bagikan QR
+Gabung ke grup saya "{name}" di MyFleetManager: pindai QR atau gunakan kode {code}.
+Pindai QR
+Muat gambar QR
+Tidak ditemukan QR MyFleetManager di gambar.
+Kamera tidak tersedia. Izinkan akses kamera di pengaturan atau muat gambar QR.

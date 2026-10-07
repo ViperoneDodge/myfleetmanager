@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Texto copiado",
  "ocr.disclaimer": "Función en pruebas: la lectura automática puede equivocarse. Compara cada dato con el permiso de circulación antes de guardarlo.",
  "settings.exactOff": "Hora exacta desactivada",
- "settings.exactOffInfo": "Las notificaciones pueden llegar tarde o no llegar. Toca y activa «Alarmas y recordatorios» para MyFleetManager."
+ "settings.exactOffInfo": "Las notificaciones pueden llegar tarde o no llegar. Toca y activa «Alarmas y recordatorios» para MyFleetManager.",
+ "family.qrShare": "Compartir QR",
+ "family.qrShareText": "Únete a mi grupo «{name}» en MyFleetManager: escanea el QR o usa el código {code}.",
+ "family.scanQr": "Escanear QR",
+ "family.qrFromImage": "Cargar imagen QR",
+ "family.qrNotFound": "No se ha encontrado ningún QR de MyFleetManager en la imagen.",
+ "family.cameraDenied": "Cámara no disponible. Permite el acceso a la cámara en los ajustes o carga una imagen del QR."
 }

@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Tekst kopieret",
  "ocr.disclaimer": "Testfunktion: automatisk læsning kan tage fejl. Sammenlign hver værdi med registreringsattesten, før du gemmer den.",
  "settings.exactOff": "Præcist tidspunkt slået fra",
- "settings.exactOffInfo": "Notifikationer kan komme for sent eller slet ikke. Tryk og slå \"Alarmer og påmindelser\" til for MyFleetManager."
+ "settings.exactOffInfo": "Notifikationer kan komme for sent eller slet ikke. Tryk og slå \"Alarmer og påmindelser\" til for MyFleetManager.",
+ "family.qrShare": "Del QR",
+ "family.qrShareText": "Bliv medlem af min gruppe \"{name}\" i MyFleetManager: scan QR-koden eller brug koden {code}.",
+ "family.scanQr": "Scan QR",
+ "family.qrFromImage": "Indlæs QR-billede",
+ "family.qrNotFound": "Ingen MyFleetManager-QR fundet i billedet.",
+ "family.cameraDenied": "Kameraet er ikke tilgængeligt. Tillad kameraadgang i indstillingerne, eller indlæs et billede af QR-koden."
 }

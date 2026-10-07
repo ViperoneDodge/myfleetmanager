@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Texten kopierad",
  "ocr.disclaimer": "Testfunktion: den automatiska läsningen kan göra fel. Jämför varje uppgift med registreringsbeviset innan du sparar den.",
  "settings.exactOff": "Exakt tid avstängd",
- "settings.exactOffInfo": "Aviseringar kan komma sent eller inte alls. Tryck och slå på ”Alarm och påminnelser” för MyFleetManager."
+ "settings.exactOffInfo": "Aviseringar kan komma sent eller inte alls. Tryck och slå på ”Alarm och påminnelser” för MyFleetManager.",
+ "family.qrShare": "Dela QR",
+ "family.qrShareText": "Gå med i min grupp \"{name}\" i MyFleetManager: skanna QR-koden eller använd koden {code}.",
+ "family.scanQr": "Skanna QR",
+ "family.qrFromImage": "Läs in QR-bild",
+ "family.qrNotFound": "Ingen MyFleetManager-QR hittades i bilden.",
+ "family.cameraDenied": "Kameran är inte tillgänglig. Tillåt kameraåtkomst i inställningarna eller läs in en bild av QR-koden."
 }

@@ -429,3 +429,9 @@ Tekst kopieret
 Testfunktion: automatisk læsning kan tage fejl. Sammenlign hver værdi med registreringsattesten, før du gemmer den.
 Præcist tidspunkt slået fra
 Notifikationer kan komme for sent eller slet ikke. Tryk og slå "Alarmer og påmindelser" til for MyFleetManager.
+Del QR
+Bliv medlem af min gruppe "{name}" i MyFleetManager: scan QR-koden eller brug koden {code}.
+Scan QR
+Indlæs QR-billede
+Ingen MyFleetManager-QR fundet i billedet.
+Kameraet er ikke tilgængeligt. Tillad kameraadgang i indstillingerne, eller indlæs et billede af QR-koden.

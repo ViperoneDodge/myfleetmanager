@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Besedilo kopirano",
  "ocr.disclaimer": "Preizkusna funkcija: samodejno branje se lahko zmoti. Pred shranjevanjem vsak podatek primerjajte s prometnim dovoljenjem.",
  "settings.exactOff": "Točen čas je izklopljen",
- "settings.exactOffInfo": "Obvestila lahko pridejo pozno ali sploh ne. Tapnite in vklopite »Alarmi in opomniki« za MyFleetManager."
+ "settings.exactOffInfo": "Obvestila lahko pridejo pozno ali sploh ne. Tapnite in vklopite »Alarmi in opomniki« za MyFleetManager.",
+ "family.qrShare": "Deli QR",
+ "family.qrShareText": "Pridruži se moji skupini \"{name}\" v MyFleetManagerju: skeniraj QR ali uporabi kodo {code}.",
+ "family.scanQr": "Skeniraj QR",
+ "family.qrFromImage": "Naloži sliko QR",
+ "family.qrNotFound": "Na sliki ni bilo najdene kode QR MyFleetManager.",
+ "family.cameraDenied": "Kamera ni na voljo. V nastavitvah dovolite dostop do kamere ali naložite sliko kode QR."
 }

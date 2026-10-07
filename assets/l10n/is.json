@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Texti afritaður",
  "ocr.disclaimer": "Prufueiginleiki: sjálfvirkur lestur getur gert mistök. Berðu hvert gildi saman við skráningarskírteinið áður en þú vistar.",
  "settings.exactOff": "Nákvæm tímasetning er óvirk",
- "settings.exactOffInfo": "Tilkynningar geta borist seint eða alls ekki. Ýttu og kveiktu á „Vekjarar og áminningar“ fyrir MyFleetManager."
+ "settings.exactOffInfo": "Tilkynningar geta borist seint eða alls ekki. Ýttu og kveiktu á „Vekjarar og áminningar“ fyrir MyFleetManager.",
+ "family.qrShare": "Deila QR",
+ "family.qrShareText": "Gakktu í hópinn minn „{name}“ í MyFleetManager: skannaðu QR-kóðann eða notaðu kóðann {code}.",
+ "family.scanQr": "Skanna QR",
+ "family.qrFromImage": "Hlaða inn QR-mynd",
+ "family.qrNotFound": "Enginn MyFleetManager QR-kóði fannst á myndinni.",
+ "family.cameraDenied": "Myndavél ekki tiltæk. Leyfðu aðgang að myndavél í stillingum eða hlaðaðu inn mynd af QR-kóðanum."
 }

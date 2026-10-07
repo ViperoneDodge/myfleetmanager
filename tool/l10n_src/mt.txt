@@ -429,3 +429,9 @@ Test ikkopjat
 Funzjoni ta' prova: il-qari awtomatiku jista' jiżbalja. Qabbel kull dettall mal-liċenzja tal-vettura qabel ma tissejvjah.
 Il-ħin eżatt mitfi
 In-notifiki jistgħu jaslu tard jew ma jaslux. Agħfas u ixgħel "Allarmi u tfakkiriet" għal MyFleetManager.
+Aqsam il-QR
+Ingħaqad mal-grupp tiegħi "{name}" fuq MyFleetManager: skennja l-QR jew uża l-kodiċi {code}.
+Skennja QR
+Tella' immaġni QR
+Ma nstab l-ebda QR ta' MyFleetManager fl-immaġni.
+Il-kamera mhix disponibbli. Ippermetti l-aċċess għall-kamera fis-settings jew tella' immaġni tal-QR.

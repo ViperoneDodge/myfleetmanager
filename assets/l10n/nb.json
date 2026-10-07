@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Tekst kopiert",
  "ocr.disclaimer": "Testfunksjon: automatisk lesing kan ta feil. Sammenlign hver verdi med vognkortet før du lagrer den.",
  "settings.exactOff": "Nøyaktig tid er slått av",
- "settings.exactOffInfo": "Varsler kan komme sent eller ikke i det hele tatt. Trykk og slå på «Alarmer og påminnelser» for MyFleetManager."
+ "settings.exactOffInfo": "Varsler kan komme sent eller ikke i det hele tatt. Trykk og slå på «Alarmer og påminnelser» for MyFleetManager.",
+ "family.qrShare": "Del QR",
+ "family.qrShareText": "Bli med i gruppen min «{name}» i MyFleetManager: skann QR-koden eller bruk koden {code}.",
+ "family.scanQr": "Skann QR",
+ "family.qrFromImage": "Last inn QR-bilde",
+ "family.qrNotFound": "Fant ingen MyFleetManager-QR i bildet.",
+ "family.cameraDenied": "Kameraet er ikke tilgjengelig. Tillat kameratilgang i innstillingene, eller last inn et bilde av QR-koden."
 }

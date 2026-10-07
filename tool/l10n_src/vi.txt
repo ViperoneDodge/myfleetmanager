@@ -429,3 +429,9 @@ Văn bản đã đọc
 Tính năng thử nghiệm: đọc tự động có thể sai. Hãy đối chiếu từng dữ liệu với giấy đăng ký trước khi lưu.
 Đã tắt giờ chính xác
 Thông báo có thể đến trễ hoặc không đến. Chạm và bật "Báo thức và lời nhắc" cho MyFleetManager.
+Chia sẻ QR
+Tham gia nhóm "{name}" của tôi trên MyFleetManager: quét QR hoặc dùng mã {code}.
+Quét QR
+Tải ảnh QR
+Không tìm thấy mã QR MyFleetManager trong ảnh.
+Không dùng được máy ảnh. Hãy cho phép truy cập máy ảnh trong cài đặt hoặc tải ảnh mã QR.

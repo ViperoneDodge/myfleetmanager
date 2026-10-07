@@ -429,5 +429,11 @@
  "ocr.rawCopied": "文本已复制",
  "ocr.disclaimer": "试用功能：自动识别可能出错。保存前请将每项数据与行驶证核对。",
  "settings.exactOff": "精确时间已关闭",
- "settings.exactOffInfo": "通知可能延迟或无法送达。点按并为 MyFleetManager 开启“闹钟和提醒”。"
+ "settings.exactOffInfo": "通知可能延迟或无法送达。点按并为 MyFleetManager 开启“闹钟和提醒”。",
+ "family.qrShare": "分享二维码",
+ "family.qrShareText": "加入我在 MyFleetManager 上的群组“{name}”：扫描二维码或使用代码 {code}。",
+ "family.scanQr": "扫描二维码",
+ "family.qrFromImage": "加载二维码图片",
+ "family.qrNotFound": "图片中未找到 MyFleetManager 二维码。",
+ "family.cameraDenied": "相机不可用。请在设置中允许访问相机，或加载二维码图片。"
 }

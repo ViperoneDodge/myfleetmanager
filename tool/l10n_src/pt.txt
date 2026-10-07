@@ -429,3 +429,9 @@ Texto copiado
 Funcionalidade em teste: a leitura automática pode errar. Compare cada dado com o documento do veículo antes de o guardar.
 Hora exata desativada
 As notificações podem chegar atrasadas ou não chegar. Toque e ative «Alarmes e lembretes» para o MyFleetManager.
+Partilhar QR
+Junta-te ao meu grupo «{name}» no MyFleetManager: lê o QR ou usa o código {code}.
+Ler QR
+Carregar imagem QR
+Nenhum QR do MyFleetManager encontrado na imagem.
+Câmara indisponível. Permite o acesso à câmara nas definições ou carrega uma imagem do QR.

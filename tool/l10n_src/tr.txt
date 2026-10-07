@@ -429,3 +429,9 @@ Metin kopyalandı
 Deneme özelliği: otomatik okuma hata yapabilir. Kaydetmeden önce her değeri ruhsatla karşılaştırın.
 Tam zamanlama kapalı
 Bildirimler gecikebilir veya hiç gelmeyebilir. Dokunun ve MyFleetManager için "Alarmlar ve hatırlatıcılar"ı açın.
+QR paylaş
+MyFleetManager'daki "{name}" grubuma katıl: QR'ı tara veya {code} kodunu kullan.
+QR tara
+QR görseli yükle
+Görselde MyFleetManager QR kodu bulunamadı.
+Kamera kullanılamıyor. Ayarlardan kamera erişimine izin verin veya QR görselini yükleyin.

@@ -429,3 +429,9 @@ Tekst skopiowany
 Funkcja testowa: automatyczny odczyt może się mylić. Przed zapisaniem porównaj każdą wartość z dowodem rejestracyjnym.
 Dokładna godzina wyłączona
 Powiadomienia mogą przychodzić z opóźnieniem lub wcale. Dotknij i włącz „Alarmy i przypomnienia” dla MyFleetManager.
+Udostępnij QR
+Dołącz do mojej grupy „{name}” w MyFleetManager: zeskanuj QR lub użyj kodu {code}.
+Skanuj QR
+Wczytaj obraz QR
+Na obrazie nie znaleziono kodu QR MyFleetManager.
+Aparat niedostępny. Zezwól na dostęp do aparatu w ustawieniach lub wczytaj obraz kodu QR.

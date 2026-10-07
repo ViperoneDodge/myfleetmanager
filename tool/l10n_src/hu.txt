@@ -429,3 +429,9 @@ Szöveg másolva
 Próbafunkció: az automatikus olvasás tévedhet. Mentés előtt vess össze minden adatot a forgalmi engedéllyel.
 Pontos időzítés kikapcsolva
 Az értesítések késhetnek vagy elmaradhatnak. Koppints, és kapcsold be az „Ébresztések és emlékeztetők” lehetőséget a MyFleetManagerhez.
+QR megosztása
+Csatlakozz a(z) „{name}” csoportomhoz a MyFleetManagerben: olvasd be a QR-t, vagy használd a(z) {code} kódot.
+QR beolvasása
+QR-kép betöltése
+A képen nem található MyFleetManager QR-kód.
+A kamera nem érhető el. Engedélyezd a kamerahozzáférést a beállításokban, vagy tölts be egy képet a QR-kódról.

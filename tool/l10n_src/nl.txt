@@ -429,3 +429,9 @@ Tekst gekopieerd
 Testfunctie: automatisch lezen kan fouten maken. Vergelijk elk gegeven met het kentekenbewijs voordat je het opslaat.
 Exacte tijd uitgeschakeld
 Meldingen kunnen te laat of helemaal niet aankomen. Tik en zet "Wekkers en herinneringen" aan voor MyFleetManager.
+QR delen
+Word lid van mijn groep "{name}" in MyFleetManager: scan de QR of gebruik de code {code}.
+QR scannen
+QR-afbeelding laden
+Geen MyFleetManager-QR gevonden in de afbeelding.
+Camera niet beschikbaar. Sta cameratoegang toe in de instellingen of laad een afbeelding van de QR.

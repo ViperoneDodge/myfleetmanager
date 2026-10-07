@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Đã sao chép văn bản",
  "ocr.disclaimer": "Tính năng thử nghiệm: đọc tự động có thể sai. Hãy đối chiếu từng dữ liệu với giấy đăng ký trước khi lưu.",
  "settings.exactOff": "Đã tắt giờ chính xác",
- "settings.exactOffInfo": "Thông báo có thể đến trễ hoặc không đến. Chạm và bật \"Báo thức và lời nhắc\" cho MyFleetManager."
+ "settings.exactOffInfo": "Thông báo có thể đến trễ hoặc không đến. Chạm và bật \"Báo thức và lời nhắc\" cho MyFleetManager.",
+ "family.qrShare": "Chia sẻ QR",
+ "family.qrShareText": "Tham gia nhóm \"{name}\" của tôi trên MyFleetManager: quét QR hoặc dùng mã {code}.",
+ "family.scanQr": "Quét QR",
+ "family.qrFromImage": "Tải ảnh QR",
+ "family.qrNotFound": "Không tìm thấy mã QR MyFleetManager trong ảnh.",
+ "family.cameraDenied": "Không dùng được máy ảnh. Hãy cho phép truy cập máy ảnh trong cài đặt hoặc tải ảnh mã QR."
 }

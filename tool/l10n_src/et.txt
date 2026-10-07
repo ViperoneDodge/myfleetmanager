@@ -429,3 +429,9 @@ Tekst kopeeritud
 Testfunktsioon: automaatne lugemine võib eksida. Võrdle enne salvestamist iga andmet registreerimistunnistusega.
 Täpne aeg on välja lülitatud
 Märguanded võivad hilineda või jääda tulemata. Puuduta ja lülita MyFleetManageri jaoks sisse „Äratused ja meeldetuletused“.
+Jaga QR-i
+Liitu minu grupiga „{name}“ MyFleetManageris: skanni QR-kood või kasuta koodi {code}.
+Skanni QR
+Laadi QR-pilt
+Pildilt ei leitud MyFleetManageri QR-koodi.
+Kaamera pole saadaval. Luba seadetes juurdepääs kaamerale või laadi QR-koodi pilt.

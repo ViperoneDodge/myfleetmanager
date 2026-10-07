@@ -10,6 +10,7 @@ import '../services/pdf_export.dart';
 import '../services/support_service.dart';
 import '../services/sync_service.dart' show cloudErrorMessage;
 import '../widgets/common.dart';
+import '../widgets/group_qr.dart';
 import 'login_screen.dart';
 import 'pro_screen.dart';
 
@@ -299,6 +300,25 @@ Future<void> joinGroupDialog(BuildContext context) async {
           decoration:
               InputDecoration(hintText: tr('family.codeHint'), border: const OutlineInputBorder()),
         ),
+        const SizedBox(height: 8),
+        Wrap(alignment: WrapAlignment.center, spacing: 4, children: [
+          TextButton.icon(
+            icon: const Icon(Icons.qr_code_scanner),
+            label: Text(tr('family.scanQr')),
+            onPressed: () async {
+              final code = await scanGroupQr(ctx);
+              if (code != null && ctx.mounted) Navigator.pop(ctx, code);
+            },
+          ),
+          TextButton.icon(
+            icon: const Icon(Icons.image_outlined),
+            label: Text(tr('family.qrFromImage')),
+            onPressed: () async {
+              final code = await groupQrFromImage(ctx);
+              if (code != null && ctx.mounted) Navigator.pop(ctx, code);
+            },
+          ),
+        ]),
       ]),
       actions: [
         TextButton(onPressed: () => Navigator.pop(ctx), child: Text(tr('common.cancel'))),
@@ -368,6 +388,8 @@ class GroupScreen extends StatelessWidget {
                   tr('family.inviteHowTo'),
                   style: TextStyle(fontSize: 13, color: scheme.onSurfaceVariant),
                 ),
+                const SizedBox(height: 12),
+                GroupQrCard(code: g.id, groupName: g.name),
                 const SizedBox(height: 20),
                 Text(tr('family.membersTitle', {'n': g.members.length}),
                     style: Theme.of(context).textTheme.titleLarge),

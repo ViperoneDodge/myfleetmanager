@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Metin kopyalandı",
  "ocr.disclaimer": "Deneme özelliği: otomatik okuma hata yapabilir. Kaydetmeden önce her değeri ruhsatla karşılaştırın.",
  "settings.exactOff": "Tam zamanlama kapalı",
- "settings.exactOffInfo": "Bildirimler gecikebilir veya hiç gelmeyebilir. Dokunun ve MyFleetManager için \"Alarmlar ve hatırlatıcılar\"ı açın."
+ "settings.exactOffInfo": "Bildirimler gecikebilir veya hiç gelmeyebilir. Dokunun ve MyFleetManager için \"Alarmlar ve hatırlatıcılar\"ı açın.",
+ "family.qrShare": "QR paylaş",
+ "family.qrShareText": "MyFleetManager'daki \"{name}\" grubuma katıl: QR'ı tara veya {code} kodunu kullan.",
+ "family.scanQr": "QR tara",
+ "family.qrFromImage": "QR görseli yükle",
+ "family.qrNotFound": "Görselde MyFleetManager QR kodu bulunamadı.",
+ "family.cameraDenied": "Kamera kullanılamıyor. Ayarlardan kamera erişimine izin verin veya QR görselini yükleyin."
 }

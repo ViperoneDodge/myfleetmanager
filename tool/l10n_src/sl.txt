@@ -429,3 +429,9 @@ Besedilo kopirano
 Preizkusna funkcija: samodejno branje se lahko zmoti. Pred shranjevanjem vsak podatek primerjajte s prometnim dovoljenjem.
 Točen čas je izklopljen
 Obvestila lahko pridejo pozno ali sploh ne. Tapnite in vklopite »Alarmi in opomniki« za MyFleetManager.
+Deli QR
+Pridruži se moji skupini "{name}" v MyFleetManagerju: skeniraj QR ali uporabi kodo {code}.
+Skeniraj QR
+Naloži sliko QR
+Na sliki ni bilo najdene kode QR MyFleetManager.
+Kamera ni na voljo. V nastavitvah dovolite dostop do kamere ali naložite sliko kode QR.

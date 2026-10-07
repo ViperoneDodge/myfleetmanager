@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Text copiat",
  "ocr.disclaimer": "Funcție în test: citirea automată poate greși. Compară fiecare dată cu certificatul de înmatriculare înainte de salvare.",
  "settings.exactOff": "Ora exactă dezactivată",
- "settings.exactOffInfo": "Notificările pot întârzia sau pot lipsi. Atinge și activează „Alarme și mementouri” pentru MyFleetManager."
+ "settings.exactOffInfo": "Notificările pot întârzia sau pot lipsi. Atinge și activează „Alarme și mementouri” pentru MyFleetManager.",
+ "family.qrShare": "Distribuie QR",
+ "family.qrShareText": "Intră în grupul meu „{name}” din MyFleetManager: scanează QR-ul sau folosește codul {code}.",
+ "family.scanQr": "Scanează QR",
+ "family.qrFromImage": "Încarcă imagine QR",
+ "family.qrNotFound": "Nu s-a găsit niciun cod QR MyFleetManager în imagine.",
+ "family.cameraDenied": "Camera nu este disponibilă. Permite accesul la cameră din setări sau încarcă o imagine a codului QR."
 }

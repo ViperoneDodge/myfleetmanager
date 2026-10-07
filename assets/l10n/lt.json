@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Tekstas nukopijuotas",
  "ocr.disclaimer": "Bandomoji funkcija: automatinis nuskaitymas gali klysti. Prieš išsaugodami palyginkite kiekvieną duomenį su registracijos liudijimu.",
  "settings.exactOff": "Tikslus laikas išjungtas",
- "settings.exactOffInfo": "Pranešimai gali vėluoti arba neateiti. Palieskite ir įjunkite „Signalai ir priminimai“ programai MyFleetManager."
+ "settings.exactOffInfo": "Pranešimai gali vėluoti arba neateiti. Palieskite ir įjunkite „Signalai ir priminimai“ programai MyFleetManager.",
+ "family.qrShare": "Bendrinti QR",
+ "family.qrShareText": "Prisijunk prie mano grupės „{name}“ programoje MyFleetManager: nuskenuok QR arba naudok kodą {code}.",
+ "family.scanQr": "Skenuoti QR",
+ "family.qrFromImage": "Įkelti QR paveikslėlį",
+ "family.qrNotFound": "Paveikslėlyje nerasta MyFleetManager QR kodo.",
+ "family.cameraDenied": "Kamera nepasiekiama. Leiskite naudoti kamerą nustatymuose arba įkelkite QR kodo paveikslėlį."
 }

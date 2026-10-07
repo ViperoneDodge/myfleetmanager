@@ -429,3 +429,9 @@ Texti afritaður
 Prufueiginleiki: sjálfvirkur lestur getur gert mistök. Berðu hvert gildi saman við skráningarskírteinið áður en þú vistar.
 Nákvæm tímasetning er óvirk
 Tilkynningar geta borist seint eða alls ekki. Ýttu og kveiktu á „Vekjarar og áminningar“ fyrir MyFleetManager.
+Deila QR
+Gakktu í hópinn minn „{name}“ í MyFleetManager: skannaðu QR-kóðann eða notaðu kóðann {code}.
+Skanna QR
+Hlaða inn QR-mynd
+Enginn MyFleetManager QR-kóði fannst á myndinni.
+Myndavél ekki tiltæk. Leyfðu aðgang að myndavél í stillingum eða hlaðaðu inn mynd af QR-kóðanum.

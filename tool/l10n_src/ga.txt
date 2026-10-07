@@ -429,3 +429,9 @@ Téacs cóipeáilte
 Gné thrialach: d'fhéadfadh botúin a bheith sa léamh uathoibríoch. Cuir gach luach i gcomparáid leis an deimhniú clárúcháin sula sábhálann tú é.
 Tá an t-am cruinn múchta
 D'fhéadfadh fógraí teacht go déanach nó gan teacht ar chor ar bith. Tapáil agus cas air "Aláraim agus meabhrúcháin" do MyFleetManager.
+Comhroinn QR
+Bí i mo ghrúpa "{name}" ar MyFleetManager: scan an QR nó úsáid an cód {code}.
+Scan QR
+Lódáil íomhá QR
+Níor aimsíodh QR MyFleetManager san íomhá.
+Níl an ceamara ar fáil. Ceadaigh rochtain ar an gceamara sna socruithe nó lódáil íomhá den QR.

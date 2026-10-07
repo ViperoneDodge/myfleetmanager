@@ -429,3 +429,9 @@ Teksti kopioitu
 Testitoiminto: automaattinen luku voi erehtyä. Vertaa jokaista tietoa rekisteriotteeseen ennen tallentamista.
 Tarkka ajoitus pois päältä
 Ilmoitukset voivat tulla myöhässä tai jäädä tulematta. Napauta ja ota käyttöön ”Herätykset ja muistutukset” MyFleetManagerille.
+Jaa QR
+Liity ryhmääni "{name}" MyFleetManagerissa: skannaa QR-koodi tai käytä koodia {code}.
+Skannaa QR
+Lataa QR-kuva
+Kuvasta ei löytynyt MyFleetManager-QR-koodia.
+Kamera ei ole käytettävissä. Salli kameran käyttö asetuksista tai lataa kuva QR-koodista.

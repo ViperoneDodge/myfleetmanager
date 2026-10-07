@@ -429,3 +429,9 @@ Tekst kopiert
 Testfunksjon: automatisk lesing kan ta feil. Sammenlign hver verdi med vognkortet før du lagrer den.
 Nøyaktig tid er slått av
 Varsler kan komme sent eller ikke i det hele tatt. Trykk og slå på «Alarmer og påminnelser» for MyFleetManager.
+Del QR
+Bli med i gruppen min «{name}» i MyFleetManager: skann QR-koden eller bruk koden {code}.
+Skann QR
+Last inn QR-bilde
+Fant ingen MyFleetManager-QR i bildet.
+Kameraet er ikke tilgjengelig. Tillat kameratilgang i innstillingene, eller last inn et bilde av QR-koden.

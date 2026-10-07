@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Testo copiato",
  "ocr.disclaimer": "Funzione in prova: la lettura automatica può sbagliare. Confronta ogni dato con il libretto prima di salvarlo.",
  "settings.exactOff": "Orario preciso disattivato",
- "settings.exactOffInfo": "Le notifiche possono arrivare in ritardo o non arrivare. Tocca e attiva \"Sveglie e promemoria\" per MyFleetManager."
+ "settings.exactOffInfo": "Le notifiche possono arrivare in ritardo o non arrivare. Tocca e attiva \"Sveglie e promemoria\" per MyFleetManager.",
+ "family.qrShare": "Condividi QR",
+ "family.qrShareText": "Entra nel mio gruppo \"{name}\" su MyFleetManager: inquadra il QR oppure usa il codice {code}.",
+ "family.scanQr": "Inquadra QR",
+ "family.qrFromImage": "Carica immagine QR",
+ "family.qrNotFound": "Nessun QR di MyFleetManager trovato nell'immagine.",
+ "family.cameraDenied": "Fotocamera non disponibile. Consenti l'accesso alla fotocamera nelle impostazioni oppure carica un'immagine del QR."
 }

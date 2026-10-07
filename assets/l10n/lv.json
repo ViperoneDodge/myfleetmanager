@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Teksts nokopēts",
  "ocr.disclaimer": "Izmēģinājuma funkcija: automātiskā nolasīšana var kļūdīties. Pirms saglabāšanas salīdziniet katru datu ar reģistrācijas apliecību.",
  "settings.exactOff": "Precīzs laiks ir izslēgts",
- "settings.exactOffInfo": "Paziņojumi var pienākt ar nokavēšanos vai nepienākt vispār. Pieskarieties un ieslēdziet “Signāli un atgādinājumi” lietotnei MyFleetManager."
+ "settings.exactOffInfo": "Paziņojumi var pienākt ar nokavēšanos vai nepienākt vispār. Pieskarieties un ieslēdziet “Signāli un atgādinājumi” lietotnei MyFleetManager.",
+ "family.qrShare": "Kopīgot QR",
+ "family.qrShareText": "Pievienojies manai grupai “{name}” lietotnē MyFleetManager: noskenē QR vai izmanto kodu {code}.",
+ "family.scanQr": "Skenēt QR",
+ "family.qrFromImage": "Ielādēt QR attēlu",
+ "family.qrNotFound": "Attēlā netika atrasts MyFleetManager QR kods.",
+ "family.cameraDenied": "Kamera nav pieejama. Atļaujiet piekļuvi kamerai iestatījumos vai ielādējiet QR koda attēlu."
 }

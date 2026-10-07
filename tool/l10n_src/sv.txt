@@ -429,3 +429,9 @@ Texten kopierad
 Testfunktion: den automatiska läsningen kan göra fel. Jämför varje uppgift med registreringsbeviset innan du sparar den.
 Exakt tid avstängd
 Aviseringar kan komma sent eller inte alls. Tryck och slå på ”Alarm och påminnelser” för MyFleetManager.
+Dela QR
+Gå med i min grupp "{name}" i MyFleetManager: skanna QR-koden eller använd koden {code}.
+Skanna QR
+Läs in QR-bild
+Ingen MyFleetManager-QR hittades i bilden.
+Kameran är inte tillgänglig. Tillåt kameraåtkomst i inställningarna eller läs in en bild av QR-koden.

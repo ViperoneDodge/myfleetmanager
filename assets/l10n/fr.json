@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Texte copié",
  "ocr.disclaimer": "Fonction en test : la lecture automatique peut se tromper. Comparez chaque donnée avec la carte grise avant de l'enregistrer.",
  "settings.exactOff": "Heure précise désactivée",
- "settings.exactOffInfo": "Les notifications peuvent arriver en retard ou pas du tout. Touchez et activez « Alarmes et rappels » pour MyFleetManager."
+ "settings.exactOffInfo": "Les notifications peuvent arriver en retard ou pas du tout. Touchez et activez « Alarmes et rappels » pour MyFleetManager.",
+ "family.qrShare": "Partager le QR",
+ "family.qrShareText": "Rejoins mon groupe « {name} » sur MyFleetManager : scanne le QR ou utilise le code {code}.",
+ "family.scanQr": "Scanner le QR",
+ "family.qrFromImage": "Charger une image du QR",
+ "family.qrNotFound": "Aucun QR MyFleetManager trouvé dans l'image.",
+ "family.cameraDenied": "Appareil photo indisponible. Autorisez l'accès à l'appareil photo dans les paramètres ou chargez une image du QR."
 }

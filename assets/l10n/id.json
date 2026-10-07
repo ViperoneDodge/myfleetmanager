@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Teks disalin",
  "ocr.disclaimer": "Fitur uji coba: pembacaan otomatis bisa salah. Cocokkan setiap data dengan STNK sebelum menyimpannya.",
  "settings.exactOff": "Waktu tepat dinonaktifkan",
- "settings.exactOffInfo": "Notifikasi bisa terlambat atau tidak datang. Ketuk dan aktifkan \"Alarm & pengingat\" untuk MyFleetManager."
+ "settings.exactOffInfo": "Notifikasi bisa terlambat atau tidak datang. Ketuk dan aktifkan \"Alarm & pengingat\" untuk MyFleetManager.",
+ "family.qrShare": "Bagikan QR",
+ "family.qrShareText": "Gabung ke grup saya \"{name}\" di MyFleetManager: pindai QR atau gunakan kode {code}.",
+ "family.scanQr": "Pindai QR",
+ "family.qrFromImage": "Muat gambar QR",
+ "family.qrNotFound": "Tidak ditemukan QR MyFleetManager di gambar.",
+ "family.cameraDenied": "Kamera tidak tersedia. Izinkan akses kamera di pengaturan atau muat gambar QR."
 }

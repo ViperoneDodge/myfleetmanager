@@ -429,5 +429,11 @@
  "ocr.rawCopied": "テキストをコピーしました",
  "ocr.disclaimer": "試験機能：自動読み取りは誤ることがあります。保存する前に各データを車検証と照合してください。",
  "settings.exactOff": "正確な時刻がオフです",
- "settings.exactOffInfo": "通知が遅れたり届かなかったりすることがあります。タップして MyFleetManager の「アラームとリマインダー」をオンにしてください。"
+ "settings.exactOffInfo": "通知が遅れたり届かなかったりすることがあります。タップして MyFleetManager の「アラームとリマインダー」をオンにしてください。",
+ "family.qrShare": "QRを共有",
+ "family.qrShareText": "MyFleetManager のグループ「{name}」に参加してください：QRを読み取るか、コード {code} を使用します。",
+ "family.scanQr": "QRを読み取る",
+ "family.qrFromImage": "QR画像を読み込む",
+ "family.qrNotFound": "画像に MyFleetManager のQRが見つかりません。",
+ "family.cameraDenied": "カメラを使用できません。設定でカメラへのアクセスを許可するか、QRの画像を読み込んでください。"
 }

@@ -429,3 +429,9 @@ Text copiat
 Funcție în test: citirea automată poate greși. Compară fiecare dată cu certificatul de înmatriculare înainte de salvare.
 Ora exactă dezactivată
 Notificările pot întârzia sau pot lipsi. Atinge și activează „Alarme și mementouri” pentru MyFleetManager.
+Distribuie QR
+Intră în grupul meu „{name}” din MyFleetManager: scanează QR-ul sau folosește codul {code}.
+Scanează QR
+Încarcă imagine QR
+Nu s-a găsit niciun cod QR MyFleetManager în imagine.
+Camera nu este disponibilă. Permite accesul la cameră din setări sau încarcă o imagine a codului QR.

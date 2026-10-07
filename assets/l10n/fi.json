@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Teksti kopioitu",
  "ocr.disclaimer": "Testitoiminto: automaattinen luku voi erehtyä. Vertaa jokaista tietoa rekisteriotteeseen ennen tallentamista.",
  "settings.exactOff": "Tarkka ajoitus pois päältä",
- "settings.exactOffInfo": "Ilmoitukset voivat tulla myöhässä tai jäädä tulematta. Napauta ja ota käyttöön ”Herätykset ja muistutukset” MyFleetManagerille."
+ "settings.exactOffInfo": "Ilmoitukset voivat tulla myöhässä tai jäädä tulematta. Napauta ja ota käyttöön ”Herätykset ja muistutukset” MyFleetManagerille.",
+ "family.qrShare": "Jaa QR",
+ "family.qrShareText": "Liity ryhmääni \"{name}\" MyFleetManagerissa: skannaa QR-koodi tai käytä koodia {code}.",
+ "family.scanQr": "Skannaa QR",
+ "family.qrFromImage": "Lataa QR-kuva",
+ "family.qrNotFound": "Kuvasta ei löytynyt MyFleetManager-QR-koodia.",
+ "family.cameraDenied": "Kamera ei ole käytettävissä. Salli kameran käyttö asetuksista tai lataa kuva QR-koodista."
 }

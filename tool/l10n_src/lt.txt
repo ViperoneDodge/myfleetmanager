@@ -429,3 +429,9 @@ Tekstas nukopijuotas
 Bandomoji funkcija: automatinis nuskaitymas gali klysti. Prieš išsaugodami palyginkite kiekvieną duomenį su registracijos liudijimu.
 Tikslus laikas išjungtas
 Pranešimai gali vėluoti arba neateiti. Palieskite ir įjunkite „Signalai ir priminimai“ programai MyFleetManager.
+Bendrinti QR
+Prisijunk prie mano grupės „{name}“ programoje MyFleetManager: nuskenuok QR arba naudok kodą {code}.
+Skenuoti QR
+Įkelti QR paveikslėlį
+Paveikslėlyje nerasta MyFleetManager QR kodo.
+Kamera nepasiekiama. Leiskite naudoti kamerą nustatymuose arba įkelkite QR kodo paveikslėlį.

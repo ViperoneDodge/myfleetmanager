@@ -429,5 +429,11 @@
  "ocr.rawCopied": "पाठ कॉपी किया गया",
  "ocr.disclaimer": "परीक्षण सुविधा: स्वचालित पढ़ाई में गलती हो सकती है। सहेजने से पहले हर मान को पंजीकरण प्रमाणपत्र से मिलाएँ।",
  "settings.exactOff": "सटीक समय बंद है",
- "settings.exactOffInfo": "सूचनाएँ देर से आ सकती हैं या नहीं भी आ सकतीं। टैप करें और MyFleetManager के लिए \"अलार्म और रिमाइंडर\" चालू करें।"
+ "settings.exactOffInfo": "सूचनाएँ देर से आ सकती हैं या नहीं भी आ सकतीं। टैप करें और MyFleetManager के लिए \"अलार्म और रिमाइंडर\" चालू करें।",
+ "family.qrShare": "QR साझा करें",
+ "family.qrShareText": "MyFleetManager पर मेरे समूह \"{name}\" से जुड़ें: QR स्कैन करें या कोड {code} का उपयोग करें।",
+ "family.scanQr": "QR स्कैन करें",
+ "family.qrFromImage": "QR छवि लोड करें",
+ "family.qrNotFound": "छवि में कोई MyFleetManager QR नहीं मिला।",
+ "family.cameraDenied": "कैमरा उपलब्ध नहीं है। सेटिंग्स में कैमरा अनुमति दें या QR की छवि लोड करें।"
 }

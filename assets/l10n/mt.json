@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Test ikkopjat",
  "ocr.disclaimer": "Funzjoni ta' prova: il-qari awtomatiku jista' jiżbalja. Qabbel kull dettall mal-liċenzja tal-vettura qabel ma tissejvjah.",
  "settings.exactOff": "Il-ħin eżatt mitfi",
- "settings.exactOffInfo": "In-notifiki jistgħu jaslu tard jew ma jaslux. Agħfas u ixgħel \"Allarmi u tfakkiriet\" għal MyFleetManager."
+ "settings.exactOffInfo": "In-notifiki jistgħu jaslu tard jew ma jaslux. Agħfas u ixgħel \"Allarmi u tfakkiriet\" għal MyFleetManager.",
+ "family.qrShare": "Aqsam il-QR",
+ "family.qrShareText": "Ingħaqad mal-grupp tiegħi \"{name}\" fuq MyFleetManager: skennja l-QR jew uża l-kodiċi {code}.",
+ "family.scanQr": "Skennja QR",
+ "family.qrFromImage": "Tella' immaġni QR",
+ "family.qrNotFound": "Ma nstab l-ebda QR ta' MyFleetManager fl-immaġni.",
+ "family.cameraDenied": "Il-kamera mhix disponibbli. Ippermetti l-aċċess għall-kamera fis-settings jew tella' immaġni tal-QR."
 }

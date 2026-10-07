@@ -429,3 +429,9 @@ ocr.rawCopied
 ocr.disclaimer
 settings.exactOff
 settings.exactOffInfo
+family.qrShare
+family.qrShareText
+family.scanQr
+family.qrFromImage
+family.qrNotFound
+family.cameraDenied

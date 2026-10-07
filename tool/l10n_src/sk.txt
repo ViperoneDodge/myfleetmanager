@@ -429,3 +429,9 @@ Text skopírovaný
 Skúšobná funkcia: automatické čítanie sa môže pomýliť. Pred uložením porovnajte každý údaj s osvedčením o evidencii.
 Presný čas je vypnutý
 Upozornenia môžu prísť neskoro alebo vôbec. Ťuknite a zapnite „Budíky a pripomenutia“ pre MyFleetManager.
+Zdieľať QR
+Pridaj sa do mojej skupiny „{name}“ v MyFleetManageri: naskenuj QR alebo použi kód {code}.
+Naskenovať QR
+Načítať obrázok QR
+V obrázku sa nenašiel QR kód MyFleetManager.
+Fotoaparát nie je dostupný. Povoľte prístup k fotoaparátu v nastaveniach alebo načítajte obrázok QR kódu.

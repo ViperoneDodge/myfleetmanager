@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Text zkopírován",
  "ocr.disclaimer": "Zkušební funkce: automatické čtení se může splést. Před uložením porovnejte každý údaj s technickým průkazem.",
  "settings.exactOff": "Přesný čas je vypnutý",
- "settings.exactOffInfo": "Oznámení mohou přijít pozdě nebo vůbec. Klepněte a zapněte „Budíky a připomenutí“ pro MyFleetManager."
+ "settings.exactOffInfo": "Oznámení mohou přijít pozdě nebo vůbec. Klepněte a zapněte „Budíky a připomenutí“ pro MyFleetManager.",
+ "family.qrShare": "Sdílet QR",
+ "family.qrShareText": "Připoj se k mé skupině „{name}“ v MyFleetManageru: naskenuj QR nebo použij kód {code}.",
+ "family.scanQr": "Naskenovat QR",
+ "family.qrFromImage": "Načíst obrázek QR",
+ "family.qrNotFound": "V obrázku nebyl nalezen QR kód MyFleetManager.",
+ "family.cameraDenied": "Fotoaparát není k dispozici. Povolte přístup k fotoaparátu v nastavení nebo načtěte obrázek QR kódu."
 }

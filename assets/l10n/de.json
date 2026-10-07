@@ -429,5 +429,11 @@
  "ocr.rawCopied": "Text kopiert",
  "ocr.disclaimer": "Testfunktion: Die automatische Erkennung kann sich irren. Vergleiche jeden Wert mit dem Fahrzeugschein, bevor du ihn speicherst.",
  "settings.exactOff": "Genaue Uhrzeit deaktiviert",
- "settings.exactOffInfo": "Benachrichtigungen können verspätet oder gar nicht ankommen. Tippe und aktiviere „Wecker und Erinnerungen“ für MyFleetManager."
+ "settings.exactOffInfo": "Benachrichtigungen können verspätet oder gar nicht ankommen. Tippe und aktiviere „Wecker und Erinnerungen“ für MyFleetManager.",
+ "family.qrShare": "QR teilen",
+ "family.qrShareText": "Tritt meiner Gruppe „{name}“ in MyFleetManager bei: Scanne den QR oder nutze den Code {code}.",
+ "family.scanQr": "QR scannen",
+ "family.qrFromImage": "QR-Bild laden",
+ "family.qrNotFound": "Kein MyFleetManager-QR im Bild gefunden.",
+ "family.cameraDenied": "Kamera nicht verfügbar. Erlaube den Kamerazugriff in den Einstellungen oder lade ein Bild des QR."
 }

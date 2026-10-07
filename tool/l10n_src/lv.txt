@@ -429,3 +429,9 @@ Teksts nokopēts
 Izmēģinājuma funkcija: automātiskā nolasīšana var kļūdīties. Pirms saglabāšanas salīdziniet katru datu ar reģistrācijas apliecību.
 Precīzs laiks ir izslēgts
 Paziņojumi var pienākt ar nokavēšanos vai nepienākt vispār. Pieskarieties un ieslēdziet “Signāli un atgādinājumi” lietotnei MyFleetManager.
+Kopīgot QR
+Pievienojies manai grupai “{name}” lietotnē MyFleetManager: noskenē QR vai izmanto kodu {code}.
+Skenēt QR
+Ielādēt QR attēlu
+Attēlā netika atrasts MyFleetManager QR kods.
+Kamera nav pieejama. Atļaujiet piekļuvi kamerai iestatījumos vai ielādējiet QR koda attēlu.
