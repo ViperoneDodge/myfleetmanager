@@ -124,6 +124,7 @@ class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
           themeMode: t.mode,
           theme: buildTheme(t, Brightness.light),
           darkTheme: buildTheme(t, Brightness.dark),
+          builder: (context, child) => ScreenScale(child: child ?? const SizedBox()),
           home: AnimatedSwitcher(
             duration: const Duration(milliseconds: 500),
             child: (!_introDone || appState.loading)

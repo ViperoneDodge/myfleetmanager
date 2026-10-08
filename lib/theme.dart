@@ -344,3 +344,44 @@ class _RingsPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _RingsPainter old) => old.nb != nb;
 }
+
+class ScreenScale extends StatelessWidget {
+  final Widget child;
+  const ScreenScale({super.key, required this.child});
+
+  static double factorFor(double shortestSide) {
+    if (shortestSide >= 840) return 1.2;
+    if (shortestSide >= 600) return 1.1;
+    return 1.0;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context);
+    final f = factorFor(mq.size.shortestSide);
+    if (f == 1.0) return child;
+    return MediaQuery(
+      data: mq.copyWith(textScaler: _ScaledText(mq.textScaler, f)),
+      child: child,
+    );
+  }
+}
+
+class _ScaledText extends TextScaler {
+  final TextScaler base;
+  final double factor;
+  const _ScaledText(this.base, this.factor);
+
+  @override
+  double scale(double fontSize) => base.scale(fontSize) * factor;
+
+  @override
+  double get textScaleFactor => scale(1);
+
+  @override
+  bool operator ==(Object other) =>
+      other is _ScaledText && other.base == base && other.factor == factor;
+
+  @override
+  int get hashCode => Object.hash(base, factor);
+}

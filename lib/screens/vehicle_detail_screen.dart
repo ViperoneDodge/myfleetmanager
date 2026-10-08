@@ -543,7 +543,7 @@ class VehicleDetailScreen extends StatelessWidget {
   Widget _techRow(BuildContext context, String label, String value) => OnRule(
         child: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
           SizedBox(
-            width: 150,
+            width: MediaQuery.textScalerOf(context).scale(150).clamp(150.0, 240.0),
             child: RuledText(label,
                 style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant)),
           ),
