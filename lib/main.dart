@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'firebase_config.dart';
@@ -59,6 +60,7 @@ class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
+    _applyOrientation();
     Future.delayed(const Duration(milliseconds: 2300), () {
       if (mounted) setState(() => _introDone = true);
     });
@@ -69,6 +71,26 @@ class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
+
+  bool? _phone;
+
+  void _applyOrientation() {
+    final views = WidgetsBinding.instance.platformDispatcher.views;
+    if (views.isEmpty) return;
+    final v = views.first;
+    if (v.devicePixelRatio <= 0) return;
+    final size = v.physicalSize / v.devicePixelRatio;
+    if (size.isEmpty) return;
+    final phone = size.shortestSide < 600;
+    if (phone == _phone) return;
+    _phone = phone;
+    SystemChrome.setPreferredOrientations(phone
+        ? const [DeviceOrientation.portraitUp]
+        : const <DeviceOrientation>[]);
+  }
+
+  @override
+  void didChangeMetrics() => _applyOrientation();
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
