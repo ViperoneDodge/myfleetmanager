@@ -9,6 +9,7 @@ import '../l10n.dart';
 import '../models.dart';
 import '../theme.dart';
 import 'auth_service.dart';
+import 'doc_cloud.dart';
 import 'local_store.dart';
 import 'notification_service.dart';
 import 'pro_service.dart';
@@ -175,6 +176,223 @@ class AppState extends ChangeNotifier {
   bool _devExpiredOnUpdate = false;
 
   bool exactAsked = false;
+  bool? docsConsent;
+  final Map<String, List<Map<String, dynamic>>> _remoteDocs = {};
+  Future<void> _docsChain = Future.value();
+  bool _docsQueued = false;
+  String? docsNotice;
+
+  bool docsShared(Vehicle v) {
+    if (isPersonal(v)) return true;
+    return data.groupById(v.fleetId)?.shareDocs == true;
+  }
+
+  bool _docEligible(Vehicle v) =>
+      isCloud && docsConsent == true && !v.deleted && docsShared(v) && canEdit(v);
+
+  int get myCloudBytes {
+    final me = session?.key;
+    var total = 0;
+    final seen = <String>{};
+    for (final v in data.vehicles) {
+      for (final d in v.documents) {
+        if (d.cloud && d.by == me && seen.add(d.id)) total += d.cloudSize;
+      }
+    }
+    return total;
+  }
+
+  bool shouldAskDocsConsent() =>
+      isCloud && docsConsent == null && data.vehicles.any((v) => !v.deleted && v.documents.isNotEmpty);
+
+  Future<void> setDocsConsent(bool on) async {
+    docsConsent = on;
+    await _writeSettings();
+    notifyListeners();
+    if (on) {
+      _queueDocUploads();
+    } else {
+      await _withdrawMyDocs();
+    }
+  }
+
+  Future<void> _withdrawMyDocs() async {
+    final me = session?.key;
+    if (me == null) return;
+    for (final v in data.vehicles) {
+      final f = _fleetOf(v);
+      for (final d in v.documents) {
+        if (!d.cloud || d.by != me) continue;
+        try {
+          if (f != null) await sync.deleteDoc(f, d.id);
+        } catch (_) {}
+        d.cloud = false;
+        d.cloudSize = 0;
+      }
+    }
+    await _persist();
+    notifyListeners();
+  }
+
+  Future<void> setShareDocs(FleetGroup g, bool on) async {
+    await sync.setShareDocs(g.id, on);
+    g.shareDocs = on;
+    if (!on) {
+      try {
+        await sync.deleteDocs(g.id);
+      } catch (_) {}
+    }
+    await _persist();
+    notifyListeners();
+    if (on) _queueDocUploads();
+  }
+
+  void _onDocs(String fleetId, List<Map<String, dynamic>> docs) {
+    _remoteDocs[fleetId] = docs;
+    if (_applyDocs(fleetId)) {
+      _persist();
+      notifyListeners();
+    }
+    _queueDocUploads();
+  }
+
+  bool _applyDocs(String fleetId) {
+    final remote = _remoteDocs[fleetId];
+    if (remote == null) return false;
+    final me = session?.key;
+    var changed = false;
+    final byVehicle = <String, List<Map<String, dynamic>>>{};
+    for (final r in remote) {
+      byVehicle.putIfAbsent((r['vehicleId'] ?? '').toString(), () => []).add(r);
+    }
+    for (final v in data.vehicles.where((v) => _fleetOf(v) == fleetId)) {
+      final metas = byVehicle[v.id] ?? const [];
+      final ids = {for (final m in metas) m['id'] as String};
+      final keep = <VehicleDocument>[];
+      for (final d in v.documents) {
+        if (!d.cloud || ids.contains(d.id)) {
+          keep.add(d);
+        } else if (d.by == me || d.by.isEmpty) {
+          d.cloud = false;
+          d.cloudSize = 0;
+          keep.add(d);
+          changed = true;
+        } else {
+          _deleteDocFile(d);
+          changed = true;
+        }
+      }
+      for (final m in metas) {
+        final id = m['id'] as String;
+        final i = keep.indexWhere((d) => d.id == id);
+        final name = (m['name'] as String?) ?? tr('doc.default');
+        final size = (m['size'] as num?)?.toInt() ?? 0;
+        final by = (m['by'] as String?) ?? '';
+        if (i >= 0) {
+          final d = keep[i];
+          if (!d.cloud || d.name != name || d.cloudSize != size || d.by != by) {
+            d
+              ..cloud = true
+              ..name = name
+              ..cloudSize = size
+              ..by = by;
+            changed = true;
+          }
+        } else {
+          keep.add(VehicleDocument(
+            id: id,
+            name: name,
+            fileName: 'c_$id.jpg',
+            kind: 'image',
+            addedAt: (m['addedAt'] as num?)?.toInt(),
+            size: size,
+            cloud: true,
+            by: by,
+            cloudSize: size,
+          ));
+          changed = true;
+        }
+      }
+      v.documents = keep;
+    }
+    return changed;
+  }
+
+  void _queueDocUploads() {
+    if (_docsQueued) return;
+    _docsQueued = true;
+    _docsChain = _docsChain.then((_) async {
+      _docsQueued = false;
+      await _uploadPending();
+    }).catchError((_) {
+      _docsQueued = false;
+    });
+  }
+
+  Future<void> _uploadPending() async {
+    final me = session?.key;
+    if (me == null || !isCloud || docsConsent != true) return;
+    var changed = docsNotice != null;
+    docsNotice = null;
+    for (final v in List.of(data.vehicles)) {
+      if (!_docEligible(v)) continue;
+      final fleet = _fleetOf(v);
+      if (fleet == null) continue;
+      for (final d in List.of(v.documents)) {
+        if (d.cloud || (d.by.isNotEmpty && d.by != me)) continue;
+        final f = await documentFile(d);
+        if (!await f.exists()) continue;
+        final len = await f.length();
+        if (len > DocCloud.maxSourceBytes) continue;
+        Uint8List? jpg;
+        try {
+          jpg = await DocCloud.compress(f, pdf: d.isPdf);
+        } catch (_) {}
+        if (jpg == null) continue;
+        if (myCloudBytes + jpg.length > DocCloud.quotaBytes) {
+          docsNotice = 'quota';
+          notifyListeners();
+          return;
+        }
+        try {
+          await sync.uploadDoc(fleet, {
+            'id': d.id,
+            'vehicleId': v.id,
+            'name': d.name,
+            'kind': 'image',
+            'addedAt': d.addedAt,
+            'size': jpg.length,
+            'by': me,
+            'byName': session?.displayName ?? '',
+          }, DocCloud.toB64(jpg));
+          d
+            ..cloud = true
+            ..by = me
+            ..cloudSize = jpg.length;
+          changed = true;
+        } catch (_) {
+          break;
+        }
+      }
+    }
+    if (changed) {
+      await _persist();
+      notifyListeners();
+    }
+  }
+
+  Future<File?> ensureDocFile(Vehicle v, VehicleDocument d) async {
+    final f = await documentFile(d);
+    if (await f.exists()) return f;
+    final fleet = _fleetOf(v);
+    if (!d.cloud || fleet == null || !isCloud) return null;
+    final b64 = await sync.downloadDoc(fleet, d.id);
+    if (b64 == null) return null;
+    await f.writeAsBytes(DocCloud.fromB64(b64), flush: true);
+    return f;
+  }
+
+  bool docIsLocalOnly(VehicleDocument d) => !d.cloud;
   bool? _lastExact;
 
   Future<bool> shouldAskExact() async {
@@ -337,6 +555,8 @@ class AppState extends ChangeNotifier {
     sortNewestFirst = settings?['sortNewest'] == true;
     deadlinesSoonOnly = settings?['deadlinesSoon'] == true;
     exactAsked = settings?['exactAsked'] == true;
+    final dc = settings?['docsConsent'];
+    docsConsent = dc is bool ? dc : null;
     if (devPro && devProVersion != appVersion) {
       devPro = false;
       devProVersion = null;
@@ -574,8 +794,19 @@ class AppState extends ChangeNotifier {
         ..updatedAt = now;
       data.vehicles[i] = tomb;
       _pushIfCloud(tomb);
+      final oldFleet = _fleetOf(old);
+      for (final d in old.documents.where((d) => d.cloud && d.by == session?.key)) {
+        if (oldFleet != null) sync.deleteDoc(oldFleet, d.id).catchError((_) {});
+      }
       final moved = Vehicle.fromJson(v.toJson())..id = newId();
       moved.fleetId = v.fleetId;
+      moved.documents = [
+        for (final d in moved.documents)
+          if (!d.cloud || d.by == session?.key)
+            d
+              ..cloud = false
+              ..cloudSize = 0,
+      ];
       data.vehicles.add(moved);
       v = moved;
     } else if (i >= 0) {
@@ -593,7 +824,13 @@ class AppState extends ChangeNotifier {
     final i = data.vehicles.indexWhere((x) => x.id == id);
     if (i < 0) return;
     final v = data.vehicles[i];
+    final fleet = _fleetOf(v);
     for (final d in List.of(v.documents)) {
+      if (d.cloud && isCloud && fleet != null && canEdit(v)) {
+        try {
+          await sync.deleteDoc(fleet, d.id);
+        } catch (_) {}
+      }
       await _deleteDocFile(d);
     }
     v.documents.clear();
@@ -658,16 +895,25 @@ class AppState extends ChangeNotifier {
     final dest = await documentFile(doc);
     await src.copy(dest.path);
     doc.size = await dest.length();
+    doc.by = session?.key ?? '';
     data.vehicles[i].documents.add(doc);
     await _persist();
     notifyListeners();
+    _queueDocUploads();
   }
 
   Future<void> renameDocument(String vehicleId, String docId, String name) async {
     final v = vehicleById(vehicleId);
     if (v == null) return;
     for (final d in v.documents) {
-      if (d.id == docId) d.name = name;
+      if (d.id != docId) continue;
+      d.name = name;
+      final f = _fleetOf(v);
+      if (d.cloud && isCloud && f != null) {
+        try {
+          await sync.renameDoc(f, d.id, name);
+        } catch (_) {}
+      }
     }
     await _persist();
     notifyListeners();
@@ -678,7 +924,14 @@ class AppState extends ChangeNotifier {
     if (v == null) return;
     final idx = v.documents.indexWhere((d) => d.id == docId);
     if (idx < 0) return;
-    await _deleteDocFile(v.documents[idx]);
+    final d = v.documents[idx];
+    final f = _fleetOf(v);
+    if (d.cloud && isCloud && f != null) {
+      try {
+        await sync.deleteDoc(f, d.id);
+      } catch (_) {}
+    }
+    await _deleteDocFile(d);
     v.documents.removeAt(idx);
     await _persist();
     notifyListeners();
@@ -706,6 +959,7 @@ class AppState extends ChangeNotifier {
         'sortNewest': sortNewestFirst,
         'deadlinesSoon': deadlinesSoonOnly,
         'exactAsked': exactAsked,
+        if (docsConsent != null) 'docsConsent': docsConsent,
       });
 
   Future<void> setLanguage(String? code) async {
@@ -814,6 +1068,7 @@ class AppState extends ChangeNotifier {
       localVehicles: (fleetId) => data.vehicles.where((v) => _fleetOf(v) == fleetId).toList(),
       onVehicles: _mergeRemote,
       onGroups: _onGroups,
+      onDocs: _onDocs,
     );
   }
 
@@ -841,6 +1096,7 @@ class AppState extends ChangeNotifier {
     _persist();
     _scheduleNotifications();
     notifyListeners();
+    _queueDocUploads();
   }
 
   void _mergeRemote(String fleetId, List<Vehicle> remote, bool fromServer) {
@@ -870,6 +1126,7 @@ class AppState extends ChangeNotifier {
       syncStatus = SyncStatus.online;
       changed = true;
     }
+    if (_applyDocs(fleetId)) changed = true;
     if (changed) {
       _persist();
       _scheduleNotifications();

@@ -438,3 +438,22 @@ Không dùng được máy ảnh. Hãy cho phép truy cập máy ảnh trong cà
 Để nhận lời nhắc hạn đúng giờ bạn chọn, MyFleetManager cần quyền "Báo thức và lời nhắc". Nếu không có quyền này, Android có thể gửi trễ hoặc không gửi.
 Để sau
 Cho phép
+Đã chia sẻ trong nhóm
+Đã lưu trực tuyến
+Chỉ trên điện thoại này
+Nhóm này không chia sẻ tài liệu: tài liệu chỉ ở trên điện thoại này.
+Tài liệu trực tuyến: đã dùng {used} MB trên {max} MB.
+Dung lượng trực tuyến đã đầy ({max} MB): tài liệu mới chỉ ở trên điện thoại này.
+Không tải được tài liệu. Hãy kiểm tra kết nối.
+Tài liệu trực tuyến
+MyFleetManager có thể lưu trực tuyến một bản nén của tài liệu (ảnh và trang đầu của PDF) để sao lưu xe của bạn và, nếu quản trị viên nhóm cho phép, để hiển thị cho các thành viên Pro của nhóm. Bản sao được mã hóa và lưu trên máy chủ Google Firebase, và bị xóa khi bạn xóa tài liệu. Dung lượng tối đa: 25 MB mỗi người dùng. Bật không?
+Bật
+Không, chỉ trên điện thoại
+Lưu tài liệu trực tuyến
+Sao lưu tài liệu và chia sẻ trong các nhóm cho phép (tối đa {max} MB).
+Chia sẻ tài liệu trong nhóm
+Thành viên Pro sẽ xem được tài liệu của các xe trong nhóm.
+Nhóm này chia sẻ tài liệu xe
+Nhóm này không chia sẻ tài liệu
+Dừng chia sẻ? Tài liệu sẽ bị gỡ khỏi máy chủ và chỉ còn trên điện thoại của người đã thêm.
+Cần phiên bản Pro để xem tài liệu được chia sẻ trong nhóm.

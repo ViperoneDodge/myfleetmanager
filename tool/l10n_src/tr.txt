@@ -438,3 +438,22 @@ Kamera kullanılamıyor. Ayarlardan kamera erişimine izin verin veya QR görsel
 Son tarih hatırlatıcılarını seçtiğiniz saatte almak için MyFleetManager'ın "Alarmlar ve hatırlatıcılar" iznine ihtiyacı var. Bu izin olmadan Android bunları geç iletebilir veya hiç iletmeyebilir.
 Daha sonra
 İzin ver
+Grupta paylaşıldı
+Çevrimiçi kaydedildi
+Yalnızca bu telefonda
+Bu grup belge paylaşmıyor: belgeler yalnızca bu telefonda kalır.
+Çevrimiçi belgeler: {max} MB'ın {used} MB'ı kullanıldı.
+Çevrimiçi alan dolu ({max} MB): yeni belgeler yalnızca bu telefonda kalır.
+Belge indirilemedi. Bağlantını kontrol et.
+Çevrimiçi belgeler
+MyFleetManager belgelerinin sıkıştırılmış bir kopyasını (fotoğraflar ve PDF'lerin ilk sayfası) araçlarının yedeği olarak ve grup yöneticisi izin verirse grubun Pro üyelerine göstermek için çevrimiçi kaydedebilir. Kopyalar Google Firebase sunucularında şifreli olarak saklanır ve belgeyi sildiğinde silinir. En fazla alan: kullanıcı başına 25 MB. Açılsın mı?
+Aç
+Hayır, yalnızca telefonda
+Belgeleri çevrimiçi kaydet
+Belge yedeği ve izin veren gruplarda paylaşım (en fazla {max} MB).
+Belgeleri grupta paylaş
+Pro üyeler grubun araçlarının belgelerini görebilir.
+Bu grup araç belgelerini paylaşıyor
+Bu grup belge paylaşmıyor
+Paylaşım durdurulsun mu? Belgeler sunucudan kaldırılır ve yalnızca ekleyen kişinin telefonunda kalır.
+Grupta paylaşılan belgeleri görmek için Pro sürümü gerekir.

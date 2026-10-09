@@ -438,3 +438,22 @@ Fotoaparát nie je dostupný. Povoľte prístup k fotoaparátu v nastaveniach al
 Aby pripomenutia termínov prichádzali vo zvolenom čase, MyFleetManager potrebuje povolenie „Budíky a pripomenutia“. Bez neho ich Android môže doručiť neskoro alebo vôbec.
 Neskôr
 Povoliť
+Zdieľané v skupine
+Uložené online
+Len v tomto telefóne
+Táto skupina nezdieľa dokumenty: zostávajú len v tomto telefóne.
+Dokumenty online: využité {used} MB z {max} MB.
+Miesto online je plné ({max} MB): nové dokumenty zostanú len v tomto telefóne.
+Dokument sa nepodarilo stiahnuť. Skontrolujte pripojenie.
+Dokumenty online
+MyFleetManager môže online uložiť komprimovanú kópiu vašich dokumentov (fotky a prvú stranu PDF) ako zálohu vašich vozidiel a, ak to správca skupiny povolí, aby ich videli členovia skupiny s verziou Pro. Kópie sa ukladajú šifrovane na serveroch Google Firebase a vymažú sa, keď dokument vymažete. Maximálne miesto: 25 MB na používateľa. Zapnúť?
+Zapnúť
+Nie, len v telefóne
+Ukladať dokumenty online
+Záloha dokumentov a zdieľanie v skupinách, ktoré to povoľujú (max. {max} MB).
+Zdieľať dokumenty v skupine
+Členovia s verziou Pro uvidia dokumenty vozidiel skupiny.
+Táto skupina zdieľa dokumenty vozidiel
+Táto skupina nezdieľa dokumenty
+Prestať zdieľať? Dokumenty sa odstránia zo servera a zostanú len v telefóne toho, kto ich pridal.
+Na zobrazenie dokumentov zdieľaných v skupine je potrebná verzia Pro.

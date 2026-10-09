@@ -438,3 +438,22 @@ Kamera nav pieejama. Atļaujiet piekļuvi kamerai iestatījumos vai ielādējiet
 Lai termiņu atgādinājumi pienāktu jūsu izvēlētajā laikā, MyFleetManager nepieciešama atļauja “Signāli un atgādinājumi”. Bez tās Android tos var piegādāt novēloti vai nepiegādāt vispār.
 Vēlāk
 Atļaut
+Kopīgots grupā
+Saglabāts tiešsaistē
+Tikai šajā tālrunī
+Šī grupa nekopīgo dokumentus: tie paliek tikai šajā tālrunī.
+Dokumenti tiešsaistē: izmantoti {used} MB no {max} MB.
+Tiešsaistes vieta ir pilna ({max} MB): jaunie dokumenti paliek tikai šajā tālrunī.
+Dokumentu neizdevās lejupielādēt. Pārbaudiet savienojumu.
+Dokumenti tiešsaistē
+MyFleetManager var saglabāt tiešsaistē jūsu dokumentu saspiestu kopiju (fotoattēlus un PDF pirmo lapu) kā transportlīdzekļu dublējumu un, ja grupas administrators atļauj, lai tos redzētu grupas Pro dalībnieki. Kopijas tiek glabātas šifrētas Google Firebase serveros un tiek dzēstas, kad izdzēšat dokumentu. Maksimālā vieta: 25 MB vienam lietotājam. Ieslēgt?
+Ieslēgt
+Nē, tikai tālrunī
+Saglabāt dokumentus tiešsaistē
+Dokumentu dublēšana un kopīgošana grupās, kas to atļauj (maks. {max} MB).
+Kopīgot dokumentus grupā
+Pro dalībnieki varēs redzēt grupas transportlīdzekļu dokumentus.
+Šī grupa kopīgo transportlīdzekļu dokumentus
+Šī grupa nekopīgo dokumentus
+Pārtraukt kopīgošanu? Dokumenti tiks noņemti no servera un paliks tikai tā tālrunī, kurš tos pievienoja.
+Lai redzētu grupā kopīgotos dokumentus, nepieciešama Pro versija.

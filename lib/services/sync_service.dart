@@ -43,6 +43,8 @@ class SyncService {
 
   StreamSubscription? _groupsSub;
   final Map<String, StreamSubscription> _vehSubs = {};
+  final Map<String, StreamSubscription> _docSubs = {};
+  void Function(String fleetId, List<Map<String, dynamic>> docs)? _onDocs;
   final Set<String> _initialPushDone = {};
 
   Future<String> ensurePersonal(Session s) async {
@@ -247,6 +249,9 @@ class SyncService {
   Future<void> deleteAllData(Session s, List<FleetGroup> groups) async {
     final uid = s.key;
     Future<void> wipe(String fleetId) async {
+      try {
+        await deleteDocs(fleetId);
+      } catch (_) {}
       final q = await _fleets
           .doc(fleetId)
           .collection('vehicles')
@@ -262,6 +267,9 @@ class SyncService {
         await wipe(g.id);
         await _fleets.doc(g.id).delete().timeout(_timeout);
       } else {
+        try {
+          await deleteDocs(g.id, by: uid);
+        } catch (_) {}
         await leaveGroup(s, g.id).timeout(_timeout);
       }
     }
@@ -312,8 +320,10 @@ class SyncService {
     required void Function(List<FleetGroup> groups) onGroups,
     required void Function(String fleetId, List<Vehicle> remote, bool fromServer) onVehicles,
     required List<Vehicle> Function(String fleetId) localVehicles,
+    required void Function(String fleetId, List<Map<String, dynamic>> docs) onDocs,
   }) {
     stop();
+    _onDocs = onDocs;
     _listenVehicles(personalId, onVehicles, localVehicles);
     _groupsSub = _fleets
         .where('members', arrayContains: session.key)
@@ -335,12 +345,14 @@ class SyncService {
           members: members,
           admins: ((data['admins'] as List?) ?? const []).map((e) => e.toString()).toSet(),
           viewers: ((data['viewers'] as List?) ?? const []).map((e) => e.toString()).toSet(),
+          shareDocs: data['shareDocs'] == true,
         ));
       }
       final wanted = {personalId, ...groups.map((g) => g.id)};
       for (final id in _vehSubs.keys.toList()) {
         if (!wanted.contains(id)) {
           _vehSubs.remove(id)?.cancel();
+          _docSubs.remove(id)?.cancel();
           _initialPushDone.remove(id);
         }
       }
@@ -357,6 +369,10 @@ class SyncService {
     List<Vehicle> Function(String) localVehicles,
   ) {
     if (_vehSubs.containsKey(fleetId)) return;
+    _docSubs[fleetId] = _fleets.doc(fleetId).collection('docs').snapshots().listen((snap) {
+      if (snap.metadata.isFromCache && snap.docs.isEmpty) return;
+      _onDocs?.call(fleetId, [for (final d in snap.docs) d.data()..['id'] = d.id]);
+    }, onError: (_) {});
     _vehSubs[fleetId] = _fleets
         .doc(fleetId)
         .collection('vehicles')
@@ -390,6 +406,50 @@ class SyncService {
         .catchError((_) {});
   }
 
+  CollectionReference<Map<String, dynamic>> _docs(String fleetId) =>
+      _fleets.doc(fleetId).collection('docs');
+
+  Future<void> uploadDoc(String fleetId, Map<String, dynamic> meta, String b64) {
+    final ref = _docs(fleetId).doc(meta['id'] as String);
+    final batch = _db.batch()
+      ..set(ref, meta)
+      ..set(ref.collection('data').doc('p0'), {'b64': b64});
+    return batch.commit().timeout(const Duration(seconds: 60));
+  }
+
+  Future<void> renameDoc(String fleetId, String id, String name) =>
+      _docs(fleetId).doc(id).update({'name': name}).timeout(_timeout);
+
+  Future<void> deleteDoc(String fleetId, String id) {
+    final ref = _docs(fleetId).doc(id);
+    final batch = _db.batch()
+      ..delete(ref.collection('data').doc('p0'))
+      ..delete(ref);
+    return batch.commit().timeout(_timeout);
+  }
+
+  Future<String?> downloadDoc(String fleetId, String id) async {
+    final snap = await _docs(fleetId)
+        .doc(id)
+        .collection('data')
+        .doc('p0')
+        .get(const GetOptions(source: Source.server))
+        .timeout(const Duration(seconds: 60));
+    return snap.data()?['b64'] as String?;
+  }
+
+  Future<void> deleteDocs(String fleetId, {String? by}) async {
+    Query<Map<String, dynamic>> q = _docs(fleetId);
+    if (by != null) q = q.where('by', isEqualTo: by);
+    final snap = await q.get(const GetOptions(source: Source.server)).timeout(_timeout);
+    for (final d in snap.docs) {
+      await deleteDoc(fleetId, d.id);
+    }
+  }
+
+  Future<void> setShareDocs(String fleetId, bool on) =>
+      _fleets.doc(fleetId).update({'shareDocs': on}).timeout(_timeout);
+
   void stop() {
     _groupsSub?.cancel();
     _groupsSub = null;
@@ -397,6 +457,10 @@ class SyncService {
       s.cancel();
     }
     _vehSubs.clear();
+    for (final s in _docSubs.values) {
+      s.cancel();
+    }
+    _docSubs.clear();
     _initialPushDone.clear();
   }
 }

@@ -438,3 +438,22 @@ Il-kamera mhix disponibbli. Ippermetti l-aċċess għall-kamera fis-settings jew
 Biex tirċievi t-tfakkiriet tal-iskadenzi fil-ħin li għażilt, MyFleetManager għandha bżonn il-permess "Allarmi u tfakkiriet". Mingħajru, Android jista' jwasslhom tard jew ma jwasslhomx.
 Aktar tard
 Ippermetti
+Maqsum fil-grupp
+Salvat online
+Fuq dan it-telefon biss
+Dan il-grupp ma jaqsamx dokumenti: jibqgħu fuq dan it-telefon biss.
+Dokumenti online: {used} MB użati minn {max} MB.
+L-ispazju online mimli ({max} MB): id-dokumenti l-ġodda jibqgħu fuq dan it-telefon biss.
+Ma setax jitniżżel id-dokument. Iċċekkja l-konnessjoni.
+Dokumenti online
+MyFleetManager tista' tissejvja online kopja kkompressata tad-dokumenti tiegħek (ir-ritratti u l-ewwel paġna tal-PDF) bħala backup tal-vetturi tiegħek u, jekk l-admin tal-grupp jippermetti, biex jarawhom il-membri Pro tal-grupp. Il-kopji jinżammu kriptati fuq is-servers ta' Google Firebase u jitħassru meta tħassar id-dokument. Spazju massimu: 25 MB għal kull utent. Tixgħel?
+Ixgħel
+Le, fuq it-telefon biss
+Issejvja d-dokumenti online
+Backup tad-dokumenti u qsim fil-gruppi li jippermettu (massimu {max} MB).
+Aqsam id-dokumenti fil-grupp
+Il-membri Pro jkunu jistgħu jaraw id-dokumenti tal-vetturi tal-grupp.
+Dan il-grupp jaqsam id-dokumenti tal-vetturi
+Dan il-grupp ma jaqsamx dokumenti
+Tieqaf taqsam? Id-dokumenti jitneħħew mis-server u jibqgħu biss fuq it-telefon ta' min żiedhom.
+Biex tara d-dokumenti maqsuma fil-grupp trid il-verżjoni Pro.

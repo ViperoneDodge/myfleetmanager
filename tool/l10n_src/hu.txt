@@ -438,3 +438,22 @@ A kamera nem érhető el. Engedélyezd a kamerahozzáférést a beállításokba
 Ahhoz, hogy a határidő-emlékeztetők a választott időpontban érkezzenek, a MyFleetManagernek szüksége van az „Ébresztések és emlékeztetők” engedélyre. Nélküle az Android késve vagy egyáltalán nem kézbesítheti őket.
 Később
 Engedélyezés
+Megosztva a csoportban
+Online mentve
+Csak ezen a telefonon
+Ez a csoport nem oszt meg dokumentumokat: csak ezen a telefonon maradnak.
+Online dokumentumok: {used} MB foglalt a(z) {max} MB-ból.
+Az online tárhely megtelt ({max} MB): az új dokumentumok csak ezen a telefonon maradnak.
+A dokumentumot nem sikerült letölteni. Ellenőrizd a kapcsolatot.
+Online dokumentumok
+A MyFleetManager online mentheti dokumentumaid tömörített másolatát (a fotókat és a PDF-ek első oldalát) a járműveid biztonsági mentéseként, és ha a csoport adminja engedélyezi, hogy a csoport Pro tagjai is lássák. A másolatok titkosítva a Google Firebase szerverein tárolódnak, és törlődnek, amikor törlöd a dokumentumot. Legfeljebb 25 MB felhasználónként. Bekapcsolod?
+Bekapcsolás
+Nem, csak a telefonon
+Dokumentumok mentése online
+Dokumentumok biztonsági mentése és megosztása az ezt engedő csoportokban (max. {max} MB).
+Dokumentumok megosztása a csoportban
+A Pro tagok láthatják a csoport járműveinek dokumentumait.
+Ez a csoport megosztja a járművek dokumentumait
+Ez a csoport nem oszt meg dokumentumokat
+Leállítod a megosztást? A dokumentumok lekerülnek a szerverről, és csak annak a telefonján maradnak, aki feltöltötte őket.
+A csoportban megosztott dokumentumok megtekintéséhez Pro verzió szükséges.

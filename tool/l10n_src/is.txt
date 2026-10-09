@@ -438,3 +438,22 @@ Myndavél ekki tiltæk. Leyfðu aðgang að myndavél í stillingum eða hlaða�
 Til að fá áminningar um fresti á tímanum sem þú valdir þarf MyFleetManager heimildina „Vekjarar og áminningar“. Án hennar getur Android sent þær seint eða alls ekki.
 Seinna
 Leyfa
+Deilt í hópnum
+Vistað á netinu
+Aðeins í þessum síma
+Þessi hópur deilir ekki skjölum: þau verða aðeins í þessum síma.
+Skjöl á netinu: {used} MB notuð af {max} MB.
+Netplássið er fullt ({max} MB): ný skjöl verða aðeins í þessum síma.
+Ekki tókst að sækja skjalið. Athugaðu tenginguna.
+Skjöl á netinu
+MyFleetManager getur vistað þjappað afrit af skjölunum þínum á netinu (myndir og fyrstu síðu PDF-skjala) sem öryggisafrit af ökutækjunum þínum og, ef stjórnandi hópsins leyfir, til að sýna þau Pro-meðlimum hópsins. Afritin eru dulkóðuð á þjónum Google Firebase og eytt þegar þú eyðir skjalinu. Hámarkspláss: 25 MB á notanda. Kveikja?
+Kveikja
+Nei, aðeins í símanum
+Vista skjöl á netinu
+Öryggisafrit skjala og deiling í hópum sem leyfa það (hám. {max} MB).
+Deila skjölum í hópnum
+Pro-meðlimir geta séð skjöl ökutækja hópsins.
+Þessi hópur deilir skjölum ökutækja
+Þessi hópur deilir ekki skjölum
+Hætta að deila? Skjölin verða fjarlægð af þjóninum og verða aðeins í síma þess sem bætti þeim við.
+Pro-útgáfan þarf til að sjá skjöl sem deilt er í hópnum.

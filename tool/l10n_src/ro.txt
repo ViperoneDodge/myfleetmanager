@@ -438,3 +438,22 @@ Camera nu este disponibilă. Permite accesul la cameră din setări sau încarc�
 Pentru a primi mementourile de termene la ora aleasă, MyFleetManager are nevoie de permisiunea „Alarme și mementouri”. Fără ea, Android le poate livra cu întârziere sau deloc.
 Mai târziu
 Activează
+Partajat în grup
+Salvat online
+Doar pe acest telefon
+Acest grup nu partajează documente: rămân doar pe acest telefon.
+Documente online: {used} MB folosiți din {max} MB.
+Spațiul online este plin ({max} MB): documentele noi rămân doar pe acest telefon.
+Documentul nu a putut fi descărcat. Verifică conexiunea.
+Documente online
+MyFleetManager poate salva online o copie comprimată a documentelor tale (fotografiile și prima pagină a PDF-urilor), ca backup al vehiculelor și, dacă adminul grupului permite, pentru a le arăta membrilor Pro ai grupului. Copiile sunt stocate criptat pe serverele Google Firebase și sunt șterse când ștergi documentul. Spațiu maxim: 25 MB per utilizator. Activezi?
+Activează
+Nu, doar pe telefon
+Salvează documentele online
+Backup pentru documente și partajare în grupurile care permit acest lucru (max. {max} MB).
+Partajează documentele în grup
+Membrii Pro vor putea vedea documentele vehiculelor grupului.
+Acest grup partajează documentele vehiculelor
+Acest grup nu partajează documente
+Oprești partajarea? Documentele vor fi eliminate de pe server și vor rămâne doar pe telefonul celui care le-a adăugat.
+Pentru a vedea documentele partajate în grup este necesară versiunea Pro.

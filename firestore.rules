@@ -81,6 +81,49 @@ service cloud.firestore {
 
       allow delete: if signedIn() && resource.data.ownerUid == request.auth.uid;
 
+      match /docs/{docId} {
+        function fd() {
+          return get(/databases/$(database)/documents/fleets/$(fleetId)).data;
+        }
+
+        function member() {
+          return signedIn() && request.auth.uid in fd().members;
+        }
+
+        function editor() {
+          return member()
+            && (request.auth.uid == fd().ownerUid
+              || request.auth.uid in fd().get('admins', [])
+              || !(request.auth.uid in fd().get('viewers', [])));
+        }
+
+        function sharing() {
+          return fd().get('personal', false) == true || fd().get('shareDocs', false) == true;
+        }
+
+        allow read: if isAdmin() || member();
+        allow create: if editor() && sharing()
+          && request.resource.data.by == request.auth.uid
+          && request.resource.data['size'] is int
+          && request.resource.data['size'] <= 1048576;
+        allow update: if editor()
+          && (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['name'])
+            || (sharing()
+              && resource.data.by == request.auth.uid
+              && request.resource.data.by == request.auth.uid
+              && request.resource.data['size'] is int
+              && request.resource.data['size'] <= 1048576));
+        allow delete: if isAdmin() || editor();
+
+        match /data/{part} {
+          allow read: if isAdmin() || member();
+          allow create, update: if editor() && sharing()
+            && request.resource.data.b64 is string
+            && request.resource.data.b64.size() < 1000000;
+          allow delete: if isAdmin() || editor();
+        }
+      }
+
       match /vehicles/{vehicleId} {
         function fleet() {
           return get(/databases/$(database)/documents/fleets/$(fleetId)).data;

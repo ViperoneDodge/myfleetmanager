@@ -438,3 +438,22 @@ Câmara indisponível. Permite o acesso à câmara nas definições ou carrega u
 Para receber os lembretes de prazos à hora escolhida, o MyFleetManager precisa da autorização «Alarmes e lembretes». Sem ela, o Android pode entregá-los atrasados ou não os entregar.
 Mais tarde
 Ativar
+Partilhado no grupo
+Guardado online
+Só neste telemóvel
+Este grupo não partilha documentos: ficam só neste telemóvel.
+Documentos online: {used} MB usados de {max} MB.
+Espaço online cheio ({max} MB): os novos documentos ficam só neste telemóvel.
+Não foi possível descarregar o documento. Verifica a ligação.
+Documentos online
+O MyFleetManager pode guardar online uma cópia comprimida dos teus documentos (as fotos e a primeira página dos PDF), como cópia de segurança dos teus veículos e, se o admin do grupo permitir, para os mostrar aos membros Pro do grupo. As cópias ficam cifradas nos servidores Google Firebase e são apagadas quando eliminas o documento. Espaço máximo: 25 MB por utilizador. Ativar?
+Ativar
+Não, só no telemóvel
+Guardar documentos online
+Cópia de segurança dos documentos e partilha nos grupos que o permitam (máx. {max} MB).
+Partilhar documentos no grupo
+Os membros Pro poderão ver os documentos dos veículos do grupo.
+Este grupo partilha os documentos dos veículos
+Este grupo não partilha documentos
+Deixar de partilhar? Os documentos serão retirados do servidor e ficarão só no telemóvel de quem os adicionou.
+Para ver os documentos partilhados no grupo é necessária a versão Pro.

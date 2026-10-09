@@ -390,6 +390,22 @@ class GroupScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 GroupQrCard(code: g.id, groupName: g.name),
+                const SizedBox(height: 12),
+                if (manage)
+                  SwitchListTile(
+                    contentPadding: EdgeInsets.zero,
+                    secondary: const Icon(Icons.folder_shared_outlined),
+                    title: Text(tr('family.shareDocs')),
+                    subtitle: Text(tr('family.shareDocsInfo')),
+                    value: g.shareDocs,
+                    onChanged: (on) => _toggleShareDocs(context, g, on),
+                  )
+                else
+                  ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    leading: Icon(g.shareDocs ? Icons.folder_shared_outlined : Icons.folder_off_outlined),
+                    title: Text(g.shareDocs ? tr('family.shareDocsOn') : tr('family.shareDocsOff')),
+                  ),
                 const SizedBox(height: 20),
                 Text(tr('family.membersTitle', {'n': g.members.length}),
                     style: Theme.of(context).textTheme.titleLarge),
@@ -509,6 +525,28 @@ class GroupScreen extends StatelessWidget {
           '${appState.session?.email ?? appState.session?.displayName ?? ''}\n',
     );
     if (!ok && context.mounted) showSnack(context, SupportService.email);
+  }
+
+  Future<void> _toggleShareDocs(BuildContext context, FleetGroup g, bool on) async {
+    if (!on) {
+      final ok = await showDialog<bool>(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          title: Text(tr('family.shareDocs')),
+          content: Text(tr('family.shareDocsStop')),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
+            FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(tr('common.ok'))),
+          ],
+        ),
+      );
+      if (ok != true) return;
+    }
+    try {
+      await appState.setShareDocs(g, on);
+    } catch (e) {
+      if (context.mounted) showSnack(context, cloudErrorMessage(e));
+    }
   }
 
   Future<void> _rename(BuildContext context, FleetGroup g) async {

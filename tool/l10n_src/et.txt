@@ -438,3 +438,22 @@ Kaamera pole saadaval. Luba seadetes juurdepääs kaamerale või laadi QR-koodi 
 Et tähtaegade meeldetuletused jõuaksid sinu valitud ajal, vajab MyFleetManager luba „Äratused ja meeldetuletused“. Ilma selleta võib Android need hilinemisega edastada või üldse mitte.
 Hiljem
 Luba
+Grupis jagatud
+Salvestatud võrku
+Ainult selles telefonis
+See grupp ei jaga dokumente: need jäävad ainult sellesse telefoni.
+Dokumendid võrgus: kasutatud {used} MB / {max} MB.
+Võrguruum on täis ({max} MB): uued dokumendid jäävad ainult sellesse telefoni.
+Dokumenti ei õnnestunud alla laadida. Kontrolli ühendust.
+Dokumendid võrgus
+MyFleetManager saab salvestada su dokumentidest tihendatud koopia võrku (fotod ja PDF-ide esimene lehekülg) sõidukite varukoopiaks ning kui grupi admin lubab, siis ka grupi Pro-liikmetele näitamiseks. Koopiad hoitakse krüptituna Google Firebase'i serverites ja kustutatakse, kui dokumendi kustutad. Maksimaalne ruum: 25 MB kasutaja kohta. Lülitada sisse?
+Lülita sisse
+Ei, ainult telefonis
+Salvesta dokumendid võrku
+Dokumentide varukoopia ja jagamine gruppides, mis seda lubavad (max {max} MB).
+Jaga dokumente grupis
+Pro-liikmed näevad grupi sõidukite dokumente.
+See grupp jagab sõidukite dokumente
+See grupp ei jaga dokumente
+Lõpetada jagamine? Dokumendid eemaldatakse serverist ja jäävad ainult lisaja telefoni.
+Grupis jagatud dokumentide vaatamiseks on vaja Pro-versiooni.

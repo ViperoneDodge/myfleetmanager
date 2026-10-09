@@ -62,6 +62,9 @@ class VehicleDocument {
   String kind;
   int addedAt;
   int size;
+  bool cloud;
+  String by;
+  int cloudSize;
 
   VehicleDocument({
     String? id,
@@ -70,6 +73,9 @@ class VehicleDocument {
     required this.kind,
     int? addedAt,
     this.size = 0,
+    this.cloud = false,
+    this.by = '',
+    this.cloudSize = 0,
   })  : id = id ?? newId(10),
         addedAt = addedAt ?? DateTime.now().millisecondsSinceEpoch;
 
@@ -82,6 +88,9 @@ class VehicleDocument {
         'kind': kind,
         'addedAt': addedAt,
         'size': size,
+        'cloud': cloud,
+        'by': by,
+        'cloudSize': cloudSize,
       };
 
   factory VehicleDocument.fromJson(Map<String, dynamic> j) => VehicleDocument(
@@ -91,6 +100,9 @@ class VehicleDocument {
         kind: j['kind'] as String? ?? 'image',
         addedAt: (j['addedAt'] as num?)?.toInt(),
         size: (j['size'] as num?)?.toInt() ?? 0,
+        cloud: j['cloud'] == true,
+        by: j['by'] as String? ?? '',
+        cloudSize: (j['cloudSize'] as num?)?.toInt() ?? 0,
       );
 }
 
@@ -493,6 +505,8 @@ class FleetGroup {
 
   Set<String> viewers;
 
+  bool shareDocs;
+
   FleetGroup({
     required this.id,
     required this.name,
@@ -500,6 +514,7 @@ class FleetGroup {
     Map<String, String>? members,
     Set<String>? admins,
     Set<String>? viewers,
+    this.shareDocs = false,
   })  : members = members ?? {},
         admins = admins ?? {},
         viewers = viewers ?? {};
@@ -518,6 +533,7 @@ class FleetGroup {
         'members': members,
         'admins': admins.toList(),
         'viewers': viewers.toList(),
+        'shareDocs': shareDocs,
       };
 
   factory FleetGroup.fromJson(Map<String, dynamic> j) => FleetGroup(
@@ -528,6 +544,7 @@ class FleetGroup {
             .map((k, v) => MapEntry(k, v.toString())),
         admins: ((j['admins'] as List?) ?? const []).map((e) => e.toString()).toSet(),
         viewers: ((j['viewers'] as List?) ?? const []).map((e) => e.toString()).toSet(),
+        shareDocs: j['shareDocs'] == true,
       );
 }
 

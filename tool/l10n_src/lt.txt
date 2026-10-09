@@ -438,3 +438,22 @@ Kamera nepasiekiama. Leiskite naudoti kamerą nustatymuose arba įkelkite QR kod
 Kad terminų priminimai ateitų jūsų pasirinktu laiku, MyFleetManager reikia leidimo „Signalai ir priminimai“. Be jo Android gali juos pristatyti pavėluotai arba visai nepristatyti.
 Vėliau
 Leisti
+Bendrinama grupėje
+Išsaugota internete
+Tik šiame telefone
+Ši grupė nebendrina dokumentų: jie lieka tik šiame telefone.
+Dokumentai internete: naudojama {used} MB iš {max} MB.
+Vieta internete užpildyta ({max} MB): nauji dokumentai lieka tik šiame telefone.
+Nepavyko atsisiųsti dokumento. Patikrinkite ryšį.
+Dokumentai internete
+MyFleetManager gali internete išsaugoti suspaustą jūsų dokumentų kopiją (nuotraukas ir PDF pirmąjį puslapį) kaip transporto priemonių atsarginę kopiją ir, jei grupės administratorius leidžia, kad jas matytų grupės Pro nariai. Kopijos saugomos užšifruotos Google Firebase serveriuose ir ištrinamos, kai ištrinate dokumentą. Didžiausia vieta: 25 MB vienam naudotojui. Įjungti?
+Įjungti
+Ne, tik telefone
+Išsaugoti dokumentus internete
+Dokumentų atsarginė kopija ir bendrinimas grupėse, kurios tai leidžia (daugiausia {max} MB).
+Bendrinti dokumentus grupėje
+Pro nariai galės matyti grupės transporto priemonių dokumentus.
+Ši grupė bendrina transporto priemonių dokumentus
+Ši grupė nebendrina dokumentų
+Nustoti bendrinti? Dokumentai bus pašalinti iš serverio ir liks tik juos pridėjusio asmens telefone.
+Norint matyti grupėje bendrinamus dokumentus, reikia Pro versijos.

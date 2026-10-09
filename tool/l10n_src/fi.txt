@@ -438,3 +438,22 @@ Kamera ei ole käytettävissä. Salli kameran käyttö asetuksista tai lataa kuv
 Jotta määräaikamuistutukset tulevat valitsemaasi aikaan, MyFleetManager tarvitsee luvan ”Herätykset ja muistutukset”. Ilman sitä Android voi toimittaa ne myöhässä tai ei ollenkaan.
 Myöhemmin
 Salli
+Jaettu ryhmässä
+Tallennettu verkkoon
+Vain tässä puhelimessa
+Tämä ryhmä ei jaa asiakirjoja: ne pysyvät vain tässä puhelimessa.
+Asiakirjat verkossa: {used} Mt käytetty {max} Mt:stä.
+Verkkotila on täynnä ({max} Mt): uudet asiakirjat pysyvät vain tässä puhelimessa.
+Asiakirjan lataus epäonnistui. Tarkista yhteys.
+Asiakirjat verkossa
+MyFleetManager voi tallentaa verkkoon pakatun kopion asiakirjoistasi (kuvat ja PDF-tiedostojen ensimmäinen sivu) ajoneuvojesi varmuuskopioksi ja, jos ryhmän ylläpitäjä sallii, näytettäväksi ryhmän Pro-jäsenille. Kopiot tallennetaan salattuina Google Firebasen palvelimille ja poistetaan, kun poistat asiakirjan. Enimmäistila: 25 Mt käyttäjää kohden. Otetaanko käyttöön?
+Ota käyttöön
+Ei, vain puhelimessa
+Tallenna asiakirjat verkkoon
+Asiakirjojen varmuuskopio ja jakaminen ryhmissä, jotka sallivat sen (enint. {max} Mt).
+Jaa asiakirjat ryhmässä
+Pro-jäsenet näkevät ryhmän ajoneuvojen asiakirjat.
+Tämä ryhmä jakaa ajoneuvojen asiakirjat
+Tämä ryhmä ei jaa asiakirjoja
+Lopetetaanko jakaminen? Asiakirjat poistetaan palvelimelta ja jäävät vain lisääjän puhelimeen.
+Ryhmässä jaettujen asiakirjojen katsominen vaatii Pro-version.

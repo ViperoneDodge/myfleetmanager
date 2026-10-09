@@ -438,3 +438,22 @@ Níl an ceamara ar fáil. Ceadaigh rochtain ar an gceamara sna socruithe nó ló
 Chun meabhrúcháin spriocdhátaí a fháil ag an am a roghnaigh tú, teastaíonn an cead "Aláraim agus meabhrúcháin" ó MyFleetManager. Gan é, d'fhéadfadh Android iad a sheachadadh go déanach nó gan iad a sheachadadh ar chor ar bith.
 Níos déanaí
 Ceadaigh
+Comhroinnte sa ghrúpa
+Sábháilte ar líne
+Ar an bhfón seo amháin
+Ní chomhroinneann an grúpa seo doiciméid: fanann siad ar an bhfón seo amháin.
+Doiciméid ar líne: {used} MB in úsáid as {max} MB.
+Tá an spás ar líne lán ({max} MB): fanann doiciméid nua ar an bhfón seo amháin.
+Níorbh fhéidir an doiciméad a íoslódáil. Seiceáil an nasc.
+Doiciméid ar líne
+Is féidir le MyFleetManager cóip chomhbhrúite de do dhoiciméid a shábháil ar líne (na grianghraif agus an chéad leathanach de PDFanna), mar chúltaca de d'fheithiclí agus, má cheadaíonn riarthóir an ghrúpa é, chun iad a thaispeáint do bhaill Pro an ghrúpa. Stóráiltear na cóipeanna criptithe ar fhreastalaithe Google Firebase agus scriostar iad nuair a scriosann tú an doiciméad. Spás uasta: 25 MB in aghaidh an úsáideora. É a chasadh air?
+Cas air
+Ní hea, ar an bhfón amháin
+Sábháil doiciméid ar líne
+Cúltaca doiciméad agus comhroinnt i ngrúpaí a cheadaíonn é (uasmhéid {max} MB).
+Comhroinn doiciméid sa ghrúpa
+Beidh baill Pro in ann doiciméid fheithiclí an ghrúpa a fheiceáil.
+Comhroinneann an grúpa seo doiciméid na bhfeithiclí
+Ní chomhroinneann an grúpa seo doiciméid
+Stop ag comhroinnt? Bainfear na doiciméid den fhreastalaí agus fanfaidh siad ar fhón an té a chuir leo amháin.
+Teastaíonn an leagan Pro chun doiciméid an ghrúpa a fheiceáil.

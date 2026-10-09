@@ -9,6 +9,7 @@ import '../models.dart';
 import '../services/app_state.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/docs_consent.dart';
 import 'family_screen.dart';
 import 'pro_screen.dart';
 import 'settings_screen.dart';
@@ -42,7 +43,11 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _askExact() async {
-    if (!mounted || !await appState.shouldAskExact() || !mounted) return;
+    if (!mounted) return;
+    if (!await appState.shouldAskExact() || !mounted) {
+      await _askDocs();
+      return;
+    }
     await appState.markExactAsked();
     if (!mounted) return;
     final ok = await showDialog<bool>(
@@ -58,6 +63,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
     if (ok == true) await appState.notifications.requestExactAlarms();
+    await _askDocs();
+  }
+
+  Future<void> _askDocs() async {
+    if (!mounted || !appState.shouldAskDocsConsent()) return;
+    await askDocsConsent(context);
   }
   VehicleType? _filter;
 

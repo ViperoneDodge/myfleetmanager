@@ -438,3 +438,22 @@ Kamera tidak tersedia. Izinkan akses kamera di pengaturan atau muat gambar QR.
 Agar pengingat tenggat datang pada jam yang Anda pilih, MyFleetManager memerlukan izin "Alarm & pengingat". Tanpa izin ini, Android bisa mengirimkannya terlambat atau tidak sama sekali.
 Nanti
 Izinkan
+Dibagikan di grup
+Tersimpan online
+Hanya di ponsel ini
+Grup ini tidak membagikan dokumen: dokumen hanya ada di ponsel ini.
+Dokumen online: {used} MB terpakai dari {max} MB.
+Ruang online penuh ({max} MB): dokumen baru hanya disimpan di ponsel ini.
+Dokumen tidak dapat diunduh. Periksa koneksi.
+Dokumen online
+MyFleetManager dapat menyimpan salinan terkompresi dokumen Anda secara online (foto dan halaman pertama PDF) sebagai cadangan kendaraan Anda dan, jika admin grup mengizinkan, untuk ditampilkan kepada anggota Pro grup. Salinan disimpan terenkripsi di server Google Firebase dan dihapus saat Anda menghapus dokumen. Ruang maksimum: 25 MB per pengguna. Aktifkan?
+Aktifkan
+Tidak, hanya di ponsel
+Simpan dokumen online
+Cadangan dokumen dan berbagi di grup yang mengizinkan (maks. {max} MB).
+Bagikan dokumen di grup
+Anggota Pro dapat melihat dokumen kendaraan grup.
+Grup ini membagikan dokumen kendaraan
+Grup ini tidak membagikan dokumen
+Berhenti berbagi? Dokumen akan dihapus dari server dan hanya tersisa di ponsel orang yang menambahkannya.
+Untuk melihat dokumen yang dibagikan di grup diperlukan versi Pro.

@@ -438,3 +438,22 @@ Camera niet beschikbaar. Sta cameratoegang toe in de instellingen of laad een af
 Om herinneringen voor vervaldatums op het gekozen tijdstip te krijgen, heeft MyFleetManager de toestemming "Wekkers en herinneringen" nodig. Zonder deze kan Android ze te laat of niet bezorgen.
 Later
 Toestaan
+Gedeeld in de groep
+Online opgeslagen
+Alleen op deze telefoon
+Deze groep deelt geen documenten: ze blijven alleen op deze telefoon.
+Online documenten: {used} MB van {max} MB gebruikt.
+Online ruimte vol ({max} MB): nieuwe documenten blijven alleen op deze telefoon.
+Het document kon niet worden gedownload. Controleer de verbinding.
+Online documenten
+MyFleetManager kan een gecomprimeerde kopie van je documenten online opslaan (foto's en de eerste pagina van pdf's), als back-up van je voertuigen en, als de groepsbeheerder het toestaat, om ze te tonen aan de Pro-leden van de groep. Kopieën worden versleuteld op servers van Google Firebase bewaard en verwijderd wanneer je het document verwijdert. Maximale ruimte: 25 MB per gebruiker. Inschakelen?
+Inschakelen
+Nee, alleen op de telefoon
+Documenten online opslaan
+Back-up van documenten en delen in groepen die het toestaan (max. {max} MB).
+Documenten delen in de groep
+Pro-leden kunnen de documenten van de voertuigen van de groep zien.
+Deze groep deelt voertuigdocumenten
+Deze groep deelt geen documenten
+Stoppen met delen? De documenten worden van de server verwijderd en blijven alleen op de telefoon van wie ze heeft toegevoegd.
+Om de in de groep gedeelde documenten te zien is de Pro-versie nodig.

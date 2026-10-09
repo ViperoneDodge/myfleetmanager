@@ -438,3 +438,22 @@ Kamera ni na voljo. V nastavitvah dovolite dostop do kamere ali naložite sliko 
 Da boste opomnike na roke prejeli ob izbrani uri, MyFleetManager potrebuje dovoljenje »Alarmi in opomniki«. Brez njega jih Android lahko dostavi pozno ali sploh ne.
 Pozneje
 Vklopi
+V skupni rabi v skupini
+Shranjeno na spletu
+Samo na tem telefonu
+Ta skupina ne deli dokumentov: ostanejo samo na tem telefonu.
+Spletni dokumenti: porabljeno {used} MB od {max} MB.
+Spletni prostor je poln ({max} MB): novi dokumenti ostanejo samo na tem telefonu.
+Dokumenta ni bilo mogoče prenesti. Preverite povezavo.
+Spletni dokumenti
+MyFleetManager lahko na spletu shrani stisnjeno kopijo vaših dokumentov (fotografije in prvo stran PDF-jev) kot varnostno kopijo vaših vozil in, če skrbnik skupine to dovoli, da jih vidijo člani skupine s Pro. Kopije so šifrirane shranjene na strežnikih Google Firebase in izbrisane, ko izbrišete dokument. Največ prostora: 25 MB na uporabnika. Vklopim?
+Vklopi
+Ne, samo na telefonu
+Shrani dokumente na spletu
+Varnostna kopija dokumentov in deljenje v skupinah, ki to dovolijo (največ {max} MB).
+Deli dokumente v skupini
+Člani s Pro bodo lahko videli dokumente vozil skupine.
+Ta skupina deli dokumente vozil
+Ta skupina ne deli dokumentov
+Prenehati z deljenjem? Dokumenti bodo odstranjeni s strežnika in bodo ostali samo na telefonu osebe, ki jih je dodala.
+Za ogled dokumentov v skupni rabi v skupini potrebujete različico Pro.

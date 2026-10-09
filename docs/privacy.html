@@ -34,7 +34,7 @@
 
 <section id="it">
 <h2>Informativa sulla privacy</h2>
-<p><small>Ultimo aggiornamento: 5 ottobre 2026</small></p>
+<p><small>Ultimo aggiornamento: 9 ottobre 2026</small></p>
 
 <h3>Chi siamo</h3>
 <p>MyFleetManager è un'app per tenere sotto controllo le scadenze dei veicoli (assicurazione, bollo, revisione, tagliando). Il titolare del trattamento è lo sviluppatore dell'app, contattabile all'indirizzo <a href="mailto:appmyfleetmanager@gmail.com">appmyfleetmanager@gmail.com</a>.</p>
@@ -46,7 +46,12 @@
   <li><b>Dati dei veicoli</b> sincronizzati con l'account online: nome, targa, tipo, data di immatricolazione, foto del veicolo, scadenze, storico manutenzioni, note e nome di chi ha fatto l'ultima modifica.</li>
   <li><b>Gruppi condivisi</b>: nome del gruppo ed email dei membri, visibili agli altri membri dello stesso gruppo.</li>
   <li><b>Notifiche push</b>: un identificativo tecnico del telefono (token Firebase Cloud Messaging) usato solo per inviare le notifiche.</li>
-  <li><b>Documenti dei veicoli</b> (libretto, polizza…): restano <b>solo sul telefono</b> e non vengono caricati su server. La lettura automatica dei dati (targa, telaio, ecc.) avviene interamente sul telefono, senza inviare i documenti a nessun server.</li>
+  <li><b>Documenti dei veicoli</b> (libretto, polizza…): per impostazione predefinita restano <b>solo sul telefono</b>. Se attivi l'opzione <b>"Salva i documenti online"</b> (richiede il tuo consenso esplicito e si può disattivare in qualsiasi momento dalle Impostazioni), l'app salva su Google Firebase una <b>copia compressa</b> di ogni documento (la foto o la prima pagina del PDF convertita in immagine), cifrata durante il trasferimento e sul server, fino a 25 MB per utente:
+    <ul>
+      <li>per i <b>veicoli personali</b>, come backup visibile solo a te;</li>
+      <li>per i <b>veicoli di un gruppo</b>, solo se l'amministratore del gruppo ha attivato "Condividi i documenti nel gruppo": in quel caso la copia è visibile ai membri del gruppo con la versione Pro.</li>
+    </ul>
+    Le copie vengono cancellate dal server quando elimini il documento o il veicolo, quando disattivi l'opzione o quando l'amministratore smette di condividere i documenti del gruppo. Il file originale resta sul tuo telefono. La lettura automatica dei dati (targa, telaio, ecc.) avviene interamente sul telefono.</li>
   <li><b>Acquisti in app</b>: il pagamento è gestito interamente da Google Play. L'app riceve solo la conferma che l'acquisto è avvenuto; non riceviamo dati della carta.</li>
   <li><b>Segnalazioni</b>: se usi "Segnala un problema" o scrivi allo sviluppatore, l'email parte dalla tua app di posta e contiene ciò che scrivi, la versione dell'app e il modello del telefono.</li>
 </ul>
@@ -86,7 +91,7 @@
 
 <section id="en">
 <h2>Privacy policy</h2>
-<p><small>Last updated: 5 October 2026</small></p>
+<p><small>Last updated: 9 October 2026</small></p>
 
 <h3>Who we are</h3>
 <p>MyFleetManager is an app for keeping track of vehicle deadlines (insurance, road tax, roadworthiness test, service). The data controller is the app's developer, who can be contacted at <a href="mailto:appmyfleetmanager@gmail.com">appmyfleetmanager@gmail.com</a>.</p>
@@ -98,7 +103,12 @@
   <li><b>Vehicle data</b> synced with the online account: name, number plate, type, registration date, vehicle photo, deadlines, maintenance history, notes and the name of whoever made the last change.</li>
   <li><b>Shared groups</b>: group name and members' email addresses, visible to the other members of the same group.</li>
   <li><b>Push notifications</b>: a technical device identifier (Firebase Cloud Messaging token) used only to deliver notifications.</li>
-  <li><b>Vehicle documents</b> (registration, insurance policy…): stay <b>on the phone only</b> and are never uploaded to a server. Automatic data reading (plate, chassis number, etc.) happens entirely on the phone, without sending documents to any server.</li>
+  <li><b>Vehicle documents</b> (registration, insurance policy…): by default they stay <b>on the phone only</b>. If you turn on <b>"Save documents online"</b> (this requires your explicit consent and can be turned off at any time in Settings), the app stores on Google Firebase a <b>compressed copy</b> of each document (the photo, or the first page of a PDF converted to an image), encrypted in transit and on the server, up to 25 MB per user:
+    <ul>
+      <li>for <b>personal vehicles</b>, as a backup visible only to you;</li>
+      <li>for <b>vehicles in a group</b>, only if the group admin has turned on "Share documents in the group": in that case the copy is visible to group members who have the Pro version.</li>
+    </ul>
+    Copies are deleted from the server when you delete the document or the vehicle, when you turn the option off, or when the admin stops sharing the group's documents. The original file stays on your phone. Automatic data reading (plate, chassis number, etc.) happens entirely on the phone.</li>
   <li><b>In-app purchases</b>: payment is handled entirely by Google Play. The app only receives confirmation of the purchase; we never receive card details.</li>
   <li><b>Reports</b>: if you use "Report a problem" or write to the developer, the email is sent from your own mail app and contains what you write, the app version and the phone model.</li>
 </ul>

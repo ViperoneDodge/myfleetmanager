@@ -438,3 +438,22 @@ Kameraet er ikke tilgjengelig. Tillat kameratilgang i innstillingene, eller last
 For å få påminnelser om frister på tidspunktet du valgte, trenger MyFleetManager tillatelsen «Alarmer og påminnelser». Uten den kan Android levere dem sent eller ikke i det hele tatt.
 Senere
 Tillat
+Delt i gruppen
+Lagret på nett
+Bare på denne telefonen
+Denne gruppen deler ikke dokumenter: de blir bare på denne telefonen.
+Dokumenter på nett: {used} MB brukt av {max} MB.
+Plassen på nett er full ({max} MB): nye dokumenter blir bare på denne telefonen.
+Kunne ikke laste ned dokumentet. Sjekk tilkoblingen.
+Dokumenter på nett
+MyFleetManager kan lagre en komprimert kopi av dokumentene dine på nett (bilder og første side av PDF-er) som sikkerhetskopi av kjøretøyene dine og, hvis gruppens admin tillater det, for å vise dem til gruppens Pro-medlemmer. Kopiene lagres kryptert på Google Firebase-servere og slettes når du sletter dokumentet. Maks plass: 25 MB per bruker. Slå på?
+Slå på
+Nei, bare på telefonen
+Lagre dokumenter på nett
+Sikkerhetskopi av dokumenter og deling i grupper som tillater det (maks {max} MB).
+Del dokumenter i gruppen
+Pro-medlemmer kan se dokumentene til gruppens kjøretøy.
+Denne gruppen deler kjøretøydokumenter
+Denne gruppen deler ikke dokumenter
+Slutte å dele? Dokumentene fjernes fra serveren og blir bare på telefonen til den som la dem til.
+Pro-versjonen kreves for å se dokumenter som deles i gruppen.

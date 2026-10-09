@@ -12,9 +12,11 @@ import '../main.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/docs_consent.dart';
 import '../widgets/ruled.dart';
 import 'maintenance_screen.dart';
 import 'pro_screen.dart';
+import '../services/doc_cloud.dart';
 import '../services/registration_reader.dart';
 import 'vehicle_edit_screen.dart';
 
@@ -177,17 +179,38 @@ class VehicleDetailScreen extends StatelessWidget {
     try {
       await appState.addDocument(v.id, path, name);
       if (context.mounted) showSnack(context, tr('doc.saved'));
+      if (context.mounted) await askDocsConsent(context);
     } catch (e) {
       if (context.mounted) showSnack(context, tr('doc.saveError', {'error': e}));
     }
   }
 
-  Future<void> _openDocument(BuildContext context, VehicleDocument d) async {
-    final f = await appState.documentFile(d);
-    if (!await f.exists()) {
+  Future<File?> _docFile(BuildContext context, Vehicle v, VehicleDocument d) async {
+    final local = await appState.documentFile(d);
+    if (await local.exists()) return local;
+    if (!d.cloud) {
       if (context.mounted) showSnack(context, tr('doc.notFound'));
-      return;
+      return null;
     }
+    if (!context.mounted) return null;
+    if (!await requirePro(context, reason: tr('pro.reasonDocsView')) || !context.mounted) return null;
+    showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => const Center(child: CircularProgressIndicator()),
+    );
+    File? f;
+    try {
+      f = await appState.ensureDocFile(v, d);
+    } catch (_) {}
+    if (context.mounted) Navigator.of(context).pop();
+    if (f == null && context.mounted) showSnack(context, tr('doc.downloadError'));
+    return f;
+  }
+
+  Future<void> _openDocument(BuildContext context, Vehicle v, VehicleDocument d) async {
+    final f = await _docFile(context, v, d);
+    if (f == null || !context.mounted) return;
     if (d.isPdf) {
       final r = await OpenFilex.open(f.path, type: 'application/pdf');
       if (r.type != ResultType.done && context.mounted) {
@@ -216,22 +239,24 @@ class VehicleDetailScreen extends StatelessWidget {
               title: Text(tr('ocr.read')),
               onTap: () => Navigator.pop(ctx, 'ocr'),
             ),
-          ListTile(
-            leading: const Icon(Icons.drive_file_rename_outline),
-            title: Text(tr('doc.rename')),
-            onTap: () => Navigator.pop(ctx, 'rename'),
-          ),
-          ListTile(
-            leading: Icon(Icons.delete_outline, color: Colors.red.shade700),
-            title: Text(tr('common.delete')),
-            onTap: () => Navigator.pop(ctx, 'delete'),
-          ),
+          if (!d.cloud || appState.canEdit(v))
+            ListTile(
+              leading: const Icon(Icons.drive_file_rename_outline),
+              title: Text(tr('doc.rename')),
+              onTap: () => Navigator.pop(ctx, 'rename'),
+            ),
+          if (!d.cloud || appState.canEdit(v))
+            ListTile(
+              leading: Icon(Icons.delete_outline, color: Colors.red.shade700),
+              title: Text(tr('common.delete')),
+              onTap: () => Navigator.pop(ctx, 'delete'),
+            ),
         ]),
       ),
     );
     if (!context.mounted) return;
     if (a == 'open') {
-      await _openDocument(context, d);
+      await _openDocument(context, v, d);
     } else if (a == 'ocr') {
       await _readRegistration(context, v, d);
     } else if (a == 'rename') {
@@ -471,8 +496,8 @@ class VehicleDetailScreen extends StatelessWidget {
                         ),
                         title: Text(d.name),
                         subtitle: Text(
-                            '${d.isPdf ? 'PDF' : tr('doc.image')} · ${_size(d.size)} · ${fmtDate(DateTime.fromMillisecondsSinceEpoch(d.addedAt))}'),
-                        onTap: () => _openDocument(context, d),
+                            '${d.isPdf ? 'PDF' : tr('doc.image')} · ${_size(d.size)} · ${fmtDate(DateTime.fromMillisecondsSinceEpoch(d.addedAt))}\n${_docState(v, d)}'),
+                        onTap: () => _openDocument(context, v, d),
                         trailing: IconButton(
                           icon: const Icon(Icons.more_vert),
                           onPressed: () => _documentMenu(context, v, d),
@@ -481,7 +506,7 @@ class VehicleDetailScreen extends StatelessWidget {
                     ),
                   ),
                 if (appState.isCloud && v.documents.isNotEmpty)
-                  _text(context, tr('doc.localOnly'), size: 12, color: scheme.outline),
+                  _text(context, _docsNote(v), size: 12, color: scheme.outline),
                 if (v.notes.trim().isNotEmpty) ...[
                   const BlankLine(),
                   _title(context, tr('vehicle.notes')),
@@ -505,6 +530,21 @@ class VehicleDetailScreen extends StatelessWidget {
         );
       },
     );
+  }
+
+  String _docState(Vehicle v, VehicleDocument d) {
+    if (d.cloud) return appState.isPersonal(v) ? tr('doc.backup') : tr('doc.shared');
+    return tr('doc.onPhone');
+  }
+
+  String _docsNote(Vehicle v) {
+    if (appState.docsConsent != true) return tr('doc.localOnly');
+    if (!appState.docsShared(v)) return tr('doc.groupOff');
+    if (appState.docsNotice == 'quota') {
+      return tr('doc.quotaFull', {'max': DocCloud.quotaBytes ~/ (1024 * 1024)});
+    }
+    final used = (appState.myCloudBytes / (1024 * 1024)).toStringAsFixed(1);
+    return tr('doc.cloudInfo', {'used': used, 'max': DocCloud.quotaBytes ~/ (1024 * 1024)});
   }
 
   static final ButtonStyle _compactButton = TextButton.styleFrom(
@@ -552,12 +592,8 @@ class VehicleDetailScreen extends StatelessWidget {
       );
 
   Future<void> _readRegistration(BuildContext context, Vehicle v, VehicleDocument d) async {
-    final f = await appState.documentFile(d);
-    if (!await f.exists()) {
-      if (context.mounted) showSnack(context, tr('doc.notFound'));
-      return;
-    }
-    if (!context.mounted) return;
+    final f = await _docFile(context, v, d);
+    if (f == null || !context.mounted) return;
     showDialog<void>(
       context: context,
       barrierDismissible: false,

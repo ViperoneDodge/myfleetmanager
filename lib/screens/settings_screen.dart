@@ -13,6 +13,7 @@ import '../services/sync_service.dart' show cloudErrorMessage;
 import '../version.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import '../widgets/docs_consent.dart';
 import 'admin_screen.dart';
 import 'family_screen.dart';
 import 'login_screen.dart';
@@ -169,6 +170,20 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
             if (appState.isCloud) ...[
+              _header(context, tr('docs.consentTitle')),
+              SwitchListTile(
+                secondary: const Icon(Icons.cloud_upload_outlined),
+                title: Text(tr('docs.settingTitle')),
+                subtitle: Text(tr('docs.settingInfo', {'max': 25})),
+                value: appState.docsConsent == true,
+                onChanged: (on) async {
+                  if (on) {
+                    await askDocsConsent(context, force: true);
+                  } else {
+                    await appState.setDocsConsent(false);
+                  }
+                },
+              ),
               _header(context, tr('settings.push')),
               ListTile(
                 leading: Icon(
