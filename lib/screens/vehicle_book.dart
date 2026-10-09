@@ -15,6 +15,7 @@ class VehicleBook extends StatefulWidget {
 
 class _VehicleBookState extends State<VehicleBook> with SingleTickerProviderStateMixin {
   static const double _axis = 28;
+  double _spine = _axis;
   late int _index;
   late final AnimationController _flip =
       AnimationController(vsync: this, lowerBound: -1, upperBound: 1, value: 0);
@@ -60,17 +61,17 @@ class _VehicleBookState extends State<VehicleBook> with SingleTickerProviderStat
     final shade = (math.sin(angle.abs()) * 0.35).clamp(0.0, 0.35);
     return Transform(
       alignment: Alignment.centerLeft,
-      origin: const Offset(_axis, 0),
+      origin: Offset(_spine, 0),
       transform: Matrix4.identity()
-        ..setEntry(3, 2, 0.0012)
+        ..setEntry(3, 2, 0.0008)
         ..rotateY(angle),
       child: Stack(fit: StackFit.passthrough, children: [
-        ClipRect(clipper: _SpineClip(angle != 0), child: page),
+        ClipRect(clipper: _SpineClip(angle != 0, _spine), child: page),
         if (angle != 0)
           Positioned.fill(
             child: IgnorePointer(
               child: ClipRect(
-                clipper: const _SpineClip(true),
+                clipper: _SpineClip(true, _spine),
                 child: ColoredBox(color: Colors.black.withValues(alpha: shade)),
               ),
             ),
@@ -93,6 +94,8 @@ class _VehicleBookState extends State<VehicleBook> with SingleTickerProviderStat
       vehicleId: id,
       wrapBody: (body) => LayoutBuilder(builder: (context, box) {
         _width = box.maxWidth <= 0 ? 1 : box.maxWidth;
+        final extra = box.maxWidth > 820 ? (box.maxWidth - 820) / 2 : 0.0;
+        _spine = _axis + extra;
         return GestureDetector(
           behavior: HitTestBehavior.translucent,
           onHorizontalDragUpdate: _onUpdate,
@@ -104,18 +107,18 @@ class _VehicleBookState extends State<VehicleBook> with SingleTickerProviderStat
               final p = _flip.value;
               final turningCurrent = p > 0 && _hasNext;
               final turningPrev = p < 0 && _hasPrev;
-              return Stack(fit: StackFit.expand, children: [
+              return ClipRect(child: Stack(fit: StackFit.expand, children: [
                 if (turningCurrent) KeyedSubtree(key: const ValueKey('next'), child: _body(_index + 1)),
                 KeyedSubtree(
                   key: const ValueKey('current'),
-                  child: _turning(current!, turningCurrent ? -p * math.pi / 2 : 0),
+                  child: _turning(current!, turningCurrent ? p * math.pi / 2 : 0),
                 ),
                 if (turningPrev)
                   KeyedSubtree(
                     key: const ValueKey('prev'),
-                    child: _turning(_body(_index - 1), -(1 + p) * math.pi / 2),
+                    child: _turning(_body(_index - 1), (1 + p) * math.pi / 2),
                   ),
-              ]);
+              ]));
             },
           ),
         );
@@ -126,13 +129,14 @@ class _VehicleBookState extends State<VehicleBook> with SingleTickerProviderStat
 
 class _SpineClip extends CustomClipper<Rect> {
   final bool active;
-  const _SpineClip(this.active);
+  final double spine;
+  const _SpineClip(this.active, this.spine);
 
   @override
   Rect getClip(Size size) => active
-      ? Rect.fromLTRB(_VehicleBookState._axis + 6, 0, size.width, size.height)
+      ? Rect.fromLTRB(spine + 6, 0, size.width, size.height)
       : Rect.fromLTRB(-1000, -1000, size.width + 1000, size.height + 1000);
 
   @override
-  bool shouldReclip(_SpineClip oldClipper) => oldClipper.active != active;
+  bool shouldReclip(_SpineClip oldClipper) => oldClipper.active != active || oldClipper.spine != spine;
 }
