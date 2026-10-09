@@ -25,11 +25,15 @@ class VehicleDetailScreen extends StatelessWidget {
 
   final bool embedded;
   final VoidCallback? onClosed;
+  final bool bodyOnly;
+  final Widget Function(Widget body)? wrapBody;
   const VehicleDetailScreen({
     super.key,
     required this.vehicleId,
     this.embedded = false,
     this.onClosed,
+    this.bodyOnly = false,
+    this.wrapBody,
   });
 
   Future<void> _delete(BuildContext context, Vehicle v) async {
@@ -295,36 +299,7 @@ class VehicleDetailScreen extends StatelessWidget {
         final canEdit = appState.canEdit(v);
         final group = appState.isPersonal(v) ? null : appState.data.groupById(v.fleetId);
         final canAssign = group != null && appState.canManage(group);
-        return Scaffold(
-          appBar: AppBar(
-            automaticallyImplyLeading: !embedded,
-            title: Text(v.name.isEmpty ? tr('vehicle.generic') : v.name),
-            actions: [
-              if (canAssign)
-                IconButton(
-                  tooltip: tr('role.assignOwner'),
-                  icon: const Icon(Icons.manage_accounts_outlined),
-                  onPressed: () => _assignOwner(context, v, group),
-                ),
-              if (canEdit)
-                IconButton(
-                  tooltip: tr('common.delete'),
-                  icon: const Icon(Icons.delete_outline),
-                  onPressed: () => _delete(context, v),
-                ),
-            ],
-          ),
-          floatingActionButton: !canEdit
-              ? null
-              : FloatingActionButton.extended(
-                  icon: const Icon(Icons.edit),
-                  label: Text(tr('common.edit')),
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => VehicleEditScreen(vehicle: v.copy()))),
-                ),
-          body: NotebookPage(
-            lines: false,
-            child: RuledScroll(
+        final Widget page = RuledPage(
               padding: const EdgeInsets.fromLTRB(8, 14, 10, 96),
               children: [
                 if (!canEdit)
@@ -525,8 +500,36 @@ class VehicleDetailScreen extends StatelessWidget {
                   ),
                 ],
               ],
-            ),
+          );
+        if (bodyOnly) return page;
+        return Scaffold(
+          appBar: AppBar(
+            automaticallyImplyLeading: !embedded,
+            title: Text(v.name.isEmpty ? tr('vehicle.generic') : v.name),
+            actions: [
+              if (canAssign)
+                IconButton(
+                  tooltip: tr('role.assignOwner'),
+                  icon: const Icon(Icons.manage_accounts_outlined),
+                  onPressed: () => _assignOwner(context, v, group),
+                ),
+              if (canEdit)
+                IconButton(
+                  tooltip: tr('common.delete'),
+                  icon: const Icon(Icons.delete_outline),
+                  onPressed: () => _delete(context, v),
+                ),
+            ],
           ),
+          floatingActionButton: !canEdit
+              ? null
+              : FloatingActionButton.extended(
+                  icon: const Icon(Icons.edit),
+                  label: Text(tr('common.edit')),
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => VehicleEditScreen(vehicle: v.copy()))),
+                ),
+          body: wrapBody == null ? page : wrapBody!(page),
         );
       },
     );

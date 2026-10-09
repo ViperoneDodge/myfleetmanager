@@ -44,10 +44,37 @@ class Rule extends InheritedWidget {
   bool updateShouldNotify(Rule oldWidget) => oldWidget.step != step;
 }
 
+class RuledPage extends StatefulWidget {
+  final List<Widget> children;
+  final EdgeInsets padding;
+  const RuledPage({super.key, required this.children, required this.padding});
+
+  @override
+  State<RuledPage> createState() => _RuledPageState();
+}
+
+class _RuledPageState extends State<RuledPage> {
+  final ScrollController _scroll = ScrollController();
+
+  @override
+  void dispose() {
+    _scroll.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => NotebookPage(
+        lines: false,
+        ringScroll: _scroll,
+        child: RuledScroll(controller: _scroll, padding: widget.padding, children: widget.children),
+      );
+}
+
 class RuledScroll extends StatelessWidget {
   final List<Widget> children;
   final EdgeInsets padding;
-  const RuledScroll({super.key, required this.children, required this.padding});
+  final ScrollController? controller;
+  const RuledScroll({super.key, required this.children, required this.padding, this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +85,7 @@ class RuledScroll extends StatelessWidget {
       step: step,
       child: LayoutBuilder(
         builder: (context, box) => SingleChildScrollView(
+          controller: controller,
           clipBehavior: Clip.none,
           child: ConstrainedBox(
             constraints: BoxConstraints(minHeight: box.maxHeight),

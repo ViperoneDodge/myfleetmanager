@@ -15,7 +15,7 @@ import 'login_screen.dart';
 import 'pro_screen.dart';
 
 class FamilyTab extends StatelessWidget {
-  final void Function(Vehicle v) onOpen;
+  final void Function(Vehicle v, List<Vehicle> siblings) onOpen;
   final void Function(String groupId) onAdd;
   const FamilyTab({super.key, required this.onOpen, required this.onAdd});
 
@@ -144,7 +144,7 @@ class FamilyTab extends StatelessWidget {
               onTap: () => limited.contains(v.id)
                   ? requirePro(context,
                       reason: tr('pro.reasonLimited', {'n': AppState.freeVehicleLimit}))
-                  : onOpen(v),
+                  : onOpen(v, list.where((x) => !limited.contains(x.id)).toList()),
               onLongPress: () => moveVehicleSheet(context, v),
             )),
         if (appState.canAddTo(g.id))

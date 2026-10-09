@@ -12,6 +12,7 @@ import '../widgets/common.dart';
 import '../widgets/docs_consent.dart';
 import 'family_screen.dart';
 import 'pro_screen.dart';
+import 'vehicle_book.dart';
 import 'settings_screen.dart';
 import 'vehicle_detail_screen.dart';
 import 'vehicle_edit_screen.dart';
@@ -85,13 +86,16 @@ class _HomeScreenState extends State<HomeScreen> {
     ));
   }
 
-  void _openDetail(Vehicle v) {
+  void _openDetail(Vehicle v, [List<Vehicle>? siblings]) {
     if (_twoPane) {
       setState(() => _selectedId = v.id);
       return;
     }
+    final ids = [for (final s in siblings ?? const <Vehicle>[]) s.id];
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (_) => VehicleDetailScreen(vehicleId: v.id),
+      builder: (_) => ids.length > 1 && ids.contains(v.id)
+          ? VehicleBook(ids: ids, initialId: v.id)
+          : VehicleDetailScreen(vehicleId: v.id),
     ));
   }
 
@@ -354,7 +358,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () => limited.contains(v.id)
                     ? requirePro(context,
                         reason: tr('pro.reasonLimited', {'n': AppState.freeVehicleLimit}))
-                    : _openDetail(v),
+                    : _openDetail(v, list.where((x) => !limited.contains(x.id)).toList()),
                 onLongPress: () => moveVehicleSheet(context, v),
               )),
           if (list.isNotEmpty && appState.isCloud && appState.data.groups.isNotEmpty)

@@ -207,7 +207,8 @@ ThemeData buildTheme(ThemeSettings s, Brightness b) {
 class NotebookPage extends StatelessWidget {
   final Widget child;
   final bool lines;
-  const NotebookPage({super.key, required this.child, this.lines = true});
+  final ScrollController? ringScroll;
+  const NotebookPage({super.key, required this.child, this.lines = true, this.ringScroll});
 
   static const double gutter = 34;
   static const double maxPageWidth = 820;
@@ -221,7 +222,7 @@ class NotebookPage extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(16 + extra, 2, 8 + extra, 8),
       child: CustomPaint(
         painter: _PagePainter(nb, lines),
-        foregroundPainter: _RingsPainter(nb),
+        foregroundPainter: _RingsPainter(nb, ringScroll),
         child: ClipRRect(
           borderRadius: const BorderRadius.only(
             topRight: Radius.circular(14),
@@ -309,7 +310,8 @@ class _PagePainter extends CustomPainter {
 
 class _RingsPainter extends CustomPainter {
   final NotebookColors nb;
-  _RingsPainter(this.nb);
+  final ScrollController? scroll;
+  _RingsPainter(this.nb, this.scroll) : super(repaint: scroll);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -317,8 +319,14 @@ class _RingsPainter extends CustomPainter {
     final holePaint = Paint()..color = nb.hole;
     final count = ((size.height - 24) / spacing).floor();
     final start = (size.height - (count - 1) * spacing) / 2;
-    for (var i = 0; i < count; i++) {
-      final y = start + i * spacing;
+    final c = scroll;
+    final offset = c != null && c.hasClients && c.positions.length == 1 ? c.offset : 0.0;
+    canvas.save();
+    canvas.clipRect(Rect.fromLTRB(-30, 6, 40, size.height - 6));
+    final first = ((12 - start + offset) / spacing).floor();
+    final last = ((size.height - 12 - start + offset) / spacing).ceil();
+    for (var i = first; i <= last; i++) {
+      final y = start + i * spacing - offset;
       canvas.drawCircle(Offset(12, y), 4.2, holePaint);
       final path = Path()
         ..moveTo(12, y)
@@ -339,10 +347,11 @@ class _RingsPainter extends CustomPainter {
         ..color = Colors.black.withValues(alpha: 0.25));
       canvas.drawPath(path, ring);
     }
+    canvas.restore();
   }
 
   @override
-  bool shouldRepaint(covariant _RingsPainter old) => old.nb != nb;
+  bool shouldRepaint(covariant _RingsPainter old) => old.nb != nb || old.scroll != scroll;
 }
 
 class ScreenScale extends StatelessWidget {
