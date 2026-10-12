@@ -457,3 +457,4 @@ Acest grup partajează documentele vehiculelor
 Acest grup nu partajează documente
 Oprești partajarea? Documentele vor fi eliminate de pe server și vor rămâne doar pe telefonul celui care le-a adăugat.
 Pentru a vedea documentele partajate în grup este necesară versiunea Pro.
+Trimiți la {email} linkul pentru resetarea parolei?

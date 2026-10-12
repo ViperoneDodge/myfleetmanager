@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Comhroinneann an grúpa seo doiciméid na bhfeithiclí",
  "family.shareDocsOff": "Ní chomhroinneann an grúpa seo doiciméid",
  "family.shareDocsStop": "Stop ag comhroinnt? Bainfear na doiciméid den fhreastalaí agus fanfaidh siad ar fhón an té a chuir leo amháin.",
- "pro.reasonDocsView": "Teastaíonn an leagan Pro chun doiciméid an ghrúpa a fheiceáil."
+ "pro.reasonDocsView": "Teastaíonn an leagan Pro chun doiciméid an ghrúpa a fheiceáil.",
+ "login.forgotConfirm": "Nasc chun an pasfhocal a athshocrú a sheoladh chuig {email}?"
 }

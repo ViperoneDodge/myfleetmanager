@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Ta skupina deli dokumente vozil",
  "family.shareDocsOff": "Ta skupina ne deli dokumentov",
  "family.shareDocsStop": "Prenehati z deljenjem? Dokumenti bodo odstranjeni s strežnika in bodo ostali samo na telefonu osebe, ki jih je dodala.",
- "pro.reasonDocsView": "Za ogled dokumentov v skupni rabi v skupini potrebujete različico Pro."
+ "pro.reasonDocsView": "Za ogled dokumentov v skupni rabi v skupini potrebujete različico Pro.",
+ "login.forgotConfirm": "Poslati na {email} povezavo za ponastavitev gesla?"
 }

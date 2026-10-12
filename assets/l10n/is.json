@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Þessi hópur deilir skjölum ökutækja",
  "family.shareDocsOff": "Þessi hópur deilir ekki skjölum",
  "family.shareDocsStop": "Hætta að deila? Skjölin verða fjarlægð af þjóninum og verða aðeins í síma þess sem bætti þeim við.",
- "pro.reasonDocsView": "Pro-útgáfan þarf til að sjá skjöl sem deilt er í hópnum."
+ "pro.reasonDocsView": "Pro-útgáfan þarf til að sjá skjöl sem deilt er í hópnum.",
+ "login.forgotConfirm": "Senda tengil til að endurstilla lykilorð á {email}?"
 }

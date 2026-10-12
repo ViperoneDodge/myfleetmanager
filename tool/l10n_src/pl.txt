@@ -457,3 +457,4 @@ Ta grupa udostępnia dokumenty pojazdów
 Ta grupa nie udostępnia dokumentów
 Przestać udostępniać? Dokumenty zostaną usunięte z serwera i pozostaną tylko na telefonie osoby, która je dodała.
 Aby zobaczyć dokumenty udostępnione w grupie, potrzebna jest wersja Pro.
+Wysłać na {email} link do zresetowania hasła?

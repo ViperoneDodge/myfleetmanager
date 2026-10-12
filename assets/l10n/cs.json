@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Tato skupina sdílí dokumenty vozidel",
  "family.shareDocsOff": "Tato skupina nesdílí dokumenty",
  "family.shareDocsStop": "Přestat sdílet? Dokumenty budou odstraněny ze serveru a zůstanou jen v telefonu toho, kdo je přidal.",
- "pro.reasonDocsView": "K zobrazení dokumentů sdílených ve skupině je potřeba verze Pro."
+ "pro.reasonDocsView": "K zobrazení dokumentů sdílených ve skupině je potřeba verze Pro.",
+ "login.forgotConfirm": "Poslat na {email} odkaz pro obnovení hesla?"
 }

@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Questo gruppo condivide i documenti dei veicoli",
  "family.shareDocsOff": "Questo gruppo non condivide i documenti",
  "family.shareDocsStop": "Smettere di condividere? I documenti verranno tolti dal server e resteranno solo sul telefono di chi li ha caricati.",
- "pro.reasonDocsView": "Per vedere i documenti condivisi nel gruppo serve la versione Pro."
+ "pro.reasonDocsView": "Per vedere i documenti condivisi nel gruppo serve la versione Pro.",
+ "login.forgotConfirm": "Inviare a {email} il link per reimpostare la password?"
 }

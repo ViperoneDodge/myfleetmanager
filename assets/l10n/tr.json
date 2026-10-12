@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Bu grup araç belgelerini paylaşıyor",
  "family.shareDocsOff": "Bu grup belge paylaşmıyor",
  "family.shareDocsStop": "Paylaşım durdurulsun mu? Belgeler sunucudan kaldırılır ve yalnızca ekleyen kişinin telefonunda kalır.",
- "pro.reasonDocsView": "Grupta paylaşılan belgeleri görmek için Pro sürümü gerekir."
+ "pro.reasonDocsView": "Grupta paylaşılan belgeleri görmek için Pro sürümü gerekir.",
+ "login.forgotConfirm": "Şifre sıfırlama bağlantısı {email} adresine gönderilsin mi?"
 }

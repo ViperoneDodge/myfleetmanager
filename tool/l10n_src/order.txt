@@ -457,3 +457,4 @@ family.shareDocsOn
 family.shareDocsOff
 family.shareDocsStop
 pro.reasonDocsView
+login.forgotConfirm

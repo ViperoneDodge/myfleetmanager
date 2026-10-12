@@ -457,3 +457,4 @@ Pro dalībnieki varēs redzēt grupas transportlīdzekļu dokumentus.
 Šī grupa nekopīgo dokumentus
 Pārtraukt kopīgošanu? Dokumenti tiks noņemti no servera un paliks tikai tā tālrunī, kurš tos pievienoja.
 Lai redzētu grupā kopīgotos dokumentus, nepieciešama Pro versija.
+Nosūtīt uz {email} paroles atiestatīšanas saiti?

@@ -81,6 +81,18 @@ class _LoginScreenState extends State<LoginScreen> {
       showSnack(context, tr('login.forgotNeedEmail'));
       return;
     }
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(tr('login.forgot')),
+        content: Text(tr('login.forgotConfirm', {'email': email})),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
+          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(tr('common.ok'))),
+        ],
+      ),
+    );
+    if (ok != true || !mounted) return;
     try {
       await appState.auth.resetPassword(email);
       if (mounted) showSnack(context, tr('login.forgotSent', {'email': email}));

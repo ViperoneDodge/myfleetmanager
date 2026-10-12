@@ -457,3 +457,4 @@ Ez a csoport megosztja a járművek dokumentumait
 Ez a csoport nem oszt meg dokumentumokat
 Leállítod a megosztást? A dokumentumok lekerülnek a szerverről, és csak annak a telefonján maradnak, aki feltöltötte őket.
 A csoportban megosztott dokumentumok megtekintéséhez Pro verzió szükséges.
+Elküldjük a jelszó-visszaállító linket a(z) {email} címre?

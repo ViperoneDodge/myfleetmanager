@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Šī grupa kopīgo transportlīdzekļu dokumentus",
  "family.shareDocsOff": "Šī grupa nekopīgo dokumentus",
  "family.shareDocsStop": "Pārtraukt kopīgošanu? Dokumenti tiks noņemti no servera un paliks tikai tā tālrunī, kurš tos pievienoja.",
- "pro.reasonDocsView": "Lai redzētu grupā kopīgotos dokumentus, nepieciešama Pro versija."
+ "pro.reasonDocsView": "Lai redzētu grupā kopīgotos dokumentus, nepieciešama Pro versija.",
+ "login.forgotConfirm": "Nosūtīt uz {email} paroles atiestatīšanas saiti?"
 }

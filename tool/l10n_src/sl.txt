@@ -457,3 +457,4 @@ Ta skupina deli dokumente vozil
 Ta skupina ne deli dokumentov
 Prenehati z deljenjem? Dokumenti bodo odstranjeni s strežnika in bodo ostali samo na telefonu osebe, ki jih je dodala.
 Za ogled dokumentov v skupni rabi v skupini potrebujete različico Pro.
+Poslati na {email} povezavo za ponastavitev gesla?

@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Grup ini membagikan dokumen kendaraan",
  "family.shareDocsOff": "Grup ini tidak membagikan dokumen",
  "family.shareDocsStop": "Berhenti berbagi? Dokumen akan dihapus dari server dan hanya tersisa di ponsel orang yang menambahkannya.",
- "pro.reasonDocsView": "Untuk melihat dokumen yang dibagikan di grup diperlukan versi Pro."
+ "pro.reasonDocsView": "Untuk melihat dokumen yang dibagikan di grup diperlukan versi Pro.",
+ "login.forgotConfirm": "Kirim tautan atur ulang kata sandi ke {email}?"
 }

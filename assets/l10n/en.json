@@ -457,5 +457,6 @@
  "family.shareDocsOn": "This group shares vehicle documents",
  "family.shareDocsOff": "This group does not share documents",
  "family.shareDocsStop": "Stop sharing? The documents will be removed from the server and will stay only on the phone of whoever added them.",
- "pro.reasonDocsView": "Seeing the documents shared in the group requires the Pro version."
+ "pro.reasonDocsView": "Seeing the documents shared in the group requires the Pro version.",
+ "login.forgotConfirm": "Send a password reset link to {email}?"
 }

@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Táto skupina zdieľa dokumenty vozidiel",
  "family.shareDocsOff": "Táto skupina nezdieľa dokumenty",
  "family.shareDocsStop": "Prestať zdieľať? Dokumenty sa odstránia zo servera a zostanú len v telefóne toho, kto ich pridal.",
- "pro.reasonDocsView": "Na zobrazenie dokumentov zdieľaných v skupine je potrebná verzia Pro."
+ "pro.reasonDocsView": "Na zobrazenie dokumentov zdieľaných v skupine je potrebná verzia Pro.",
+ "login.forgotConfirm": "Poslať na {email} odkaz na obnovenie hesla?"
 }

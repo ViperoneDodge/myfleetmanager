@@ -457,3 +457,4 @@ Pro nariai galės matyti grupės transporto priemonių dokumentus.
 Ši grupė nebendrina dokumentų
 Nustoti bendrinti? Dokumentai bus pašalinti iš serverio ir liks tik juos pridėjusio asmens telefone.
 Norint matyti grupėje bendrinamus dokumentus, reikia Pro versijos.
+Siųsti slaptažodžio atkūrimo nuorodą į {email}?

@@ -457,3 +457,4 @@ Comhroinneann an grúpa seo doiciméid na bhfeithiclí
 Ní chomhroinneann an grúpa seo doiciméid
 Stop ag comhroinnt? Bainfear na doiciméid den fhreastalaí agus fanfaidh siad ar fhón an té a chuir leo amháin.
 Teastaíonn an leagan Pro chun doiciméid an ghrúpa a fheiceáil.
+Nasc chun an pasfhocal a athshocrú a sheoladh chuig {email}?

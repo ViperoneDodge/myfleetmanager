@@ -457,3 +457,4 @@ Nhóm này chia sẻ tài liệu xe
 Nhóm này không chia sẻ tài liệu
 Dừng chia sẻ? Tài liệu sẽ bị gỡ khỏi máy chủ và chỉ còn trên điện thoại của người đã thêm.
 Cần phiên bản Pro để xem tài liệu được chia sẻ trong nhóm.
+Gửi liên kết đặt lại mật khẩu đến {email}?

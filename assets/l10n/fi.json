@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Tämä ryhmä jakaa ajoneuvojen asiakirjat",
  "family.shareDocsOff": "Tämä ryhmä ei jaa asiakirjoja",
  "family.shareDocsStop": "Lopetetaanko jakaminen? Asiakirjat poistetaan palvelimelta ja jäävät vain lisääjän puhelimeen.",
- "pro.reasonDocsView": "Ryhmässä jaettujen asiakirjojen katsominen vaatii Pro-version."
+ "pro.reasonDocsView": "Ryhmässä jaettujen asiakirjojen katsominen vaatii Pro-version.",
+ "login.forgotConfirm": "Lähetetäänkö salasanan palautuslinkki osoitteeseen {email}?"
 }

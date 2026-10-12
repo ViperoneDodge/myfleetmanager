@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Denne gruppe deler køretøjsdokumenter",
  "family.shareDocsOff": "Denne gruppe deler ikke dokumenter",
  "family.shareDocsStop": "Stop deling? Dokumenterne fjernes fra serveren og bliver kun på telefonen hos den, der tilføjede dem.",
- "pro.reasonDocsView": "Pro-versionen kræves for at se dokumenter, der deles i gruppen."
+ "pro.reasonDocsView": "Pro-versionen kræves for at se dokumenter, der deles i gruppen.",
+ "login.forgotConfirm": "Send et link til nulstilling af adgangskoden til {email}?"
 }

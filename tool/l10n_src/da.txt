@@ -457,3 +457,4 @@ Denne gruppe deler køretøjsdokumenter
 Denne gruppe deler ikke dokumenter
 Stop deling? Dokumenterne fjernes fra serveren og bliver kun på telefonen hos den, der tilføjede dem.
 Pro-versionen kræves for at se dokumenter, der deles i gruppen.
+Send et link til nulstilling af adgangskoden til {email}?

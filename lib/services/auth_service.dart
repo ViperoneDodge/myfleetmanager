@@ -112,6 +112,9 @@ class AuthService {
 
   Future<void> resetPassword(String email) async {
     try {
+      try {
+        await FirebaseAuth.instance.setLanguageCode(L10n.code);
+      } catch (_) {}
       await FirebaseAuth.instance.sendPasswordResetEmail(email: email.trim());
     } on FirebaseAuthException catch (e) {
       throw AuthException(_firebaseError(e));

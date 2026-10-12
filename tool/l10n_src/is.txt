@@ -457,3 +457,4 @@ Pro-meðlimir geta séð skjöl ökutækja hópsins.
 Þessi hópur deilir ekki skjölum
 Hætta að deila? Skjölin verða fjarlægð af þjóninum og verða aðeins í síma þess sem bætti þeim við.
 Pro-útgáfan þarf til að sjá skjöl sem deilt er í hópnum.
+Senda tengil til að endurstilla lykilorð á {email}?

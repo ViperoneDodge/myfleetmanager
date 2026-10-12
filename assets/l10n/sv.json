@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Den här gruppen delar fordonsdokument",
  "family.shareDocsOff": "Den här gruppen delar inte dokument",
  "family.shareDocsStop": "Sluta dela? Dokumenten tas bort från servern och stannar bara på telefonen hos den som lade till dem.",
- "pro.reasonDocsView": "Pro-versionen krävs för att se dokument som delas i gruppen."
+ "pro.reasonDocsView": "Pro-versionen krävs för att se dokument som delas i gruppen.",
+ "login.forgotConfirm": "Skicka en länk för att återställa lösenordet till {email}?"
 }

@@ -457,5 +457,6 @@
  "family.shareDocsOn": "Ta grupa udostępnia dokumenty pojazdów",
  "family.shareDocsOff": "Ta grupa nie udostępnia dokumentów",
  "family.shareDocsStop": "Przestać udostępniać? Dokumenty zostaną usunięte z serwera i pozostaną tylko na telefonie osoby, która je dodała.",
- "pro.reasonDocsView": "Aby zobaczyć dokumenty udostępnione w grupie, potrzebna jest wersja Pro."
+ "pro.reasonDocsView": "Aby zobaczyć dokumenty udostępnione w grupie, potrzebna jest wersja Pro.",
+ "login.forgotConfirm": "Wysłać na {email} link do zresetowania hasła?"
 }

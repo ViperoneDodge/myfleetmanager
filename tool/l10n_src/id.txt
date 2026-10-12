@@ -457,3 +457,4 @@ Grup ini membagikan dokumen kendaraan
 Grup ini tidak membagikan dokumen
 Berhenti berbagi? Dokumen akan dihapus dari server dan hanya tersisa di ponsel orang yang menambahkannya.
 Untuk melihat dokumen yang dibagikan di grup diperlukan versi Pro.
+Kirim tautan atur ulang kata sandi ke {email}?
