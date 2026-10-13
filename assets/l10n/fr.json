@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Ce groupe ne partage pas les documents",
  "family.shareDocsStop": "Arrêter le partage ? Les documents seront retirés du serveur et resteront uniquement sur le téléphone de la personne qui les a ajoutés.",
  "pro.reasonDocsView": "Pour voir les documents partagés dans le groupe, la version Pro est nécessaire.",
- "login.forgotConfirm": "Envoyer un lien de réinitialisation du mot de passe à {email} ?"
+ "login.forgotConfirm": "Envoyer un lien de réinitialisation du mot de passe à {email} ?",
+ "login.apple": "Se connecter avec Apple",
+ "auth.appleCancelled": "Connexion avec Apple annulée.",
+ "auth.appleFailed": "Échec de la connexion avec Apple : {error}"
 }

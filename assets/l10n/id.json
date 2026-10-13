@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Grup ini tidak membagikan dokumen",
  "family.shareDocsStop": "Berhenti berbagi? Dokumen akan dihapus dari server dan hanya tersisa di ponsel orang yang menambahkannya.",
  "pro.reasonDocsView": "Untuk melihat dokumen yang dibagikan di grup diperlukan versi Pro.",
- "login.forgotConfirm": "Kirim tautan atur ulang kata sandi ke {email}?"
+ "login.forgotConfirm": "Kirim tautan atur ulang kata sandi ke {email}?",
+ "login.apple": "Masuk dengan Apple",
+ "auth.appleCancelled": "Masuk dengan Apple dibatalkan.",
+ "auth.appleFailed": "Gagal masuk dengan Apple: {error}"
 }

@@ -297,6 +297,19 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: OutlinedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 10)),
                     ),
+                    if (appState.auth.appleAvailable) ...[
+                      const SizedBox(height: 10),
+                      FilledButton.icon(
+                        onPressed: _busy ? null : () => _run(appState.auth.loginApple),
+                        icon: const Icon(Icons.apple, size: 26),
+                        label: Text(tr('login.apple')),
+                        style: FilledButton.styleFrom(
+                          backgroundColor: Colors.black,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                        ),
+                      ),
+                    ],
                     const SizedBox(height: 6),
                     Text(tr('login.googleInfo'),
                         textAlign: TextAlign.center,

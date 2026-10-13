@@ -458,3 +458,6 @@ Bu grup belge paylaşmıyor
 Paylaşım durdurulsun mu? Belgeler sunucudan kaldırılır ve yalnızca ekleyen kişinin telefonunda kalır.
 Grupta paylaşılan belgeleri görmek için Pro sürümü gerekir.
 Şifre sıfırlama bağlantısı {email} adresine gönderilsin mi?
+Apple ile giriş yap
+Apple ile giriş iptal edildi.
+Apple ile giriş başarısız: {error}

@@ -458,3 +458,6 @@ Denne gruppen deler ikke dokumenter
 Slutte å dele? Dokumentene fjernes fra serveren og blir bare på telefonen til den som la dem til.
 Pro-versjonen kreves for å se dokumenter som deles i gruppen.
 Sende en lenke for å tilbakestille passordet til {email}?
+Logg på med Apple
+Pålogging med Apple avbrutt.
+Pålogging med Apple mislyktes: {error}

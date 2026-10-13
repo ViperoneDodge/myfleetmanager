@@ -458,3 +458,6 @@ Pro nariai galės matyti grupės transporto priemonių dokumentus.
 Nustoti bendrinti? Dokumentai bus pašalinti iš serverio ir liks tik juos pridėjusio asmens telefone.
 Norint matyti grupėje bendrinamus dokumentus, reikia Pro versijos.
 Siųsti slaptažodžio atkūrimo nuorodą į {email}?
+Prisijungti su Apple
+Prisijungimas su Apple atšauktas.
+Prisijungti su Apple nepavyko: {error}

@@ -1,8 +1,11 @@
 import 'dart:convert';
+import 'dart:io';
+import 'dart:math';
 
 import 'package:crypto/crypto.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 import '../firebase_config.dart';
 import '../l10n.dart';
@@ -155,9 +158,58 @@ class AuthService {
     return u != null && u.uid == s.key;
   }
 
+  bool get appleAvailable => cloudAvailable && Platform.isIOS;
+
+  static String _nonce([int length = 32]) {
+    const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._';
+    final r = Random.secure();
+    return List.generate(length, (_) => chars[r.nextInt(chars.length)]).join();
+  }
+
+  Future<Session> loginApple() async {
+    try {
+      final raw = _nonce();
+      final apple = await SignInWithApple.getAppleIDCredential(
+        scopes: const [AppleIDAuthorizationScopes.email, AppleIDAuthorizationScopes.fullName],
+        nonce: sha256.convert(utf8.encode(raw)).toString(),
+      );
+      final cred = OAuthProvider('apple.com').credential(
+        idToken: apple.identityToken,
+        rawNonce: raw,
+        accessToken: apple.authorizationCode,
+      );
+      final c = await FirebaseAuth.instance.signInWithCredential(cred);
+      final user = c.user!;
+      final name = [apple.givenName, apple.familyName].whereType<String>().join(' ').trim();
+      if (name.isNotEmpty && (user.displayName ?? '').isEmpty) {
+        await user.updateDisplayName(name);
+        await user.reload();
+      }
+      return _fromUser(FirebaseAuth.instance.currentUser ?? user);
+    } on SignInWithAppleAuthorizationException catch (e) {
+      if (e.code == AuthorizationErrorCode.canceled) throw AuthException(tr('auth.appleCancelled'));
+      throw AuthException(tr('auth.appleFailed', {'error': e.message}));
+    } on FirebaseAuthException catch (e) {
+      throw AuthException(_firebaseError(e));
+    } on AuthException {
+      rethrow;
+    } catch (e) {
+      throw AuthException(tr('auth.appleFailed', {'error': e}));
+    }
+  }
+
+  Future<void> _revokeApple(User u) async {
+    if (!Platform.isIOS || !u.providerData.any((p) => p.providerId == 'apple.com')) return;
+    try {
+      final apple = await SignInWithApple.getAppleIDCredential(scopes: const []);
+      await FirebaseAuth.instance.revokeTokenWithAuthorizationCode(apple.authorizationCode);
+    } catch (_) {}
+  }
+
   Future<void> deleteCloudAccount() async {
     final u = FirebaseAuth.instance.currentUser;
     if (u == null) return;
+    await _revokeApple(u);
     try {
       await u.delete();
     } on FirebaseAuthException catch (e) {

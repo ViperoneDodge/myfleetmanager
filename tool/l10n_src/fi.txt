@@ -458,3 +458,6 @@ Tämä ryhmä ei jaa asiakirjoja
 Lopetetaanko jakaminen? Asiakirjat poistetaan palvelimelta ja jäävät vain lisääjän puhelimeen.
 Ryhmässä jaettujen asiakirjojen katsominen vaatii Pro-version.
 Lähetetäänkö salasanan palautuslinkki osoitteeseen {email}?
+Kirjaudu Applella
+Applella kirjautuminen peruttu.
+Applella kirjautuminen epäonnistui: {error}

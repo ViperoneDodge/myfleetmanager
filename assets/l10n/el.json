@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Αυτή η ομάδα δεν μοιράζεται έγγραφα",
  "family.shareDocsStop": "Διακοπή κοινής χρήσης; Τα έγγραφα θα αφαιρεθούν από τον διακομιστή και θα μείνουν μόνο στο κινητό όποιου τα πρόσθεσε.",
  "pro.reasonDocsView": "Για να δεις τα έγγραφα της ομάδας χρειάζεται η έκδοση Pro.",
- "login.forgotConfirm": "Αποστολή συνδέσμου επαναφοράς κωδικού στο {email};"
+ "login.forgotConfirm": "Αποστολή συνδέσμου επαναφοράς κωδικού στο {email};",
+ "login.apple": "Σύνδεση με Apple",
+ "auth.appleCancelled": "Η σύνδεση με Apple ακυρώθηκε.",
+ "auth.appleFailed": "Η σύνδεση με Apple απέτυχε: {error}"
 }

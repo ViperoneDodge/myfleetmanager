@@ -458,5 +458,8 @@
  "family.shareDocsOff": "See grupp ei jaga dokumente",
  "family.shareDocsStop": "Lõpetada jagamine? Dokumendid eemaldatakse serverist ja jäävad ainult lisaja telefoni.",
  "pro.reasonDocsView": "Grupis jagatud dokumentide vaatamiseks on vaja Pro-versiooni.",
- "login.forgotConfirm": "Kas saata parooli lähtestamise link aadressile {email}?"
+ "login.forgotConfirm": "Kas saata parooli lähtestamise link aadressile {email}?",
+ "login.apple": "Logi sisse Apple’iga",
+ "auth.appleCancelled": "Apple’iga sisselogimine tühistati.",
+ "auth.appleFailed": "Apple’iga sisselogimine ebaõnnestus: {error}"
 }

@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Nhóm này không chia sẻ tài liệu",
  "family.shareDocsStop": "Dừng chia sẻ? Tài liệu sẽ bị gỡ khỏi máy chủ và chỉ còn trên điện thoại của người đã thêm.",
  "pro.reasonDocsView": "Cần phiên bản Pro để xem tài liệu được chia sẻ trong nhóm.",
- "login.forgotConfirm": "Gửi liên kết đặt lại mật khẩu đến {email}?"
+ "login.forgotConfirm": "Gửi liên kết đặt lại mật khẩu đến {email}?",
+ "login.apple": "Đăng nhập bằng Apple",
+ "auth.appleCancelled": "Đã hủy đăng nhập bằng Apple.",
+ "auth.appleFailed": "Đăng nhập bằng Apple thất bại: {error}"
 }

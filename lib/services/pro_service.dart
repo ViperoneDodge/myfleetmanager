@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:in_app_purchase/in_app_purchase.dart';
 
@@ -49,7 +50,7 @@ class ProService {
       if (storeAvailable) {
         final r = await _iap.queryProductDetails({productId});
         if (r.productDetails.isNotEmpty) product = r.productDetails.first;
-        await _iap.restorePurchases();
+        if (!Platform.isIOS) await _iap.restorePurchases();
       }
     } catch (_) {
       storeAvailable = false;

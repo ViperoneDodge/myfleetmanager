@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Denne gruppen deler ikke dokumenter",
  "family.shareDocsStop": "Slutte å dele? Dokumentene fjernes fra serveren og blir bare på telefonen til den som la dem til.",
  "pro.reasonDocsView": "Pro-versjonen kreves for å se dokumenter som deles i gruppen.",
- "login.forgotConfirm": "Sende en lenke for å tilbakestille passordet til {email}?"
+ "login.forgotConfirm": "Sende en lenke for å tilbakestille passordet til {email}?",
+ "login.apple": "Logg på med Apple",
+ "auth.appleCancelled": "Pålogging med Apple avbrutt.",
+ "auth.appleFailed": "Pålogging med Apple mislyktes: {error}"
 }

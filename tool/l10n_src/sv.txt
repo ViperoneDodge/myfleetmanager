@@ -458,3 +458,6 @@ Den här gruppen delar inte dokument
 Sluta dela? Dokumenten tas bort från servern och stannar bara på telefonen hos den som lade till dem.
 Pro-versionen krävs för att se dokument som delas i gruppen.
 Skicka en länk för att återställa lösenordet till {email}?
+Logga in med Apple
+Inloggning med Apple avbröts.
+Inloggning med Apple misslyckades: {error}

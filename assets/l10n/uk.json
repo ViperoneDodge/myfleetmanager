@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Ця група не ділиться документами",
  "family.shareDocsStop": "Припинити спільний доступ? Документи буде видалено з сервера, і вони залишаться лише на телефоні того, хто їх додав.",
  "pro.reasonDocsView": "Щоб бачити документи, спільні в групі, потрібна версія Pro.",
- "login.forgotConfirm": "Надіслати на {email} посилання для скидання пароля?"
+ "login.forgotConfirm": "Надіслати на {email} посилання для скидання пароля?",
+ "login.apple": "Увійти з Apple",
+ "auth.appleCancelled": "Вхід з Apple скасовано.",
+ "auth.appleFailed": "Не вдалося увійти з Apple: {error}"
 }

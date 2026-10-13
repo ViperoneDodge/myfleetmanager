@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Эта группа не делится документами",
  "family.shareDocsStop": "Прекратить общий доступ? Документы будут удалены с сервера и останутся только на телефоне того, кто их добавил.",
  "pro.reasonDocsView": "Чтобы видеть документы, общие в группе, нужна версия Pro.",
- "login.forgotConfirm": "Отправить на {email} ссылку для сброса пароля?"
+ "login.forgotConfirm": "Отправить на {email} ссылку для сброса пароля?",
+ "login.apple": "Войти с Apple",
+ "auth.appleCancelled": "Вход с Apple отменён.",
+ "auth.appleFailed": "Не удалось войти с Apple: {error}"
 }

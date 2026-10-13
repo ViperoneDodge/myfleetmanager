@@ -458,3 +458,6 @@ Táto skupina nezdieľa dokumenty
 Prestať zdieľať? Dokumenty sa odstránia zo servera a zostanú len v telefóne toho, kto ich pridal.
 Na zobrazenie dokumentov zdieľaných v skupine je potrebná verzia Pro.
 Poslať na {email} odkaz na obnovenie hesla?
+Prihlásiť sa cez Apple
+Prihlásenie cez Apple zrušené.
+Prihlásenie cez Apple zlyhalo: {error}

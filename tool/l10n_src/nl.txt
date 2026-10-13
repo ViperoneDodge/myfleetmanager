@@ -458,3 +458,6 @@ Deze groep deelt geen documenten
 Stoppen met delen? De documenten worden van de server verwijderd en blijven alleen op de telefoon van wie ze heeft toegevoegd.
 Om de in de groep gedeelde documenten te zien is de Pro-versie nodig.
 Een link om het wachtwoord opnieuw in te stellen naar {email} sturen?
+Inloggen met Apple
+Inloggen met Apple geannuleerd.
+Inloggen met Apple mislukt: {error}

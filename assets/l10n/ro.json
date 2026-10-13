@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Acest grup nu partajează documente",
  "family.shareDocsStop": "Oprești partajarea? Documentele vor fi eliminate de pe server și vor rămâne doar pe telefonul celui care le-a adăugat.",
  "pro.reasonDocsView": "Pentru a vedea documentele partajate în grup este necesară versiunea Pro.",
- "login.forgotConfirm": "Trimiți la {email} linkul pentru resetarea parolei?"
+ "login.forgotConfirm": "Trimiți la {email} linkul pentru resetarea parolei?",
+ "login.apple": "Conectează-te cu Apple",
+ "auth.appleCancelled": "Conectarea cu Apple a fost anulată.",
+ "auth.appleFailed": "Conectarea cu Apple a eșuat: {error}"
 }

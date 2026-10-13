@@ -16,7 +16,6 @@ import 'package:myfleetmanager/screens/vehicle_detail_screen.dart';
 import 'package:myfleetmanager/screens/vehicle_edit_screen.dart';
 import 'package:myfleetmanager/services/app_state.dart';
 import 'package:myfleetmanager/services/pdf_export.dart';
-import 'package:myfleetmanager/widgets/common.dart';
 import 'package:myfleetmanager/theme.dart';
 
 const me = 'demo-me';

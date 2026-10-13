@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Ši grupė nebendrina dokumentų",
  "family.shareDocsStop": "Nustoti bendrinti? Dokumentai bus pašalinti iš serverio ir liks tik juos pridėjusio asmens telefone.",
  "pro.reasonDocsView": "Norint matyti grupėje bendrinamus dokumentus, reikia Pro versijos.",
- "login.forgotConfirm": "Siųsti slaptažodžio atkūrimo nuorodą į {email}?"
+ "login.forgotConfirm": "Siųsti slaptažodžio atkūrimo nuorodą į {email}?",
+ "login.apple": "Prisijungti su Apple",
+ "auth.appleCancelled": "Prisijungimas su Apple atšauktas.",
+ "auth.appleFailed": "Prisijungti su Apple nepavyko: {error}"
 }

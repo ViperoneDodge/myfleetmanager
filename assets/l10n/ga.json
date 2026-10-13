@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Ní chomhroinneann an grúpa seo doiciméid",
  "family.shareDocsStop": "Stop ag comhroinnt? Bainfear na doiciméid den fhreastalaí agus fanfaidh siad ar fhón an té a chuir leo amháin.",
  "pro.reasonDocsView": "Teastaíonn an leagan Pro chun doiciméid an ghrúpa a fheiceáil.",
- "login.forgotConfirm": "Nasc chun an pasfhocal a athshocrú a sheoladh chuig {email}?"
+ "login.forgotConfirm": "Nasc chun an pasfhocal a athshocrú a sheoladh chuig {email}?",
+ "login.apple": "Sínigh isteach le Apple",
+ "auth.appleCancelled": "Cealaíodh síniú isteach le Apple.",
+ "auth.appleFailed": "Theip ar shíniú isteach le Apple: {error}"
 }

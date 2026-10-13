@@ -458,3 +458,6 @@ See grupp ei jaga dokumente
 Lõpetada jagamine? Dokumendid eemaldatakse serverist ja jäävad ainult lisaja telefoni.
 Grupis jagatud dokumentide vaatamiseks on vaja Pro-versiooni.
 Kas saata parooli lähtestamise link aadressile {email}?
+Logi sisse Apple’iga
+Apple’iga sisselogimine tühistati.
+Apple’iga sisselogimine ebaõnnestus: {error}

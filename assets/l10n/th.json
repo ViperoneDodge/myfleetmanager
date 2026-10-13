@@ -458,5 +458,8 @@
  "family.shareDocsOff": "กลุ่มนี้ไม่แชร์เอกสาร",
  "family.shareDocsStop": "หยุดแชร์ไหม เอกสารจะถูกนำออกจากเซิร์ฟเวอร์ และจะอยู่ในโทรศัพท์ของผู้ที่เพิ่มเท่านั้น",
  "pro.reasonDocsView": "ต้องใช้เวอร์ชัน Pro เพื่อดูเอกสารที่แชร์ในกลุ่ม",
- "login.forgotConfirm": "ส่งลิงก์รีเซ็ตรหัสผ่านไปที่ {email} ไหม"
+ "login.forgotConfirm": "ส่งลิงก์รีเซ็ตรหัสผ่านไปที่ {email} ไหม",
+ "login.apple": "ลงชื่อเข้าใช้ด้วย Apple",
+ "auth.appleCancelled": "ยกเลิกการลงชื่อเข้าใช้ด้วย Apple แล้ว",
+ "auth.appleFailed": "ลงชื่อเข้าใช้ด้วย Apple ไม่สำเร็จ: {error}"
 }

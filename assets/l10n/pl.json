@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Ta grupa nie udostępnia dokumentów",
  "family.shareDocsStop": "Przestać udostępniać? Dokumenty zostaną usunięte z serwera i pozostaną tylko na telefonie osoby, która je dodała.",
  "pro.reasonDocsView": "Aby zobaczyć dokumenty udostępnione w grupie, potrzebna jest wersja Pro.",
- "login.forgotConfirm": "Wysłać na {email} link do zresetowania hasła?"
+ "login.forgotConfirm": "Wysłać na {email} link do zresetowania hasła?",
+ "login.apple": "Zaloguj się przez Apple",
+ "auth.appleCancelled": "Logowanie przez Apple anulowane.",
+ "auth.appleFailed": "Logowanie przez Apple nie powiodło się: {error}"
 }

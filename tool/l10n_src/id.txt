@@ -458,3 +458,6 @@ Grup ini tidak membagikan dokumen
 Berhenti berbagi? Dokumen akan dihapus dari server dan hanya tersisa di ponsel orang yang menambahkannya.
 Untuk melihat dokumen yang dibagikan di grup diperlukan versi Pro.
 Kirim tautan atur ulang kata sandi ke {email}?
+Masuk dengan Apple
+Masuk dengan Apple dibatalkan.
+Gagal masuk dengan Apple: {error}

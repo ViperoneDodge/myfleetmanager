@@ -458,3 +458,6 @@ Ta grupa nie udostępnia dokumentów
 Przestać udostępniać? Dokumenty zostaną usunięte z serwera i pozostaną tylko na telefonie osoby, która je dodała.
 Aby zobaczyć dokumenty udostępnione w grupie, potrzebna jest wersja Pro.
 Wysłać na {email} link do zresetowania hasła?
+Zaloguj się przez Apple
+Logowanie przez Apple anulowane.
+Logowanie przez Apple nie powiodło się: {error}

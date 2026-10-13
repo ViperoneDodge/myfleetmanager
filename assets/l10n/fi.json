@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Tämä ryhmä ei jaa asiakirjoja",
  "family.shareDocsStop": "Lopetetaanko jakaminen? Asiakirjat poistetaan palvelimelta ja jäävät vain lisääjän puhelimeen.",
  "pro.reasonDocsView": "Ryhmässä jaettujen asiakirjojen katsominen vaatii Pro-version.",
- "login.forgotConfirm": "Lähetetäänkö salasanan palautuslinkki osoitteeseen {email}?"
+ "login.forgotConfirm": "Lähetetäänkö salasanan palautuslinkki osoitteeseen {email}?",
+ "login.apple": "Kirjaudu Applella",
+ "auth.appleCancelled": "Applella kirjautuminen peruttu.",
+ "auth.appleFailed": "Applella kirjautuminen epäonnistui: {error}"
 }

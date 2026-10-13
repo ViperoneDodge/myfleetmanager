@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Ez a csoport nem oszt meg dokumentumokat",
  "family.shareDocsStop": "Leállítod a megosztást? A dokumentumok lekerülnek a szerverről, és csak annak a telefonján maradnak, aki feltöltötte őket.",
  "pro.reasonDocsView": "A csoportban megosztott dokumentumok megtekintéséhez Pro verzió szükséges.",
- "login.forgotConfirm": "Elküldjük a jelszó-visszaállító linket a(z) {email} címre?"
+ "login.forgotConfirm": "Elküldjük a jelszó-visszaállító linket a(z) {email} címre?",
+ "login.apple": "Bejelentkezés Apple-lel",
+ "auth.appleCancelled": "Az Apple-bejelentkezés megszakítva.",
+ "auth.appleFailed": "Az Apple-bejelentkezés sikertelen: {error}"
 }

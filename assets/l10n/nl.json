@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Deze groep deelt geen documenten",
  "family.shareDocsStop": "Stoppen met delen? De documenten worden van de server verwijderd en blijven alleen op de telefoon van wie ze heeft toegevoegd.",
  "pro.reasonDocsView": "Om de in de groep gedeelde documenten te zien is de Pro-versie nodig.",
- "login.forgotConfirm": "Een link om het wachtwoord opnieuw in te stellen naar {email} sturen?"
+ "login.forgotConfirm": "Een link om het wachtwoord opnieuw in te stellen naar {email} sturen?",
+ "login.apple": "Inloggen met Apple",
+ "auth.appleCancelled": "Inloggen met Apple geannuleerd.",
+ "auth.appleFailed": "Inloggen met Apple mislukt: {error}"
 }

@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Ta skupina ne deli dokumentov",
  "family.shareDocsStop": "Prenehati z deljenjem? Dokumenti bodo odstranjeni s strežnika in bodo ostali samo na telefonu osebe, ki jih je dodala.",
  "pro.reasonDocsView": "Za ogled dokumentov v skupni rabi v skupini potrebujete različico Pro.",
- "login.forgotConfirm": "Poslati na {email} povezavo za ponastavitev gesla?"
+ "login.forgotConfirm": "Poslati na {email} povezavo za ponastavitev gesla?",
+ "login.apple": "Prijava z Apple",
+ "auth.appleCancelled": "Prijava z Apple preklicana.",
+ "auth.appleFailed": "Prijava z Apple ni uspela: {error}"
 }

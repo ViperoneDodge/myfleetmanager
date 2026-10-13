@@ -458,3 +458,6 @@ Denne gruppe deler ikke dokumenter
 Stop deling? Dokumenterne fjernes fra serveren og bliver kun på telefonen hos den, der tilføjede dem.
 Pro-versionen kræves for at se dokumenter, der deles i gruppen.
 Send et link til nulstilling af adgangskoden til {email}?
+Log ind med Apple
+Login med Apple annulleret.
+Login med Apple mislykkedes: {error}

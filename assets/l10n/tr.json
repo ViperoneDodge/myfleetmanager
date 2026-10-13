@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Bu grup belge paylaşmıyor",
  "family.shareDocsStop": "Paylaşım durdurulsun mu? Belgeler sunucudan kaldırılır ve yalnızca ekleyen kişinin telefonunda kalır.",
  "pro.reasonDocsView": "Grupta paylaşılan belgeleri görmek için Pro sürümü gerekir.",
- "login.forgotConfirm": "Şifre sıfırlama bağlantısı {email} adresine gönderilsin mi?"
+ "login.forgotConfirm": "Şifre sıfırlama bağlantısı {email} adresine gönderilsin mi?",
+ "login.apple": "Apple ile giriş yap",
+ "auth.appleCancelled": "Apple ile giriş iptal edildi.",
+ "auth.appleFailed": "Apple ile giriş başarısız: {error}"
 }

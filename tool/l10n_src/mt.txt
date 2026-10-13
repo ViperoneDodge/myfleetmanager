@@ -458,3 +458,6 @@ Dan il-grupp ma jaqsamx dokumenti
 Tieqaf taqsam? Id-dokumenti jitneħħew mis-server u jibqgħu biss fuq it-telefon ta' min żiedhom.
 Biex tara d-dokumenti maqsuma fil-grupp trid il-verżjoni Pro.
 Tibgħat lil {email} link biex terġa' tissettja l-password?
+Idħol b'Apple
+Id-dħul b'Apple ġie kkanċellat.
+Id-dħul b'Apple ma rnexxiex: {error}

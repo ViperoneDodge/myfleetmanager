@@ -458,5 +458,8 @@
  "family.shareDocsOff": "このグループは書類を共有していません",
  "family.shareDocsStop": "共有を停止しますか？書類はサーバーから削除され、追加した人の端末にのみ残ります。",
  "pro.reasonDocsView": "グループで共有された書類を見るには Pro 版が必要です。",
- "login.forgotConfirm": "{email} にパスワード再設定用のリンクを送信しますか？"
+ "login.forgotConfirm": "{email} にパスワード再設定用のリンクを送信しますか？",
+ "login.apple": "Apple でサインイン",
+ "auth.appleCancelled": "Apple でのサインインがキャンセルされました。",
+ "auth.appleFailed": "Apple でのサインインに失敗しました：{error}"
 }

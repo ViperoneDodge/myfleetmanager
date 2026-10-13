@@ -458,3 +458,6 @@ family.shareDocsOff
 family.shareDocsStop
 pro.reasonDocsView
 login.forgotConfirm
+login.apple
+auth.appleCancelled
+auth.appleFailed

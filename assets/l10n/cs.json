@@ -458,5 +458,8 @@
  "family.shareDocsOff": "Tato skupina nesdílí dokumenty",
  "family.shareDocsStop": "Přestat sdílet? Dokumenty budou odstraněny ze serveru a zůstanou jen v telefonu toho, kdo je přidal.",
  "pro.reasonDocsView": "K zobrazení dokumentů sdílených ve skupině je potřeba verze Pro.",
- "login.forgotConfirm": "Poslat na {email} odkaz pro obnovení hesla?"
+ "login.forgotConfirm": "Poslat na {email} odkaz pro obnovení hesla?",
+ "login.apple": "Přihlásit se přes Apple",
+ "auth.appleCancelled": "Přihlášení přes Apple zrušeno.",
+ "auth.appleFailed": "Přihlášení přes Apple se nezdařilo: {error}"
 }

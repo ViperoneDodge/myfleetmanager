@@ -43,3 +43,31 @@ if pbx.exists():
     t = re.sub(r"PRODUCT_BUNDLE_IDENTIFIER = it\.myfleet\.myfleetmanager;", "PRODUCT_BUNDLE_IDENTIFIER = it.myfleet.myfleetmanager;", t)
     pbx.write_text(t)
     print("Patched", pbx)
+
+ent = IOS / "Runner" / "Runner.entitlements"
+if (IOS / "Runner").exists():
+    ent.write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n'
+        '<plist version="1.0">\n'
+        "<dict>\n"
+        "\t<key>aps-environment</key>\n"
+        "\t<string>production</string>\n"
+        "\t<key>com.apple.developer.applesignin</key>\n"
+        "\t<array>\n"
+        "\t\t<string>Default</string>\n"
+        "\t</array>\n"
+        "</dict>\n"
+        "</plist>\n"
+    )
+    print("Wrote", ent)
+
+if pbx.exists():
+    t = pbx.read_text()
+    if "CODE_SIGN_ENTITLEMENTS" not in t:
+        t = t.replace(
+            "INFOPLIST_FILE = Runner/Info.plist;",
+            "CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;\n\t\t\t\tINFOPLIST_FILE = Runner/Info.plist;",
+        )
+        pbx.write_text(t)
+        print("Entitlements set in", pbx)

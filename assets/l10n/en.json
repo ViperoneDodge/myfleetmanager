@@ -458,5 +458,8 @@
  "family.shareDocsOff": "This group does not share documents",
  "family.shareDocsStop": "Stop sharing? The documents will be removed from the server and will stay only on the phone of whoever added them.",
  "pro.reasonDocsView": "Seeing the documents shared in the group requires the Pro version.",
- "login.forgotConfirm": "Send a password reset link to {email}?"
+ "login.forgotConfirm": "Send a password reset link to {email}?",
+ "login.apple": "Sign in with Apple",
+ "auth.appleCancelled": "Sign in with Apple cancelled.",
+ "auth.appleFailed": "Sign in with Apple failed: {error}"
 }
