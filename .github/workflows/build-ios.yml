@@ -1,0 +1,50 @@
+name: Compila iOS (prova)
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.38.x'
+          channel: stable
+          cache: true
+
+      - name: Prepara progetto iOS
+        shell: bash
+        run: |
+          set -e
+          flutter create --org it.myfleet --project-name myfleetmanager --platforms ios .
+          rm -rf test
+          flutter pub get
+          flutter build ios --config-only --no-codesign --release
+          python3 tool/patch_ios.py
+
+      - name: Compila senza firma
+        shell: bash
+        run: |
+          set -o pipefail
+          flutter build ios --release --no-codesign 2>&1 | tee build-ios.log
+
+      - name: Pacchetto di prova
+        if: success()
+        shell: bash
+        run: |
+          cd build/ios/iphoneos
+          zip -qr ../../../MyFleetManager-ios-unsigned.zip Runner.app
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ios-build
+          path: |
+            build-ios.log
+            MyFleetManager-ios-unsigned.zip
+          if-no-files-found: ignore
