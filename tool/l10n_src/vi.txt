@@ -493,3 +493,24 @@ Chưa có yêu thích
 Chạm ngôi sao trên một xe, hoặc trên một nhóm để thêm tất cả xe của nhóm.
 Yêu thích
 Chọn xe hiển thị khi mở ứng dụng: của bạn, yêu thích hoặc cả hai
+Khám phá Pro
+Dữ liệu kỹ thuật đầy đủ có trong bản Pro.
+Dữ liệu kỹ thuật đầy đủ: nhiên liệu, dầu, ắc quy, bugi, lọc
+Nhiên liệu
+Dầu động cơ
+Ắc quy
+Bugi
+Bugi sấy
+Lọc
+vd. 5W-30 ACEA C3
+vd. 12V 70Ah 680A AGM
+vd. NGK BKR6E
+Dầu, gió, điều hòa, nhiên liệu: mỗi dòng một mã
+Xăng
+Dầu diesel
+LPG
+CNG
+Hybrid
+Hybrid sạc ngoài
+Điện
+Khác

@@ -493,3 +493,24 @@ Brak ulubionych
 Dotknij gwiazdki przy pojeździe lub grupie, aby dodać wszystkie jej pojazdy.
 Ulubione
 Wybierz, które pojazdy widzisz po otwarciu: swoje, ulubione lub oba
+Poznaj Pro
+Pełne dane techniczne są dostępne w wersji Pro.
+Pełne dane techniczne: paliwo, olej, akumulator, świece, filtry
+Paliwo
+Olej silnikowy
+Akumulator
+Świece zapłonowe
+Świece żarowe
+Filtry
+np. 5W-30 ACEA C3
+np. 12V 70Ah 680A AGM
+np. NGK BKR6E
+Olej, powietrze, kabina, paliwo: jeden kod w wierszu
+Benzyna
+Diesel
+LPG
+CNG
+Hybryda
+Hybryda plug-in
+Elektryczny
+Inne

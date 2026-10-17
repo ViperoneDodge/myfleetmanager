@@ -493,3 +493,24 @@ Belum ada favorit
 Ketuk bintang pada kendaraan, atau pada grup untuk menambahkan semua kendaraannya.
 Favorit
 Pilih kendaraan yang tampil saat aplikasi dibuka: milikmu, favorit, atau keduanya
+Lihat Pro
+Data teknis lengkap tersedia di versi Pro.
+Data teknis lengkap: bahan bakar, oli, aki, busi, filter
+Bahan bakar
+Oli mesin
+Aki
+Busi
+Busi pijar
+Filter
+mis. 5W-30 ACEA C3
+mis. 12V 70Ah 680A AGM
+mis. NGK BKR6E
+Oli, udara, kabin, bahan bakar: satu kode per baris
+Bensin
+Diesel
+LPG
+CNG
+Hibrida
+Hibrida plug-in
+Listrik
+Lainnya

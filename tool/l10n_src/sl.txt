@@ -493,3 +493,24 @@ Ni priljubljenih
 Tapni zvezdico na vozilu ali na skupini, da dodaš vsa njena vozila.
 Priljubljeni
 Izberi, katera vozila vidiš ob odprtju: svoja, priljubljena ali oboje
+Odkrij Pro
+Popolni tehnični podatki so na voljo v različici Pro.
+Popolni tehnični podatki: gorivo, olje, akumulator, svečke, filtri
+Gorivo
+Motorno olje
+Akumulator
+Vžigalne svečke
+Grelne svečke
+Filtri
+npr. 5W-30 ACEA C3
+npr. 12V 70Ah 680A AGM
+npr. NGK BKR6E
+Olje, zrak, kabina, gorivo: ena koda v vrstici
+Bencin
+Dizel
+Avtoplin (UNP)
+Zemeljski plin (SZP)
+Hibrid
+Priključni hibrid
+Električni
+Drugo

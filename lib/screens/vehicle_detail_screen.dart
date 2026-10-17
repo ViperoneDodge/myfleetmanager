@@ -21,6 +21,69 @@ import '../services/registration_reader.dart';
 import '../services/tyres.dart';
 import 'vehicle_edit_screen.dart';
 
+final ValueNotifier<int> detailTab = ValueNotifier(0);
+
+class VehicleDetailTabs extends StatefulWidget implements PreferredSizeWidget {
+  const VehicleDetailTabs({super.key});
+
+  @override
+  Size get preferredSize => const Size.fromHeight(46);
+
+  @override
+  State<VehicleDetailTabs> createState() => _VehicleDetailTabsState();
+}
+
+class _VehicleDetailTabsState extends State<VehicleDetailTabs> with SingleTickerProviderStateMixin {
+  late final TabController _tabs =
+      TabController(length: 3, vsync: this, initialIndex: detailTab.value);
+
+  void _sync() {
+    if (_tabs.index != detailTab.value) _tabs.animateTo(detailTab.value);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    detailTab.addListener(_sync);
+  }
+
+  @override
+  void dispose() {
+    detailTab.removeListener(_sync);
+    _tabs.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    Widget label(String text, bool pro) => Tab(
+          height: 46,
+          child: Row(mainAxisSize: MainAxisSize.min, children: [
+            Flexible(child: Text(text, maxLines: 1, overflow: TextOverflow.ellipsis)),
+            if (pro && !appState.isPro) ...[
+              const SizedBox(width: 4),
+              const Icon(Icons.lock_outline, size: 14),
+            ],
+          ]),
+        );
+    return TabBar(
+      controller: _tabs,
+      onTap: (i) => detailTab.value = i,
+      labelColor: Colors.white,
+      unselectedLabelColor: Colors.white70,
+      indicatorColor: Colors.white,
+      dividerColor: Colors.transparent,
+      labelPadding: const EdgeInsets.symmetric(horizontal: 6),
+      labelStyle: const TextStyle(fontFamily: handFont, fontSize: 19),
+      tabs: [
+        label(tr('tab.deadlines'), false),
+        label(tr('tech.title'), true),
+        label(tr('maint.title'), true),
+      ],
+    );
+  }
+}
+
 class VehicleDetailScreen extends StatelessWidget {
   final String vehicleId;
 
@@ -300,7 +363,11 @@ class VehicleDetailScreen extends StatelessWidget {
         final canEdit = appState.canEdit(v);
         final group = appState.isPersonal(v) ? null : appState.data.groupById(v.fleetId);
         final canAssign = group != null && appState.canManage(group);
-        final Widget page = RuledPage(
+        final Widget page = ValueListenableBuilder<int>(
+          valueListenable: detailTab,
+          builder: (context, tab, _) => KeyedSubtree(
+            key: ValueKey('tab_$tab'),
+            child: RuledPage(
               padding: const EdgeInsets.fromLTRB(8, 14, 10, 96),
               children: [
                 if (!canEdit)
@@ -315,6 +382,7 @@ class VehicleDetailScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                if (tab == 0) ...[
                 OnRule(
                   center: true,
                   child: Center(
@@ -390,56 +458,14 @@ class VehicleDetailScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                _line(context, Icons.event_note_outlined,
-                    '${tr('vehicle.regDate')}: ${fmtDate(v.registrationDate)}'),
+                _techRow(context, tr('tech.vin'), v.vin),
                 if (appState.isCloud && appState.data.groups.isNotEmpty)
                   _line(context, appState.isPersonal(v) ? Icons.person_outline : Icons.groups_outlined,
                       appState.fleetLabel(v)),
                 const BlankLine(),
-                _title(context, tr('tech.title')),
-                _techRow(context, tr('tech.vin'), v.vin),
-                ..._tyreRows(context, v.tyres),
-                _techRow(context, tr('tech.power'), v.powerKw),
-                _techRow(context, tr('tech.engine'), v.engineCc),
-                const BlankLine(),
                 _title(context, tr('tab.deadlines')),
                 if (tracked.isEmpty) _text(context, tr('vehicle.noTracked')),
                 for (final d in tracked) ..._deadlineRows(context, d),
-                const BlankLine(),
-                OnRule(
-                  child: Row(children: [
-                    Expanded(child: _titleText(context, tr('maint.title'))),
-                    if (canEdit)
-                      TextButton.icon(
-                        style: _compactButton,
-                        onPressed: () async {
-                          if (await requirePro(context, reason: tr('pro.reasonMaint')) &&
-                              context.mounted) {
-                            _openMaintenance(context, v, null);
-                          }
-                        },
-                        icon: const Icon(Icons.add),
-                        label: Text(tr('common.add')),
-                      ),
-                  ]),
-                ),
-                if (v.maintenance.isEmpty)
-                  _text(context, tr('maint.empty'), color: scheme.onSurfaceVariant),
-                for (final m in v.maintenanceSorted)
-                  OnRule(
-                    center: true,
-                    child: Card(
-                      margin: const EdgeInsets.symmetric(vertical: 2),
-                      child: ListTile(
-                        leading: Icon(Icons.build_circle_outlined, color: scheme.primary, size: 30),
-                        title: Text(
-                            '${fmtDate(m.date)}${m.km != null ? ' · ${fmtKm(m.km!)}' : ''}'),
-                        subtitle: Text(_maintSummary(m),
-                            maxLines: 3, overflow: TextOverflow.ellipsis),
-                        onTap: canEdit ? () => _openMaintenance(context, v, m) : null,
-                      ),
-                    ),
-                  ),
                 const BlankLine(),
                 OnRule(
                   child: Row(children: [
@@ -500,12 +526,65 @@ class VehicleDetailScreen extends StatelessWidget {
                     color: scheme.outline,
                   ),
                 ],
+                ] else if (!appState.isPro)
+                  ..._proLocked(context, tab == 1 ? tr('pro.reasonTech') : tr('pro.reasonMaint'))
+                else if (tab == 1) ...[
+                _title(context, tr('tech.title')),
+                _techRow(context, tr('edit.type'), vehicleTypeLabel(v.type)),
+                _techRow(context, tr('vehicle.regDate'), v.registrationDate == null ? '' : fmtDate(v.registrationDate)),
+                _techRow(context, tr('tech.fuel'), v.fuel.isEmpty ? '' : fuelLabel(v.fuel)),
+                _techRow(context, tr('tech.power'), v.powerKw),
+                _techRow(context, tr('tech.engine'), v.engineCc),
+                ..._tyreRows(context, v.tyres),
+                _techRow(context, tr('tech.oil'), v.oil),
+                _techRow(context, tr('tech.battery'), v.battery),
+                _techRow(context, tr(v.fuel == 'diesel' ? 'tech.glowPlugs' : 'tech.plugs'), v.plugs),
+                _techRow(context, tr('tech.filters'), v.filters),
+                ] else ...[
+                OnRule(
+                  child: Row(children: [
+                    Expanded(child: _titleText(context, tr('maint.title'))),
+                    if (canEdit)
+                      TextButton.icon(
+                        style: _compactButton,
+                        onPressed: () async {
+                          if (await requirePro(context, reason: tr('pro.reasonMaint')) &&
+                              context.mounted) {
+                            _openMaintenance(context, v, null);
+                          }
+                        },
+                        icon: const Icon(Icons.add),
+                        label: Text(tr('common.add')),
+                      ),
+                  ]),
+                ),
+                if (v.maintenance.isEmpty)
+                  _text(context, tr('maint.empty'), color: scheme.onSurfaceVariant),
+                for (final m in v.maintenanceSorted)
+                  OnRule(
+                    center: true,
+                    child: Card(
+                      margin: const EdgeInsets.symmetric(vertical: 2),
+                      child: ListTile(
+                        leading: Icon(Icons.build_circle_outlined, color: scheme.primary, size: 30),
+                        title: Text(
+                            '${fmtDate(m.date)}${m.km != null ? ' · ${fmtKm(m.km!)}' : ''}'),
+                        subtitle: Text(_maintSummary(m),
+                            maxLines: 3, overflow: TextOverflow.ellipsis),
+                        onTap: canEdit ? () => _openMaintenance(context, v, m) : null,
+                      ),
+                    ),
+                  ),
+                ],
               ],
-          );
+            ),
+          ),
+        );
         if (bodyOnly) return page;
         return Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: !embedded,
+            bottom: const VehicleDetailTabs(),
             title: Text(v.name.isEmpty ? tr('vehicle.generic') : v.name),
             actions: [
               if (appState.favoritesOn)
@@ -588,6 +667,25 @@ class VehicleDetailScreen extends StatelessWidget {
           Expanded(child: RuledText(text)),
         ]),
       );
+
+  List<Widget> _proLocked(BuildContext context, String reason) => [
+        const BlankLine(),
+        OnRule(
+          center: true,
+          child: Icon(Icons.lock_outline, size: 40, color: Theme.of(context).colorScheme.outline),
+        ),
+        _text(context, reason),
+        OnRule(
+          center: true,
+          child: Center(
+            child: FilledButton.icon(
+              icon: const Icon(Icons.workspace_premium_outlined),
+              label: Text(tr('pro.discover')),
+              onPressed: () => requirePro(context, reason: reason),
+            ),
+          ),
+        ),
+      ];
 
   Widget _techRow(BuildContext context, String label, String value, {double indent = 0, bool dash = true}) =>
       OnRule(

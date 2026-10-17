@@ -493,3 +493,24 @@ Nincs kedvenc
 Koppints egy jármű csillagára, vagy egy csoportéra az összes járműve hozzáadásához.
 Kedvencek
 Válaszd ki, mely járművek jelenjenek meg induláskor: a sajátjaid, a kedvencek vagy mindkettő
+Ismerd meg a Prót
+A teljes műszaki adatok a Pro verzióban érhetők el.
+Teljes műszaki adatok: üzemanyag, olaj, akkumulátor, gyertyák, szűrők
+Üzemanyag
+Motorolaj
+Akkumulátor
+Gyújtógyertyák
+Izzítógyertyák
+Szűrők
+pl. 5W-30 ACEA C3
+pl. 12V 70Ah 680A AGM
+pl. NGK BKR6E
+Olaj, levegő, utastér, üzemanyag: soronként egy kód
+Benzin
+Dízel
+LPG
+CNG
+Hibrid
+Plug-in hibrid
+Elektromos
+Egyéb

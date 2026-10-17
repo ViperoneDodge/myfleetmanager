@@ -493,3 +493,24 @@ Inga favoriter
 Tryck på stjärnan vid ett fordon, eller vid en grupp för att lägga till alla dess fordon.
 Favoriter
 Välj vilka fordon som visas när appen öppnas: dina, favoriter eller båda
+Upptäck Pro
+Fullständiga tekniska data finns i Pro-versionen.
+Fullständiga tekniska data: bränsle, olja, batteri, tändstift, filter
+Bränsle
+Motorolja
+Batteri
+Tändstift
+Glödstift
+Filter
+t.ex. 5W-30 ACEA C3
+t.ex. 12V 70Ah 680A AGM
+t.ex. NGK BKR6E
+Olja, luft, kupé, bränsle: en kod per rad
+Bensin
+Diesel
+Gasol (LPG)
+Fordonsgas (CNG)
+Hybrid
+Laddhybrid
+El
+Annat

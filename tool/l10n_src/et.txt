@@ -493,3 +493,24 @@ Lemmikuid pole
 Puuduta sõiduki tärni, või rühma tärni, et lisada kõik selle sõidukid.
 Lemmikud
 Vali, milliseid sõidukeid avamisel näha: enda, lemmikud või mõlemad
+Avasta Pro
+Täielikud tehnilised andmed on saadaval Pro-versioonis.
+Täielikud tehnilised andmed: kütus, õli, aku, süüteküünlad, filtrid
+Kütus
+Mootoriõli
+Aku
+Süüteküünlad
+Hõõgküünlad
+Filtrid
+nt 5W-30 ACEA C3
+nt 12V 70Ah 680A AGM
+nt NGK BKR6E
+Õli, õhk, salong, kütus: üks kood rea kohta
+Bensiin
+Diisel
+Vedelgaas (LPG)
+Surugaas (CNG)
+Hübriid
+Pistikhübriid
+Elekter
+Muu

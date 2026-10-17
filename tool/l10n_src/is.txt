@@ -493,3 +493,24 @@ Engin eftirlæti
 Ýttu á stjörnuna við ökutæki, eða við hóp til að bæta við öllum ökutækjum hans.
 Eftirlæti
 Veldu hvaða ökutæki þú sérð við opnun: þín, eftirlæti eða bæði
+Kynntu þér Pro
+Öll tæknigögn eru í boði í Pro-útgáfunni.
+Öll tæknigögn: eldsneyti, olía, rafgeymir, kerti, síur
+Eldsneyti
+Vélarolía
+Rafgeymir
+Kerti
+Glóðarkerti
+Síur
+t.d. 5W-30 ACEA C3
+t.d. 12V 70Ah 680A AGM
+t.d. NGK BKR6E
+Olía, loft, farþegarými, eldsneyti: einn kóði í línu
+Bensín
+Dísil
+LPG
+Metan (CNG)
+Tvinn
+Tengiltvinn
+Rafmagn
+Annað

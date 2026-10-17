@@ -493,3 +493,24 @@ Izlase ir tukša
 Pieskaries zvaigznei pie transportlīdzekļa vai grupas, lai pievienotu visus tās transportlīdzekļus.
 Izlase
 Izvēlies, kurus transportlīdzekļus redzēt atverot: savus, izlasi vai abus
+Iepazīsti Pro
+Pilni tehniskie dati ir pieejami Pro versijā.
+Pilni tehniskie dati: degviela, eļļa, akumulators, sveces, filtri
+Degviela
+Motoreļļa
+Akumulators
+Aizdedzes sveces
+Kvēlsveces
+Filtri
+piem. 5W-30 ACEA C3
+piem. 12V 70Ah 680A AGM
+piem. NGK BKR6E
+Eļļa, gaiss, salons, degviela: viens kods rindā
+Benzīns
+Dīzelis
+Autogāze (LPG)
+Dabasgāze (CNG)
+Hibrīds
+Spraudhibrīds
+Elektrisks
+Cits

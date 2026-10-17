@@ -34,6 +34,10 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   ];
   late final TextEditingController _power = TextEditingController(text: v.powerKw);
   late final TextEditingController _cc = TextEditingController(text: v.engineCc);
+  late final TextEditingController _oil = TextEditingController(text: v.oil);
+  late final TextEditingController _battery = TextEditingController(text: v.battery);
+  late final TextEditingController _plugs = TextEditingController(text: v.plugs);
+  late final TextEditingController _filters = TextEditingController(text: v.filters);
   final Map<String, TextEditingController> _labels = {};
   bool _saving = false;
   late bool _regMissing = !_isNew && v.registrationDate == null;
@@ -72,6 +76,10 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     }
     _power.dispose();
     _cc.dispose();
+    _oil.dispose();
+    _battery.dispose();
+    _plugs.dispose();
+    _filters.dispose();
     for (final c in _labels.values) {
       c.dispose();
     }
@@ -218,6 +226,10 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     v.tyres = TyreSet.format(_tyreSnapshot());
     v.powerKw = _power.text.trim();
     v.engineCc = _cc.text.trim();
+    v.oil = _oil.text.trim();
+    v.battery = _battery.text.trim();
+    v.plugs = _plugs.text.trim();
+    v.filters = _filters.text.trim();
     for (final d in v.deadlines.where((d) => d.kind == DeadlineKind.custom)) {
       final t = _labelCtrl(d).text.trim();
       d.label = t.isEmpty ? tr('edit.customDefault') : t;
@@ -363,12 +375,49 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
           Text(tr('tech.title'), style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 8),
           _techField(_vin, tr('tech.vin'), Icons.qr_code_2, caps: true),
-          _tyreEditor(scheme),
-          Row(children: [
-            Expanded(child: _techField(_power, tr('tech.power'), Icons.speed, number: true)),
-            const SizedBox(width: 10),
-            Expanded(child: _techField(_cc, tr('tech.engine'), Icons.settings_outlined, number: true)),
-          ]),
+          if (appState.isPro) ...[
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: DropdownButtonFormField<String>(
+                initialValue: fuelKinds.contains(v.fuel) ? v.fuel : null,
+                isExpanded: true,
+                style: Theme.of(context).textTheme.bodyLarge,
+                decoration: InputDecoration(
+                  labelText: tr('tech.fuel'),
+                  filled: true,
+                  isDense: true,
+                  border: const OutlineInputBorder(),
+                  prefixIcon: const Icon(Icons.local_gas_station_outlined),
+                ),
+                items: [for (final f in fuelKinds) DropdownMenuItem(value: f, child: Text(fuelLabel(f)))],
+                onChanged: (f) => setState(() => v.fuel = f ?? ''),
+              ),
+            ),
+            Row(children: [
+              Expanded(child: _techField(_power, tr('tech.power'), Icons.speed, number: true)),
+              const SizedBox(width: 10),
+              Expanded(child: _techField(_cc, tr('tech.engine'), Icons.settings_outlined, number: true)),
+            ]),
+            _tyreEditor(scheme),
+            _techField(_oil, tr('tech.oil'), Icons.oil_barrel_outlined, hint: tr('tech.oilHint')),
+            _techField(_battery, tr('tech.battery'), Icons.battery_charging_full_outlined,
+                hint: tr('tech.batteryHint')),
+            if (v.fuel != 'electric')
+              _techField(_plugs, tr(v.fuel == 'diesel' ? 'tech.glowPlugs' : 'tech.plugs'),
+                  Icons.electric_bolt_outlined, hint: tr('tech.plugsHint')),
+            _techField(_filters, tr('tech.filters'), Icons.filter_alt_outlined,
+                hint: tr('tech.filtersHint'), lines: 4),
+          ] else
+            Card(
+              child: ListTile(
+                leading: const Icon(Icons.lock_outline),
+                title: Text(tr('pro.reasonTech')),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () async {
+                  if (await requirePro(context, reason: tr('pro.reasonTech')) && mounted) setState(() {});
+                },
+              ),
+            ),
           const SizedBox(height: 16),
           Text(tr('edit.deadlinesTitle'), style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 4),
@@ -525,15 +574,18 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   }
 
   Widget _techField(TextEditingController c, String label, IconData icon,
-          {bool caps = false, bool number = false}) =>
+          {bool caps = false, bool number = false, String? hint, int lines = 1}) =>
       Padding(
         padding: const EdgeInsets.only(bottom: 10),
         child: TextField(
           controller: c,
+          minLines: 1,
+          maxLines: lines,
           textCapitalization: caps ? TextCapitalization.characters : TextCapitalization.none,
           keyboardType: number ? const TextInputType.numberWithOptions(decimal: true) : TextInputType.text,
           decoration: InputDecoration(
             labelText: label,
+            hintText: hint,
             filled: true,
             isDense: true,
             border: const OutlineInputBorder(),

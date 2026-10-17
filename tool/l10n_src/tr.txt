@@ -493,3 +493,24 @@ Favori yok
 Bir aracın yıldızına, ya da tüm araçlarını eklemek için bir grubun yıldızına dokunun.
 Favoriler
 Uygulama açıldığında hangi araçları göreceğinizi seçin: sizinkiler, favoriler ya da ikisi
+Pro'yu keşfet
+Tüm teknik veriler Pro sürümde mevcuttur.
+Tüm teknik veriler: yakıt, yağ, akü, bujiler, filtreler
+Yakıt
+Motor yağı
+Akü
+Bujiler
+Kızdırma bujileri
+Filtreler
+örn. 5W-30 ACEA C3
+örn. 12V 70Ah 680A AGM
+örn. NGK BKR6E
+Yağ, hava, kabin, yakıt: satır başına bir kod
+Benzin
+Dizel
+LPG
+CNG
+Hibrit
+Şarj edilebilir hibrit
+Elektrikli
+Diğer

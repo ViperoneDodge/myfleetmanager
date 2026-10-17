@@ -493,3 +493,24 @@ Nog geen favorieten
 Tik op de ster van een voertuig, of van een groep om al zijn voertuigen toe te voegen.
 Favorieten
 Kies welke voertuigen je ziet bij het openen: die van jou, favorieten of beide
+Ontdek Pro
+Volledige technische gegevens zijn beschikbaar in de Pro-versie.
+Volledige technische gegevens: brandstof, olie, accu, bougies, filters
+Brandstof
+Motorolie
+Accu
+Bougies
+Gloeibougies
+Filters
+bijv. 5W-30 ACEA C3
+bijv. 12V 70Ah 680A AGM
+bijv. NGK BKR6E
+Olie, lucht, interieur, brandstof: één code per regel
+Benzine
+Diesel
+LPG
+CNG
+Hybride
+Plug-in hybride
+Elektrisch
+Overig

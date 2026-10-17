@@ -493,3 +493,24 @@ Ei suosikkeja
 Napauta ajoneuvon tähteä, tai ryhmän tähteä lisätäksesi kaikki sen ajoneuvot.
 Suosikit
 Valitse, mitkä ajoneuvot näet avatessa: omasi, suosikit vai molemmat
+Tutustu Prohon
+Täydelliset tekniset tiedot ovat saatavilla Pro-versiossa.
+Täydelliset tekniset tiedot: polttoaine, öljy, akku, sytytystulpat, suodattimet
+Polttoaine
+Moottoriöljy
+Akku
+Sytytystulpat
+Hehkutulpat
+Suodattimet
+esim. 5W-30 ACEA C3
+esim. 12V 70Ah 680A AGM
+esim. NGK BKR6E
+Öljy, ilma, raitisilma, polttoaine: yksi koodi riville
+Bensiini
+Diesel
+Nestekaasu (LPG)
+Maakaasu (CNG)
+Hybridi
+Lataushybridi
+Sähkö
+Muu

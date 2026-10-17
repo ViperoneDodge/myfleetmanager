@@ -281,6 +281,11 @@ class Vehicle {
   String tyres;
   String powerKw;
   String engineCc;
+  String fuel;
+  String oil;
+  String battery;
+  String plugs;
+  String filters;
   int updatedAt;
   String updatedBy;
 
@@ -311,6 +316,11 @@ class Vehicle {
     this.tyres = '',
     this.powerKw = '',
     this.engineCc = '',
+    this.fuel = '',
+    this.oil = '',
+    this.battery = '',
+    this.plugs = '',
+    this.filters = '',
     int? updatedAt,
     this.updatedBy = '',
     this.updatedByUid = '',
@@ -410,6 +420,11 @@ class Vehicle {
         'tyres': tyres,
         'powerKw': powerKw,
         'engineCc': engineCc,
+        if (fuel.isNotEmpty) 'fuel': fuel,
+        if (oil.isNotEmpty) 'oil': oil,
+        if (battery.isNotEmpty) 'battery': battery,
+        if (plugs.isNotEmpty) 'plugs': plugs,
+        if (filters.isNotEmpty) 'filters': filters,
         'updatedAt': updatedAt,
         'updatedBy': updatedBy,
         'updatedByUid': updatedByUid,
@@ -443,6 +458,11 @@ class Vehicle {
         tyres: j['tyres'] as String? ?? '',
         powerKw: j['powerKw'] as String? ?? '',
         engineCc: j['engineCc'] as String? ?? '',
+        fuel: j['fuel'] as String? ?? '',
+        oil: j['oil'] as String? ?? '',
+        battery: j['battery'] as String? ?? '',
+        plugs: j['plugs'] as String? ?? '',
+        filters: j['filters'] as String? ?? '',
         updatedAt: (j['updatedAt'] as num?)?.toInt() ?? 0,
         updatedBy: j['updatedBy'] as String? ?? '',
         updatedByUid: j['updatedByUid'] as String? ?? '',
@@ -547,6 +567,10 @@ class FleetGroup {
         shareDocs: j['shareDocs'] == true,
       );
 }
+
+String fuelLabel(String kind) => fuelKinds.contains(kind) ? tr('fuel.$kind') : kind;
+
+const List<String> fuelKinds = ['petrol', 'diesel', 'lpg', 'cng', 'hybrid', 'plugin', 'electric', 'other'];
 
 enum HomeView { mine, favorites, both }
 

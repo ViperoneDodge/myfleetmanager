@@ -35,6 +35,7 @@ class ProScreen extends StatelessWidget {
           (Icons.local_shipping_outlined, tr('pro.benefitTypes')),
           (Icons.description_outlined, tr('pro.benefitDocs')),
           (Icons.build_circle_outlined, tr('pro.benefitMaint')),
+          (Icons.tune, tr('pro.benefitTech')),
           (Icons.favorite_outline, tr('pro.benefitSupport')),
         ];
         return Scaffold(

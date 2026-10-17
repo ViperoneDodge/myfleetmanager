@@ -493,3 +493,24 @@ Sem favoritos
 Toque na estrela de um veículo, ou de um grupo para adicionar todos os seus veículos.
 Favoritos
 Escolha que veículos ver ao abrir: os seus, os favoritos ou ambos
+Descobrir Pro
+Os dados técnicos completos estão disponíveis na versão Pro.
+Dados técnicos completos: combustível, óleo, bateria, velas, filtros
+Combustível
+Óleo do motor
+Bateria
+Velas
+Velas de incandescência
+Filtros
+ex. 5W-30 ACEA C3
+ex. 12V 70Ah 680A AGM
+ex. NGK BKR6E
+Óleo, ar, habitáculo, combustível: um código por linha
+Gasolina
+Gasóleo
+GPL
+GNC
+Híbrido
+Híbrido plug-in
+Elétrico
+Outro

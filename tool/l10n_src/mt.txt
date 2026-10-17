@@ -493,3 +493,24 @@ L-ebda favorit
 Agħfas l-istilla fuq vettura, jew fuq grupp biex iżżid il-vetturi kollha tiegħu.
 Favoriti
 Agħżel liema vetturi tara meta tiftaħ: tiegħek, il-favoriti jew it-tnejn
+Skopri l-Pro
+Id-data teknika kollha hija disponibbli fil-verżjoni Pro.
+Data teknika kollha: fjuwil, żejt, batterija, plaggs, filtri
+Fjuwil
+Żejt tal-magna
+Batterija
+Plaggs
+Glow plugs
+Filtri
+eż. 5W-30 ACEA C3
+eż. 12V 70Ah 680A AGM
+eż. NGK BKR6E
+Żejt, arja, kabina, fjuwil: kodiċi wieħed għal kull linja
+Petrol
+Diżil
+LPG
+CNG
+Ibridu
+Ibridu plug-in
+Elettriku
+Oħra

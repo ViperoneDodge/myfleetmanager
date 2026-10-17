@@ -75,7 +75,12 @@ void setupData() {
     ..vin = 'ZAR952000H1234567'
     ..tyres = '205/55 R16 91V'
     ..powerKw = '96'
-    ..engineCc = '1598';
+    ..engineCc = '1598'
+    ..fuel = 'diesel'
+    ..oil = '5W-30 ACEA C3'
+    ..battery = '12V 70Ah 680A AGM'
+    ..plugs = 'Bosch 0 250 202 142'
+    ..filters = 'Mann HU 7008 z\nMann C 27 009\nMann CUK 2939';
   appState.data = UserData(
     personalFleetId: me,
     groups: [fam, work],
@@ -153,6 +158,11 @@ void main() {
 
         await shot(tester, const HomeScreen(), '01_vehicles');
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '02_vehicle');
+        detailTab.value = 1;
+        await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '02b_tech');
+        detailTab.value = 2;
+        await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '02c_maint');
+        detailTab.value = 0;
         await shot(tester, const HomeScreen(), '03_deadlines', then: () async {
           await tester.tap(find.text(tr('tab.deadlines')).last);
         });

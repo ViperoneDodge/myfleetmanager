@@ -493,3 +493,24 @@ Ingen favoritter
 Tryk på stjernen ved et køretøj, eller ved en gruppe for at tilføje alle dens køretøjer.
 Favoritter
 Vælg hvilke køretøjer du ser ved åbning: dine, favoritter eller begge
+Oplev Pro
+Fulde tekniske data findes i Pro-versionen.
+Fulde tekniske data: brændstof, olie, batteri, tændrør, filtre
+Brændstof
+Motorolie
+Batteri
+Tændrør
+Gløderør
+Filtre
+f.eks. 5W-30 ACEA C3
+f.eks. 12V 70Ah 680A AGM
+f.eks. NGK BKR6E
+Olie, luft, kabine, brændstof: én kode pr. linje
+Benzin
+Diesel
+LPG
+CNG
+Hybrid
+Plug-in-hybrid
+El
+Andet

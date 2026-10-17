@@ -493,3 +493,24 @@ Obojí
 Klepněte na hvězdičku u vozidla, nebo u skupiny pro přidání všech jejích vozidel.
 Oblíbené
 Vyberte, která vozidla uvidíte po otevření: svá, oblíbená nebo obojí
+Objevte Pro
+Úplné technické údaje jsou k dispozici ve verzi Pro.
+Úplné technické údaje: palivo, olej, baterie, svíčky, filtry
+Palivo
+Motorový olej
+Baterie
+Zapalovací svíčky
+Žhavicí svíčky
+Filtry
+např. 5W-30 ACEA C3
+např. 12V 70Ah 680A AGM
+např. NGK BKR6E
+Olej, vzduch, kabina, palivo: jeden kód na řádek
+Benzín
+Nafta
+LPG
+CNG
+Hybrid
+Plug-in hybrid
+Elektrický
+Jiné

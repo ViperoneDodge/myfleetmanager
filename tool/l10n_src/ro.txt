@@ -493,3 +493,24 @@ Niciun favorit
 Atinge steaua unui vehicul sau a unui grup pentru a adăuga toate vehiculele lui.
 Favorite
 Alege ce vehicule vezi la deschidere: ale tale, favoritele sau ambele
+Descoperă Pro
+Datele tehnice complete sunt disponibile în versiunea Pro.
+Date tehnice complete: combustibil, ulei, baterie, bujii, filtre
+Combustibil
+Ulei de motor
+Baterie
+Bujii
+Bujii incandescente
+Filtre
+ex. 5W-30 ACEA C3
+ex. 12V 70Ah 680A AGM
+ex. NGK BKR6E
+Ulei, aer, habitaclu, combustibil: un cod pe rând
+Benzină
+Motorină
+GPL
+GNC
+Hibrid
+Hibrid plug-in
+Electric
+Altele
