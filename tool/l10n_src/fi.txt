@@ -479,3 +479,4 @@ Puuttuuko jotain? Avaa ”{button}”, valitse teksti ja valitse ”Määritä k
 Teksti määritetty: {field}
 Valittu teksti ei näytä kelvolliselta kenttään {field}
 Tarkista ja korjaa arvo ennen vahvistamista
+vain vuosi: tarkista päivä ja kuukausi

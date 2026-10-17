@@ -479,3 +479,4 @@ Mangler noe? Åpne «{button}», merk teksten og velg «Tilordne til…».
 Tekst tilordnet {field}
 Den merkede teksten ser ikke ut som en gyldig {field}
 Kontroller og rett verdien før du bekrefter
+kun år: kontroller dag og måned

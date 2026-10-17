@@ -479,5 +479,6 @@
  "ocr.assignHint": "Thiếu dữ liệu? Mở \"{button}\", chọn văn bản rồi chọn \"Gán cho…\".",
  "ocr.assigned": "Đã gán văn bản cho {field}",
  "ocr.assignBad": "Văn bản đã chọn có vẻ không hợp lệ cho {field}",
- "ocr.checkValue": "Kiểm tra và sửa giá trị trước khi xác nhận"
+ "ocr.checkValue": "Kiểm tra và sửa giá trị trước khi xác nhận",
+ "ocr.yearOnly": "chỉ có năm: kiểm tra ngày và tháng"
 }

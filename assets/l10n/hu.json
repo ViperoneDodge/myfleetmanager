@@ -479,5 +479,6 @@
  "ocr.assignHint": "Hiányzik valami? Nyisd meg a „{button}” részt, jelöld ki a szöveget, és válaszd a „Hozzárendelés…” lehetőséget.",
  "ocr.assigned": "Szöveg hozzárendelve: {field}",
  "ocr.assignBad": "A kijelölt szöveg nem érvényes érték ehhez: {field}",
- "ocr.checkValue": "Megerősítés előtt ellenőrizd és javítsd az értéket"
+ "ocr.checkValue": "Megerősítés előtt ellenőrizd és javítsd az értéket",
+ "ocr.yearOnly": "csak év: ellenőrizd a napot és a hónapot"
 }

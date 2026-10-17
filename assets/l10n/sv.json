@@ -479,5 +479,6 @@
  "ocr.assignHint": "Saknas något? Öppna ”{button}”, markera texten och välj ”Tilldela till…”.",
  "ocr.assigned": "Texten tilldelad till {field}",
  "ocr.assignBad": "Den markerade texten verkar inte vara giltig för {field}",
- "ocr.checkValue": "Kontrollera och rätta värdet innan du bekräftar"
+ "ocr.checkValue": "Kontrollera och rätta värdet innan du bekräftar",
+ "ocr.yearOnly": "endast år: kontrollera dag och månad"
 }

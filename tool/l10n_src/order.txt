@@ -479,3 +479,4 @@ ocr.assignHint
 ocr.assigned
 ocr.assignBad
 ocr.checkValue
+ocr.yearOnly

@@ -479,5 +479,6 @@
  "ocr.assignHint": "Midagi puudu? Ava „{button}”, vali tekst ja vajuta „Määra väljale…”.",
  "ocr.assigned": "Tekst määratud: {field}",
  "ocr.assignBad": "Valitud tekst ei tundu sobivat väljale {field}",
- "ocr.checkValue": "Kontrolli ja paranda väärtus enne kinnitamist"
+ "ocr.checkValue": "Kontrolli ja paranda väärtus enne kinnitamist",
+ "ocr.yearOnly": "ainult aasta: kontrolli päeva ja kuud"
 }

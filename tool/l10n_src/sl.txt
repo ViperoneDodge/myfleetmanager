@@ -479,3 +479,4 @@ Kaj manjka? Odpri »Prebrano besedilo«{button} »Dodeli…«.
 Besedilo dodeljeno: {field}
 Označeno besedilo ni veljavno za {field}
 Preveri in popravi vrednost pred potrditvijo
+samo leto: preveri dan in mesec

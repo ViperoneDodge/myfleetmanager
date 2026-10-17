@@ -479,3 +479,4 @@ An bhfuil rud ar iarraidh? Oscail "{button}", roghnaigh an téacs agus roghnaigh
 Téacs sannta do {field}
 Ní cosúil gur {field} bailí é an téacs roghnaithe
 Seiceáil agus ceartaigh an luach sula ndeimhníonn tú
+an bhliain amháin: seiceáil an lá agus an mhí

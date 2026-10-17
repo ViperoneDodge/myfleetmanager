@@ -479,3 +479,4 @@ Lipsește ceva? Deschide „{button}”, selectează textul și alege „Atribui
 Text atribuit la {field}
 Textul selectat nu pare valid pentru {field}
 Verifică și corectează valoarea înainte de confirmare
+doar anul: verifică ziua și luna

@@ -479,5 +479,6 @@
  "ocr.assignHint": "Kaut kā trūkst? Atver “{button}”, atlasi tekstu un izvēlies “Piešķirt…”.",
  "ocr.assigned": "Teksts piešķirts: {field}",
  "ocr.assignBad": "Atlasītais teksts neizskatās derīgs laukam {field}",
- "ocr.checkValue": "Pirms apstiprināšanas pārbaudi un izlabo vērtību"
+ "ocr.checkValue": "Pirms apstiprināšanas pārbaudi un izlabo vērtību",
+ "ocr.yearOnly": "tikai gads: pārbaudi dienu un mēnesi"
 }

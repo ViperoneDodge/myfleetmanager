@@ -479,5 +479,6 @@
  "ocr.assignHint": "Ada yang kurang? Buka \"{button}\", pilih teksnya lalu pilih \"Tetapkan ke…\".",
  "ocr.assigned": "Teks ditetapkan ke {field}",
  "ocr.assignBad": "Teks yang dipilih tampaknya bukan {field} yang valid",
- "ocr.checkValue": "Periksa dan perbaiki nilainya sebelum mengonfirmasi"
+ "ocr.checkValue": "Periksa dan perbaiki nilainya sebelum mengonfirmasi",
+ "ocr.yearOnly": "hanya tahun: periksa tanggal dan bulan"
 }

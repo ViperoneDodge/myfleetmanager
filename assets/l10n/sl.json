@@ -479,5 +479,6 @@
  "ocr.assignHint": "Kaj manjka? Odpri »Prebrano besedilo«{button} »Dodeli…«.",
  "ocr.assigned": "Besedilo dodeljeno: {field}",
  "ocr.assignBad": "Označeno besedilo ni veljavno za {field}",
- "ocr.checkValue": "Preveri in popravi vrednost pred potrditvijo"
+ "ocr.checkValue": "Preveri in popravi vrednost pred potrditvijo",
+ "ocr.yearOnly": "samo leto: preveri dan in mesec"
 }

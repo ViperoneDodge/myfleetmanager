@@ -45,8 +45,19 @@ class TyreSet {
       if (load != null && speed != null) s = '$s $load$speed';
       if (!out.contains(s)) out.add(s);
     }
+    for (final m in _old.allMatches(text.toUpperCase())) {
+      final w = double.tryParse(m.group(1)!.replaceAll(',', '.')) ?? 0;
+      final rim = int.tryParse(m.group(2)!) ?? 0;
+      if (w < 2 || w > 14 || rim < 8 || rim > 24) continue;
+      final pr = m.group(3)?.replaceAll(RegExp(r'\s'), '');
+      final s = '${m.group(1)!.replaceAll(',', '.')}-${m.group(2)}${pr == null ? '' : ' $pr'}';
+      if (!out.contains(s)) out.add(s);
+    }
     return out;
   }
+
+  static final RegExp _old = RegExp(
+      r'(?<![\d/.,])(\d{1,2}[.,]\d{2})(?![\d/])\s*(?:-|X|R|\s)\s*(\d{2})(?!\d)(?:\s*/?\s*(\d{1,2}\s*PR))?');
 
   static String rimOf(String size) =>
       RegExp(r'(?:Z?R|-)\s*(\d{2}(?:\.5)?)').firstMatch(size.toUpperCase())?.group(1) ?? '';

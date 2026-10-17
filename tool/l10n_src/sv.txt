@@ -479,3 +479,4 @@ Saknas något? Öppna ”{button}”, markera texten och välj ”Tilldela till�
 Texten tilldelad till {field}
 Den markerade texten verkar inte vara giltig för {field}
 Kontrollera och rätta värdet innan du bekräftar
+endast år: kontrollera dag och månad

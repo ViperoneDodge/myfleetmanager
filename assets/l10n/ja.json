@@ -479,5 +479,6 @@
  "ocr.assignHint": "足りない項目は？「{button}」を開き、文字を選択して「割り当て…」を選んでください。",
  "ocr.assigned": "{field}に割り当てました",
  "ocr.assignBad": "選択した文字は{field}として正しくないようです",
- "ocr.checkValue": "確定する前に値を確認・修正してください"
+ "ocr.checkValue": "確定する前に値を確認・修正してください",
+ "ocr.yearOnly": "年のみ：日と月を確認してください"
 }

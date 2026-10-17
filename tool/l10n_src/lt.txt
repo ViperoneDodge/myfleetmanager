@@ -479,3 +479,4 @@ Kažko trūksta? Atidarykite „{button}“, pažymėkite tekstą ir pasirinkite
 Tekstas priskirtas: {field}
 Pažymėtas tekstas netinka laukui {field}
 Prieš patvirtindami patikrinkite ir pataisykite reikšmę
+tik metai: patikrinkite dieną ir mėnesį

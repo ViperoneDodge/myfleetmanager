@@ -479,5 +479,6 @@
  "ocr.assignHint": "Eksik bir şey mi var? \"{button}\"i açın, metni seçin ve \"Şuna ata…\"yı seçin.",
  "ocr.assigned": "Metin {field} alanına atandı",
  "ocr.assignBad": "Seçilen metin {field} için geçerli görünmüyor",
- "ocr.checkValue": "Onaylamadan önce değeri kontrol edip düzeltin"
+ "ocr.checkValue": "Onaylamadan önce değeri kontrol edip düzeltin",
+ "ocr.yearOnly": "yalnızca yıl: günü ve ayı kontrol edin"
 }

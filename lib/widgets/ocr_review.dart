@@ -20,7 +20,13 @@ String ocrTyreText(RegistrationData data) =>
 
 List<({String key, String value})> _rows(RegistrationData data) => [
       if (data.plate != null) (key: 'plate', value: data.plate!),
-      if (data.registrationDate != null) (key: 'reg', value: fmtDate(data.registrationDate)),
+      if (data.registrationDate != null)
+        (
+          key: 'reg',
+          value: data.regYearOnly
+              ? '${fmtDate(data.registrationDate)} · ${tr('ocr.yearOnly')}'
+              : fmtDate(data.registrationDate),
+        ),
       if (data.vin != null) (key: 'vin', value: data.vin!),
       if (data.powerKw != null) (key: 'power', value: data.powerKw!),
       if (data.engineCc != null) (key: 'cc', value: data.engineCc!),

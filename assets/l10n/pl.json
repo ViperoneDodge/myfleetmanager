@@ -479,5 +479,6 @@
  "ocr.assignHint": "Czegoś brakuje? Otwórz „{button}”, zaznacz tekst i wybierz „Przypisz do…”.",
  "ocr.assigned": "Tekst przypisany do: {field}",
  "ocr.assignBad": "Zaznaczony tekst nie wygląda na poprawną wartość: {field}",
- "ocr.checkValue": "Sprawdź i popraw wartość przed potwierdzeniem"
+ "ocr.checkValue": "Sprawdź i popraw wartość przed potwierdzeniem",
+ "ocr.yearOnly": "tylko rok: sprawdź dzień i miesiąc"
 }

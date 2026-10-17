@@ -479,5 +479,6 @@
  "ocr.assignHint": "An bhfuil rud ar iarraidh? Oscail \"{button}\", roghnaigh an téacs agus roghnaigh \"Sann do…\".",
  "ocr.assigned": "Téacs sannta do {field}",
  "ocr.assignBad": "Ní cosúil gur {field} bailí é an téacs roghnaithe",
- "ocr.checkValue": "Seiceáil agus ceartaigh an luach sula ndeimhníonn tú"
+ "ocr.checkValue": "Seiceáil agus ceartaigh an luach sula ndeimhníonn tú",
+ "ocr.yearOnly": "an bhliain amháin: seiceáil an lá agus an mhí"
 }

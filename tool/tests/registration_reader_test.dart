@@ -146,4 +146,30 @@ MASSA COMPL. E LARGH. SOPRA INDICATE''';
     expect(d.engineCc, null);
     expect(d.powerKw, null);
   });
+
+  test('libretto vecchio: solo anno, telaio corto, pneumatici in pollici', () {
+    const t = '''CARTA DI CIRCOLAZIONE XX 0000000
+N° X000000XX00   (A)   TOA12345
+(B) 1976
+(C.2.1) VERDI
+NATO IL 01.02.1950
+N° X000000XX00 (A) TOA12345
+(D.1) FUORISTRADA 88 DIESEL
+(E) 28513579H
+(F.2) 2160 (F.3) 3360
+(I) 02.05.2008
+(P.1) 2286 (P.2) 045,63 (P.3) GASOL
+LUNGHEZZA 3.640 M LARGHEZZA 1.680 M
+RAPPORTO POTENZA/TARA = 29,064 KW/T
+PNEUMATICI:
+6.00 16/6PR OPPURE 6.50 16/6PR''';
+    final d = RegistrationReader.parse(t);
+    expect(d.plate, 'TOA12345');
+    expect(d.registrationDate, DateTime(1976));
+    expect(d.regYearOnly, true);
+    expect(d.vin, '28513579H');
+    expect(d.engineCc, '2286');
+    expect(d.powerKw, '45.63');
+    expect(d.tyres, ['6.00-16 6PR', '6.50-16 6PR']);
+  });
 }

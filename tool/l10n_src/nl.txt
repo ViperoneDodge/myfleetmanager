@@ -479,3 +479,4 @@ Mis je iets? Open "{button}", selecteer de tekst en kies "Toewijzen aan…".
 Tekst toegewezen aan {field}
 De geselecteerde tekst lijkt geen geldige {field}
 Controleer en corrigeer de waarde voordat je bevestigt
+alleen jaar: controleer dag en maand

@@ -479,5 +479,6 @@
  "ocr.assignHint": "Puuttuuko jotain? Avaa ”{button}”, valitse teksti ja valitse ”Määritä kenttään…”.",
  "ocr.assigned": "Teksti määritetty: {field}",
  "ocr.assignBad": "Valittu teksti ei näytä kelvolliselta kenttään {field}",
- "ocr.checkValue": "Tarkista ja korjaa arvo ennen vahvistamista"
+ "ocr.checkValue": "Tarkista ja korjaa arvo ennen vahvistamista",
+ "ocr.yearOnly": "vain vuosi: tarkista päivä ja kuukausi"
 }

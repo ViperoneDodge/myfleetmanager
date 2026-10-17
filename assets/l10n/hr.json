@@ -479,5 +479,6 @@
  "ocr.assignHint": "Nešto nedostaje? Otvori «{button}», označi tekst i odaberi «Dodijeli…».",
  "ocr.assigned": "Tekst dodijeljen: {field}",
  "ocr.assignBad": "Označeni tekst nije valjan za {field}",
- "ocr.checkValue": "Provjeri i ispravi vrijednost prije potvrde"
+ "ocr.checkValue": "Provjeri i ispravi vrijednost prije potvrde",
+ "ocr.yearOnly": "samo godina: provjeri dan i mjesec"
 }

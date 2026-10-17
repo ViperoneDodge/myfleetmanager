@@ -13,6 +13,7 @@ class RegistrationData {
   String? powerKw;
   String? engineCc;
   List<String> tyres = [];
+  bool regYearOnly = false;
 
   bool get isEmpty =>
       plate == null &&
@@ -32,12 +33,12 @@ class RegistrationReader {
       if (path.toLowerCase().endsWith('.pdf')) {
         final bytes = await File(path).readAsBytes();
         var i = 0;
-        await for (final page in Printing.raster(bytes, pages: const [0, 1], dpi: 220)) {
+        await for (final page in Printing.raster(bytes, dpi: 220)) {
           final f = File('${Directory.systemTemp.path}/ocr_${DateTime.now().millisecondsSinceEpoch}_$i.png');
           await f.writeAsBytes(await page.toPng());
           temp.add(f);
           images.add(f.path);
-          i++;
+          if (++i >= 2) break;
         }
       } else {
         images.add(path);
@@ -205,6 +206,7 @@ class RegistrationReader {
         final dt = _anyDate(u);
         if (dt == null) return false;
         d.registrationDate = dt;
+        d.regYearOnly = false;
         return true;
       case 'vin':
         final v = u.replaceAll(RegExp(r'[^A-Z0-9]'), '');
@@ -268,6 +270,17 @@ class RegistrationReader {
         break;
       }
     }
+    if (data.registrationDate == null) {
+      for (final v in values['B'] ?? const <String>[]) {
+        final m = RegExp(r'^(\d{4})(?![\d./\-])').firstMatch(v.trim());
+        final y = int.tryParse(m?.group(1) ?? '');
+        if (y != null && y >= 1900 && y <= DateTime.now().year) {
+          data.registrationDate = DateTime(y);
+          data.regYearOnly = true;
+          break;
+        }
+      }
+    }
 
     for (final v in values['E'] ?? const <String>[]) {
       final raw = v.replaceAll(RegExp(r'[^A-Z0-9]'), '');
@@ -277,6 +290,15 @@ class RegistrationReader {
           RegExp(r'\d.*\d').hasMatch(raw.substring(0, 17))) {
         data.vin = c.substring(0, 17);
         break;
+      }
+    }
+    if (data.vin == null) {
+      for (final v in values['E'] ?? const <String>[]) {
+        final raw = v.trim().split(RegExp(r'\s+')).first.replaceAll(RegExp(r'[^A-Z0-9]'), '');
+        if (raw.length >= 6 && raw.length <= 12 && RegExp(r'\d.*\d').hasMatch(raw)) {
+          data.vin = raw;
+          break;
+        }
       }
     }
 

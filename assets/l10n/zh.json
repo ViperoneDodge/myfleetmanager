@@ -479,5 +479,6 @@
  "ocr.assignHint": "缺少数据？打开“{button}”，选中文字后选择“指定为…”。",
  "ocr.assigned": "文字已指定为{field}",
  "ocr.assignBad": "所选文字看起来不是有效的{field}",
- "ocr.checkValue": "确认前请检查并更正该值"
+ "ocr.checkValue": "确认前请检查并更正该值",
+ "ocr.yearOnly": "仅有年份：请核对日和月"
 }

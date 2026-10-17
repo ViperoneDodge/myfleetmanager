@@ -479,5 +479,6 @@
  "ocr.assignHint": "Missing something? Open \"{button}\", select the text and choose \"Assign to…\".",
  "ocr.assigned": "Text assigned to {field}",
  "ocr.assignBad": "The selected text does not look like a valid {field}",
- "ocr.checkValue": "Check and correct the value before confirming"
+ "ocr.checkValue": "Check and correct the value before confirming",
+ "ocr.yearOnly": "year only: check day and month"
 }

@@ -479,5 +479,6 @@
  "ocr.assignHint": "Kažko trūksta? Atidarykite „{button}“, pažymėkite tekstą ir pasirinkite „Priskirti…“.",
  "ocr.assigned": "Tekstas priskirtas: {field}",
  "ocr.assignBad": "Pažymėtas tekstas netinka laukui {field}",
- "ocr.checkValue": "Prieš patvirtindami patikrinkite ir pataisykite reikšmę"
+ "ocr.checkValue": "Prieš patvirtindami patikrinkite ir pataisykite reikšmę",
+ "ocr.yearOnly": "tik metai: patikrinkite dieną ir mėnesį"
 }

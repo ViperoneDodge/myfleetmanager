@@ -479,3 +479,4 @@ Eksik bir şey mi var? "{button}"i açın, metni seçin ve "Şuna ata…"yı se�
 Metin {field} alanına atandı
 Seçilen metin {field} için geçerli görünmüyor
 Onaylamadan önce değeri kontrol edip düzeltin
+yalnızca yıl: günü ve ayı kontrol edin

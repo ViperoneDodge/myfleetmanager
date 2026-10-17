@@ -479,5 +479,6 @@
  "ocr.assignHint": "Mangler noe? Åpne «{button}», merk teksten og velg «Tilordne til…».",
  "ocr.assigned": "Tekst tilordnet {field}",
  "ocr.assignBad": "Den merkede teksten ser ikke ut som en gyldig {field}",
- "ocr.checkValue": "Kontroller og rett verdien før du bekrefter"
+ "ocr.checkValue": "Kontroller og rett verdien før du bekrefter",
+ "ocr.yearOnly": "kun år: kontroller dag og måned"
 }

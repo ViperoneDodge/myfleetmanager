@@ -479,3 +479,4 @@ Něco chybí? Otevřete „{button}“, označte text a zvolte „Přiřadit k�
 Text přiřazen k: {field}
 Označený text není platný údaj pro {field}
 Před potvrzením hodnotu zkontrolujte a opravte
+jen rok: zkontrolujte den a měsíc

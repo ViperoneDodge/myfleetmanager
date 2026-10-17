@@ -479,3 +479,4 @@ Falta algum dado? Abra «{button}», selecione o texto e escolha «Atribuir a…
 Texto atribuído a {field}
 O texto selecionado não parece válido para {field}
 Verifique e corrija o valor antes de confirmar
+só o ano: verifique dia e mês

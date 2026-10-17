@@ -479,5 +479,6 @@
  "ocr.assignHint": "Vantar eitthvað? Opnaðu „{button}“, veldu textann og veldu „Úthluta í…“.",
  "ocr.assigned": "Texta úthlutað í {field}",
  "ocr.assignBad": "Valinn texti virðist ekki gildur fyrir {field}",
- "ocr.checkValue": "Athugaðu og leiðréttu gildið áður en þú staðfestir"
+ "ocr.checkValue": "Athugaðu og leiðréttu gildið áður en þú staðfestir",
+ "ocr.yearOnly": "aðeins ár: athugaðu dag og mánuð"
 }

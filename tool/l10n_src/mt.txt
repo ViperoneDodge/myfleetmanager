@@ -479,3 +479,4 @@ Hemm xi ħaġa nieqsa? Iftaħ "{button}", agħżel it-test u agħżel "Assenja l
 It-test ġie assenjat lil {field}
 It-test magħżul ma jidhirx validu għal {field}
 Iċċekkja u kkoreġi l-valur qabel tikkonferma
+is-sena biss: iċċekkja l-jum u x-xahar

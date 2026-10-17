@@ -479,3 +479,4 @@ Ada yang kurang? Buka "{button}", pilih teksnya lalu pilih "Tetapkan ke…".
 Teks ditetapkan ke {field}
 Teks yang dipilih tampaknya bukan {field} yang valid
 Periksa dan perbaiki nilainya sebelum mengonfirmasi
+hanya tahun: periksa tanggal dan bulan
