@@ -18,6 +18,7 @@ import 'maintenance_screen.dart';
 import 'pro_screen.dart';
 import '../services/doc_cloud.dart';
 import '../services/registration_reader.dart';
+import '../services/tyres.dart';
 import 'vehicle_edit_screen.dart';
 
 class VehicleDetailScreen extends StatelessWidget {
@@ -397,7 +398,7 @@ class VehicleDetailScreen extends StatelessWidget {
                 const BlankLine(),
                 _title(context, tr('tech.title')),
                 _techRow(context, tr('tech.vin'), v.vin),
-                _techRow(context, tr('tech.tyres'), v.tyres),
+                ..._tyreRows(context, v.tyres),
                 _techRow(context, tr('tech.power'), v.powerKw),
                 _techRow(context, tr('tech.engine'), v.engineCc),
                 const BlankLine(),
@@ -583,16 +584,30 @@ class VehicleDetailScreen extends StatelessWidget {
         ]),
       );
 
-  Widget _techRow(BuildContext context, String label, String value) => OnRule(
-        child: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
+  Widget _techRow(BuildContext context, String label, String value, {double indent = 0, bool dash = true}) =>
+      OnRule(
+        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          SizedBox(width: indent),
           SizedBox(
-            width: MediaQuery.textScalerOf(context).scale(150).clamp(150.0, 240.0),
+            width: MediaQuery.textScalerOf(context).scale(150).clamp(150.0, 240.0) - indent,
             child: RuledText(label,
                 style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant)),
           ),
-          Expanded(child: RuledText(value.isEmpty ? '—' : value)),
+          Expanded(child: RuledText(value.isEmpty && dash ? '—' : value)),
         ]),
       );
+
+  List<Widget> _tyreRows(BuildContext context, String tyres) {
+    final sets = TyreSet.parse(tyres);
+    if (sets.length <= 1 && (sets.isEmpty || sets.first.label.isEmpty)) {
+      return [_techRow(context, tr('tech.tyres'), sets.isEmpty ? '' : sets.first.sizeList.join('\n'))];
+    }
+    return [
+      _techRow(context, tr('tech.tyres'), '', dash: false),
+      for (final s in sets)
+        _techRow(context, s.label.isEmpty ? '·' : s.label, s.sizeList.join('\n'), indent: 14),
+    ];
+  }
 
   Future<void> _readRegistration(BuildContext context, Vehicle v, VehicleDocument d) async {
     final f = await _docFile(context, v, d);
@@ -622,28 +637,18 @@ class VehicleDetailScreen extends StatelessWidget {
     }
     if (!context.mounted) return;
     Navigator.of(context, rootNavigator: true).pop();
-    if (data.isEmpty) {
-      await showDialog<void>(
-        context: context,
-        builder: (ctx) => AlertDialog(
-          content: Text(tr('ocr.none')),
-          actions: [
-            TextButton(onPressed: () => _showRawText(ctx, raw), child: Text(tr('ocr.rawText'))),
-            FilledButton(onPressed: () => Navigator.pop(ctx), child: Text(tr('common.ok'))),
-          ],
-        ),
-      );
-      return;
-    }
-    final rows = <({String key, String label, String value})>[
-      if (data.plate != null) (key: 'plate', label: tr('edit.plate'), value: data.plate!),
-      if (data.registrationDate != null)
-        (key: 'reg', label: tr('vehicle.regDate'), value: fmtDate(data.registrationDate)),
-      if (data.vin != null) (key: 'vin', label: tr('tech.vin'), value: data.vin!),
-      if (data.powerKw != null) (key: 'power', label: tr('tech.power'), value: data.powerKw!),
-      if (data.engineCc != null) (key: 'cc', label: tr('tech.engine'), value: data.engineCc!),
-    ];
-    final chosen = rows.map((r) => r.key).toSet();
+    final fields = _ocrFields();
+    String tyreText() =>
+        TyreSet.format(TyreSet.byRim(data.tyres, (r) => tr('tyre.rim', {'n': r})));
+    List<({String key, String value})> rows() => [
+          if (data.plate != null) (key: 'plate', value: data.plate!),
+          if (data.registrationDate != null) (key: 'reg', value: fmtDate(data.registrationDate)),
+          if (data.vin != null) (key: 'vin', value: data.vin!),
+          if (data.powerKw != null) (key: 'power', value: data.powerKw!),
+          if (data.engineCc != null) (key: 'cc', value: data.engineCc!),
+          if (data.tyres.isNotEmpty) (key: 'tyres', value: tyreText()),
+        ];
+    final chosen = rows().map((r) => r.key).toSet();
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => StatefulBuilder(
@@ -668,22 +673,35 @@ class VehicleDetailScreen extends StatelessWidget {
                 ]),
               ),
               const SizedBox(height: 10),
-              Text(tr('ocr.foundHint'), style: const TextStyle(fontSize: 13)),
+              Text(data.isEmpty ? tr('ocr.none') : tr('ocr.foundHint'), style: const TextStyle(fontSize: 13)),
+              const SizedBox(height: 6),
+              Text(tr('ocr.assignHint', {'button': tr('ocr.rawText')}),
+                  style: TextStyle(fontSize: 12, color: Theme.of(ctx).colorScheme.onSurfaceVariant)),
               const SizedBox(height: 8),
-              ...rows.map((r) => CheckboxListTile(
+              ...rows().map((r) => CheckboxListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
                     value: chosen.contains(r.key),
                     onChanged: (b) => setSt(() => b == true ? chosen.add(r.key) : chosen.remove(r.key)),
                     title: Text(r.value),
-                    subtitle: Text(r.label),
+                    subtitle: Text(fields[r.key]!),
                   )),
             ]),
           ),
           actions: [
-            TextButton(onPressed: () => _showRawText(ctx, raw), child: Text(tr('ocr.rawText'))),
+            TextButton(
+              onPressed: () => _showRawText(ctx, raw, onAssign: (field, text) {
+                if (!RegistrationReader.assign(data, field, text)) return false;
+                setSt(() => chosen.add(field));
+                return true;
+              }),
+              child: Text(tr('ocr.rawText')),
+            ),
             TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
-            FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(tr('ocr.apply'))),
+            FilledButton(
+              onPressed: chosen.isEmpty ? null : () => Navigator.pop(ctx, true),
+              child: Text(tr('ocr.apply')),
+            ),
           ],
         ),
       ),
@@ -695,6 +713,7 @@ class VehicleDetailScreen extends StatelessWidget {
     if (chosen.contains('vin')) c.vin = data.vin!;
     if (chosen.contains('power')) c.powerKw = data.powerKw!;
     if (chosen.contains('cc')) c.engineCc = data.engineCc!;
+    if (chosen.contains('tyres')) c.tyres = tyreText();
     final dup = appState.duplicatePlateGroup(c, c.fleetId);
     if (dup != null) {
       if (context.mounted) showSnack(context, tr('vehicle.plateDuplicate', {'plate': c.plate, 'group': dup}));
@@ -704,15 +723,73 @@ class VehicleDetailScreen extends StatelessWidget {
     if (context.mounted) showSnack(context, tr('ocr.saved'));
   }
 
-  Future<void> _showRawText(BuildContext context, String raw) => showDialog<void>(
+  Map<String, String> _ocrFields() => {
+        'plate': tr('edit.plate'),
+        'reg': tr('vehicle.regDate'),
+        'vin': tr('tech.vin'),
+        'power': tr('tech.power'),
+        'cc': tr('tech.engine'),
+        'tyres': tr('tech.tyres'),
+      };
+
+  Future<void> _assignSelection(BuildContext context, String text, bool Function(String field, String text) onAssign) async {
+    final fields = _ocrFields();
+    final field = await showDialog<String>(
+      context: context,
+      builder: (ctx) => SimpleDialog(
+        title: Text(tr('ocr.assignTitle')),
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(24, 0, 24, 8),
+            child: Text(text, maxLines: 3, overflow: TextOverflow.ellipsis,
+                style: const TextStyle(fontFamily: 'monospace', fontSize: 13)),
+          ),
+          for (final e in fields.entries)
+            SimpleDialogOption(onPressed: () => Navigator.pop(ctx, e.key), child: Text(e.value)),
+        ],
+      ),
+    );
+    if (field == null || !context.mounted) return;
+    showSnack(
+        context,
+        onAssign(field, text)
+            ? tr('ocr.assigned', {'field': fields[field]!})
+            : tr('ocr.assignBad', {'field': fields[field]!}));
+  }
+
+  Future<void> _showRawText(BuildContext context, String raw,
+          {bool Function(String field, String text)? onAssign}) =>
+      showDialog<void>(
         context: context,
         builder: (ctx) => AlertDialog(
           title: Text(tr('ocr.rawText')),
           content: SizedBox(
             width: double.maxFinite,
             child: SingleChildScrollView(
-              child: SelectableText(raw.trim().isEmpty ? '—' : raw.trim(),
-                  style: const TextStyle(fontFamily: 'monospace', fontSize: 12)),
+              child: SelectableText(
+                raw.trim().isEmpty ? '—' : raw.trim(),
+                style: const TextStyle(fontFamily: 'monospace', fontSize: 12),
+                contextMenuBuilder: (menuCtx, state) {
+                  final value = state.textEditingValue;
+                  final selected = value.selection.isValid && !value.selection.isCollapsed
+                      ? value.selection.textInside(value.text).trim()
+                      : '';
+                  return AdaptiveTextSelectionToolbar.buttonItems(
+                    anchors: state.contextMenuAnchors,
+                    buttonItems: [
+                      if (onAssign != null && selected.isNotEmpty)
+                        ContextMenuButtonItem(
+                          label: tr('ocr.assign'),
+                          onPressed: () {
+                            ContextMenuController.removeAny();
+                            _assignSelection(ctx, selected, onAssign);
+                          },
+                        ),
+                      ...state.contextMenuButtonItems,
+                    ],
+                  );
+                },
+              ),
             ),
           ),
           actions: [

@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Отправить на {email} ссылку для сброса пароля?",
  "login.apple": "Войти с Apple",
  "auth.appleCancelled": "Вход с Apple отменён.",
- "auth.appleFailed": "Не удалось войти с Apple: {error}"
+ "auth.appleFailed": "Не удалось войти с Apple: {error}",
+ "tyre.group": "Группа (необязательно)",
+ "tyre.presets": "Предлагаемые названия",
+ "tyre.sizesHint": "напр. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Добавить группу",
+ "tyre.splitRim": "Разделить по диску",
+ "tyre.oneRim": "Все размеры для одного диска.",
+ "tyre.front": "Передние",
+ "tyre.rear": "Задние",
+ "tyre.summer": "Летние",
+ "tyre.winter": "Зимние",
+ "tyre.allSeason": "Всесезонные",
+ "tyre.rim": "Диск {n}\"",
+ "ocr.assign": "Назначить…",
+ "ocr.assignTitle": "Какому полю это соответствует?",
+ "ocr.assignHint": "Чего-то не хватает? Откройте «{button}», выделите текст и выберите «Назначить…».",
+ "ocr.assigned": "Текст назначен: {field}",
+ "ocr.assignBad": "Выделенный текст не похож на допустимое значение для {field}"
 }

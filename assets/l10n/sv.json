@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Skicka en länk för att återställa lösenordet till {email}?",
  "login.apple": "Logga in med Apple",
  "auth.appleCancelled": "Inloggning med Apple avbröts.",
- "auth.appleFailed": "Inloggning med Apple misslyckades: {error}"
+ "auth.appleFailed": "Inloggning med Apple misslyckades: {error}",
+ "tyre.group": "Grupp (valfritt)",
+ "tyre.presets": "Föreslagna namn",
+ "tyre.sizesHint": "t.ex. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Lägg till grupp",
+ "tyre.splitRim": "Dela upp efter fälg",
+ "tyre.oneRim": "Alla dimensioner har samma fälg.",
+ "tyre.front": "Fram",
+ "tyre.rear": "Bak",
+ "tyre.summer": "Sommar",
+ "tyre.winter": "Vinter",
+ "tyre.allSeason": "Helår",
+ "tyre.rim": "{n}-tums fälg",
+ "ocr.assign": "Tilldela till…",
+ "ocr.assignTitle": "Vilket fält är det här?",
+ "ocr.assignHint": "Saknas något? Öppna ”{button}”, markera texten och välj ”Tilldela till…”.",
+ "ocr.assigned": "Texten tilldelad till {field}",
+ "ocr.assignBad": "Den markerade texten verkar inte vara giltig för {field}"
 }

@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Да се изпрати ли на {email} връзка за нулиране на паролата?",
  "login.apple": "Вход с Apple",
  "auth.appleCancelled": "Входът с Apple е отказан.",
- "auth.appleFailed": "Входът с Apple е неуспешен: {error}"
+ "auth.appleFailed": "Входът с Apple е неуспешен: {error}",
+ "tyre.group": "Група (по избор)",
+ "tyre.presets": "Предложени имена",
+ "tyre.sizesHint": "напр. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Добави група",
+ "tyre.splitRim": "Раздели по джанта",
+ "tyre.oneRim": "Всички размери са за една и съща джанта.",
+ "tyre.front": "Предни",
+ "tyre.rear": "Задни",
+ "tyre.summer": "Летни",
+ "tyre.winter": "Зимни",
+ "tyre.allSeason": "Всесезонни",
+ "tyre.rim": "Джанта {n}\"",
+ "ocr.assign": "Присвои към…",
+ "ocr.assignTitle": "Към кое поле е това?",
+ "ocr.assignHint": "Липсва ли нещо? Отворете „{button}“, маркирайте текста и изберете „Присвои към…“.",
+ "ocr.assigned": "Текстът е присвоен към {field}",
+ "ocr.assignBad": "Маркираният текст не изглежда валиден за {field}"
 }

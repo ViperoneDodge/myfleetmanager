@@ -461,5 +461,22 @@
  "login.forgotConfirm": "{email}(으)로 비밀번호 재설정 링크를 보낼까요?",
  "login.apple": "Apple로 로그인",
  "auth.appleCancelled": "Apple 로그인이 취소되었습니다.",
- "auth.appleFailed": "Apple 로그인 실패: {error}"
+ "auth.appleFailed": "Apple 로그인 실패: {error}",
+ "tyre.group": "그룹 (선택)",
+ "tyre.presets": "추천 이름",
+ "tyre.sizesHint": "예: 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "그룹 추가",
+ "tyre.splitRim": "림별로 나누기",
+ "tyre.oneRim": "모든 규격의 림이 같습니다.",
+ "tyre.front": "앞",
+ "tyre.rear": "뒤",
+ "tyre.summer": "여름용",
+ "tyre.winter": "겨울용",
+ "tyre.allSeason": "사계절용",
+ "tyre.rim": "{n}인치 림",
+ "ocr.assign": "지정…",
+ "ocr.assignTitle": "어느 항목인가요?",
+ "ocr.assignHint": "빠진 항목이 있나요? \"{button}\"를 열고 텍스트를 선택한 뒤 \"지정…\"을 누르세요.",
+ "ocr.assigned": "{field}에 지정했습니다",
+ "ocr.assignBad": "선택한 텍스트가 올바른 {field} 값이 아닌 것 같습니다"
 }

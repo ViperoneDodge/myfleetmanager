@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Αποστολή συνδέσμου επαναφοράς κωδικού στο {email};",
  "login.apple": "Σύνδεση με Apple",
  "auth.appleCancelled": "Η σύνδεση με Apple ακυρώθηκε.",
- "auth.appleFailed": "Η σύνδεση με Apple απέτυχε: {error}"
+ "auth.appleFailed": "Η σύνδεση με Apple απέτυχε: {error}",
+ "tyre.group": "Ομάδα (προαιρετικό)",
+ "tyre.presets": "Προτεινόμενα ονόματα",
+ "tyre.sizesHint": "π.χ. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Προσθήκη ομάδας",
+ "tyre.splitRim": "Διαχωρισμός ανά ζάντα",
+ "tyre.oneRim": "Όλα τα μεγέθη έχουν την ίδια ζάντα.",
+ "tyre.front": "Εμπρός",
+ "tyre.rear": "Πίσω",
+ "tyre.summer": "Θερινά",
+ "tyre.winter": "Χειμερινά",
+ "tyre.allSeason": "Τεσσάρων εποχών",
+ "tyre.rim": "Ζάντα {n}\"",
+ "ocr.assign": "Αντιστοίχιση σε…",
+ "ocr.assignTitle": "Σε ποιο πεδίο αντιστοιχεί;",
+ "ocr.assignHint": "Λείπει κάτι; Ανοίξτε «{button}», επιλέξτε το κείμενο και πατήστε «Αντιστοίχιση σε…».",
+ "ocr.assigned": "Το κείμενο αντιστοιχίστηκε σε {field}",
+ "ocr.assignBad": "Το επιλεγμένο κείμενο δεν φαίνεται έγκυρο για {field}"
 }

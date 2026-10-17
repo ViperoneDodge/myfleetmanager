@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Envoyer un lien de réinitialisation du mot de passe à {email} ?",
  "login.apple": "Se connecter avec Apple",
  "auth.appleCancelled": "Connexion avec Apple annulée.",
- "auth.appleFailed": "Échec de la connexion avec Apple : {error}"
+ "auth.appleFailed": "Échec de la connexion avec Apple : {error}",
+ "tyre.group": "Groupe (facultatif)",
+ "tyre.presets": "Noms suggérés",
+ "tyre.sizesHint": "ex. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Ajouter un groupe",
+ "tyre.splitRim": "Diviser par jante",
+ "tyre.oneRim": "Toutes les dimensions ont la même jante.",
+ "tyre.front": "Avant",
+ "tyre.rear": "Arrière",
+ "tyre.summer": "Été",
+ "tyre.winter": "Hiver",
+ "tyre.allSeason": "4 saisons",
+ "tyre.rim": "Jante {n}\"",
+ "ocr.assign": "Attribuer à…",
+ "ocr.assignTitle": "À quel champ correspond-il ?",
+ "ocr.assignHint": "Il manque une donnée ? Ouvrez « {button} », sélectionnez le texte et choisissez « Attribuer à… ».",
+ "ocr.assigned": "Texte attribué à {field}",
+ "ocr.assignBad": "Le texte sélectionné ne semble pas valide pour {field}"
 }

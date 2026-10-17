@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Senda tengil til að endurstilla lykilorð á {email}?",
  "login.apple": "Skrá inn með Apple",
  "auth.appleCancelled": "Hætt við innskráningu með Apple.",
- "auth.appleFailed": "Innskráning með Apple mistókst: {error}"
+ "auth.appleFailed": "Innskráning með Apple mistókst: {error}",
+ "tyre.group": "Hópur (valfrjálst)",
+ "tyre.presets": "Tillögur að nöfnum",
+ "tyre.sizesHint": "t.d. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Bæta við hópi",
+ "tyre.splitRim": "Skipta eftir felgu",
+ "tyre.oneRim": "Allar stærðir eru með sömu felgu.",
+ "tyre.front": "Framan",
+ "tyre.rear": "Aftan",
+ "tyre.summer": "Sumar",
+ "tyre.winter": "Vetrar",
+ "tyre.allSeason": "Heilsárs",
+ "tyre.rim": "{n}\" felga",
+ "ocr.assign": "Úthluta í…",
+ "ocr.assignTitle": "Í hvaða reit á þetta?",
+ "ocr.assignHint": "Vantar eitthvað? Opnaðu „{button}“, veldu textann og veldu „Úthluta í…“.",
+ "ocr.assigned": "Texta úthlutað í {field}",
+ "ocr.assignBad": "Valinn texti virðist ekki gildur fyrir {field}"
 }

@@ -461,5 +461,22 @@
  "login.forgotConfirm": "{email} पर पासवर्ड रीसेट करने का लिंक भेजें?",
  "login.apple": "Apple से साइन इन करें",
  "auth.appleCancelled": "Apple से साइन इन रद्द किया गया।",
- "auth.appleFailed": "Apple से साइन इन विफल: {error}"
+ "auth.appleFailed": "Apple से साइन इन विफल: {error}",
+ "tyre.group": "समूह (वैकल्पिक)",
+ "tyre.presets": "सुझाए गए नाम",
+ "tyre.sizesHint": "जैसे 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "समूह जोड़ें",
+ "tyre.splitRim": "रिम के अनुसार बाँटें",
+ "tyre.oneRim": "सभी साइज़ का रिम एक ही है।",
+ "tyre.front": "आगे",
+ "tyre.rear": "पीछे",
+ "tyre.summer": "गर्मी",
+ "tyre.winter": "सर्दी",
+ "tyre.allSeason": "ऑल-सीज़न",
+ "tyre.rim": "{n}\" रिम",
+ "ocr.assign": "इसे सौंपें…",
+ "ocr.assignTitle": "यह किस फ़ील्ड का है?",
+ "ocr.assignHint": "कुछ छूट गया? \"{button}\" खोलें, टेक्स्ट चुनें और \"इसे सौंपें…\" चुनें।",
+ "ocr.assigned": "टेक्स्ट {field} को सौंपा गया",
+ "ocr.assignBad": "चुना गया टेक्स्ट {field} के लिए मान्य नहीं लगता"
 }

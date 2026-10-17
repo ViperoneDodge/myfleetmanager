@@ -461,3 +461,20 @@ Lähetetäänkö salasanan palautuslinkki osoitteeseen {email}?
 Kirjaudu Applella
 Applella kirjautuminen peruttu.
 Applella kirjautuminen epäonnistui: {error}
+Ryhmä (valinnainen)
+Ehdotetut nimet
+esim. 225/45 R17 91W; 205/55 R16 91V
+Lisää ryhmä
+Jaa vanteen mukaan
+Kaikilla koilla on sama vanne.
+Edessä
+Takana
+Kesä
+Talvi
+Ympärivuotiset
+{n}" vanne
+Määritä kenttään…
+Mihin kenttään tämä kuuluu?
+Puuttuuko jotain? Avaa ”{button}”, valitse teksti ja valitse ”Määritä kenttään…”.
+Teksti määritetty: {field}
+Valittu teksti ei näytä kelvolliselta kenttään {field}

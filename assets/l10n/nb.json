@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Sende en lenke for å tilbakestille passordet til {email}?",
  "login.apple": "Logg på med Apple",
  "auth.appleCancelled": "Pålogging med Apple avbrutt.",
- "auth.appleFailed": "Pålogging med Apple mislyktes: {error}"
+ "auth.appleFailed": "Pålogging med Apple mislyktes: {error}",
+ "tyre.group": "Gruppe (valgfritt)",
+ "tyre.presets": "Foreslåtte navn",
+ "tyre.sizesHint": "f.eks. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Legg til gruppe",
+ "tyre.splitRim": "Del opp etter felg",
+ "tyre.oneRim": "Alle dimensjoner har samme felg.",
+ "tyre.front": "Foran",
+ "tyre.rear": "Bak",
+ "tyre.summer": "Sommer",
+ "tyre.winter": "Vinter",
+ "tyre.allSeason": "Helårs",
+ "tyre.rim": "{n}\" felg",
+ "ocr.assign": "Tilordne til…",
+ "ocr.assignTitle": "Hvilket felt er dette?",
+ "ocr.assignHint": "Mangler noe? Åpne «{button}», merk teksten og velg «Tilordne til…».",
+ "ocr.assigned": "Tekst tilordnet {field}",
+ "ocr.assignBad": "Den merkede teksten ser ikke ut som en gyldig {field}"
 }

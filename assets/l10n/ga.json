@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Nasc chun an pasfhocal a athshocrú a sheoladh chuig {email}?",
  "login.apple": "Sínigh isteach le Apple",
  "auth.appleCancelled": "Cealaíodh síniú isteach le Apple.",
- "auth.appleFailed": "Theip ar shíniú isteach le Apple: {error}"
+ "auth.appleFailed": "Theip ar shíniú isteach le Apple: {error}",
+ "tyre.group": "Grúpa (roghnach)",
+ "tyre.presets": "Ainmneacha molta",
+ "tyre.sizesHint": "m.sh. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Cuir grúpa leis",
+ "tyre.splitRim": "Roinn de réir rotha",
+ "tyre.oneRim": "Tá an roth céanna ag gach méid.",
+ "tyre.front": "Tosaigh",
+ "tyre.rear": "Cúil",
+ "tyre.summer": "Samhraidh",
+ "tyre.winter": "Geimhridh",
+ "tyre.allSeason": "Uile-shéasúr",
+ "tyre.rim": "Roth {n}\"",
+ "ocr.assign": "Sann do…",
+ "ocr.assignTitle": "Cén réimse é seo?",
+ "ocr.assignHint": "An bhfuil rud ar iarraidh? Oscail \"{button}\", roghnaigh an téacs agus roghnaigh \"Sann do…\".",
+ "ocr.assigned": "Téacs sannta do {field}",
+ "ocr.assignBad": "Ní cosúil gur {field} bailí é an téacs roghnaithe"
 }

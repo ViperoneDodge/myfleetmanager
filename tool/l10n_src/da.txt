@@ -461,3 +461,20 @@ Send et link til nulstilling af adgangskoden til {email}?
 Log ind med Apple
 Login med Apple annulleret.
 Login med Apple mislykkedes: {error}
+Gruppe (valgfri)
+Foreslåede navne
+f.eks. 225/45 R17 91W; 205/55 R16 91V
+Tilføj gruppe
+Opdel efter fælg
+Alle dimensioner har samme fælg.
+Foran
+Bag
+Sommer
+Vinter
+Helårs
+{n}" fælg
+Tildel til…
+Hvilket felt er det?
+Mangler der noget? Åbn "{button}", markér teksten og vælg "Tildel til…".
+Tekst tildelt {field}
+Den markerede tekst ligner ikke en gyldig {field}

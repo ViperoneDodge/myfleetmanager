@@ -461,3 +461,20 @@ Poslať na {email} odkaz na obnovenie hesla?
 Prihlásiť sa cez Apple
 Prihlásenie cez Apple zrušené.
 Prihlásenie cez Apple zlyhalo: {error}
+Skupina (nepovinné)
+Navrhované názvy
+napr. 225/45 R17 91W; 205/55 R16 91V
+Pridať skupinu
+Rozdeliť podľa disku
+Všetky rozmery majú rovnaký disk.
+Predné
+Zadné
+Letné
+Zimné
+Celoročné
+Disk {n}"
+Priradiť k…
+Ku ktorému údaju patrí?
+Niečo chýba? Otvorte „{button}“, označte text a zvoľte „Priradiť k…“.
+Text priradený k: {field}
+Označený text nie je platný údaj pre {field}

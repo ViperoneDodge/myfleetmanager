@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Gửi liên kết đặt lại mật khẩu đến {email}?",
  "login.apple": "Đăng nhập bằng Apple",
  "auth.appleCancelled": "Đã hủy đăng nhập bằng Apple.",
- "auth.appleFailed": "Đăng nhập bằng Apple thất bại: {error}"
+ "auth.appleFailed": "Đăng nhập bằng Apple thất bại: {error}",
+ "tyre.group": "Nhóm (tùy chọn)",
+ "tyre.presets": "Tên gợi ý",
+ "tyre.sizesHint": "vd. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Thêm nhóm",
+ "tyre.splitRim": "Chia theo vành",
+ "tyre.oneRim": "Mọi cỡ lốp đều cùng vành.",
+ "tyre.front": "Trước",
+ "tyre.rear": "Sau",
+ "tyre.summer": "Mùa hè",
+ "tyre.winter": "Mùa đông",
+ "tyre.allSeason": "Bốn mùa",
+ "tyre.rim": "Vành {n}\"",
+ "ocr.assign": "Gán cho…",
+ "ocr.assignTitle": "Đây là trường nào?",
+ "ocr.assignHint": "Thiếu dữ liệu? Mở \"{button}\", chọn văn bản rồi chọn \"Gán cho…\".",
+ "ocr.assigned": "Đã gán văn bản cho {field}",
+ "ocr.assignBad": "Văn bản đã chọn có vẻ không hợp lệ cho {field}"
 }

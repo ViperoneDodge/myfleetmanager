@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Kirim tautan atur ulang kata sandi ke {email}?",
  "login.apple": "Masuk dengan Apple",
  "auth.appleCancelled": "Masuk dengan Apple dibatalkan.",
- "auth.appleFailed": "Gagal masuk dengan Apple: {error}"
+ "auth.appleFailed": "Gagal masuk dengan Apple: {error}",
+ "tyre.group": "Grup (opsional)",
+ "tyre.presets": "Nama yang disarankan",
+ "tyre.sizesHint": "mis. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Tambah grup",
+ "tyre.splitRim": "Pisahkan per pelek",
+ "tyre.oneRim": "Semua ukuran memakai pelek yang sama.",
+ "tyre.front": "Depan",
+ "tyre.rear": "Belakang",
+ "tyre.summer": "Musim panas",
+ "tyre.winter": "Musim dingin",
+ "tyre.allSeason": "Segala musim",
+ "tyre.rim": "Pelek {n}\"",
+ "ocr.assign": "Tetapkan ke…",
+ "ocr.assignTitle": "Ini kolom yang mana?",
+ "ocr.assignHint": "Ada yang kurang? Buka \"{button}\", pilih teksnya lalu pilih \"Tetapkan ke…\".",
+ "ocr.assigned": "Teks ditetapkan ke {field}",
+ "ocr.assignBad": "Teks yang dipilih tampaknya bukan {field} yang valid"
 }

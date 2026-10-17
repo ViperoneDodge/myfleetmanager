@@ -461,5 +461,22 @@
  "login.forgotConfirm": "ส่งลิงก์รีเซ็ตรหัสผ่านไปที่ {email} ไหม",
  "login.apple": "ลงชื่อเข้าใช้ด้วย Apple",
  "auth.appleCancelled": "ยกเลิกการลงชื่อเข้าใช้ด้วย Apple แล้ว",
- "auth.appleFailed": "ลงชื่อเข้าใช้ด้วย Apple ไม่สำเร็จ: {error}"
+ "auth.appleFailed": "ลงชื่อเข้าใช้ด้วย Apple ไม่สำเร็จ: {error}",
+ "tyre.group": "กลุ่ม (ไม่บังคับ)",
+ "tyre.presets": "ชื่อที่แนะนำ",
+ "tyre.sizesHint": "เช่น 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "เพิ่มกลุ่ม",
+ "tyre.splitRim": "แบ่งตามขอบล้อ",
+ "tyre.oneRim": "ทุกขนาดใช้ขอบล้อเดียวกัน",
+ "tyre.front": "หน้า",
+ "tyre.rear": "หลัง",
+ "tyre.summer": "ฤดูร้อน",
+ "tyre.winter": "ฤดูหนาว",
+ "tyre.allSeason": "ทุกฤดู",
+ "tyre.rim": "ขอบ {n} นิ้ว",
+ "ocr.assign": "กำหนดเป็น…",
+ "ocr.assignTitle": "ข้อมูลนี้คือช่องใด",
+ "ocr.assignHint": "ขาดข้อมูลใช่ไหม เปิด \"{button}\" เลือกข้อความแล้วแตะ \"กำหนดเป็น…\"",
+ "ocr.assigned": "กำหนดข้อความเป็น {field} แล้ว",
+ "ocr.assignBad": "ข้อความที่เลือกดูไม่ใช่ {field} ที่ถูกต้อง"
 }

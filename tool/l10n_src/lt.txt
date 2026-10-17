@@ -461,3 +461,20 @@ Siųsti slaptažodžio atkūrimo nuorodą į {email}?
 Prisijungti su Apple
 Prisijungimas su Apple atšauktas.
 Prisijungti su Apple nepavyko: {error}
+Grupė (neprivaloma)
+Siūlomi pavadinimai
+pvz. 225/45 R17 91W; 205/55 R16 91V
+Pridėti grupę
+Skirstyti pagal ratlankį
+Visi dydžiai tam pačiam ratlankiui.
+Priekinės
+Galinės
+Vasarinės
+Žieminės
+Universalios
+{n}" ratlankis
+Priskirti…
+Kuriam laukui tai priklauso?
+Kažko trūksta? Atidarykite „{button}“, pažymėkite tekstą ir pasirinkite „Priskirti…“.
+Tekstas priskirtas: {field}
+Pažymėtas tekstas netinka laukui {field}

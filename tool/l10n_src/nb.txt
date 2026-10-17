@@ -461,3 +461,20 @@ Sende en lenke for å tilbakestille passordet til {email}?
 Logg på med Apple
 Pålogging med Apple avbrutt.
 Pålogging med Apple mislyktes: {error}
+Gruppe (valgfritt)
+Foreslåtte navn
+f.eks. 225/45 R17 91W; 205/55 R16 91V
+Legg til gruppe
+Del opp etter felg
+Alle dimensjoner har samme felg.
+Foran
+Bak
+Sommer
+Vinter
+Helårs
+{n}" felg
+Tilordne til…
+Hvilket felt er dette?
+Mangler noe? Åpne «{button}», merk teksten og velg «Tilordne til…».
+Tekst tilordnet {field}
+Den merkede teksten ser ikke ut som en gyldig {field}

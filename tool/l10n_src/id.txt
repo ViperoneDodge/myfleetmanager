@@ -461,3 +461,20 @@ Kirim tautan atur ulang kata sandi ke {email}?
 Masuk dengan Apple
 Masuk dengan Apple dibatalkan.
 Gagal masuk dengan Apple: {error}
+Grup (opsional)
+Nama yang disarankan
+mis. 225/45 R17 91W; 205/55 R16 91V
+Tambah grup
+Pisahkan per pelek
+Semua ukuran memakai pelek yang sama.
+Depan
+Belakang
+Musim panas
+Musim dingin
+Segala musim
+Pelek {n}"
+Tetapkan ke…
+Ini kolom yang mana?
+Ada yang kurang? Buka "{button}", pilih teksnya lalu pilih "Tetapkan ke…".
+Teks ditetapkan ke {field}
+Teks yang dipilih tampaknya bukan {field} yang valid

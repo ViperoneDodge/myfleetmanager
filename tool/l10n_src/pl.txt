@@ -461,3 +461,20 @@ Wysłać na {email} link do zresetowania hasła?
 Zaloguj się przez Apple
 Logowanie przez Apple anulowane.
 Logowanie przez Apple nie powiodło się: {error}
+Grupa (opcjonalnie)
+Sugerowane nazwy
+np. 225/45 R17 91W; 205/55 R16 91V
+Dodaj grupę
+Podziel według felgi
+Wszystkie rozmiary mają tę samą felgę.
+Przednie
+Tylne
+Letnie
+Zimowe
+Całoroczne
+Felga {n}"
+Przypisz do…
+Do którego pola to pasuje?
+Czegoś brakuje? Otwórz „{button}”, zaznacz tekst i wybierz „Przypisz do…”.
+Tekst przypisany do: {field}
+Zaznaczony tekst nie wygląda na poprawną wartość: {field}

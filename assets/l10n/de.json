@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Einen Link zum Zurücksetzen des Passworts an {email} senden?",
  "login.apple": "Mit Apple anmelden",
  "auth.appleCancelled": "Anmeldung mit Apple abgebrochen.",
- "auth.appleFailed": "Anmeldung mit Apple fehlgeschlagen: {error}"
+ "auth.appleFailed": "Anmeldung mit Apple fehlgeschlagen: {error}",
+ "tyre.group": "Gruppe (optional)",
+ "tyre.presets": "Vorschläge",
+ "tyre.sizesHint": "z. B. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Gruppe hinzufügen",
+ "tyre.splitRim": "Nach Felge aufteilen",
+ "tyre.oneRim": "Alle Größen haben dieselbe Felge.",
+ "tyre.front": "Vorne",
+ "tyre.rear": "Hinten",
+ "tyre.summer": "Sommer",
+ "tyre.winter": "Winter",
+ "tyre.allSeason": "Ganzjahres",
+ "tyre.rim": "{n}-Zoll-Felge",
+ "ocr.assign": "Zuordnen zu…",
+ "ocr.assignTitle": "Welches Feld ist das?",
+ "ocr.assignHint": "Fehlt etwas? Öffne „{button}“, markiere den Text und wähle „Zuordnen zu…“.",
+ "ocr.assigned": "Text {field} zugeordnet",
+ "ocr.assignBad": "Der markierte Text ist kein gültiger Wert für {field}"
 }

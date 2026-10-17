@@ -4,19 +4,23 @@ import 'dart:ui' show Rect;
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 import 'package:printing/printing.dart';
 
+import 'tyres.dart';
+
 class RegistrationData {
   String? plate;
   DateTime? registrationDate;
   String? vin;
   String? powerKw;
   String? engineCc;
+  List<String> tyres = [];
 
   bool get isEmpty =>
       plate == null &&
       registrationDate == null &&
       vin == null &&
       powerKw == null &&
-      engineCc == null;
+      engineCc == null &&
+      tyres.isEmpty;
 }
 
 class RegistrationReader {
@@ -136,6 +140,50 @@ class RegistrationReader {
     return out;
   }
 
+  static bool assign(RegistrationData d, String field, String text) {
+    final u = text.toUpperCase().trim();
+    switch (field) {
+      case 'plate':
+        final p = u.replaceAll(RegExp(r'[\s\-.]'), '');
+        if (!RegExp(r'^[A-Z0-9]{3,10}$').hasMatch(p)) return false;
+        d.plate = p;
+        return true;
+      case 'reg':
+        final iso = _isoDate.firstMatch(u);
+        final m = _date.firstMatch(u);
+        final dt = iso != null
+            ? _toDate(RegExp(r'(\d+)-(\d+)-(\d+)').firstMatch('${iso.group(3)}-${iso.group(2)}-${iso.group(1)}')!)
+            : (m == null ? null : _toDate(m));
+        if (dt == null) return false;
+        d.registrationDate = dt;
+        return true;
+      case 'vin':
+        final v = u.replaceAll(RegExp(r'[^A-Z0-9]'), '');
+        if (v.length < 5 || v.length > 17) return false;
+        d.vin = v;
+        return true;
+      case 'power':
+      case 'cc':
+        final n = RegExp(r'\d{1,5}(?:[.,]\d+)?').firstMatch(u);
+        if (n == null) return false;
+        final value = _num(n.group(0)!);
+        if (field == 'power') {
+          d.powerKw = value;
+        } else {
+          d.engineCc = value.split('.').first;
+        }
+        return true;
+      case 'tyres':
+        final sizes = TyreSet.findSizes(u);
+        if (sizes.isEmpty) return false;
+        for (final s in sizes) {
+          if (!d.tyres.contains(s)) d.tyres.add(s);
+        }
+        return true;
+    }
+    return false;
+  }
+
   static RegistrationData parse(String raw) {
     final values = labelValues(raw.replaceAll('\r', ''));
     final data = RegistrationData();
@@ -195,6 +243,8 @@ class RegistrationReader {
         break;
       }
     }
+
+    data.tyres = TyreSet.findSizes(raw);
 
     return data;
   }

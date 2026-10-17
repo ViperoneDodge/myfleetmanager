@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Poslať na {email} odkaz na obnovenie hesla?",
  "login.apple": "Prihlásiť sa cez Apple",
  "auth.appleCancelled": "Prihlásenie cez Apple zrušené.",
- "auth.appleFailed": "Prihlásenie cez Apple zlyhalo: {error}"
+ "auth.appleFailed": "Prihlásenie cez Apple zlyhalo: {error}",
+ "tyre.group": "Skupina (nepovinné)",
+ "tyre.presets": "Navrhované názvy",
+ "tyre.sizesHint": "napr. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Pridať skupinu",
+ "tyre.splitRim": "Rozdeliť podľa disku",
+ "tyre.oneRim": "Všetky rozmery majú rovnaký disk.",
+ "tyre.front": "Predné",
+ "tyre.rear": "Zadné",
+ "tyre.summer": "Letné",
+ "tyre.winter": "Zimné",
+ "tyre.allSeason": "Celoročné",
+ "tyre.rim": "Disk {n}\"",
+ "ocr.assign": "Priradiť k…",
+ "ocr.assignTitle": "Ku ktorému údaju patrí?",
+ "ocr.assignHint": "Niečo chýba? Otvorte „{button}“, označte text a zvoľte „Priradiť k…“.",
+ "ocr.assigned": "Text priradený k: {field}",
+ "ocr.assignBad": "Označený text nie je platný údaj pre {field}"
 }

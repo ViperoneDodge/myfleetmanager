@@ -461,3 +461,20 @@ Grupta paylaşılan belgeleri görmek için Pro sürümü gerekir.
 Apple ile giriş yap
 Apple ile giriş iptal edildi.
 Apple ile giriş başarısız: {error}
+Grup (isteğe bağlı)
+Önerilen adlar
+örn. 225/45 R17 91W; 205/55 R16 91V
+Grup ekle
+Janta göre ayır
+Tüm ölçüler aynı jant için.
+Ön
+Arka
+Yaz
+Kış
+Dört mevsim
+{n}" jant
+Şuna ata…
+Bu hangi alan?
+Eksik bir şey mi var? "{button}"i açın, metni seçin ve "Şuna ata…"yı seçin.
+Metin {field} alanına atandı
+Seçilen metin {field} için geçerli görünmüyor

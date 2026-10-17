@@ -7,6 +7,7 @@ import 'package:image_picker/image_picker.dart';
 import '../l10n.dart';
 import 'photo_crop_screen.dart';
 import '../main.dart';
+import '../services/tyres.dart';
 import '../services/app_state.dart';
 import '../models.dart';
 import '../theme.dart';
@@ -27,7 +28,10 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   late final TextEditingController _plate = TextEditingController(text: v.plate);
   late final TextEditingController _notes = TextEditingController(text: v.notes);
   late final TextEditingController _vin = TextEditingController(text: v.vin);
-  late final TextEditingController _tyres = TextEditingController(text: v.tyres);
+  late final List<({TextEditingController label, TextEditingController sizes})> _tyreSets = [
+    for (final s in TyreSet.parse(v.tyres)) _tyreSet(s),
+    if (TyreSet.parse(v.tyres).isEmpty) _tyreSet(TyreSet()),
+  ];
   late final TextEditingController _power = TextEditingController(text: v.powerKw);
   late final TextEditingController _cc = TextEditingController(text: v.engineCc);
   final Map<String, TextEditingController> _labels = {};
@@ -62,7 +66,10 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     _plate.dispose();
     _notes.dispose();
     _vin.dispose();
-    _tyres.dispose();
+    for (final s in _tyreSets) {
+      s.label.dispose();
+      s.sizes.dispose();
+    }
     _power.dispose();
     _cc.dispose();
     for (final c in _labels.values) {
@@ -208,7 +215,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     v.name = _name.text.trim();
     v.notes = _notes.text.trim();
     v.vin = _vin.text.trim().toUpperCase();
-    v.tyres = _tyres.text.trim();
+    v.tyres = TyreSet.format(_tyreSnapshot());
     v.powerKw = _power.text.trim();
     v.engineCc = _cc.text.trim();
     for (final d in v.deadlines.where((d) => d.kind == DeadlineKind.custom)) {
@@ -356,7 +363,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
           Text(tr('tech.title'), style: Theme.of(context).textTheme.titleMedium),
           const SizedBox(height: 8),
           _techField(_vin, tr('tech.vin'), Icons.qr_code_2, caps: true),
-          _techField(_tyres, tr('tech.tyres'), Icons.tire_repair_outlined),
+          _tyreEditor(scheme),
           Row(children: [
             Expanded(child: _techField(_power, tr('tech.power'), Icons.speed, number: true)),
             const SizedBox(width: 10),
@@ -402,6 +409,117 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
           const SizedBox(height: 24),
         ],
       ),
+      ),
+    );
+  }
+
+  static ({TextEditingController label, TextEditingController sizes}) _tyreSet(TyreSet s) =>
+      (label: TextEditingController(text: s.label), sizes: TextEditingController(text: s.sizeList.join('; ')));
+
+  List<TyreSet> _tyreSnapshot() =>
+      [for (final s in _tyreSets) TyreSet(label: s.label.text.trim(), sizes: s.sizes.text)];
+
+  void _splitByRim() {
+    final all = [for (final s in _tyreSnapshot()) ...s.sizeList];
+    final sets = TyreSet.byRim(all, (r) => tr('tyre.rim', {'n': r}));
+    if (sets.length < 2) {
+      showSnack(context, tr('tyre.oneRim'));
+      return;
+    }
+    setState(() {
+      for (final s in _tyreSets) {
+        s.label.dispose();
+        s.sizes.dispose();
+      }
+      _tyreSets
+        ..clear()
+        ..addAll(sets.map(_tyreSet));
+    });
+  }
+
+  Widget _tyreEditor(ColorScheme scheme) {
+    final rims = {
+      for (final s in _tyreSnapshot())
+        for (final z in s.sizeList) TyreSet.rimOf(z),
+    }.where((r) => r.isNotEmpty).toList()
+      ..sort((a, b) => (double.tryParse(a) ?? 0).compareTo(double.tryParse(b) ?? 0));
+    final presets = [
+      tr('tyre.front'),
+      tr('tyre.rear'),
+      tr('tyre.summer'),
+      tr('tyre.winter'),
+      tr('tyre.allSeason'),
+      for (final r in rims) tr('tyre.rim', {'n': r}),
+    ];
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: InputDecorator(
+        decoration: InputDecoration(
+          label: Row(mainAxisSize: MainAxisSize.min, children: [
+            const Icon(Icons.tire_repair_outlined, size: 18),
+            const SizedBox(width: 6),
+            Text(tr('tech.tyres')),
+          ]),
+          filled: true,
+          isDense: true,
+          border: const OutlineInputBorder(),
+          contentPadding: const EdgeInsets.fromLTRB(12, 14, 4, 4),
+        ),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+          for (var i = 0; i < _tyreSets.length; i++) ...[
+            if (i > 0) const Divider(height: 16),
+            Row(children: [
+              Expanded(
+                child: TextField(
+                  controller: _tyreSets[i].label,
+                  textCapitalization: TextCapitalization.sentences,
+                  style: const TextStyle(fontWeight: FontWeight.w600),
+                  decoration: InputDecoration(
+                    isDense: true,
+                    border: InputBorder.none,
+                    hintText: tr('tyre.group'),
+                    suffixIcon: PopupMenuButton<String>(
+                      tooltip: tr('tyre.presets'),
+                      icon: const Icon(Icons.arrow_drop_down),
+                      onSelected: (s) => setState(() => _tyreSets[i].label.text = s),
+                      itemBuilder: (_) => [for (final s in presets) PopupMenuItem(value: s, child: Text(s))],
+                    ),
+                  ),
+                ),
+              ),
+              if (_tyreSets.length > 1)
+                IconButton(
+                  tooltip: tr('common.delete'),
+                  icon: const Icon(Icons.close),
+                  onPressed: () => setState(() {
+                    final s = _tyreSets.removeAt(i);
+                    s.label.dispose();
+                    s.sizes.dispose();
+                  }),
+                ),
+            ]),
+            TextField(
+              controller: _tyreSets[i].sizes,
+              minLines: 1,
+              maxLines: 4,
+              onChanged: (_) => setState(() {}),
+              decoration: InputDecoration(isDense: true, hintText: tr('tyre.sizesHint')),
+            ),
+          ],
+          const SizedBox(height: 6),
+          Wrap(spacing: 4, children: [
+            TextButton.icon(
+              onPressed: () => setState(() => _tyreSets.add(_tyreSet(TyreSet()))),
+              icon: const Icon(Icons.add),
+              label: Text(tr('tyre.add')),
+            ),
+            TextButton.icon(
+              onPressed: _splitByRim,
+              icon: const Icon(Icons.call_split),
+              label: Text(tr('tyre.splitRim')),
+            ),
+          ]),
+        ]),
       ),
     );
   }

@@ -461,3 +461,20 @@ Elküldjük a jelszó-visszaállító linket a(z) {email} címre?
 Bejelentkezés Apple-lel
 Az Apple-bejelentkezés megszakítva.
 Az Apple-bejelentkezés sikertelen: {error}
+Csoport (nem kötelező)
+Javasolt nevek
+pl. 225/45 R17 91W; 205/55 R16 91V
+Csoport hozzáadása
+Felosztás felni szerint
+Minden méret ugyanarra a felnire való.
+Első
+Hátsó
+Nyári
+Téli
+Négyévszakos
+{n}" felni
+Hozzárendelés…
+Melyik mezőhöz tartozik?
+Hiányzik valami? Nyisd meg a „{button}” részt, jelöld ki a szöveget, és válaszd a „Hozzárendelés…” lehetőséget.
+Szöveg hozzárendelve: {field}
+A kijelölt szöveg nem érvényes érték ehhez: {field}

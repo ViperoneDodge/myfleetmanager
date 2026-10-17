@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Send a password reset link to {email}?",
  "login.apple": "Sign in with Apple",
  "auth.appleCancelled": "Sign in with Apple cancelled.",
- "auth.appleFailed": "Sign in with Apple failed: {error}"
+ "auth.appleFailed": "Sign in with Apple failed: {error}",
+ "tyre.group": "Group (optional)",
+ "tyre.presets": "Suggested names",
+ "tyre.sizesHint": "e.g. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Add group",
+ "tyre.splitRim": "Split by rim",
+ "tyre.oneRim": "All sizes have the same rim.",
+ "tyre.front": "Front",
+ "tyre.rear": "Rear",
+ "tyre.summer": "Summer",
+ "tyre.winter": "Winter",
+ "tyre.allSeason": "All-season",
+ "tyre.rim": "{n}\" rim",
+ "ocr.assign": "Assign to…",
+ "ocr.assignTitle": "Which field is this?",
+ "ocr.assignHint": "Missing something? Open \"{button}\", select the text and choose \"Assign to…\".",
+ "ocr.assigned": "Text assigned to {field}",
+ "ocr.assignBad": "The selected text does not look like a valid {field}"
 }

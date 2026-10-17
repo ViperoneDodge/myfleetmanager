@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Lähetetäänkö salasanan palautuslinkki osoitteeseen {email}?",
  "login.apple": "Kirjaudu Applella",
  "auth.appleCancelled": "Applella kirjautuminen peruttu.",
- "auth.appleFailed": "Applella kirjautuminen epäonnistui: {error}"
+ "auth.appleFailed": "Applella kirjautuminen epäonnistui: {error}",
+ "tyre.group": "Ryhmä (valinnainen)",
+ "tyre.presets": "Ehdotetut nimet",
+ "tyre.sizesHint": "esim. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Lisää ryhmä",
+ "tyre.splitRim": "Jaa vanteen mukaan",
+ "tyre.oneRim": "Kaikilla koilla on sama vanne.",
+ "tyre.front": "Edessä",
+ "tyre.rear": "Takana",
+ "tyre.summer": "Kesä",
+ "tyre.winter": "Talvi",
+ "tyre.allSeason": "Ympärivuotiset",
+ "tyre.rim": "{n}\" vanne",
+ "ocr.assign": "Määritä kenttään…",
+ "ocr.assignTitle": "Mihin kenttään tämä kuuluu?",
+ "ocr.assignHint": "Puuttuuko jotain? Avaa ”{button}”, valitse teksti ja valitse ”Määritä kenttään…”.",
+ "ocr.assigned": "Teksti määritetty: {field}",
+ "ocr.assignBad": "Valittu teksti ei näytä kelvolliselta kenttään {field}"
 }

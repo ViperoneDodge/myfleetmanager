@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Nosūtīt uz {email} paroles atiestatīšanas saiti?",
  "login.apple": "Pierakstīties ar Apple",
  "auth.appleCancelled": "Pierakstīšanās ar Apple atcelta.",
- "auth.appleFailed": "Pierakstīšanās ar Apple neizdevās: {error}"
+ "auth.appleFailed": "Pierakstīšanās ar Apple neizdevās: {error}",
+ "tyre.group": "Grupa (nav obligāti)",
+ "tyre.presets": "Ieteiktie nosaukumi",
+ "tyre.sizesHint": "piem. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Pievienot grupu",
+ "tyre.splitRim": "Sadalīt pēc diska",
+ "tyre.oneRim": "Visiem izmēriem ir viens disks.",
+ "tyre.front": "Priekšējās",
+ "tyre.rear": "Aizmugurējās",
+ "tyre.summer": "Vasaras",
+ "tyre.winter": "Ziemas",
+ "tyre.allSeason": "Vissezonas",
+ "tyre.rim": "{n}\" disks",
+ "ocr.assign": "Piešķirt…",
+ "ocr.assignTitle": "Kuram laukam tas atbilst?",
+ "ocr.assignHint": "Kaut kā trūkst? Atver “{button}”, atlasi tekstu un izvēlies “Piešķirt…”.",
+ "ocr.assigned": "Teksts piešķirts: {field}",
+ "ocr.assignBad": "Atlasītais teksts neizskatās derīgs laukam {field}"
 }

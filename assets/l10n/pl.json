@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Wysłać na {email} link do zresetowania hasła?",
  "login.apple": "Zaloguj się przez Apple",
  "auth.appleCancelled": "Logowanie przez Apple anulowane.",
- "auth.appleFailed": "Logowanie przez Apple nie powiodło się: {error}"
+ "auth.appleFailed": "Logowanie przez Apple nie powiodło się: {error}",
+ "tyre.group": "Grupa (opcjonalnie)",
+ "tyre.presets": "Sugerowane nazwy",
+ "tyre.sizesHint": "np. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Dodaj grupę",
+ "tyre.splitRim": "Podziel według felgi",
+ "tyre.oneRim": "Wszystkie rozmiary mają tę samą felgę.",
+ "tyre.front": "Przednie",
+ "tyre.rear": "Tylne",
+ "tyre.summer": "Letnie",
+ "tyre.winter": "Zimowe",
+ "tyre.allSeason": "Całoroczne",
+ "tyre.rim": "Felga {n}\"",
+ "ocr.assign": "Przypisz do…",
+ "ocr.assignTitle": "Do którego pola to pasuje?",
+ "ocr.assignHint": "Czegoś brakuje? Otwórz „{button}”, zaznacz tekst i wybierz „Przypisz do…”.",
+ "ocr.assigned": "Tekst przypisany do: {field}",
+ "ocr.assignBad": "Zaznaczony tekst nie wygląda na poprawną wartość: {field}"
 }

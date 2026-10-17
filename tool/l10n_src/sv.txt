@@ -461,3 +461,20 @@ Skicka en länk för att återställa lösenordet till {email}?
 Logga in med Apple
 Inloggning med Apple avbröts.
 Inloggning med Apple misslyckades: {error}
+Grupp (valfritt)
+Föreslagna namn
+t.ex. 225/45 R17 91W; 205/55 R16 91V
+Lägg till grupp
+Dela upp efter fälg
+Alla dimensioner har samma fälg.
+Fram
+Bak
+Sommar
+Vinter
+Helår
+{n}-tums fälg
+Tilldela till…
+Vilket fält är det här?
+Saknas något? Öppna ”{button}”, markera texten och välj ”Tilldela till…”.
+Texten tilldelad till {field}
+Den markerade texten verkar inte vara giltig för {field}

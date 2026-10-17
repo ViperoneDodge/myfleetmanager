@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Poslati na {email} poveznicu za ponovno postavljanje lozinke?",
  "login.apple": "Prijava s Appleom",
  "auth.appleCancelled": "Prijava s Appleom otkazana.",
- "auth.appleFailed": "Prijava s Appleom nije uspjela: {error}"
+ "auth.appleFailed": "Prijava s Appleom nije uspjela: {error}",
+ "tyre.group": "Grupa (neobavezno)",
+ "tyre.presets": "Predloženi nazivi",
+ "tyre.sizesHint": "npr. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Dodaj grupu",
+ "tyre.splitRim": "Podijeli po naplatku",
+ "tyre.oneRim": "Sve dimenzije imaju isti naplatak.",
+ "tyre.front": "Prednje",
+ "tyre.rear": "Stražnje",
+ "tyre.summer": "Ljetne",
+ "tyre.winter": "Zimske",
+ "tyre.allSeason": "Cjelogodišnje",
+ "tyre.rim": "Naplatak {n}\"",
+ "ocr.assign": "Dodijeli…",
+ "ocr.assignTitle": "Kojem polju pripada?",
+ "ocr.assignHint": "Nešto nedostaje? Otvori «{button}», označi tekst i odaberi «Dodijeli…».",
+ "ocr.assigned": "Tekst dodijeljen: {field}",
+ "ocr.assignBad": "Označeni tekst nije valjan za {field}"
 }

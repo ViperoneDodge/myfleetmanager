@@ -461,3 +461,20 @@ Kas saata parooli lähtestamise link aadressile {email}?
 Logi sisse Apple’iga
 Apple’iga sisselogimine tühistati.
 Apple’iga sisselogimine ebaõnnestus: {error}
+Rühm (valikuline)
+Soovitatud nimed
+nt 225/45 R17 91W; 205/55 R16 91V
+Lisa rühm
+Jaga velje järgi
+Kõigil mõõtudel on sama velg.
+Ees
+Taga
+Suve
+Talve
+Aastaringsed
+{n}" velg
+Määra väljale…
+Millisele väljale see kuulub?
+Midagi puudu? Ava „{button}”, vali tekst ja vajuta „Määra väljale…”.
+Tekst määratud: {field}
+Valitud tekst ei tundu sobivat väljale {field}

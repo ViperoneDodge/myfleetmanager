@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Kas saata parooli lähtestamise link aadressile {email}?",
  "login.apple": "Logi sisse Apple’iga",
  "auth.appleCancelled": "Apple’iga sisselogimine tühistati.",
- "auth.appleFailed": "Apple’iga sisselogimine ebaõnnestus: {error}"
+ "auth.appleFailed": "Apple’iga sisselogimine ebaõnnestus: {error}",
+ "tyre.group": "Rühm (valikuline)",
+ "tyre.presets": "Soovitatud nimed",
+ "tyre.sizesHint": "nt 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Lisa rühm",
+ "tyre.splitRim": "Jaga velje järgi",
+ "tyre.oneRim": "Kõigil mõõtudel on sama velg.",
+ "tyre.front": "Ees",
+ "tyre.rear": "Taga",
+ "tyre.summer": "Suve",
+ "tyre.winter": "Talve",
+ "tyre.allSeason": "Aastaringsed",
+ "tyre.rim": "{n}\" velg",
+ "ocr.assign": "Määra väljale…",
+ "ocr.assignTitle": "Millisele väljale see kuulub?",
+ "ocr.assignHint": "Midagi puudu? Ava „{button}”, vali tekst ja vajuta „Määra väljale…”.",
+ "ocr.assigned": "Tekst määratud: {field}",
+ "ocr.assignBad": "Valitud tekst ei tundu sobivat väljale {field}"
 }

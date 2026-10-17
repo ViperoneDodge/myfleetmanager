@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Poslati na {email} povezavo za ponastavitev gesla?",
  "login.apple": "Prijava z Apple",
  "auth.appleCancelled": "Prijava z Apple preklicana.",
- "auth.appleFailed": "Prijava z Apple ni uspela: {error}"
+ "auth.appleFailed": "Prijava z Apple ni uspela: {error}",
+ "tyre.group": "Skupina (neobvezno)",
+ "tyre.presets": "Predlagana imena",
+ "tyre.sizesHint": "npr. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Dodaj skupino",
+ "tyre.splitRim": "Razdeli po platišču",
+ "tyre.oneRim": "Vse dimenzije imajo isto platišče.",
+ "tyre.front": "Spredaj",
+ "tyre.rear": "Zadaj",
+ "tyre.summer": "Poletne",
+ "tyre.winter": "Zimske",
+ "tyre.allSeason": "Celoletne",
+ "tyre.rim": "Platišče {n}\"",
+ "ocr.assign": "Dodeli…",
+ "ocr.assignTitle": "Kateremu polju pripada?",
+ "ocr.assignHint": "Kaj manjka? Odpri »Prebrano besedilo«{button} »Dodeli…«.",
+ "ocr.assigned": "Besedilo dodeljeno: {field}",
+ "ocr.assignBad": "Označeno besedilo ni veljavno za {field}"
 }

@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Elküldjük a jelszó-visszaállító linket a(z) {email} címre?",
  "login.apple": "Bejelentkezés Apple-lel",
  "auth.appleCancelled": "Az Apple-bejelentkezés megszakítva.",
- "auth.appleFailed": "Az Apple-bejelentkezés sikertelen: {error}"
+ "auth.appleFailed": "Az Apple-bejelentkezés sikertelen: {error}",
+ "tyre.group": "Csoport (nem kötelező)",
+ "tyre.presets": "Javasolt nevek",
+ "tyre.sizesHint": "pl. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Csoport hozzáadása",
+ "tyre.splitRim": "Felosztás felni szerint",
+ "tyre.oneRim": "Minden méret ugyanarra a felnire való.",
+ "tyre.front": "Első",
+ "tyre.rear": "Hátsó",
+ "tyre.summer": "Nyári",
+ "tyre.winter": "Téli",
+ "tyre.allSeason": "Négyévszakos",
+ "tyre.rim": "{n}\" felni",
+ "ocr.assign": "Hozzárendelés…",
+ "ocr.assignTitle": "Melyik mezőhöz tartozik?",
+ "ocr.assignHint": "Hiányzik valami? Nyisd meg a „{button}” részt, jelöld ki a szöveget, és válaszd a „Hozzárendelés…” lehetőséget.",
+ "ocr.assigned": "Szöveg hozzárendelve: {field}",
+ "ocr.assignBad": "A kijelölt szöveg nem érvényes érték ehhez: {field}"
 }

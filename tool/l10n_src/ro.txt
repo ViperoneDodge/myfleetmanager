@@ -461,3 +461,20 @@ Trimiți la {email} linkul pentru resetarea parolei?
 Conectează-te cu Apple
 Conectarea cu Apple a fost anulată.
 Conectarea cu Apple a eșuat: {error}
+Grup (opțional)
+Nume sugerate
+ex. 225/45 R17 91W; 205/55 R16 91V
+Adaugă grup
+Împarte după jantă
+Toate dimensiunile au aceeași jantă.
+Față
+Spate
+Vară
+Iarnă
+All season
+Jantă {n}"
+Atribuie la…
+Cărui câmp îi corespunde?
+Lipsește ceva? Deschide „{button}”, selectează textul și alege „Atribuie la…”.
+Text atribuit la {field}
+Textul selectat nu pare valid pentru {field}

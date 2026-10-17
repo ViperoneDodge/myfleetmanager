@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Trimiți la {email} linkul pentru resetarea parolei?",
  "login.apple": "Conectează-te cu Apple",
  "auth.appleCancelled": "Conectarea cu Apple a fost anulată.",
- "auth.appleFailed": "Conectarea cu Apple a eșuat: {error}"
+ "auth.appleFailed": "Conectarea cu Apple a eșuat: {error}",
+ "tyre.group": "Grup (opțional)",
+ "tyre.presets": "Nume sugerate",
+ "tyre.sizesHint": "ex. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Adaugă grup",
+ "tyre.splitRim": "Împarte după jantă",
+ "tyre.oneRim": "Toate dimensiunile au aceeași jantă.",
+ "tyre.front": "Față",
+ "tyre.rear": "Spate",
+ "tyre.summer": "Vară",
+ "tyre.winter": "Iarnă",
+ "tyre.allSeason": "All season",
+ "tyre.rim": "Jantă {n}\"",
+ "ocr.assign": "Atribuie la…",
+ "ocr.assignTitle": "Cărui câmp îi corespunde?",
+ "ocr.assignHint": "Lipsește ceva? Deschide „{button}”, selectează textul și alege „Atribuie la…”.",
+ "ocr.assigned": "Text atribuit la {field}",
+ "ocr.assignBad": "Textul selectat nu pare valid pentru {field}"
 }

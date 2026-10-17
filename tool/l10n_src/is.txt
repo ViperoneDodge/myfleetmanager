@@ -461,3 +461,20 @@ Senda tengil til að endurstilla lykilorð á {email}?
 Skrá inn með Apple
 Hætt við innskráningu með Apple.
 Innskráning með Apple mistókst: {error}
+Hópur (valfrjálst)
+Tillögur að nöfnum
+t.d. 225/45 R17 91W; 205/55 R16 91V
+Bæta við hópi
+Skipta eftir felgu
+Allar stærðir eru með sömu felgu.
+Framan
+Aftan
+Sumar
+Vetrar
+Heilsárs
+{n}" felga
+Úthluta í…
+Í hvaða reit á þetta?
+Vantar eitthvað? Opnaðu „{button}“, veldu textann og veldu „Úthluta í…“.
+Texta úthlutað í {field}
+Valinn texti virðist ekki gildur fyrir {field}

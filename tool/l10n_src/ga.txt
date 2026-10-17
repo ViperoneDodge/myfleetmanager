@@ -461,3 +461,20 @@ Nasc chun an pasfhocal a athshocrú a sheoladh chuig {email}?
 Sínigh isteach le Apple
 Cealaíodh síniú isteach le Apple.
 Theip ar shíniú isteach le Apple: {error}
+Grúpa (roghnach)
+Ainmneacha molta
+m.sh. 225/45 R17 91W; 205/55 R16 91V
+Cuir grúpa leis
+Roinn de réir rotha
+Tá an roth céanna ag gach méid.
+Tosaigh
+Cúil
+Samhraidh
+Geimhridh
+Uile-shéasúr
+Roth {n}"
+Sann do…
+Cén réimse é seo?
+An bhfuil rud ar iarraidh? Oscail "{button}", roghnaigh an téacs agus roghnaigh "Sann do…".
+Téacs sannta do {field}
+Ní cosúil gur {field} bailí é an téacs roghnaithe

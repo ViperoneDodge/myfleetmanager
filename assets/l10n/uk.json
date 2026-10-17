@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Надіслати на {email} посилання для скидання пароля?",
  "login.apple": "Увійти з Apple",
  "auth.appleCancelled": "Вхід з Apple скасовано.",
- "auth.appleFailed": "Не вдалося увійти з Apple: {error}"
+ "auth.appleFailed": "Не вдалося увійти з Apple: {error}",
+ "tyre.group": "Група (необов’язково)",
+ "tyre.presets": "Запропоновані назви",
+ "tyre.sizesHint": "напр. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Додати групу",
+ "tyre.splitRim": "Розділити за диском",
+ "tyre.oneRim": "Усі розміри мають однаковий диск.",
+ "tyre.front": "Передні",
+ "tyre.rear": "Задні",
+ "tyre.summer": "Літні",
+ "tyre.winter": "Зимові",
+ "tyre.allSeason": "Всесезонні",
+ "tyre.rim": "Диск {n}\"",
+ "ocr.assign": "Призначити…",
+ "ocr.assignTitle": "Якому полю це відповідає?",
+ "ocr.assignHint": "Чогось бракує? Відкрийте «{button}», виділіть текст і виберіть «Призначити…».",
+ "ocr.assigned": "Текст призначено: {field}",
+ "ocr.assignBad": "Виділений текст не схожий на правильне значення для {field}"
 }

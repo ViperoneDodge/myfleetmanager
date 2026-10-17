@@ -461,3 +461,20 @@ Tibgħat lil {email} link biex terġa' tissettja l-password?
 Idħol b'Apple
 Id-dħul b'Apple ġie kkanċellat.
 Id-dħul b'Apple ma rnexxiex: {error}
+Grupp (mhux obbligatorju)
+Ismijiet issuġġeriti
+eż. 225/45 R17 91W; 205/55 R16 91V
+Żid grupp
+Aqsam skont ir-rimm
+Il-qisien kollha għandhom l-istess rimm.
+Quddiem
+Wara
+Sajf
+Xitwa
+Is-sena kollha
+Rimm {n}"
+Assenja lil…
+Għal liema qasam hu?
+Hemm xi ħaġa nieqsa? Iftaħ "{button}", agħżel it-test u agħżel "Assenja lil…".
+It-test ġie assenjat lil {field}
+It-test magħżul ma jidhirx validu għal {field}

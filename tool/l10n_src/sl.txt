@@ -461,3 +461,20 @@ Poslati na {email} povezavo za ponastavitev gesla?
 Prijava z Apple
 Prijava z Apple preklicana.
 Prijava z Apple ni uspela: {error}
+Skupina (neobvezno)
+Predlagana imena
+npr. 225/45 R17 91W; 205/55 R16 91V
+Dodaj skupino
+Razdeli po platišču
+Vse dimenzije imajo isto platišče.
+Spredaj
+Zadaj
+Poletne
+Zimske
+Celoletne
+Platišče {n}"
+Dodeli…
+Kateremu polju pripada?
+Kaj manjka? Odpri »Prebrano besedilo«{button} »Dodeli…«.
+Besedilo dodeljeno: {field}
+Označeno besedilo ni veljavno za {field}

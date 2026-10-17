@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Een link om het wachtwoord opnieuw in te stellen naar {email} sturen?",
  "login.apple": "Inloggen met Apple",
  "auth.appleCancelled": "Inloggen met Apple geannuleerd.",
- "auth.appleFailed": "Inloggen met Apple mislukt: {error}"
+ "auth.appleFailed": "Inloggen met Apple mislukt: {error}",
+ "tyre.group": "Groep (optioneel)",
+ "tyre.presets": "Voorgestelde namen",
+ "tyre.sizesHint": "bijv. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Groep toevoegen",
+ "tyre.splitRim": "Splitsen per velg",
+ "tyre.oneRim": "Alle maten hebben dezelfde velg.",
+ "tyre.front": "Voor",
+ "tyre.rear": "Achter",
+ "tyre.summer": "Zomer",
+ "tyre.winter": "Winter",
+ "tyre.allSeason": "All-season",
+ "tyre.rim": "{n}-inch velg",
+ "ocr.assign": "Toewijzen aan…",
+ "ocr.assignTitle": "Welk veld is dit?",
+ "ocr.assignHint": "Mis je iets? Open \"{button}\", selecteer de tekst en kies \"Toewijzen aan…\".",
+ "ocr.assigned": "Tekst toegewezen aan {field}",
+ "ocr.assignBad": "De geselecteerde tekst lijkt geen geldige {field}"
 }

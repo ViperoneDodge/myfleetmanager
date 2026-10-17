@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Tibgħat lil {email} link biex terġa' tissettja l-password?",
  "login.apple": "Idħol b'Apple",
  "auth.appleCancelled": "Id-dħul b'Apple ġie kkanċellat.",
- "auth.appleFailed": "Id-dħul b'Apple ma rnexxiex: {error}"
+ "auth.appleFailed": "Id-dħul b'Apple ma rnexxiex: {error}",
+ "tyre.group": "Grupp (mhux obbligatorju)",
+ "tyre.presets": "Ismijiet issuġġeriti",
+ "tyre.sizesHint": "eż. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Żid grupp",
+ "tyre.splitRim": "Aqsam skont ir-rimm",
+ "tyre.oneRim": "Il-qisien kollha għandhom l-istess rimm.",
+ "tyre.front": "Quddiem",
+ "tyre.rear": "Wara",
+ "tyre.summer": "Sajf",
+ "tyre.winter": "Xitwa",
+ "tyre.allSeason": "Is-sena kollha",
+ "tyre.rim": "Rimm {n}\"",
+ "ocr.assign": "Assenja lil…",
+ "ocr.assignTitle": "Għal liema qasam hu?",
+ "ocr.assignHint": "Hemm xi ħaġa nieqsa? Iftaħ \"{button}\", agħżel it-test u agħżel \"Assenja lil…\".",
+ "ocr.assigned": "It-test ġie assenjat lil {field}",
+ "ocr.assignBad": "It-test magħżul ma jidhirx validu għal {field}"
 }

@@ -461,3 +461,20 @@ Nosūtīt uz {email} paroles atiestatīšanas saiti?
 Pierakstīties ar Apple
 Pierakstīšanās ar Apple atcelta.
 Pierakstīšanās ar Apple neizdevās: {error}
+Grupa (nav obligāti)
+Ieteiktie nosaukumi
+piem. 225/45 R17 91W; 205/55 R16 91V
+Pievienot grupu
+Sadalīt pēc diska
+Visiem izmēriem ir viens disks.
+Priekšējās
+Aizmugurējās
+Vasaras
+Ziemas
+Vissezonas
+{n}" disks
+Piešķirt…
+Kuram laukam tas atbilst?
+Kaut kā trūkst? Atver “{button}”, atlasi tekstu un izvēlies “Piešķirt…”.
+Teksts piešķirts: {field}
+Atlasītais teksts neizskatās derīgs laukam {field}

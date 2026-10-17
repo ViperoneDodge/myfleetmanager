@@ -50,7 +50,10 @@ NATO IL 03.03.1980
 
   test('etichette diverse non vengono confuse (C.2.1, J.1, A1)', () {
     final d = RegistrationReader.parse('(C.2.1) BIANCHI\n(J.1) AUTOVETTURA\n205/60 R16 92V (A1)');
-    expect(d.isEmpty, true);
+    expect(d.plate, null);
+    expect(d.vin, null);
+    expect(d.registrationDate, null);
+    expect(d.tyres, ['205/60 R16 92V']);
   });
 
   test('Germania: codici senza parentesi, P.2/P.4', () {

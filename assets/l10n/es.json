@@ -461,5 +461,22 @@
  "login.forgotConfirm": "¿Enviar a {email} un enlace para restablecer la contraseña?",
  "login.apple": "Iniciar sesión con Apple",
  "auth.appleCancelled": "Inicio de sesión con Apple cancelado.",
- "auth.appleFailed": "No se pudo iniciar sesión con Apple: {error}"
+ "auth.appleFailed": "No se pudo iniciar sesión con Apple: {error}",
+ "tyre.group": "Grupo (opcional)",
+ "tyre.presets": "Nombres sugeridos",
+ "tyre.sizesHint": "p. ej. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Añadir grupo",
+ "tyre.splitRim": "Dividir por llanta",
+ "tyre.oneRim": "Todas las medidas tienen la misma llanta.",
+ "tyre.front": "Delanteros",
+ "tyre.rear": "Traseros",
+ "tyre.summer": "Verano",
+ "tyre.winter": "Invierno",
+ "tyre.allSeason": "Todo tiempo",
+ "tyre.rim": "Llanta {n}\"",
+ "ocr.assign": "Asignar a…",
+ "ocr.assignTitle": "¿A qué dato corresponde?",
+ "ocr.assignHint": "¿Falta un dato? Abre «{button}», selecciona el texto y elige «Asignar a…».",
+ "ocr.assigned": "Texto asignado a {field}",
+ "ocr.assignBad": "El texto seleccionado no parece válido para {field}"
 }

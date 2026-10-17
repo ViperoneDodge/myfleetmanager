@@ -461,5 +461,22 @@
  "login.forgotConfirm": "Şifre sıfırlama bağlantısı {email} adresine gönderilsin mi?",
  "login.apple": "Apple ile giriş yap",
  "auth.appleCancelled": "Apple ile giriş iptal edildi.",
- "auth.appleFailed": "Apple ile giriş başarısız: {error}"
+ "auth.appleFailed": "Apple ile giriş başarısız: {error}",
+ "tyre.group": "Grup (isteğe bağlı)",
+ "tyre.presets": "Önerilen adlar",
+ "tyre.sizesHint": "örn. 225/45 R17 91W; 205/55 R16 91V",
+ "tyre.add": "Grup ekle",
+ "tyre.splitRim": "Janta göre ayır",
+ "tyre.oneRim": "Tüm ölçüler aynı jant için.",
+ "tyre.front": "Ön",
+ "tyre.rear": "Arka",
+ "tyre.summer": "Yaz",
+ "tyre.winter": "Kış",
+ "tyre.allSeason": "Dört mevsim",
+ "tyre.rim": "{n}\" jant",
+ "ocr.assign": "Şuna ata…",
+ "ocr.assignTitle": "Bu hangi alan?",
+ "ocr.assignHint": "Eksik bir şey mi var? \"{button}\"i açın, metni seçin ve \"Şuna ata…\"yı seçin.",
+ "ocr.assigned": "Metin {field} alanına atandı",
+ "ocr.assignBad": "Seçilen metin {field} için geçerli görünmüyor"
 }
