@@ -478,3 +478,4 @@ Mihin kenttään tämä kuuluu?
 Puuttuuko jotain? Avaa ”{button}”, valitse teksti ja valitse ”Määritä kenttään…”.
 Teksti määritetty: {field}
 Valittu teksti ei näytä kelvolliselta kenttään {field}
+Tarkista ja korjaa arvo ennen vahvistamista

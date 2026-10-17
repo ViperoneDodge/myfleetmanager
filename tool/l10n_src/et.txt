@@ -478,3 +478,4 @@ Millisele väljale see kuulub?
 Midagi puudu? Ava „{button}”, vali tekst ja vajuta „Määra väljale…”.
 Tekst määratud: {field}
 Valitud tekst ei tundu sobivat väljale {field}
+Kontrolli ja paranda väärtus enne kinnitamist

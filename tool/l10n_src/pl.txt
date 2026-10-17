@@ -478,3 +478,4 @@ Do którego pola to pasuje?
 Czegoś brakuje? Otwórz „{button}”, zaznacz tekst i wybierz „Przypisz do…”.
 Tekst przypisany do: {field}
 Zaznaczony tekst nie wygląda na poprawną wartość: {field}
+Sprawdź i popraw wartość przed potwierdzeniem

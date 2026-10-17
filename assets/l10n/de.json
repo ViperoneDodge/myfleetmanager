@@ -478,5 +478,6 @@
  "ocr.assignTitle": "Welches Feld ist das?",
  "ocr.assignHint": "Fehlt etwas? Öffne „{button}“, markiere den Text und wähle „Zuordnen zu…“.",
  "ocr.assigned": "Text {field} zugeordnet",
- "ocr.assignBad": "Der markierte Text ist kein gültiger Wert für {field}"
+ "ocr.assignBad": "Der markierte Text ist kein gültiger Wert für {field}",
+ "ocr.checkValue": "Prüfe und korrigiere den Wert vor dem Bestätigen"
 }

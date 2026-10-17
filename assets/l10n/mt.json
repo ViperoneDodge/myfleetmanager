@@ -478,5 +478,6 @@
  "ocr.assignTitle": "Għal liema qasam hu?",
  "ocr.assignHint": "Hemm xi ħaġa nieqsa? Iftaħ \"{button}\", agħżel it-test u agħżel \"Assenja lil…\".",
  "ocr.assigned": "It-test ġie assenjat lil {field}",
- "ocr.assignBad": "It-test magħżul ma jidhirx validu għal {field}"
+ "ocr.assignBad": "It-test magħżul ma jidhirx validu għal {field}",
+ "ocr.checkValue": "Iċċekkja u kkoreġi l-valur qabel tikkonferma"
 }

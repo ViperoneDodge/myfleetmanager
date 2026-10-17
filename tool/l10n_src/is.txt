@@ -478,3 +478,4 @@ Heilsárs
 Vantar eitthvað? Opnaðu „{button}“, veldu textann og veldu „Úthluta í…“.
 Texta úthlutað í {field}
 Valinn texti virðist ekki gildur fyrir {field}
+Athugaðu og leiðréttu gildið áður en þú staðfestir

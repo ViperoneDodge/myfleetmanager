@@ -478,5 +478,6 @@
  "ocr.assignTitle": "A quale dato corrisponde?",
  "ocr.assignHint": "Non trovi un dato? Apri «{button}», seleziona il testo e scegli «Assegna a…».",
  "ocr.assigned": "Testo assegnato a {field}",
- "ocr.assignBad": "Il testo selezionato non sembra un dato valido per {field}"
+ "ocr.assignBad": "Il testo selezionato non sembra un dato valido per {field}",
+ "ocr.checkValue": "Controlla e correggi il valore prima di confermare"
 }

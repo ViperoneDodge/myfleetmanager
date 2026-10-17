@@ -478,5 +478,6 @@
  "ocr.assignTitle": "À quel champ correspond-il ?",
  "ocr.assignHint": "Il manque une donnée ? Ouvrez « {button} », sélectionnez le texte et choisissez « Attribuer à… ».",
  "ocr.assigned": "Texte attribué à {field}",
- "ocr.assignBad": "Le texte sélectionné ne semble pas valide pour {field}"
+ "ocr.assignBad": "Le texte sélectionné ne semble pas valide pour {field}",
+ "ocr.checkValue": "Vérifiez et corrigez la valeur avant de confirmer"
 }

@@ -478,5 +478,6 @@
  "ocr.assignTitle": "Hvilket felt er det?",
  "ocr.assignHint": "Mangler der noget? Åbn \"{button}\", markér teksten og vælg \"Tildel til…\".",
  "ocr.assigned": "Tekst tildelt {field}",
- "ocr.assignBad": "Den markerede tekst ligner ikke en gyldig {field}"
+ "ocr.assignBad": "Den markerede tekst ligner ikke en gyldig {field}",
+ "ocr.checkValue": "Kontrollér og ret værdien, før du bekræfter"
 }

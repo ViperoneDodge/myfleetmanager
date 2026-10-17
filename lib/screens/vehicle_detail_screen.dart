@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:open_filex/open_filex.dart';
 
@@ -13,6 +12,7 @@ import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
 import '../widgets/docs_consent.dart';
+import '../widgets/ocr_review.dart';
 import '../widgets/ruled.dart';
 import 'maintenance_screen.dart';
 import 'pro_screen.dart';
@@ -637,83 +637,15 @@ class VehicleDetailScreen extends StatelessWidget {
     }
     if (!context.mounted) return;
     Navigator.of(context, rootNavigator: true).pop();
-    final fields = _ocrFields();
-    String tyreText() =>
-        TyreSet.format(TyreSet.byRim(data.tyres, (r) => tr('tyre.rim', {'n': r})));
-    List<({String key, String value})> rows() => [
-          if (data.plate != null) (key: 'plate', value: data.plate!),
-          if (data.registrationDate != null) (key: 'reg', value: fmtDate(data.registrationDate)),
-          if (data.vin != null) (key: 'vin', value: data.vin!),
-          if (data.powerKw != null) (key: 'power', value: data.powerKw!),
-          if (data.engineCc != null) (key: 'cc', value: data.engineCc!),
-          if (data.tyres.isNotEmpty) (key: 'tyres', value: tyreText()),
-        ];
-    final chosen = rows().map((r) => r.key).toSet();
-    final ok = await showDialog<bool>(
-      context: context,
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setSt) => AlertDialog(
-          title: Text(tr('ocr.found')),
-          content: SingleChildScrollView(
-            child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Container(
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFFFF3CD),
-                  border: Border.all(color: const Color(0xFFB07A00)),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  const Icon(Icons.warning_amber_rounded, color: Color(0xFFB07A00)),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(tr('ocr.disclaimer'),
-                        style: const TextStyle(fontSize: 13, color: Color(0xFF5A3E00), fontWeight: FontWeight.w600)),
-                  ),
-                ]),
-              ),
-              const SizedBox(height: 10),
-              Text(data.isEmpty ? tr('ocr.none') : tr('ocr.foundHint'), style: const TextStyle(fontSize: 13)),
-              const SizedBox(height: 6),
-              Text(tr('ocr.assignHint', {'button': tr('ocr.rawText')}),
-                  style: TextStyle(fontSize: 12, color: Theme.of(ctx).colorScheme.onSurfaceVariant)),
-              const SizedBox(height: 8),
-              ...rows().map((r) => CheckboxListTile(
-                    dense: true,
-                    contentPadding: EdgeInsets.zero,
-                    value: chosen.contains(r.key),
-                    onChanged: (b) => setSt(() => b == true ? chosen.add(r.key) : chosen.remove(r.key)),
-                    title: Text(r.value),
-                    subtitle: Text(fields[r.key]!),
-                  )),
-            ]),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => _showRawText(ctx, raw, onAssign: (field, text) {
-                if (!RegistrationReader.assign(data, field, text)) return false;
-                setSt(() => chosen.add(field));
-                return true;
-              }),
-              child: Text(tr('ocr.rawText')),
-            ),
-            TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
-            FilledButton(
-              onPressed: chosen.isEmpty ? null : () => Navigator.pop(ctx, true),
-              child: Text(tr('ocr.apply')),
-            ),
-          ],
-        ),
-      ),
-    );
-    if (ok != true || chosen.isEmpty) return;
-    final c = v.copy();
+    final chosen = await showOcrReview(context, data, raw);
+    if (chosen == null) return;
+    final c = (appState.vehicleById(v.id) ?? v).copy();
     if (chosen.contains('plate')) c.plate = data.plate!;
     if (chosen.contains('reg')) c.registrationDate = data.registrationDate;
     if (chosen.contains('vin')) c.vin = data.vin!;
     if (chosen.contains('power')) c.powerKw = data.powerKw!;
     if (chosen.contains('cc')) c.engineCc = data.engineCc!;
-    if (chosen.contains('tyres')) c.tyres = tyreText();
+    if (chosen.contains('tyres')) c.tyres = ocrTyreText(data);
     final dup = appState.duplicatePlateGroup(c, c.fleetId);
     if (dup != null) {
       if (context.mounted) showSnack(context, tr('vehicle.plateDuplicate', {'plate': c.plate, 'group': dup}));
@@ -722,88 +654,6 @@ class VehicleDetailScreen extends StatelessWidget {
     await appState.saveVehicle(c);
     if (context.mounted) showSnack(context, tr('ocr.saved'));
   }
-
-  Map<String, String> _ocrFields() => {
-        'plate': tr('edit.plate'),
-        'reg': tr('vehicle.regDate'),
-        'vin': tr('tech.vin'),
-        'power': tr('tech.power'),
-        'cc': tr('tech.engine'),
-        'tyres': tr('tech.tyres'),
-      };
-
-  Future<void> _assignSelection(BuildContext context, String text, bool Function(String field, String text) onAssign) async {
-    final fields = _ocrFields();
-    final field = await showDialog<String>(
-      context: context,
-      builder: (ctx) => SimpleDialog(
-        title: Text(tr('ocr.assignTitle')),
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(24, 0, 24, 8),
-            child: Text(text, maxLines: 3, overflow: TextOverflow.ellipsis,
-                style: const TextStyle(fontFamily: 'monospace', fontSize: 13)),
-          ),
-          for (final e in fields.entries)
-            SimpleDialogOption(onPressed: () => Navigator.pop(ctx, e.key), child: Text(e.value)),
-        ],
-      ),
-    );
-    if (field == null || !context.mounted) return;
-    showSnack(
-        context,
-        onAssign(field, text)
-            ? tr('ocr.assigned', {'field': fields[field]!})
-            : tr('ocr.assignBad', {'field': fields[field]!}));
-  }
-
-  Future<void> _showRawText(BuildContext context, String raw,
-          {bool Function(String field, String text)? onAssign}) =>
-      showDialog<void>(
-        context: context,
-        builder: (ctx) => AlertDialog(
-          title: Text(tr('ocr.rawText')),
-          content: SizedBox(
-            width: double.maxFinite,
-            child: SingleChildScrollView(
-              child: SelectableText(
-                raw.trim().isEmpty ? '—' : raw.trim(),
-                style: const TextStyle(fontFamily: 'monospace', fontSize: 12),
-                contextMenuBuilder: (menuCtx, state) {
-                  final value = state.textEditingValue;
-                  final selected = value.selection.isValid && !value.selection.isCollapsed
-                      ? value.selection.textInside(value.text).trim()
-                      : '';
-                  return AdaptiveTextSelectionToolbar.buttonItems(
-                    anchors: state.contextMenuAnchors,
-                    buttonItems: [
-                      if (onAssign != null && selected.isNotEmpty)
-                        ContextMenuButtonItem(
-                          label: tr('ocr.assign'),
-                          onPressed: () {
-                            ContextMenuController.removeAny();
-                            _assignSelection(ctx, selected, onAssign);
-                          },
-                        ),
-                      ...state.contextMenuButtonItems,
-                    ],
-                  );
-                },
-              ),
-            ),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Clipboard.setData(ClipboardData(text: raw));
-                showSnack(ctx, tr('ocr.rawCopied'));
-              },
-              child: Text(tr('common.copy')),
-            ),
-            FilledButton(onPressed: () => Navigator.pop(ctx), child: Text(tr('common.ok'))),
-          ],
-        ),
-      );
 
   Future<void> _assignOwner(BuildContext context, Vehicle v, FleetGroup g) async {
     final members = g.members.entries.where((m) => m.key != v.createdBy).toList()

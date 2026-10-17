@@ -478,3 +478,4 @@ Melyik mezőhöz tartozik?
 Hiányzik valami? Nyisd meg a „{button}” részt, jelöld ki a szöveget, és válaszd a „Hozzárendelés…” lehetőséget.
 Szöveg hozzárendelve: {field}
 A kijelölt szöveg nem érvényes érték ehhez: {field}
+Megerősítés előtt ellenőrizd és javítsd az értéket

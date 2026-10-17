@@ -478,5 +478,6 @@
  "ocr.assignTitle": "Millisele väljale see kuulub?",
  "ocr.assignHint": "Midagi puudu? Ava „{button}”, vali tekst ja vajuta „Määra väljale…”.",
  "ocr.assigned": "Tekst määratud: {field}",
- "ocr.assignBad": "Valitud tekst ei tundu sobivat väljale {field}"
+ "ocr.assignBad": "Valitud tekst ei tundu sobivat väljale {field}",
+ "ocr.checkValue": "Kontrolli ja paranda väärtus enne kinnitamist"
 }

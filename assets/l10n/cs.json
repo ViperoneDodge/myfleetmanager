@@ -478,5 +478,6 @@
  "ocr.assignTitle": "Ke kterému údaji patří?",
  "ocr.assignHint": "Něco chybí? Otevřete „{button}“, označte text a zvolte „Přiřadit k…“.",
  "ocr.assigned": "Text přiřazen k: {field}",
- "ocr.assignBad": "Označený text není platný údaj pro {field}"
+ "ocr.assignBad": "Označený text není platný údaj pro {field}",
+ "ocr.checkValue": "Před potvrzením hodnotu zkontrolujte a opravte"
 }

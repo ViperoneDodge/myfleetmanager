@@ -478,3 +478,4 @@ Cén réimse é seo?
 An bhfuil rud ar iarraidh? Oscail "{button}", roghnaigh an téacs agus roghnaigh "Sann do…".
 Téacs sannta do {field}
 Ní cosúil gur {field} bailí é an téacs roghnaithe
+Seiceáil agus ceartaigh an luach sula ndeimhníonn tú

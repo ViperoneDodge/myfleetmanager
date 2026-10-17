@@ -478,5 +478,6 @@
  "ocr.assignTitle": "Which field is this?",
  "ocr.assignHint": "Missing something? Open \"{button}\", select the text and choose \"Assign to…\".",
  "ocr.assigned": "Text assigned to {field}",
- "ocr.assignBad": "The selected text does not look like a valid {field}"
+ "ocr.assignBad": "The selected text does not look like a valid {field}",
+ "ocr.checkValue": "Check and correct the value before confirming"
 }

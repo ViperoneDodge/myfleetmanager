@@ -478,5 +478,6 @@
  "ocr.assignTitle": "어느 항목인가요?",
  "ocr.assignHint": "빠진 항목이 있나요? \"{button}\"를 열고 텍스트를 선택한 뒤 \"지정…\"을 누르세요.",
  "ocr.assigned": "{field}에 지정했습니다",
- "ocr.assignBad": "선택한 텍스트가 올바른 {field} 값이 아닌 것 같습니다"
+ "ocr.assignBad": "선택한 텍스트가 올바른 {field} 값이 아닌 것 같습니다",
+ "ocr.checkValue": "확인하기 전에 값을 확인하고 수정하세요"
 }

@@ -478,3 +478,4 @@ Gán cho…
 Thiếu dữ liệu? Mở "{button}", chọn văn bản rồi chọn "Gán cho…".
 Đã gán văn bản cho {field}
 Văn bản đã chọn có vẻ không hợp lệ cho {field}
+Kiểm tra và sửa giá trị trước khi xác nhận

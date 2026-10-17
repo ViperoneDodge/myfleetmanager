@@ -478,5 +478,6 @@
  "ocr.assignTitle": "Welk veld is dit?",
  "ocr.assignHint": "Mis je iets? Open \"{button}\", selecteer de tekst en kies \"Toewijzen aan…\".",
  "ocr.assigned": "Tekst toegewezen aan {field}",
- "ocr.assignBad": "De geselecteerde tekst lijkt geen geldige {field}"
+ "ocr.assignBad": "De geselecteerde tekst lijkt geen geldige {field}",
+ "ocr.checkValue": "Controleer en corrigeer de waarde voordat je bevestigt"
 }

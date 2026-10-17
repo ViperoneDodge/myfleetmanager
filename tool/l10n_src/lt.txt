@@ -478,3 +478,4 @@ Kuriam laukui tai priklauso?
 Kažko trūksta? Atidarykite „{button}“, pažymėkite tekstą ir pasirinkite „Priskirti…“.
 Tekstas priskirtas: {field}
 Pažymėtas tekstas netinka laukui {field}
+Prieš patvirtindami patikrinkite ir pataisykite reikšmę

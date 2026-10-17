@@ -478,3 +478,4 @@ Bu hangi alan?
 Eksik bir şey mi var? "{button}"i açın, metni seçin ve "Şuna ata…"yı seçin.
 Metin {field} alanına atandı
 Seçilen metin {field} için geçerli görünmüyor
+Onaylamadan önce değeri kontrol edip düzeltin

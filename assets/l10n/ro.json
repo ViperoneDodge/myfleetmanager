@@ -478,5 +478,6 @@
  "ocr.assignTitle": "Cărui câmp îi corespunde?",
  "ocr.assignHint": "Lipsește ceva? Deschide „{button}”, selectează textul și alege „Atribuie la…”.",
  "ocr.assigned": "Text atribuit la {field}",
- "ocr.assignBad": "Textul selectat nu pare valid pentru {field}"
+ "ocr.assignBad": "Textul selectat nu pare valid pentru {field}",
+ "ocr.checkValue": "Verifică și corectează valoarea înainte de confirmare"
 }

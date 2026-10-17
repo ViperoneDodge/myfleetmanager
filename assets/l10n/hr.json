@@ -478,5 +478,6 @@
  "ocr.assignTitle": "Kojem polju pripada?",
  "ocr.assignHint": "Nešto nedostaje? Otvori «{button}», označi tekst i odaberi «Dodijeli…».",
  "ocr.assigned": "Tekst dodijeljen: {field}",
- "ocr.assignBad": "Označeni tekst nije valjan za {field}"
+ "ocr.assignBad": "Označeni tekst nije valjan za {field}",
+ "ocr.checkValue": "Provjeri i ispravi vrijednost prije potvrde"
 }

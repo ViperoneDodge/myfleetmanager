@@ -478,3 +478,4 @@ Kuram laukam tas atbilst?
 Kaut kā trūkst? Atver “{button}”, atlasi tekstu un izvēlies “Piešķirt…”.
 Teksts piešķirts: {field}
 Atlasītais teksts neizskatās derīgs laukam {field}
+Pirms apstiprināšanas pārbaudi un izlabo vērtību

@@ -478,3 +478,4 @@ Ku ktorému údaju patrí?
 Niečo chýba? Otvorte „{button}“, označte text a zvoľte „Priradiť k…“.
 Text priradený k: {field}
 Označený text nie je platný údaj pre {field}
+Pred potvrdením hodnotu skontrolujte a opravte

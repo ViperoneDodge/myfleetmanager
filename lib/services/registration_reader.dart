@@ -140,8 +140,61 @@ class RegistrationReader {
     return out;
   }
 
-  static bool assign(RegistrationData d, String field, String text) {
-    final u = text.toUpperCase().trim();
+  static String _stripLabels(String text) => text
+      .toUpperCase()
+      .replaceAll(RegExp(r'[(\[]\s*[A-Z]\s*(?:[.,]\s*\d+)*\s*[)\]]'), ' ')
+      .replaceAll(RegExp(r'(?<![A-Z0-9])[A-Z](?:\.\d+)+\.?(?![A-Z0-9])'), ' ')
+      .replaceAll(RegExp(r'^\s*[A-Z][.:]\s+'), ' ')
+      .replaceAll(RegExp(r'\s+'), ' ')
+      .trim();
+
+  static String _fmt(DateTime d) =>
+      '${d.day.toString().padLeft(2, '0')}/${d.month.toString().padLeft(2, '0')}/${d.year}';
+
+  static DateTime? _anyDate(String u) {
+    final iso = _isoDate.firstMatch(u);
+    if (iso != null) {
+      return _toDate(RegExp(r'(\d+)-(\d+)-(\d+)').firstMatch('${iso.group(3)}-${iso.group(2)}-${iso.group(1)}')!);
+    }
+    final m = _date.firstMatch(u);
+    return m == null ? null : _toDate(m);
+  }
+
+  static String propose(String field, String text) {
+    final c = _stripLabels(text);
+    switch (field) {
+      case 'plate':
+        for (final tok in c.split(' ')) {
+          final p = tok.replaceAll(RegExp(r'[\-.]'), '');
+          if (RegExp(r'^[A-Z0-9]{4,10}$').hasMatch(p) && RegExp(r'\d').hasMatch(p) && RegExp(r'[A-Z]').hasMatch(p)) {
+            return p;
+          }
+        }
+        return c.replaceAll(RegExp(r'[^A-Z0-9]'), '');
+      case 'reg':
+        final d = _anyDate(c);
+        return d == null ? c : _fmt(d);
+      case 'vin':
+        final all = c.replaceAll(RegExp(r'[^A-Z0-9]'), '');
+        if (all.length <= 17) return all;
+        final toks = c.split(' ').map((s) => s.replaceAll(RegExp(r'[^A-Z0-9]'), '')).toList()
+          ..sort((a, b) => b.length.compareTo(a.length));
+        return toks.first.length > 17 ? toks.first.substring(0, 17) : toks.first;
+      case 'power':
+      case 'cc':
+        final n = RegExp(r'\d{1,5}(?:[.,]\d+)?').firstMatch(c);
+        if (n == null) return c;
+        final v = _num(n.group(0)!);
+        return field == 'cc' ? v.split('.').first : v;
+      case 'tyres':
+        final sizes = TyreSet.findSizes(c);
+        return sizes.isEmpty ? c : sizes.join('; ');
+    }
+    return c;
+  }
+
+  static bool apply(RegistrationData d, String field, String value) {
+    final u = value.toUpperCase().trim();
     switch (field) {
       case 'plate':
         final p = u.replaceAll(RegExp(r'[\s\-.]'), '');
@@ -149,11 +202,7 @@ class RegistrationReader {
         d.plate = p;
         return true;
       case 'reg':
-        final iso = _isoDate.firstMatch(u);
-        final m = _date.firstMatch(u);
-        final dt = iso != null
-            ? _toDate(RegExp(r'(\d+)-(\d+)-(\d+)').firstMatch('${iso.group(3)}-${iso.group(2)}-${iso.group(1)}')!)
-            : (m == null ? null : _toDate(m));
+        final dt = _anyDate(u);
         if (dt == null) return false;
         d.registrationDate = dt;
         return true;
@@ -164,17 +213,20 @@ class RegistrationReader {
         return true;
       case 'power':
       case 'cc':
-        final n = RegExp(r'\d{1,5}(?:[.,]\d+)?').firstMatch(u);
-        if (n == null) return false;
-        final value = _num(n.group(0)!);
+        final m = RegExp(r'^(\d{1,5}(?:[.,]\d+)?)\s*(?:KW|CM3|CC|CM³)?$').firstMatch(u);
+        if (m == null) return false;
+        final v = _num(m.group(1)!);
         if (field == 'power') {
-          d.powerKw = value;
+          d.powerKw = v;
         } else {
-          d.engineCc = value.split('.').first;
+          d.engineCc = v.split('.').first;
         }
         return true;
       case 'tyres':
-        final sizes = TyreSet.findSizes(u);
+        var sizes = TyreSet.findSizes(u);
+        if (sizes.isEmpty) {
+          sizes = u.split(';').map((s) => s.trim()).where((s) => s.isNotEmpty).toList();
+        }
         if (sizes.isEmpty) return false;
         for (final s in sizes) {
           if (!d.tyres.contains(s)) d.tyres.add(s);

@@ -478,3 +478,4 @@ Hvilket felt er det?
 Mangler der noget? Åbn "{button}", markér teksten og vælg "Tildel til…".
 Tekst tildelt {field}
 Den markerede tekst ligner ikke en gyldig {field}
+Kontrollér og ret værdien, før du bekræfter

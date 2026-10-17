@@ -478,3 +478,4 @@ Għal liema qasam hu?
 Hemm xi ħaġa nieqsa? Iftaħ "{button}", agħżel it-test u agħżel "Assenja lil…".
 It-test ġie assenjat lil {field}
 It-test magħżul ma jidhirx validu għal {field}
+Iċċekkja u kkoreġi l-valur qabel tikkonferma
