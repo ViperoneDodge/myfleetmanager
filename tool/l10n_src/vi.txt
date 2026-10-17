@@ -480,3 +480,16 @@ Thiếu dữ liệu? Mở "{button}", chọn văn bản rồi chọn "Gán cho�
 Văn bản đã chọn có vẻ không hợp lệ cho {field}
 Kiểm tra và sửa giá trị trước khi xác nhận
 chỉ có năm: kiểm tra ngày và tháng
+Thêm vào yêu thích
+Bỏ khỏi yêu thích
+Tất cả xe của {name} đã vào yêu thích
+Đã bỏ {name} khỏi yêu thích
+Yêu thích
+Của tôi và yêu thích
+Của tôi
+Yêu thích
+Cả hai
+Chưa có yêu thích
+Chạm ngôi sao trên một xe, hoặc trên một nhóm để thêm tất cả xe của nhóm.
+Yêu thích
+Chọn xe hiển thị khi mở ứng dụng: của bạn, yêu thích hoặc cả hai

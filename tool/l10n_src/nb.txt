@@ -480,3 +480,16 @@ Tekst tilordnet {field}
 Den merkede teksten ser ikke ut som en gyldig {field}
 Kontroller og rett verdien før du bekrefter
 kun år: kontroller dag og måned
+Legg til i favoritter
+Fjern fra favoritter
+Alle kjøretøy i {name} er nå favoritter
+{name} fjernet fra favoritter
+Favoritter
+Mine og favoritter
+Mine
+Favoritter
+Begge
+Ingen favoritter
+Trykk på stjernen ved et kjøretøy, eller ved en gruppe for å legge til alle kjøretøyene.
+Favoritter
+Velg hvilke kjøretøy du ser når appen åpnes: dine, favoritter eller begge

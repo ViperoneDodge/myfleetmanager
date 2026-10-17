@@ -480,3 +480,16 @@ Text atribuit la {field}
 Textul selectat nu pare valid pentru {field}
 Verifică și corectează valoarea înainte de confirmare
 doar anul: verifică ziua și luna
+Adaugă la favorite
+Elimină din favorite
+Toate vehiculele din {name} sunt la favorite
+{name} eliminat din favorite
+Favorite
+Ale mele și favorite
+Ale mele
+Favorite
+Ambele
+Niciun favorit
+Atinge steaua unui vehicul sau a unui grup pentru a adăuga toate vehiculele lui.
+Favorite
+Alege ce vehicule vezi la deschidere: ale tale, favoritele sau ambele

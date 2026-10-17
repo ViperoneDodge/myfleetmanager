@@ -480,5 +480,18 @@
  "ocr.assigned": "Texta úthlutað í {field}",
  "ocr.assignBad": "Valinn texti virðist ekki gildur fyrir {field}",
  "ocr.checkValue": "Athugaðu og leiðréttu gildið áður en þú staðfestir",
- "ocr.yearOnly": "aðeins ár: athugaðu dag og mánuð"
+ "ocr.yearOnly": "aðeins ár: athugaðu dag og mánuð",
+ "fav.add": "Bæta við eftirlæti",
+ "fav.remove": "Fjarlægja úr eftirlæti",
+ "fav.groupAdded": "Öll ökutæki í {name} eru í eftirlæti",
+ "fav.groupRemoved": "{name} fjarlægt úr eftirlæti",
+ "fav.title": "Eftirlæti",
+ "fav.bothTitle": "Mín og eftirlæti",
+ "fav.viewMine": "Mín",
+ "fav.viewFav": "Eftirlæti",
+ "fav.viewBoth": "Bæði",
+ "fav.empty": "Engin eftirlæti",
+ "fav.emptyHint": "Ýttu á stjörnuna við ökutæki, eða við hóp til að bæta við öllum ökutækjum hans.",
+ "fav.setting": "Eftirlæti",
+ "fav.settingDesc": "Veldu hvaða ökutæki þú sérð við opnun: þín, eftirlæti eða bæði"
 }

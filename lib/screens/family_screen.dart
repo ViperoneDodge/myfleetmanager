@@ -92,6 +92,14 @@ class FamilyTab extends StatelessWidget {
     );
   }
 
+  Future<void> _toggleGroupFavorite(BuildContext context, FleetGroup g) async {
+    final on = !appState.isFavoriteGroup(g.id);
+    await appState.toggleFavoriteGroup(g.id);
+    if (context.mounted) {
+      showSnack(context, tr(on ? 'fav.groupAdded' : 'fav.groupRemoved', {'name': g.name}));
+    }
+  }
+
   Widget _groupSection(BuildContext context, FleetGroup g) {
     final list = appState.groupVehicles(g.id);
     final scheme = Theme.of(context).colorScheme;
@@ -122,6 +130,11 @@ class FamilyTab extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodySmall),
                 ]),
               ),
+              if (appState.favoritesOn)
+                FavoriteStar(
+                  on: appState.isFavoriteGroup(g.id),
+                  onPressed: () => _toggleGroupFavorite(context, g),
+                ),
               if (list.isNotEmpty)
                 IconButton(
                   tooltip: tr('pdf.export'),
@@ -146,6 +159,8 @@ class FamilyTab extends StatelessWidget {
                       reason: tr('pro.reasonLimited', {'n': AppState.freeVehicleLimit}))
                   : onOpen(v, list.where((x) => !limited.contains(x.id)).toList()),
               onLongPress: () => moveVehicleSheet(context, v),
+              favorite: appState.isFavorite(v),
+              onFavorite: appState.favoritesOn ? () => appState.toggleFavorite(v) : null,
             )),
         if (appState.canAddTo(g.id))
           Align(

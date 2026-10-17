@@ -480,3 +480,16 @@ Teks ditetapkan ke {field}
 Teks yang dipilih tampaknya bukan {field} yang valid
 Periksa dan perbaiki nilainya sebelum mengonfirmasi
 hanya tahun: periksa tanggal dan bulan
+Tambah ke favorit
+Hapus dari favorit
+Semua kendaraan di {name} kini favorit
+{name} dihapus dari favorit
+Favorit
+Milikku dan favorit
+Milikku
+Favorit
+Keduanya
+Belum ada favorit
+Ketuk bintang pada kendaraan, atau pada grup untuk menambahkan semua kendaraannya.
+Favorit
+Pilih kendaraan yang tampil saat aplikasi dibuka: milikmu, favorit, atau keduanya

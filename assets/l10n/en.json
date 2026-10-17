@@ -480,5 +480,18 @@
  "ocr.assigned": "Text assigned to {field}",
  "ocr.assignBad": "The selected text does not look like a valid {field}",
  "ocr.checkValue": "Check and correct the value before confirming",
- "ocr.yearOnly": "year only: check day and month"
+ "ocr.yearOnly": "year only: check day and month",
+ "fav.add": "Add to favourites",
+ "fav.remove": "Remove from favourites",
+ "fav.groupAdded": "All vehicles in {name} are now favourites",
+ "fav.groupRemoved": "{name} removed from favourites",
+ "fav.title": "Favourites",
+ "fav.bothTitle": "Mine and favourites",
+ "fav.viewMine": "Mine",
+ "fav.viewFav": "Favourites",
+ "fav.viewBoth": "Both",
+ "fav.empty": "No favourites yet",
+ "fav.emptyHint": "Tap the star on a vehicle, or on a group to add all its vehicles.",
+ "fav.setting": "Favourites",
+ "fav.settingDesc": "Choose which vehicles to see when the app opens: yours, favourites or both"
 }

@@ -480,5 +480,18 @@
  "ocr.assigned": "It-test ġie assenjat lil {field}",
  "ocr.assignBad": "It-test magħżul ma jidhirx validu għal {field}",
  "ocr.checkValue": "Iċċekkja u kkoreġi l-valur qabel tikkonferma",
- "ocr.yearOnly": "is-sena biss: iċċekkja l-jum u x-xahar"
+ "ocr.yearOnly": "is-sena biss: iċċekkja l-jum u x-xahar",
+ "fav.add": "Żid mal-favoriti",
+ "fav.remove": "Neħħi mill-favoriti",
+ "fav.groupAdded": "Il-vetturi kollha ta' {name} huma fil-favoriti",
+ "fav.groupRemoved": "{name} tneħħa mill-favoriti",
+ "fav.title": "Favoriti",
+ "fav.bothTitle": "Tiegħi u favoriti",
+ "fav.viewMine": "Tiegħi",
+ "fav.viewFav": "Favoriti",
+ "fav.viewBoth": "It-tnejn",
+ "fav.empty": "L-ebda favorit",
+ "fav.emptyHint": "Agħfas l-istilla fuq vettura, jew fuq grupp biex iżżid il-vetturi kollha tiegħu.",
+ "fav.setting": "Favoriti",
+ "fav.settingDesc": "Agħżel liema vetturi tara meta tiftaħ: tiegħek, il-favoriti jew it-tnejn"
 }

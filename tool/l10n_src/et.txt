@@ -480,3 +480,16 @@ Tekst määratud: {field}
 Valitud tekst ei tundu sobivat väljale {field}
 Kontrolli ja paranda väärtus enne kinnitamist
 ainult aasta: kontrolli päeva ja kuud
+Lisa lemmikutesse
+Eemalda lemmikutest
+Kõik rühma {name} sõidukid on lemmikutes
+{name} eemaldati lemmikutest
+Lemmikud
+Minu ja lemmikud
+Minu
+Lemmikud
+Mõlemad
+Lemmikuid pole
+Puuduta sõiduki tärni, või rühma tärni, et lisada kõik selle sõidukid.
+Lemmikud
+Vali, milliseid sõidukeid avamisel näha: enda, lemmikud või mõlemad

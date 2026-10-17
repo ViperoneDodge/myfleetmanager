@@ -480,3 +480,16 @@ Text přiřazen k: {field}
 Označený text není platný údaj pro {field}
 Před potvrzením hodnotu zkontrolujte a opravte
 jen rok: zkontrolujte den a měsíc
+Přidat do oblíbených
+Odebrat z oblíbených
+Všechna vozidla z {name} jsou v oblíbených
+{name} odebrána z oblíbených
+Oblíbené
+Moje a oblíbené
+Moje
+Oblíbené
+Obojí
+Žádná oblíbená
+Klepněte na hvězdičku u vozidla, nebo u skupiny pro přidání všech jejích vozidel.
+Oblíbené
+Vyberte, která vozidla uvidíte po otevření: svá, oblíbená nebo obojí

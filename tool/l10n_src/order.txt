@@ -480,3 +480,16 @@ ocr.assigned
 ocr.assignBad
 ocr.checkValue
 ocr.yearOnly
+fav.add
+fav.remove
+fav.groupAdded
+fav.groupRemoved
+fav.title
+fav.bothTitle
+fav.viewMine
+fav.viewFav
+fav.viewBoth
+fav.empty
+fav.emptyHint
+fav.setting
+fav.settingDesc

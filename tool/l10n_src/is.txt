@@ -480,3 +480,16 @@ Texta úthlutað í {field}
 Valinn texti virðist ekki gildur fyrir {field}
 Athugaðu og leiðréttu gildið áður en þú staðfestir
 aðeins ár: athugaðu dag og mánuð
+Bæta við eftirlæti
+Fjarlægja úr eftirlæti
+Öll ökutæki í {name} eru í eftirlæti
+{name} fjarlægt úr eftirlæti
+Eftirlæti
+Mín og eftirlæti
+Mín
+Eftirlæti
+Bæði
+Engin eftirlæti
+Ýttu á stjörnuna við ökutæki, eða við hóp til að bæta við öllum ökutækjum hans.
+Eftirlæti
+Veldu hvaða ökutæki þú sérð við opnun: þín, eftirlæti eða bæði

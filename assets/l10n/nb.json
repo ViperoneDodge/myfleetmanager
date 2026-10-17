@@ -480,5 +480,18 @@
  "ocr.assigned": "Tekst tilordnet {field}",
  "ocr.assignBad": "Den merkede teksten ser ikke ut som en gyldig {field}",
  "ocr.checkValue": "Kontroller og rett verdien før du bekrefter",
- "ocr.yearOnly": "kun år: kontroller dag og måned"
+ "ocr.yearOnly": "kun år: kontroller dag og måned",
+ "fav.add": "Legg til i favoritter",
+ "fav.remove": "Fjern fra favoritter",
+ "fav.groupAdded": "Alle kjøretøy i {name} er nå favoritter",
+ "fav.groupRemoved": "{name} fjernet fra favoritter",
+ "fav.title": "Favoritter",
+ "fav.bothTitle": "Mine og favoritter",
+ "fav.viewMine": "Mine",
+ "fav.viewFav": "Favoritter",
+ "fav.viewBoth": "Begge",
+ "fav.empty": "Ingen favoritter",
+ "fav.emptyHint": "Trykk på stjernen ved et kjøretøy, eller ved en gruppe for å legge til alle kjøretøyene.",
+ "fav.setting": "Favoritter",
+ "fav.settingDesc": "Velg hvilke kjøretøy du ser når appen åpnes: dine, favoritter eller begge"
 }

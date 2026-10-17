@@ -480,5 +480,18 @@
  "ocr.assigned": "文字已指定为{field}",
  "ocr.assignBad": "所选文字看起来不是有效的{field}",
  "ocr.checkValue": "确认前请检查并更正该值",
- "ocr.yearOnly": "仅有年份：请核对日和月"
+ "ocr.yearOnly": "仅有年份：请核对日和月",
+ "fav.add": "加入收藏",
+ "fav.remove": "取消收藏",
+ "fav.groupAdded": "{name} 的所有车辆已加入收藏",
+ "fav.groupRemoved": "已将 {name} 移出收藏",
+ "fav.title": "收藏",
+ "fav.bothTitle": "我的和收藏",
+ "fav.viewMine": "我的",
+ "fav.viewFav": "收藏",
+ "fav.viewBoth": "全部",
+ "fav.empty": "暂无收藏",
+ "fav.emptyHint": "点按车辆上的星标，或点按分组的星标以加入其所有车辆。",
+ "fav.setting": "收藏",
+ "fav.settingDesc": "选择打开时显示哪些车辆：我的、收藏或两者"
 }

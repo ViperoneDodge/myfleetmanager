@@ -480,3 +480,16 @@ It-test ġie assenjat lil {field}
 It-test magħżul ma jidhirx validu għal {field}
 Iċċekkja u kkoreġi l-valur qabel tikkonferma
 is-sena biss: iċċekkja l-jum u x-xahar
+Żid mal-favoriti
+Neħħi mill-favoriti
+Il-vetturi kollha ta' {name} huma fil-favoriti
+{name} tneħħa mill-favoriti
+Favoriti
+Tiegħi u favoriti
+Tiegħi
+Favoriti
+It-tnejn
+L-ebda favorit
+Agħfas l-istilla fuq vettura, jew fuq grupp biex iżżid il-vetturi kollha tiegħu.
+Favoriti
+Agħżel liema vetturi tara meta tiftaħ: tiegħek, il-favoriti jew it-tnejn

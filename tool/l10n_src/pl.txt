@@ -480,3 +480,16 @@ Tekst przypisany do: {field}
 Zaznaczony tekst nie wygląda na poprawną wartość: {field}
 Sprawdź i popraw wartość przed potwierdzeniem
 tylko rok: sprawdź dzień i miesiąc
+Dodaj do ulubionych
+Usuń z ulubionych
+Wszystkie pojazdy z {name} są w ulubionych
+{name} usunięto z ulubionych
+Ulubione
+Moje i ulubione
+Moje
+Ulubione
+Oba
+Brak ulubionych
+Dotknij gwiazdki przy pojeździe lub grupie, aby dodać wszystkie jej pojazdy.
+Ulubione
+Wybierz, które pojazdy widzisz po otwarciu: swoje, ulubione lub oba

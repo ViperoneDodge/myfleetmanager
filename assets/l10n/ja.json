@@ -480,5 +480,18 @@
  "ocr.assigned": "{field}に割り当てました",
  "ocr.assignBad": "選択した文字は{field}として正しくないようです",
  "ocr.checkValue": "確定する前に値を確認・修正してください",
- "ocr.yearOnly": "年のみ：日と月を確認してください"
+ "ocr.yearOnly": "年のみ：日と月を確認してください",
+ "fav.add": "お気に入りに追加",
+ "fav.remove": "お気に入りから削除",
+ "fav.groupAdded": "{name} のすべての車両をお気に入りにしました",
+ "fav.groupRemoved": "{name} をお気に入りから削除しました",
+ "fav.title": "お気に入り",
+ "fav.bothTitle": "自分とお気に入り",
+ "fav.viewMine": "自分",
+ "fav.viewFav": "お気に入り",
+ "fav.viewBoth": "両方",
+ "fav.empty": "お気に入りはありません",
+ "fav.emptyHint": "車両の星、またはグループの星をタップすると、その車両をすべて追加できます。",
+ "fav.setting": "お気に入り",
+ "fav.settingDesc": "起動時に表示する車両を選択：自分、お気に入り、または両方"
 }

@@ -480,3 +480,16 @@ Tekstas priskirtas: {field}
 Pažymėtas tekstas netinka laukui {field}
 Prieš patvirtindami patikrinkite ir pataisykite reikšmę
 tik metai: patikrinkite dieną ir mėnesį
+Įtraukti į mėgstamus
+Pašalinti iš mėgstamų
+Visos grupės {name} transporto priemonės yra mėgstamos
+{name} pašalinta iš mėgstamų
+Mėgstami
+Mano ir mėgstami
+Mano
+Mėgstami
+Abu
+Mėgstamų nėra
+Bakstelėkite žvaigždutę prie transporto priemonės arba grupės, kad įtrauktumėte visas jos transporto priemones.
+Mėgstami
+Pasirinkite, kurias transporto priemones matyti atidarius: savo, mėgstamas ar abu

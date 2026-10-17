@@ -480,3 +480,16 @@ Teksts piešķirts: {field}
 Atlasītais teksts neizskatās derīgs laukam {field}
 Pirms apstiprināšanas pārbaudi un izlabo vērtību
 tikai gads: pārbaudi dienu un mēnesi
+Pievienot izlasei
+Noņemt no izlases
+Visi grupas {name} transportlīdzekļi ir izlasē
+{name} noņemta no izlases
+Izlase
+Mani un izlase
+Mani
+Izlase
+Abi
+Izlase ir tukša
+Pieskaries zvaigznei pie transportlīdzekļa vai grupas, lai pievienotu visus tās transportlīdzekļus.
+Izlase
+Izvēlies, kurus transportlīdzekļus redzēt atverot: savus, izlasi vai abus

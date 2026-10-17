@@ -480,5 +480,18 @@
  "ocr.assigned": "Text přiřazen k: {field}",
  "ocr.assignBad": "Označený text není platný údaj pro {field}",
  "ocr.checkValue": "Před potvrzením hodnotu zkontrolujte a opravte",
- "ocr.yearOnly": "jen rok: zkontrolujte den a měsíc"
+ "ocr.yearOnly": "jen rok: zkontrolujte den a měsíc",
+ "fav.add": "Přidat do oblíbených",
+ "fav.remove": "Odebrat z oblíbených",
+ "fav.groupAdded": "Všechna vozidla z {name} jsou v oblíbených",
+ "fav.groupRemoved": "{name} odebrána z oblíbených",
+ "fav.title": "Oblíbené",
+ "fav.bothTitle": "Moje a oblíbené",
+ "fav.viewMine": "Moje",
+ "fav.viewFav": "Oblíbené",
+ "fav.viewBoth": "Obojí",
+ "fav.empty": "Žádná oblíbená",
+ "fav.emptyHint": "Klepněte na hvězdičku u vozidla, nebo u skupiny pro přidání všech jejích vozidel.",
+ "fav.setting": "Oblíbené",
+ "fav.settingDesc": "Vyberte, která vozidla uvidíte po otevření: svá, oblíbená nebo obojí"
 }

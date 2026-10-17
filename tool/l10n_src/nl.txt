@@ -480,3 +480,16 @@ Tekst toegewezen aan {field}
 De geselecteerde tekst lijkt geen geldige {field}
 Controleer en corrigeer de waarde voordat je bevestigt
 alleen jaar: controleer dag en maand
+Toevoegen aan favorieten
+Verwijderen uit favorieten
+Alle voertuigen van {name} zijn favoriet
+{name} verwijderd uit favorieten
+Favorieten
+Mijn en favorieten
+Mijn
+Favorieten
+Beide
+Nog geen favorieten
+Tik op de ster van een voertuig, of van een groep om al zijn voertuigen toe te voegen.
+Favorieten
+Kies welke voertuigen je ziet bij het openen: die van jou, favorieten of beide

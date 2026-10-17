@@ -480,3 +480,16 @@ Metin {field} alanına atandı
 Seçilen metin {field} için geçerli görünmüyor
 Onaylamadan önce değeri kontrol edip düzeltin
 yalnızca yıl: günü ve ayı kontrol edin
+Favorilere ekle
+Favorilerden çıkar
+{name} grubundaki tüm araçlar favorilerde
+{name} favorilerden çıkarıldı
+Favoriler
+Benimkiler ve favoriler
+Benimkiler
+Favoriler
+İkisi
+Favori yok
+Bir aracın yıldızına, ya da tüm araçlarını eklemek için bir grubun yıldızına dokunun.
+Favoriler
+Uygulama açıldığında hangi araçları göreceğinizi seçin: sizinkiler, favoriler ya da ikisi

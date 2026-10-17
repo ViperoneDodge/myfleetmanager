@@ -480,5 +480,18 @@
  "ocr.assigned": "Teksts piešķirts: {field}",
  "ocr.assignBad": "Atlasītais teksts neizskatās derīgs laukam {field}",
  "ocr.checkValue": "Pirms apstiprināšanas pārbaudi un izlabo vērtību",
- "ocr.yearOnly": "tikai gads: pārbaudi dienu un mēnesi"
+ "ocr.yearOnly": "tikai gads: pārbaudi dienu un mēnesi",
+ "fav.add": "Pievienot izlasei",
+ "fav.remove": "Noņemt no izlases",
+ "fav.groupAdded": "Visi grupas {name} transportlīdzekļi ir izlasē",
+ "fav.groupRemoved": "{name} noņemta no izlases",
+ "fav.title": "Izlase",
+ "fav.bothTitle": "Mani un izlase",
+ "fav.viewMine": "Mani",
+ "fav.viewFav": "Izlase",
+ "fav.viewBoth": "Abi",
+ "fav.empty": "Izlase ir tukša",
+ "fav.emptyHint": "Pieskaries zvaigznei pie transportlīdzekļa vai grupas, lai pievienotu visus tās transportlīdzekļus.",
+ "fav.setting": "Izlase",
+ "fav.settingDesc": "Izvēlies, kurus transportlīdzekļus redzēt atverot: savus, izlasi vai abus"
 }

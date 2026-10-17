@@ -480,5 +480,18 @@
  "ocr.assigned": "Szöveg hozzárendelve: {field}",
  "ocr.assignBad": "A kijelölt szöveg nem érvényes érték ehhez: {field}",
  "ocr.checkValue": "Megerősítés előtt ellenőrizd és javítsd az értéket",
- "ocr.yearOnly": "csak év: ellenőrizd a napot és a hónapot"
+ "ocr.yearOnly": "csak év: ellenőrizd a napot és a hónapot",
+ "fav.add": "Hozzáadás a kedvencekhez",
+ "fav.remove": "Eltávolítás a kedvencekből",
+ "fav.groupAdded": "{name} összes járműve a kedvencek között van",
+ "fav.groupRemoved": "{name} eltávolítva a kedvencekből",
+ "fav.title": "Kedvencek",
+ "fav.bothTitle": "Saját és kedvencek",
+ "fav.viewMine": "Saját",
+ "fav.viewFav": "Kedvencek",
+ "fav.viewBoth": "Mindkettő",
+ "fav.empty": "Nincs kedvenc",
+ "fav.emptyHint": "Koppints egy jármű csillagára, vagy egy csoportéra az összes járműve hozzáadásához.",
+ "fav.setting": "Kedvencek",
+ "fav.settingDesc": "Válaszd ki, mely járművek jelenjenek meg induláskor: a sajátjaid, a kedvencek vagy mindkettő"
 }

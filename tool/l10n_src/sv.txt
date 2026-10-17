@@ -480,3 +480,16 @@ Texten tilldelad till {field}
 Den markerade texten verkar inte vara giltig för {field}
 Kontrollera och rätta värdet innan du bekräftar
 endast år: kontrollera dag och månad
+Lägg till i favoriter
+Ta bort från favoriter
+Alla fordon i {name} är nu favoriter
+{name} borttagen från favoriter
+Favoriter
+Mina och favoriter
+Mina
+Favoriter
+Båda
+Inga favoriter
+Tryck på stjärnan vid ett fordon, eller vid en grupp för att lägga till alla dess fordon.
+Favoriter
+Välj vilka fordon som visas när appen öppnas: dina, favoriter eller båda

@@ -411,6 +411,13 @@ class SettingsScreen extends StatelessWidget {
 
     return [
       _header(context, tr('settings.appearance')),
+      SwitchListTile(
+        secondary: const Icon(Icons.star_outline),
+        title: Text(tr('fav.setting')),
+        subtitle: Text(tr('fav.settingDesc')),
+        value: appState.favoritesOn,
+        onChanged: (on) => appState.setFavoritesOn(on),
+      ),
       Padding(
         padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
         child: SegmentedButton<ThemeMode>(

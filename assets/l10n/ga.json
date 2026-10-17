@@ -480,5 +480,18 @@
  "ocr.assigned": "Téacs sannta do {field}",
  "ocr.assignBad": "Ní cosúil gur {field} bailí é an téacs roghnaithe",
  "ocr.checkValue": "Seiceáil agus ceartaigh an luach sula ndeimhníonn tú",
- "ocr.yearOnly": "an bhliain amháin: seiceáil an lá agus an mhí"
+ "ocr.yearOnly": "an bhliain amháin: seiceáil an lá agus an mhí",
+ "fav.add": "Cuir le ceanáin",
+ "fav.remove": "Bain de na ceanáin",
+ "fav.groupAdded": "Tá gach feithicil i {name} i measc na gceanán",
+ "fav.groupRemoved": "Baineadh {name} de na ceanáin",
+ "fav.title": "Ceanáin",
+ "fav.bothTitle": "Mo chuid féin agus ceanáin",
+ "fav.viewMine": "Mo chuid féin",
+ "fav.viewFav": "Ceanáin",
+ "fav.viewBoth": "An dá cheann",
+ "fav.empty": "Gan ceanáin",
+ "fav.emptyHint": "Tapáil an réalta ar fheithicil, nó ar ghrúpa chun a fheithiclí go léir a chur leis.",
+ "fav.setting": "Ceanáin",
+ "fav.settingDesc": "Roghnaigh na feithiclí a fheiceann tú nuair a osclaítear an aip: do chuid féin, ceanáin nó an dá cheann"
 }

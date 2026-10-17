@@ -480,5 +480,18 @@
  "ocr.assigned": "Teksti määritetty: {field}",
  "ocr.assignBad": "Valittu teksti ei näytä kelvolliselta kenttään {field}",
  "ocr.checkValue": "Tarkista ja korjaa arvo ennen vahvistamista",
- "ocr.yearOnly": "vain vuosi: tarkista päivä ja kuukausi"
+ "ocr.yearOnly": "vain vuosi: tarkista päivä ja kuukausi",
+ "fav.add": "Lisää suosikkeihin",
+ "fav.remove": "Poista suosikeista",
+ "fav.groupAdded": "Kaikki ryhmän {name} ajoneuvot ovat suosikeissa",
+ "fav.groupRemoved": "{name} poistettu suosikeista",
+ "fav.title": "Suosikit",
+ "fav.bothTitle": "Omat ja suosikit",
+ "fav.viewMine": "Omat",
+ "fav.viewFav": "Suosikit",
+ "fav.viewBoth": "Molemmat",
+ "fav.empty": "Ei suosikkeja",
+ "fav.emptyHint": "Napauta ajoneuvon tähteä, tai ryhmän tähteä lisätäksesi kaikki sen ajoneuvot.",
+ "fav.setting": "Suosikit",
+ "fav.settingDesc": "Valitse, mitkä ajoneuvot näet avatessa: omasi, suosikit vai molemmat"
 }

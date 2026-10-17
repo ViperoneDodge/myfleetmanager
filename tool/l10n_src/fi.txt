@@ -480,3 +480,16 @@ Teksti määritetty: {field}
 Valittu teksti ei näytä kelvolliselta kenttään {field}
 Tarkista ja korjaa arvo ennen vahvistamista
 vain vuosi: tarkista päivä ja kuukausi
+Lisää suosikkeihin
+Poista suosikeista
+Kaikki ryhmän {name} ajoneuvot ovat suosikeissa
+{name} poistettu suosikeista
+Suosikit
+Omat ja suosikit
+Omat
+Suosikit
+Molemmat
+Ei suosikkeja
+Napauta ajoneuvon tähteä, tai ryhmän tähteä lisätäksesi kaikki sen ajoneuvot.
+Suosikit
+Valitse, mitkä ajoneuvot näet avatessa: omasi, suosikit vai molemmat

@@ -480,5 +480,18 @@
  "ocr.assigned": "Metin {field} alanına atandı",
  "ocr.assignBad": "Seçilen metin {field} için geçerli görünmüyor",
  "ocr.checkValue": "Onaylamadan önce değeri kontrol edip düzeltin",
- "ocr.yearOnly": "yalnızca yıl: günü ve ayı kontrol edin"
+ "ocr.yearOnly": "yalnızca yıl: günü ve ayı kontrol edin",
+ "fav.add": "Favorilere ekle",
+ "fav.remove": "Favorilerden çıkar",
+ "fav.groupAdded": "{name} grubundaki tüm araçlar favorilerde",
+ "fav.groupRemoved": "{name} favorilerden çıkarıldı",
+ "fav.title": "Favoriler",
+ "fav.bothTitle": "Benimkiler ve favoriler",
+ "fav.viewMine": "Benimkiler",
+ "fav.viewFav": "Favoriler",
+ "fav.viewBoth": "İkisi",
+ "fav.empty": "Favori yok",
+ "fav.emptyHint": "Bir aracın yıldızına, ya da tüm araçlarını eklemek için bir grubun yıldızına dokunun.",
+ "fav.setting": "Favoriler",
+ "fav.settingDesc": "Uygulama açıldığında hangi araçları göreceğinizi seçin: sizinkiler, favoriler ya da ikisi"
 }

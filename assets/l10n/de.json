@@ -480,5 +480,18 @@
  "ocr.assigned": "Text {field} zugeordnet",
  "ocr.assignBad": "Der markierte Text ist kein gültiger Wert für {field}",
  "ocr.checkValue": "Prüfe und korrigiere den Wert vor dem Bestätigen",
- "ocr.yearOnly": "nur Jahr: Tag und Monat prüfen"
+ "ocr.yearOnly": "nur Jahr: Tag und Monat prüfen",
+ "fav.add": "Zu Favoriten hinzufügen",
+ "fav.remove": "Aus Favoriten entfernen",
+ "fav.groupAdded": "Alle Fahrzeuge von {name} sind jetzt Favoriten",
+ "fav.groupRemoved": "{name} aus Favoriten entfernt",
+ "fav.title": "Favoriten",
+ "fav.bothTitle": "Meine und Favoriten",
+ "fav.viewMine": "Meine",
+ "fav.viewFav": "Favoriten",
+ "fav.viewBoth": "Beide",
+ "fav.empty": "Noch keine Favoriten",
+ "fav.emptyHint": "Tippe auf den Stern eines Fahrzeugs oder einer Gruppe, um alle ihre Fahrzeuge hinzuzufügen.",
+ "fav.setting": "Favoriten",
+ "fav.settingDesc": "Wähle, welche Fahrzeuge beim Öffnen angezeigt werden: deine, Favoriten oder beide"
 }

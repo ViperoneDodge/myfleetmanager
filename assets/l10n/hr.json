@@ -480,5 +480,18 @@
  "ocr.assigned": "Tekst dodijeljen: {field}",
  "ocr.assignBad": "Označeni tekst nije valjan za {field}",
  "ocr.checkValue": "Provjeri i ispravi vrijednost prije potvrde",
- "ocr.yearOnly": "samo godina: provjeri dan i mjesec"
+ "ocr.yearOnly": "samo godina: provjeri dan i mjesec",
+ "fav.add": "Dodaj u favorite",
+ "fav.remove": "Ukloni iz favorita",
+ "fav.groupAdded": "Sva vozila iz {name} su u favoritima",
+ "fav.groupRemoved": "{name} uklonjena iz favorita",
+ "fav.title": "Favoriti",
+ "fav.bothTitle": "Moja i favoriti",
+ "fav.viewMine": "Moja",
+ "fav.viewFav": "Favoriti",
+ "fav.viewBoth": "Oboje",
+ "fav.empty": "Nema favorita",
+ "fav.emptyHint": "Dodirni zvjezdicu na vozilu ili na grupi da dodaš sva njezina vozila.",
+ "fav.setting": "Favoriti",
+ "fav.settingDesc": "Odaberi koja vozila vidiš pri otvaranju: svoja, favorite ili oboje"
 }

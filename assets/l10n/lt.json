@@ -480,5 +480,18 @@
  "ocr.assigned": "Tekstas priskirtas: {field}",
  "ocr.assignBad": "Pažymėtas tekstas netinka laukui {field}",
  "ocr.checkValue": "Prieš patvirtindami patikrinkite ir pataisykite reikšmę",
- "ocr.yearOnly": "tik metai: patikrinkite dieną ir mėnesį"
+ "ocr.yearOnly": "tik metai: patikrinkite dieną ir mėnesį",
+ "fav.add": "Įtraukti į mėgstamus",
+ "fav.remove": "Pašalinti iš mėgstamų",
+ "fav.groupAdded": "Visos grupės {name} transporto priemonės yra mėgstamos",
+ "fav.groupRemoved": "{name} pašalinta iš mėgstamų",
+ "fav.title": "Mėgstami",
+ "fav.bothTitle": "Mano ir mėgstami",
+ "fav.viewMine": "Mano",
+ "fav.viewFav": "Mėgstami",
+ "fav.viewBoth": "Abu",
+ "fav.empty": "Mėgstamų nėra",
+ "fav.emptyHint": "Bakstelėkite žvaigždutę prie transporto priemonės arba grupės, kad įtrauktumėte visas jos transporto priemones.",
+ "fav.setting": "Mėgstami",
+ "fav.settingDesc": "Pasirinkite, kurias transporto priemones matyti atidarius: savo, mėgstamas ar abu"
 }

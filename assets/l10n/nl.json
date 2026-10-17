@@ -480,5 +480,18 @@
  "ocr.assigned": "Tekst toegewezen aan {field}",
  "ocr.assignBad": "De geselecteerde tekst lijkt geen geldige {field}",
  "ocr.checkValue": "Controleer en corrigeer de waarde voordat je bevestigt",
- "ocr.yearOnly": "alleen jaar: controleer dag en maand"
+ "ocr.yearOnly": "alleen jaar: controleer dag en maand",
+ "fav.add": "Toevoegen aan favorieten",
+ "fav.remove": "Verwijderen uit favorieten",
+ "fav.groupAdded": "Alle voertuigen van {name} zijn favoriet",
+ "fav.groupRemoved": "{name} verwijderd uit favorieten",
+ "fav.title": "Favorieten",
+ "fav.bothTitle": "Mijn en favorieten",
+ "fav.viewMine": "Mijn",
+ "fav.viewFav": "Favorieten",
+ "fav.viewBoth": "Beide",
+ "fav.empty": "Nog geen favorieten",
+ "fav.emptyHint": "Tik op de ster van een voertuig, of van een groep om al zijn voertuigen toe te voegen.",
+ "fav.setting": "Favorieten",
+ "fav.settingDesc": "Kies welke voertuigen je ziet bij het openen: die van jou, favorieten of beide"
 }

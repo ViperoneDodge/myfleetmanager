@@ -548,9 +548,79 @@ class FleetGroup {
       );
 }
 
+enum HomeView { mine, favorites, both }
+
+class Favorites {
+  bool on;
+  HomeView view;
+  Set<String> vehicles;
+  Set<String> groups;
+  Set<String> excluded;
+
+  Favorites({
+    this.on = false,
+    this.view = HomeView.mine,
+    Set<String>? vehicles,
+    Set<String>? groups,
+    Set<String>? excluded,
+  })  : vehicles = vehicles ?? {},
+        groups = groups ?? {},
+        excluded = excluded ?? {};
+
+  bool isFavorite(Vehicle v) =>
+      !excluded.contains(v.id) &&
+      (vehicles.contains(v.id) || (v.fleetId != null && groups.contains(v.fleetId)));
+
+  void toggle(Vehicle v) {
+    final viaGroup = v.fleetId != null && groups.contains(v.fleetId);
+    if (isFavorite(v)) {
+      vehicles.remove(v.id);
+      if (viaGroup) excluded.add(v.id);
+    } else {
+      excluded.remove(v.id);
+      if (!viaGroup) vehicles.add(v.id);
+    }
+  }
+
+  void toggleGroup(String id, Iterable<Vehicle> members) {
+    if (groups.remove(id)) return;
+    groups.add(id);
+    for (final v in members) {
+      excluded.remove(v.id);
+      vehicles.remove(v.id);
+    }
+  }
+
+  void renamed(String from, String to) {
+    if (vehicles.remove(from)) vehicles.add(to);
+    if (excluded.remove(from)) excluded.add(to);
+  }
+
+  Map<String, dynamic> toJson() => {
+        'on': on,
+        'view': view.name,
+        'vehicles': vehicles.toList(),
+        'groups': groups.toList(),
+        'excluded': excluded.toList(),
+      };
+
+  factory Favorites.fromJson(Map<String, dynamic>? j) {
+    if (j == null) return Favorites();
+    Set<String> ids(Object? o) => ((o as List?) ?? const []).map((e) => e.toString()).toSet();
+    return Favorites(
+      on: j['on'] == true,
+      view: HomeView.values.firstWhere((e) => e.name == j['view'], orElse: () => HomeView.mine),
+      vehicles: ids(j['vehicles']),
+      groups: ids(j['groups']),
+      excluded: ids(j['excluded']),
+    );
+  }
+}
+
 class UserData {
   List<Vehicle> vehicles;
   NotifySettings notify;
+  Favorites favorites;
 
   String? personalFleetId;
   List<FleetGroup> groups;
@@ -560,9 +630,11 @@ class UserData {
     NotifySettings? notify,
     this.personalFleetId,
     List<FleetGroup>? groups,
+    Favorites? favorites,
   })  : vehicles = vehicles ?? [],
         notify = notify ?? NotifySettings(),
-        groups = groups ?? [];
+        groups = groups ?? [],
+        favorites = favorites ?? Favorites();
 
   FleetGroup? groupById(String? id) {
     for (final g in groups) {
@@ -576,6 +648,7 @@ class UserData {
         'notify': notify.toJson(),
         'personalFleetId': personalFleetId,
         'groups': groups.map((g) => g.toJson()).toList(),
+        'favorites': favorites.toJson(),
       };
 
   factory UserData.fromJson(Map<String, dynamic> j) => UserData(
@@ -590,6 +663,8 @@ class UserData {
                 ?.map((e) => FleetGroup.fromJson(Map<String, dynamic>.from(e as Map)))
                 .toList() ??
             [],
+        favorites: Favorites.fromJson(
+            j['favorites'] == null ? null : Map<String, dynamic>.from(j['favorites'] as Map)),
       );
 }
 

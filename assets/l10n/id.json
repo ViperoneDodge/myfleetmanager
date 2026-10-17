@@ -480,5 +480,18 @@
  "ocr.assigned": "Teks ditetapkan ke {field}",
  "ocr.assignBad": "Teks yang dipilih tampaknya bukan {field} yang valid",
  "ocr.checkValue": "Periksa dan perbaiki nilainya sebelum mengonfirmasi",
- "ocr.yearOnly": "hanya tahun: periksa tanggal dan bulan"
+ "ocr.yearOnly": "hanya tahun: periksa tanggal dan bulan",
+ "fav.add": "Tambah ke favorit",
+ "fav.remove": "Hapus dari favorit",
+ "fav.groupAdded": "Semua kendaraan di {name} kini favorit",
+ "fav.groupRemoved": "{name} dihapus dari favorit",
+ "fav.title": "Favorit",
+ "fav.bothTitle": "Milikku dan favorit",
+ "fav.viewMine": "Milikku",
+ "fav.viewFav": "Favorit",
+ "fav.viewBoth": "Keduanya",
+ "fav.empty": "Belum ada favorit",
+ "fav.emptyHint": "Ketuk bintang pada kendaraan, atau pada grup untuk menambahkan semua kendaraannya.",
+ "fav.setting": "Favorit",
+ "fav.settingDesc": "Pilih kendaraan yang tampil saat aplikasi dibuka: milikmu, favorit, atau keduanya"
 }

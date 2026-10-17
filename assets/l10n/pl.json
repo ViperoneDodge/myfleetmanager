@@ -480,5 +480,18 @@
  "ocr.assigned": "Tekst przypisany do: {field}",
  "ocr.assignBad": "Zaznaczony tekst nie wygląda na poprawną wartość: {field}",
  "ocr.checkValue": "Sprawdź i popraw wartość przed potwierdzeniem",
- "ocr.yearOnly": "tylko rok: sprawdź dzień i miesiąc"
+ "ocr.yearOnly": "tylko rok: sprawdź dzień i miesiąc",
+ "fav.add": "Dodaj do ulubionych",
+ "fav.remove": "Usuń z ulubionych",
+ "fav.groupAdded": "Wszystkie pojazdy z {name} są w ulubionych",
+ "fav.groupRemoved": "{name} usunięto z ulubionych",
+ "fav.title": "Ulubione",
+ "fav.bothTitle": "Moje i ulubione",
+ "fav.viewMine": "Moje",
+ "fav.viewFav": "Ulubione",
+ "fav.viewBoth": "Oba",
+ "fav.empty": "Brak ulubionych",
+ "fav.emptyHint": "Dotknij gwiazdki przy pojeździe lub grupie, aby dodać wszystkie jej pojazdy.",
+ "fav.setting": "Ulubione",
+ "fav.settingDesc": "Wybierz, które pojazdy widzisz po otwarciu: swoje, ulubione lub oba"
 }

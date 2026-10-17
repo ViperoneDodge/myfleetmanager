@@ -480,5 +480,18 @@
  "ocr.assigned": "{field}에 지정했습니다",
  "ocr.assignBad": "선택한 텍스트가 올바른 {field} 값이 아닌 것 같습니다",
  "ocr.checkValue": "확인하기 전에 값을 확인하고 수정하세요",
- "ocr.yearOnly": "연도만 있음: 일과 월을 확인하세요"
+ "ocr.yearOnly": "연도만 있음: 일과 월을 확인하세요",
+ "fav.add": "즐겨찾기에 추가",
+ "fav.remove": "즐겨찾기에서 제거",
+ "fav.groupAdded": "{name}의 모든 차량이 즐겨찾기에 추가되었습니다",
+ "fav.groupRemoved": "{name}을(를) 즐겨찾기에서 제거했습니다",
+ "fav.title": "즐겨찾기",
+ "fav.bothTitle": "내 차량과 즐겨찾기",
+ "fav.viewMine": "내 차량",
+ "fav.viewFav": "즐겨찾기",
+ "fav.viewBoth": "둘 다",
+ "fav.empty": "즐겨찾기 없음",
+ "fav.emptyHint": "차량의 별표를 누르거나, 그룹의 별표를 눌러 모든 차량을 추가하세요.",
+ "fav.setting": "즐겨찾기",
+ "fav.settingDesc": "앱을 열 때 볼 차량 선택: 내 차량, 즐겨찾기 또는 둘 다"
 }

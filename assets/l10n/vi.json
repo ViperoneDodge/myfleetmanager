@@ -480,5 +480,18 @@
  "ocr.assigned": "Đã gán văn bản cho {field}",
  "ocr.assignBad": "Văn bản đã chọn có vẻ không hợp lệ cho {field}",
  "ocr.checkValue": "Kiểm tra và sửa giá trị trước khi xác nhận",
- "ocr.yearOnly": "chỉ có năm: kiểm tra ngày và tháng"
+ "ocr.yearOnly": "chỉ có năm: kiểm tra ngày và tháng",
+ "fav.add": "Thêm vào yêu thích",
+ "fav.remove": "Bỏ khỏi yêu thích",
+ "fav.groupAdded": "Tất cả xe của {name} đã vào yêu thích",
+ "fav.groupRemoved": "Đã bỏ {name} khỏi yêu thích",
+ "fav.title": "Yêu thích",
+ "fav.bothTitle": "Của tôi và yêu thích",
+ "fav.viewMine": "Của tôi",
+ "fav.viewFav": "Yêu thích",
+ "fav.viewBoth": "Cả hai",
+ "fav.empty": "Chưa có yêu thích",
+ "fav.emptyHint": "Chạm ngôi sao trên một xe, hoặc trên một nhóm để thêm tất cả xe của nhóm.",
+ "fav.setting": "Yêu thích",
+ "fav.settingDesc": "Chọn xe hiển thị khi mở ứng dụng: của bạn, yêu thích hoặc cả hai"
 }

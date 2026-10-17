@@ -175,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return ListenableBuilder(
       listenable: appState,
       builder: (context, _) {
-        final titles = [tr('fleet.mine'), tr('tab.family'), tr('tab.deadlines')];
+        final titles = [_homeTitle(), tr('tab.family'), tr('tab.deadlines')];
         Widget body;
         switch (_tab) {
           case 1:
@@ -191,11 +191,11 @@ class _HomeScreenState extends State<HomeScreen> {
           appBar: AppBar(
             title: Text(titles[_tab]),
             actions: [
-              if (_tab == 0 && appState.myVehicles.isNotEmpty)
+              if (_tab == 0 && appState.homeVehicles.isNotEmpty)
                 IconButton(
                   tooltip: tr('pdf.export'),
                   icon: const Icon(Icons.picture_as_pdf_outlined),
-                  onPressed: () => exportPdf(context, tr('fleet.mine'), appState.myVehicles),
+                  onPressed: () => exportPdf(context, _homeTitle(), appState.homeVehicles),
                 ),
               _syncIcon(),
               IconButton(
@@ -295,8 +295,37 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  String _homeTitle() {
+    switch (appState.homeView) {
+      case HomeView.mine:
+        return tr('fleet.mine');
+      case HomeView.favorites:
+        return tr('fav.title');
+      case HomeView.both:
+        return tr('fav.bothTitle');
+    }
+  }
+
+  Widget _viewSelector() => Padding(
+        padding: const EdgeInsets.only(bottom: 8),
+        child: SegmentedButton<HomeView>(
+          showSelectedIcon: false,
+          segments: [
+            ButtonSegment(
+                value: HomeView.mine, icon: const Icon(Icons.garage_outlined), label: Text(tr('fav.viewMine'))),
+            ButtonSegment(
+                value: HomeView.favorites, icon: const Icon(Icons.star_outline), label: Text(tr('fav.viewFav'))),
+            ButtonSegment(
+                value: HomeView.both, icon: const Icon(Icons.join_full_outlined), label: Text(tr('fav.viewBoth'))),
+          ],
+          selected: {appState.homeView},
+          onSelectionChanged: (s) => appState.setHomeView(s.first),
+        ),
+      );
+
   Widget _vehiclesTab() {
-    final all = appState.myVehicles;
+    final all = appState.homeVehicles;
+    final favView = appState.homeView == HomeView.favorites;
     final list = _filter == null ? all : all.where((v) => v.type == _filter).toList();
     final hasGroupVehicles = appState.vehicles.any((v) => !appState.isMine(v));
     final limited = appState.limitedIds;
@@ -306,6 +335,7 @@ class _HomeScreenState extends State<HomeScreen> {
         physics: const AlwaysScrollableScrollPhysics(),
         padding: const EdgeInsets.fromLTRB(10, 10, 10, 96),
         children: [
+          if (appState.favoritesOn) _viewSelector(),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(children: [
@@ -334,14 +364,14 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 80),
               child: Column(children: [
-                Icon(Icons.garage_outlined,
+                Icon(favView ? Icons.star_outline : Icons.garage_outlined,
                     size: 80, color: Theme.of(context).colorScheme.outline),
                 const SizedBox(height: 12),
-                Text(tr('home.empty'),
+                Text(favView ? tr('fav.empty') : tr('home.empty'),
                     style: const TextStyle(fontSize: 26, fontFamily: handFont)),
                 const SizedBox(height: 4),
-                Text(tr('home.emptyHint'), textAlign: TextAlign.center),
-                if (all.isEmpty && hasGroupVehicles) ...[
+                Text(favView ? tr('fav.emptyHint') : tr('home.emptyHint'), textAlign: TextAlign.center),
+                if (all.isEmpty && hasGroupVehicles && !favView) ...[
                   const SizedBox(height: 16),
                   OutlinedButton.icon(
                     icon: const Icon(Icons.groups_outlined),
@@ -360,6 +390,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         reason: tr('pro.reasonLimited', {'n': AppState.freeVehicleLimit}))
                     : _openDetail(v, list.where((x) => !limited.contains(x.id)).toList()),
                 onLongPress: () => moveVehicleSheet(context, v),
+                badge: appState.homeView != HomeView.mine && !appState.isPersonal(v)
+                    ? appState.fleetLabel(v)
+                    : null,
+                favorite: appState.isFavorite(v),
+                onFavorite: appState.favoritesOn ? () => appState.toggleFavorite(v) : null,
               )),
           if (list.isNotEmpty && appState.isCloud && appState.data.groups.isNotEmpty)
             Padding(

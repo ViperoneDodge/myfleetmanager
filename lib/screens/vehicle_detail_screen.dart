@@ -508,6 +508,11 @@ class VehicleDetailScreen extends StatelessWidget {
             automaticallyImplyLeading: !embedded,
             title: Text(v.name.isEmpty ? tr('vehicle.generic') : v.name),
             actions: [
+              if (appState.favoritesOn)
+                FavoriteStar(
+                  on: appState.isFavorite(v),
+                  onPressed: () => appState.toggleFavorite(v),
+                ),
               if (canAssign)
                 IconButton(
                   tooltip: tr('role.assignOwner'),

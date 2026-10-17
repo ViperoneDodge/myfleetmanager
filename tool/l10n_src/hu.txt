@@ -480,3 +480,16 @@ Szöveg hozzárendelve: {field}
 A kijelölt szöveg nem érvényes érték ehhez: {field}
 Megerősítés előtt ellenőrizd és javítsd az értéket
 csak év: ellenőrizd a napot és a hónapot
+Hozzáadás a kedvencekhez
+Eltávolítás a kedvencekből
+{name} összes járműve a kedvencek között van
+{name} eltávolítva a kedvencekből
+Kedvencek
+Saját és kedvencek
+Saját
+Kedvencek
+Mindkettő
+Nincs kedvenc
+Koppints egy jármű csillagára, vagy egy csoportéra az összes járműve hozzáadásához.
+Kedvencek
+Válaszd ki, mely járművek jelenjenek meg induláskor: a sajátjaid, a kedvencek vagy mindkettő

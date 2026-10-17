@@ -480,5 +480,18 @@
  "ocr.assigned": "Tekst tildelt {field}",
  "ocr.assignBad": "Den markerede tekst ligner ikke en gyldig {field}",
  "ocr.checkValue": "Kontrollér og ret værdien, før du bekræfter",
- "ocr.yearOnly": "kun år: kontrollér dag og måned"
+ "ocr.yearOnly": "kun år: kontrollér dag og måned",
+ "fav.add": "Føj til favoritter",
+ "fav.remove": "Fjern fra favoritter",
+ "fav.groupAdded": "Alle køretøjer i {name} er nu favoritter",
+ "fav.groupRemoved": "{name} fjernet fra favoritter",
+ "fav.title": "Favoritter",
+ "fav.bothTitle": "Mine og favoritter",
+ "fav.viewMine": "Mine",
+ "fav.viewFav": "Favoritter",
+ "fav.viewBoth": "Begge",
+ "fav.empty": "Ingen favoritter",
+ "fav.emptyHint": "Tryk på stjernen ved et køretøj, eller ved en gruppe for at tilføje alle dens køretøjer.",
+ "fav.setting": "Favoritter",
+ "fav.settingDesc": "Vælg hvilke køretøjer du ser ved åbning: dine, favoritter eller begge"
 }

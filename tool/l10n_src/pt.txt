@@ -480,3 +480,16 @@ Texto atribuído a {field}
 O texto selecionado não parece válido para {field}
 Verifique e corrija o valor antes de confirmar
 só o ano: verifique dia e mês
+Adicionar aos favoritos
+Remover dos favoritos
+Todos os veículos de {name} estão nos favoritos
+{name} removido dos favoritos
+Favoritos
+Meus e favoritos
+Meus
+Favoritos
+Ambos
+Sem favoritos
+Toque na estrela de um veículo, ou de um grupo para adicionar todos os seus veículos.
+Favoritos
+Escolha que veículos ver ao abrir: os seus, os favoritos ou ambos

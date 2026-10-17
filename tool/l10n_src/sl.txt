@@ -480,3 +480,16 @@ Besedilo dodeljeno: {field}
 Označeno besedilo ni veljavno za {field}
 Preveri in popravi vrednost pred potrditvijo
 samo leto: preveri dan in mesec
+Dodaj med priljubljene
+Odstrani iz priljubljenih
+Vsa vozila iz {name} so med priljubljenimi
+{name} odstranjena iz priljubljenih
+Priljubljeni
+Moji in priljubljeni
+Moji
+Priljubljeni
+Oboje
+Ni priljubljenih
+Tapni zvezdico na vozilu ali na skupini, da dodaš vsa njena vozila.
+Priljubljeni
+Izberi, katera vozila vidiš ob odprtju: svoja, priljubljena ali oboje

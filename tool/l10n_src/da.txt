@@ -480,3 +480,16 @@ Tekst tildelt {field}
 Den markerede tekst ligner ikke en gyldig {field}
 Kontrollér og ret værdien, før du bekræfter
 kun år: kontrollér dag og måned
+Føj til favoritter
+Fjern fra favoritter
+Alle køretøjer i {name} er nu favoritter
+{name} fjernet fra favoritter
+Favoritter
+Mine og favoritter
+Mine
+Favoritter
+Begge
+Ingen favoritter
+Tryk på stjernen ved et køretøj, eller ved en gruppe for at tilføje alle dens køretøjer.
+Favoritter
+Vælg hvilke køretøjer du ser ved åbning: dine, favoritter eller begge

@@ -480,3 +480,16 @@ Text priradený k: {field}
 Označený text nie je platný údaj pre {field}
 Pred potvrdením hodnotu skontrolujte a opravte
 len rok: skontrolujte deň a mesiac
+Pridať do obľúbených
+Odobrať z obľúbených
+Všetky vozidlá z {name} sú v obľúbených
+{name} odobraná z obľúbených
+Obľúbené
+Moje a obľúbené
+Moje
+Obľúbené
+Oboje
+Žiadne obľúbené
+Ťuknite na hviezdičku pri vozidle, alebo pri skupine pre pridanie všetkých jej vozidiel.
+Obľúbené
+Vyberte, ktoré vozidlá uvidíte po otvorení: svoje, obľúbené alebo oboje

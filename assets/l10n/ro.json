@@ -480,5 +480,18 @@
  "ocr.assigned": "Text atribuit la {field}",
  "ocr.assignBad": "Textul selectat nu pare valid pentru {field}",
  "ocr.checkValue": "Verifică și corectează valoarea înainte de confirmare",
- "ocr.yearOnly": "doar anul: verifică ziua și luna"
+ "ocr.yearOnly": "doar anul: verifică ziua și luna",
+ "fav.add": "Adaugă la favorite",
+ "fav.remove": "Elimină din favorite",
+ "fav.groupAdded": "Toate vehiculele din {name} sunt la favorite",
+ "fav.groupRemoved": "{name} eliminat din favorite",
+ "fav.title": "Favorite",
+ "fav.bothTitle": "Ale mele și favorite",
+ "fav.viewMine": "Ale mele",
+ "fav.viewFav": "Favorite",
+ "fav.viewBoth": "Ambele",
+ "fav.empty": "Niciun favorit",
+ "fav.emptyHint": "Atinge steaua unui vehicul sau a unui grup pentru a adăuga toate vehiculele lui.",
+ "fav.setting": "Favorite",
+ "fav.settingDesc": "Alege ce vehicule vezi la deschidere: ale tale, favoritele sau ambele"
 }

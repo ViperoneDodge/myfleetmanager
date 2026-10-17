@@ -530,6 +530,52 @@ class AppState extends ChangeNotifier {
 
   List<Vehicle> get myVehicles => sortedForList(vehicles.where(isMine));
 
+  bool get favoritesOn => data.favorites.on;
+
+  HomeView get homeView => favoritesOn ? data.favorites.view : HomeView.mine;
+
+  bool isFavorite(Vehicle v) => data.favorites.isFavorite(v);
+
+  bool isFavoriteGroup(String id) => data.favorites.groups.contains(id);
+
+  List<Vehicle> get favoriteVehicles => sortedForList(vehicles.where(isFavorite));
+
+  List<Vehicle> get homeVehicles {
+    switch (homeView) {
+      case HomeView.mine:
+        return myVehicles;
+      case HomeView.favorites:
+        return favoriteVehicles;
+      case HomeView.both:
+        return sortedForList(vehicles.where((v) => isMine(v) || isFavorite(v)));
+    }
+  }
+
+  Future<void> _saveFavorites() async {
+    notifyListeners();
+    await _persist();
+  }
+
+  Future<void> setFavoritesOn(bool on) {
+    data.favorites.on = on;
+    return _saveFavorites();
+  }
+
+  Future<void> setHomeView(HomeView view) {
+    data.favorites.view = view;
+    return _saveFavorites();
+  }
+
+  Future<void> toggleFavorite(Vehicle v) {
+    data.favorites.toggle(v);
+    return _saveFavorites();
+  }
+
+  Future<void> toggleFavoriteGroup(String groupId) {
+    data.favorites.toggleGroup(groupId, vehicles.where((v) => v.fleetId == groupId));
+    return _saveFavorites();
+  }
+
   List<Vehicle> groupVehicles(String groupId) =>
       sortedForList(vehicles.where((v) => v.fleetId == groupId));
 
@@ -808,6 +854,7 @@ class AppState extends ChangeNotifier {
               ..cloudSize = 0,
       ];
       data.vehicles.add(moved);
+      data.favorites.renamed(old.id, moved.id);
       v = moved;
     } else if (i >= 0) {
       data.vehicles[i] = v;

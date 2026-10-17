@@ -480,5 +480,18 @@
  "ocr.assigned": "Texten tilldelad till {field}",
  "ocr.assignBad": "Den markerade texten verkar inte vara giltig för {field}",
  "ocr.checkValue": "Kontrollera och rätta värdet innan du bekräftar",
- "ocr.yearOnly": "endast år: kontrollera dag och månad"
+ "ocr.yearOnly": "endast år: kontrollera dag och månad",
+ "fav.add": "Lägg till i favoriter",
+ "fav.remove": "Ta bort från favoriter",
+ "fav.groupAdded": "Alla fordon i {name} är nu favoriter",
+ "fav.groupRemoved": "{name} borttagen från favoriter",
+ "fav.title": "Favoriter",
+ "fav.bothTitle": "Mina och favoriter",
+ "fav.viewMine": "Mina",
+ "fav.viewFav": "Favoriter",
+ "fav.viewBoth": "Båda",
+ "fav.empty": "Inga favoriter",
+ "fav.emptyHint": "Tryck på stjärnan vid ett fordon, eller vid en grupp för att lägga till alla dess fordon.",
+ "fav.setting": "Favoriter",
+ "fav.settingDesc": "Välj vilka fordon som visas när appen öppnas: dina, favoriter eller båda"
 }

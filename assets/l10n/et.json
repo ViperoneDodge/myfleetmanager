@@ -480,5 +480,18 @@
  "ocr.assigned": "Tekst määratud: {field}",
  "ocr.assignBad": "Valitud tekst ei tundu sobivat väljale {field}",
  "ocr.checkValue": "Kontrolli ja paranda väärtus enne kinnitamist",
- "ocr.yearOnly": "ainult aasta: kontrolli päeva ja kuud"
+ "ocr.yearOnly": "ainult aasta: kontrolli päeva ja kuud",
+ "fav.add": "Lisa lemmikutesse",
+ "fav.remove": "Eemalda lemmikutest",
+ "fav.groupAdded": "Kõik rühma {name} sõidukid on lemmikutes",
+ "fav.groupRemoved": "{name} eemaldati lemmikutest",
+ "fav.title": "Lemmikud",
+ "fav.bothTitle": "Minu ja lemmikud",
+ "fav.viewMine": "Minu",
+ "fav.viewFav": "Lemmikud",
+ "fav.viewBoth": "Mõlemad",
+ "fav.empty": "Lemmikuid pole",
+ "fav.emptyHint": "Puuduta sõiduki tärni, või rühma tärni, et lisada kõik selle sõidukid.",
+ "fav.setting": "Lemmikud",
+ "fav.settingDesc": "Vali, milliseid sõidukeid avamisel näha: enda, lemmikud või mõlemad"
 }

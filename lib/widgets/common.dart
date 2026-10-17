@@ -203,6 +203,10 @@ class VehicleCard extends StatelessWidget {
   final bool selected;
 
   final bool limited;
+
+  final bool favorite;
+
+  final VoidCallback? onFavorite;
   const VehicleCard({
     super.key,
     required this.vehicle,
@@ -211,6 +215,8 @@ class VehicleCard extends StatelessWidget {
     this.badge,
     this.selected = false,
     this.limited = false,
+    this.favorite = false,
+    this.onFavorite,
   });
 
   static const ColorFilter _greyFilter = ColorFilter.matrix(<double>[
@@ -298,11 +304,29 @@ class VehicleCard extends StatelessWidget {
                           fontSize: 12, color: Theme.of(context).colorScheme.outline)),
               ]),
             ),
-            Icon(limited ? Icons.lock_outline : Icons.chevron_right),
+            if (onFavorite != null && !limited)
+              FavoriteStar(on: favorite, onPressed: onFavorite!)
+            else
+              Icon(limited ? Icons.lock_outline : Icons.chevron_right),
           ]),
         ),
       ),
     );
     return limited ? ColorFiltered(colorFilter: _greyFilter, child: card) : card;
   }
+}
+
+class FavoriteStar extends StatelessWidget {
+  final bool on;
+  final VoidCallback onPressed;
+  const FavoriteStar({super.key, required this.on, required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) => IconButton(
+        tooltip: on ? tr('fav.remove') : tr('fav.add'),
+        isSelected: on,
+        onPressed: onPressed,
+        icon: const Icon(Icons.star_border),
+        selectedIcon: const Icon(Icons.star, color: Color(0xFFF2B01E)),
+      );
 }
