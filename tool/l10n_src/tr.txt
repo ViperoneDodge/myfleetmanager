@@ -519,3 +519,6 @@ Tarayıcıda hatırlatıcılar gelmez: bildirimler için aynı hesapla telefonda
 Yalnızca tarayıcı
 Hesap yalnızca bu tarayıcıda kayıtlı. Paylaşım ve hatırlatıcı yok.
 Web sürümü deneme aşamasında: şimdilik yalnızca bu tarayıcıdaki hesap kullanılabilir.
+Web sürümü henüz etkin değil. Telefondaki uygulamayı kullanın.
+Web sürümü yalnızca Pro için
+MyFleetManager'ı tarayıcıda kullanmak için Pro sürüm gerekir. Telefondaki uygulamadan etkinleştirin, sonra buradan aynı hesapla giriş yapın.

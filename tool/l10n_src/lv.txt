@@ -519,3 +519,6 @@ Pārlūkā atgādinājumi nepienāk: paziņojumiem izmanto tālruņa lietotni ar
 Tikai pārlūks
 Konts saglabāts tikai šajā pārlūkā. Bez kopīgošanas un atgādinājumiem.
 Tīmekļa versija testā: pagaidām pieejams tikai šī pārlūka konts.
+Tīmekļa versija vēl nav aktīva. Izmanto tālruņa lietotni.
+Tīmekļa versija tikai Pro
+Lai izmantotu MyFleetManager pārlūkā, nepieciešama Pro versija. Aktivizē to tālruņa lietotnē un pēc tam pieraksties šeit ar to pašu kontu.

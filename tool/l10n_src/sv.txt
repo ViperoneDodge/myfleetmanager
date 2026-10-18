@@ -519,3 +519,6 @@ I webbläsaren kommer inga påminnelser: använd appen i telefonen med samma kon
 Bara webbläsare
 Kontot sparas bara i den här webbläsaren. Ingen delning och inga påminnelser.
 Webbversion under test: för närvarande finns bara kontot i den här webbläsaren.
+Webbversionen är inte aktiv än. Använd appen i telefonen.
+Webbversion endast för Pro
+För att använda MyFleetManager i webbläsaren behövs Pro-versionen. Aktivera den i appen i telefonen och logga sedan in här med samma konto.

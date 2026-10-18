@@ -519,3 +519,6 @@ V prehliadači pripomienky neprichádzajú: na upozornenia použite aplikáciu v
 Len prehliadač
 Účet uložený len v tomto prehliadači. Bez zdieľania a pripomienok.
 Webová verzia v skúške: zatiaľ je dostupný len účet v tomto prehliadači.
+Webová verzia ešte nie je aktívna. Použite aplikáciu v telefóne.
+Webová verzia len pre Pro
+Na MyFleetManager v prehliadači potrebujete verziu Pro. Aktivujte ju v aplikácii v telefóne a potom sa tu prihláste rovnakým účtom.

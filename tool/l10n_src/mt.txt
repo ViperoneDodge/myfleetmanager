@@ -519,3 +519,6 @@ Fil-browser ma jaslux tfakkiriet: għan-notifiki uża l-app fuq it-telefon bl-is
 Browser biss
 Kont salvat biss f'dan il-browser. L-ebda qsim u l-ebda tfakkira.
 Verżjoni web fi prova: għalissa hemm biss il-kont f'dan il-browser.
+Il-verżjoni web għadha mhix attiva. Uża l-app fuq it-telefon.
+Verżjoni web għal Pro biss
+Biex tuża MyFleetManager fil-browser trid il-verżjoni Pro. Attivaha fl-app tat-telefon, imbagħad idħol hawn bl-istess kont.

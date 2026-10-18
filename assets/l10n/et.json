@@ -519,5 +519,8 @@
  "web.noNotify": "Brauseris meeldetuletusi ei tule: teavituste jaoks kasuta telefoni rakendust sama kontoga.",
  "web.modeLocal": "Ainult brauser",
  "web.localInfo": "Konto on salvestatud ainult selles brauseris. Jagamist ja meeldetuletusi pole.",
- "web.noCloud": "Veebiversioon katsetamisel: praegu on saadaval ainult selle brauseri konto."
+ "web.noCloud": "Veebiversioon katsetamisel: praegu on saadaval ainult selle brauseri konto.",
+ "web.notReady": "Veebiversioon pole veel aktiivne. Kasuta telefoni rakendust.",
+ "web.proOnlyTitle": "Veebiversioon ainult Pro kasutajatele",
+ "web.proOnly": "MyFleetManageri kasutamiseks brauseris on vaja Pro-versiooni. Aktiveeri see telefoni rakenduses ja logi siis siin sisse sama kontoga."
 }

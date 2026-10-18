@@ -519,5 +519,8 @@
  "web.noNotify": "Naršyklėje priminimai neateina: pranešimams naudokite telefono programėlę su ta pačia paskyra.",
  "web.modeLocal": "Tik naršyklė",
  "web.localInfo": "Paskyra išsaugota tik šioje naršyklėje. Be bendrinimo ir priminimų.",
- "web.noCloud": "Žiniatinklio versija bandoma: kol kas prieinama tik šios naršyklės paskyra."
+ "web.noCloud": "Žiniatinklio versija bandoma: kol kas prieinama tik šios naršyklės paskyra.",
+ "web.notReady": "Žiniatinklio versija dar neaktyvi. Naudokite telefono programėlę.",
+ "web.proOnlyTitle": "Žiniatinklio versija tik Pro",
+ "web.proOnly": "Norint naudoti MyFleetManager naršyklėje, reikia Pro versijos. Aktyvuokite ją telefono programėlėje, tada prisijunkite čia ta pačia paskyra."
 }

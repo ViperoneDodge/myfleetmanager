@@ -519,3 +519,6 @@ In de browser komen geen herinneringen binnen: gebruik de app op je telefoon met
 Alleen browser
 Account alleen in deze browser opgeslagen. Geen delen en geen herinneringen.
 Webversie in test: voorlopig is alleen het account in deze browser beschikbaar.
+De webversie is nog niet actief. Gebruik de app op je telefoon.
+Webversie alleen voor Pro
+Voor MyFleetManager in de browser heb je de Pro-versie nodig. Activeer die in de app op je telefoon en log hier in met hetzelfde account.

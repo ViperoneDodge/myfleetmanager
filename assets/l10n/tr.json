@@ -519,5 +519,8 @@
  "web.noNotify": "Tarayıcıda hatırlatıcılar gelmez: bildirimler için aynı hesapla telefondaki uygulamayı kullanın.",
  "web.modeLocal": "Yalnızca tarayıcı",
  "web.localInfo": "Hesap yalnızca bu tarayıcıda kayıtlı. Paylaşım ve hatırlatıcı yok.",
- "web.noCloud": "Web sürümü deneme aşamasında: şimdilik yalnızca bu tarayıcıdaki hesap kullanılabilir."
+ "web.noCloud": "Web sürümü deneme aşamasında: şimdilik yalnızca bu tarayıcıdaki hesap kullanılabilir.",
+ "web.notReady": "Web sürümü henüz etkin değil. Telefondaki uygulamayı kullanın.",
+ "web.proOnlyTitle": "Web sürümü yalnızca Pro için",
+ "web.proOnly": "MyFleetManager'ı tarayıcıda kullanmak için Pro sürüm gerekir. Telefondaki uygulamadan etkinleştirin, sonra buradan aynı hesapla giriş yapın."
 }

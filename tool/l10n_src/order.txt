@@ -519,3 +519,6 @@ web.noNotify
 web.modeLocal
 web.localInfo
 web.noCloud
+web.notReady
+web.proOnlyTitle
+web.proOnly

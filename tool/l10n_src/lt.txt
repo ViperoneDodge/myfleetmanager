@@ -519,3 +519,6 @@ Naršyklėje priminimai neateina: pranešimams naudokite telefono programėlę s
 Tik naršyklė
 Paskyra išsaugota tik šioje naršyklėje. Be bendrinimo ir priminimų.
 Žiniatinklio versija bandoma: kol kas prieinama tik šios naršyklės paskyra.
+Žiniatinklio versija dar neaktyvi. Naudokite telefono programėlę.
+Žiniatinklio versija tik Pro
+Norint naudoti MyFleetManager naršyklėje, reikia Pro versijos. Aktyvuokite ją telefono programėlėje, tada prisijunkite čia ta pačia paskyra.

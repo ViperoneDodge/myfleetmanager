@@ -345,6 +345,7 @@ files = [
     ['screens/settings_screen.dart', righe('screens/settings_screen.dart'), 'Impostazioni'],
     ['screens/login_screen.dart', righe('screens/login_screen.dart'), 'Accesso e registrazione'],
     ['screens/pro_screen.dart', righe('screens/pro_screen.dart'), 'Presentazione e acquisto della versione Pro'],
+    ['screens/web_pro_gate.dart', righe('screens/web_pro_gate.dart'), 'Versione web: pagina per chi accede senza la Pro'],
     ['screens/intro_screen.dart', righe('screens/intro_screen.dart'), 'Animazione iniziale'],
     ['screens/photo_crop_screen.dart', righe('screens/photo_crop_screen.dart'), 'Ritaglio della foto del veicolo'],
     ['screens/admin_screen.dart', righe('screens/admin_screen.dart'), 'Pannello di amministrazione (solo account amministratore)'],
@@ -571,6 +572,7 @@ story += [table([
     ['Documenti e lettura del libretto', 'no', 'sì'],
     ['Vedere i documenti condivisi da altri', 'no', 'sì'],
     ['Esportazione PDF', 'no', 'sì'],
+    ['Versione web (PC e Mac)', 'no', 'sì'],
 ], [62 * mm, 54 * mm, 54 * mm]), Spacer(1, 6)]
 story += [P('La versione Pro si ottiene con l\'acquisto unico <font name="DVM">myfleet_pro</font> sul negozio dell\'app. '
             'L\'amministratore dell\'app la ha in automatico; sono previsti anche codici sviluppatore revocabili, registrati '
@@ -650,18 +652,20 @@ story += B([
 ])
 
 story += [P('14. Versione web', h1)]
-story += [P('La stessa app gira nel browser di PC e Mac. Con un account online i dati sono gli stessi del telefono, '
-            'sincronizzati tramite Firestore. La pubblicazione avviene con un workflow dedicato '
+story += [P('La stessa app gira nel browser di PC e Mac ed è <b>riservata agli utenti Pro</b>: si accede solo con un '
+            'account online e, se l\'account non ha la Pro, compare una pagina che invita ad attivarla dall\'app sul telefono. '
+            'I dati sono gli stessi del telefono, sincronizzati tramite Firestore. La pubblicazione avviene con un workflow dedicato '
             '(<font name="DVM">.github/workflows/build-web.yml</font>) su Firebase Hosting; '
             '<font name="DVM">tool/patch_web.py</font> imposta titolo, icone e schermata di caricamento.')]
 story += [table([
     ['Funzione', 'Nel browser'],
     ['Veicoli, scadenze, dati tecnici, manutenzioni, gruppi, preferiti, PDF', 'sì'],
-    ['Accesso', 'account online con email o Google; account solo in questo browser'],
+    ['Accesso', 'solo account online (email o Google) con la Pro attiva'],
     ['Documenti', 'consultazione delle copie online condivise (Pro); aggiunta solo dal telefono'],
     ['Lettura del libretto (OCR), scansione QR', 'no'],
     ['Promemoria e notifiche push', 'no: arrivano sul telefono con lo stesso account'],
     ['Acquisto Pro', 'no; la Pro acquistata sul telefono è riconosciuta dal registro Pro dell\'account'],
+    ['Prova automatica', 'Chrome, Firefox e WebKit (Safari) a ogni modifica, con tool/web_test/browser_test.py'],
 ], [80 * mm, 90 * mm]), Spacer(1, 6)]
 
 story += [P('15. Limiti noti e sviluppi previsti', h1)]
@@ -671,7 +675,7 @@ story += B([
     'Lettura del libretto in prova: va sempre controllata dall\'utente.',
     'iPhone: in attesa di account Apple Developer, configurazione Firebase iOS, chiave APNs e TestFlight.',
     'Avvisi dei gruppi ad app chiusa disponibili solo su Android.',
-    'Versione web: memoria del browser limitata (pochi MB), quindi conviene l\'account online; la Pro sul web si basa sul registro cloud.',
+    'Versione web: la Pro si basa sul registro cloud, che oggi l\'app stessa scrive; prima del lancio va verificata su server (Firebase Blaze).',
 ])
 
 doc = Doc(OUT, pagesize=A4, leftMargin=18 * mm, rightMargin=18 * mm, topMargin=18 * mm, bottomMargin=18 * mm,

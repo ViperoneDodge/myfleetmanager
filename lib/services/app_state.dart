@@ -40,6 +40,8 @@ class AppState extends ChangeNotifier {
 
   bool cloudPro = false;
 
+  bool webProChecked = false;
+
   bool get isPro => purchasedPro || devPro || isAdmin || cloudPro;
 
   static bool isProType(VehicleType t) =>
@@ -157,8 +159,9 @@ class AppState extends ChangeNotifier {
     _proSub = sync.watchPro(s).listen((entry) {
       if (kIsWeb) {
         final on = entry != null && entry['revoked'] != true;
-        if (on != cloudPro) {
+        if (on != cloudPro || !webProChecked) {
           cloudPro = on;
+          webProChecked = true;
           notifyListeners();
         }
       }
@@ -168,7 +171,12 @@ class AppState extends ChangeNotifier {
         _writeSettings();
         notifyListeners();
       }
-    }, onError: (_) {});
+    }, onError: (_) {
+      if (kIsWeb && !webProChecked) {
+        webProChecked = true;
+        notifyListeners();
+      }
+    });
     if (!isAdmin) {
       if (purchasedPro) {
         _registerPro('purchase');
@@ -780,6 +788,7 @@ class AppState extends ChangeNotifier {
     _proSub?.cancel();
     _proSub = null;
     cloudPro = false;
+    webProChecked = false;
     _adminSub?.cancel();
     _adminSub = null;
     await scheduleGroupWatch(false);

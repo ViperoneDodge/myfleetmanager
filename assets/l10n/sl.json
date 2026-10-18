@@ -519,5 +519,8 @@
  "web.noNotify": "V brskalniku opomniki ne prispejo: za obvestila uporabi aplikacijo na telefonu z istim računom.",
  "web.modeLocal": "Samo brskalnik",
  "web.localInfo": "Račun shranjen samo v tem brskalniku. Brez deljenja in opomnikov.",
- "web.noCloud": "Spletna različica v preizkusu: zaenkrat je na voljo samo račun v tem brskalniku."
+ "web.noCloud": "Spletna različica v preizkusu: zaenkrat je na voljo samo račun v tem brskalniku.",
+ "web.notReady": "Spletna različica še ni aktivna. Uporabi aplikacijo na telefonu.",
+ "web.proOnlyTitle": "Spletna različica samo za Pro",
+ "web.proOnly": "Za MyFleetManager v brskalniku potrebuješ različico Pro. Aktiviraj jo v aplikaciji na telefonu in se tukaj prijavi z istim računom."
 }

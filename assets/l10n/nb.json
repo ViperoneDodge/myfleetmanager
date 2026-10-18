@@ -519,5 +519,8 @@
  "web.noNotify": "I nettleseren kommer det ingen påminnelser: bruk appen på telefonen med samme konto for varsler.",
  "web.modeLocal": "Bare nettleser",
  "web.localInfo": "Kontoen er bare lagret i denne nettleseren. Ingen deling og ingen påminnelser.",
- "web.noCloud": "Nettversjon under test: foreløpig er bare kontoen i denne nettleseren tilgjengelig."
+ "web.noCloud": "Nettversjon under test: foreløpig er bare kontoen i denne nettleseren tilgjengelig.",
+ "web.notReady": "Nettversjonen er ikke aktiv ennå. Bruk appen på telefonen.",
+ "web.proOnlyTitle": "Nettversjon kun for Pro",
+ "web.proOnly": "For å bruke MyFleetManager i nettleseren trenger du Pro-versjonen. Aktiver den i appen på telefonen, og logg deretter inn her med samme konto."
 }

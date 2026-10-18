@@ -519,5 +519,8 @@
  "web.noNotify": "Reminders are not delivered in the browser: use the phone app with the same account for notifications.",
  "web.modeLocal": "Browser only",
  "web.localInfo": "Account stored only in this browser. No sharing and no reminders.",
- "web.noCloud": "Web version in preview: for now only the account in this browser is available."
+ "web.noCloud": "Web version in preview: for now only the account in this browser is available.",
+ "web.notReady": "The web version is not active yet. Please use the phone app.",
+ "web.proOnlyTitle": "Web version for Pro users",
+ "web.proOnly": "Using MyFleetManager in the browser requires the Pro version. Activate it in the phone app, then sign in here with the same account."
 }

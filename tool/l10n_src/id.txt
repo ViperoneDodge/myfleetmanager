@@ -519,3 +519,6 @@ Di browser pengingat tidak masuk: gunakan aplikasi di ponsel dengan akun yang sa
 Hanya browser
 Akun hanya tersimpan di browser ini. Tanpa berbagi dan tanpa pengingat.
 Versi web dalam uji coba: untuk saat ini hanya akun di browser ini yang tersedia.
+Versi web belum aktif. Gunakan aplikasi di ponsel.
+Versi web khusus Pro
+Untuk memakai MyFleetManager di browser diperlukan versi Pro. Aktifkan di aplikasi ponsel, lalu masuk di sini dengan akun yang sama.

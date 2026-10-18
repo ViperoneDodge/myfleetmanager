@@ -519,3 +519,6 @@ V brskalniku opomniki ne prispejo: za obvestila uporabi aplikacijo na telefonu z
 Samo brskalnik
 Račun shranjen samo v tem brskalniku. Brez deljenja in opomnikov.
 Spletna različica v preizkusu: zaenkrat je na voljo samo račun v tem brskalniku.
+Spletna različica še ni aktivna. Uporabi aplikacijo na telefonu.
+Spletna različica samo za Pro
+Za MyFleetManager v brskalniku potrebuješ različico Pro. Aktiviraj jo v aplikaciji na telefonu in se tukaj prijavi z istim računom.

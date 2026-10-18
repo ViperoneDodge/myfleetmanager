@@ -9,6 +9,7 @@ import 'l10n.dart';
 import 'screens/home_screen.dart';
 import 'screens/intro_screen.dart';
 import 'screens/login_screen.dart';
+import 'screens/web_pro_gate.dart';
 import 'services/app_state.dart';
 import 'services/group_watch.dart';
 import 'services/local_store.dart';
@@ -147,7 +148,11 @@ class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
                 ? const IntroScreen(key: ValueKey('intro'))
                 : appState.session == null
                     ? const LoginScreen(key: ValueKey('login'))
-                    : const HomeScreen(key: ValueKey('home')),
+                    : kIsWeb && !appState.isPro
+                        ? (appState.webProChecked
+                            ? const WebProGate(key: ValueKey('gate'))
+                            : const IntroScreen(key: ValueKey('intro')))
+                        : const HomeScreen(key: ValueKey('home')),
           ),
         );
       },

@@ -519,3 +519,6 @@ Annað
 Aðeins vafri
 Aðgangur vistaður aðeins í þessum vafra. Engin deiling og engar áminningar.
 Vefútgáfa í prófun: í bili er aðeins aðgangurinn í þessum vafra í boði.
+Vefútgáfan er ekki virk enn. Notaðu appið í símanum.
+Vefútgáfa aðeins fyrir Pro
+Til að nota MyFleetManager í vafra þarf Pro-útgáfuna. Virkjaðu hana í símaappinu og skráðu þig svo inn hér með sama aðgangi.

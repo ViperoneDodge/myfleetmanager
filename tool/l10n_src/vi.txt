@@ -519,3 +519,6 @@ Trên trình duyệt không nhận được nhắc nhở: hãy dùng ứng dụn
 Chỉ trình duyệt
 Tài khoản chỉ lưu trong trình duyệt này. Không chia sẻ, không nhắc nhở.
 Bản web đang thử nghiệm: hiện chỉ dùng được tài khoản trong trình duyệt này.
+Phiên bản web chưa hoạt động. Hãy dùng ứng dụng trên điện thoại.
+Bản web chỉ dành cho Pro
+Để dùng MyFleetManager trên trình duyệt cần bản Pro. Hãy kích hoạt trong ứng dụng điện thoại, rồi đăng nhập tại đây bằng cùng tài khoản.

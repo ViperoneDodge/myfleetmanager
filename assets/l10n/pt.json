@@ -519,5 +519,8 @@
  "web.noNotify": "No navegador os lembretes não chegam: use a app no telemóvel com a mesma conta.",
  "web.modeLocal": "Só navegador",
  "web.localInfo": "Conta guardada apenas neste navegador. Sem partilha e sem lembretes.",
- "web.noCloud": "Versão web em teste: por agora só está disponível a conta neste navegador."
+ "web.noCloud": "Versão web em teste: por agora só está disponível a conta neste navegador.",
+ "web.notReady": "A versão web ainda não está ativa. Use a app no telemóvel.",
+ "web.proOnlyTitle": "Versão web reservada ao Pro",
+ "web.proOnly": "Para usar o MyFleetManager no navegador é necessária a versão Pro. Ative-a na app do telemóvel e depois entre aqui com a mesma conta."
 }

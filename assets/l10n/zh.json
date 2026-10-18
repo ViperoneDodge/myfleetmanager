@@ -519,5 +519,8 @@
  "web.noNotify": "浏览器中不会收到提醒：请使用同一账户在手机应用中接收通知。",
  "web.modeLocal": "仅浏览器",
  "web.localInfo": "账户仅保存在此浏览器中。无共享，无提醒。",
- "web.noCloud": "网页版试用中：目前仅可使用此浏览器中的账户。"
+ "web.noCloud": "网页版试用中：目前仅可使用此浏览器中的账户。",
+ "web.notReady": "网页版尚未启用，请使用手机应用。",
+ "web.proOnlyTitle": "网页版仅限 Pro 用户",
+ "web.proOnly": "在浏览器中使用 MyFleetManager 需要 Pro 版本。请在手机应用中开通，然后在此用同一账户登录。"
 }

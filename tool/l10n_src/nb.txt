@@ -519,3 +519,6 @@ I nettleseren kommer det ingen påminnelser: bruk appen på telefonen med samme 
 Bare nettleser
 Kontoen er bare lagret i denne nettleseren. Ingen deling og ingen påminnelser.
 Nettversjon under test: foreløpig er bare kontoen i denne nettleseren tilgjengelig.
+Nettversjonen er ikke aktiv ennå. Bruk appen på telefonen.
+Nettversjon kun for Pro
+For å bruke MyFleetManager i nettleseren trenger du Pro-versjonen. Aktiver den i appen på telefonen, og logg deretter inn her med samme konto.

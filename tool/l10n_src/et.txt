@@ -519,3 +519,6 @@ Brauseris meeldetuletusi ei tule: teavituste jaoks kasuta telefoni rakendust sam
 Ainult brauser
 Konto on salvestatud ainult selles brauseris. Jagamist ja meeldetuletusi pole.
 Veebiversioon katsetamisel: praegu on saadaval ainult selle brauseri konto.
+Veebiversioon pole veel aktiivne. Kasuta telefoni rakendust.
+Veebiversioon ainult Pro kasutajatele
+MyFleetManageri kasutamiseks brauseris on vaja Pro-versiooni. Aktiveeri see telefoni rakenduses ja logi siis siin sisse sama kontoga.

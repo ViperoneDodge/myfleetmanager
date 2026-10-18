@@ -519,5 +519,8 @@
  "web.noNotify": "Im Browser kommen keine Erinnerungen an: Nutze für Benachrichtigungen die App auf dem Telefon mit demselben Konto.",
  "web.modeLocal": "Nur Browser",
  "web.localInfo": "Konto nur in diesem Browser gespeichert. Keine Freigabe und keine Erinnerungen.",
- "web.noCloud": "Web-Version im Test: Vorerst ist nur das Konto in diesem Browser verfügbar."
+ "web.noCloud": "Web-Version im Test: Vorerst ist nur das Konto in diesem Browser verfügbar.",
+ "web.notReady": "Die Web-Version ist noch nicht aktiv. Nutze die App auf dem Telefon.",
+ "web.proOnlyTitle": "Web-Version nur für Pro",
+ "web.proOnly": "Für MyFleetManager im Browser brauchst du die Pro-Version. Aktiviere sie in der App auf dem Telefon und melde dich hier mit demselben Konto an."
 }

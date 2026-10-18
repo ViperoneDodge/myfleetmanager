@@ -519,3 +519,6 @@ Ní thagann meabhrúcháin sa bhrabhsálaí: úsáid an aip ar an bhfón leis an
 Brabhsálaí amháin
 Cuntas stóráilte sa bhrabhsálaí seo amháin. Gan chomhroinnt ná meabhrúcháin.
 Leagan gréasáin á thriail: níl ar fáil faoi láthair ach an cuntas sa bhrabhsálaí seo.
+Níl an leagan gréasáin gníomhach fós. Úsáid an aip ar an bhfón.
+Leagan gréasáin do Pro amháin
+Chun MyFleetManager a úsáid sa bhrabhsálaí, teastaíonn an leagan Pro. Gníomhachtaigh é san aip ar an bhfón, ansin sínigh isteach anseo leis an gcuntas céanna.

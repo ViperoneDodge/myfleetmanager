@@ -519,3 +519,6 @@ W przeglądarce przypomnienia nie docierają: do powiadomień używaj aplikacji 
 Tylko przeglądarka
 Konto zapisane tylko w tej przeglądarce. Bez udostępniania i przypomnień.
 Wersja przeglądarkowa w testach: na razie dostępne jest tylko konto w tej przeglądarce.
+Wersja przeglądarkowa nie jest jeszcze aktywna. Użyj aplikacji w telefonie.
+Wersja przeglądarkowa tylko dla Pro
+Aby korzystać z MyFleetManager w przeglądarce, potrzebna jest wersja Pro. Aktywuj ją w aplikacji w telefonie, a potem zaloguj się tutaj tym samym kontem.

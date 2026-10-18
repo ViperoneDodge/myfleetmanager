@@ -519,5 +519,8 @@
  "web.noNotify": "In de browser komen geen herinneringen binnen: gebruik de app op je telefoon met hetzelfde account.",
  "web.modeLocal": "Alleen browser",
  "web.localInfo": "Account alleen in deze browser opgeslagen. Geen delen en geen herinneringen.",
- "web.noCloud": "Webversie in test: voorlopig is alleen het account in deze browser beschikbaar."
+ "web.noCloud": "Webversie in test: voorlopig is alleen het account in deze browser beschikbaar.",
+ "web.notReady": "De webversie is nog niet actief. Gebruik de app op je telefoon.",
+ "web.proOnlyTitle": "Webversie alleen voor Pro",
+ "web.proOnly": "Voor MyFleetManager in de browser heb je de Pro-versie nodig. Activeer die in de app op je telefoon en log hier in met hetzelfde account."
 }

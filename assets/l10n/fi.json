@@ -519,5 +519,8 @@
  "web.noNotify": "Selaimessa muistutuksia ei tule: käytä ilmoituksiin puhelimen sovellusta samalla tilillä.",
  "web.modeLocal": "Vain selain",
  "web.localInfo": "Tili tallennetaan vain tähän selaimeen. Ei jakamista eikä muistutuksia.",
- "web.noCloud": "Verkkoversio testissä: toistaiseksi käytettävissä on vain tämän selaimen tili."
+ "web.noCloud": "Verkkoversio testissä: toistaiseksi käytettävissä on vain tämän selaimen tili.",
+ "web.notReady": "Verkkoversio ei ole vielä käytössä. Käytä puhelimen sovellusta.",
+ "web.proOnlyTitle": "Verkkoversio vain Prolle",
+ "web.proOnly": "MyFleetManagerin käyttö selaimessa vaatii Pro-version. Aktivoi se puhelimen sovelluksessa ja kirjaudu sitten tähän samalla tilillä."
 }

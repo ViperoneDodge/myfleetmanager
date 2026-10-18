@@ -124,7 +124,8 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     final cloud = appState.auth.cloudAvailable;
-    final showModes = cloud && !widget.upgrade;
+    final showModes = cloud && !widget.upgrade && !kIsWeb;
+    final webOff = kIsWeb && !cloud;
     final scheme = Theme.of(context).colorScheme;
     final isLocal = _mode == AccountMode.local;
     final cover = NotebookColors.of(context).cover;
@@ -193,6 +194,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
+                  if (webOff)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      child: Text(tr('web.notReady'),
+                          textAlign: TextAlign.center, style: TextStyle(color: scheme.onSurfaceVariant)),
+                    )
+                  else ...[
                   if (showModes) ...[
                     SegmentedButton<AccountMode>(
                       segments: [
@@ -319,10 +327,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   if (!cloud) ...[
                     const SizedBox(height: 16),
                     Text(
-                      tr(kIsWeb ? 'web.noCloud' : 'login.noCloud'),
+                      tr('login.noCloud'),
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
                     ),
+                  ],
                   ],
                   ]),
                     ),

@@ -519,5 +519,8 @@
  "web.noNotify": "A böngészőben nem érkeznek emlékeztetők: az értesítésekhez használd a telefonos appot ugyanazzal a fiókkal.",
  "web.modeLocal": "Csak böngésző",
  "web.localInfo": "A fiók csak ebben a böngészőben van mentve. Nincs megosztás és emlékeztető.",
- "web.noCloud": "Webes verzió tesztben: egyelőre csak az ebben a böngészőben lévő fiók érhető el."
+ "web.noCloud": "Webes verzió tesztben: egyelőre csak az ebben a böngészőben lévő fiók érhető el.",
+ "web.notReady": "A webes verzió még nem aktív. Használd a telefonos appot.",
+ "web.proOnlyTitle": "Webes verzió csak Pro felhasználóknak",
+ "web.proOnly": "A MyFleetManager böngészős használatához Pro verzió kell. Aktiváld a telefonos appban, majd jelentkezz be itt ugyanazzal a fiókkal."
 }

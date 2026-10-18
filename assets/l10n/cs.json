@@ -519,5 +519,8 @@
  "web.noNotify": "V prohlížeči připomínky nechodí: pro oznámení použijte aplikaci v telefonu se stejným účtem.",
  "web.modeLocal": "Jen prohlížeč",
  "web.localInfo": "Účet uložený jen v tomto prohlížeči. Bez sdílení a připomínek.",
- "web.noCloud": "Webová verze ve zkoušce: zatím je dostupný jen účet v tomto prohlížeči."
+ "web.noCloud": "Webová verze ve zkoušce: zatím je dostupný jen účet v tomto prohlížeči.",
+ "web.notReady": "Webová verze zatím není aktivní. Použijte aplikaci v telefonu.",
+ "web.proOnlyTitle": "Webová verze jen pro Pro",
+ "web.proOnly": "Pro MyFleetManager v prohlížeči potřebujete verzi Pro. Aktivujte ji v aplikaci v telefonu a pak se zde přihlaste stejným účtem."
 }

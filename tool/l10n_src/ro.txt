@@ -519,3 +519,6 @@ Acest document este salvat doar pe telefonul celui care l-a adăugat.
 Doar browser
 Cont salvat doar în acest browser. Fără partajare și fără mementouri.
 Versiune web în probă: deocamdată este disponibil doar contul din acest browser.
+Versiunea web nu este încă activă. Folosește aplicația de pe telefon.
+Versiune web doar pentru Pro
+Pentru MyFleetManager în browser este nevoie de versiunea Pro. Activeaz-o în aplicația de pe telefon, apoi conectează-te aici cu același cont.

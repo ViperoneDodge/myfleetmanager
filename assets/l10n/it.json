@@ -519,5 +519,8 @@
  "web.noNotify": "Nel browser i promemoria non arrivano: per le notifiche usa l'app sul telefono con lo stesso account.",
  "web.modeLocal": "Solo browser",
  "web.localInfo": "Account salvato solo in questo browser. Nessuna condivisione e nessun promemoria.",
- "web.noCloud": "Versione web in prova: per ora è disponibile solo l'account in questo browser."
+ "web.noCloud": "Versione web in prova: per ora è disponibile solo l'account in questo browser.",
+ "web.notReady": "La versione web non è ancora attiva. Usa l'app sul telefono.",
+ "web.proOnlyTitle": "Versione web riservata a Pro",
+ "web.proOnly": "Per usare MyFleetManager dal browser serve la versione Pro. Attivala dall'app sul telefono, poi accedi qui con lo stesso account."
 }

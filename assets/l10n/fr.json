@@ -519,5 +519,8 @@
  "web.noNotify": "Les rappels ne sont pas envoyés dans le navigateur : utilisez l'app sur le téléphone avec le même compte.",
  "web.modeLocal": "Navigateur seul",
  "web.localInfo": "Compte enregistré uniquement dans ce navigateur. Aucun partage ni rappel.",
- "web.noCloud": "Version web en test : pour l'instant, seul le compte dans ce navigateur est disponible."
+ "web.noCloud": "Version web en test : pour l'instant, seul le compte dans ce navigateur est disponible.",
+ "web.notReady": "La version web n'est pas encore active. Utilisez l'app sur le téléphone.",
+ "web.proOnlyTitle": "Version web réservée à Pro",
+ "web.proOnly": "Pour utiliser MyFleetManager dans le navigateur, il faut la version Pro. Activez-la dans l'app du téléphone, puis connectez-vous ici avec le même compte."
 }

@@ -519,5 +519,8 @@
  "web.noNotify": "W przeglądarce przypomnienia nie docierają: do powiadomień używaj aplikacji w telefonie z tym samym kontem.",
  "web.modeLocal": "Tylko przeglądarka",
  "web.localInfo": "Konto zapisane tylko w tej przeglądarce. Bez udostępniania i przypomnień.",
- "web.noCloud": "Wersja przeglądarkowa w testach: na razie dostępne jest tylko konto w tej przeglądarce."
+ "web.noCloud": "Wersja przeglądarkowa w testach: na razie dostępne jest tylko konto w tej przeglądarce.",
+ "web.notReady": "Wersja przeglądarkowa nie jest jeszcze aktywna. Użyj aplikacji w telefonie.",
+ "web.proOnlyTitle": "Wersja przeglądarkowa tylko dla Pro",
+ "web.proOnly": "Aby korzystać z MyFleetManager w przeglądarce, potrzebna jest wersja Pro. Aktywuj ją w aplikacji w telefonie, a potem zaloguj się tutaj tym samym kontem."
 }

@@ -519,5 +519,8 @@
  "web.noNotify": "I webbläsaren kommer inga påminnelser: använd appen i telefonen med samma konto för aviseringar.",
  "web.modeLocal": "Bara webbläsare",
  "web.localInfo": "Kontot sparas bara i den här webbläsaren. Ingen delning och inga påminnelser.",
- "web.noCloud": "Webbversion under test: för närvarande finns bara kontot i den här webbläsaren."
+ "web.noCloud": "Webbversion under test: för närvarande finns bara kontot i den här webbläsaren.",
+ "web.notReady": "Webbversionen är inte aktiv än. Använd appen i telefonen.",
+ "web.proOnlyTitle": "Webbversion endast för Pro",
+ "web.proOnly": "För att använda MyFleetManager i webbläsaren behövs Pro-versionen. Aktivera den i appen i telefonen och logga sedan in här med samma konto."
 }

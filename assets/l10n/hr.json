@@ -519,5 +519,8 @@
  "web.noNotify": "U pregledniku podsjetnici ne stižu: za obavijesti koristi aplikaciju na telefonu s istim računom.",
  "web.modeLocal": "Samo preglednik",
  "web.localInfo": "Račun spremljen samo u ovom pregledniku. Bez dijeljenja i podsjetnika.",
- "web.noCloud": "Web verzija u probi: zasad je dostupan samo račun u ovom pregledniku."
+ "web.noCloud": "Web verzija u probi: zasad je dostupan samo račun u ovom pregledniku.",
+ "web.notReady": "Web verzija još nije aktivna. Koristi aplikaciju na telefonu.",
+ "web.proOnlyTitle": "Web verzija samo za Pro",
+ "web.proOnly": "Za korištenje MyFleetManagera u pregledniku potrebna je Pro verzija. Aktiviraj je u aplikaciji na telefonu, zatim se ovdje prijavi istim računom."
 }

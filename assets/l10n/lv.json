@@ -519,5 +519,8 @@
  "web.noNotify": "Pārlūkā atgādinājumi nepienāk: paziņojumiem izmanto tālruņa lietotni ar to pašu kontu.",
  "web.modeLocal": "Tikai pārlūks",
  "web.localInfo": "Konts saglabāts tikai šajā pārlūkā. Bez kopīgošanas un atgādinājumiem.",
- "web.noCloud": "Tīmekļa versija testā: pagaidām pieejams tikai šī pārlūka konts."
+ "web.noCloud": "Tīmekļa versija testā: pagaidām pieejams tikai šī pārlūka konts.",
+ "web.notReady": "Tīmekļa versija vēl nav aktīva. Izmanto tālruņa lietotni.",
+ "web.proOnlyTitle": "Tīmekļa versija tikai Pro",
+ "web.proOnly": "Lai izmantotu MyFleetManager pārlūkā, nepieciešama Pro versija. Aktivizē to tālruņa lietotnē un pēc tam pieraksties šeit ar to pašu kontu."
 }

@@ -519,3 +519,6 @@ Selaimessa muistutuksia ei tule: käytä ilmoituksiin puhelimen sovellusta samal
 Vain selain
 Tili tallennetaan vain tähän selaimeen. Ei jakamista eikä muistutuksia.
 Verkkoversio testissä: toistaiseksi käytettävissä on vain tämän selaimen tili.
+Verkkoversio ei ole vielä käytössä. Käytä puhelimen sovellusta.
+Verkkoversio vain Prolle
+MyFleetManagerin käyttö selaimessa vaatii Pro-version. Aktivoi se puhelimen sovelluksessa ja kirjaudu sitten tähän samalla tilillä.
