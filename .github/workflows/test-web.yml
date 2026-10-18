@@ -31,11 +31,21 @@ jobs:
           python3 -m playwright install --with-deps chromium firefox webkit
           sudo apt-get install -y -qq xvfb libgl1-mesa-dri > /dev/null
 
-      - name: Prova Chrome, Firefox e WebKit (Safari)
+      - name: Avvia il sito di prova
         run: |
           (cd build/web && python3 -m http.server 8765 > /dev/null 2>&1 &)
           sleep 2
-          HEADED=1 xvfb-run -a -s '-screen 0 1280x800x24' python3 tool/web_test/browser_test.py http://localhost:8765/ web-test chromium,firefox,webkit
+
+      - name: Prova Chrome ed Edge (Chromium)
+        run: HEADED=1 xvfb-run -a -s '-screen 0 1280x800x24' python3 tool/web_test/browser_test.py http://localhost:8765/ web-test/chromium chromium
+
+      - name: Prova Firefox (indicativa, grafica software)
+        continue-on-error: true
+        run: HEADED=1 xvfb-run -a -s '-screen 0 1280x800x24' python3 tool/web_test/browser_test.py http://localhost:8765/ web-test/firefox firefox
+
+      - name: Prova WebKit / Safari (indicativa, grafica software)
+        continue-on-error: true
+        run: HEADED=1 xvfb-run -a -s '-screen 0 1280x800x24' python3 tool/web_test/browser_test.py http://localhost:8765/ web-test/webkit webkit
 
       - name: Carica risultati e schermate
         if: always()
