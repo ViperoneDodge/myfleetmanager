@@ -39,15 +39,23 @@ if WEB.exists():
       var ok = 'noModule' in document.createElement('script') && !!window.fetch && !!window.Promise
         && !!window.ResizeObserver && typeof Array.prototype.at === 'function'
         && typeof structuredClone === 'function';
-      if (!ok) {{
+      var gl = false;
+      try {{
+        var cv = document.createElement('canvas');
+        gl = !!(cv.getContext('webgl2') || cv.getContext('webgl'));
+      }} catch (e) {{}}
+      if (!ok || !gl) {{
         var it = (navigator.language || 'it').toLowerCase().indexOf('it') === 0;
         var s = document.getElementById('splash');
         s.innerHTML = '<div style="max-width:420px;margin:24px;padding:24px;background:#fff;border-radius:16px;'
           + 'font-family:Arial,sans-serif;text-align:center;color:#1B2430">'
           + '<img src="icons/Icon-192.png" style="width:72px;height:72px;border-radius:16px" alt="">'
           + '<h2 style="margin:12px 0 8px">MyFleetManager</h2><p style="margin:0;line-height:1.5">'
-          + (it ? 'Questo browser non è supportato. Apri MyFleetManager con Chrome, Edge, Firefox o Safari aggiornati.'
-                : 'This browser is not supported. Please open MyFleetManager with an up-to-date Chrome, Edge, Firefox or Safari.')
+          + (!ok
+              ? (it ? 'Questo browser non è supportato. Apri MyFleetManager con Chrome, Edge, Firefox o Safari aggiornati.'
+                    : 'This browser is not supported. Please open MyFleetManager with an up-to-date Chrome, Edge, Firefox or Safari.')
+              : (it ? 'Il browser non riesce a usare la grafica WebGL. Attiva l\\'accelerazione hardware nelle impostazioni del browser oppure prova con un altro browser.'
+                    : 'Your browser cannot use WebGL graphics. Turn on hardware acceleration in the browser settings or try another browser.'))
           + '</p></div>';
         return;
       }}

@@ -1,4 +1,5 @@
 import asyncio
+import os
 import pathlib
 import sys
 
@@ -17,7 +18,12 @@ async def text_visible(pg, text, timeout=20000):
 async def run(p, engine):
     errors = []
     kind = getattr(p, engine)
-    browser = await (kind.launch(executable_path=EXE) if EXE else kind.launch())
+    opts = {'headless': os.environ.get('HEADED') != '1'}
+    if EXE:
+        opts['executable_path'] = EXE
+    if engine == 'firefox':
+        opts['firefox_user_prefs'] = {'webgl.force-enabled': True, 'webgl.disabled': False}
+    browser = await kind.launch(**opts)
     ctx = await browser.new_context(viewport={'width': 1280, 'height': 800}, locale='it-IT')
     pg = await ctx.new_page()
     pg.on('pageerror', lambda e: errors.append((str(e) + '\n' + (getattr(e, 'stack', '') or ''))[:3000]))
