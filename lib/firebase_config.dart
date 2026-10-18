@@ -3,6 +3,8 @@ class FirebaseConfig {
   static const String appId = '1:583335711681:android:0cca6a6919c14b5dddd540';
   static const String messagingSenderId = '583335711681';
   static const String projectId = 'myfleetmanager-3ca03';
+  static const String webAppId = '';
+  static const String authDomain = 'myfleetmanager-3ca03.firebaseapp.com';
   static const String storageBucket = 'myfleetmanager-3ca03.firebasestorage.app';
 
   static const String googleWebClientId =

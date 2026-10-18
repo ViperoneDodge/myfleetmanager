@@ -38,7 +38,9 @@ class AppState extends ChangeNotifier {
 
   bool devPro = false;
 
-  bool get isPro => purchasedPro || devPro || isAdmin;
+  bool cloudPro = false;
+
+  bool get isPro => purchasedPro || devPro || isAdmin || cloudPro;
 
   static bool isProType(VehicleType t) =>
       t == VehicleType.furgone ||
@@ -153,6 +155,13 @@ class AppState extends ChangeNotifier {
     final s = session;
     if (s == null || !isCloud) return;
     _proSub = sync.watchPro(s).listen((entry) {
+      if (kIsWeb) {
+        final on = entry != null && entry['revoked'] != true;
+        if (on != cloudPro) {
+          cloudPro = on;
+          notifyListeners();
+        }
+      }
       if (entry != null && entry['revoked'] == true && devPro) {
         devPro = false;
         devProVersion = null;
@@ -390,6 +399,13 @@ class AppState extends ChangeNotifier {
     if (b64 == null) return null;
     await f.writeAsBytes(DocCloud.fromB64(b64), flush: true);
     return f;
+  }
+
+  Future<Uint8List?> docBytes(Vehicle v, VehicleDocument d) async {
+    final fleet = _fleetOf(v);
+    if (!d.cloud || fleet == null || !isCloud) return null;
+    final b64 = await sync.downloadDoc(fleet, d.id);
+    return b64 == null ? null : DocCloud.fromB64(b64);
   }
 
   bool docIsLocalOnly(VehicleDocument d) => !d.cloud;
@@ -763,6 +779,7 @@ class AppState extends ChangeNotifier {
     sync.stop();
     _proSub?.cancel();
     _proSub = null;
+    cloudPro = false;
     _adminSub?.cancel();
     _adminSub = null;
     await scheduleGroupWatch(false);

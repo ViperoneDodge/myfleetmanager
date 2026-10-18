@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hübriid",
  "fuel.plugin": "Pistikhübriid",
  "fuel.electric": "Elekter",
- "fuel.other": "Muu"
+ "fuel.other": "Muu",
+ "web.docLocal": "See dokument on salvestatud ainult selle lisanud inimese telefoni.",
+ "web.noNotify": "Brauseris meeldetuletusi ei tule: teavituste jaoks kasuta telefoni rakendust sama kontoga.",
+ "web.modeLocal": "Ainult brauser",
+ "web.localInfo": "Konto on salvestatud ainult selles brauseris. Jagamist ja meeldetuletusi pole.",
+ "web.noCloud": "Veebiversioon katsetamisel: praegu on saadaval ainult selle brauseri konto."
 }

@@ -514,3 +514,8 @@ Hibrid
 Priključni hibrid
 Električni
 Drugo
+Ta dokument je shranjen samo v telefonu osebe, ki ga je dodala.
+V brskalniku opomniki ne prispejo: za obvestila uporabi aplikacijo na telefonu z istim računom.
+Samo brskalnik
+Račun shranjen samo v tem brskalniku. Brez deljenja in opomnikov.
+Spletna različica v preizkusu: zaenkrat je na voljo samo račun v tem brskalniku.

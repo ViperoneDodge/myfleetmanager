@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hybryda",
  "fuel.plugin": "Hybryda plug-in",
  "fuel.electric": "Elektryczny",
- "fuel.other": "Inne"
+ "fuel.other": "Inne",
+ "web.docLocal": "Ten dokument jest zapisany tylko w telefonie osoby, która go dodała.",
+ "web.noNotify": "W przeglądarce przypomnienia nie docierają: do powiadomień używaj aplikacji w telefonie z tym samym kontem.",
+ "web.modeLocal": "Tylko przeglądarka",
+ "web.localInfo": "Konto zapisane tylko w tej przeglądarce. Bez udostępniania i przypomnień.",
+ "web.noCloud": "Wersja przeglądarkowa w testach: na razie dostępne jest tylko konto w tej przeglądarce."
 }

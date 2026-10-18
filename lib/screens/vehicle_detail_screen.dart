@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:open_filex/open_filex.dart';
@@ -276,7 +277,32 @@ class VehicleDetailScreen extends StatelessWidget {
     return f;
   }
 
+  Future<void> _openDocumentWeb(BuildContext context, Vehicle v, VehicleDocument d) async {
+    if (!d.cloud) {
+      showSnack(context, tr('web.docLocal'));
+      return;
+    }
+    if (!await requirePro(context, reason: tr('pro.reasonDocsView')) || !context.mounted) return;
+    showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => const Center(child: CircularProgressIndicator()),
+    );
+    Uint8List? bytes;
+    try {
+      bytes = await appState.docBytes(v, d);
+    } catch (_) {}
+    if (!context.mounted) return;
+    Navigator.of(context).pop();
+    if (bytes == null) {
+      showSnack(context, tr('doc.downloadError'));
+      return;
+    }
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) => _ImageViewer(title: d.name, bytes: bytes)));
+  }
+
   Future<void> _openDocument(BuildContext context, Vehicle v, VehicleDocument d) async {
+    if (kIsWeb) return _openDocumentWeb(context, v, d);
     final f = await _docFile(context, v, d);
     if (f == null || !context.mounted) return;
     if (d.isPdf) {
@@ -301,7 +327,7 @@ class VehicleDetailScreen extends StatelessWidget {
             title: Text(tr('doc.open')),
             onTap: () => Navigator.pop(ctx, 'open'),
           ),
-          if (appState.canEdit(v))
+          if (appState.canEdit(v) && !kIsWeb)
             ListTile(
               leading: const Icon(Icons.document_scanner_outlined),
               title: Text(tr('ocr.read')),
@@ -470,6 +496,7 @@ class VehicleDetailScreen extends StatelessWidget {
                 OnRule(
                   child: Row(children: [
                     Expanded(child: _titleText(context, tr('doc.title'))),
+                    if (!kIsWeb)
                     TextButton.icon(
                       style: _compactButton,
                       onPressed: () async {
@@ -871,8 +898,9 @@ class VehicleDetailScreen extends StatelessWidget {
 
 class _ImageViewer extends StatelessWidget {
   final String title;
-  final File file;
-  const _ImageViewer({required this.title, required this.file});
+  final File? file;
+  final Uint8List? bytes;
+  const _ImageViewer({required this.title, this.file, this.bytes});
 
   @override
   Widget build(BuildContext context) {
@@ -885,7 +913,7 @@ class _ImageViewer extends StatelessWidget {
       ),
       body: InteractiveViewer(
         maxScale: 6,
-        child: Center(child: Image.file(file)),
+        child: Center(child: bytes != null ? Image.memory(bytes!) : Image.file(file!)),
       ),
     );
   }

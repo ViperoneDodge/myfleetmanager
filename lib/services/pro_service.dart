@@ -1,7 +1,9 @@
 import 'dart:async';
-import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
+
+import '../platform.dart';
 
 class ProService {
   static const String productId = 'myfleet_pro';
@@ -15,6 +17,7 @@ class ProService {
   String? lastError;
 
   Future<void> init({required void Function() onOwned, required void Function() onChanged}) async {
+    if (kIsWeb) return;
     try {
       _sub ??= _iap.purchaseStream.listen((list) async {
         for (final p in list) {
@@ -50,7 +53,7 @@ class ProService {
       if (storeAvailable) {
         final r = await _iap.queryProductDetails({productId});
         if (r.productDetails.isNotEmpty) product = r.productDetails.first;
-        if (!Platform.isIOS) await _iap.restorePurchases();
+        if (!isIOS) await _iap.restorePurchases();
       }
     } catch (_) {
       storeAvailable = false;
@@ -59,6 +62,7 @@ class ProService {
   }
 
   Future<bool> buy() async {
+    if (kIsWeb) return false;
     final p = product;
     if (!storeAvailable || p == null) return false;
     lastError = null;
@@ -73,6 +77,7 @@ class ProService {
   }
 
   Future<void> restore() async {
+    if (kIsWeb) return;
     if (!storeAvailable) return;
     try {
       await _iap.restorePurchases();

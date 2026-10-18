@@ -1,9 +1,9 @@
-import 'dart:io';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:in_app_update/in_app_update.dart';
+import '../platform.dart';
 
 class UpdateService with WidgetsBindingObserver {
   static const String topic = 'updates';
@@ -15,7 +15,7 @@ class UpdateService with WidgetsBindingObserver {
   DateTime? _lastCheck;
 
   void start({required bool pushAvailable}) {
-    if (_started || !Platform.isAndroid) return;
+    if (_started || !isAndroid) return;
     _started = true;
     WidgetsBinding.instance.addObserver(this);
     if (pushAvailable) {

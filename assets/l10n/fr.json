@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hybride",
  "fuel.plugin": "Hybride rechargeable",
  "fuel.electric": "Électrique",
- "fuel.other": "Autre"
+ "fuel.other": "Autre",
+ "web.docLocal": "Ce document est enregistré uniquement sur le téléphone de la personne qui l'a ajouté.",
+ "web.noNotify": "Les rappels ne sont pas envoyés dans le navigateur : utilisez l'app sur le téléphone avec le même compte.",
+ "web.modeLocal": "Navigateur seul",
+ "web.localInfo": "Compte enregistré uniquement dans ce navigateur. Aucun partage ni rappel.",
+ "web.noCloud": "Version web en test : pour l'instant, seul le compte dans ce navigateur est disponible."
 }

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -315,7 +316,8 @@ Future<void> joinGroupDialog(BuildContext context) async {
           decoration:
               InputDecoration(hintText: tr('family.codeHint'), border: const OutlineInputBorder()),
         ),
-        const SizedBox(height: 8),
+        if (!kIsWeb) const SizedBox(height: 8),
+        if (!kIsWeb)
         Wrap(alignment: WrapAlignment.center, spacing: 4, children: [
           TextButton.icon(
             icon: const Icon(Icons.qr_code_scanner),

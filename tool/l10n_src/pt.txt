@@ -514,3 +514,8 @@ Híbrido
 Híbrido plug-in
 Elétrico
 Outro
+Este documento está guardado apenas no telemóvel de quem o adicionou.
+No navegador os lembretes não chegam: use a app no telemóvel com a mesma conta.
+Só navegador
+Conta guardada apenas neste navegador. Sem partilha e sem lembretes.
+Versão web em teste: por agora só está disponível a conta neste navegador.

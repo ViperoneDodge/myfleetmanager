@@ -283,7 +283,7 @@ story += [table([
     ['Cloud', 'Google Firebase: Authentication, Cloud Firestore, Cloud Messaging (piano gratuito Spark)'],
     ['Dimensione del codice', 'circa %s righe in %d file Dart sotto lib/' % ('{:,}'.format(round(TOT_RIGHE, -2)).replace(',', '.'), len(DART))],
     ['Lingue', '%d, con' % N_LINGUE + ' scelta automatica dalla lingua del telefono'],
-    ['Piattaforme', 'Android (Google Play, APK diretto); iOS compilato in prova, in attesa dell\'account sviluppatore Apple'],
+    ['Piattaforme', 'Android (Google Play, APK diretto); web nel browser di PC e Mac (in prova); iOS compilato in prova, in attesa dell\'account sviluppatore Apple'],
     ['Modello commerciale', 'App gratuita con acquisto unico in-app «Pro» (prodotto myfleet_pro), nessun abbonamento'],
 ], [45 * mm, 125 * mm])]
 
@@ -318,6 +318,7 @@ files = [
     ['File', 'Righe', 'Ruolo'],
     ['main.dart', righe('main.dart'), 'Avvio: Firebase, lingua, tema, orientamento (telefoni in verticale), scala dei testi sui tablet, scelta tra intro, login e home'],
     ['models.dart', righe('models.dart'), 'Modello dei dati: veicolo, scadenze, manutenzioni, documenti, gruppi, preferiti, impostazioni notifiche, sessione'],
+    ['platform.dart', righe('platform.dart'), 'Riconosce la piattaforma (Android, iPhone, browser) in modo sicuro anche sul web'],
     ['l10n.dart', righe('l10n.dart'), 'Traduzioni: caricamento del file della lingua, funzione tr() con segnaposti e plurali'],
     ['theme.dart', righe('theme.dart'), 'Tema «quaderno»: colori copertina, carta (righe, quadretti, puntini, liscia), anelli, scala testi'],
     ['firebase_config.dart · version.dart', righe('firebase_config.dart', 'version.dart'), 'Parametri pubblici del progetto Firebase e numero di versione'],
@@ -420,9 +421,10 @@ story += [module('AppState – stato centrale', 'Cuore dell\'app. Tiene in memor
                  'LocalStore, AuthService, SyncService, NotificationService, PushService, ProService, GroupWatch, '
                  'DocCloud, UpdateService')]
 story += [module('LocalStore – memoria del telefono', 'Salva tutto in file JSON nella cartella privata dell\'app: elenco account, '
-                 'sessione attiva, dati di ogni account, impostazioni generali e cartella dei documenti.',
+                 'sessione attiva, dati di ogni account, impostazioni generali e cartella dei documenti. '
+                 'Nel browser usa la memoria del browser.',
                  'readSession / writeSession · readUserData / writeUserData / deleteUserData · readSettings / writeSettings · '
-                 'writeAccounts · docsDir', 'File system del telefono (path_provider)')]
+                 'writeAccounts · docsDir', 'File system del telefono (path_provider), memoria del browser (shared_preferences)')]
 story += [module('AuthService – accesso', 'Gestisce gli account: «solo su questo telefono» (protetto da password con hash), '
                  'online con email e password, con Google e con Apple. Si occupa anche del reset password e della '
                  'cancellazione dell\'account.',
@@ -647,13 +649,29 @@ story += B([
     '<b>Versioni</b>: numero in pubspec.yaml e lib/version.dart; Google Play aggiorna l\'app in automatico.',
 ])
 
-story += [P('14. Limiti noti e sviluppi previsti', h1)]
+story += [P('14. Versione web', h1)]
+story += [P('La stessa app gira nel browser di PC e Mac. Con un account online i dati sono gli stessi del telefono, '
+            'sincronizzati tramite Firestore. La pubblicazione avviene con un workflow dedicato '
+            '(<font name="DVM">.github/workflows/build-web.yml</font>) su Firebase Hosting; '
+            '<font name="DVM">tool/patch_web.py</font> imposta titolo, icone e schermata di caricamento.')]
+story += [table([
+    ['Funzione', 'Nel browser'],
+    ['Veicoli, scadenze, dati tecnici, manutenzioni, gruppi, preferiti, PDF', 'sì'],
+    ['Accesso', 'account online con email o Google; account solo in questo browser'],
+    ['Documenti', 'consultazione delle copie online condivise (Pro); aggiunta solo dal telefono'],
+    ['Lettura del libretto (OCR), scansione QR', 'no'],
+    ['Promemoria e notifiche push', 'no: arrivano sul telefono con lo stesso account'],
+    ['Acquisto Pro', 'no; la Pro acquistata sul telefono è riconosciuta dal registro Pro dell\'account'],
+], [80 * mm, 90 * mm]), Spacer(1, 6)]
+
+story += [P('15. Limiti noti e sviluppi previsti', h1)]
 story += B([
     'Preferiti salvati per telefono e account, non sincronizzati tra dispositivi.',
     'I telefoni del gruppo con versioni precedenti alla 2.1 non conoscono i nuovi dati tecnici e, modificando un veicolo, li perdono.',
     'Lettura del libretto in prova: va sempre controllata dall\'utente.',
     'iPhone: in attesa di account Apple Developer, configurazione Firebase iOS, chiave APNs e TestFlight.',
     'Avvisi dei gruppi ad app chiusa disponibili solo su Android.',
+    'Versione web: memoria del browser limitata (pochi MB), quindi conviene l\'account online; la Pro sul web si basa sul registro cloud.',
 ])
 
 doc = Doc(OUT, pagesize=A4, leftMargin=18 * mm, rightMargin=18 * mm, topMargin=18 * mm, bottomMargin=18 * mm,

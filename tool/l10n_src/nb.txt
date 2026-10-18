@@ -514,3 +514,8 @@ Hybrid
 Ladbar hybrid
 Elektrisk
 Annet
+Dette dokumentet er bare lagret på telefonen til den som la det til.
+I nettleseren kommer det ingen påminnelser: bruk appen på telefonen med samme konto for varsler.
+Bare nettleser
+Kontoen er bare lagret i denne nettleseren. Ingen deling og ingen påminnelser.
+Nettversjon under test: foreløpig er bare kontoen i denne nettleseren tilgjengelig.

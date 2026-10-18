@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hibrid",
  "fuel.plugin": "Priključni hibrid",
  "fuel.electric": "Električni",
- "fuel.other": "Drugo"
+ "fuel.other": "Drugo",
+ "web.docLocal": "Ta dokument je shranjen samo v telefonu osebe, ki ga je dodala.",
+ "web.noNotify": "V brskalniku opomniki ne prispejo: za obvestila uporabi aplikacijo na telefonu z istim računom.",
+ "web.modeLocal": "Samo brskalnik",
+ "web.localInfo": "Račun shranjen samo v tem brskalniku. Brez deljenja in opomnikov.",
+ "web.noCloud": "Spletna različica v preizkusu: zaenkrat je na voljo samo račun v tem brskalniku."
 }

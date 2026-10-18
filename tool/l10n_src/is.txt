@@ -514,3 +514,8 @@ Tvinn
 Tengiltvinn
 Rafmagn
 Annað
+Þetta skjal er aðeins vistað í síma þess sem bætti því við.
+Í vafranum berast engar áminningar: notaðu appið í símanum með sama aðgangi.
+Aðeins vafri
+Aðgangur vistaður aðeins í þessum vafra. Engin deiling og engar áminningar.
+Vefútgáfa í prófun: í bili er aðeins aðgangurinn í þessum vafra í boði.

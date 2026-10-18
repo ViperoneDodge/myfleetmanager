@@ -1,0 +1,43 @@
+name: Compila e pubblica versione web
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    env:
+      FIREBASE_SA: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.38.x'
+          channel: stable
+          cache: true
+
+      - name: Compila
+        run: |
+          flutter create --org it.myfleet --project-name myfleetmanager --platforms web .
+          rm -rf test
+          python3 tool/patch_web.py
+          flutter pub get
+          flutter build web --release --no-web-resources-cdn
+
+      - name: Carica come artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MyFleetManager-web
+          path: build/web
+
+      - name: Pubblica su Firebase Hosting
+        if: ${{ env.FIREBASE_SA != '' }}
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: myfleetmanager-3ca03
+          channelId: live

@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hybride",
  "fuel.plugin": "Plug-in hybride",
  "fuel.electric": "Elektrisch",
- "fuel.other": "Overig"
+ "fuel.other": "Overig",
+ "web.docLocal": "Dit document staat alleen op de telefoon van degene die het heeft toegevoegd.",
+ "web.noNotify": "In de browser komen geen herinneringen binnen: gebruik de app op je telefoon met hetzelfde account.",
+ "web.modeLocal": "Alleen browser",
+ "web.localInfo": "Account alleen in deze browser opgeslagen. Geen delen en geen herinneringen.",
+ "web.noCloud": "Webversie in test: voorlopig is alleen het account in deze browser beschikbaar."
 }

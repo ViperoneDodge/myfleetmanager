@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models.dart';
 
@@ -16,6 +18,15 @@ class LocalStore {
   Future<File> _file(String name) async => File('${(await _base()).path}/$name');
 
   Future<Map<String, dynamic>?> _readJson(String name) async {
+    if (kIsWeb) {
+      try {
+        final txt = (await SharedPreferences.getInstance()).getString(name);
+        if (txt == null || txt.trim().isEmpty) return null;
+        return Map<String, dynamic>.from(jsonDecode(txt) as Map);
+      } catch (_) {
+        return null;
+      }
+    }
     try {
       final f = await _file(name);
       if (!await f.exists()) return null;
@@ -27,7 +38,22 @@ class LocalStore {
     }
   }
 
+  Future<void> _delete(String name) async {
+    if (kIsWeb) {
+      await (await SharedPreferences.getInstance()).remove(name);
+      return;
+    }
+    final f = await _file(name);
+    if (await f.exists()) await f.delete();
+  }
+
   Future<void> _writeJson(String name, Map<String, dynamic> data) async {
+    if (kIsWeb) {
+      try {
+        await (await SharedPreferences.getInstance()).setString(name, jsonEncode(data));
+      } catch (_) {}
+      return;
+    }
     final f = await _file(name);
     final tmp = await _file('$name.tmp');
     await tmp.writeAsString(jsonEncode(data), flush: true);
@@ -45,8 +71,7 @@ class LocalStore {
 
   Future<void> writeSession(Session? s) async {
     if (s == null) {
-      final f = await _file('session.json');
-      if (await f.exists()) await f.delete();
+      await _delete('session.json');
       return;
     }
     await _writeJson('session.json', s.toJson());
@@ -69,8 +94,7 @@ class LocalStore {
 
   Future<void> deleteUserData(Session s) async {
     try {
-      final f = await _file('data_${s.storageKey}.json');
-      if (await f.exists()) await f.delete();
+      await _delete('data_${s.storageKey}.json');
     } catch (_) {}
   }
 

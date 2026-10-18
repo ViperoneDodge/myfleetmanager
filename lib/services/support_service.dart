@@ -5,6 +5,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../version.dart';
+import '../platform.dart';
 
 class SupportService {
   static const String email = 'appmyfleetmanager@gmail.com';
@@ -13,16 +14,16 @@ class SupportService {
 
   static Future<String> deviceDescription() async {
     try {
-      if (Platform.isAndroid) {
+      if (isAndroid) {
         final a = await DeviceInfoPlugin().androidInfo;
         return '${a.manufacturer} ${a.model} · Android ${a.version.release} (API ${a.version.sdkInt})';
       }
-      if (Platform.isIOS) {
+      if (isIOS) {
         final i = await DeviceInfoPlugin().iosInfo;
         return '${i.utsname.machine} · iOS ${i.systemVersion}';
       }
     } catch (_) {}
-    return '${Platform.operatingSystem} ${Platform.operatingSystemVersion}';
+    return platformName;
   }
 
   static Future<bool> openEmail({required String subject, required String body}) async {

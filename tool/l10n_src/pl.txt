@@ -514,3 +514,8 @@ Hybryda
 Hybryda plug-in
 Elektryczny
 Inne
+Ten dokument jest zapisany tylko w telefonie osoby, która go dodała.
+W przeglądarce przypomnienia nie docierają: do powiadomień używaj aplikacji w telefonie z tym samym kontem.
+Tylko przeglądarka
+Konto zapisane tylko w tej przeglądarce. Bez udostępniania i przypomnień.
+Wersja przeglądarkowa w testach: na razie dostępne jest tylko konto w tej przeglądarce.

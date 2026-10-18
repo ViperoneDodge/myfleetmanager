@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../l10n.dart';
@@ -202,14 +203,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         ButtonSegment(
                             value: AccountMode.local,
                             icon: const Icon(Icons.phone_android),
-                            label: Text(tr('login.modeLocal'))),
+                            label: Text(tr(kIsWeb ? 'web.modeLocal' : 'login.modeLocal'))),
                       ],
                       selected: {_mode},
                       onSelectionChanged: (s) => setState(() => _mode = s.first),
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      isLocal ? tr('login.localInfo') : tr('login.cloudInfo'),
+                      isLocal ? tr(kIsWeb ? 'web.localInfo' : 'login.localInfo') : tr('login.cloudInfo'),
                       style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
                       textAlign: TextAlign.center,
                     ),
@@ -318,7 +319,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   if (!cloud) ...[
                     const SizedBox(height: 16),
                     Text(
-                      tr('login.noCloud'),
+                      tr(kIsWeb ? 'web.noCloud' : 'login.noCloud'),
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
                     ),

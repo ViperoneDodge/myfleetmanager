@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hybrid",
  "fuel.plugin": "Plug-in hybrid",
  "fuel.electric": "Elektrický",
- "fuel.other": "Iné"
+ "fuel.other": "Iné",
+ "web.docLocal": "Tento dokument je uložený len v telefóne toho, kto ho pridal.",
+ "web.noNotify": "V prehliadači pripomienky neprichádzajú: na upozornenia použite aplikáciu v telefóne s rovnakým účtom.",
+ "web.modeLocal": "Len prehliadač",
+ "web.localInfo": "Účet uložený len v tomto prehliadači. Bez zdieľania a pripomienok.",
+ "web.noCloud": "Webová verzia v skúške: zatiaľ je dostupný len účet v tomto prehliadači."
 }

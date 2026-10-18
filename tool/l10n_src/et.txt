@@ -514,3 +514,8 @@ Hübriid
 Pistikhübriid
 Elekter
 Muu
+See dokument on salvestatud ainult selle lisanud inimese telefoni.
+Brauseris meeldetuletusi ei tule: teavituste jaoks kasuta telefoni rakendust sama kontoga.
+Ainult brauser
+Konto on salvestatud ainult selles brauseris. Jagamist ja meeldetuletusi pole.
+Veebiversioon katsetamisel: praegu on saadaval ainult selle brauseri konto.

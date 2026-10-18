@@ -1,6 +1,6 @@
-import 'dart:io';
 import 'dart:ui' show Color;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:intl/intl.dart';
@@ -9,12 +9,14 @@ import 'package:timezone/timezone.dart' as tz;
 
 import '../l10n.dart';
 import '../models.dart';
+import '../platform.dart';
 
 class NotificationService {
   final FlutterLocalNotificationsPlugin _plugin = FlutterLocalNotificationsPlugin();
   bool _ready = false;
 
   Future<void> init() async {
+    if (kIsWeb) return;
     if (_ready) return;
     tzdata.initializeTimeZones();
     try {
@@ -49,6 +51,7 @@ class NotificationService {
   }
 
   Future<void> refreshChannels() async {
+    if (kIsWeb) return;
     if (!_ready) return;
     final a = _android;
     if (a == null) return;
@@ -66,7 +69,7 @@ class NotificationService {
     ));
   }
 
-  AndroidFlutterLocalNotificationsPlugin? get _android => Platform.isAndroid
+  AndroidFlutterLocalNotificationsPlugin? get _android => isAndroid
       ? _plugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
       : null;
 
@@ -86,6 +89,7 @@ class NotificationService {
   }
 
   Future<void> requestExactAlarms() async {
+    if (kIsWeb) return;
     await init();
     try {
       await _android?.requestExactAlarmsPermission();
@@ -97,12 +101,13 @@ class NotificationService {
       : AndroidScheduleMode.inexactAllowWhileIdle;
 
   Future<void> requestPermission() async {
+    if (kIsWeb) return;
     await init();
-    if (Platform.isAndroid) {
+    if (isAndroid) {
       try {
         await _android?.requestNotificationsPermission();
       } catch (_) {}
-    } else if (Platform.isIOS) {
+    } else if (isIOS) {
       await _plugin
           .resolvePlatformSpecificImplementation<IOSFlutterLocalNotificationsPlugin>()
           ?.requestPermissions(alert: true, badge: true, sound: true);
@@ -165,6 +170,7 @@ class NotificationService {
   static const int _testId = 900001;
 
   Future<int> rescheduleAll(List<Vehicle> vehicles, NotifySettings s) async {
+    if (kIsWeb) return 0;
     await init();
     try {
       final pending = await _plugin.pendingNotificationRequests();
@@ -209,7 +215,7 @@ class NotificationService {
       }
     }
     items.sort((a, b) => a.when.compareTo(b.when));
-    final max = Platform.isIOS ? 60 : 400;
+    final max = isIOS ? 60 : 400;
     var id = 1;
     for (final p in items.take(max)) {
       try {
@@ -229,6 +235,7 @@ class NotificationService {
   }
 
   Future<void> scheduleTest(Duration delay) async {
+    if (kIsWeb) return;
     await init();
     final when = tz.TZDateTime.now(tz.local).add(delay);
     await _plugin.zonedSchedule(
@@ -243,6 +250,7 @@ class NotificationService {
   }
 
   Future<void> showRemote(String? title, String? body) async {
+    if (kIsWeb) return;
     await init();
     await _plugin.show(
       100000 + DateTime.now().millisecondsSinceEpoch % 800000,
@@ -253,6 +261,7 @@ class NotificationService {
   }
 
   Future<void> showTest() async {
+    if (kIsWeb) return;
     await init();
     await _plugin.show(
       0,

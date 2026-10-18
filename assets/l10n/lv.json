@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hibrīds",
  "fuel.plugin": "Spraudhibrīds",
  "fuel.electric": "Elektrisks",
- "fuel.other": "Cits"
+ "fuel.other": "Cits",
+ "web.docLocal": "Šis dokuments ir saglabāts tikai tā pievienotāja tālrunī.",
+ "web.noNotify": "Pārlūkā atgādinājumi nepienāk: paziņojumiem izmanto tālruņa lietotni ar to pašu kontu.",
+ "web.modeLocal": "Tikai pārlūks",
+ "web.localInfo": "Konts saglabāts tikai šajā pārlūkā. Bez kopīgošanas un atgādinājumiem.",
+ "web.noCloud": "Tīmekļa versija testā: pagaidām pieejams tikai šī pārlūka konts."
 }

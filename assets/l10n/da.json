@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hybrid",
  "fuel.plugin": "Plug-in-hybrid",
  "fuel.electric": "El",
- "fuel.other": "Andet"
+ "fuel.other": "Andet",
+ "web.docLocal": "Dette dokument er kun gemt på telefonen hos den, der tilføjede det.",
+ "web.noNotify": "I browseren kommer der ingen påmindelser: brug appen på telefonen med samme konto til notifikationer.",
+ "web.modeLocal": "Kun browser",
+ "web.localInfo": "Kontoen er kun gemt i denne browser. Ingen deling og ingen påmindelser.",
+ "web.noCloud": "Webversion under test: indtil videre er kun kontoen i denne browser tilgængelig."
 }

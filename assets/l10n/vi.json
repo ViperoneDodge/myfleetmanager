@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hybrid",
  "fuel.plugin": "Hybrid sạc ngoài",
  "fuel.electric": "Điện",
- "fuel.other": "Khác"
+ "fuel.other": "Khác",
+ "web.docLocal": "Tài liệu này chỉ được lưu trên điện thoại của người đã thêm nó.",
+ "web.noNotify": "Trên trình duyệt không nhận được nhắc nhở: hãy dùng ứng dụng trên điện thoại với cùng tài khoản.",
+ "web.modeLocal": "Chỉ trình duyệt",
+ "web.localInfo": "Tài khoản chỉ lưu trong trình duyệt này. Không chia sẻ, không nhắc nhở.",
+ "web.noCloud": "Bản web đang thử nghiệm: hiện chỉ dùng được tài khoản trong trình duyệt này."
 }

@@ -15,6 +15,7 @@ import '../l10n.dart';
 import '../models.dart';
 import 'local_store.dart';
 import 'notification_service.dart';
+import '../platform.dart';
 
 class GroupWatchState {
   String uid;
@@ -45,6 +46,7 @@ class GroupWatchState {
   }
 
   static Future<GroupWatchState> load() async {
+    if (!isAndroid) return GroupWatchState();
     try {
       final f = await _file();
       if (!await f.exists()) return GroupWatchState();
@@ -65,6 +67,7 @@ class GroupWatchState {
   }
 
   Future<void> save() async {
+    if (!isAndroid) return;
     try {
       final f = await _file();
       final tmp = File('${f.path}.tmp');
@@ -183,7 +186,7 @@ Future<void> showDevUnlocks(NotificationService n, List<Map<String, dynamic>> li
 const String groupWatchTask = 'myfleet-group-watch';
 
 Future<void> scheduleGroupWatch(bool on) async {
-  if (!Platform.isAndroid) return;
+  if (!isAndroid) return;
   try {
     if (on) {
       await Workmanager().registerPeriodicTask(
@@ -200,7 +203,7 @@ Future<void> scheduleGroupWatch(bool on) async {
 }
 
 Future<void> initGroupWatch() async {
-  if (!Platform.isAndroid) return;
+  if (!isAndroid) return;
   try {
     await Workmanager().initialize(groupWatchDispatcher);
   } catch (_) {}

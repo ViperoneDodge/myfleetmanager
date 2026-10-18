@@ -514,3 +514,8 @@ Hybride
 Plug-in hybride
 Elektrisch
 Overig
+Dit document staat alleen op de telefoon van degene die het heeft toegevoegd.
+In de browser komen geen herinneringen binnen: gebruik de app op je telefoon met hetzelfde account.
+Alleen browser
+Account alleen in deze browser opgeslagen. Geen delen en geen herinneringen.
+Webversie in test: voorlopig is alleen het account in deze browser beschikbaar.

@@ -514,3 +514,8 @@ Hybridi
 Lataushybridi
 Sähkö
 Muu
+Tämä asiakirja on tallennettu vain sen lisänneen henkilön puhelimeen.
+Selaimessa muistutuksia ei tule: käytä ilmoituksiin puhelimen sovellusta samalla tilillä.
+Vain selain
+Tili tallennetaan vain tähän selaimeen. Ei jakamista eikä muistutuksia.
+Verkkoversio testissä: toistaiseksi käytettävissä on vain tämän selaimen tili.

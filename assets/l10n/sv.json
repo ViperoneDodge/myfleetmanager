@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hybrid",
  "fuel.plugin": "Laddhybrid",
  "fuel.electric": "El",
- "fuel.other": "Annat"
+ "fuel.other": "Annat",
+ "web.docLocal": "Det här dokumentet finns bara i telefonen hos den som lade till det.",
+ "web.noNotify": "I webbläsaren kommer inga påminnelser: använd appen i telefonen med samma konto för aviseringar.",
+ "web.modeLocal": "Bara webbläsare",
+ "web.localInfo": "Kontot sparas bara i den här webbläsaren. Ingen delning och inga påminnelser.",
+ "web.noCloud": "Webbversion under test: för närvarande finns bara kontot i den här webbläsaren."
 }

@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hibrit",
  "fuel.plugin": "Şarj edilebilir hibrit",
  "fuel.electric": "Elektrikli",
- "fuel.other": "Diğer"
+ "fuel.other": "Diğer",
+ "web.docLocal": "Bu belge yalnızca onu ekleyen kişinin telefonunda kayıtlı.",
+ "web.noNotify": "Tarayıcıda hatırlatıcılar gelmez: bildirimler için aynı hesapla telefondaki uygulamayı kullanın.",
+ "web.modeLocal": "Yalnızca tarayıcı",
+ "web.localInfo": "Hesap yalnızca bu tarayıcıda kayıtlı. Paylaşım ve hatırlatıcı yok.",
+ "web.noCloud": "Web sürümü deneme aşamasında: şimdilik yalnızca bu tarayıcıdaki hesap kullanılabilir."
 }

@@ -514,5 +514,10 @@
  "fuel.hybrid": "Híbrido",
  "fuel.plugin": "Híbrido enchufable",
  "fuel.electric": "Eléctrico",
- "fuel.other": "Otro"
+ "fuel.other": "Otro",
+ "web.docLocal": "Este documento está guardado solo en el teléfono de quien lo añadió.",
+ "web.noNotify": "En el navegador no llegan los recordatorios: usa la app del teléfono con la misma cuenta.",
+ "web.modeLocal": "Solo navegador",
+ "web.localInfo": "Cuenta guardada solo en este navegador. Sin compartir y sin recordatorios.",
+ "web.noCloud": "Versión web en prueba: por ahora solo está disponible la cuenta en este navegador."
 }

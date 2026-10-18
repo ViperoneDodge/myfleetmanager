@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hibrideach",
  "fuel.plugin": "Hibrideach breiseáin",
  "fuel.electric": "Leictreach",
- "fuel.other": "Eile"
+ "fuel.other": "Eile",
+ "web.docLocal": "Níl an doiciméad seo stóráilte ach ar fhón an duine a chuir leis é.",
+ "web.noNotify": "Ní thagann meabhrúcháin sa bhrabhsálaí: úsáid an aip ar an bhfón leis an gcuntas céanna.",
+ "web.modeLocal": "Brabhsálaí amháin",
+ "web.localInfo": "Cuntas stóráilte sa bhrabhsálaí seo amháin. Gan chomhroinnt ná meabhrúcháin.",
+ "web.noCloud": "Leagan gréasáin á thriail: níl ar fáil faoi láthair ach an cuntas sa bhrabhsálaí seo."
 }

@@ -514,3 +514,8 @@ Ibridu
 Ibridu plug-in
 Elettriku
 Oħra
+Dan id-dokument huwa salvat biss fuq it-telefon ta' min żiedu.
+Fil-browser ma jaslux tfakkiriet: għan-notifiki uża l-app fuq it-telefon bl-istess kont.
+Browser biss
+Kont salvat biss f'dan il-browser. L-ebda qsim u l-ebda tfakkira.
+Verżjoni web fi prova: għalissa hemm biss il-kont f'dan il-browser.

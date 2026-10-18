@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hybrid",
  "fuel.plugin": "Ladbar hybrid",
  "fuel.electric": "Elektrisk",
- "fuel.other": "Annet"
+ "fuel.other": "Annet",
+ "web.docLocal": "Dette dokumentet er bare lagret på telefonen til den som la det til.",
+ "web.noNotify": "I nettleseren kommer det ingen påminnelser: bruk appen på telefonen med samme konto for varsler.",
+ "web.modeLocal": "Bare nettleser",
+ "web.localInfo": "Kontoen er bare lagret i denne nettleseren. Ingen deling og ingen påminnelser.",
+ "web.noCloud": "Nettversjon under test: foreløpig er bare kontoen i denne nettleseren tilgjengelig."
 }

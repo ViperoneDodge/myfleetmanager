@@ -1,8 +1,9 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import '../platform.dart';
 
 class PushService {
   String? token;
@@ -16,10 +17,11 @@ class PushService {
     String uid, {
     required void Function(String? title, String? body) onForeground,
   }) async {
+    if (kIsWeb) return;
     _uid = uid;
     try {
       final m = FirebaseMessaging.instance;
-      if (Platform.isIOS) {
+      if (isIOS) {
         await m.requestPermission(alert: true, badge: true, sound: true);
       }
       token = await m.getToken();
@@ -45,7 +47,7 @@ class PushService {
     try {
       await FirebaseFirestore.instance.collection('users').doc(uid).set({
         'tokens': {t: DateTime.now().millisecondsSinceEpoch},
-        'platform': Platform.isIOS ? 'ios' : 'android',
+        'platform': platformName,
       }, SetOptions(merge: true));
     } catch (_) {}
   }

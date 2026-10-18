@@ -514,3 +514,8 @@ Hibrīds
 Spraudhibrīds
 Elektrisks
 Cits
+Šis dokuments ir saglabāts tikai tā pievienotāja tālrunī.
+Pārlūkā atgādinājumi nepienāk: paziņojumiem izmanto tālruņa lietotni ar to pašu kontu.
+Tikai pārlūks
+Konts saglabāts tikai šajā pārlūkā. Bez kopīgošanas un atgādinājumiem.
+Tīmekļa versija testā: pagaidām pieejams tikai šī pārlūka konts.

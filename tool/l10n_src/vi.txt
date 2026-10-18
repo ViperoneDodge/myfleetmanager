@@ -514,3 +514,8 @@ Hybrid
 Hybrid sạc ngoài
 Điện
 Khác
+Tài liệu này chỉ được lưu trên điện thoại của người đã thêm nó.
+Trên trình duyệt không nhận được nhắc nhở: hãy dùng ứng dụng trên điện thoại với cùng tài khoản.
+Chỉ trình duyệt
+Tài khoản chỉ lưu trong trình duyệt này. Không chia sẻ, không nhắc nhở.
+Bản web đang thử nghiệm: hiện chỉ dùng được tài khoản trong trình duyệt này.

@@ -1,9 +1,10 @@
 import 'dart:convert';
-import 'dart:io';
 import 'dart:math';
 
 import 'package:crypto/crypto.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
@@ -11,6 +12,7 @@ import '../firebase_config.dart';
 import '../l10n.dart';
 import '../models.dart';
 import 'local_store.dart';
+import '../platform.dart';
 
 class AuthException implements Exception {
   final String message;
@@ -23,7 +25,7 @@ class AuthService {
   final LocalStore store;
   AuthService(this.store);
 
-  bool get cloudAvailable => FirebaseConfig.isConfigured;
+  bool get cloudAvailable => FirebaseConfig.isConfigured && Firebase.apps.isNotEmpty;
 
   String _hash(String password, String salt) {
     var bytes = utf8.encode('$salt:$password');
@@ -132,6 +134,17 @@ class AuthService {
       );
 
   Future<Session> loginGoogle() async {
+    if (kIsWeb) {
+      try {
+        final c = await FirebaseAuth.instance.signInWithPopup(GoogleAuthProvider());
+        return _fromUser(c.user!);
+      } on FirebaseAuthException catch (e) {
+        if (e.code == 'popup-closed-by-user' || e.code == 'cancelled-popup-request') {
+          throw AuthException(tr('auth.googleCancelled'));
+        }
+        throw AuthException(_firebaseError(e));
+      }
+    }
     try {
       final g = _google();
       final account = await g.signIn();
@@ -158,7 +171,7 @@ class AuthService {
     return u != null && u.uid == s.key;
   }
 
-  bool get appleAvailable => cloudAvailable && Platform.isIOS;
+  bool get appleAvailable => cloudAvailable && isIOS;
 
   static String _nonce([int length = 32]) {
     const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._';
@@ -199,7 +212,7 @@ class AuthService {
   }
 
   Future<void> _revokeApple(User u) async {
-    if (!Platform.isIOS || !u.providerData.any((p) => p.providerId == 'apple.com')) return;
+    if (!isIOS || !u.providerData.any((p) => p.providerId == 'apple.com')) return;
     try {
       final apple = await SignInWithApple.getAppleIDCredential(scopes: const []);
       await FirebaseAuth.instance.revokeTokenWithAuthorizationCode(apple.authorizationCode);

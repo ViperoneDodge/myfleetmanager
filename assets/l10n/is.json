@@ -514,5 +514,10 @@
  "fuel.hybrid": "Tvinn",
  "fuel.plugin": "Tengiltvinn",
  "fuel.electric": "Rafmagn",
- "fuel.other": "Annað"
+ "fuel.other": "Annað",
+ "web.docLocal": "Þetta skjal er aðeins vistað í síma þess sem bætti því við.",
+ "web.noNotify": "Í vafranum berast engar áminningar: notaðu appið í símanum með sama aðgangi.",
+ "web.modeLocal": "Aðeins vafri",
+ "web.localInfo": "Aðgangur vistaður aðeins í þessum vafra. Engin deiling og engar áminningar.",
+ "web.noCloud": "Vefútgáfa í prófun: í bili er aðeins aðgangurinn í þessum vafra í boði."
 }

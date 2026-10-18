@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hibrid",
  "fuel.plugin": "Hibrid plug-in",
  "fuel.electric": "Electric",
- "fuel.other": "Altele"
+ "fuel.other": "Altele",
+ "web.docLocal": "Acest document este salvat doar pe telefonul celui care l-a adăugat.",
+ "web.noNotify": "În browser mementourile nu sosesc: pentru notificări folosește aplicația de pe telefon cu același cont.",
+ "web.modeLocal": "Doar browser",
+ "web.localInfo": "Cont salvat doar în acest browser. Fără partajare și fără mementouri.",
+ "web.noCloud": "Versiune web în probă: deocamdată este disponibil doar contul din acest browser."
 }

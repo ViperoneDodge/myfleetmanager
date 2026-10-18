@@ -514,3 +514,8 @@ fuel.hybrid
 fuel.plugin
 fuel.electric
 fuel.other
+web.docLocal
+web.noNotify
+web.modeLocal
+web.localInfo
+web.noCloud

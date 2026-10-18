@@ -514,5 +514,10 @@
  "fuel.hybrid": "Ibrida",
  "fuel.plugin": "Ibrida plug-in",
  "fuel.electric": "Elettrica",
- "fuel.other": "Altro"
+ "fuel.other": "Altro",
+ "web.docLocal": "Questo documento è salvato solo sul telefono di chi l'ha aggiunto.",
+ "web.noNotify": "Nel browser i promemoria non arrivano: per le notifiche usa l'app sul telefono con lo stesso account.",
+ "web.modeLocal": "Solo browser",
+ "web.localInfo": "Account salvato solo in questo browser. Nessuna condivisione e nessun promemoria.",
+ "web.noCloud": "Versione web in prova: per ora è disponibile solo l'account in questo browser."
 }

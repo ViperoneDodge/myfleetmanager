@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hibrid",
  "fuel.plugin": "Plug-in hibrid",
  "fuel.electric": "Električni",
- "fuel.other": "Ostalo"
+ "fuel.other": "Ostalo",
+ "web.docLocal": "Ovaj dokument spremljen je samo na telefonu osobe koja ga je dodala.",
+ "web.noNotify": "U pregledniku podsjetnici ne stižu: za obavijesti koristi aplikaciju na telefonu s istim računom.",
+ "web.modeLocal": "Samo preglednik",
+ "web.localInfo": "Račun spremljen samo u ovom pregledniku. Bez dijeljenja i podsjetnika.",
+ "web.noCloud": "Web verzija u probi: zasad je dostupan samo račun u ovom pregledniku."
 }

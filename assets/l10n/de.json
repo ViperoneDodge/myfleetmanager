@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hybrid",
  "fuel.plugin": "Plug-in-Hybrid",
  "fuel.electric": "Elektro",
- "fuel.other": "Sonstige"
+ "fuel.other": "Sonstige",
+ "web.docLocal": "Dieses Dokument ist nur auf dem Telefon der Person gespeichert, die es hinzugefügt hat.",
+ "web.noNotify": "Im Browser kommen keine Erinnerungen an: Nutze für Benachrichtigungen die App auf dem Telefon mit demselben Konto.",
+ "web.modeLocal": "Nur Browser",
+ "web.localInfo": "Konto nur in diesem Browser gespeichert. Keine Freigabe und keine Erinnerungen.",
+ "web.noCloud": "Web-Version im Test: Vorerst ist nur das Konto in diesem Browser verfügbar."
 }

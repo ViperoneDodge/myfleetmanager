@@ -514,3 +514,8 @@ Hibridas
 Įkraunamas hibridas
 Elektrinis
 Kita
+Šis dokumentas išsaugotas tik jį pridėjusio asmens telefone.
+Naršyklėje priminimai neateina: pranešimams naudokite telefono programėlę su ta pačia paskyra.
+Tik naršyklė
+Paskyra išsaugota tik šioje naršyklėje. Be bendrinimo ir priminimų.
+Žiniatinklio versija bandoma: kol kas prieinama tik šios naršyklės paskyra.

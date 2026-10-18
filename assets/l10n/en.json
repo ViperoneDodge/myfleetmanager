@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hybrid",
  "fuel.plugin": "Plug-in hybrid",
  "fuel.electric": "Electric",
- "fuel.other": "Other"
+ "fuel.other": "Other",
+ "web.docLocal": "This document is stored only on the phone of the person who added it.",
+ "web.noNotify": "Reminders are not delivered in the browser: use the phone app with the same account for notifications.",
+ "web.modeLocal": "Browser only",
+ "web.localInfo": "Account stored only in this browser. No sharing and no reminders.",
+ "web.noCloud": "Web version in preview: for now only the account in this browser is available."
 }

@@ -514,3 +514,8 @@ Hybrid
 Plug-in-hybrid
 El
 Andet
+Dette dokument er kun gemt på telefonen hos den, der tilføjede det.
+I browseren kommer der ingen påmindelser: brug appen på telefonen med samme konto til notifikationer.
+Kun browser
+Kontoen er kun gemt i denne browser. Ingen deling og ingen påmindelser.
+Webversion under test: indtil videre er kun kontoen i denne browser tilgængelig.

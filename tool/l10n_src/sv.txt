@@ -514,3 +514,8 @@ Hybrid
 Laddhybrid
 El
 Annat
+Det här dokumentet finns bara i telefonen hos den som lade till det.
+I webbläsaren kommer inga påminnelser: använd appen i telefonen med samma konto för aviseringar.
+Bara webbläsare
+Kontot sparas bara i den här webbläsaren. Ingen delning och inga påminnelser.
+Webbversion under test: för närvarande finns bara kontot i den här webbläsaren.

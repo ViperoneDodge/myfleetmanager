@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hibridas",
  "fuel.plugin": "Įkraunamas hibridas",
  "fuel.electric": "Elektrinis",
- "fuel.other": "Kita"
+ "fuel.other": "Kita",
+ "web.docLocal": "Šis dokumentas išsaugotas tik jį pridėjusio asmens telefone.",
+ "web.noNotify": "Naršyklėje priminimai neateina: pranešimams naudokite telefono programėlę su ta pačia paskyra.",
+ "web.modeLocal": "Tik naršyklė",
+ "web.localInfo": "Paskyra išsaugota tik šioje naršyklėje. Be bendrinimo ir priminimų.",
+ "web.noCloud": "Žiniatinklio versija bandoma: kol kas prieinama tik šios naršyklės paskyra."
 }

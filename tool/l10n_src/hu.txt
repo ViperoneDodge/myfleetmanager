@@ -514,3 +514,8 @@ Hibrid
 Plug-in hibrid
 Elektromos
 Egyéb
+Ez a dokumentum csak annak a telefonján van, aki hozzáadta.
+A böngészőben nem érkeznek emlékeztetők: az értesítésekhez használd a telefonos appot ugyanazzal a fiókkal.
+Csak böngésző
+A fiók csak ebben a böngészőben van mentve. Nincs megosztás és emlékeztető.
+Webes verzió tesztben: egyelőre csak az ebben a böngészőben lévő fiók érhető el.

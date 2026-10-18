@@ -514,3 +514,8 @@ Hybrid
 Plug-in hybrid
 Elektrický
 Iné
+Tento dokument je uložený len v telefóne toho, kto ho pridal.
+V prehliadači pripomienky neprichádzajú: na upozornenia použite aplikáciu v telefóne s rovnakým účtom.
+Len prehliadač
+Účet uložený len v tomto prehliadači. Bez zdieľania a pripomienok.
+Webová verzia v skúške: zatiaľ je dostupný len účet v tomto prehliadači.

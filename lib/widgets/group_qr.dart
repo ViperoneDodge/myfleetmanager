@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:ui' as ui;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:image_picker/image_picker.dart';
@@ -88,11 +89,19 @@ class _GroupQrCardState extends State<GroupQrCard> {
       final boundary = _key.currentContext!.findRenderObject() as RenderRepaintBoundary;
       final image = await boundary.toImage(pixelRatio: 4);
       final bytes = await image.toByteData(format: ui.ImageByteFormat.png);
-      final dir = await getTemporaryDirectory();
-      final file = File('${dir.path}/MyFleetManager-${widget.code}.png');
-      await file.writeAsBytes(bytes!.buffer.asUint8List());
+      final png = bytes!.buffer.asUint8List();
+      final name = 'MyFleetManager-${widget.code}.png';
+      XFile x;
+      if (kIsWeb) {
+        x = XFile.fromData(png, name: name, mimeType: 'image/png');
+      } else {
+        final dir = await getTemporaryDirectory();
+        final file = File('${dir.path}/$name');
+        await file.writeAsBytes(png);
+        x = XFile(file.path, mimeType: 'image/png');
+      }
       await SharePlus.instance.share(ShareParams(
-        files: [XFile(file.path, mimeType: 'image/png')],
+        files: [x],
         text: tr('family.qrShareText', {'name': widget.groupName, 'code': widget.code}),
       ));
     } catch (e) {

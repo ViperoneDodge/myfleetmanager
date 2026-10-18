@@ -514,5 +514,10 @@
  "fuel.hybrid": "Hibrid",
  "fuel.plugin": "Plug-in hibrid",
  "fuel.electric": "Elektromos",
- "fuel.other": "Egyéb"
+ "fuel.other": "Egyéb",
+ "web.docLocal": "Ez a dokumentum csak annak a telefonján van, aki hozzáadta.",
+ "web.noNotify": "A böngészőben nem érkeznek emlékeztetők: az értesítésekhez használd a telefonos appot ugyanazzal a fiókkal.",
+ "web.modeLocal": "Csak böngésző",
+ "web.localInfo": "A fiók csak ebben a böngészőben van mentve. Nincs megosztás és emlékeztető.",
+ "web.noCloud": "Webes verzió tesztben: egyelőre csak az ebben a böngészőben lévő fiók érhető el."
 }

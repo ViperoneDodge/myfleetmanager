@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -82,93 +83,101 @@ class SettingsScreen extends StatelessWidget {
 
             ..._appearance(context),
 
-            _header(context, tr('settings.notifications')),
-            const _NotifyStatus(),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Text(tr('settings.whenNotify'),
-                  style: TextStyle(color: scheme.onSurfaceVariant)),
-            ),
-            CheckboxListTile(
-              title: Text(tr('settings.allAlerts'), style: const TextStyle(fontWeight: FontWeight.w600)),
-              value: allOn,
-              onChanged: (b) {
-                final ns = NotifySettings(
-                    offsets: b == true ? _offsets.toSet() : <int>{},
-                    hour: n.hour,
-                    minute: n.minute);
-                appState.updateNotify(ns);
-              },
-            ),
-            ..._offsets.map((o) => CheckboxListTile(
-                  contentPadding: const EdgeInsets.only(left: 40, right: 16),
-                  title: Text(NotificationService.offsetLabel(o)),
-                  value: n.offsets.contains(o),
-                  onChanged: (b) {
-                    final set = Set<int>.from(n.offsets);
-                    if (b == true) {
-                      set.add(o);
-                    } else {
-                      set.remove(o);
-                    }
-                    appState.updateNotify(
-                        NotifySettings(offsets: set, hour: n.hour, minute: n.minute));
-                  },
-                )),
-            ListTile(
-              leading: const Icon(Icons.access_time),
-              title: Text(tr('settings.notifyTime')),
-              trailing: Text(
-                  '${n.hour.toString().padLeft(2, '0')}:${n.minute.toString().padLeft(2, '0')}',
-                  style: const TextStyle(fontSize: 16)),
-              onTap: () async {
-                final t = await showTimePicker(
-                  context: context,
-                  initialTime: TimeOfDay(hour: n.hour, minute: n.minute),
-                );
-                if (t != null) {
-                  appState.updateNotify(
-                      NotifySettings(offsets: n.offsets, hour: t.hour, minute: t.minute));
-                }
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.notifications_active_outlined),
-              title: Text(tr('settings.testNow')),
-              subtitle: Text(tr('settings.testNowInfo')),
-              onTap: () async {
-                await appState.notifications.requestPermission();
-                await appState.notifications.showTest();
-                final count = await appState.notifications
-                    .rescheduleAll(appState.activeVehicles, appState.data.notify);
-                if (context.mounted) {
-                  showSnack(context, tr('settings.scheduledCount', {'n': count}));
-                }
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.timer_outlined),
-              title: Text(tr('settings.test1min')),
-              subtitle: Text(tr('settings.test1minInfo')),
-              onTap: () async {
-                await appState.notifications.requestPermission();
-                try {
-                  await appState.notifications.scheduleTest(const Duration(minutes: 1));
-                  if (context.mounted) {
-                    showSnack(context, tr('settings.test1minDone'));
-                  }
-                } catch (e) {
-                  if (context.mounted) showSnack(context, tr('settings.testFailed', {'error': e}));
-                }
-              },
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
-              child: Text(
-                tr('settings.batteryHint'),
-                style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
+            if (kIsWeb) ...[
+              _header(context, tr('settings.notifications')),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Text(tr('web.noNotify'), style: TextStyle(color: scheme.onSurfaceVariant)),
               ),
-            ),
+            ] else ...[
+              _header(context, tr('settings.notifications')),
+              const _NotifyStatus(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Text(tr('settings.whenNotify'),
+                    style: TextStyle(color: scheme.onSurfaceVariant)),
+              ),
+              CheckboxListTile(
+                title: Text(tr('settings.allAlerts'), style: const TextStyle(fontWeight: FontWeight.w600)),
+                value: allOn,
+                onChanged: (b) {
+                  final ns = NotifySettings(
+                      offsets: b == true ? _offsets.toSet() : <int>{},
+                      hour: n.hour,
+                      minute: n.minute);
+                  appState.updateNotify(ns);
+                },
+              ),
+              ..._offsets.map((o) => CheckboxListTile(
+                    contentPadding: const EdgeInsets.only(left: 40, right: 16),
+                    title: Text(NotificationService.offsetLabel(o)),
+                    value: n.offsets.contains(o),
+                    onChanged: (b) {
+                      final set = Set<int>.from(n.offsets);
+                      if (b == true) {
+                        set.add(o);
+                      } else {
+                        set.remove(o);
+                      }
+                      appState.updateNotify(
+                          NotifySettings(offsets: set, hour: n.hour, minute: n.minute));
+                    },
+                  )),
+              ListTile(
+                leading: const Icon(Icons.access_time),
+                title: Text(tr('settings.notifyTime')),
+                trailing: Text(
+                    '${n.hour.toString().padLeft(2, '0')}:${n.minute.toString().padLeft(2, '0')}',
+                    style: const TextStyle(fontSize: 16)),
+                onTap: () async {
+                  final t = await showTimePicker(
+                    context: context,
+                    initialTime: TimeOfDay(hour: n.hour, minute: n.minute),
+                  );
+                  if (t != null) {
+                    appState.updateNotify(
+                        NotifySettings(offsets: n.offsets, hour: t.hour, minute: t.minute));
+                  }
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.notifications_active_outlined),
+                title: Text(tr('settings.testNow')),
+                subtitle: Text(tr('settings.testNowInfo')),
+                onTap: () async {
+                  await appState.notifications.requestPermission();
+                  await appState.notifications.showTest();
+                  final count = await appState.notifications
+                      .rescheduleAll(appState.activeVehicles, appState.data.notify);
+                  if (context.mounted) {
+                    showSnack(context, tr('settings.scheduledCount', {'n': count}));
+                  }
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.timer_outlined),
+                title: Text(tr('settings.test1min')),
+                subtitle: Text(tr('settings.test1minInfo')),
+                onTap: () async {
+                  await appState.notifications.requestPermission();
+                  try {
+                    await appState.notifications.scheduleTest(const Duration(minutes: 1));
+                    if (context.mounted) {
+                      showSnack(context, tr('settings.test1minDone'));
+                    }
+                  } catch (e) {
+                    if (context.mounted) showSnack(context, tr('settings.testFailed', {'error': e}));
+                  }
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
+                child: Text(
+                  tr('settings.batteryHint'),
+                  style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant),
+                ),
+              ),
+            ],
             if (appState.isCloud) ...[
               _header(context, tr('docs.consentTitle')),
               SwitchListTile(
@@ -184,37 +193,39 @@ class SettingsScreen extends StatelessWidget {
                   }
                 },
               ),
-              _header(context, tr('settings.push')),
-              ListTile(
-                leading: Icon(
-                  appState.push.registered ? Icons.cloud_done_outlined : Icons.cloud_off_outlined,
-                  color: appState.push.registered ? Colors.green.shade700 : Colors.orange.shade800,
-                ),
-                title: Text(appState.push.registered
-                    ? tr('settings.pushOk')
-                    : tr('settings.pushNo')),
-                subtitle: Text(appState.push.registered
-                    ? tr('settings.pushOkInfo')
-                    : tr('settings.pushNoInfo')),
-                onTap: () async {
-                  if (!appState.push.registered) {
-                    await appState.startPush();
-                    if (context.mounted && !appState.push.registered) {
-                      showSnack(context, tr('settings.pushFailed'));
+              if (!kIsWeb) ...[
+                _header(context, tr('settings.push')),
+                ListTile(
+                  leading: Icon(
+                    appState.push.registered ? Icons.cloud_done_outlined : Icons.cloud_off_outlined,
+                    color: appState.push.registered ? Colors.green.shade700 : Colors.orange.shade800,
+                  ),
+                  title: Text(appState.push.registered
+                      ? tr('settings.pushOk')
+                      : tr('settings.pushNo')),
+                  subtitle: Text(appState.push.registered
+                      ? tr('settings.pushOkInfo')
+                      : tr('settings.pushNoInfo')),
+                  onTap: () async {
+                    if (!appState.push.registered) {
+                      await appState.startPush();
+                      if (context.mounted && !appState.push.registered) {
+                        showSnack(context, tr('settings.pushFailed'));
+                      }
+                      return;
                     }
-                    return;
-                  }
-                  Clipboard.setData(ClipboardData(text: appState.push.token!));
-                  showSnack(context, tr('settings.pushCopied'));
-                },
-              ),
-              SwitchListTile(
-                secondary: const Icon(Icons.notifications_active_outlined),
-                title: Text(tr('settings.groupAlerts')),
-                subtitle: Text(tr('settings.groupAlertsInfo')),
-                value: appState.groupAlerts,
-                onChanged: (on) => appState.setGroupAlerts(on),
-              ),
+                    Clipboard.setData(ClipboardData(text: appState.push.token!));
+                    showSnack(context, tr('settings.pushCopied'));
+                  },
+                ),
+                SwitchListTile(
+                  secondary: const Icon(Icons.notifications_active_outlined),
+                  title: Text(tr('settings.groupAlerts')),
+                  subtitle: Text(tr('settings.groupAlertsInfo')),
+                  value: appState.groupAlerts,
+                  onChanged: (on) => appState.setGroupAlerts(on),
+                ),
+              ],
             ],
 
             _header(context, tr('settings.groups')),

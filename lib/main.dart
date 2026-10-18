@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -23,7 +24,22 @@ Future<void> main() async {
   } catch (_) {
     await L10n.load('en');
   }
-  if (FirebaseConfig.isConfigured) {
+  if (kIsWeb) {
+    if (FirebaseConfig.webAppId.isNotEmpty) {
+      try {
+        await Firebase.initializeApp(
+          options: const FirebaseOptions(
+            apiKey: FirebaseConfig.apiKey,
+            appId: FirebaseConfig.webAppId,
+            messagingSenderId: FirebaseConfig.messagingSenderId,
+            projectId: FirebaseConfig.projectId,
+            storageBucket: FirebaseConfig.storageBucket,
+            authDomain: FirebaseConfig.authDomain,
+          ),
+        );
+      } catch (_) {}
+    }
+  } else if (FirebaseConfig.isConfigured) {
     try {
       await Firebase.initializeApp();
     } catch (_) {

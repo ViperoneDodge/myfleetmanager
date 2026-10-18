@@ -514,5 +514,10 @@
  "fuel.hybrid": "混合动力",
  "fuel.plugin": "插电式混合动力",
  "fuel.electric": "纯电动",
- "fuel.other": "其他"
+ "fuel.other": "其他",
+ "web.docLocal": "此文件仅保存在添加它的人的手机上。",
+ "web.noNotify": "浏览器中不会收到提醒：请使用同一账户在手机应用中接收通知。",
+ "web.modeLocal": "仅浏览器",
+ "web.localInfo": "账户仅保存在此浏览器中。无共享，无提醒。",
+ "web.noCloud": "网页版试用中：目前仅可使用此浏览器中的账户。"
 }
