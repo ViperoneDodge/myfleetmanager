@@ -1,0 +1,44 @@
+name: Prova versione web nei browser
+
+on:
+  push:
+    branches: [main, ccr-e440b7a3-tzhb9h]
+  workflow_dispatch:
+
+jobs:
+  browsers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.38.x'
+          channel: stable
+          cache: true
+
+      - name: Compila
+        run: |
+          flutter create --org it.myfleet --project-name myfleetmanager --platforms web .
+          rm -rf test
+          python3 tool/patch_web.py
+          flutter pub get
+          flutter build web --release --no-web-resources-cdn
+
+      - name: Prepara i browser
+        run: |
+          python3 -m pip install --break-system-packages -q playwright
+          python3 -m playwright install --with-deps chromium firefox webkit
+
+      - name: Prova Chrome, Firefox e WebKit (Safari)
+        run: |
+          (cd build/web && python3 -m http.server 8765 > /dev/null 2>&1 &)
+          sleep 2
+          python3 tool/web_test/browser_test.py http://localhost:8765/ web-test chromium,firefox,webkit
+
+      - name: Carica risultati e schermate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: prova-browser
+          path: web-test

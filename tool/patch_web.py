@@ -35,12 +35,32 @@ if WEB.exists():
 <body>
   <div id="splash"><img src="icons/Icon-192.png" alt="MyFleetManager"></div>
   <script>
-    window.addEventListener('flutter-first-frame', function () {{
-      var s = document.getElementById('splash');
-      if (s) s.remove();
-    }});
+    (function () {{
+      var ok = 'noModule' in document.createElement('script') && !!window.fetch && !!window.Promise
+        && !!window.ResizeObserver && typeof Array.prototype.at === 'function'
+        && typeof structuredClone === 'function';
+      if (!ok) {{
+        var it = (navigator.language || 'it').toLowerCase().indexOf('it') === 0;
+        var s = document.getElementById('splash');
+        s.innerHTML = '<div style="max-width:420px;margin:24px;padding:24px;background:#fff;border-radius:16px;'
+          + 'font-family:Arial,sans-serif;text-align:center;color:#1B2430">'
+          + '<img src="icons/Icon-192.png" style="width:72px;height:72px;border-radius:16px" alt="">'
+          + '<h2 style="margin:12px 0 8px">MyFleetManager</h2><p style="margin:0;line-height:1.5">'
+          + (it ? 'Questo browser non è supportato. Apri MyFleetManager con Chrome, Edge, Firefox o Safari aggiornati.'
+                : 'This browser is not supported. Please open MyFleetManager with an up-to-date Chrome, Edge, Firefox or Safari.')
+          + '</p></div>';
+        return;
+      }}
+      window.addEventListener('flutter-first-frame', function () {{
+        var el = document.getElementById('splash');
+        if (el) el.parentNode.removeChild(el);
+      }});
+      var sc = document.createElement('script');
+      sc.src = 'flutter_bootstrap.js';
+      sc.async = true;
+      document.body.appendChild(sc);
+    }})();
   </script>
-  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
 """)
