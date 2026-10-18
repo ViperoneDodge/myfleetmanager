@@ -23,7 +23,7 @@ jobs:
           rm -rf test
           python3 tool/patch_web.py
           flutter pub get
-          flutter build web --release --no-web-resources-cdn
+          flutter build web --profile --source-maps --no-web-resources-cdn
 
       - name: Prepara i browser
         run: |

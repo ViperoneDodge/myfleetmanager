@@ -20,7 +20,8 @@ async def run(p, engine):
     browser = await (kind.launch(executable_path=EXE) if EXE else kind.launch())
     ctx = await browser.new_context(viewport={'width': 1280, 'height': 800}, locale='it-IT')
     pg = await ctx.new_page()
-    pg.on('pageerror', lambda e: errors.append(str(e)))
+    pg.on('pageerror', lambda e: errors.append((str(e) + '\n' + (getattr(e, 'stack', '') or ''))[:3000]))
+    pg.on('console', lambda m: errors.append('console ' + m.type + ': ' + m.text[:1500]) if m.type in ('error', 'warning') else None)
     step = 'apertura'
     try:
         await pg.goto(URL, wait_until='load')
@@ -58,8 +59,8 @@ async def main():
     lines = []
     for engine, ok, step, errors in results:
         lines.append(f"{engine}: {'OK' if ok else 'ERRORE in ' + step}")
-        for e in errors[:5]:
-            lines.append(f'  - {e}')
+        for e in errors[:25]:
+            lines.append('  - ' + e.replace('\n', '\n    '))
     report = '\n'.join(lines)
     print(report)
     (OUT / 'risultato.txt').write_text(report + '\n')
