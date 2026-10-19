@@ -30,7 +30,7 @@ Future<void> main() async {
       try {
         await Firebase.initializeApp(
           options: const FirebaseOptions(
-            apiKey: FirebaseConfig.apiKey,
+            apiKey: FirebaseConfig.webApiKey,
             appId: FirebaseConfig.webAppId,
             messagingSenderId: FirebaseConfig.messagingSenderId,
             projectId: FirebaseConfig.projectId,
