@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import '../l10n.dart';
 import '../services/registration_reader.dart';
 import '../services/tyres.dart';
+import '../theme.dart';
 import 'common.dart';
 
 Map<String, String> ocrFields() => {
@@ -40,50 +41,66 @@ Future<Set<String>?> showOcrReview(BuildContext context, RegistrationData data, 
     context: context,
     builder: (ctx) => StatefulBuilder(
       builder: (ctx, setSt) => AlertDialog(
-        title: Text(tr('ocr.found')),
+        insetPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+        titlePadding: const EdgeInsets.fromLTRB(20, 18, 20, 0),
+        contentPadding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+        actionsPadding: const EdgeInsets.fromLTRB(12, 4, 16, 12),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(tr('ocr.found'), maxLines: 1, style: const TextStyle(fontFamily: handFont, fontSize: 24)),
+        ),
         content: SingleChildScrollView(
           child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
               decoration: BoxDecoration(
                 color: const Color(0xFFFFF3CD),
                 border: Border.all(color: const Color(0xFFB07A00)),
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                const Icon(Icons.warning_amber_rounded, color: Color(0xFFB07A00)),
-                const SizedBox(width: 8),
+              child: Row(children: [
+                const Icon(Icons.warning_amber_rounded, color: Color(0xFFB07A00), size: 18),
+                const SizedBox(width: 6),
                 Expanded(
                   child: Text(tr('ocr.disclaimer'),
-                      style: const TextStyle(fontSize: 13, color: Color(0xFF5A3E00), fontWeight: FontWeight.w600)),
+                      style: const TextStyle(fontSize: 12, color: Color(0xFF5A3E00), fontWeight: FontWeight.w600)),
                 ),
               ]),
             ),
-            const SizedBox(height: 10),
-            Text(data.isEmpty ? tr('ocr.none') : tr('ocr.foundHint'), style: const TextStyle(fontSize: 13)),
-            const SizedBox(height: 6),
-            Text(tr('ocr.assignHint', {'button': tr('ocr.rawText')}),
-                style: TextStyle(fontSize: 12, color: Theme.of(ctx).colorScheme.onSurfaceVariant)),
             const SizedBox(height: 8),
+            Text(data.isEmpty ? tr('ocr.none') : tr('ocr.foundHint'), style: const TextStyle(fontSize: 13)),
             ..._rows(data).map((r) => CheckboxListTile(
                   dense: true,
+                  visualDensity: VisualDensity.compact,
                   contentPadding: EdgeInsets.zero,
                   value: chosen.contains(r.key),
                   onChanged: (b) => setSt(() => b == true ? chosen.add(r.key) : chosen.remove(r.key)),
-                  title: Text(r.value),
+                  title: Text(r.value, style: const TextStyle(fontSize: 15)),
                   subtitle: Text(fields[r.key]!),
                 )),
+            const SizedBox(height: 4),
+            Text(tr('ocr.assignHint', {'button': tr('ocr.rawText')}),
+                style: TextStyle(fontSize: 12, color: Theme.of(ctx).colorScheme.onSurfaceVariant)),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: TextButton.icon(
+                style: TextButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  visualDensity: VisualDensity.compact,
+                ),
+                onPressed: () => showOcrRawText(ctx, raw, onAssign: (field, value) {
+                  if (!RegistrationReader.apply(data, field, value)) return false;
+                  setSt(() => chosen.add(field));
+                  return true;
+                }),
+                icon: const Icon(Icons.notes, size: 18),
+                label: Text(tr('ocr.rawText')),
+              ),
+            ),
           ]),
         ),
         actions: [
-          TextButton(
-            onPressed: () => showOcrRawText(ctx, raw, onAssign: (field, value) {
-              if (!RegistrationReader.apply(data, field, value)) return false;
-              setSt(() => chosen.add(field));
-              return true;
-            }),
-            child: Text(tr('ocr.rawText')),
-          ),
           TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
           FilledButton(
             onPressed: chosen.isEmpty ? null : () => Navigator.pop(ctx, true),

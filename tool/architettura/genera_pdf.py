@@ -352,7 +352,7 @@ files = [
     ['widgets/common.dart', righe('widgets/common.dart'), 'Componenti comuni: card del veicolo, avvisi, stella dei preferiti, stati delle scadenze, formato e lettura degli importi, nome dell app in Lobster e slogan in corsivo anni 50 (Lobster Two) su due righe bilanciate'],
     ['widgets/ruled.dart', righe('widgets/ruled.dart'), 'Allineamento dei testi alle righe del quaderno'],
     ['widgets/group_qr.dart', righe('widgets/group_qr.dart'), 'QR code di invito con logo, scansione e lettura da immagine'],
-    ['widgets/ocr_review.dart', righe('widgets/ocr_review.dart'), 'Finestra «Dati trovati», testo letto e «Assegna a…»'],
+    ['widgets/ocr_review.dart', righe('widgets/ocr_review.dart'), 'Finestra compatta (titolo su una riga, avviso ridotto, Annulla e Salva affiancati, «Testo letto» come collegamento) — Finestra «Dati trovati», testo letto e «Assegna a…»'],
     ['widgets/docs_consent.dart', righe('widgets/docs_consent.dart'), 'Richiesta di consenso per i documenti online'],
 ]
 _noti = {r[0] for r in files[1:]} | {'firebase_config.dart', 'version.dart'}
