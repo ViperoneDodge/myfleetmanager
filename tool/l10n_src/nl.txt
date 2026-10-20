@@ -522,3 +522,12 @@ Webversie in test: voorlopig is alleen het account in deze browser beschikbaar.
 De webversie is nog niet actief. Gebruik de app op je telefoon.
 Webversie alleen voor Pro
 Voor MyFleetManager in de browser heb je de Pro-versie nodig. Activeer die in de app op je telefoon en log hier in met hetzelfde account.
+Onderdeel toevoegen
+Onderdeel of werk
+Code / merk
+Kosten
+Arbeidsloon
+Totaal
+Uitgegeven in {year}: {amount}
+Totaal: {amount}
+Notities (garage, garantie…)

@@ -522,5 +522,14 @@
  "web.noCloud": "Web verzija u probi: zasad je dostupan samo račun u ovom pregledniku.",
  "web.notReady": "Web verzija još nije aktivna. Koristi aplikaciju na telefonu.",
  "web.proOnlyTitle": "Web verzija samo za Pro",
- "web.proOnly": "Za korištenje MyFleetManagera u pregledniku potrebna je Pro verzija. Aktiviraj je u aplikaciji na telefonu, zatim se ovdje prijavi istim računom."
+ "web.proOnly": "Za korištenje MyFleetManagera u pregledniku potrebna je Pro verzija. Aktiviraj je u aplikaciji na telefonu, zatim se ovdje prijavi istim računom.",
+ "maint.addPart": "Dodaj dio",
+ "maint.partName": "Dio ili rad",
+ "maint.partCode": "Šifra / marka",
+ "maint.cost": "Cijena",
+ "maint.labor": "Rad",
+ "maint.total": "Ukupno",
+ "maint.spentYear": "Potrošeno u {year}.: {amount}",
+ "maint.spentAll": "Ukupno: {amount}",
+ "maint.notesHint": "Bilješke (servis, jamstvo…)"
 }

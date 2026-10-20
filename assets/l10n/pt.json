@@ -522,5 +522,14 @@
  "web.noCloud": "Versão web em teste: por agora só está disponível a conta neste navegador.",
  "web.notReady": "A versão web ainda não está ativa. Use a app no telemóvel.",
  "web.proOnlyTitle": "Versão web reservada ao Pro",
- "web.proOnly": "Para usar o MyFleetManager no navegador é necessária a versão Pro. Ative-a na app do telemóvel e depois entre aqui com a mesma conta."
+ "web.proOnly": "Para usar o MyFleetManager no navegador é necessária a versão Pro. Ative-a na app do telemóvel e depois entre aqui com a mesma conta.",
+ "maint.addPart": "Adicionar peça",
+ "maint.partName": "Peça ou trabalho",
+ "maint.partCode": "Código / marca",
+ "maint.cost": "Custo",
+ "maint.labor": "Mão de obra",
+ "maint.total": "Total",
+ "maint.spentYear": "Gasto em {year}: {amount}",
+ "maint.spentAll": "Total: {amount}",
+ "maint.notesHint": "Notas (oficina, garantia…)"
 }

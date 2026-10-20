@@ -522,5 +522,14 @@
  "web.noCloud": "Verkkoversio testissä: toistaiseksi käytettävissä on vain tämän selaimen tili.",
  "web.notReady": "Verkkoversio ei ole vielä käytössä. Käytä puhelimen sovellusta.",
  "web.proOnlyTitle": "Verkkoversio vain Prolle",
- "web.proOnly": "MyFleetManagerin käyttö selaimessa vaatii Pro-version. Aktivoi se puhelimen sovelluksessa ja kirjaudu sitten tähän samalla tilillä."
+ "web.proOnly": "MyFleetManagerin käyttö selaimessa vaatii Pro-version. Aktivoi se puhelimen sovelluksessa ja kirjaudu sitten tähän samalla tilillä.",
+ "maint.addPart": "Lisää varaosa",
+ "maint.partName": "Varaosa tai työ",
+ "maint.partCode": "Koodi / merkki",
+ "maint.cost": "Hinta",
+ "maint.labor": "Työ",
+ "maint.total": "Yhteensä",
+ "maint.spentYear": "Käytetty {year}: {amount}",
+ "maint.spentAll": "Yhteensä: {amount}",
+ "maint.notesHint": "Muistiinpanot (korjaamo, takuu…)"
 }

@@ -522,3 +522,12 @@ Spletna različica v preizkusu: zaenkrat je na voljo samo račun v tem brskalnik
 Spletna različica še ni aktivna. Uporabi aplikacijo na telefonu.
 Spletna različica samo za Pro
 Za MyFleetManager v brskalniku potrebuješ različico Pro. Aktiviraj jo v aplikaciji na telefonu in se tukaj prijavi z istim računom.
+Dodaj del
+Del ali delo
+Koda / znamka
+Cena
+Delo
+Skupaj
+Porabljeno v {year}: {amount}
+Skupaj: {amount}
+Opombe (servis, garancija…)

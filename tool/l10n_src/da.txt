@@ -522,3 +522,12 @@ Webversion under test: indtil videre er kun kontoen i denne browser tilgængelig
 Webversionen er endnu ikke aktiv. Brug appen på telefonen.
 Webversion kun til Pro
 For at bruge MyFleetManager i browseren skal du have Pro-versionen. Aktivér den i appen på telefonen, og log derefter ind her med samme konto.
+Tilføj reservedel
+Reservedel eller arbejde
+Kode / mærke
+Pris
+Arbejdsløn
+I alt
+Brugt i {year}: {amount}
+I alt: {amount}
+Noter (værksted, garanti…)

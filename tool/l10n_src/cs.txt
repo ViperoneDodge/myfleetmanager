@@ -522,3 +522,12 @@ Webová verze ve zkoušce: zatím je dostupný jen účet v tomto prohlížeči.
 Webová verze zatím není aktivní. Použijte aplikaci v telefonu.
 Webová verze jen pro Pro
 Pro MyFleetManager v prohlížeči potřebujete verzi Pro. Aktivujte ji v aplikaci v telefonu a pak se zde přihlaste stejným účtem.
+Přidat díl
+Díl nebo práce
+Kód / značka
+Cena
+Práce
+Celkem
+Utraceno v roce {year}: {amount}
+Celkem: {amount}
+Poznámky (servis, záruka…)

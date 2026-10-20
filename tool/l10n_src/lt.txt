@@ -522,3 +522,12 @@ Paskyra išsaugota tik šioje naršyklėje. Be bendrinimo ir priminimų.
 Žiniatinklio versija dar neaktyvi. Naudokite telefono programėlę.
 Žiniatinklio versija tik Pro
 Norint naudoti MyFleetManager naršyklėje, reikia Pro versijos. Aktyvuokite ją telefono programėlėje, tada prisijunkite čia ta pačia paskyra.
+Pridėti dalį
+Dalis ar darbas
+Kodas / markė
+Kaina
+Darbas
+Iš viso
+Išleista {year} m.: {amount}
+Iš viso: {amount}
+Pastabos (servisas, garantija…)

@@ -522,5 +522,14 @@
  "web.noCloud": "网页版试用中：目前仅可使用此浏览器中的账户。",
  "web.notReady": "网页版尚未启用，请使用手机应用。",
  "web.proOnlyTitle": "网页版仅限 Pro 用户",
- "web.proOnly": "在浏览器中使用 MyFleetManager 需要 Pro 版本。请在手机应用中开通，然后在此用同一账户登录。"
+ "web.proOnly": "在浏览器中使用 MyFleetManager 需要 Pro 版本。请在手机应用中开通，然后在此用同一账户登录。",
+ "maint.addPart": "添加配件",
+ "maint.partName": "配件或工作",
+ "maint.partCode": "编号 / 品牌",
+ "maint.cost": "费用",
+ "maint.labor": "工时费",
+ "maint.total": "合计",
+ "maint.spentYear": "{year} 年花费：{amount}",
+ "maint.spentAll": "合计：{amount}",
+ "maint.notesHint": "备注（维修厂、保修…）"
 }

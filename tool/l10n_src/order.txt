@@ -522,3 +522,12 @@ web.noCloud
 web.notReady
 web.proOnlyTitle
 web.proOnly
+maint.addPart
+maint.partName
+maint.partCode
+maint.cost
+maint.labor
+maint.total
+maint.spentYear
+maint.spentAll
+maint.notesHint

@@ -522,5 +522,14 @@
  "web.noCloud": "Veebiversioon katsetamisel: praegu on saadaval ainult selle brauseri konto.",
  "web.notReady": "Veebiversioon pole veel aktiivne. Kasuta telefoni rakendust.",
  "web.proOnlyTitle": "Veebiversioon ainult Pro kasutajatele",
- "web.proOnly": "MyFleetManageri kasutamiseks brauseris on vaja Pro-versiooni. Aktiveeri see telefoni rakenduses ja logi siis siin sisse sama kontoga."
+ "web.proOnly": "MyFleetManageri kasutamiseks brauseris on vaja Pro-versiooni. Aktiveeri see telefoni rakenduses ja logi siis siin sisse sama kontoga.",
+ "maint.addPart": "Lisa varuosa",
+ "maint.partName": "Varuosa või töö",
+ "maint.partCode": "Kood / mark",
+ "maint.cost": "Hind",
+ "maint.labor": "Töö",
+ "maint.total": "Kokku",
+ "maint.spentYear": "Kulutatud {year}: {amount}",
+ "maint.spentAll": "Kokku: {amount}",
+ "maint.notesHint": "Märkmed (töökoda, garantii…)"
 }

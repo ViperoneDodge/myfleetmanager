@@ -522,3 +522,12 @@ Tīmekļa versija testā: pagaidām pieejams tikai šī pārlūka konts.
 Tīmekļa versija vēl nav aktīva. Izmanto tālruņa lietotni.
 Tīmekļa versija tikai Pro
 Lai izmantotu MyFleetManager pārlūkā, nepieciešama Pro versija. Aktivizē to tālruņa lietotnē un pēc tam pieraksties šeit ar to pašu kontu.
+Pievienot detaļu
+Detaļa vai darbs
+Kods / marka
+Izmaksas
+Darbs
+Kopā
+Iztērēts {year}. gadā: {amount}
+Kopā: {amount}
+Piezīmes (serviss, garantija…)

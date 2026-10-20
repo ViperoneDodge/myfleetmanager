@@ -522,3 +522,12 @@ Leagan gréasáin á thriail: níl ar fáil faoi láthair ach an cuntas sa bhrab
 Níl an leagan gréasáin gníomhach fós. Úsáid an aip ar an bhfón.
 Leagan gréasáin do Pro amháin
 Chun MyFleetManager a úsáid sa bhrabhsálaí, teastaíonn an leagan Pro. Gníomhachtaigh é san aip ar an bhfón, ansin sínigh isteach anseo leis an gcuntas céanna.
+Cuir páirt leis
+Páirt nó obair
+Cód / branda
+Costas
+Saothar
+Iomlán
+Caite in {year}: {amount}
+Iomlán: {amount}
+Nótaí (garáiste, baránta…)

@@ -522,3 +522,12 @@ Versiune web în probă: deocamdată este disponibil doar contul din acest brows
 Versiunea web nu este încă activă. Folosește aplicația de pe telefon.
 Versiune web doar pentru Pro
 Pentru MyFleetManager în browser este nevoie de versiunea Pro. Activeaz-o în aplicația de pe telefon, apoi conectează-te aici cu același cont.
+Adaugă piesă
+Piesă sau lucrare
+Cod / marcă
+Cost
+Manoperă
+Total
+Cheltuit în {year}: {amount}
+Total: {amount}
+Note (service, garanție…)

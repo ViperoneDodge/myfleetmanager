@@ -10,6 +10,7 @@ import 'package:myfleetmanager/main.dart';
 import 'package:myfleetmanager/models.dart';
 import 'package:myfleetmanager/screens/family_screen.dart';
 import 'package:myfleetmanager/screens/home_screen.dart';
+import 'package:myfleetmanager/screens/maintenance_screen.dart';
 import 'package:myfleetmanager/screens/pro_screen.dart';
 import 'package:myfleetmanager/screens/settings_screen.dart';
 import 'package:myfleetmanager/screens/vehicle_detail_screen.dart';
@@ -17,6 +18,7 @@ import 'package:myfleetmanager/screens/vehicle_edit_screen.dart';
 import 'package:myfleetmanager/services/app_state.dart';
 import 'package:myfleetmanager/services/pdf_export.dart';
 import 'package:myfleetmanager/theme.dart';
+import 'package:myfleetmanager/widgets/common.dart';
 
 const me = 'demo-me';
 
@@ -51,8 +53,24 @@ Vehicle v(String id, String name, String plate, VehicleType t, DateTime reg, Lis
     d.enabled = true;
   }
   for (var i = 0; i < maint; i++) {
-    x.maintenance.add(MaintenanceRecord(
-        date: DateTime(2025 - i, 3 + i, 12), km: 85000 - i * 15000, items: {'oil', 'oilFilter', if (i.isEven) 'airFilter'}, notes: i == 0 ? 'Officina Bianchi' : ''));
+    final r = MaintenanceRecord(
+        date: DateTime(2025 - i, 3 + i, 12), km: 85000 - i * 15000, items: {'oil', 'oilFilter', if (i.isEven) 'airFilter'}, notes: i == 0 ? 'Officina Bianchi' : '');
+    if (i < 3) {
+      r.part('oil')
+        ..code = '5W-30 · 4,5 L'
+        ..cents = 5800;
+      r.part('oilFilter')
+        ..code = 'Mann HU 7008 z'
+        ..cents = 1450;
+      if (i.isEven) {
+        r.part('airFilter')
+          ..code = 'Mann C 27 009'
+          ..cents = 2290;
+      }
+      if (i == 0) r.parts.add(MaintPart(name: 'Spazzole tergicristallo', code: 'Bosch A 863 S', cents: 3100));
+      r.labor = 6000 - i * 1000;
+    }
+    x.maintenance.add(r);
   }
   return x;
 }
@@ -147,6 +165,7 @@ void main() {
     group(lang, () {
       setUp(() async {
         await L10n.load(lang);
+        setMoneyLocale(lang == 'it' ? 'it_IT' : 'en_IE');
         setupData();
       });
       testWidgets('screens', (tester) async {
@@ -162,6 +181,12 @@ void main() {
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '02b_tech');
         detailTab.value = 2;
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '02c_maint');
+        await shot(tester, MaintenanceEditScreen(vehicleId: 'g1', record: appState.vehicleById('g1')!.maintenanceSorted.first),
+            '02d_maint_edit');
+        await shot(tester, MaintenanceEditScreen(vehicleId: 'g1', record: appState.vehicleById('g1')!.maintenanceSorted.first),
+            '02e_maint_part', then: () async {
+          await tester.tap(find.text(tr('maint.oil')));
+        });
         detailTab.value = 0;
         await shot(tester, const HomeScreen(), '03_deadlines', then: () async {
           await tester.tap(find.text(tr('tab.deadlines')).last);

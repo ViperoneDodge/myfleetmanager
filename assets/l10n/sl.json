@@ -522,5 +522,14 @@
  "web.noCloud": "Spletna različica v preizkusu: zaenkrat je na voljo samo račun v tem brskalniku.",
  "web.notReady": "Spletna različica še ni aktivna. Uporabi aplikacijo na telefonu.",
  "web.proOnlyTitle": "Spletna različica samo za Pro",
- "web.proOnly": "Za MyFleetManager v brskalniku potrebuješ različico Pro. Aktiviraj jo v aplikaciji na telefonu in se tukaj prijavi z istim računom."
+ "web.proOnly": "Za MyFleetManager v brskalniku potrebuješ različico Pro. Aktiviraj jo v aplikaciji na telefonu in se tukaj prijavi z istim računom.",
+ "maint.addPart": "Dodaj del",
+ "maint.partName": "Del ali delo",
+ "maint.partCode": "Koda / znamka",
+ "maint.cost": "Cena",
+ "maint.labor": "Delo",
+ "maint.total": "Skupaj",
+ "maint.spentYear": "Porabljeno v {year}: {amount}",
+ "maint.spentAll": "Skupaj: {amount}",
+ "maint.notesHint": "Opombe (servis, garancija…)"
 }

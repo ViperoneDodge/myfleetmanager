@@ -522,3 +522,12 @@ Versão web em teste: por agora só está disponível a conta neste navegador.
 A versão web ainda não está ativa. Use a app no telemóvel.
 Versão web reservada ao Pro
 Para usar o MyFleetManager no navegador é necessária a versão Pro. Ative-a na app do telemóvel e depois entre aqui com a mesma conta.
+Adicionar peça
+Peça ou trabalho
+Código / marca
+Custo
+Mão de obra
+Total
+Gasto em {year}: {amount}
+Total: {amount}
+Notas (oficina, garantia…)

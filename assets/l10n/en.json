@@ -522,5 +522,14 @@
  "web.noCloud": "Web version in preview: for now only the account in this browser is available.",
  "web.notReady": "The web version is not active yet. Please use the phone app.",
  "web.proOnlyTitle": "Web version for Pro users",
- "web.proOnly": "Using MyFleetManager in the browser requires the Pro version. Activate it in the phone app, then sign in here with the same account."
+ "web.proOnly": "Using MyFleetManager in the browser requires the Pro version. Activate it in the phone app, then sign in here with the same account.",
+ "maint.addPart": "Add part",
+ "maint.partName": "Part or job",
+ "maint.partCode": "Code / brand",
+ "maint.cost": "Cost",
+ "maint.labor": "Labour",
+ "maint.total": "Total",
+ "maint.spentYear": "Spent in {year}: {amount}",
+ "maint.spentAll": "Total: {amount}",
+ "maint.notesHint": "Notes (garage, warranty…)"
 }

@@ -522,3 +522,12 @@ Verkkoversio testissä: toistaiseksi käytettävissä on vain tämän selaimen t
 Verkkoversio ei ole vielä käytössä. Käytä puhelimen sovellusta.
 Verkkoversio vain Prolle
 MyFleetManagerin käyttö selaimessa vaatii Pro-version. Aktivoi se puhelimen sovelluksessa ja kirjaudu sitten tähän samalla tilillä.
+Lisää varaosa
+Varaosa tai työ
+Koodi / merkki
+Hinta
+Työ
+Yhteensä
+Käytetty {year}: {amount}
+Yhteensä: {amount}
+Muistiinpanot (korjaamo, takuu…)

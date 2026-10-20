@@ -522,5 +522,14 @@
  "web.noCloud": "Versi web dalam uji coba: untuk saat ini hanya akun di browser ini yang tersedia.",
  "web.notReady": "Versi web belum aktif. Gunakan aplikasi di ponsel.",
  "web.proOnlyTitle": "Versi web khusus Pro",
- "web.proOnly": "Untuk memakai MyFleetManager di browser diperlukan versi Pro. Aktifkan di aplikasi ponsel, lalu masuk di sini dengan akun yang sama."
+ "web.proOnly": "Untuk memakai MyFleetManager di browser diperlukan versi Pro. Aktifkan di aplikasi ponsel, lalu masuk di sini dengan akun yang sama.",
+ "maint.addPart": "Tambah suku cadang",
+ "maint.partName": "Suku cadang atau pekerjaan",
+ "maint.partCode": "Kode / merek",
+ "maint.cost": "Biaya",
+ "maint.labor": "Jasa",
+ "maint.total": "Total",
+ "maint.spentYear": "Pengeluaran {year}: {amount}",
+ "maint.spentAll": "Total: {amount}",
+ "maint.notesHint": "Catatan (bengkel, garansi…)"
 }

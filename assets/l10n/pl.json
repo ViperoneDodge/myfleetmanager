@@ -522,5 +522,14 @@
  "web.noCloud": "Wersja przeglądarkowa w testach: na razie dostępne jest tylko konto w tej przeglądarce.",
  "web.notReady": "Wersja przeglądarkowa nie jest jeszcze aktywna. Użyj aplikacji w telefonie.",
  "web.proOnlyTitle": "Wersja przeglądarkowa tylko dla Pro",
- "web.proOnly": "Aby korzystać z MyFleetManager w przeglądarce, potrzebna jest wersja Pro. Aktywuj ją w aplikacji w telefonie, a potem zaloguj się tutaj tym samym kontem."
+ "web.proOnly": "Aby korzystać z MyFleetManager w przeglądarce, potrzebna jest wersja Pro. Aktywuj ją w aplikacji w telefonie, a potem zaloguj się tutaj tym samym kontem.",
+ "maint.addPart": "Dodaj część",
+ "maint.partName": "Część lub usługa",
+ "maint.partCode": "Kod / marka",
+ "maint.cost": "Koszt",
+ "maint.labor": "Robocizna",
+ "maint.total": "Razem",
+ "maint.spentYear": "Wydano w {year}: {amount}",
+ "maint.spentAll": "Razem: {amount}",
+ "maint.notesHint": "Notatki (warsztat, gwarancja…)"
 }

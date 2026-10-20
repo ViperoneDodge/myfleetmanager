@@ -522,5 +522,14 @@
  "web.noCloud": "Vefútgáfa í prófun: í bili er aðeins aðgangurinn í þessum vafra í boði.",
  "web.notReady": "Vefútgáfan er ekki virk enn. Notaðu appið í símanum.",
  "web.proOnlyTitle": "Vefútgáfa aðeins fyrir Pro",
- "web.proOnly": "Til að nota MyFleetManager í vafra þarf Pro-útgáfuna. Virkjaðu hana í símaappinu og skráðu þig svo inn hér með sama aðgangi."
+ "web.proOnly": "Til að nota MyFleetManager í vafra þarf Pro-útgáfuna. Virkjaðu hana í símaappinu og skráðu þig svo inn hér með sama aðgangi.",
+ "maint.addPart": "Bæta við varahlut",
+ "maint.partName": "Varahlutur eða vinna",
+ "maint.partCode": "Kóði / tegund",
+ "maint.cost": "Kostnaður",
+ "maint.labor": "Vinna",
+ "maint.total": "Samtals",
+ "maint.spentYear": "Eytt árið {year}: {amount}",
+ "maint.spentAll": "Samtals: {amount}",
+ "maint.notesHint": "Athugasemdir (verkstæði, ábyrgð…)"
 }

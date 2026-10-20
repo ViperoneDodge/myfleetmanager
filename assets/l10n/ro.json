@@ -522,5 +522,14 @@
  "web.noCloud": "Versiune web în probă: deocamdată este disponibil doar contul din acest browser.",
  "web.notReady": "Versiunea web nu este încă activă. Folosește aplicația de pe telefon.",
  "web.proOnlyTitle": "Versiune web doar pentru Pro",
- "web.proOnly": "Pentru MyFleetManager în browser este nevoie de versiunea Pro. Activeaz-o în aplicația de pe telefon, apoi conectează-te aici cu același cont."
+ "web.proOnly": "Pentru MyFleetManager în browser este nevoie de versiunea Pro. Activeaz-o în aplicația de pe telefon, apoi conectează-te aici cu același cont.",
+ "maint.addPart": "Adaugă piesă",
+ "maint.partName": "Piesă sau lucrare",
+ "maint.partCode": "Cod / marcă",
+ "maint.cost": "Cost",
+ "maint.labor": "Manoperă",
+ "maint.total": "Total",
+ "maint.spentYear": "Cheltuit în {year}: {amount}",
+ "maint.spentAll": "Total: {amount}",
+ "maint.notesHint": "Note (service, garanție…)"
 }

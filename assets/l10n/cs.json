@@ -522,5 +522,14 @@
  "web.noCloud": "Webová verze ve zkoušce: zatím je dostupný jen účet v tomto prohlížeči.",
  "web.notReady": "Webová verze zatím není aktivní. Použijte aplikaci v telefonu.",
  "web.proOnlyTitle": "Webová verze jen pro Pro",
- "web.proOnly": "Pro MyFleetManager v prohlížeči potřebujete verzi Pro. Aktivujte ji v aplikaci v telefonu a pak se zde přihlaste stejným účtem."
+ "web.proOnly": "Pro MyFleetManager v prohlížeči potřebujete verzi Pro. Aktivujte ji v aplikaci v telefonu a pak se zde přihlaste stejným účtem.",
+ "maint.addPart": "Přidat díl",
+ "maint.partName": "Díl nebo práce",
+ "maint.partCode": "Kód / značka",
+ "maint.cost": "Cena",
+ "maint.labor": "Práce",
+ "maint.total": "Celkem",
+ "maint.spentYear": "Utraceno v roce {year}: {amount}",
+ "maint.spentAll": "Celkem: {amount}",
+ "maint.notesHint": "Poznámky (servis, záruka…)"
 }

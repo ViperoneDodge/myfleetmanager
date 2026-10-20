@@ -522,5 +522,14 @@
  "web.noCloud": "Webes verzió tesztben: egyelőre csak az ebben a böngészőben lévő fiók érhető el.",
  "web.notReady": "A webes verzió még nem aktív. Használd a telefonos appot.",
  "web.proOnlyTitle": "Webes verzió csak Pro felhasználóknak",
- "web.proOnly": "A MyFleetManager böngészős használatához Pro verzió kell. Aktiváld a telefonos appban, majd jelentkezz be itt ugyanazzal a fiókkal."
+ "web.proOnly": "A MyFleetManager böngészős használatához Pro verzió kell. Aktiváld a telefonos appban, majd jelentkezz be itt ugyanazzal a fiókkal.",
+ "maint.addPart": "Alkatrész hozzáadása",
+ "maint.partName": "Alkatrész vagy munka",
+ "maint.partCode": "Cikkszám / márka",
+ "maint.cost": "Költség",
+ "maint.labor": "Munkadíj",
+ "maint.total": "Összesen",
+ "maint.spentYear": "{year}-ban költve: {amount}",
+ "maint.spentAll": "Összesen: {amount}",
+ "maint.notesHint": "Megjegyzés (szerviz, garancia…)"
 }

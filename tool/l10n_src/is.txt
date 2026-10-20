@@ -522,3 +522,12 @@ Vefútgáfa í prófun: í bili er aðeins aðgangurinn í þessum vafra í boð
 Vefútgáfan er ekki virk enn. Notaðu appið í símanum.
 Vefútgáfa aðeins fyrir Pro
 Til að nota MyFleetManager í vafra þarf Pro-útgáfuna. Virkjaðu hana í símaappinu og skráðu þig svo inn hér með sama aðgangi.
+Bæta við varahlut
+Varahlutur eða vinna
+Kóði / tegund
+Kostnaður
+Vinna
+Samtals
+Eytt árið {year}: {amount}
+Samtals: {amount}
+Athugasemdir (verkstæði, ábyrgð…)

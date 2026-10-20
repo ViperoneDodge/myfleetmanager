@@ -522,5 +522,14 @@
  "web.noCloud": "Web sürümü deneme aşamasında: şimdilik yalnızca bu tarayıcıdaki hesap kullanılabilir.",
  "web.notReady": "Web sürümü henüz etkin değil. Telefondaki uygulamayı kullanın.",
  "web.proOnlyTitle": "Web sürümü yalnızca Pro için",
- "web.proOnly": "MyFleetManager'ı tarayıcıda kullanmak için Pro sürüm gerekir. Telefondaki uygulamadan etkinleştirin, sonra buradan aynı hesapla giriş yapın."
+ "web.proOnly": "MyFleetManager'ı tarayıcıda kullanmak için Pro sürüm gerekir. Telefondaki uygulamadan etkinleştirin, sonra buradan aynı hesapla giriş yapın.",
+ "maint.addPart": "Parça ekle",
+ "maint.partName": "Parça veya işçilik",
+ "maint.partCode": "Kod / marka",
+ "maint.cost": "Maliyet",
+ "maint.labor": "İşçilik",
+ "maint.total": "Toplam",
+ "maint.spentYear": "{year} harcaması: {amount}",
+ "maint.spentAll": "Toplam: {amount}",
+ "maint.notesHint": "Notlar (servis, garanti…)"
 }

@@ -522,5 +522,14 @@
  "web.noCloud": "Žiniatinklio versija bandoma: kol kas prieinama tik šios naršyklės paskyra.",
  "web.notReady": "Žiniatinklio versija dar neaktyvi. Naudokite telefono programėlę.",
  "web.proOnlyTitle": "Žiniatinklio versija tik Pro",
- "web.proOnly": "Norint naudoti MyFleetManager naršyklėje, reikia Pro versijos. Aktyvuokite ją telefono programėlėje, tada prisijunkite čia ta pačia paskyra."
+ "web.proOnly": "Norint naudoti MyFleetManager naršyklėje, reikia Pro versijos. Aktyvuokite ją telefono programėlėje, tada prisijunkite čia ta pačia paskyra.",
+ "maint.addPart": "Pridėti dalį",
+ "maint.partName": "Dalis ar darbas",
+ "maint.partCode": "Kodas / markė",
+ "maint.cost": "Kaina",
+ "maint.labor": "Darbas",
+ "maint.total": "Iš viso",
+ "maint.spentYear": "Išleista {year} m.: {amount}",
+ "maint.spentAll": "Iš viso: {amount}",
+ "maint.notesHint": "Pastabos (servisas, garantija…)"
 }

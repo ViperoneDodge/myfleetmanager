@@ -522,3 +522,12 @@ Versi web dalam uji coba: untuk saat ini hanya akun di browser ini yang tersedia
 Versi web belum aktif. Gunakan aplikasi di ponsel.
 Versi web khusus Pro
 Untuk memakai MyFleetManager di browser diperlukan versi Pro. Aktifkan di aplikasi ponsel, lalu masuk di sini dengan akun yang sama.
+Tambah suku cadang
+Suku cadang atau pekerjaan
+Kode / merek
+Biaya
+Jasa
+Total
+Pengeluaran {year}: {amount}
+Total: {amount}
+Catatan (bengkel, garansi…)

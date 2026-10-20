@@ -522,5 +522,14 @@
  "web.noCloud": "Tīmekļa versija testā: pagaidām pieejams tikai šī pārlūka konts.",
  "web.notReady": "Tīmekļa versija vēl nav aktīva. Izmanto tālruņa lietotni.",
  "web.proOnlyTitle": "Tīmekļa versija tikai Pro",
- "web.proOnly": "Lai izmantotu MyFleetManager pārlūkā, nepieciešama Pro versija. Aktivizē to tālruņa lietotnē un pēc tam pieraksties šeit ar to pašu kontu."
+ "web.proOnly": "Lai izmantotu MyFleetManager pārlūkā, nepieciešama Pro versija. Aktivizē to tālruņa lietotnē un pēc tam pieraksties šeit ar to pašu kontu.",
+ "maint.addPart": "Pievienot detaļu",
+ "maint.partName": "Detaļa vai darbs",
+ "maint.partCode": "Kods / marka",
+ "maint.cost": "Izmaksas",
+ "maint.labor": "Darbs",
+ "maint.total": "Kopā",
+ "maint.spentYear": "Iztērēts {year}. gadā: {amount}",
+ "maint.spentAll": "Kopā: {amount}",
+ "maint.notesHint": "Piezīmes (serviss, garantija…)"
 }

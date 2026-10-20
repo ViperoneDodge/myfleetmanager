@@ -522,3 +522,12 @@ Nettversjon under test: foreløpig er bare kontoen i denne nettleseren tilgjenge
 Nettversjonen er ikke aktiv ennå. Bruk appen på telefonen.
 Nettversjon kun for Pro
 For å bruke MyFleetManager i nettleseren trenger du Pro-versjonen. Aktiver den i appen på telefonen, og logg deretter inn her med samme konto.
+Legg til reservedel
+Reservedel eller arbeid
+Kode / merke
+Kostnad
+Arbeid
+Totalt
+Brukt i {year}: {amount}
+Totalt: {amount}
+Notater (verksted, garanti…)

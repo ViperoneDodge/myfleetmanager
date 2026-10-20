@@ -215,12 +215,43 @@ String maintenanceItemLabel(String k) {
   }
 }
 
+class MaintPart {
+  String key;
+  String name;
+  String code;
+  int? cents;
+
+  MaintPart({this.key = '', this.name = '', this.code = '', this.cents});
+
+  bool get custom => key.isEmpty;
+
+  String get label => custom ? name : maintenanceItemLabel(key);
+
+  bool get isBlank => code.isEmpty && cents == null;
+
+  Map<String, dynamic> toJson() => {
+        if (key.isNotEmpty) 'key': key,
+        if (name.isNotEmpty) 'name': name,
+        if (code.isNotEmpty) 'code': code,
+        if (cents != null) 'cents': cents,
+      };
+
+  factory MaintPart.fromJson(Map<String, dynamic> j) => MaintPart(
+        key: j['key'] as String? ?? '',
+        name: j['name'] as String? ?? '',
+        code: j['code'] as String? ?? '',
+        cents: (j['cents'] as num?)?.toInt(),
+      );
+}
+
 class MaintenanceRecord {
   String id;
   DateTime date;
   int? km;
 
   Set<String> items;
+  List<MaintPart> parts;
+  int? labor;
   String notes;
   int createdAt;
 
@@ -229,29 +260,71 @@ class MaintenanceRecord {
     required this.date,
     this.km,
     Set<String>? items,
+    List<MaintPart>? parts,
+    this.labor,
     this.notes = '',
     int? createdAt,
   })  : id = id ?? newId(8),
         items = items ?? <String>{},
+        parts = parts ?? <MaintPart>[],
         createdAt = createdAt ?? DateTime.now().millisecondsSinceEpoch;
 
-  Map<String, dynamic> toJson() => {
-        'id': id,
-        'date': date.toIso8601String(),
-        'km': km,
-        'items': items.toList(),
-        'notes': notes,
-        'createdAt': createdAt,
-      };
+  Map<String, dynamic> toJson() {
+    final kept = parts.where((p) => p.custom ? p.name.isNotEmpty : items.contains(p.key) && !p.isBlank);
+    return {
+      'id': id,
+      'date': date.toIso8601String(),
+      'km': km,
+      'items': items.toList(),
+      if (kept.isNotEmpty) 'parts': kept.map((p) => p.toJson()).toList(),
+      if (labor != null) 'labor': labor,
+      'notes': notes,
+      'createdAt': createdAt,
+    };
+  }
 
   factory MaintenanceRecord.fromJson(Map<String, dynamic> j) => MaintenanceRecord(
         id: j['id'] as String?,
         date: DateTime.tryParse((j['date'] as String?) ?? '') ?? DateTime.now(),
         km: (j['km'] as num?)?.toInt(),
         items: ((j['items'] as List?) ?? const []).map((e) => e.toString()).toSet(),
+        parts: ((j['parts'] as List?) ?? const [])
+            .whereType<Map>()
+            .map((e) => MaintPart.fromJson(Map<String, dynamic>.from(e)))
+            .toList(),
+        labor: (j['labor'] as num?)?.toInt(),
         notes: j['notes'] as String? ?? '',
         createdAt: (j['createdAt'] as num?)?.toInt() ?? 0,
       );
+
+  MaintPart part(String key) => parts.firstWhere((p) => p.key == key, orElse: () {
+        final p = MaintPart(key: key);
+        parts.add(p);
+        return p;
+      });
+
+  MaintPart? partOf(String key) {
+    for (final p in parts) {
+      if (p.key == key) return p;
+    }
+    return null;
+  }
+
+  List<MaintPart> get customParts => parts.where((p) => p.custom).toList();
+
+  List<String> get labels => [
+        ...maintenanceItems.where(items.contains).map(maintenanceItemLabel),
+        ...customParts.map((p) => p.name).where((n) => n.isNotEmpty),
+      ];
+
+  int? get total {
+    final costs = <int>[
+      for (final p in parts)
+        if (p.cents != null && (p.custom || items.contains(p.key))) p.cents!,
+      if (labor != null) labor!,
+    ];
+    return costs.isEmpty ? null : costs.reduce((a, b) => a + b);
+  }
 
   DateTime? get insertedOn {
     if (createdAt <= 0) return null;

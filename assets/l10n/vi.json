@@ -522,5 +522,14 @@
  "web.noCloud": "Bản web đang thử nghiệm: hiện chỉ dùng được tài khoản trong trình duyệt này.",
  "web.notReady": "Phiên bản web chưa hoạt động. Hãy dùng ứng dụng trên điện thoại.",
  "web.proOnlyTitle": "Bản web chỉ dành cho Pro",
- "web.proOnly": "Để dùng MyFleetManager trên trình duyệt cần bản Pro. Hãy kích hoạt trong ứng dụng điện thoại, rồi đăng nhập tại đây bằng cùng tài khoản."
+ "web.proOnly": "Để dùng MyFleetManager trên trình duyệt cần bản Pro. Hãy kích hoạt trong ứng dụng điện thoại, rồi đăng nhập tại đây bằng cùng tài khoản.",
+ "maint.addPart": "Thêm phụ tùng",
+ "maint.partName": "Phụ tùng hoặc công việc",
+ "maint.partCode": "Mã / hãng",
+ "maint.cost": "Chi phí",
+ "maint.labor": "Tiền công",
+ "maint.total": "Tổng",
+ "maint.spentYear": "Đã chi năm {year}: {amount}",
+ "maint.spentAll": "Tổng: {amount}",
+ "maint.notesHint": "Ghi chú (garage, bảo hành…)"
 }

@@ -522,5 +522,14 @@
  "web.noCloud": "Verżjoni web fi prova: għalissa hemm biss il-kont f'dan il-browser.",
  "web.notReady": "Il-verżjoni web għadha mhix attiva. Uża l-app fuq it-telefon.",
  "web.proOnlyTitle": "Verżjoni web għal Pro biss",
- "web.proOnly": "Biex tuża MyFleetManager fil-browser trid il-verżjoni Pro. Attivaha fl-app tat-telefon, imbagħad idħol hawn bl-istess kont."
+ "web.proOnly": "Biex tuża MyFleetManager fil-browser trid il-verżjoni Pro. Attivaha fl-app tat-telefon, imbagħad idħol hawn bl-istess kont.",
+ "maint.addPart": "Żid parti",
+ "maint.partName": "Parti jew xogħol",
+ "maint.partCode": "Kodiċi / marka",
+ "maint.cost": "Spiża",
+ "maint.labor": "Xogħol",
+ "maint.total": "Total",
+ "maint.spentYear": "Minfuq fl-{year}: {amount}",
+ "maint.spentAll": "Total: {amount}",
+ "maint.notesHint": "Noti (garaxx, garanzija…)"
 }

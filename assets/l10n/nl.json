@@ -522,5 +522,14 @@
  "web.noCloud": "Webversie in test: voorlopig is alleen het account in deze browser beschikbaar.",
  "web.notReady": "De webversie is nog niet actief. Gebruik de app op je telefoon.",
  "web.proOnlyTitle": "Webversie alleen voor Pro",
- "web.proOnly": "Voor MyFleetManager in de browser heb je de Pro-versie nodig. Activeer die in de app op je telefoon en log hier in met hetzelfde account."
+ "web.proOnly": "Voor MyFleetManager in de browser heb je de Pro-versie nodig. Activeer die in de app op je telefoon en log hier in met hetzelfde account.",
+ "maint.addPart": "Onderdeel toevoegen",
+ "maint.partName": "Onderdeel of werk",
+ "maint.partCode": "Code / merk",
+ "maint.cost": "Kosten",
+ "maint.labor": "Arbeidsloon",
+ "maint.total": "Totaal",
+ "maint.spentYear": "Uitgegeven in {year}: {amount}",
+ "maint.spentAll": "Totaal: {amount}",
+ "maint.notesHint": "Notities (garage, garantie…)"
 }

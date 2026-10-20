@@ -522,3 +522,12 @@ Web sürümü deneme aşamasında: şimdilik yalnızca bu tarayıcıdaki hesap k
 Web sürümü henüz etkin değil. Telefondaki uygulamayı kullanın.
 Web sürümü yalnızca Pro için
 MyFleetManager'ı tarayıcıda kullanmak için Pro sürüm gerekir. Telefondaki uygulamadan etkinleştirin, sonra buradan aynı hesapla giriş yapın.
+Parça ekle
+Parça veya işçilik
+Kod / marka
+Maliyet
+İşçilik
+Toplam
+{year} harcaması: {amount}
+Toplam: {amount}
+Notlar (servis, garanti…)

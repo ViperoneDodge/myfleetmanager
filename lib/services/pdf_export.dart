@@ -77,7 +77,7 @@ class PdfExport {
     } else {
       table += 16;
       for (final r in records) {
-        final itemsText = r.items.map(maintenanceItemLabel).join(', ');
+        final itemsText = r.labels.join(', ');
         final l = [_lines(itemsText, 34), _lines(r.notes, 34)].reduce((a, b) => a > b ? a : b);
         table += 5 + 11.5 * l;
       }
@@ -236,13 +236,15 @@ class PdfExport {
       const cell = pw.TextStyle(fontSize: 8.5);
       pw.Widget c(String t, pw.TextStyle st) =>
           pw.Padding(padding: const pw.EdgeInsets.symmetric(horizontal: 4, vertical: 2), child: pw.Text(t, style: st));
+      final costs = records.any((r) => r.total != null);
       out.add(pw.Table(
         border: pw.TableBorder.all(color: PdfColors.grey400, width: 0.5),
-        columnWidths: const {
-          0: pw.FixedColumnWidth(56),
-          1: pw.FixedColumnWidth(58),
-          2: pw.FlexColumnWidth(3),
-          3: pw.FlexColumnWidth(3),
+        columnWidths: {
+          0: const pw.FixedColumnWidth(56),
+          1: const pw.FixedColumnWidth(58),
+          2: const pw.FlexColumnWidth(3),
+          3: const pw.FlexColumnWidth(3),
+          if (costs) 4: const pw.FixedColumnWidth(58),
         },
         children: [
           pw.TableRow(
@@ -253,6 +255,7 @@ class PdfExport {
               c(tr('maint.km'), head),
               c(tr('maint.items'), head),
               c(tr('pdf.notes'), head),
+              if (costs) c(tr('maint.cost'), head),
             ],
           ),
           for (var i = 0; i < records.length; i++)
@@ -261,8 +264,9 @@ class PdfExport {
               children: [
                 c(fmtDate(records[i].date), cell),
                 c(records[i].km == null ? '—' : fmtKm(records[i].km!), cell),
-                c(records[i].items.map(maintenanceItemLabel).join(', '), cell),
+                c(records[i].labels.join(', '), cell),
                 c(records[i].notes, cell),
+                if (costs) c(records[i].total == null ? '—' : fmtMoney(records[i].total!), cell),
               ],
             ),
         ],

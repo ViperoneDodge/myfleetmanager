@@ -522,5 +522,14 @@
  "web.noCloud": "Leagan gréasáin á thriail: níl ar fáil faoi láthair ach an cuntas sa bhrabhsálaí seo.",
  "web.notReady": "Níl an leagan gréasáin gníomhach fós. Úsáid an aip ar an bhfón.",
  "web.proOnlyTitle": "Leagan gréasáin do Pro amháin",
- "web.proOnly": "Chun MyFleetManager a úsáid sa bhrabhsálaí, teastaíonn an leagan Pro. Gníomhachtaigh é san aip ar an bhfón, ansin sínigh isteach anseo leis an gcuntas céanna."
+ "web.proOnly": "Chun MyFleetManager a úsáid sa bhrabhsálaí, teastaíonn an leagan Pro. Gníomhachtaigh é san aip ar an bhfón, ansin sínigh isteach anseo leis an gcuntas céanna.",
+ "maint.addPart": "Cuir páirt leis",
+ "maint.partName": "Páirt nó obair",
+ "maint.partCode": "Cód / branda",
+ "maint.cost": "Costas",
+ "maint.labor": "Saothar",
+ "maint.total": "Iomlán",
+ "maint.spentYear": "Caite in {year}: {amount}",
+ "maint.spentAll": "Iomlán: {amount}",
+ "maint.notesHint": "Nótaí (garáiste, baránta…)"
 }

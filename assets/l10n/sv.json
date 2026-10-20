@@ -522,5 +522,14 @@
  "web.noCloud": "Webbversion under test: för närvarande finns bara kontot i den här webbläsaren.",
  "web.notReady": "Webbversionen är inte aktiv än. Använd appen i telefonen.",
  "web.proOnlyTitle": "Webbversion endast för Pro",
- "web.proOnly": "För att använda MyFleetManager i webbläsaren behövs Pro-versionen. Aktivera den i appen i telefonen och logga sedan in här med samma konto."
+ "web.proOnly": "För att använda MyFleetManager i webbläsaren behövs Pro-versionen. Aktivera den i appen i telefonen och logga sedan in här med samma konto.",
+ "maint.addPart": "Lägg till reservdel",
+ "maint.partName": "Reservdel eller arbete",
+ "maint.partCode": "Kod / märke",
+ "maint.cost": "Kostnad",
+ "maint.labor": "Arbete",
+ "maint.total": "Totalt",
+ "maint.spentYear": "Spenderat {year}: {amount}",
+ "maint.spentAll": "Totalt: {amount}",
+ "maint.notesHint": "Anteckningar (verkstad, garanti…)"
 }

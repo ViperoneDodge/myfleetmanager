@@ -522,5 +522,14 @@
  "web.noCloud": "Web版は試験中です。現在はこのブラウザのアカウントのみ利用できます。",
  "web.notReady": "Web版はまだ利用できません。スマートフォンのアプリをご利用ください。",
  "web.proOnlyTitle": "Web版はPro専用です",
- "web.proOnly": "ブラウザでMyFleetManagerを使うにはPro版が必要です。スマートフォンのアプリで有効にしてから、同じアカウントでここにログインしてください。"
+ "web.proOnly": "ブラウザでMyFleetManagerを使うにはPro版が必要です。スマートフォンのアプリで有効にしてから、同じアカウントでここにログインしてください。",
+ "maint.addPart": "部品を追加",
+ "maint.partName": "部品または作業",
+ "maint.partCode": "品番 / メーカー",
+ "maint.cost": "費用",
+ "maint.labor": "工賃",
+ "maint.total": "合計",
+ "maint.spentYear": "{year}年の支出：{amount}",
+ "maint.spentAll": "合計：{amount}",
+ "maint.notesHint": "メモ（整備工場、保証…）"
 }

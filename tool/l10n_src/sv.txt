@@ -522,3 +522,12 @@ Webbversion under test: för närvarande finns bara kontot i den här webbläsar
 Webbversionen är inte aktiv än. Använd appen i telefonen.
 Webbversion endast för Pro
 För att använda MyFleetManager i webbläsaren behövs Pro-versionen. Aktivera den i appen i telefonen och logga sedan in här med samma konto.
+Lägg till reservdel
+Reservdel eller arbete
+Kod / märke
+Kostnad
+Arbete
+Totalt
+Spenderat {year}: {amount}
+Totalt: {amount}
+Anteckningar (verkstad, garanti…)

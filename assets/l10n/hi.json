@@ -522,5 +522,14 @@
  "web.noCloud": "वेब संस्करण परीक्षण में: अभी केवल इस ब्राउज़र वाला खाता उपलब्ध है।",
  "web.notReady": "वेब संस्करण अभी सक्रिय नहीं है। फ़ोन ऐप का उपयोग करें।",
  "web.proOnlyTitle": "वेब संस्करण केवल Pro के लिए",
- "web.proOnly": "ब्राउज़र में MyFleetManager के लिए Pro संस्करण चाहिए। इसे फ़ोन ऐप में सक्रिय करें, फिर उसी खाते से यहाँ साइन इन करें।"
+ "web.proOnly": "ब्राउज़र में MyFleetManager के लिए Pro संस्करण चाहिए। इसे फ़ोन ऐप में सक्रिय करें, फिर उसी खाते से यहाँ साइन इन करें।",
+ "maint.addPart": "पुर्ज़ा जोड़ें",
+ "maint.partName": "पुर्ज़ा या काम",
+ "maint.partCode": "कोड / ब्रांड",
+ "maint.cost": "लागत",
+ "maint.labor": "मज़दूरी",
+ "maint.total": "कुल",
+ "maint.spentYear": "{year} में खर्च: {amount}",
+ "maint.spentAll": "कुल: {amount}",
+ "maint.notesHint": "नोट्स (गैराज, वारंटी…)"
 }

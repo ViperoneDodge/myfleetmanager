@@ -587,6 +587,8 @@ class VehicleDetailScreen extends StatelessWidget {
                 ),
                 if (v.maintenance.isEmpty)
                   _text(context, tr('maint.empty'), color: scheme.onSurfaceVariant),
+                if (_spent(v) case final spent?)
+                  _text(context, spent, color: scheme.onSurfaceVariant),
                 for (final m in v.maintenanceSorted)
                   OnRule(
                     center: true,
@@ -596,8 +598,17 @@ class VehicleDetailScreen extends StatelessWidget {
                         leading: Icon(Icons.build_circle_outlined, color: scheme.primary, size: 30),
                         title: Text(
                             '${fmtDate(m.date)}${m.km != null ? ' · ${fmtKm(m.km!)}' : ''}'),
-                        subtitle: Text(_maintSummary(m),
-                            maxLines: 3, overflow: TextOverflow.ellipsis),
+                        subtitle: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
+                          Expanded(
+                            child: Text(_maintSummary(m), maxLines: 4, overflow: TextOverflow.ellipsis),
+                          ),
+                          if (m.total != null) ...[
+                            const SizedBox(width: 8),
+                            Text(fmtMoney(m.total!),
+                                style: TextStyle(
+                                    fontSize: 15, fontWeight: FontWeight.w700, color: scheme.onSurface)),
+                          ],
+                        ]),
                         onTap: canEdit ? () => _openMaintenance(context, v, m) : null,
                       ),
                     ),
@@ -829,11 +840,17 @@ class VehicleDetailScreen extends StatelessWidget {
     ));
   }
 
+  static String? _spent(Vehicle v) {
+    final costs = [for (final m in v.maintenance) if (m.total != null) m];
+    if (costs.isEmpty) return null;
+    final year = DateTime.now().year;
+    final all = costs.fold<int>(0, (a, m) => a + m.total!);
+    final now = costs.where((m) => m.date.year == year).fold<int>(0, (a, m) => a + m.total!);
+    return '${tr('maint.spentYear', {'year': year, 'amount': fmtMoney(now)})}  ·  ${tr('maint.spentAll', {'amount': fmtMoney(all)})}';
+  }
+
   static String _maintSummary(MaintenanceRecord m) {
-    final parts = <String>[
-      ...maintenanceItems.where(m.items.contains).map(maintenanceItemLabel),
-    ];
-    final txt = parts.join(', ');
+    final txt = m.labels.join(', ');
     if (m.notes.isEmpty) return txt.isEmpty ? '—' : txt;
     return txt.isEmpty ? m.notes : '$txt\n${m.notes}';
   }

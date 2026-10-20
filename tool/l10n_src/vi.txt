@@ -522,3 +522,12 @@ Bản web đang thử nghiệm: hiện chỉ dùng được tài khoản trong t
 Phiên bản web chưa hoạt động. Hãy dùng ứng dụng trên điện thoại.
 Bản web chỉ dành cho Pro
 Để dùng MyFleetManager trên trình duyệt cần bản Pro. Hãy kích hoạt trong ứng dụng điện thoại, rồi đăng nhập tại đây bằng cùng tài khoản.
+Thêm phụ tùng
+Phụ tùng hoặc công việc
+Mã / hãng
+Chi phí
+Tiền công
+Tổng
+Đã chi năm {year}: {amount}
+Tổng: {amount}
+Ghi chú (garage, bảo hành…)
