@@ -34,14 +34,14 @@ async def run(p, engine):
         await pg.wait_for_timeout(4000)
         await pg.evaluate("() => { const p = document.querySelector('flt-semantics-placeholder'); if (p) p.click(); }")
         step = 'schermata di accesso'
-        await text_visible(pg, 'Le scadenze dei tuoi veicoli', 60000)
+        await text_visible(pg, 'La tua flotta nel palmo della mano', 60000)
         await pg.wait_for_timeout(1500)
         await pg.screenshot(path=str(OUT / f'{engine}-1-login.png'))
         step = 'ricarica'
         await pg.reload(wait_until='load')
         await pg.wait_for_timeout(4000)
         await pg.evaluate("() => { const p = document.querySelector('flt-semantics-placeholder'); if (p) p.click(); }")
-        await text_visible(pg, 'Le scadenze dei tuoi veicoli', 60000)
+        await text_visible(pg, 'La tua flotta nel palmo della mano', 60000)
         await pg.screenshot(path=str(OUT / f'{engine}-2-reload.png'))
         ok = True
     except Exception as e:

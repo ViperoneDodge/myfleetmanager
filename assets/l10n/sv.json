@@ -531,5 +531,6 @@
  "maint.total": "Totalt",
  "maint.spentYear": "Spenderat {year}: {amount}",
  "maint.spentAll": "Totalt: {amount}",
- "maint.notesHint": "Anteckningar (verkstad, garanti…)"
+ "maint.notesHint": "Anteckningar (verkstad, garanti…)",
+ "app.slogan": "Din fordonsflotta i din hand"
 }

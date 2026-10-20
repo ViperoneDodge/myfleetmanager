@@ -531,3 +531,4 @@ Total
 Pengeluaran {year}: {amount}
 Total: {amount}
 Catatan (bengkel, garansi…)
+Armada Anda dalam genggaman

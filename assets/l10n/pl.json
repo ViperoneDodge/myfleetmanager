@@ -531,5 +531,6 @@
  "maint.total": "Razem",
  "maint.spentYear": "Wydano w {year}: {amount}",
  "maint.spentAll": "Razem: {amount}",
- "maint.notesHint": "Notatki (warsztat, gwarancja…)"
+ "maint.notesHint": "Notatki (warsztat, gwarancja…)",
+ "app.slogan": "Twoja flota w zasięgu ręki"
 }

@@ -531,5 +531,6 @@
  "maint.total": "Totale",
  "maint.spentYear": "Speso nel {year}: {amount}",
  "maint.spentAll": "Totale: {amount}",
- "maint.notesHint": "Note (officina, garanzia…)"
+ "maint.notesHint": "Note (officina, garanzia…)",
+ "app.slogan": "La tua flotta nel palmo della mano"
 }

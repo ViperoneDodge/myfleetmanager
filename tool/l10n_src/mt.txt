@@ -531,3 +531,4 @@ Total
 Minfuq fl-{year}: {amount}
 Total: {amount}
 Noti (garaxx, garanzija…)
+Il-flotta tiegħek fil-pala ta' idek

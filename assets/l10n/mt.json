@@ -531,5 +531,6 @@
  "maint.total": "Total",
  "maint.spentYear": "Minfuq fl-{year}: {amount}",
  "maint.spentAll": "Total: {amount}",
- "maint.notesHint": "Noti (garaxx, garanzija…)"
+ "maint.notesHint": "Noti (garaxx, garanzija…)",
+ "app.slogan": "Il-flotta tiegħek fil-pala ta' idek"
 }

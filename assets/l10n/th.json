@@ -531,5 +531,6 @@
  "maint.total": "รวม",
  "maint.spentYear": "ใช้จ่ายปี {year}: {amount}",
  "maint.spentAll": "รวม: {amount}",
- "maint.notesHint": "บันทึก (อู่, การรับประกัน…)"
+ "maint.notesHint": "บันทึก (อู่, การรับประกัน…)",
+ "app.slogan": "ยานพาหนะของคุณ อยู่ในมือคุณ"
 }

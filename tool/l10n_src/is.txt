@@ -531,3 +531,4 @@ Samtals
 Eytt árið {year}: {amount}
 Samtals: {amount}
 Athugasemdir (verkstæði, ábyrgð…)
+Bílaflotinn þinn í lófa þínum

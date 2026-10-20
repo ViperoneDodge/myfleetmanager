@@ -531,3 +531,4 @@ Iš viso
 Išleista {year} m.: {amount}
 Iš viso: {amount}
 Pastabos (servisas, garantija…)
+Tavo automobilių parkas tavo delne

@@ -531,3 +531,4 @@ Totalt
 Spenderat {year}: {amount}
 Totalt: {amount}
 Anteckningar (verkstad, garanti…)
+Din fordonsflotta i din hand

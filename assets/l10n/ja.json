@@ -531,5 +531,6 @@
  "maint.total": "合計",
  "maint.spentYear": "{year}年の支出：{amount}",
  "maint.spentAll": "合計：{amount}",
- "maint.notesHint": "メモ（整備工場、保証…）"
+ "maint.notesHint": "メモ（整備工場、保証…）",
+ "app.slogan": "あなたの車両を手のひらに"
 }

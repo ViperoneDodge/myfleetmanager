@@ -531,5 +531,6 @@
  "maint.total": "Tổng",
  "maint.spentYear": "Đã chi năm {year}: {amount}",
  "maint.spentAll": "Tổng: {amount}",
- "maint.notesHint": "Ghi chú (garage, bảo hành…)"
+ "maint.notesHint": "Ghi chú (garage, bảo hành…)",
+ "app.slogan": "Đội xe của bạn trong lòng bàn tay"
 }

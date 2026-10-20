@@ -531,5 +531,6 @@
  "maint.total": "Общо",
  "maint.spentYear": "Похарчено през {year}: {amount}",
  "maint.spentAll": "Общо: {amount}",
- "maint.notesHint": "Бележки (сервиз, гаранция…)"
+ "maint.notesHint": "Бележки (сервиз, гаранция…)",
+ "app.slogan": "Твоят автопарк на една ръка разстояние"
 }

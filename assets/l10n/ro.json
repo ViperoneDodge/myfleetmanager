@@ -531,5 +531,6 @@
  "maint.total": "Total",
  "maint.spentYear": "Cheltuit în {year}: {amount}",
  "maint.spentAll": "Total: {amount}",
- "maint.notesHint": "Note (service, garanție…)"
+ "maint.notesHint": "Note (service, garanție…)",
+ "app.slogan": "Flota ta în palma mâinii"
 }

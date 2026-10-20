@@ -531,3 +531,4 @@ Totaal
 Uitgegeven in {year}: {amount}
 Totaal: {amount}
 Notities (garage, garantie…)
+Je wagenpark in de palm van je hand

@@ -181,10 +181,22 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: const TextStyle(
                           fontSize: 34, fontWeight: FontWeight.w700, color: Colors.white)),
                   const SizedBox(height: 4),
-                  Text(widget.upgrade ? tr('upgrade.subtitle') : tr('login.tagline'),
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(color: Colors.white70)),
-                  const SizedBox(height: 24),
+                  if (widget.upgrade)
+                    Text(tr('upgrade.subtitle'),
+                        textAlign: TextAlign.center, style: const TextStyle(color: Colors.white70))
+                  else ...[
+                    Text(tr('app.slogan'),
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(fontFamily: handFont, fontSize: 22, color: Colors.white)),
+                    const SizedBox(height: 14),
+                    Row(children: [
+                      _Feature(Icons.event_note, tr('tab.deadlines')),
+                      _Feature(Icons.description_outlined, tr('doc.title')),
+                      _Feature(Icons.build_circle_outlined, tr('maint.title')),
+                      _Feature(Icons.groups_outlined, tr('tab.family')),
+                    ]),
+                  ],
+                  const SizedBox(height: 20),
                   Card(
                     elevation: 10,
                     color: scheme.surface,
@@ -346,4 +358,27 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
+}
+
+class _Feature extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  const _Feature(this.icon, this.label);
+
+  @override
+  Widget build(BuildContext context) => Expanded(
+        child: Column(children: [
+          Container(
+            width: 46,
+            height: 46,
+            decoration: BoxDecoration(color: Colors.white.withValues(alpha: 0.14), shape: BoxShape.circle),
+            child: Icon(icon, color: Colors.white, size: 24),
+          ),
+          const SizedBox(height: 6),
+          Text(label,
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              style: const TextStyle(color: Colors.white70, fontSize: 12.5)),
+        ]),
+      );
 }

@@ -531,3 +531,4 @@ Totalt
 Brukt i {year}: {amount}
 Totalt: {amount}
 Notater (verksted, garanti…)
+Bilparken din i hånden

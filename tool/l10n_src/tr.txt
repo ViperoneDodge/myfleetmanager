@@ -531,3 +531,4 @@ Toplam
 {year} harcaması: {amount}
 Toplam: {amount}
 Notlar (servis, garanti…)
+Filon avucunun içinde

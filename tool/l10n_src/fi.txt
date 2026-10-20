@@ -531,3 +531,4 @@ Yhteensä
 Käytetty {year}: {amount}
 Yhteensä: {amount}
 Muistiinpanot (korjaamo, takuu…)
+Ajoneuvosi kämmenelläsi

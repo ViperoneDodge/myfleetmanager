@@ -531,5 +531,6 @@
  "maint.total": "Total",
  "maint.spentYear": "Dépensé en {year} : {amount}",
  "maint.spentAll": "Total : {amount}",
- "maint.notesHint": "Notes (garage, garantie…)"
+ "maint.notesHint": "Notes (garage, garantie…)",
+ "app.slogan": "Votre flotte dans le creux de la main"
 }

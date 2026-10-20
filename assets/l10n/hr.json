@@ -531,5 +531,6 @@
  "maint.total": "Ukupno",
  "maint.spentYear": "Potrošeno u {year}.: {amount}",
  "maint.spentAll": "Ukupno: {amount}",
- "maint.notesHint": "Bilješke (servis, jamstvo…)"
+ "maint.notesHint": "Bilješke (servis, jamstvo…)",
+ "app.slogan": "Tvoja flota na dlanu"
 }

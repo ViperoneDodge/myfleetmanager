@@ -531,5 +531,6 @@
  "maint.total": "Итого",
  "maint.spentYear": "Потрачено в {year}: {amount}",
  "maint.spentAll": "Итого: {amount}",
- "maint.notesHint": "Заметки (сервис, гарантия…)"
+ "maint.notesHint": "Заметки (сервис, гарантия…)",
+ "app.slogan": "Твой автопарк у тебя на ладони"
 }

@@ -531,5 +531,6 @@
  "maint.total": "Kokku",
  "maint.spentYear": "Kulutatud {year}: {amount}",
  "maint.spentAll": "Kokku: {amount}",
- "maint.notesHint": "Märkmed (töökoda, garantii…)"
+ "maint.notesHint": "Märkmed (töökoda, garantii…)",
+ "app.slogan": "Sinu sõidukipark sinu peopesal"
 }

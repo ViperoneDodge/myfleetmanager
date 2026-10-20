@@ -531,3 +531,4 @@ Skupaj
 Porabljeno v {year}: {amount}
 Skupaj: {amount}
 Opombe (servis, garancija…)
+Tvoj vozni park na dlani

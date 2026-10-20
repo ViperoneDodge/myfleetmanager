@@ -87,7 +87,7 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
                                     letterSpacing: 0.5)),
                           ),
                           const SizedBox(height: 6),
-                          Text(tr('intro.tagline'),
+                          Text(tr('app.slogan'),
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                   fontFamily: handFont, fontSize: 22, color: Colors.white70)),

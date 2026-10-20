@@ -531,3 +531,4 @@ Munkadíj
 {year}-ban költve: {amount}
 Összesen: {amount}
 Megjegyzés (szerviz, garancia…)
+A flottád a tenyeredben

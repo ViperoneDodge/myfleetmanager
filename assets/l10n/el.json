@@ -531,5 +531,6 @@
  "maint.total": "Σύνολο",
  "maint.spentYear": "Δαπάνες {year}: {amount}",
  "maint.spentAll": "Σύνολο: {amount}",
- "maint.notesHint": "Σημειώσεις (συνεργείο, εγγύηση…)"
+ "maint.notesHint": "Σημειώσεις (συνεργείο, εγγύηση…)",
+ "app.slogan": "Ο στόλος σου στην παλάμη του χεριού σου"
 }

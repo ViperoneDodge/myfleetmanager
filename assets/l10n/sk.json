@@ -531,5 +531,6 @@
  "maint.total": "Spolu",
  "maint.spentYear": "Minuté v roku {year}: {amount}",
  "maint.spentAll": "Spolu: {amount}",
- "maint.notesHint": "Poznámky (servis, záruka…)"
+ "maint.notesHint": "Poznámky (servis, záruka…)",
+ "app.slogan": "Váš vozový park na dlani"
 }

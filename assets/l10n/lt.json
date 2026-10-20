@@ -531,5 +531,6 @@
  "maint.total": "Iš viso",
  "maint.spentYear": "Išleista {year} m.: {amount}",
  "maint.spentAll": "Iš viso: {amount}",
- "maint.notesHint": "Pastabos (servisas, garantija…)"
+ "maint.notesHint": "Pastabos (servisas, garantija…)",
+ "app.slogan": "Tavo automobilių parkas tavo delne"
 }

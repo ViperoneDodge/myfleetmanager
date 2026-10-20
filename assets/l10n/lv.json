@@ -531,5 +531,6 @@
  "maint.total": "Kopā",
  "maint.spentYear": "Iztērēts {year}. gadā: {amount}",
  "maint.spentAll": "Kopā: {amount}",
- "maint.notesHint": "Piezīmes (serviss, garantija…)"
+ "maint.notesHint": "Piezīmes (serviss, garantija…)",
+ "app.slogan": "Tavs autoparks tavā plaukstā"
 }

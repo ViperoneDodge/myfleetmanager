@@ -531,3 +531,4 @@ Tổng
 Đã chi năm {year}: {amount}
 Tổng: {amount}
 Ghi chú (garage, bảo hành…)
+Đội xe của bạn trong lòng bàn tay

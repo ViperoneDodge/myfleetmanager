@@ -531,5 +531,6 @@
  "maint.total": "Samtals",
  "maint.spentYear": "Eytt árið {year}: {amount}",
  "maint.spentAll": "Samtals: {amount}",
- "maint.notesHint": "Athugasemdir (verkstæði, ábyrgð…)"
+ "maint.notesHint": "Athugasemdir (verkstæði, ábyrgð…)",
+ "app.slogan": "Bílaflotinn þinn í lófa þínum"
 }

@@ -531,5 +531,6 @@
  "maint.total": "कुल",
  "maint.spentYear": "{year} में खर्च: {amount}",
  "maint.spentAll": "कुल: {amount}",
- "maint.notesHint": "नोट्स (गैराज, वारंटी…)"
+ "maint.notesHint": "नोट्स (गैराज, वारंटी…)",
+ "app.slogan": "आपका वाहन बेड़ा, आपकी हथेली में"
 }

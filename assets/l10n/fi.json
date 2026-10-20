@@ -531,5 +531,6 @@
  "maint.total": "Yhteensä",
  "maint.spentYear": "Käytetty {year}: {amount}",
  "maint.spentAll": "Yhteensä: {amount}",
- "maint.notesHint": "Muistiinpanot (korjaamo, takuu…)"
+ "maint.notesHint": "Muistiinpanot (korjaamo, takuu…)",
+ "app.slogan": "Ajoneuvosi kämmenelläsi"
 }

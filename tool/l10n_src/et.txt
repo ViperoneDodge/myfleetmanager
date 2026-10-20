@@ -531,3 +531,4 @@ Kokku
 Kulutatud {year}: {amount}
 Kokku: {amount}
 Märkmed (töökoda, garantii…)
+Sinu sõidukipark sinu peopesal

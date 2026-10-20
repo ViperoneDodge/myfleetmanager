@@ -531,5 +531,6 @@
  "maint.total": "I alt",
  "maint.spentYear": "Brugt i {year}: {amount}",
  "maint.spentAll": "I alt: {amount}",
- "maint.notesHint": "Noter (værksted, garanti…)"
+ "maint.notesHint": "Noter (værksted, garanti…)",
+ "app.slogan": "Din vognpark i din hånd"
 }

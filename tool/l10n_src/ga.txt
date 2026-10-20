@@ -531,3 +531,4 @@ Iomlán
 Caite in {year}: {amount}
 Iomlán: {amount}
 Nótaí (garáiste, baránta…)
+Do chabhlach i mbos do láimhe

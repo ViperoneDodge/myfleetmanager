@@ -531,5 +531,6 @@
  "maint.total": "Toplam",
  "maint.spentYear": "{year} harcaması: {amount}",
  "maint.spentAll": "Toplam: {amount}",
- "maint.notesHint": "Notlar (servis, garanti…)"
+ "maint.notesHint": "Notlar (servis, garanti…)",
+ "app.slogan": "Filon avucunun içinde"
 }

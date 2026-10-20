@@ -531,5 +531,6 @@
  "maint.total": "Totalt",
  "maint.spentYear": "Brukt i {year}: {amount}",
  "maint.spentAll": "Totalt: {amount}",
- "maint.notesHint": "Notater (verksted, garanti…)"
+ "maint.notesHint": "Notater (verksted, garanti…)",
+ "app.slogan": "Bilparken din i hånden"
 }

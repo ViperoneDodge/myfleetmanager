@@ -531,3 +531,4 @@ Kopā
 Iztērēts {year}. gadā: {amount}
 Kopā: {amount}
 Piezīmes (serviss, garantija…)
+Tavs autoparks tavā plaukstā

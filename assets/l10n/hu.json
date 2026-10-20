@@ -531,5 +531,6 @@
  "maint.total": "Összesen",
  "maint.spentYear": "{year}-ban költve: {amount}",
  "maint.spentAll": "Összesen: {amount}",
- "maint.notesHint": "Megjegyzés (szerviz, garancia…)"
+ "maint.notesHint": "Megjegyzés (szerviz, garancia…)",
+ "app.slogan": "A flottád a tenyeredben"
 }

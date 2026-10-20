@@ -531,3 +531,4 @@ maint.total
 maint.spentYear
 maint.spentAll
 maint.notesHint
+app.slogan
