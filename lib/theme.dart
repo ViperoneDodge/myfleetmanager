@@ -139,6 +139,11 @@ class NotebookColors extends ThemeExtension<NotebookColors> {
 
 const String handFont = 'PatrickHand';
 
+final Map<String, ThemeData> _themeCache = {};
+
+ThemeData cachedTheme(ThemeSettings s, Brightness b) =>
+    _themeCache.putIfAbsent('${s.pal.seed.toARGB32()}|${s.paper.name}|${b.name}', () => buildTheme(s, b));
+
 ThemeData buildTheme(ThemeSettings s, Brightness b) {
   final seed = s.pal.seed;
   final dark = b == Brightness.dark;
@@ -174,6 +179,8 @@ ThemeData buildTheme(ThemeSettings s, Brightness b) {
       systemOverlayStyle: SystemUiOverlayStyle.light,
       backgroundColor: Colors.transparent,
       foregroundColor: Colors.white,
+      iconTheme: IconThemeData(color: Colors.white),
+      actionsIconTheme: IconThemeData(color: Colors.white),
       elevation: 0,
       scrolledUnderElevation: 0,
       centerTitle: false,

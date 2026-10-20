@@ -139,8 +139,8 @@ class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
             GlobalCupertinoLocalizations.delegate,
           ],
           themeMode: t.mode,
-          theme: buildTheme(t, Brightness.light),
-          darkTheme: buildTheme(t, Brightness.dark),
+          theme: cachedTheme(t, Brightness.light),
+          darkTheme: cachedTheme(t, Brightness.dark),
           builder: (context, child) => ScreenScale(child: child ?? const SizedBox()),
           home: AnimatedSwitcher(
             duration: const Duration(milliseconds: 500),
