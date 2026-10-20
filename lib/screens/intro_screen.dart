@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../l10n.dart';
-import '../theme.dart';
+import '../widgets/common.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
@@ -87,10 +86,8 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
                                     letterSpacing: 0.5)),
                           ),
                           const SizedBox(height: 6),
-                          Text(tr('app.slogan'),
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                  fontFamily: handFont, fontSize: 22, color: Colors.white70)),
+                          const SizedBox(height: 10),
+                          const Slogan(size: 40),
                         ]),
                       ),
                     ),

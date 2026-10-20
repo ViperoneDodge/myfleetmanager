@@ -55,6 +55,50 @@ int? parseCents(String text) {
   return v == null ? null : (v * 100).round();
 }
 
+String balancedLines(String text) {
+  final words = text.split(' ');
+  if (words.length < 3) return text;
+  var best = 1;
+  var bestDiff = text.length;
+  for (var i = 1; i < words.length; i++) {
+    final a = words.take(i).join(' ').length;
+    final b = words.skip(i).join(' ').length;
+    if ((a - b).abs() < bestDiff) {
+      bestDiff = (a - b).abs();
+      best = i;
+    }
+  }
+  return '${words.take(best).join(' ')}\n${words.skip(best).join(' ')}';
+}
+
+class Slogan extends StatelessWidget {
+  final double size;
+  const Slogan({super.key, this.size = 36});
+
+  @override
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+        child: Transform.rotate(
+          angle: -0.1,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              balancedLines(tr('app.slogan')),
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              style: TextStyle(
+                fontFamily: 'LobsterTwo',
+                fontSize: size,
+                height: 1.05,
+                color: const Color(0xFFFFD54F),
+                shadows: const [Shadow(color: Color(0x99000000), offset: Offset(2, 3))],
+              ),
+            ),
+          ),
+        ),
+      );
+}
+
 int daysUntil(DateTime d) {
   final now = DateTime.now();
   final today = DateTime(now.year, now.month, now.day);

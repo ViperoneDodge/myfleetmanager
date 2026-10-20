@@ -185,10 +185,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     Text(tr('upgrade.subtitle'),
                         textAlign: TextAlign.center, style: const TextStyle(color: Colors.white70))
                   else ...[
-                    Text(tr('app.slogan'),
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(fontFamily: handFont, fontSize: 22, color: Colors.white)),
-                    const SizedBox(height: 14),
+                    const SizedBox(height: 8),
+                    const Slogan(),
+                    const SizedBox(height: 18),
                     Row(children: [
                       _Feature(Icons.event_note, tr('tab.deadlines')),
                       _Feature(Icons.description_outlined, tr('doc.title')),

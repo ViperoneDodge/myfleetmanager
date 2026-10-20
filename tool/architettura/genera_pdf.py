@@ -349,7 +349,7 @@ files = [
     ['screens/intro_screen.dart', righe('screens/intro_screen.dart'), 'Animazione iniziale con logo e slogan'],
     ['screens/photo_crop_screen.dart', righe('screens/photo_crop_screen.dart'), 'Ritaglio della foto del veicolo'],
     ['screens/admin_screen.dart', righe('screens/admin_screen.dart'), 'Pannello di amministrazione (solo account amministratore)'],
-    ['widgets/common.dart', righe('widgets/common.dart'), 'Componenti comuni: card del veicolo, avvisi, stella dei preferiti, stati delle scadenze, formato e lettura degli importi'],
+    ['widgets/common.dart', righe('widgets/common.dart'), 'Componenti comuni: card del veicolo, avvisi, stella dei preferiti, stati delle scadenze, formato e lettura degli importi, slogan in corsivo anni 50 (Lobster Two) su due righe bilanciate'],
     ['widgets/ruled.dart', righe('widgets/ruled.dart'), 'Allineamento dei testi alle righe del quaderno'],
     ['widgets/group_qr.dart', righe('widgets/group_qr.dart'), 'QR code di invito con logo, scansione e lettura da immagine'],
     ['widgets/ocr_review.dart', righe('widgets/ocr_review.dart'), 'Finestra «Dati trovati», testo letto e «Assegna a…»'],
