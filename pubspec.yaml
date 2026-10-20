@@ -62,3 +62,6 @@ flutter:
     - family: LobsterTwo
       fonts:
         - asset: assets/fonts/LobsterTwo-Regular.ttf
+    - family: Lobster
+      fonts:
+        - asset: assets/fonts/Lobster-Regular.ttf

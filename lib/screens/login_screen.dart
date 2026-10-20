@@ -176,10 +176,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   const SizedBox(height: 8),
-                  Text('MyFleetManager',
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          fontSize: 34, fontWeight: FontWeight.w700, color: Colors.white)),
+                  const AppName(),
                   const SizedBox(height: 4),
                   if (widget.upgrade)
                     Text(tr('upgrade.subtitle'),

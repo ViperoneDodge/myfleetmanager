@@ -95,6 +95,7 @@ class PdfExport {
 
   static Future<Uint8List> _build(String title, List<Vehicle> vehicles, {required bool flowAll}) async {
     final theme = await _theme();
+    final brand = await _asset('Lobster-Regular.ttf');
     final images = <String, pw.ImageProvider?>{};
     for (final v in vehicles) {
       images[v.id] = await _image(v);
@@ -107,7 +108,7 @@ class PdfExport {
       pw.Row(crossAxisAlignment: pw.CrossAxisAlignment.end, children: [
         pw.Expanded(
           child: pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
-            pw.Text('MyFleetManager', style: pw.TextStyle(fontSize: 10, color: grey)),
+            pw.Text('MyFleetManager', style: pw.TextStyle(font: brand, fontSize: 12, color: grey)),
             pw.Text(title, style: pw.TextStyle(fontSize: 22, fontWeight: pw.FontWeight.bold, color: accent)),
           ]),
         ),

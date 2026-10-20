@@ -75,17 +75,7 @@ class _IntroScreenState extends State<IntroScreen> with SingleTickerProviderStat
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 24),
                         child: Column(mainAxisSize: MainAxisSize.min, children: [
-                          const FittedBox(
-                            fit: BoxFit.scaleDown,
-                            child: Text('MyFleetManager',
-                                maxLines: 1,
-                                style: TextStyle(
-                                    fontSize: 36,
-                                    fontWeight: FontWeight.w800,
-                                    color: Colors.white,
-                                    letterSpacing: 0.5)),
-                          ),
-                          const SizedBox(height: 6),
+                          const AppName(size: 46),
                           const SizedBox(height: 10),
                           const Slogan(size: 40),
                         ]),

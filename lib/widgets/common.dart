@@ -71,6 +71,26 @@ String balancedLines(String text) {
   return '${words.take(best).join(' ')}\n${words.skip(best).join(' ')}';
 }
 
+class AppName extends StatelessWidget {
+  final double size;
+  const AppName({super.key, this.size = 40});
+
+  @override
+  Widget build(BuildContext context) => FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Text(
+          'MyFleetManager',
+          maxLines: 1,
+          style: TextStyle(
+            fontFamily: 'Lobster',
+            fontSize: size,
+            color: Colors.white,
+            shadows: const [Shadow(color: Color(0x66000000), offset: Offset(2, 3))],
+          ),
+        ),
+      );
+}
+
 class Slogan extends StatelessWidget {
   final double size;
   const Slogan({super.key, this.size = 36});
