@@ -534,5 +534,14 @@
  "maint.notesHint": "Muistiinpanot (korjaamo, takuu…)",
  "app.slogan": "Ajoneuvosi kämmenelläsi",
  "pdf.chooseGroups": "Mitä haluat viedä?",
- "pdf.allGroups": "Kaikki ryhmät"
+ "pdf.allGroups": "Kaikki ryhmät",
+ "unit.cv": "hv",
+ "tech.powerCv": "Teho (hv)",
+ "tech.powerName": "Teho",
+ "units.title": "Mittayksiköt",
+ "units.power": "Teho",
+ "units.distance": "Etäisyydet",
+ "units.currency": "Valuutta",
+ "units.currencyAuto": "Automaattinen ({currency})",
+ "maint.miles": "Mailit"
 }

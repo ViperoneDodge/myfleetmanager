@@ -534,5 +534,14 @@
  "maint.notesHint": "Anteckningar (verkstad, garanti…)",
  "app.slogan": "Din fordonsflotta i din hand",
  "pdf.chooseGroups": "Vad vill du exportera?",
- "pdf.allGroups": "Alla grupper"
+ "pdf.allGroups": "Alla grupper",
+ "unit.cv": "hk",
+ "tech.powerCv": "Effekt (hk)",
+ "tech.powerName": "Effekt",
+ "units.title": "Måttenheter",
+ "units.power": "Effekt",
+ "units.distance": "Avstånd",
+ "units.currency": "Valuta",
+ "units.currencyAuto": "Automatisk ({currency})",
+ "maint.miles": "Miles"
 }

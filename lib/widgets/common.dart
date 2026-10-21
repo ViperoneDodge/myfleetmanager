@@ -1,59 +1,14 @@
-import 'dart:ui' as ui;
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../l10n.dart';
 import '../models.dart';
 
+export '../units.dart';
+
 final DateFormat dateFmt = DateFormat('dd/MM/yyyy');
 
 String fmtDate(DateTime? d) => d == null ? '—' : dateFmt.format(d);
-
-String fmtKm(int km) {
-  final s = km.toString();
-  final b = StringBuffer();
-  for (var i = 0; i < s.length; i++) {
-    if (i > 0 && (s.length - i) % 3 == 0) b.write('.');
-    b.write(s[i]);
-  }
-  return '$b km';
-}
-
-NumberFormat? _money;
-
-NumberFormat get moneyFormat {
-  final f = _money;
-  if (f != null) return f;
-  final device = ui.PlatformDispatcher.instance.locale.toString();
-  final locale = Intl.verifiedLocale(device, NumberFormat.localeExists, onFailure: (_) => 'it_IT')!;
-  return _money = NumberFormat.simpleCurrency(locale: locale);
-}
-
-void setMoneyLocale(String locale) => _money = NumberFormat.simpleCurrency(locale: locale);
-
-String fmtMoney(int cents) => moneyFormat.format(cents / 100);
-
-String centsText(int? cents) {
-  if (cents == null) return '';
-  final f = NumberFormat.decimalPatternDigits(locale: moneyFormat.locale, decimalDigits: 2)..turnOffGrouping();
-  return f.format(cents / 100);
-}
-
-int? parseCents(String text) {
-  var t = text.replaceAll(RegExp(r'[^0-9.,]'), '');
-  if (t.isEmpty) return null;
-  final dot = t.lastIndexOf('.');
-  final comma = t.lastIndexOf(',');
-  final sep = dot > comma ? dot : comma;
-  if (sep >= 0 && t.length - sep - 1 <= 2) {
-    t = '${t.substring(0, sep).replaceAll(RegExp(r'[.,]'), '')}.${t.substring(sep + 1)}';
-  } else {
-    t = t.replaceAll(RegExp(r'[.,]'), '');
-  }
-  final v = double.tryParse(t);
-  return v == null ? null : (v * 100).round();
-}
 
 String balancedLines(String text) {
   final words = text.split(' ');

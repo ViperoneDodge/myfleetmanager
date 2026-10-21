@@ -534,3 +534,12 @@ Opombe (servis, garancija…)
 Tvoj vozni park na dlani
 Kaj želiš izvoziti?
 Vse skupine
+KM
+Moč (KM)
+Moč
+Merske enote
+Moč
+Razdalje
+Valuta
+Samodejno ({currency})
+Milje

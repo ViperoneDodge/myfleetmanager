@@ -534,5 +534,14 @@
  "maint.notesHint": "Noti (garaxx, garanzija…)",
  "app.slogan": "Il-flotta tiegħek fil-pala ta' idek",
  "pdf.chooseGroups": "X'trid tesporta?",
- "pdf.allGroups": "Il-gruppi kollha"
+ "pdf.allGroups": "Il-gruppi kollha",
+ "unit.cv": "hp",
+ "tech.powerCv": "Qawwa (hp)",
+ "tech.powerName": "Qawwa",
+ "units.title": "Unitajiet tal-kejl",
+ "units.power": "Qawwa",
+ "units.distance": "Distanzi",
+ "units.currency": "Munita",
+ "units.currencyAuto": "Awtomatika ({currency})",
+ "maint.miles": "Mili"
 }

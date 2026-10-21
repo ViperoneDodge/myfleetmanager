@@ -534,5 +534,14 @@
  "maint.notesHint": "Nótaí (garáiste, baránta…)",
  "app.slogan": "Do chabhlach i mbos do láimhe",
  "pdf.chooseGroups": "Cad ba mhaith leat a easpórtáil?",
- "pdf.allGroups": "Gach grúpa"
+ "pdf.allGroups": "Gach grúpa",
+ "unit.cv": "hp",
+ "tech.powerCv": "Cumhacht (hp)",
+ "tech.powerName": "Cumhacht",
+ "units.title": "Aonaid tomhais",
+ "units.power": "Cumhacht",
+ "units.distance": "Achair",
+ "units.currency": "Airgeadra",
+ "units.currencyAuto": "Uathoibríoch ({currency})",
+ "maint.miles": "Mílte"
 }

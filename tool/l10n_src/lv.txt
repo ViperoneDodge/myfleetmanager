@@ -534,3 +534,12 @@ Piezīmes (serviss, garantija…)
 Tavs autoparks tavā plaukstā
 Ko vēlies eksportēt?
 Visas grupas
+ZS
+Jauda (ZS)
+Jauda
+Mērvienības
+Jauda
+Attālumi
+Valūta
+Automātiski ({currency})
+Jūdzes

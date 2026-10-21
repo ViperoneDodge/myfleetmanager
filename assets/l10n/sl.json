@@ -534,5 +534,14 @@
  "maint.notesHint": "Opombe (servis, garancija…)",
  "app.slogan": "Tvoj vozni park na dlani",
  "pdf.chooseGroups": "Kaj želiš izvoziti?",
- "pdf.allGroups": "Vse skupine"
+ "pdf.allGroups": "Vse skupine",
+ "unit.cv": "KM",
+ "tech.powerCv": "Moč (KM)",
+ "tech.powerName": "Moč",
+ "units.title": "Merske enote",
+ "units.power": "Moč",
+ "units.distance": "Razdalje",
+ "units.currency": "Valuta",
+ "units.currencyAuto": "Samodejno ({currency})",
+ "maint.miles": "Milje"
 }

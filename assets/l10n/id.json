@@ -534,5 +534,14 @@
  "maint.notesHint": "Catatan (bengkel, garansi…)",
  "app.slogan": "Armada Anda dalam genggaman",
  "pdf.chooseGroups": "Apa yang ingin diekspor?",
- "pdf.allGroups": "Semua grup"
+ "pdf.allGroups": "Semua grup",
+ "unit.cv": "HP",
+ "tech.powerCv": "Tenaga (HP)",
+ "tech.powerName": "Tenaga",
+ "units.title": "Satuan ukuran",
+ "units.power": "Tenaga",
+ "units.distance": "Jarak",
+ "units.currency": "Mata uang",
+ "units.currencyAuto": "Otomatis ({currency})",
+ "maint.miles": "Mil"
 }

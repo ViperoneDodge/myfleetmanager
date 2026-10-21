@@ -534,5 +534,14 @@
  "maint.notesHint": "Note (officina, garanzia…)",
  "app.slogan": "La tua flotta nel palmo della mano",
  "pdf.chooseGroups": "Cosa vuoi esportare?",
- "pdf.allGroups": "Tutti i gruppi"
+ "pdf.allGroups": "Tutti i gruppi",
+ "unit.cv": "CV",
+ "tech.powerCv": "Potenza (CV)",
+ "tech.powerName": "Potenza",
+ "units.title": "Unità di misura",
+ "units.power": "Potenza",
+ "units.distance": "Distanze",
+ "units.currency": "Valuta",
+ "units.currencyAuto": "Automatica ({currency})",
+ "maint.miles": "Miglia"
 }

@@ -534,3 +534,12 @@ Notater (verksted, garanti…)
 Bilparken din i hånden
 Hva vil du eksportere?
 Alle grupper
+hk
+Effekt (hk)
+Effekt
+Måleenheter
+Effekt
+Avstander
+Valuta
+Automatisk ({currency})
+Miles

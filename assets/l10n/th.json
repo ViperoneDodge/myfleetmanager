@@ -534,5 +534,14 @@
  "maint.notesHint": "บันทึก (อู่, การรับประกัน…)",
  "app.slogan": "ยานพาหนะของคุณ อยู่ในมือคุณ",
  "pdf.chooseGroups": "ต้องการส่งออกอะไร",
- "pdf.allGroups": "ทุกกลุ่ม"
+ "pdf.allGroups": "ทุกกลุ่ม",
+ "unit.cv": "แรงม้า",
+ "tech.powerCv": "กำลัง (แรงม้า)",
+ "tech.powerName": "กำลัง",
+ "units.title": "หน่วยวัด",
+ "units.power": "กำลัง",
+ "units.distance": "ระยะทาง",
+ "units.currency": "สกุลเงิน",
+ "units.currencyAuto": "อัตโนมัติ ({currency})",
+ "maint.miles": "ไมล์"
 }

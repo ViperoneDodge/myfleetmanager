@@ -534,3 +534,12 @@ Noter (værksted, garanti…)
 Din vognpark i din hånd
 Hvad vil du eksportere?
 Alle grupper
+hk
+Effekt (hk)
+Effekt
+Måleenheder
+Effekt
+Afstande
+Valuta
+Automatisk ({currency})
+Miles

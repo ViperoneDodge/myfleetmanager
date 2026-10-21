@@ -534,3 +534,12 @@ Muistiinpanot (korjaamo, takuu…)
 Ajoneuvosi kämmenelläsi
 Mitä haluat viedä?
 Kaikki ryhmät
+hv
+Teho (hv)
+Teho
+Mittayksiköt
+Teho
+Etäisyydet
+Valuutta
+Automaattinen ({currency})
+Mailit

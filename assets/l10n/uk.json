@@ -534,5 +534,14 @@
  "maint.notesHint": "Нотатки (сервіс, гарантія…)",
  "app.slogan": "Твій автопарк у тебе на долоні",
  "pdf.chooseGroups": "Що ви хочете експортувати?",
- "pdf.allGroups": "Усі групи"
+ "pdf.allGroups": "Усі групи",
+ "unit.cv": "к.с.",
+ "tech.powerCv": "Потужність (к.с.)",
+ "tech.powerName": "Потужність",
+ "units.title": "Одиниці виміру",
+ "units.power": "Потужність",
+ "units.distance": "Відстані",
+ "units.currency": "Валюта",
+ "units.currencyAuto": "Автоматично ({currency})",
+ "maint.miles": "Милі"
 }

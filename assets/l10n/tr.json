@@ -534,5 +534,14 @@
  "maint.notesHint": "Notlar (servis, garanti…)",
  "app.slogan": "Filon avucunun içinde",
  "pdf.chooseGroups": "Neyi dışa aktarmak istiyorsun?",
- "pdf.allGroups": "Tüm gruplar"
+ "pdf.allGroups": "Tüm gruplar",
+ "unit.cv": "BG",
+ "tech.powerCv": "Güç (BG)",
+ "tech.powerName": "Güç",
+ "units.title": "Ölçü birimleri",
+ "units.power": "Güç",
+ "units.distance": "Mesafeler",
+ "units.currency": "Para birimi",
+ "units.currencyAuto": "Otomatik ({currency})",
+ "maint.miles": "Mil"
 }

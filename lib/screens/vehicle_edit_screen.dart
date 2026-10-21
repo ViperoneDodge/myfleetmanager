@@ -33,6 +33,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     if (TyreSet.parse(v.tyres).isEmpty) _tyreSet(TyreSet()),
   ];
   late final TextEditingController _power = TextEditingController(text: v.powerKw);
+  late final TextEditingController _powerCv = TextEditingController(text: kwToCvText(v.powerKw));
   late final TextEditingController _cc = TextEditingController(text: v.engineCc);
   late final TextEditingController _oil = TextEditingController(text: v.oil);
   late final TextEditingController _battery = TextEditingController(text: v.battery);
@@ -75,6 +76,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
       s.sizes.dispose();
     }
     _power.dispose();
+    _powerCv.dispose();
     _cc.dispose();
     _oil.dispose();
     _battery.dispose();
@@ -394,10 +396,17 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
               ),
             ),
             Row(children: [
-              Expanded(child: _techField(_power, tr('tech.power'), Icons.speed, number: true)),
+              Expanded(
+                child: _techField(_power, tr('tech.power'), Icons.speed,
+                    number: true, onChanged: (t) => _powerCv.text = kwToCvText(t)),
+              ),
               const SizedBox(width: 10),
-              Expanded(child: _techField(_cc, tr('tech.engine'), Icons.settings_outlined, number: true)),
+              Expanded(
+                child: _techField(_powerCv, tr('tech.powerCv'), Icons.speed,
+                    number: true, onChanged: (t) => _power.text = cvToKwText(t)),
+              ),
             ]),
+            _techField(_cc, tr('tech.engine'), Icons.settings_outlined, number: true),
             _tyreEditor(scheme),
             _techField(_oil, tr('tech.oil'), Icons.oil_barrel_outlined, hint: tr('tech.oilHint')),
             _techField(_battery, tr('tech.battery'), Icons.battery_charging_full_outlined,
@@ -574,11 +583,12 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   }
 
   Widget _techField(TextEditingController c, String label, IconData icon,
-          {bool caps = false, bool number = false, String? hint, int lines = 1}) =>
+          {bool caps = false, bool number = false, String? hint, int lines = 1, ValueChanged<String>? onChanged}) =>
       Padding(
         padding: const EdgeInsets.only(bottom: 10),
         child: TextField(
           controller: c,
+          onChanged: onChanged,
           minLines: 1,
           maxLines: lines,
           textCapitalization: caps ? TextCapitalization.characters : TextCapitalization.none,

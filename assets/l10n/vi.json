@@ -534,5 +534,14 @@
  "maint.notesHint": "Ghi chú (garage, bảo hành…)",
  "app.slogan": "Đội xe của bạn trong lòng bàn tay",
  "pdf.chooseGroups": "Bạn muốn xuất gì?",
- "pdf.allGroups": "Tất cả nhóm"
+ "pdf.allGroups": "Tất cả nhóm",
+ "unit.cv": "mã lực",
+ "tech.powerCv": "Công suất (mã lực)",
+ "tech.powerName": "Công suất",
+ "units.title": "Đơn vị đo",
+ "units.power": "Công suất",
+ "units.distance": "Khoảng cách",
+ "units.currency": "Tiền tệ",
+ "units.currencyAuto": "Tự động ({currency})",
+ "maint.miles": "Dặm"
 }

@@ -534,5 +534,14 @@
  "maint.notesHint": "Poznámky (servis, záruka…)",
  "app.slogan": "Váš vozový park v dlani",
  "pdf.chooseGroups": "Co chcete exportovat?",
- "pdf.allGroups": "Všechny skupiny"
+ "pdf.allGroups": "Všechny skupiny",
+ "unit.cv": "k",
+ "tech.powerCv": "Výkon (k)",
+ "tech.powerName": "Výkon",
+ "units.title": "Jednotky",
+ "units.power": "Výkon",
+ "units.distance": "Vzdálenosti",
+ "units.currency": "Měna",
+ "units.currencyAuto": "Automaticky ({currency})",
+ "maint.miles": "Míle"
 }

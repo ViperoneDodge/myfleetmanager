@@ -534,5 +534,14 @@
  "maint.notesHint": "Athugasemdir (verkstæði, ábyrgð…)",
  "app.slogan": "Bílaflotinn þinn í lófa þínum",
  "pdf.chooseGroups": "Hvað viltu flytja út?",
- "pdf.allGroups": "Allir hópar"
+ "pdf.allGroups": "Allir hópar",
+ "unit.cv": "hö",
+ "tech.powerCv": "Afl (hö)",
+ "tech.powerName": "Afl",
+ "units.title": "Mælieiningar",
+ "units.power": "Afl",
+ "units.distance": "Vegalengdir",
+ "units.currency": "Gjaldmiðill",
+ "units.currencyAuto": "Sjálfvirkt ({currency})",
+ "maint.miles": "Mílur"
 }

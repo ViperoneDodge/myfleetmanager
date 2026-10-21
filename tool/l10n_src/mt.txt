@@ -534,3 +534,12 @@ Noti (garaxx, garanzija…)
 Il-flotta tiegħek fil-pala ta' idek
 X'trid tesporta?
 Il-gruppi kollha
+hp
+Qawwa (hp)
+Qawwa
+Unitajiet tal-kejl
+Qawwa
+Distanzi
+Munita
+Awtomatika ({currency})
+Mili

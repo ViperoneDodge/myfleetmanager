@@ -534,3 +534,12 @@ Notities (garage, garantie…)
 Je wagenpark in de palm van je hand
 Wat wil je exporteren?
 Alle groepen
+pk
+Vermogen (pk)
+Vermogen
+Meeteenheden
+Vermogen
+Afstanden
+Valuta
+Automatisch ({currency})
+Mijlen

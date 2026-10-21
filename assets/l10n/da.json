@@ -534,5 +534,14 @@
  "maint.notesHint": "Noter (værksted, garanti…)",
  "app.slogan": "Din vognpark i din hånd",
  "pdf.chooseGroups": "Hvad vil du eksportere?",
- "pdf.allGroups": "Alle grupper"
+ "pdf.allGroups": "Alle grupper",
+ "unit.cv": "hk",
+ "tech.powerCv": "Effekt (hk)",
+ "tech.powerName": "Effekt",
+ "units.title": "Måleenheder",
+ "units.power": "Effekt",
+ "units.distance": "Afstande",
+ "units.currency": "Valuta",
+ "units.currencyAuto": "Automatisk ({currency})",
+ "maint.miles": "Miles"
 }

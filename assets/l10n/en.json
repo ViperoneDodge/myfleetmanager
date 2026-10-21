@@ -534,5 +534,14 @@
  "maint.notesHint": "Notes (garage, warranty…)",
  "app.slogan": "Your fleet in the palm of your hand",
  "pdf.chooseGroups": "What do you want to export?",
- "pdf.allGroups": "All groups"
+ "pdf.allGroups": "All groups",
+ "unit.cv": "hp",
+ "tech.powerCv": "Power (hp)",
+ "tech.powerName": "Power",
+ "units.title": "Units of measure",
+ "units.power": "Power",
+ "units.distance": "Distances",
+ "units.currency": "Currency",
+ "units.currencyAuto": "Automatic ({currency})",
+ "maint.miles": "Miles"
 }

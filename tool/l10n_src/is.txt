@@ -534,3 +534,12 @@ Athugasemdir (verkstæði, ábyrgð…)
 Bílaflotinn þinn í lófa þínum
 Hvað viltu flytja út?
 Allir hópar
+hö
+Afl (hö)
+Afl
+Mælieiningar
+Afl
+Vegalengdir
+Gjaldmiðill
+Sjálfvirkt ({currency})
+Mílur

@@ -534,5 +534,14 @@
  "maint.notesHint": "Notizen (Werkstatt, Garantie…)",
  "app.slogan": "Deine Flotte in deiner Hand",
  "pdf.chooseGroups": "Was möchtest du exportieren?",
- "pdf.allGroups": "Alle Gruppen"
+ "pdf.allGroups": "Alle Gruppen",
+ "unit.cv": "PS",
+ "tech.powerCv": "Leistung (PS)",
+ "tech.powerName": "Leistung",
+ "units.title": "Maßeinheiten",
+ "units.power": "Leistung",
+ "units.distance": "Entfernungen",
+ "units.currency": "Währung",
+ "units.currencyAuto": "Automatisch ({currency})",
+ "maint.miles": "Meilen"
 }

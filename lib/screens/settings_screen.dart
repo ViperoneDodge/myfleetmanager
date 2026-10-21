@@ -82,6 +82,7 @@ class SettingsScreen extends StatelessWidget {
             ),
 
             ..._appearance(context),
+            ..._units(context),
 
             if (kIsWeb) ...[
               _header(context, tr('settings.notifications')),
@@ -500,6 +501,57 @@ class SettingsScreen extends StatelessWidget {
                     onSelected: (_) => save(paper: p),
                   ))
               .toList(),
+        ),
+      ),
+    ];
+  }
+
+  List<Widget> _units(BuildContext context) {
+    Widget segmented(String label, List<String> values, String selected, String Function(String) text,
+            ValueChanged<String> onChanged) =>
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(label),
+            const SizedBox(height: 6),
+            SizedBox(
+              width: double.infinity,
+              child: SegmentedButton<String>(
+                showSelectedIcon: false,
+                segments: [for (final v in values) ButtonSegment(value: v, label: Text(text(v)))],
+                selected: {selected},
+                onSelectionChanged: (sel) => onChanged(sel.first),
+              ),
+            ),
+          ]),
+        );
+    final auto = deviceCurrency;
+    return [
+      _header(context, tr('units.title')),
+      segmented(tr('units.power'), Units.powers, Units.power, (v) {
+        switch (v) {
+          case 'cv':
+            return tr('unit.cv');
+          case 'both':
+            return 'kW + ${tr('unit.cv')}';
+          default:
+            return 'kW';
+        }
+      }, (v) => appState.setUnits(power: v)),
+      segmented(tr('units.distance'), Units.distances, Units.distance,
+          (v) => tr(v == 'mi' ? 'maint.miles' : 'maint.km'), (v) => appState.setUnits(distance: v)),
+      ListTile(
+        title: Text(tr('units.currency')),
+        trailing: DropdownButton<String>(
+          value: Units.currency,
+          underline: const SizedBox.shrink(),
+          items: [
+            DropdownMenuItem(
+                value: '', child: Text(tr('units.currencyAuto', {'currency': '$auto ${currencySymbol(auto)}'}))),
+            for (final c in Units.currencies)
+              DropdownMenuItem(value: c, child: Text('$c ${currencySymbol(c)}')),
+          ],
+          onChanged: (c) => appState.setUnits(currency: c ?? ''),
         ),
       ),
     ];

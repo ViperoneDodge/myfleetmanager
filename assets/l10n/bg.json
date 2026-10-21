@@ -534,5 +534,14 @@
  "maint.notesHint": "Бележки (сервиз, гаранция…)",
  "app.slogan": "Твоят автопарк на една ръка разстояние",
  "pdf.chooseGroups": "Какво искате да експортирате?",
- "pdf.allGroups": "Всички групи"
+ "pdf.allGroups": "Всички групи",
+ "unit.cv": "к.с.",
+ "tech.powerCv": "Мощност (к.с.)",
+ "tech.powerName": "Мощност",
+ "units.title": "Мерни единици",
+ "units.power": "Мощност",
+ "units.distance": "Разстояния",
+ "units.currency": "Валута",
+ "units.currencyAuto": "Автоматично ({currency})",
+ "maint.miles": "Мили"
 }

@@ -534,5 +534,14 @@
  "maint.notesHint": "Notes (garage, garantie…)",
  "app.slogan": "Votre flotte dans le creux de la main",
  "pdf.chooseGroups": "Que voulez-vous exporter ?",
- "pdf.allGroups": "Tous les groupes"
+ "pdf.allGroups": "Tous les groupes",
+ "unit.cv": "ch",
+ "tech.powerCv": "Puissance (ch)",
+ "tech.powerName": "Puissance",
+ "units.title": "Unités de mesure",
+ "units.power": "Puissance",
+ "units.distance": "Distances",
+ "units.currency": "Devise",
+ "units.currencyAuto": "Automatique ({currency})",
+ "maint.miles": "Miles"
 }

@@ -534,5 +534,14 @@
  "maint.notesHint": "Note (service, garanție…)",
  "app.slogan": "Flota ta în palma mâinii",
  "pdf.chooseGroups": "Ce vrei să exporți?",
- "pdf.allGroups": "Toate grupurile"
+ "pdf.allGroups": "Toate grupurile",
+ "unit.cv": "CP",
+ "tech.powerCv": "Putere (CP)",
+ "tech.powerName": "Putere",
+ "units.title": "Unități de măsură",
+ "units.power": "Putere",
+ "units.distance": "Distanțe",
+ "units.currency": "Monedă",
+ "units.currencyAuto": "Automată ({currency})",
+ "maint.miles": "Mile"
 }

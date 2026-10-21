@@ -534,3 +534,12 @@ maint.notesHint
 app.slogan
 pdf.chooseGroups
 pdf.allGroups
+unit.cv
+tech.powerCv
+tech.powerName
+units.title
+units.power
+units.distance
+units.currency
+units.currencyAuto
+maint.miles

@@ -534,5 +534,14 @@
  "maint.notesHint": "Σημειώσεις (συνεργείο, εγγύηση…)",
  "app.slogan": "Ο στόλος σου στην παλάμη του χεριού σου",
  "pdf.chooseGroups": "Τι θέλεις να εξαγάγεις;",
- "pdf.allGroups": "Όλες οι ομάδες"
+ "pdf.allGroups": "Όλες οι ομάδες",
+ "unit.cv": "hp",
+ "tech.powerCv": "Ισχύς (hp)",
+ "tech.powerName": "Ισχύς",
+ "units.title": "Μονάδες μέτρησης",
+ "units.power": "Ισχύς",
+ "units.distance": "Αποστάσεις",
+ "units.currency": "Νόμισμα",
+ "units.currencyAuto": "Αυτόματα ({currency})",
+ "maint.miles": "Μίλια"
 }

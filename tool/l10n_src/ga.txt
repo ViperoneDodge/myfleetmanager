@@ -534,3 +534,12 @@ Nótaí (garáiste, baránta…)
 Do chabhlach i mbos do láimhe
 Cad ba mhaith leat a easpórtáil?
 Gach grúpa
+hp
+Cumhacht (hp)
+Cumhacht
+Aonaid tomhais
+Cumhacht
+Achair
+Airgeadra
+Uathoibríoch ({currency})
+Mílte

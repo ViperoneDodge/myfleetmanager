@@ -534,5 +534,14 @@
  "maint.notesHint": "Märkmed (töökoda, garantii…)",
  "app.slogan": "Sinu sõidukipark sinu peopesal",
  "pdf.chooseGroups": "Mida soovid eksportida?",
- "pdf.allGroups": "Kõik grupid"
+ "pdf.allGroups": "Kõik grupid",
+ "unit.cv": "hj",
+ "tech.powerCv": "Võimsus (hj)",
+ "tech.powerName": "Võimsus",
+ "units.title": "Mõõtühikud",
+ "units.power": "Võimsus",
+ "units.distance": "Vahemaad",
+ "units.currency": "Valuuta",
+ "units.currencyAuto": "Automaatne ({currency})",
+ "maint.miles": "Miilid"
 }

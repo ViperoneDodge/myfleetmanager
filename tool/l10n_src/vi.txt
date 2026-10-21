@@ -534,3 +534,12 @@ Ghi chú (garage, bảo hành…)
 Đội xe của bạn trong lòng bàn tay
 Bạn muốn xuất gì?
 Tất cả nhóm
+mã lực
+Công suất (mã lực)
+Công suất
+Đơn vị đo
+Công suất
+Khoảng cách
+Tiền tệ
+Tự động ({currency})
+Dặm

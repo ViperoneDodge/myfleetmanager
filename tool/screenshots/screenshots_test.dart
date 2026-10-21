@@ -203,6 +203,11 @@ void main() {
         await shot(tester, VehicleEditScreen(vehicle: appState.vehicleById('g1')!.copy()), '06_edit', then: () async {
           await tester.drag(find.byType(ListView).first, const Offset(0, -520));
         });
+        await shot(tester, VehicleEditScreen(vehicle: appState.vehicleById('g1')!.copy()), '06b_power', then: () async {
+          await tester.scrollUntilVisible(find.text(tr('tech.powerCv')), 300,
+              scrollable: find.byType(Scrollable).first);
+          await Scrollable.ensureVisible(tester.element(find.text(tr('tech.powerCv'))), alignment: 0.25);
+        });
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '07_ocr', then: () async {
           final ctx = tester.element(find.byType(VehicleDetailScreen));
           final rows = [
@@ -243,6 +248,11 @@ void main() {
           File('tool/screenshots/out/${L10n.code}/pdf.pdf').writeAsBytesSync(bytes);
         });
         await shot(tester, const SettingsScreen(), '08_settings');
+        await shot(tester, const SettingsScreen(), '08b_units', then: () async {
+          await tester.scrollUntilVisible(find.text(tr('units.title')), 300,
+              scrollable: find.byType(Scrollable).first);
+          await Scrollable.ensureVisible(tester.element(find.text(tr('units.title'))), alignment: 0.15);
+        });
         await shot(tester, const ProScreen(), '09_pro');
         debugDisableShadows = true;
       });

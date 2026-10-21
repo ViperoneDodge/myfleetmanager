@@ -534,5 +534,14 @@
  "maint.notesHint": "Bilješke (servis, jamstvo…)",
  "app.slogan": "Tvoja flota na dlanu",
  "pdf.chooseGroups": "Što želiš izvesti?",
- "pdf.allGroups": "Sve grupe"
+ "pdf.allGroups": "Sve grupe",
+ "unit.cv": "KS",
+ "tech.powerCv": "Snaga (KS)",
+ "tech.powerName": "Snaga",
+ "units.title": "Mjerne jedinice",
+ "units.power": "Snaga",
+ "units.distance": "Udaljenosti",
+ "units.currency": "Valuta",
+ "units.currencyAuto": "Automatski ({currency})",
+ "maint.miles": "Milje"
 }

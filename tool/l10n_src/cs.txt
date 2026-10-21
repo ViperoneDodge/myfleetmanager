@@ -534,3 +534,12 @@ Poznámky (servis, záruka…)
 Váš vozový park v dlani
 Co chcete exportovat?
 Všechny skupiny
+k
+Výkon (k)
+Výkon
+Jednotky
+Výkon
+Vzdálenosti
+Měna
+Automaticky ({currency})
+Míle

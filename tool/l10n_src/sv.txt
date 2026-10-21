@@ -534,3 +534,12 @@ Anteckningar (verkstad, garanti…)
 Din fordonsflotta i din hand
 Vad vill du exportera?
 Alla grupper
+hk
+Effekt (hk)
+Effekt
+Måttenheter
+Effekt
+Avstånd
+Valuta
+Automatisk ({currency})
+Miles

@@ -534,3 +534,12 @@ Notas (oficina, garantia…)
 A sua frota na palma da mão
 O que pretende exportar?
 Todos os grupos
+cv
+Potência (cv)
+Potência
+Unidades de medida
+Potência
+Distâncias
+Moeda
+Automática ({currency})
+Milhas

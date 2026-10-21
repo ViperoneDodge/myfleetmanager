@@ -8,6 +8,7 @@ import 'package:flutter/foundation.dart';
 import '../l10n.dart';
 import '../models.dart';
 import '../theme.dart';
+import '../units.dart';
 import 'auth_service.dart';
 import 'doc_cloud.dart';
 import 'local_store.dart';
@@ -526,6 +527,16 @@ class AppState extends ChangeNotifier {
     await _writeSettings();
   }
 
+  Future<void> setUnits({String? power, String? distance, String? currency}) async {
+    Units.load({
+      'unitPower': power ?? Units.power,
+      'unitDistance': distance ?? Units.distance,
+      'unitCurrency': currency ?? Units.currency,
+    });
+    notifyListeners();
+    await _writeSettings();
+  }
+
   Future<void> setSortNewestFirst(bool on) async {
     sortNewestFirst = on;
     notifyListeners();
@@ -623,6 +634,7 @@ class AppState extends ChangeNotifier {
     devPro = settings?['devPro'] == true;
     devProVersion = settings?['devProVersion'] as String?;
     sortNewestFirst = settings?['sortNewest'] == true;
+    Units.load(settings);
     deadlinesSoonOnly = settings?['deadlinesSoon'] == true;
     exactAsked = settings?['exactAsked'] == true;
     final dc = settings?['docsConsent'];
@@ -1030,6 +1042,7 @@ class AppState extends ChangeNotifier {
         'devPro': devPro,
         if (devProVersion != null) 'devProVersion': devProVersion,
         'sortNewest': sortNewestFirst,
+        ...Units.toJson(),
         'deadlinesSoon': deadlinesSoonOnly,
         'exactAsked': exactAsked,
         if (docsConsent != null) 'docsConsent': docsConsent,

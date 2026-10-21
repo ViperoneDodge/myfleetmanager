@@ -534,3 +534,12 @@ Märkmed (töökoda, garantii…)
 Sinu sõidukipark sinu peopesal
 Mida soovid eksportida?
 Kõik grupid
+hj
+Võimsus (hj)
+Võimsus
+Mõõtühikud
+Võimsus
+Vahemaad
+Valuuta
+Automaatne ({currency})
+Miilid

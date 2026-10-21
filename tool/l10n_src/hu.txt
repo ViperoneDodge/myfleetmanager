@@ -534,3 +534,12 @@ Megjegyzés (szerviz, garancia…)
 A flottád a tenyeredben
 Mit szeretnél exportálni?
 Összes csoport
+LE
+Teljesítmény (LE)
+Teljesítmény
+Mértékegységek
+Teljesítmény
+Távolságok
+Pénznem
+Automatikus ({currency})
+Mérföld

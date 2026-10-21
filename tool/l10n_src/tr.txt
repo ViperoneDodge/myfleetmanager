@@ -534,3 +534,12 @@ Notlar (servis, garanti…)
 Filon avucunun içinde
 Neyi dışa aktarmak istiyorsun?
 Tüm gruplar
+BG
+Güç (BG)
+Güç
+Ölçü birimleri
+Güç
+Mesafeler
+Para birimi
+Otomatik ({currency})
+Mil

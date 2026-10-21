@@ -534,5 +534,14 @@
  "maint.notesHint": "Piezīmes (serviss, garantija…)",
  "app.slogan": "Tavs autoparks tavā plaukstā",
  "pdf.chooseGroups": "Ko vēlies eksportēt?",
- "pdf.allGroups": "Visas grupas"
+ "pdf.allGroups": "Visas grupas",
+ "unit.cv": "ZS",
+ "tech.powerCv": "Jauda (ZS)",
+ "tech.powerName": "Jauda",
+ "units.title": "Mērvienības",
+ "units.power": "Jauda",
+ "units.distance": "Attālumi",
+ "units.currency": "Valūta",
+ "units.currencyAuto": "Automātiski ({currency})",
+ "maint.miles": "Jūdzes"
 }

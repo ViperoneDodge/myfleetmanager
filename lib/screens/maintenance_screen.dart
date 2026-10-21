@@ -20,7 +20,7 @@ class MaintenanceEditScreen extends StatefulWidget {
 class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
   late final MaintenanceRecord r =
       widget.record?.copy() ?? MaintenanceRecord(date: DateTime.now());
-  late final TextEditingController _km = TextEditingController(text: r.km?.toString() ?? '');
+  late final TextEditingController _km = TextEditingController(text: r.km == null ? '' : kmToShown(r.km!).toString());
   late final TextEditingController _notes = TextEditingController(text: r.notes);
   late final TextEditingController _labor = TextEditingController(text: centsText(r.labor));
   bool _asService = false;
@@ -55,7 +55,8 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
 
   Future<void> _save() async {
     final kmText = _km.text.trim();
-    r.km = kmText.isEmpty ? null : int.tryParse(kmText);
+    final shown = int.tryParse(kmText);
+    if (r.km == null || shown != kmToShown(r.km!)) r.km = shown == null ? null : shownToKm(shown);
     r.notes = _notes.text.trim();
     r.labor = parseCents(_labor.text);
     if (r.items.isEmpty && r.customParts.isEmpty && r.notes.isEmpty) {
@@ -195,8 +196,8 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
               keyboardType: TextInputType.number,
               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               decoration: InputDecoration(
-                labelText: tr('maint.km'),
-                suffixText: 'km',
+                labelText: tr(Units.miles ? 'maint.miles' : 'maint.km'),
+                suffixText: distanceUnit,
                 border: const OutlineInputBorder(),
                 prefixIcon: const Icon(Icons.speed),
               ),

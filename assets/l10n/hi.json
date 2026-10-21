@@ -534,5 +534,14 @@
  "maint.notesHint": "नोट्स (गैराज, वारंटी…)",
  "app.slogan": "आपका वाहन बेड़ा, आपकी हथेली में",
  "pdf.chooseGroups": "आप क्या निर्यात करना चाहते हैं?",
- "pdf.allGroups": "सभी समूह"
+ "pdf.allGroups": "सभी समूह",
+ "unit.cv": "HP",
+ "tech.powerCv": "शक्ति (HP)",
+ "tech.powerName": "शक्ति",
+ "units.title": "माप की इकाइयाँ",
+ "units.power": "शक्ति",
+ "units.distance": "दूरी",
+ "units.currency": "मुद्रा",
+ "units.currencyAuto": "स्वचालित ({currency})",
+ "maint.miles": "मील"
 }

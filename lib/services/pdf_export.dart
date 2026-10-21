@@ -253,7 +253,7 @@ class PdfExport {
             decoration: pw.BoxDecoration(color: accent),
             children: [
               c(tr('maint.date'), head),
-              c(tr('maint.km'), head),
+              c(tr(Units.miles ? 'maint.miles' : 'maint.km'), head),
               c(tr('maint.items'), head),
               c(tr('pdf.notes'), head),
               if (costs) c(tr('maint.cost'), head),

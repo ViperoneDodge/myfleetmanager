@@ -534,3 +534,12 @@ Note (service, garanție…)
 Flota ta în palma mâinii
 Ce vrei să exporți?
 Toate grupurile
+CP
+Putere (CP)
+Putere
+Unități de măsură
+Putere
+Distanțe
+Monedă
+Automată ({currency})
+Mile

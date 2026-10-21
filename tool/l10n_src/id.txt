@@ -534,3 +534,12 @@ Catatan (bengkel, garansi…)
 Armada Anda dalam genggaman
 Apa yang ingin diekspor?
 Semua grup
+HP
+Tenaga (HP)
+Tenaga
+Satuan ukuran
+Tenaga
+Jarak
+Mata uang
+Otomatis ({currency})
+Mil

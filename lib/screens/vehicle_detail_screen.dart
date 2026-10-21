@@ -560,7 +560,7 @@ class VehicleDetailScreen extends StatelessWidget {
                 _techRow(context, tr('edit.type'), vehicleTypeLabel(v.type)),
                 _techRow(context, tr('vehicle.regDate'), v.registrationDate == null ? '' : fmtDate(v.registrationDate)),
                 _techRow(context, tr('tech.fuel'), v.fuel.isEmpty ? '' : fuelLabel(v.fuel)),
-                _techRow(context, tr('tech.power'), v.powerKw),
+                _techRow(context, tr('tech.powerName'), v.powerKw.isEmpty ? '' : fmtPower(v.powerKw)),
                 _techRow(context, tr('tech.engine'), v.engineCc),
                 ..._tyreRows(context, v.tyres),
                 _techRow(context, tr('tech.oil'), v.oil),

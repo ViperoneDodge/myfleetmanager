@@ -534,3 +534,12 @@ Pastabos (servisas, garantija…)
 Tavo automobilių parkas tavo delne
 Ką norite eksportuoti?
 Visos grupės
+AG
+Galia (AG)
+Galia
+Matavimo vienetai
+Galia
+Atstumai
+Valiuta
+Automatiškai ({currency})
+Mylios

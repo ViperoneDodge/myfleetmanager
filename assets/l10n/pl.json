@@ -534,5 +534,14 @@
  "maint.notesHint": "Notatki (warsztat, gwarancja…)",
  "app.slogan": "Twoja flota w zasięgu ręki",
  "pdf.chooseGroups": "Co chcesz wyeksportować?",
- "pdf.allGroups": "Wszystkie grupy"
+ "pdf.allGroups": "Wszystkie grupy",
+ "unit.cv": "KM",
+ "tech.powerCv": "Moc (KM)",
+ "tech.powerName": "Moc",
+ "units.title": "Jednostki miary",
+ "units.power": "Moc",
+ "units.distance": "Odległości",
+ "units.currency": "Waluta",
+ "units.currencyAuto": "Automatycznie ({currency})",
+ "maint.miles": "Mile"
 }

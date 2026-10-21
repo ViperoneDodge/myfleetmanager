@@ -534,5 +534,14 @@
  "maint.notesHint": "Megjegyzés (szerviz, garancia…)",
  "app.slogan": "A flottád a tenyeredben",
  "pdf.chooseGroups": "Mit szeretnél exportálni?",
- "pdf.allGroups": "Összes csoport"
+ "pdf.allGroups": "Összes csoport",
+ "unit.cv": "LE",
+ "tech.powerCv": "Teljesítmény (LE)",
+ "tech.powerName": "Teljesítmény",
+ "units.title": "Mértékegységek",
+ "units.power": "Teljesítmény",
+ "units.distance": "Távolságok",
+ "units.currency": "Pénznem",
+ "units.currencyAuto": "Automatikus ({currency})",
+ "maint.miles": "Mérföld"
 }

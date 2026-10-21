@@ -534,5 +534,14 @@
  "maint.notesHint": "Notities (garage, garantie…)",
  "app.slogan": "Je wagenpark in de palm van je hand",
  "pdf.chooseGroups": "Wat wil je exporteren?",
- "pdf.allGroups": "Alle groepen"
+ "pdf.allGroups": "Alle groepen",
+ "unit.cv": "pk",
+ "tech.powerCv": "Vermogen (pk)",
+ "tech.powerName": "Vermogen",
+ "units.title": "Meeteenheden",
+ "units.power": "Vermogen",
+ "units.distance": "Afstanden",
+ "units.currency": "Valuta",
+ "units.currencyAuto": "Automatisch ({currency})",
+ "maint.miles": "Mijlen"
 }

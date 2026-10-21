@@ -534,3 +534,12 @@ Notatki (warsztat, gwarancja…)
 Twoja flota w zasięgu ręki
 Co chcesz wyeksportować?
 Wszystkie grupy
+KM
+Moc (KM)
+Moc
+Jednostki miary
+Moc
+Odległości
+Waluta
+Automatycznie ({currency})
+Mile

@@ -534,5 +534,14 @@
  "maint.notesHint": "メモ（整備工場、保証…）",
  "app.slogan": "あなたの車両を手のひらに",
  "pdf.chooseGroups": "何をエクスポートしますか？",
- "pdf.allGroups": "すべてのグループ"
+ "pdf.allGroups": "すべてのグループ",
+ "unit.cv": "馬力",
+ "tech.powerCv": "出力（馬力）",
+ "tech.powerName": "出力",
+ "units.title": "単位",
+ "units.power": "出力",
+ "units.distance": "距離",
+ "units.currency": "通貨",
+ "units.currencyAuto": "自動（{currency}）",
+ "maint.miles": "マイル"
 }
