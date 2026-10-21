@@ -555,7 +555,7 @@ story += B([
     '<b>Spostamento</b> di un veicolo tra «I miei veicoli» e i gruppi (pressione lunga sulla card).',
     '<b>Condivisione documenti</b> nel gruppo, decisa dall\'amministratore del gruppo.',
     '<b>Lettura del libretto</b> (beta) da foto o PDF, con conferma di ogni dato e assegnazione manuale del testo.',
-    '<b>Esportazione PDF</b> di veicoli, scadenze e manutenzioni (i dati tecnici non sono inclusi). Dalla pagina Gruppi l'icona in alto chiede se esportare tutti i gruppi o uno solo.',
+    '<b>Esportazione PDF</b> di veicoli, scadenze e manutenzioni (i dati tecnici non sono inclusi). Dalla pagina Gruppi l\'icona in alto chiede se esportare tutti i gruppi o uno solo.',
     '<b>Telefoni</b> bloccati in verticale; <b>tablet</b> liberi di ruotare e con testi più grandi.',
 ])
 
