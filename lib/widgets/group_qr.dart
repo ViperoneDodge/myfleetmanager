@@ -14,7 +14,8 @@ import '../l10n.dart';
 import 'common.dart';
 
 const String _qrPrefix = 'myfleetmanager:join:';
-const String _joinUrl = 'https://viperonedodge.github.io/myfleetmanager/join.html';
+const String _joinUrl = 'https://myfleetmanager-3ca03.web.app/join.html';
+const Set<String> _joinHosts = {'myfleetmanager-3ca03.web.app', 'myfleetmanager-3ca03.firebaseapp.com', 'viperonedodge.github.io'};
 
 String groupQrData(String code) => '$_joinUrl?code=$code';
 
@@ -23,7 +24,7 @@ String? codeFromQr(String? raw) {
   var t = raw.trim();
   final uri = Uri.tryParse(t);
   if (uri != null && uri.hasScheme && uri.host.isNotEmpty) {
-    if (!uri.host.endsWith('github.io') || !uri.path.endsWith('/join.html')) return null;
+    if (!_joinHosts.contains(uri.host) || !uri.path.endsWith('/join.html')) return null;
     t = uri.queryParameters['code'] ?? '';
   }
   if (t.toLowerCase().startsWith(_qrPrefix)) t = t.substring(_qrPrefix.length);

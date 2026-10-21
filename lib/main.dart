@@ -10,6 +10,7 @@ import 'screens/home_screen.dart';
 import 'screens/intro_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/web_pro_gate.dart';
+import 'services/app_check.dart';
 import 'services/app_state.dart';
 import 'services/group_watch.dart';
 import 'services/local_store.dart';
@@ -57,6 +58,7 @@ Future<void> main() async {
       } catch (_) {}
     }
   }
+  await startAppCheck();
   await initGroupWatch();
   appState = AppState();
   runApp(const FleetApp());

@@ -9,6 +9,9 @@ void main() {
     expect(codeFromQr('myfleetmanager:join:AB23CD45EF'), 'AB23CD45EF');
     expect(groupQrData('AB23CD45EF'), startsWith('https://'));
     expect(codeFromQr('https://example.com/qualcosa'), null);
+    expect(groupQrData('AB23CD45EF'), startsWith('https://myfleetmanager-3ca03.web.app/join.html'));
+    expect(codeFromQr('https://viperonedodge.github.io/myfleetmanager/join.html?code=AB23CD45EF'), 'AB23CD45EF');
+    expect(codeFromQr('https://example.com/join.html?code=AB23CD45EF'), null);
     expect(codeFromQr(null), null);
   });
 

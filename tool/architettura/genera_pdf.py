@@ -328,6 +328,7 @@ files = [
     ['services/sync_service.dart', righe('services/sync_service.dart'), 'Sincronizzazione con Firestore: gruppi, veicoli, documenti, ruoli, Pro'],
     ['services/notification_service.dart', righe('services/notification_service.dart'), 'Promemoria delle scadenze programmati sul telefono, canali Android, prove'],
     ['services/push_service.dart', righe('services/push_service.dart'), 'Registrazione del telefono a Firebase Cloud Messaging'],
+    ['services/app_check.dart', righe('services/app_check.dart'), 'Avvio di Firebase App Check (Play Integrity su Android, App Attest su iOS): certifica che le richieste al cloud arrivano dall\'app originale'],
     ['services/group_watch.dart', righe('services/group_watch.dart'), 'Controllo in background delle attività dei gruppi (Android, WorkManager)'],
     ['services/pro_service.dart', righe('services/pro_service.dart'), 'Acquisto in-app della versione Pro e ripristino'],
     ['services/registration_reader.dart', righe('services/registration_reader.dart'), 'Lettura del libretto: riconoscimento testo e interpretazione dei campi UE'],
@@ -361,8 +362,8 @@ if _mancanti:
     raise SystemExit('File non descritti nel documento: ' + ', '.join(_mancanti))
 story += [table(files, [58 * mm, 13 * mm, 99 * mm]), Spacer(1, 6)]
 story += [P('Fuori da lib/ si trovano: <font name="DVM">tool/</font> (script di preparazione Android e iOS, traduzioni, '
-            'test, screenshot e materiale per gli store), <font name="DVM">docs/</font> (pagine web pubbliche: informativa '
-            'privacy e pagina di invito ai gruppi), <font name="DVM">firestore.rules</font> (regole di sicurezza del cloud) e '
+            'test, screenshot e materiale per gli store), <font name="DVM">docs/</font> (informativa privacy e pagina di invito ai '
+            'gruppi, pubblicate insieme al sito su Firebase Hosting), <font name="DVM">firestore.rules</font> (regole di sicurezza del cloud) e '
             '<font name="DVM">.github/workflows</font> (compilazione automatica).', small)]
 
 story += [PageBreak(), P('4. Modello dei dati', h1)]
@@ -630,8 +631,9 @@ story += B([
     'la versione web è compilata e minimizzata.',
     'Sito web con intestazioni di sicurezza: HTTPS obbligatorio (HSTS), divieto di inserimento in altre pagine, '
     'nessun accesso a fotocamera, microfono e posizione dal browser.',
-    'Ancora da fare prima della produzione (vedi BACKLOG.md): nuova chiave di firma privata, repository privato, '
-    'verifica della Pro sul server con Firebase Blaze e Firebase App Check.',
+    'Firebase App Check attivo nell\'app: ogni richiesta al cloud porta un certificato che attesta l\'app originale; '
+    'il blocco delle richieste senza certificato si accende dalla console Firebase.',
+    'Ancora da fare prima della produzione (vedi BACKLOG.md): repository privato e verifica della Pro sul server con Firebase Blaze.',
 ])
 
 story += [P('12. Lingue', h1)]

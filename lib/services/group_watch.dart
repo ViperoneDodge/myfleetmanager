@@ -13,6 +13,7 @@ import 'package:workmanager/workmanager.dart';
 import '../firebase_config.dart';
 import '../l10n.dart';
 import '../models.dart';
+import 'app_check.dart';
 import 'local_store.dart';
 import 'notification_service.dart';
 import '../platform.dart';
@@ -245,6 +246,7 @@ Future<void> _backgroundCheck() async {
       );
     }
   }
+  await startAppCheck();
   final user = FirebaseAuth.instance.currentUser;
   if (user == null || user.uid != w.uid) return;
 

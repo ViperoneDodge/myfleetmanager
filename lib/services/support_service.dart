@@ -10,7 +10,7 @@ import '../platform.dart';
 class SupportService {
   static const String email = 'appmyfleetmanager@gmail.com';
 
-  static const String privacyUrl = 'https://viperonedodge.github.io/myfleetmanager/privacy.html';
+  static const String privacyUrl = 'https://myfleetmanager-3ca03.web.app/privacy.html';
 
   static Future<String> deviceDescription() async {
     try {

@@ -5,6 +5,7 @@ import shutil
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 WEB = ROOT / "web"
 ICONS = ROOT / "tool" / "web_icons"
+PAGES = ROOT / "docs"
 BLUE = "#0257C3"
 
 if WEB.exists():
@@ -89,3 +90,11 @@ if WEB.exists():
         ],
     }, indent=2) + "\n")
     print("Patched", WEB)
+
+for name in ("privacy.html", "join.html", "gian_trip_logo.png"):
+    shutil.copy(PAGES / name, WEB / name)
+shutil.copy(PAGES / "icon.png", WEB / "app-icon.png")
+for name in ("privacy.html", "join.html"):
+    t = (WEB / name).read_text(encoding="utf-8").replace('"icon.png"', '"app-icon.png"')
+    (WEB / name).write_text(t, encoding="utf-8")
+print("Pagine privacy e invito copiate")
