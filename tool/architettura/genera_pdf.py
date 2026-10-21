@@ -626,6 +626,12 @@ story += B([
     'Il riconoscimento del libretto avviene interamente sul telefono.',
     'Cancellazione completa dei dati e dell\'account dall\'app, più richiesta via email per i dati residui.',
     'Nessuna pubblicità e nessun identificativo pubblicitario (permesso AD_ID rimosso).',
+    'Codice Dart offuscato nelle build Android e iOS (nomi di classi e funzioni resi illeggibili) e codice Java ridotto da R8; '
+    'la versione web è compilata e minimizzata.',
+    'Sito web con intestazioni di sicurezza: HTTPS obbligatorio (HSTS), divieto di inserimento in altre pagine, '
+    'nessun accesso a fotocamera, microfono e posizione dal browser.',
+    'Ancora da fare prima della produzione (vedi BACKLOG.md): nuova chiave di firma privata, repository privato, '
+    'verifica della Pro sul server con Firebase Blaze e Firebase App Check.',
 ])
 
 story += [P('12. Lingue', h1)]
