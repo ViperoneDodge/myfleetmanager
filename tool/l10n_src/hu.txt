@@ -532,3 +532,5 @@ Munkadíj
 Összesen: {amount}
 Megjegyzés (szerviz, garancia…)
 A flottád a tenyeredben
+Mit szeretnél exportálni?
+Összes csoport

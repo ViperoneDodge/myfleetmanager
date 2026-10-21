@@ -532,3 +532,5 @@ Kulutatud {year}: {amount}
 Kokku: {amount}
 Märkmed (töökoda, garantii…)
 Sinu sõidukipark sinu peopesal
+Mida soovid eksportida?
+Kõik grupid

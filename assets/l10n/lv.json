@@ -532,5 +532,7 @@
  "maint.spentYear": "Iztērēts {year}. gadā: {amount}",
  "maint.spentAll": "Kopā: {amount}",
  "maint.notesHint": "Piezīmes (serviss, garantija…)",
- "app.slogan": "Tavs autoparks tavā plaukstā"
+ "app.slogan": "Tavs autoparks tavā plaukstā",
+ "pdf.chooseGroups": "Ko vēlies eksportēt?",
+ "pdf.allGroups": "Visas grupas"
 }

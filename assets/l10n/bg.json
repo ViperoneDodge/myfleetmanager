@@ -532,5 +532,7 @@
  "maint.spentYear": "Похарчено през {year}: {amount}",
  "maint.spentAll": "Общо: {amount}",
  "maint.notesHint": "Бележки (сервиз, гаранция…)",
- "app.slogan": "Твоят автопарк на една ръка разстояние"
+ "app.slogan": "Твоят автопарк на една ръка разстояние",
+ "pdf.chooseGroups": "Какво искате да експортирате?",
+ "pdf.allGroups": "Всички групи"
 }

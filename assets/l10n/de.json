@@ -532,5 +532,7 @@
  "maint.spentYear": "Ausgaben {year}: {amount}",
  "maint.spentAll": "Gesamt: {amount}",
  "maint.notesHint": "Notizen (Werkstatt, Garantie…)",
- "app.slogan": "Deine Flotte in deiner Hand"
+ "app.slogan": "Deine Flotte in deiner Hand",
+ "pdf.chooseGroups": "Was möchtest du exportieren?",
+ "pdf.allGroups": "Alle Gruppen"
 }

@@ -532,5 +532,7 @@
  "maint.spentYear": "Brukt i {year}: {amount}",
  "maint.spentAll": "Totalt: {amount}",
  "maint.notesHint": "Notater (verksted, garanti…)",
- "app.slogan": "Bilparken din i hånden"
+ "app.slogan": "Bilparken din i hånden",
+ "pdf.chooseGroups": "Hva vil du eksportere?",
+ "pdf.allGroups": "Alle grupper"
 }

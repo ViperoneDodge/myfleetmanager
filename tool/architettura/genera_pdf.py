@@ -336,7 +336,7 @@ files = [
     ['services/pdf_export.dart', righe('services/pdf_export.dart'), 'Esportazione del riepilogo in PDF'],
     ['services/update_service.dart', righe('services/update_service.dart'), 'Aggiornamenti automatici da Google Play'],
     ['services/support_service.dart', righe('services/support_service.dart'), 'Email al supporto, segnalazione problemi, richiesta cancellazione dati'],
-    ['screens/home_screen.dart', righe('screens/home_screen.dart'), 'Schermata principale con le tre schede in basso'],
+    ['screens/home_screen.dart', righe('screens/home_screen.dart'), 'Schermata principale con le tre schede in basso; icona PDF in alto nei Veicoli e nei Gruppi (scelta tra tutti i gruppi o uno solo)'],
     ['screens/vehicle_detail_screen.dart', righe('screens/vehicle_detail_screen.dart'), 'Scheda del veicolo con le tre sotto-schede'],
     ['screens/vehicle_book.dart', righe('screens/vehicle_book.dart'), 'Sfoglia i veicoli con l\'animazione della pagina attorno agli anelli'],
     ['screens/vehicle_edit_screen.dart', righe('screens/vehicle_edit_screen.dart'), 'Creazione e modifica del veicolo'],
@@ -555,7 +555,7 @@ story += B([
     '<b>Spostamento</b> di un veicolo tra «I miei veicoli» e i gruppi (pressione lunga sulla card).',
     '<b>Condivisione documenti</b> nel gruppo, decisa dall\'amministratore del gruppo.',
     '<b>Lettura del libretto</b> (beta) da foto o PDF, con conferma di ogni dato e assegnazione manuale del testo.',
-    '<b>Esportazione PDF</b> di veicoli, scadenze e manutenzioni (i dati tecnici non sono inclusi).',
+    '<b>Esportazione PDF</b> di veicoli, scadenze e manutenzioni (i dati tecnici non sono inclusi). Dalla pagina Gruppi l'icona in alto chiede se esportare tutti i gruppi o uno solo.',
     '<b>Telefoni</b> bloccati in verticale; <b>tablet</b> liberi di ruotare e con testi più grandi.',
 ])
 

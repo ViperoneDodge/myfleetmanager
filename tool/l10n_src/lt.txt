@@ -532,3 +532,5 @@ Išleista {year} m.: {amount}
 Iš viso: {amount}
 Pastabos (servisas, garantija…)
 Tavo automobilių parkas tavo delne
+Ką norite eksportuoti?
+Visos grupės

@@ -532,3 +532,5 @@ maint.spentYear
 maint.spentAll
 maint.notesHint
 app.slogan
+pdf.chooseGroups
+pdf.allGroups

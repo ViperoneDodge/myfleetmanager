@@ -532,3 +532,5 @@ Iztērēts {year}. gadā: {amount}
 Kopā: {amount}
 Piezīmes (serviss, garantija…)
 Tavs autoparks tavā plaukstā
+Ko vēlies eksportēt?
+Visas grupas

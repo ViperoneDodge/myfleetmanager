@@ -532,3 +532,5 @@ Spenderat {year}: {amount}
 Totalt: {amount}
 Anteckningar (verkstad, garanti…)
 Din fordonsflotta i din hand
+Vad vill du exportera?
+Alla grupper

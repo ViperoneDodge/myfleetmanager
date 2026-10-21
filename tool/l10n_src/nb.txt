@@ -532,3 +532,5 @@ Brukt i {year}: {amount}
 Totalt: {amount}
 Notater (verksted, garanti…)
 Bilparken din i hånden
+Hva vil du eksportere?
+Alle grupper

@@ -532,5 +532,7 @@
  "maint.spentYear": "Minfuq fl-{year}: {amount}",
  "maint.spentAll": "Total: {amount}",
  "maint.notesHint": "Noti (garaxx, garanzija…)",
- "app.slogan": "Il-flotta tiegħek fil-pala ta' idek"
+ "app.slogan": "Il-flotta tiegħek fil-pala ta' idek",
+ "pdf.chooseGroups": "X'trid tesporta?",
+ "pdf.allGroups": "Il-gruppi kollha"
 }

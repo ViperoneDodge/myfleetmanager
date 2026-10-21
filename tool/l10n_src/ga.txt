@@ -532,3 +532,5 @@ Caite in {year}: {amount}
 Iomlán: {amount}
 Nótaí (garáiste, baránta…)
 Do chabhlach i mbos do láimhe
+Cad ba mhaith leat a easpórtáil?
+Gach grúpa

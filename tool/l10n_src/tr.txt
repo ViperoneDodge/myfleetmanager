@@ -532,3 +532,5 @@ Toplam
 Toplam: {amount}
 Notlar (servis, garanti…)
 Filon avucunun içinde
+Neyi dışa aktarmak istiyorsun?
+Tüm gruplar

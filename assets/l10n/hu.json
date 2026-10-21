@@ -532,5 +532,7 @@
  "maint.spentYear": "{year}-ban költve: {amount}",
  "maint.spentAll": "Összesen: {amount}",
  "maint.notesHint": "Megjegyzés (szerviz, garancia…)",
- "app.slogan": "A flottád a tenyeredben"
+ "app.slogan": "A flottád a tenyeredben",
+ "pdf.chooseGroups": "Mit szeretnél exportálni?",
+ "pdf.allGroups": "Összes csoport"
 }

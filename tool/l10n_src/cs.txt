@@ -532,3 +532,5 @@ Utraceno v roce {year}: {amount}
 Celkem: {amount}
 Poznámky (servis, záruka…)
 Váš vozový park v dlani
+Co chcete exportovat?
+Všechny skupiny

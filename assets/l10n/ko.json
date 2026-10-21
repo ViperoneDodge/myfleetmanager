@@ -532,5 +532,7 @@
  "maint.spentYear": "{year}년 지출: {amount}",
  "maint.spentAll": "합계: {amount}",
  "maint.notesHint": "메모 (정비소, 보증…)",
- "app.slogan": "내 손안의 차량 관리"
+ "app.slogan": "내 손안의 차량 관리",
+ "pdf.chooseGroups": "무엇을 내보낼까요?",
+ "pdf.allGroups": "모든 그룹"
 }

@@ -532,5 +532,7 @@
  "maint.spentYear": "Spent in {year}: {amount}",
  "maint.spentAll": "Total: {amount}",
  "maint.notesHint": "Notes (garage, warranty…)",
- "app.slogan": "Your fleet in the palm of your hand"
+ "app.slogan": "Your fleet in the palm of your hand",
+ "pdf.chooseGroups": "What do you want to export?",
+ "pdf.allGroups": "All groups"
 }

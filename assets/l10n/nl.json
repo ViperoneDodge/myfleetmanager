@@ -532,5 +532,7 @@
  "maint.spentYear": "Uitgegeven in {year}: {amount}",
  "maint.spentAll": "Totaal: {amount}",
  "maint.notesHint": "Notities (garage, garantie…)",
- "app.slogan": "Je wagenpark in de palm van je hand"
+ "app.slogan": "Je wagenpark in de palm van je hand",
+ "pdf.chooseGroups": "Wat wil je exporteren?",
+ "pdf.allGroups": "Alle groepen"
 }

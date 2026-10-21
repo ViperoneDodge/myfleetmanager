@@ -532,5 +532,7 @@
  "maint.spentYear": "Eytt árið {year}: {amount}",
  "maint.spentAll": "Samtals: {amount}",
  "maint.notesHint": "Athugasemdir (verkstæði, ábyrgð…)",
- "app.slogan": "Bílaflotinn þinn í lófa þínum"
+ "app.slogan": "Bílaflotinn þinn í lófa þínum",
+ "pdf.chooseGroups": "Hvað viltu flytja út?",
+ "pdf.allGroups": "Allir hópar"
 }

@@ -532,3 +532,5 @@ Wydano w {year}: {amount}
 Razem: {amount}
 Notatki (warsztat, gwarancja…)
 Twoja flota w zasięgu ręki
+Co chcesz wyeksportować?
+Wszystkie grupy

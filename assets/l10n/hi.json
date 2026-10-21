@@ -532,5 +532,7 @@
  "maint.spentYear": "{year} में खर्च: {amount}",
  "maint.spentAll": "कुल: {amount}",
  "maint.notesHint": "नोट्स (गैराज, वारंटी…)",
- "app.slogan": "आपका वाहन बेड़ा, आपकी हथेली में"
+ "app.slogan": "आपका वाहन बेड़ा, आपकी हथेली में",
+ "pdf.chooseGroups": "आप क्या निर्यात करना चाहते हैं?",
+ "pdf.allGroups": "सभी समूह"
 }

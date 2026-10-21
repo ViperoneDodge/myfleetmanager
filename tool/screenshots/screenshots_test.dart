@@ -194,6 +194,11 @@ void main() {
         await shot(tester, const HomeScreen(), '04_groups', then: () async {
           await tester.tap(find.text(tr('tab.family')).last);
         });
+        await shot(tester, const HomeScreen(), '04b_groups_pdf', then: () async {
+          await tester.tap(find.text(tr('tab.family')).last);
+          await tester.pumpAndSettle();
+          await tester.tap(find.descendant(of: find.byType(AppBar), matching: find.byIcon(Icons.picture_as_pdf_outlined)));
+        });
         await shot(tester, const GroupScreen(groupId: 'FAM7Q2K9XW'), '05_roles');
         await shot(tester, VehicleEditScreen(vehicle: appState.vehicleById('g1')!.copy()), '06_edit', then: () async {
           await tester.drag(find.byType(ListView).first, const Offset(0, -520));

@@ -532,5 +532,7 @@
  "maint.spentYear": "Spenderat {year}: {amount}",
  "maint.spentAll": "Totalt: {amount}",
  "maint.notesHint": "Anteckningar (verkstad, garanti…)",
- "app.slogan": "Din fordonsflotta i din hand"
+ "app.slogan": "Din fordonsflotta i din hand",
+ "pdf.chooseGroups": "Vad vill du exportera?",
+ "pdf.allGroups": "Alla grupper"
 }

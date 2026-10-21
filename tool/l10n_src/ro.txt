@@ -532,3 +532,5 @@ Cheltuit în {year}: {amount}
 Total: {amount}
 Note (service, garanție…)
 Flota ta în palma mâinii
+Ce vrei să exporți?
+Toate grupurile

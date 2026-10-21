@@ -532,5 +532,7 @@
  "maint.spentYear": "{year} harcaması: {amount}",
  "maint.spentAll": "Toplam: {amount}",
  "maint.notesHint": "Notlar (servis, garanti…)",
- "app.slogan": "Filon avucunun içinde"
+ "app.slogan": "Filon avucunun içinde",
+ "pdf.chooseGroups": "Neyi dışa aktarmak istiyorsun?",
+ "pdf.allGroups": "Tüm gruplar"
 }

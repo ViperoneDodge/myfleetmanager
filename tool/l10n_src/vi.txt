@@ -532,3 +532,5 @@ Tổng
 Tổng: {amount}
 Ghi chú (garage, bảo hành…)
 Đội xe của bạn trong lòng bàn tay
+Bạn muốn xuất gì?
+Tất cả nhóm

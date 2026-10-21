@@ -153,6 +153,50 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  List<FleetGroup> _groupsWithVehicles() =>
+      appState.data.groups.where((g) => appState.groupVehicles(g.id).isNotEmpty).toList();
+
+  Future<void> _exportGroups() async {
+    if (!await requirePro(context, reason: tr('pro.reasonPdf')) || !mounted) return;
+    final groups = _groupsWithVehicles();
+    final all = [for (final g in groups) ...appState.groupVehicles(g.id)];
+    final choice = await showModalBottomSheet<String>(
+      context: context,
+      showDragHandle: true,
+      builder: (ctx) => SafeArea(
+        child: SingleChildScrollView(
+          child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+              child: Text(tr('pdf.chooseGroups'), style: const TextStyle(fontFamily: handFont, fontSize: 24)),
+            ),
+            if (groups.length > 1)
+              ListTile(
+                leading: const Icon(Icons.select_all),
+                title: Text(tr('pdf.allGroups')),
+                subtitle: Text(trn('family.vehicles', all.length)),
+                onTap: () => Navigator.pop(ctx, ''),
+              ),
+            for (final g in groups)
+              ListTile(
+                leading: const Icon(Icons.groups_outlined),
+                title: Text(g.name),
+                subtitle: Text(trn('family.vehicles', appState.groupVehicles(g.id).length)),
+                onTap: () => Navigator.pop(ctx, g.id),
+              ),
+          ]),
+        ),
+      ),
+    );
+    if (choice == null || !mounted) return;
+    if (choice.isEmpty) {
+      await exportPdf(context, tr('pdf.allGroups'), all);
+    } else {
+      final g = appState.data.groupById(choice);
+      if (g != null) await exportPdf(context, g.name, appState.groupVehicles(g.id));
+    }
+  }
+
   Widget _syncIcon() {
     if (!appState.isCloud) return const SizedBox.shrink();
     switch (appState.syncStatus) {
@@ -196,6 +240,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   tooltip: tr('pdf.export'),
                   icon: const Icon(Icons.picture_as_pdf_outlined),
                   onPressed: () => exportPdf(context, _homeTitle(), appState.homeVehicles),
+                ),
+              if (_tab == 1 && _groupsWithVehicles().isNotEmpty)
+                IconButton(
+                  tooltip: tr('pdf.export'),
+                  icon: const Icon(Icons.picture_as_pdf_outlined),
+                  onPressed: _exportGroups,
                 ),
               _syncIcon(),
               IconButton(

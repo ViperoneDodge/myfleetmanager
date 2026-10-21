@@ -532,5 +532,7 @@
  "maint.spentYear": "Wydano w {year}: {amount}",
  "maint.spentAll": "Razem: {amount}",
  "maint.notesHint": "Notatki (warsztat, gwarancja…)",
- "app.slogan": "Twoja flota w zasięgu ręki"
+ "app.slogan": "Twoja flota w zasięgu ręki",
+ "pdf.chooseGroups": "Co chcesz wyeksportować?",
+ "pdf.allGroups": "Wszystkie grupy"
 }

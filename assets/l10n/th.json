@@ -532,5 +532,7 @@
  "maint.spentYear": "ใช้จ่ายปี {year}: {amount}",
  "maint.spentAll": "รวม: {amount}",
  "maint.notesHint": "บันทึก (อู่, การรับประกัน…)",
- "app.slogan": "ยานพาหนะของคุณ อยู่ในมือคุณ"
+ "app.slogan": "ยานพาหนะของคุณ อยู่ในมือคุณ",
+ "pdf.chooseGroups": "ต้องการส่งออกอะไร",
+ "pdf.allGroups": "ทุกกลุ่ม"
 }

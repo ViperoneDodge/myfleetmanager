@@ -532,5 +532,7 @@
  "maint.spentYear": "{year} 年花费：{amount}",
  "maint.spentAll": "合计：{amount}",
  "maint.notesHint": "备注（维修厂、保修…）",
- "app.slogan": "你的车队，尽在掌握"
+ "app.slogan": "你的车队，尽在掌握",
+ "pdf.chooseGroups": "要导出什么？",
+ "pdf.allGroups": "所有群组"
 }

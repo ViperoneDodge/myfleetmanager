@@ -532,5 +532,7 @@
  "maint.spentYear": "Minuté v roku {year}: {amount}",
  "maint.spentAll": "Spolu: {amount}",
  "maint.notesHint": "Poznámky (servis, záruka…)",
- "app.slogan": "Váš vozový park na dlani"
+ "app.slogan": "Váš vozový park na dlani",
+ "pdf.chooseGroups": "Čo chcete exportovať?",
+ "pdf.allGroups": "Všetky skupiny"
 }

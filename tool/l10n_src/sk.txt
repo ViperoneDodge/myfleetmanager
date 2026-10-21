@@ -532,3 +532,5 @@ Minuté v roku {year}: {amount}
 Spolu: {amount}
 Poznámky (servis, záruka…)
 Váš vozový park na dlani
+Čo chcete exportovať?
+Všetky skupiny

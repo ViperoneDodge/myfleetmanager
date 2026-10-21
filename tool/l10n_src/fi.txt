@@ -532,3 +532,5 @@ Käytetty {year}: {amount}
 Yhteensä: {amount}
 Muistiinpanot (korjaamo, takuu…)
 Ajoneuvosi kämmenelläsi
+Mitä haluat viedä?
+Kaikki ryhmät

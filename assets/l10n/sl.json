@@ -532,5 +532,7 @@
  "maint.spentYear": "Porabljeno v {year}: {amount}",
  "maint.spentAll": "Skupaj: {amount}",
  "maint.notesHint": "Opombe (servis, garancija…)",
- "app.slogan": "Tvoj vozni park na dlani"
+ "app.slogan": "Tvoj vozni park na dlani",
+ "pdf.chooseGroups": "Kaj želiš izvoziti?",
+ "pdf.allGroups": "Vse skupine"
 }

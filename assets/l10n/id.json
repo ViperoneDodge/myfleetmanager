@@ -532,5 +532,7 @@
  "maint.spentYear": "Pengeluaran {year}: {amount}",
  "maint.spentAll": "Total: {amount}",
  "maint.notesHint": "Catatan (bengkel, garansi…)",
- "app.slogan": "Armada Anda dalam genggaman"
+ "app.slogan": "Armada Anda dalam genggaman",
+ "pdf.chooseGroups": "Apa yang ingin diekspor?",
+ "pdf.allGroups": "Semua grup"
 }
