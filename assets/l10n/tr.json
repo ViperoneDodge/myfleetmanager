@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Araçlar: {name}",
  "sync.problemDocs": "Belgeler: {name}",
  "sync.problemSave": "Kaydetme: {name}",
- "sync.retry": "Tekrar dene"
+ "sync.retry": "Tekrar dene",
+ "sync.problemAuth": "Hesap girişi",
+ "sync.authMismatch": "Girişiniz artık geçerli değil. Çıkış yapıp tekrar giriş yapın."
 }

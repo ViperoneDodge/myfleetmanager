@@ -559,5 +559,7 @@
  "sync.problemVehicles": "ยานพาหนะ: {name}",
  "sync.problemDocs": "เอกสาร: {name}",
  "sync.problemSave": "การบันทึก: {name}",
- "sync.retry": "ลองอีกครั้ง"
+ "sync.retry": "ลองอีกครั้ง",
+ "sync.problemAuth": "การลงชื่อเข้าใช้บัญชี",
+ "sync.authMismatch": "การลงชื่อเข้าใช้ไม่ถูกต้องแล้ว ออกจากระบบแล้วเข้าใหม่"
 }

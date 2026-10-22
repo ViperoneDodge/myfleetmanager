@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Transporto priemonės: {name}",
  "sync.problemDocs": "Dokumentai: {name}",
  "sync.problemSave": "Įrašymas: {name}",
- "sync.retry": "Bandyti dar kartą"
+ "sync.retry": "Bandyti dar kartą",
+ "sync.problemAuth": "Prisijungimas prie paskyros",
+ "sync.authMismatch": "Prisijungimas nebegalioja. Atsijunkite ir prisijunkite iš naujo."
 }

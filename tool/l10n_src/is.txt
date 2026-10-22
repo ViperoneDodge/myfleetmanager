@@ -559,3 +559,5 @@ Listi yfir hópa
 Skjöl: {name}
 Vistun: {name}
 Reyna aftur
+Innskráning á reikning
+Innskráningin er ekki lengur gild. Skráðu þig út og aftur inn.

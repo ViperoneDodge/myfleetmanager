@@ -559,3 +559,5 @@ Araçlar: {name}
 Belgeler: {name}
 Kaydetme: {name}
 Tekrar dene
+Hesap girişi
+Girişiniz artık geçerli değil. Çıkış yapıp tekrar giriş yapın.

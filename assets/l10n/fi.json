@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Ajoneuvot: {name}",
  "sync.problemDocs": "Asiakirjat: {name}",
  "sync.problemSave": "Tallennus: {name}",
- "sync.retry": "Yritä uudelleen"
+ "sync.retry": "Yritä uudelleen",
+ "sync.problemAuth": "Tilille kirjautuminen",
+ "sync.authMismatch": "Kirjautuminen ei ole enää voimassa. Kirjaudu ulos ja uudelleen sisään."
 }

@@ -559,5 +559,7 @@
  "sync.problemVehicles": "车辆：{name}",
  "sync.problemDocs": "文件：{name}",
  "sync.problemSave": "保存：{name}",
- "sync.retry": "重试"
+ "sync.retry": "重试",
+ "sync.problemAuth": "账户登录",
+ "sync.authMismatch": "登录已失效。请退出后重新登录。"
 }

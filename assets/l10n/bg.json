@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Превозни средства: {name}",
  "sync.problemDocs": "Документи: {name}",
  "sync.problemSave": "Запазване: {name}",
- "sync.retry": "Опитай отново"
+ "sync.retry": "Опитай отново",
+ "sync.problemAuth": "Вход в акаунта",
+ "sync.authMismatch": "Входът вече не е валиден. Излезте и влезте отново."
 }

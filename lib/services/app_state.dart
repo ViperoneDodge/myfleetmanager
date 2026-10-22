@@ -640,6 +640,8 @@ class AppState extends ChangeNotifier {
         return tr('sync.problemVehicles', {'name': name});
       case 'docs':
         return tr('sync.problemDocs', {'name': name});
+      case 'auth':
+        return tr('sync.problemAuth');
       default:
         return tr('sync.problemSave', {'name': name});
     }
@@ -700,6 +702,7 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> login(Session s) async {
+    await _logoutRun;
     await store.writeSession(s);
     await _open(s);
     notifications.requestPermission();
@@ -815,7 +818,12 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> logout() async {
+  Future<void>? _logoutRun;
+
+  Future<void> logout() => _logoutRun ??= _logout().whenComplete(() => _logoutRun = null);
+
+  Future<void> _logout() async {
+    final s = session;
     sync.stop();
     _proSub?.cancel();
     _proSub = null;
@@ -823,20 +831,22 @@ class AppState extends ChangeNotifier {
     webProChecked = false;
     _adminSub?.cancel();
     _adminSub = null;
-    await scheduleGroupWatch(false);
-    watch = GroupWatchState();
-    await watch.save();
     _retry?.cancel();
     if (isCloud) await push.stop();
-    await auth.logout(session);
+    if (!identical(session, s)) return;
+    await auth.logout(s);
+    if (!identical(session, s)) return;
     await store.writeSession(null);
     session = null;
     data = UserData();
     syncStatus = SyncStatus.off;
+    notifyListeners();
+    await scheduleGroupWatch(false);
+    watch = GroupWatchState();
+    await watch.save();
     try {
       await notifications.rescheduleAll([], data.notify);
     } catch (_) {}
-    notifyListeners();
   }
 
   Future<bool> deleteCloudAccount() async {
@@ -1162,6 +1172,9 @@ class AppState extends ChangeNotifier {
       }
     }
     _listen();
+    Timer(const Duration(seconds: 5), () {
+      if (identical(session, s) && auth.currentUid != s.key) sync.reportAuthMismatch();
+    });
   }
 
   void _listen() {

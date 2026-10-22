@@ -559,3 +559,5 @@ Vetturi: {name}
 Dokumenti: {name}
 Issejvjar: {name}
 Erġa' pprova
+Dħul fil-kont
+Id-dħul m'għadux validu. Oħroġ u erġa' idħol.

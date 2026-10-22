@@ -559,3 +559,5 @@ Vozila: {name}
 Dokumenti: {name}
 Shranjevanje: {name}
 Poskusi znova
+Prijava v račun
+Prijava ni več veljavna. Odjavi se in se znova prijavi.

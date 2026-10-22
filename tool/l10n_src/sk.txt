@@ -559,3 +559,5 @@ Vozidlá: {name}
 Dokumenty: {name}
 Ukladanie: {name}
 Skúsiť znova
+Prihlásenie do účtu
+Prihlásenie už nie je platné. Odhláste sa a znova sa prihláste.

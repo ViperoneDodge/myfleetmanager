@@ -559,3 +559,5 @@ Veículos: {name}
 Documentos: {name}
 Gravação: {name}
 Tentar novamente
+Acesso à conta
+O seu acesso já não é válido. Termine sessão e volte a entrar.

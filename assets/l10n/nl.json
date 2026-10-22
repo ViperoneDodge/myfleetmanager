@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Voertuigen: {name}",
  "sync.problemDocs": "Documenten: {name}",
  "sync.problemSave": "Opslaan: {name}",
- "sync.retry": "Opnieuw proberen"
+ "sync.retry": "Opnieuw proberen",
+ "sync.problemAuth": "Aanmelding account",
+ "sync.authMismatch": "Je aanmelding is niet meer geldig. Meld je af en weer aan."
 }

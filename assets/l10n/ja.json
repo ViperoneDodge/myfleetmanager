@@ -559,5 +559,7 @@
  "sync.problemVehicles": "車両：{name}",
  "sync.problemDocs": "書類：{name}",
  "sync.problemSave": "保存：{name}",
- "sync.retry": "再試行"
+ "sync.retry": "再試行",
+ "sync.problemAuth": "アカウントのログイン",
+ "sync.authMismatch": "ログインが無効になりました。ログアウトして再度ログインしてください。"
 }

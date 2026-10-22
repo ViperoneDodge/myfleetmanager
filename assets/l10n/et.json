@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Sõidukid: {name}",
  "sync.problemDocs": "Dokumendid: {name}",
  "sync.problemSave": "Salvestamine: {name}",
- "sync.retry": "Proovi uuesti"
+ "sync.retry": "Proovi uuesti",
+ "sync.problemAuth": "Kontole sisselogimine",
+ "sync.authMismatch": "Sisselogimine pole enam kehtiv. Logi välja ja uuesti sisse."
 }

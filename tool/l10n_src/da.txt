@@ -559,3 +559,5 @@ Køretøjer: {name}
 Dokumenter: {name}
 Gemning: {name}
 Prøv igen
+Kontologin
+Dit login er ikke længere gyldigt. Log ud og log ind igen.

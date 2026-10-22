@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Transportlīdzekļi: {name}",
  "sync.problemDocs": "Dokumenti: {name}",
  "sync.problemSave": "Saglabāšana: {name}",
- "sync.retry": "Mēģināt vēlreiz"
+ "sync.retry": "Mēģināt vēlreiz",
+ "sync.problemAuth": "Pieteikšanās kontā",
+ "sync.authMismatch": "Pieteikšanās vairs nav derīga. Izrakstieties un piesakieties vēlreiz."
 }

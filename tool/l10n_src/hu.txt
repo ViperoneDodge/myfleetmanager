@@ -559,3 +559,5 @@ Járművek: {name}
 Dokumentumok: {name}
 Mentés: {name}
 Újra
+Fiókbejelentkezés
+A bejelentkezés már nem érvényes. Jelentkezz ki, majd be újra.

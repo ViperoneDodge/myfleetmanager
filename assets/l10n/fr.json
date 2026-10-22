@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Véhicules : {name}",
  "sync.problemDocs": "Documents : {name}",
  "sync.problemSave": "Enregistrement : {name}",
- "sync.retry": "Réessayer"
+ "sync.retry": "Réessayer",
+ "sync.problemAuth": "Connexion au compte",
+ "sync.authMismatch": "Votre connexion n'est plus valide. Déconnectez-vous puis reconnectez-vous."
 }

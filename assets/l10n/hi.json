@@ -559,5 +559,7 @@
  "sync.problemVehicles": "वाहन: {name}",
  "sync.problemDocs": "दस्तावेज़: {name}",
  "sync.problemSave": "सहेजना: {name}",
- "sync.retry": "फिर से कोशिश करें"
+ "sync.retry": "फिर से कोशिश करें",
+ "sync.problemAuth": "खाते में लॉगिन",
+ "sync.authMismatch": "लॉगिन अब मान्य नहीं है। लॉग आउट करके फिर से लॉग इन करें।"
 }

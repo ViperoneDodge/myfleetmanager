@@ -60,7 +60,7 @@ class PushService {
       try {
         await FirebaseFirestore.instance.collection('users').doc(uid).set({
           'tokens': {t: FieldValue.delete()},
-        }, SetOptions(merge: true));
+        }, SetOptions(merge: true)).timeout(const Duration(seconds: 4));
       } catch (_) {}
     }
     await _tokenSub?.cancel();

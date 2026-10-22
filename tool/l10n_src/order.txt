@@ -559,3 +559,5 @@ sync.problemVehicles
 sync.problemDocs
 sync.problemSave
 sync.retry
+sync.problemAuth
+sync.authMismatch

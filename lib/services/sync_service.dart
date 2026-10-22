@@ -57,6 +57,8 @@ class SyncService {
     onHealth?.call();
   }
 
+  void reportAuthMismatch() => _fail('auth', FleetException(tr('sync.authMismatch')));
+
   void _ok(String key) {
     if (problems.remove(key) != null) onHealth?.call();
   }

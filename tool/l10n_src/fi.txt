@@ -559,3 +559,5 @@ Ajoneuvot: {name}
 Asiakirjat: {name}
 Tallennus: {name}
 Yritä uudelleen
+Tilille kirjautuminen
+Kirjautuminen ei ole enää voimassa. Kirjaudu ulos ja uudelleen sisään.

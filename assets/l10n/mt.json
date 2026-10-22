@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Vetturi: {name}",
  "sync.problemDocs": "Dokumenti: {name}",
  "sync.problemSave": "Issejvjar: {name}",
- "sync.retry": "Erġa' pprova"
+ "sync.retry": "Erġa' pprova",
+ "sync.problemAuth": "Dħul fil-kont",
+ "sync.authMismatch": "Id-dħul m'għadux validu. Oħroġ u erġa' idħol."
 }

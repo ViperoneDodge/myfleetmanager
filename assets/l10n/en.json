@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Vehicles: {name}",
  "sync.problemDocs": "Documents: {name}",
  "sync.problemSave": "Saving: {name}",
- "sync.retry": "Retry"
+ "sync.retry": "Retry",
+ "sync.problemAuth": "Account sign-in",
+ "sync.authMismatch": "Your sign-in is no longer valid. Sign out and sign in again."
 }

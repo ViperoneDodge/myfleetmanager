@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Vozila: {name}",
  "sync.problemDocs": "Dokumenti: {name}",
  "sync.problemSave": "Spremanje: {name}",
- "sync.retry": "Pokušaj ponovno"
+ "sync.retry": "Pokušaj ponovno",
+ "sync.problemAuth": "Prijava na račun",
+ "sync.authMismatch": "Prijava više nije valjana. Odjavi se i ponovno se prijavi."
 }

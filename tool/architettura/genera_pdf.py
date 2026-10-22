@@ -626,7 +626,8 @@ story += [table([
 ], [44 * mm, 66 * mm, 60 * mm]), Spacer(1, 6)]
 story += B([
     'Connessioni cifrate verso Firebase; accesso al cloud solo con utente autenticato.',
-    'Se la sincronizzazione non riesce (errore o nessuna risposta dal server sui gruppi entro un minuto) in alto a sinistra compare un\'icona rossa «!!»: un tocco mostra cosa non va e permette di riprovare.',
+    'Uscita dall\'account in un solo passaggio (un secondo tocco non avvia una seconda uscita) e con tempo massimo; l\'accesso con Google mostra sempre la scelta dell\'account.',
+    'Se la sincronizzazione non riesce (errore, nessuna risposta dal server sui gruppi entro un minuto o account Firebase diverso da quello dell\'app) in alto a sinistra compare un\'icona rossa «!!»: un tocco mostra cosa non va e permette di riprovare.',
     'L\'account «solo su questo telefono» non invia nulla in rete.',
     'Il riconoscimento del libretto avviene interamente sul telefono.',
     'Cancellazione completa dei dati e dell\'account dall\'app, più richiesta via email per i dati residui.',

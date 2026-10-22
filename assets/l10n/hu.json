@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Járművek: {name}",
  "sync.problemDocs": "Dokumentumok: {name}",
  "sync.problemSave": "Mentés: {name}",
- "sync.retry": "Újra"
+ "sync.retry": "Újra",
+ "sync.problemAuth": "Fiókbejelentkezés",
+ "sync.authMismatch": "A bejelentkezés már nem érvényes. Jelentkezz ki, majd be újra."
 }

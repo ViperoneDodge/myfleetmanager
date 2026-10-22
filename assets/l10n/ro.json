@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Vehicule: {name}",
  "sync.problemDocs": "Documente: {name}",
  "sync.problemSave": "Salvare: {name}",
- "sync.retry": "Reîncearcă"
+ "sync.retry": "Reîncearcă",
+ "sync.problemAuth": "Conectare la cont",
+ "sync.authMismatch": "Conectarea nu mai este validă. Deconectează-te și conectează-te din nou."
 }

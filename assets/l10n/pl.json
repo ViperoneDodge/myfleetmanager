@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Pojazdy: {name}",
  "sync.problemDocs": "Dokumenty: {name}",
  "sync.problemSave": "Zapis: {name}",
- "sync.retry": "Spróbuj ponownie"
+ "sync.retry": "Spróbuj ponownie",
+ "sync.problemAuth": "Logowanie do konta",
+ "sync.authMismatch": "Logowanie nie jest już ważne. Wyloguj się i zaloguj ponownie."
 }

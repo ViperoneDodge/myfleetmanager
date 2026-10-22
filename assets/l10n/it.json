@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Veicoli: {name}",
  "sync.problemDocs": "Documenti: {name}",
  "sync.problemSave": "Salvataggio: {name}",
- "sync.retry": "Riprova"
+ "sync.retry": "Riprova",
+ "sync.problemAuth": "Accesso all'account",
+ "sync.authMismatch": "L'accesso non è più valido. Esci dall'account e rientra."
 }

@@ -559,3 +559,5 @@ Kjøretøy: {name}
 Dokumenter: {name}
 Lagring: {name}
 Prøv igjen
+Kontopålogging
+Påloggingen er ikke lenger gyldig. Logg ut og logg inn igjen.

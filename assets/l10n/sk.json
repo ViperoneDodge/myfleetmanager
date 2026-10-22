@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Vozidlá: {name}",
  "sync.problemDocs": "Dokumenty: {name}",
  "sync.problemSave": "Ukladanie: {name}",
- "sync.retry": "Skúsiť znova"
+ "sync.retry": "Skúsiť znova",
+ "sync.problemAuth": "Prihlásenie do účtu",
+ "sync.authMismatch": "Prihlásenie už nie je platné. Odhláste sa a znova sa prihláste."
 }

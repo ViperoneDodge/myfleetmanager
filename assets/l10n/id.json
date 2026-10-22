@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Kendaraan: {name}",
  "sync.problemDocs": "Dokumen: {name}",
  "sync.problemSave": "Penyimpanan: {name}",
- "sync.retry": "Coba lagi"
+ "sync.retry": "Coba lagi",
+ "sync.problemAuth": "Masuk akun",
+ "sync.authMismatch": "Sesi masuk tidak lagi berlaku. Keluar lalu masuk kembali."
 }

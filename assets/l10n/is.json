@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Ökutæki: {name}",
  "sync.problemDocs": "Skjöl: {name}",
  "sync.problemSave": "Vistun: {name}",
- "sync.retry": "Reyna aftur"
+ "sync.retry": "Reyna aftur",
+ "sync.problemAuth": "Innskráning á reikning",
+ "sync.authMismatch": "Innskráningin er ekki lengur gild. Skráðu þig út og aftur inn."
 }

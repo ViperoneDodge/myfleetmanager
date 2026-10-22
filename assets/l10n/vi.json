@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Xe: {name}",
  "sync.problemDocs": "Tài liệu: {name}",
  "sync.problemSave": "Lưu: {name}",
- "sync.retry": "Thử lại"
+ "sync.retry": "Thử lại",
+ "sync.problemAuth": "Đăng nhập tài khoản",
+ "sync.authMismatch": "Phiên đăng nhập không còn hợp lệ. Hãy đăng xuất rồi đăng nhập lại."
 }

@@ -559,5 +559,7 @@
  "sync.problemVehicles": "차량: {name}",
  "sync.problemDocs": "문서: {name}",
  "sync.problemSave": "저장: {name}",
- "sync.retry": "다시 시도"
+ "sync.retry": "다시 시도",
+ "sync.problemAuth": "계정 로그인",
+ "sync.authMismatch": "로그인이 더 이상 유효하지 않습니다. 로그아웃한 뒤 다시 로그인하세요."
 }

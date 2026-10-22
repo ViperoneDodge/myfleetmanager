@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Οχήματα: {name}",
  "sync.problemDocs": "Έγγραφα: {name}",
  "sync.problemSave": "Αποθήκευση: {name}",
- "sync.retry": "Δοκιμή ξανά"
+ "sync.retry": "Δοκιμή ξανά",
+ "sync.problemAuth": "Σύνδεση λογαριασμού",
+ "sync.authMismatch": "Η σύνδεση δεν ισχύει πλέον. Αποσυνδεθείτε και συνδεθείτε ξανά."
 }

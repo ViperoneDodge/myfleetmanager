@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Fordon: {name}",
  "sync.problemDocs": "Dokument: {name}",
  "sync.problemSave": "Sparande: {name}",
- "sync.retry": "Försök igen"
+ "sync.retry": "Försök igen",
+ "sync.problemAuth": "Kontoinloggning",
+ "sync.authMismatch": "Inloggningen gäller inte längre. Logga ut och logga in igen."
 }

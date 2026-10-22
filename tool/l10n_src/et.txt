@@ -559,3 +559,5 @@ Sõidukid: {name}
 Dokumendid: {name}
 Salvestamine: {name}
 Proovi uuesti
+Kontole sisselogimine
+Sisselogimine pole enam kehtiv. Logi välja ja uuesti sisse.

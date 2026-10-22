@@ -559,3 +559,5 @@ Kendaraan: {name}
 Dokumen: {name}
 Penyimpanan: {name}
 Coba lagi
+Masuk akun
+Sesi masuk tidak lagi berlaku. Keluar lalu masuk kembali.

@@ -559,3 +559,5 @@ Xe: {name}
 Tài liệu: {name}
 Lưu: {name}
 Thử lại
+Đăng nhập tài khoản
+Phiên đăng nhập không còn hợp lệ. Hãy đăng xuất rồi đăng nhập lại.

@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Kjøretøy: {name}",
  "sync.problemDocs": "Dokumenter: {name}",
  "sync.problemSave": "Lagring: {name}",
- "sync.retry": "Prøv igjen"
+ "sync.retry": "Prøv igjen",
+ "sync.problemAuth": "Kontopålogging",
+ "sync.authMismatch": "Påloggingen er ikke lenger gyldig. Logg ut og logg inn igjen."
 }

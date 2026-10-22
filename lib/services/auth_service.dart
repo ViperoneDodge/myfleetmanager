@@ -27,6 +27,8 @@ class AuthService {
 
   bool get cloudAvailable => FirebaseConfig.isConfigured && Firebase.apps.isNotEmpty;
 
+  String? get currentUid => cloudAvailable ? FirebaseAuth.instance.currentUser?.uid : null;
+
   String _hash(String password, String salt) {
     var bytes = utf8.encode('$salt:$password');
     var digest = sha256.convert(bytes);
@@ -147,6 +149,9 @@ class AuthService {
     }
     try {
       final g = _google();
+      try {
+        await g.signOut();
+      } catch (_) {}
       final account = await g.signIn();
       if (account == null) throw AuthException(tr('auth.googleCancelled'));
       final auth = await account.authentication;

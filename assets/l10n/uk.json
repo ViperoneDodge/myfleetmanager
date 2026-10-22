@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Транспорт: {name}",
  "sync.problemDocs": "Документи: {name}",
  "sync.problemSave": "Збереження: {name}",
- "sync.retry": "Повторити"
+ "sync.retry": "Повторити",
+ "sync.problemAuth": "Вхід в обліковий запис",
+ "sync.authMismatch": "Вхід більше не дійсний. Вийдіть і увійдіть знову."
 }

@@ -559,5 +559,7 @@
  "sync.problemVehicles": "Køretøjer: {name}",
  "sync.problemDocs": "Dokumenter: {name}",
  "sync.problemSave": "Gemning: {name}",
- "sync.retry": "Prøv igen"
+ "sync.retry": "Prøv igen",
+ "sync.problemAuth": "Kontologin",
+ "sync.authMismatch": "Dit login er ikke længere gyldigt. Log ud og log ind igen."
 }
