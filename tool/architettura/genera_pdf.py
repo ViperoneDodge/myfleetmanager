@@ -630,8 +630,8 @@ story += B([
     'Il riconoscimento del libretto avviene interamente sul telefono.',
     'Cancellazione completa dei dati e dell\'account dall\'app, più richiesta via email per i dati residui.',
     'Nessuna pubblicità e nessun identificativo pubblicitario (permesso AD_ID rimosso).',
-    'Codice Dart offuscato nelle build Android e iOS (nomi di classi e funzioni resi illeggibili) e codice Java ridotto da R8; '
-    'la versione web è compilata e minimizzata.',
+    'Codice Java ridotto e rimescolato da R8; la versione web è compilata e minimizzata. L\'offuscamento del codice Dart, '
+    'provato nella 2.1.3, è sospeso (vedi BACKLOG.md).',
     'Sito web con intestazioni di sicurezza: HTTPS obbligatorio (HSTS), divieto di inserimento in altre pagine, '
     'nessun accesso a fotocamera, microfono e posizione dal browser.',
     'Firebase App Check attivo nell\'app: ogni richiesta al cloud porta un certificato che attesta l\'app originale; '
@@ -667,7 +667,7 @@ story += [P('La stessa app gira nel browser di PC e Mac ed è <b>riservata agli 
             'account online e, se l\'account non ha la Pro, compare una pagina che invita ad attivarla dall\'app sul telefono. '
             'I dati sono gli stessi del telefono, sincronizzati tramite Firestore. La pubblicazione avviene con un workflow dedicato '
             '(<font name="DVM">.github/workflows/build-web.yml</font>) su Firebase Hosting; '
-            '<font name="DVM">tool/patch_web.py</font> imposta titolo, icone e schermata di caricamento.')]
+            '<font name="DVM">tool/patch_web.py</font> imposta titolo, icone e schermata di caricamento (logo, nome in Lobster e slogan).')]
 story += [table([
     ['Funzione', 'Nel browser'],
     ['Veicoli, scadenze, dati tecnici, manutenzioni, gruppi, preferiti, PDF', 'sì'],

@@ -29,14 +29,26 @@ if WEB.exists():
   <title>MyFleetManager</title>
   <style>
     html, body {{ margin: 0; height: 100%; background: {BLUE}; }}
+    #splash {{ background: linear-gradient(180deg, #0B5CC8 0%, #063F95 100%); }}
     #splash {{ position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }}
     #splash img {{ width: 112px; height: 112px; border-radius: 24px; box-shadow: 0 8px 24px rgba(0,0,0,.25); }}
+    @font-face {{ font-family: 'Lobster'; src: url('assets/assets/fonts/Lobster-Regular.ttf'); font-display: swap; }}
+    @font-face {{ font-family: 'LobsterTwo'; src: url('assets/assets/fonts/LobsterTwo-Regular.ttf'); font-display: swap; }}
+    #splash .box {{ display: flex; flex-direction: column; align-items: center; box-sizing: border-box; width: 100%; padding: 24px; text-align: center; }}
+    #splash .name {{ font-family: 'Lobster', cursive; color: #fff; font-size: clamp(30px, 10vw, 46px); margin-top: 22px;
+      text-shadow: 2px 3px 0 rgba(0,0,0,.4); }}
+    #splash .slogan {{ font-family: 'LobsterTwo', cursive; color: #FFD54F; font-size: clamp(22px, 7vw, 32px); line-height: 1.05;
+      margin-top: 14px; transform: rotate(-6deg); text-shadow: 2px 3px 0 rgba(0,0,0,.6); }}
   </style>
 </head>
 <body>
-  <div id="splash"><img src="icons/Icon-192.png" alt="MyFleetManager"></div>
+  <div id="splash"><div class="box"><img src="icons/Icon-192.png" alt="MyFleetManager">
+    <div class="name">MyFleetManager</div><div class="slogan" id="slogan"></div></div></div>
   <script>
     (function () {{
+      var it0 = (navigator.language || 'it').toLowerCase().indexOf('it') === 0;
+      document.getElementById('slogan').innerHTML = it0
+        ? 'La tua flotta nel<br>palmo della mano' : 'Your fleet in the<br>palm of your hand';
       var ok = 'noModule' in document.createElement('script') && !!window.fetch && !!window.Promise
         && !!window.ResizeObserver && typeof Array.prototype.at === 'function'
         && typeof structuredClone === 'function';
