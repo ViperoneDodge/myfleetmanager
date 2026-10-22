@@ -564,3 +564,5 @@ Id-dħul m'għadux validu. Oħroġ u erġa' idħol.
 Dijanjostika tas-sinkronizzazzjoni
 Informazzjoni teknika għall-iżviluppatur
 Dijanjostika kkupjata
+Quddiem
+Wara

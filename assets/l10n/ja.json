@@ -564,5 +564,7 @@
  "sync.authMismatch": "ログインが無効になりました。ログアウトして再度ログインしてください。",
  "diag.title": "同期の診断",
  "diag.subtitle": "開発者に送る技術情報",
- "diag.copied": "診断情報をコピーしました"
+ "diag.copied": "診断情報をコピーしました",
+ "tyre.frontOne": "フロント",
+ "tyre.rearOne": "リア"
 }

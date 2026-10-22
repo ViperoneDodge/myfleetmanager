@@ -564,5 +564,7 @@
  "sync.authMismatch": "Innskráningin er ekki lengur gild. Skráðu þig út og aftur inn.",
  "diag.title": "Greining samstillingar",
  "diag.subtitle": "Tæknilegar upplýsingar fyrir forritarann",
- "diag.copied": "Greining afrituð"
+ "diag.copied": "Greining afrituð",
+ "tyre.frontOne": "Framdekk",
+ "tyre.rearOne": "Afturdekk"
 }

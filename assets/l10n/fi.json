@@ -564,5 +564,7 @@
  "sync.authMismatch": "Kirjautuminen ei ole enää voimassa. Kirjaudu ulos ja uudelleen sisään.",
  "diag.title": "Synkronoinnin diagnostiikka",
  "diag.subtitle": "Tekniset tiedot kehittäjälle",
- "diag.copied": "Diagnostiikka kopioitu"
+ "diag.copied": "Diagnostiikka kopioitu",
+ "tyre.frontOne": "Etu",
+ "tyre.rearOne": "Taka"
 }

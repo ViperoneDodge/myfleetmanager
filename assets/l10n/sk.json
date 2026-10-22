@@ -564,5 +564,7 @@
  "sync.authMismatch": "Prihlásenie už nie je platné. Odhláste sa a znova sa prihláste.",
  "diag.title": "Diagnostika synchronizácie",
  "diag.subtitle": "Technické informácie pre vývojára",
- "diag.copied": "Diagnostika skopírovaná"
+ "diag.copied": "Diagnostika skopírovaná",
+ "tyre.frontOne": "Predná",
+ "tyre.rearOne": "Zadná"
 }

@@ -564,5 +564,7 @@
  "sync.authMismatch": "Logowanie nie jest już ważne. Wyloguj się i zaloguj ponownie.",
  "diag.title": "Diagnostyka synchronizacji",
  "diag.subtitle": "Informacje techniczne dla twórcy aplikacji",
- "diag.copied": "Diagnostyka skopiowana"
+ "diag.copied": "Diagnostyka skopiowana",
+ "tyre.frontOne": "Przednia",
+ "tyre.rearOne": "Tylna"
 }

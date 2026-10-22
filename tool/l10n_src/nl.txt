@@ -564,3 +564,5 @@ Je aanmelding is niet meer geldig. Meld je af en weer aan.
 Synchronisatiediagnose
 Technische informatie voor de ontwikkelaar
 Diagnose gekopieerd
+Voor
+Achter

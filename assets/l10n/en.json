@@ -564,5 +564,7 @@
  "sync.authMismatch": "Your sign-in is no longer valid. Sign out and sign in again.",
  "diag.title": "Sync diagnostics",
  "diag.subtitle": "Technical information to send to the developer",
- "diag.copied": "Diagnostics copied"
+ "diag.copied": "Diagnostics copied",
+ "tyre.frontOne": "Front",
+ "tyre.rearOne": "Rear"
 }

@@ -564,5 +564,7 @@
  "sync.authMismatch": "Sisselogimine pole enam kehtiv. Logi välja ja uuesti sisse.",
  "diag.title": "Sünkroonimise diagnostika",
  "diag.subtitle": "Tehniline teave arendajale",
- "diag.copied": "Diagnostika kopeeritud"
+ "diag.copied": "Diagnostika kopeeritud",
+ "tyre.frontOne": "Esirehv",
+ "tyre.rearOne": "Tagarehv"
 }

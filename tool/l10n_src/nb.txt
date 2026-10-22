@@ -564,3 +564,5 @@ Påloggingen er ikke lenger gyldig. Logg ut og logg inn igjen.
 Synkroniseringsdiagnostikk
 Teknisk informasjon til utvikleren
 Diagnostikk kopiert
+Foran
+Bak

@@ -564,5 +564,7 @@
  "sync.authMismatch": "Phiên đăng nhập không còn hợp lệ. Hãy đăng xuất rồi đăng nhập lại.",
  "diag.title": "Chẩn đoán đồng bộ",
  "diag.subtitle": "Thông tin kỹ thuật gửi cho nhà phát triển",
- "diag.copied": "Đã sao chép chẩn đoán"
+ "diag.copied": "Đã sao chép chẩn đoán",
+ "tyre.frontOne": "Bánh trước",
+ "tyre.rearOne": "Bánh sau"
 }

@@ -564,5 +564,7 @@
  "sync.authMismatch": "Tu sesión ya no es válida. Cierra sesión y vuelve a entrar.",
  "diag.title": "Diagnóstico de sincronización",
  "diag.subtitle": "Información técnica para enviar al desarrollador",
- "diag.copied": "Diagnóstico copiado"
+ "diag.copied": "Diagnóstico copiado",
+ "tyre.frontOne": "Delantero",
+ "tyre.rearOne": "Trasero"
 }

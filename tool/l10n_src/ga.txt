@@ -564,3 +564,5 @@ Níl do shíniú isteach bailí a thuilleadh. Sínigh amach agus isteach arís.
 Diagnóisic sioncrónaithe
 Faisnéis theicniúil don fhorbróir
 Diagnóisic cóipeáilte
+Tosaigh
+Cúil

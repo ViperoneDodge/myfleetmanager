@@ -215,6 +215,10 @@ void main() {
               scrollable: find.byType(Scrollable).first);
           await Scrollable.ensureVisible(tester.element(find.text('${tr('tech.powerName')} (kW / ${tr('unit.cv')})')), alignment: 0.25);
         });
+        await shot(tester, VehicleEditScreen(vehicle: appState.vehicleById('g3')!.copy()..tyres = ''), '06c_moto_tyres', then: () async {
+          await tester.scrollUntilVisible(find.text(tr('tyre.rearOne')), 300, scrollable: find.byType(Scrollable).first);
+          await Scrollable.ensureVisible(tester.element(find.text(tr('tyre.frontOne'))), alignment: 0.3);
+        });
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '07_ocr', then: () async {
           final ctx = tester.element(find.byType(VehicleDetailScreen));
           final rows = [

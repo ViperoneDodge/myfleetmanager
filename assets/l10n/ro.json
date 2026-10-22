@@ -564,5 +564,7 @@
  "sync.authMismatch": "Conectarea nu mai este validă. Deconectează-te și conectează-te din nou.",
  "diag.title": "Diagnosticare sincronizare",
  "diag.subtitle": "Informații tehnice pentru dezvoltator",
- "diag.copied": "Diagnosticare copiată"
+ "diag.copied": "Diagnosticare copiată",
+ "tyre.frontOne": "Față",
+ "tyre.rearOne": "Spate"
 }

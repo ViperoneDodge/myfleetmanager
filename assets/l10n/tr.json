@@ -564,5 +564,7 @@
  "sync.authMismatch": "Girişiniz artık geçerli değil. Çıkış yapıp tekrar giriş yapın.",
  "diag.title": "Senkronizasyon tanılama",
  "diag.subtitle": "Geliştiriciye gönderilecek teknik bilgiler",
- "diag.copied": "Tanılama kopyalandı"
+ "diag.copied": "Tanılama kopyalandı",
+ "tyre.frontOne": "Ön",
+ "tyre.rearOne": "Arka"
 }

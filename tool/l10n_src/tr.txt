@@ -564,3 +564,5 @@ Girişiniz artık geçerli değil. Çıkış yapıp tekrar giriş yapın.
 Senkronizasyon tanılama
 Geliştiriciye gönderilecek teknik bilgiler
 Tanılama kopyalandı
+Ön
+Arka

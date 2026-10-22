@@ -564,3 +564,5 @@ Prisijungimas nebegalioja. Atsijunkite ir prisijunkite iš naujo.
 Sinchronizavimo diagnostika
 Techninė informacija kūrėjui
 Diagnostika nukopijuota
+Priekinė
+Galinė

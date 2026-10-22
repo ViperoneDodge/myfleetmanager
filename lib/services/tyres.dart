@@ -6,6 +6,11 @@ class TyreSet {
   List<String> get sizeList =>
       sizes.split(RegExp(r'[;\n]')).map((s) => s.trim()).where((s) => s.isNotEmpty).toList();
 
+  static List<TyreSet> blank(bool frontRear, String front, String rear) =>
+      frontRear ? [TyreSet(label: front), TyreSet(label: rear)] : [TyreSet()];
+
+  static bool isBlank(List<TyreSet> sets) => sets.every((s) => s.sizeList.isEmpty);
+
   static final RegExp _line = RegExp(r'^([^:/\d][^:]{0,39}):\s*(.*)$');
 
   static List<TyreSet> parse(String text) {

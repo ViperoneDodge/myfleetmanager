@@ -564,3 +564,5 @@ Prihlásenie už nie je platné. Odhláste sa a znova sa prihláste.
 Diagnostika synchronizácie
 Technické informácie pre vývojára
 Diagnostika skopírovaná
+Predná
+Zadná

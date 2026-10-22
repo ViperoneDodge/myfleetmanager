@@ -39,4 +39,14 @@ void main() {
     expect(TyreSet.format([TyreSet(label: 'Inv: estive', sizes: '205/55 R16;;'), TyreSet(label: 'x', sizes: ' ')]),
         'Inv  estive: 205/55 R16');
   });
+
+  test('moto: anteriore e posteriore già pronti', () {
+    expect(TyreSet.blank(true, 'Anteriore', 'Posteriore').map((s) => s.label), ['Anteriore', 'Posteriore']);
+    expect(TyreSet.blank(false, 'Anteriore', 'Posteriore').single.label, '');
+    expect(TyreSet.isBlank(TyreSet.blank(true, 'A', 'P')), isTrue);
+    expect(TyreSet.isBlank([TyreSet(label: 'A', sizes: '120/70 ZR17')]), isFalse);
+    final saved = TyreSet.parse('Anteriori: 120/70 ZR17 58W\nPosteriori: 180/55 ZR17 73W');
+    expect(TyreSet.isBlank(saved), isFalse);
+    expect(TyreSet.parse(TyreSet.format(saved)).map((s) => s.label), ['Anteriori', 'Posteriori']);
+  });
 }

@@ -564,3 +564,5 @@ sync.authMismatch
 diag.title
 diag.subtitle
 diag.copied
+tyre.frontOne
+tyre.rearOne

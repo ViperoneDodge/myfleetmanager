@@ -564,5 +564,7 @@
  "sync.authMismatch": "Sesi masuk tidak lagi berlaku. Keluar lalu masuk kembali.",
  "diag.title": "Diagnostik sinkronisasi",
  "diag.subtitle": "Informasi teknis untuk dikirim ke pengembang",
- "diag.copied": "Diagnostik disalin"
+ "diag.copied": "Diagnostik disalin",
+ "tyre.frontOne": "Depan",
+ "tyre.rearOne": "Belakang"
 }

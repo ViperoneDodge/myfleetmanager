@@ -564,3 +564,5 @@ Sesi masuk tidak lagi berlaku. Keluar lalu masuk kembali.
 Diagnostik sinkronisasi
 Informasi teknis untuk dikirim ke pengembang
 Diagnostik disalin
+Depan
+Belakang

@@ -564,3 +564,5 @@ Prijava ni več veljavna. Odjavi se in se znova prijavi.
 Diagnostika sinhronizacije
 Tehnični podatki za razvijalca
 Diagnostika kopirana
+Sprednja
+Zadnja

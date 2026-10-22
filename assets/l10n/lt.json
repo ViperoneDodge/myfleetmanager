@@ -564,5 +564,7 @@
  "sync.authMismatch": "Prisijungimas nebegalioja. Atsijunkite ir prisijunkite iš naujo.",
  "diag.title": "Sinchronizavimo diagnostika",
  "diag.subtitle": "Techninė informacija kūrėjui",
- "diag.copied": "Diagnostika nukopijuota"
+ "diag.copied": "Diagnostika nukopijuota",
+ "tyre.frontOne": "Priekinė",
+ "tyre.rearOne": "Galinė"
 }

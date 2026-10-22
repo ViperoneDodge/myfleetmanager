@@ -564,3 +564,5 @@ Logowanie nie jest już ważne. Wyloguj się i zaloguj ponownie.
 Diagnostyka synchronizacji
 Informacje techniczne dla twórcy aplikacji
 Diagnostyka skopiowana
+Przednia
+Tylna

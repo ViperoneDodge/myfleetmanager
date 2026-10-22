@@ -564,5 +564,7 @@
  "sync.authMismatch": "Prijava ni več veljavna. Odjavi se in se znova prijavi.",
  "diag.title": "Diagnostika sinhronizacije",
  "diag.subtitle": "Tehnični podatki za razvijalca",
- "diag.copied": "Diagnostika kopirana"
+ "diag.copied": "Diagnostika kopirana",
+ "tyre.frontOne": "Sprednja",
+ "tyre.rearOne": "Zadnja"
 }

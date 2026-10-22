@@ -564,5 +564,7 @@
  "sync.authMismatch": "Pieteikšanās vairs nav derīga. Izrakstieties un piesakieties vēlreiz.",
  "diag.title": "Sinhronizācijas diagnostika",
  "diag.subtitle": "Tehniskā informācija izstrādātājam",
- "diag.copied": "Diagnostika nokopēta"
+ "diag.copied": "Diagnostika nokopēta",
+ "tyre.frontOne": "Priekšējā",
+ "tyre.rearOne": "Aizmugurējā"
 }

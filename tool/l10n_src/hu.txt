@@ -564,3 +564,5 @@ A bejelentkezés már nem érvényes. Jelentkezz ki, majd be újra.
 Szinkronizálási diagnosztika
 Műszaki adatok a fejlesztőnek
 Diagnosztika másolva
+Első
+Hátsó

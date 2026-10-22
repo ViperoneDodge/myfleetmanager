@@ -564,5 +564,7 @@
  "sync.authMismatch": "A bejelentkezés már nem érvényes. Jelentkezz ki, majd be újra.",
  "diag.title": "Szinkronizálási diagnosztika",
  "diag.subtitle": "Műszaki adatok a fejlesztőnek",
- "diag.copied": "Diagnosztika másolva"
+ "diag.copied": "Diagnosztika másolva",
+ "tyre.frontOne": "Első",
+ "tyre.rearOne": "Hátsó"
 }

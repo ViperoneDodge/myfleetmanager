@@ -564,5 +564,7 @@
  "sync.authMismatch": "L'accesso non è più valido. Esci dall'account e rientra.",
  "diag.title": "Diagnostica sincronizzazione",
  "diag.subtitle": "Informazioni tecniche da inviare allo sviluppatore",
- "diag.copied": "Diagnostica copiata"
+ "diag.copied": "Diagnostica copiata",
+ "tyre.frontOne": "Anteriore",
+ "tyre.rearOne": "Posteriore"
 }

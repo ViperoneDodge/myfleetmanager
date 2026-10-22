@@ -564,5 +564,7 @@
  "sync.authMismatch": "Inloggningen gäller inte längre. Logga ut och logga in igen.",
  "diag.title": "Synkroniseringsdiagnostik",
  "diag.subtitle": "Teknisk information till utvecklaren",
- "diag.copied": "Diagnostik kopierad"
+ "diag.copied": "Diagnostik kopierad",
+ "tyre.frontOne": "Fram",
+ "tyre.rearOne": "Bak"
 }

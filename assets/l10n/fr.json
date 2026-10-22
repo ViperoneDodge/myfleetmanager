@@ -564,5 +564,7 @@
  "sync.authMismatch": "Votre connexion n'est plus valide. Déconnectez-vous puis reconnectez-vous.",
  "diag.title": "Diagnostic de synchronisation",
  "diag.subtitle": "Informations techniques à envoyer au développeur",
- "diag.copied": "Diagnostic copié"
+ "diag.copied": "Diagnostic copié",
+ "tyre.frontOne": "Avant",
+ "tyre.rearOne": "Arrière"
 }

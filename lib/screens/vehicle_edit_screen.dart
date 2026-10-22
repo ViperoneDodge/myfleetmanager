@@ -30,7 +30,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   late final TextEditingController _vin = TextEditingController(text: v.vin);
   late final List<({TextEditingController label, TextEditingController sizes})> _tyreSets = [
     for (final s in TyreSet.parse(v.tyres)) _tyreSet(s),
-    if (TyreSet.parse(v.tyres).isEmpty) _tyreSet(TyreSet()),
+    if (TyreSet.parse(v.tyres).isEmpty) ..._blankTyres(),
   ];
   late final TextEditingController _power = TextEditingController(text: v.powerKw);
   late final TextEditingController _powerCv = TextEditingController(text: kwToCvText(v.powerKw));
@@ -55,6 +55,15 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     }
     setState(() {
       v.type = t;
+      if (TyreSet.isBlank(_tyreSnapshot())) {
+        for (final s in _tyreSets) {
+          s.label.dispose();
+          s.sizes.dispose();
+        }
+        _tyreSets
+          ..clear()
+          ..addAll(_blankTyres());
+      }
       if (_isNew) {
         for (final d in v.deadlines) {
           if (d.kind == DeadlineKind.service) {
@@ -464,6 +473,16 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   static ({TextEditingController label, TextEditingController sizes}) _tyreSet(TyreSet s) =>
       (label: TextEditingController(text: s.label), sizes: TextEditingController(text: s.sizeList.join('; ')));
 
+  List<({TextEditingController label, TextEditingController sizes})> _blankTyres() => [
+        for (final s in TyreSet.blank(v.type == VehicleType.moto, tr('tyre.frontOne'), tr('tyre.rearOne'))) _tyreSet(s),
+      ];
+
+  String _tyreHint(int i) {
+    final hint = tr('tyre.sizesHint');
+    if (v.type != VehicleType.moto) return hint;
+    return hint.replaceFirst('225/45 R17 91W; 205/55 R16 91V', i.isOdd ? '180/55 ZR17 73W' : '120/70 ZR17 58W');
+  }
+
   List<TyreSet> _tyreSnapshot() =>
       [for (final s in _tyreSets) TyreSet(label: s.label.text.trim(), sizes: s.sizes.text)];
 
@@ -551,7 +570,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
               minLines: 1,
               maxLines: 4,
               onChanged: (_) => setState(() {}),
-              decoration: InputDecoration(isDense: true, hintText: tr('tyre.sizesHint')),
+              decoration: InputDecoration(isDense: true, hintText: _tyreHint(i)),
             ),
           ],
           const SizedBox(height: 6),

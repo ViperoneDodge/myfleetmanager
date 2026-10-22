@@ -564,3 +564,5 @@ Conectarea nu mai este validă. Deconectează-te și conectează-te din nou.
 Diagnosticare sincronizare
 Informații tehnice pentru dezvoltator
 Diagnosticare copiată
+Față
+Spate

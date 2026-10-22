@@ -564,5 +564,7 @@
  "sync.authMismatch": "Deine Anmeldung ist nicht mehr gültig. Melde dich ab und wieder an.",
  "diag.title": "Synchronisierungsdiagnose",
  "diag.subtitle": "Technische Informationen für den Entwickler",
- "diag.copied": "Diagnose kopiert"
+ "diag.copied": "Diagnose kopiert",
+ "tyre.frontOne": "Vorne",
+ "tyre.rearOne": "Hinten"
 }

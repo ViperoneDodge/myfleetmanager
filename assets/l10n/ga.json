@@ -564,5 +564,7 @@
  "sync.authMismatch": "Níl do shíniú isteach bailí a thuilleadh. Sínigh amach agus isteach arís.",
  "diag.title": "Diagnóisic sioncrónaithe",
  "diag.subtitle": "Faisnéis theicniúil don fhorbróir",
- "diag.copied": "Diagnóisic cóipeáilte"
+ "diag.copied": "Diagnóisic cóipeáilte",
+ "tyre.frontOne": "Tosaigh",
+ "tyre.rearOne": "Cúil"
 }
