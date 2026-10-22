@@ -41,3 +41,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: myfleetmanager-3ca03
           channelId: live
+          firebaseToolsVersion: 15.34.0
