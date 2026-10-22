@@ -51,7 +51,7 @@ class SupportService {
       final req = await client.postUrl(Uri.parse('https://formsubmit.co/ajax/$email'));
       req.headers.contentType = ContentType.json;
       req.headers.set(HttpHeaders.acceptHeader, 'application/json');
-      req.headers.set('Origin', 'https://viperonedodge.github.io');
+      req.headers.set('Origin', 'https://myfleetmanager-3ca03.web.app');
       req.headers.set('Referer', '$privacyUrl');
       req.write(jsonEncode({
         '_subject': subject,

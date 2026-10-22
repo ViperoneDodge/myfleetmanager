@@ -397,13 +397,13 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
             ),
             Row(children: [
               Expanded(
-                child: _techField(_power, tr('tech.power'), Icons.speed,
-                    number: true, onChanged: (t) => _powerCv.text = kwToCvText(t)),
+                child: _techField(_power, tr('tech.powerName'), Icons.speed,
+                    number: true, suffix: 'kW', onChanged: (t) => _powerCv.text = kwToCvText(t)),
               ),
               const SizedBox(width: 10),
               Expanded(
-                child: _techField(_powerCv, tr('tech.powerCv'), Icons.speed,
-                    number: true, onChanged: (t) => _power.text = cvToKwText(t)),
+                child: _techField(_powerCv, tr('tech.powerName'), Icons.speed,
+                    number: true, suffix: tr('unit.cv'), onChanged: (t) => _power.text = cvToKwText(t)),
               ),
             ]),
             _techField(_cc, tr('tech.engine'), Icons.settings_outlined, number: true),
@@ -583,7 +583,12 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   }
 
   Widget _techField(TextEditingController c, String label, IconData icon,
-          {bool caps = false, bool number = false, String? hint, int lines = 1, ValueChanged<String>? onChanged}) =>
+          {bool caps = false,
+          bool number = false,
+          String? hint,
+          int lines = 1,
+          String? suffix,
+          ValueChanged<String>? onChanged}) =>
       Padding(
         padding: const EdgeInsets.only(bottom: 10),
         child: TextField(
@@ -596,6 +601,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
           decoration: InputDecoration(
             labelText: label,
             hintText: hint,
+            suffixText: suffix,
             filled: true,
             isDense: true,
             border: const OutlineInputBorder(),

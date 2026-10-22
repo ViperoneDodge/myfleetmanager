@@ -2,6 +2,11 @@
 
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
+## Prossima versione (2.1.7)
+- [x] Unità di misura dentro il campo, accanto al numero (kW, CV), con etichetta corta «Potenza».
+- [x] Segnalazioni allo sviluppatore (FormSubmit) inviate con il nuovo indirizzo del sito.
+- [ ] Durata della Pro con codice sviluppatore: oggi scade a ogni nuova versione. Da decidere: 30 giorni oppure finché non viene revocata.
+
 ## Prima di andare in produzione
 
 ### Sicurezza
