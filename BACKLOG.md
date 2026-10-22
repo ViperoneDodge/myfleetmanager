@@ -6,7 +6,7 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 - [x] Unità di misura dentro il campo, accanto al numero (kW, CV), con etichetta corta «Potenza».
 - [x] Potenza in una sola casella «Potenza (kW / CV)» divisa a metà da una linea: a sinistra i kW, a destra i CV. Scrivendo in una metà si aggiorna l'altra.
 - [x] Segnalazioni allo sviluppatore (FormSubmit) inviate con il nuovo indirizzo del sito.
-- [ ] Durata della Pro con codice sviluppatore: oggi scade a ogni nuova versione. Da decidere: 30 giorni oppure finché non viene revocata.
+- [x] Durata della Pro con codice sviluppatore: resta com'è, scade a ogni nuova versione e va riattivata con il codice.
 
 ## Prima di andare in produzione
 
