@@ -561,5 +561,8 @@
  "sync.problemSave": "Kaydetme: {name}",
  "sync.retry": "Tekrar dene",
  "sync.problemAuth": "Hesap girişi",
- "sync.authMismatch": "Girişiniz artık geçerli değil. Çıkış yapıp tekrar giriş yapın."
+ "sync.authMismatch": "Girişiniz artık geçerli değil. Çıkış yapıp tekrar giriş yapın.",
+ "diag.title": "Senkronizasyon tanılama",
+ "diag.subtitle": "Geliştiriciye gönderilecek teknik bilgiler",
+ "diag.copied": "Tanılama kopyalandı"
 }

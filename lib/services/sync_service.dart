@@ -348,25 +348,8 @@ class SyncService {
         .where('members', arrayContains: session.key)
         .snapshots()
         .listen((snap) {
-      final groups = <FleetGroup>[];
-      for (final d in snap.docs) {
-        final data = d.data();
-        if (data['personal'] == true) continue;
-        final emails = Map<String, dynamic>.from((data['memberEmails'] as Map?) ?? {});
-        final members = <String, String>{};
-        for (final uid in ((data['members'] as List?) ?? [])) {
-          members[uid.toString()] = (emails[uid] ?? uid).toString();
-        }
-        groups.add(FleetGroup(
-          id: d.id,
-          name: (data['name'] as String?) ?? tr('family.defaultName'),
-          ownerUid: (data['ownerUid'] as String?) ?? '',
-          members: members,
-          admins: ((data['admins'] as List?) ?? const []).map((e) => e.toString()).toSet(),
-          viewers: ((data['viewers'] as List?) ?? const []).map((e) => e.toString()).toSet(),
-          shareDocs: data['shareDocs'] == true,
-        ));
-      }
+      final groups = _parseGroups(snap);
+      diag['listen'] = '${snap.metadata.isFromCache ? 'cache' : 'server'} ${_now()} ${snap.docs.length} doc';
       final wanted = {personalId, ...groups.map((g) => g.id)};
       for (final id in _vehSubs.keys.toList()) {
         if (!wanted.contains(id)) {
@@ -383,7 +366,68 @@ class SyncService {
         _ok('groups');
         onGroups(groups);
       }
-    }, onError: (e) => _fail('groups', e));
+    }, onError: (e) {
+      diag['listen'] = 'error ${_now()} $e';
+      _fail('groups', e);
+    });
+    _onVehicles = onVehicles;
+    _localVehicles = localVehicles;
+  }
+
+  final Map<String, String> diag = {};
+  void Function(String, List<Vehicle>, bool)? _onVehicles;
+  List<Vehicle> Function(String)? _localVehicles;
+
+  static String _now() {
+    final t = DateTime.now();
+    String two(int n) => n.toString().padLeft(2, '0');
+    return '${two(t.hour)}:${two(t.minute)}:${two(t.second)}';
+  }
+
+  List<FleetGroup> _parseGroups(QuerySnapshot<Map<String, dynamic>> snap) {
+    final groups = <FleetGroup>[];
+    for (final d in snap.docs) {
+      final data = d.data();
+      if (data['personal'] == true) continue;
+      final emails = Map<String, dynamic>.from((data['memberEmails'] as Map?) ?? {});
+      final members = <String, String>{};
+      for (final uid in ((data['members'] as List?) ?? [])) {
+        members[uid.toString()] = (emails[uid] ?? uid).toString();
+      }
+      groups.add(FleetGroup(
+        id: d.id,
+        name: (data['name'] ?? tr('family.defaultName')).toString(),
+        ownerUid: (data['ownerUid'] ?? '').toString(),
+        members: members,
+        admins: ((data['admins'] as List?) ?? const []).map((e) => e.toString()).toSet(),
+        viewers: ((data['viewers'] as List?) ?? const []).map((e) => e.toString()).toSet(),
+        shareDocs: data['shareDocs'] == true,
+      ));
+    }
+    return groups;
+  }
+
+  Future<List<FleetGroup>> fetchGroups(Session session) async {
+    try {
+      final snap = await _fleets
+          .where('members', arrayContains: session.key)
+          .get(const GetOptions(source: Source.server))
+          .timeout(_timeout);
+      final groups = _parseGroups(snap);
+      diag['fetch'] = 'server ${_now()} ${snap.docs.length} doc, ${groups.length} gruppi';
+      _groupsFromServer = true;
+      _ok('groups');
+      final f = _onVehicles, l = _localVehicles;
+      if (f != null && l != null) {
+        for (final g in groups) {
+          _listenVehicles(g.id, f, l);
+        }
+      }
+      return groups;
+    } catch (e) {
+      diag['fetch'] = 'error ${_now()} $e';
+      rethrow;
+    }
   }
 
   void _listenVehicles(
@@ -481,6 +525,7 @@ class SyncService {
     _groupsCheck = null;
     _groupsFromServer = false;
     problems.clear();
+    diag.clear();
     onHealth?.call();
     _groupsSub?.cancel();
     _groupsSub = null;

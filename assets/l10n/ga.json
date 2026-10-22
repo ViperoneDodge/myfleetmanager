@@ -561,5 +561,8 @@
  "sync.problemSave": "Sábháil: {name}",
  "sync.retry": "Bain triail eile as",
  "sync.problemAuth": "Síniú isteach sa chuntas",
- "sync.authMismatch": "Níl do shíniú isteach bailí a thuilleadh. Sínigh amach agus isteach arís."
+ "sync.authMismatch": "Níl do shíniú isteach bailí a thuilleadh. Sínigh amach agus isteach arís.",
+ "diag.title": "Diagnóisic sioncrónaithe",
+ "diag.subtitle": "Faisnéis theicniúil don fhorbróir",
+ "diag.copied": "Diagnóisic cóipeáilte"
 }

@@ -561,5 +561,8 @@
  "sync.problemSave": "Opslaan: {name}",
  "sync.retry": "Opnieuw proberen",
  "sync.problemAuth": "Aanmelding account",
- "sync.authMismatch": "Je aanmelding is niet meer geldig. Meld je af en weer aan."
+ "sync.authMismatch": "Je aanmelding is niet meer geldig. Meld je af en weer aan.",
+ "diag.title": "Synchronisatiediagnose",
+ "diag.subtitle": "Technische informatie voor de ontwikkelaar",
+ "diag.copied": "Diagnose gekopieerd"
 }

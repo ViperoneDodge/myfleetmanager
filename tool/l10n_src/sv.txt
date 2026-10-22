@@ -561,3 +561,6 @@ Sparande: {name}
 Försök igen
 Kontoinloggning
 Inloggningen gäller inte längre. Logga ut och logga in igen.
+Synkroniseringsdiagnostik
+Teknisk information till utvecklaren
+Diagnostik kopierad

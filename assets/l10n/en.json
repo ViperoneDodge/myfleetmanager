@@ -561,5 +561,8 @@
  "sync.problemSave": "Saving: {name}",
  "sync.retry": "Retry",
  "sync.problemAuth": "Account sign-in",
- "sync.authMismatch": "Your sign-in is no longer valid. Sign out and sign in again."
+ "sync.authMismatch": "Your sign-in is no longer valid. Sign out and sign in again.",
+ "diag.title": "Sync diagnostics",
+ "diag.subtitle": "Technical information to send to the developer",
+ "diag.copied": "Diagnostics copied"
 }

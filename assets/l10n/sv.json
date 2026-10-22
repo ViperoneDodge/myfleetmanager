@@ -561,5 +561,8 @@
  "sync.problemSave": "Sparande: {name}",
  "sync.retry": "Försök igen",
  "sync.problemAuth": "Kontoinloggning",
- "sync.authMismatch": "Inloggningen gäller inte längre. Logga ut och logga in igen."
+ "sync.authMismatch": "Inloggningen gäller inte längre. Logga ut och logga in igen.",
+ "diag.title": "Synkroniseringsdiagnostik",
+ "diag.subtitle": "Teknisk information till utvecklaren",
+ "diag.copied": "Diagnostik kopierad"
 }

@@ -561,5 +561,8 @@
  "sync.problemSave": "Zapis: {name}",
  "sync.retry": "Spróbuj ponownie",
  "sync.problemAuth": "Logowanie do konta",
- "sync.authMismatch": "Logowanie nie jest już ważne. Wyloguj się i zaloguj ponownie."
+ "sync.authMismatch": "Logowanie nie jest już ważne. Wyloguj się i zaloguj ponownie.",
+ "diag.title": "Diagnostyka synchronizacji",
+ "diag.subtitle": "Informacje techniczne dla twórcy aplikacji",
+ "diag.copied": "Diagnostyka skopiowana"
 }

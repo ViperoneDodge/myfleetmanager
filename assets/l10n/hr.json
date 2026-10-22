@@ -561,5 +561,8 @@
  "sync.problemSave": "Spremanje: {name}",
  "sync.retry": "Pokušaj ponovno",
  "sync.problemAuth": "Prijava na račun",
- "sync.authMismatch": "Prijava više nije valjana. Odjavi se i ponovno se prijavi."
+ "sync.authMismatch": "Prijava više nije valjana. Odjavi se i ponovno se prijavi.",
+ "diag.title": "Dijagnostika sinkronizacije",
+ "diag.subtitle": "Tehnički podaci za razvojnog programera",
+ "diag.copied": "Dijagnostika kopirana"
 }

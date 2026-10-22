@@ -561,3 +561,6 @@ Lưu: {name}
 Thử lại
 Đăng nhập tài khoản
 Phiên đăng nhập không còn hợp lệ. Hãy đăng xuất rồi đăng nhập lại.
+Chẩn đoán đồng bộ
+Thông tin kỹ thuật gửi cho nhà phát triển
+Đã sao chép chẩn đoán

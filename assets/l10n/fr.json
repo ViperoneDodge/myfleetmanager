@@ -561,5 +561,8 @@
  "sync.problemSave": "Enregistrement : {name}",
  "sync.retry": "Réessayer",
  "sync.problemAuth": "Connexion au compte",
- "sync.authMismatch": "Votre connexion n'est plus valide. Déconnectez-vous puis reconnectez-vous."
+ "sync.authMismatch": "Votre connexion n'est plus valide. Déconnectez-vous puis reconnectez-vous.",
+ "diag.title": "Diagnostic de synchronisation",
+ "diag.subtitle": "Informations techniques à envoyer au développeur",
+ "diag.copied": "Diagnostic copié"
 }

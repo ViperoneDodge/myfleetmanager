@@ -561,3 +561,6 @@ Dokumentai: {name}
 Bandyti dar kartą
 Prisijungimas prie paskyros
 Prisijungimas nebegalioja. Atsijunkite ir prisijunkite iš naujo.
+Sinchronizavimo diagnostika
+Techninė informacija kūrėjui
+Diagnostika nukopijuota

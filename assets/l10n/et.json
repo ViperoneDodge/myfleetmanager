@@ -561,5 +561,8 @@
  "sync.problemSave": "Salvestamine: {name}",
  "sync.retry": "Proovi uuesti",
  "sync.problemAuth": "Kontole sisselogimine",
- "sync.authMismatch": "Sisselogimine pole enam kehtiv. Logi välja ja uuesti sisse."
+ "sync.authMismatch": "Sisselogimine pole enam kehtiv. Logi välja ja uuesti sisse.",
+ "diag.title": "Sünkroonimise diagnostika",
+ "diag.subtitle": "Tehniline teave arendajale",
+ "diag.copied": "Diagnostika kopeeritud"
 }

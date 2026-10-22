@@ -561,5 +561,8 @@
  "sync.problemSave": "저장: {name}",
  "sync.retry": "다시 시도",
  "sync.problemAuth": "계정 로그인",
- "sync.authMismatch": "로그인이 더 이상 유효하지 않습니다. 로그아웃한 뒤 다시 로그인하세요."
+ "sync.authMismatch": "로그인이 더 이상 유효하지 않습니다. 로그아웃한 뒤 다시 로그인하세요.",
+ "diag.title": "동기화 진단",
+ "diag.subtitle": "개발자에게 보낼 기술 정보",
+ "diag.copied": "진단 정보가 복사됨"
 }

@@ -561,3 +561,6 @@ Ukládání: {name}
 Zkusit znovu
 Přihlášení k účtu
 Přihlášení už není platné. Odhlaste se a znovu se přihlaste.
+Diagnostika synchronizace
+Technické informace pro vývojáře
+Diagnostika zkopírována

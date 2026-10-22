@@ -561,5 +561,8 @@
  "sync.problemSave": "Mentés: {name}",
  "sync.retry": "Újra",
  "sync.problemAuth": "Fiókbejelentkezés",
- "sync.authMismatch": "A bejelentkezés már nem érvényes. Jelentkezz ki, majd be újra."
+ "sync.authMismatch": "A bejelentkezés már nem érvényes. Jelentkezz ki, majd be újra.",
+ "diag.title": "Szinkronizálási diagnosztika",
+ "diag.subtitle": "Műszaki adatok a fejlesztőnek",
+ "diag.copied": "Diagnosztika másolva"
 }

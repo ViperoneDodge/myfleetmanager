@@ -561,5 +561,8 @@
  "sync.problemSave": "Lưu: {name}",
  "sync.retry": "Thử lại",
  "sync.problemAuth": "Đăng nhập tài khoản",
- "sync.authMismatch": "Phiên đăng nhập không còn hợp lệ. Hãy đăng xuất rồi đăng nhập lại."
+ "sync.authMismatch": "Phiên đăng nhập không còn hợp lệ. Hãy đăng xuất rồi đăng nhập lại.",
+ "diag.title": "Chẩn đoán đồng bộ",
+ "diag.subtitle": "Thông tin kỹ thuật gửi cho nhà phát triển",
+ "diag.copied": "Đã sao chép chẩn đoán"
 }

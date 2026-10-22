@@ -18,6 +18,7 @@ import 'group_watch.dart';
 import 'push_service.dart';
 import 'support_service.dart';
 import 'update_service.dart';
+import '../platform.dart';
 import '../version.dart';
 import 'sync_service.dart';
 
@@ -476,7 +477,7 @@ class AppState extends ChangeNotifier {
   }
 
   GroupRole roleIn(String? fleetId) {
-    if (isAdmin || fleetId == null || fleetId == data.personalFleetId) return GroupRole.admin;
+    if (fleetId == null || fleetId == data.personalFleetId) return GroupRole.admin;
     final g = data.groupById(fleetId);
     return g == null ? GroupRole.viewer : g.roleOf(session?.key);
   }
@@ -485,7 +486,7 @@ class AppState extends ChangeNotifier {
 
   bool canAddTo(String? fleetId) => roleIn(fleetId) != GroupRole.viewer;
 
-  bool canManage(FleetGroup g) => isAdmin || g.roleOf(session?.key) == GroupRole.admin;
+  bool canManage(FleetGroup g) => g.roleOf(session?.key) == GroupRole.admin;
 
   static String normalizePlate(String p) => p.toUpperCase().replaceAll(RegExp(r'[^A-Z0-9]'), '');
 
@@ -627,6 +628,29 @@ class AppState extends ChangeNotifier {
   String? langPref;
 
   Map<String, Object> get syncProblems => sync.problems;
+
+  String syncDiagnostics() {
+    String short(String? v) => v == null || v.isEmpty ? '-' : (v.length > 8 ? '${v.substring(0, 8)}…' : v);
+    final s = session;
+    final byFleet = <String, int>{};
+    for (final v in data.vehicles.where((v) => !v.deleted)) {
+      final k = isPersonal(v) ? 'personale' : short(v.fleetId);
+      byFleet[k] = (byFleet[k] ?? 0) + 1;
+    }
+    return [
+      'MyFleetManager $appVersion · $platformName',
+      'Account: ${s?.email ?? s?.displayName ?? '-'} (${s?.mode.name ?? '-'})',
+      'ID app: ${short(s?.key)}',
+      'ID Firebase: ${short(auth.currentUid)}',
+      'Spazio personale: ${short(data.personalFleetId)}',
+      'Stato: ${syncStatus.name}${isAdmin ? ' · admin' : ''}${isPro ? ' · pro' : ''}',
+      'Gruppi in memoria: ${data.groups.length}${data.groups.isEmpty ? '' : ' (${data.groups.map((g) => '${g.name}/${g.roleOf(s?.key).name}').join(', ')})'}',
+      'Ascolto gruppi: ${sync.diag['listen'] ?? '-'}',
+      'Lettura gruppi: ${sync.diag['fetch'] ?? '-'}',
+      'Veicoli: ${byFleet.entries.map((e) => '${e.key}=${e.value}').join(', ')}',
+      'Problemi: ${sync.problems.isEmpty ? 'nessuno' : sync.problems.entries.map((e) => '${e.key}: ${e.value}').join(' | ')}',
+    ].join('\n');
+  }
 
   String syncProblemLabel(String key) {
     final i = key.indexOf(':');
@@ -1172,9 +1196,17 @@ class AppState extends ChangeNotifier {
       }
     }
     _listen();
+    _fetchGroups(s);
     Timer(const Duration(seconds: 5), () {
       if (identical(session, s) && auth.currentUid != s.key) sync.reportAuthMismatch();
     });
+  }
+
+  Future<void> _fetchGroups(Session s) async {
+    try {
+      final groups = await sync.fetchGroups(s);
+      if (identical(session, s)) _onGroups(groups);
+    } catch (_) {}
   }
 
   void _listen() {

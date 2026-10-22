@@ -561,5 +561,8 @@
  "sync.problemSave": "Guardado: {name}",
  "sync.retry": "Reintentar",
  "sync.problemAuth": "Acceso a la cuenta",
- "sync.authMismatch": "Tu sesión ya no es válida. Cierra sesión y vuelve a entrar."
+ "sync.authMismatch": "Tu sesión ya no es válida. Cierra sesión y vuelve a entrar.",
+ "diag.title": "Diagnóstico de sincronización",
+ "diag.subtitle": "Información técnica para enviar al desarrollador",
+ "diag.copied": "Diagnóstico copiado"
 }

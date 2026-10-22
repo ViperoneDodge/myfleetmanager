@@ -561,3 +561,6 @@ Gravação: {name}
 Tentar novamente
 Acesso à conta
 O seu acesso já não é válido. Termine sessão e volte a entrar.
+Diagnóstico de sincronização
+Informações técnicas para enviar ao programador
+Diagnóstico copiado

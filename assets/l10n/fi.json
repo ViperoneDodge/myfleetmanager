@@ -561,5 +561,8 @@
  "sync.problemSave": "Tallennus: {name}",
  "sync.retry": "Yritä uudelleen",
  "sync.problemAuth": "Tilille kirjautuminen",
- "sync.authMismatch": "Kirjautuminen ei ole enää voimassa. Kirjaudu ulos ja uudelleen sisään."
+ "sync.authMismatch": "Kirjautuminen ei ole enää voimassa. Kirjaudu ulos ja uudelleen sisään.",
+ "diag.title": "Synkronoinnin diagnostiikka",
+ "diag.subtitle": "Tekniset tiedot kehittäjälle",
+ "diag.copied": "Diagnostiikka kopioitu"
 }

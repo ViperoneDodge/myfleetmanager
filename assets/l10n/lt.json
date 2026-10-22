@@ -561,5 +561,8 @@
  "sync.problemSave": "Įrašymas: {name}",
  "sync.retry": "Bandyti dar kartą",
  "sync.problemAuth": "Prisijungimas prie paskyros",
- "sync.authMismatch": "Prisijungimas nebegalioja. Atsijunkite ir prisijunkite iš naujo."
+ "sync.authMismatch": "Prisijungimas nebegalioja. Atsijunkite ir prisijunkite iš naujo.",
+ "diag.title": "Sinchronizavimo diagnostika",
+ "diag.subtitle": "Techninė informacija kūrėjui",
+ "diag.copied": "Diagnostika nukopijuota"
 }

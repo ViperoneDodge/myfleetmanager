@@ -561,3 +561,6 @@ sync.problemSave
 sync.retry
 sync.problemAuth
 sync.authMismatch
+diag.title
+diag.subtitle
+diag.copied

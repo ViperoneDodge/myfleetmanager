@@ -254,6 +254,13 @@ class SettingsScreen extends StatelessWidget {
                 onTap: () => Navigator.of(context)
                     .push(MaterialPageRoute(builder: (_) => const AdminScreen())),
               ),
+            if (appState.isCloud)
+              ListTile(
+                leading: const Icon(Icons.troubleshoot),
+                title: Text(tr('diag.title')),
+                subtitle: Text(tr('diag.subtitle')),
+                onTap: () => _diagnostics(context),
+              ),
             ListTile(
               leading: const Icon(Icons.bug_report_outlined),
               title: Text(tr('bug.title')),
@@ -491,6 +498,36 @@ class SettingsScreen extends StatelessWidget {
         ),
       ),
     ];
+  }
+
+  Future<void> _diagnostics(BuildContext context) async {
+    final text = appState.syncDiagnostics();
+    await showDialog<void>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(tr('diag.title')),
+        content: SingleChildScrollView(
+          child: SelectableText(text, style: const TextStyle(fontFamily: 'monospace', fontSize: 12)),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () async {
+              await appState.retrySync();
+              if (ctx.mounted) Navigator.pop(ctx);
+            },
+            child: Text(tr('sync.retry')),
+          ),
+          FilledButton.icon(
+            onPressed: () {
+              Clipboard.setData(ClipboardData(text: text));
+              showSnack(ctx, tr('diag.copied'));
+            },
+            icon: const Icon(Icons.copy),
+            label: Text(tr('common.copy')),
+          ),
+        ],
+      ),
+    );
   }
 
   List<Widget> _units(BuildContext context) {

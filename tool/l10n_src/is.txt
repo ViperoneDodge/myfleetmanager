@@ -561,3 +561,6 @@ Vistun: {name}
 Reyna aftur
 Innskráning á reikning
 Innskráningin er ekki lengur gild. Skráðu þig út og aftur inn.
+Greining samstillingar
+Tæknilegar upplýsingar fyrir forritarann
+Greining afrituð

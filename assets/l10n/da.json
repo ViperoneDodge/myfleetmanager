@@ -561,5 +561,8 @@
  "sync.problemSave": "Gemning: {name}",
  "sync.retry": "Prøv igen",
  "sync.problemAuth": "Kontologin",
- "sync.authMismatch": "Dit login er ikke længere gyldigt. Log ud og log ind igen."
+ "sync.authMismatch": "Dit login er ikke længere gyldigt. Log ud og log ind igen.",
+ "diag.title": "Synkroniseringsdiagnostik",
+ "diag.subtitle": "Teknisk information til udvikleren",
+ "diag.copied": "Diagnostik kopieret"
 }

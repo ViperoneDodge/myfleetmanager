@@ -561,5 +561,8 @@
  "sync.problemSave": "Salvare: {name}",
  "sync.retry": "Reîncearcă",
  "sync.problemAuth": "Conectare la cont",
- "sync.authMismatch": "Conectarea nu mai este validă. Deconectează-te și conectează-te din nou."
+ "sync.authMismatch": "Conectarea nu mai este validă. Deconectează-te și conectează-te din nou.",
+ "diag.title": "Diagnosticare sincronizare",
+ "diag.subtitle": "Informații tehnice pentru dezvoltator",
+ "diag.copied": "Diagnosticare copiată"
 }

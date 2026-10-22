@@ -561,5 +561,8 @@
  "sync.problemSave": "Penyimpanan: {name}",
  "sync.retry": "Coba lagi",
  "sync.problemAuth": "Masuk akun",
- "sync.authMismatch": "Sesi masuk tidak lagi berlaku. Keluar lalu masuk kembali."
+ "sync.authMismatch": "Sesi masuk tidak lagi berlaku. Keluar lalu masuk kembali.",
+ "diag.title": "Diagnostik sinkronisasi",
+ "diag.subtitle": "Informasi teknis untuk dikirim ke pengembang",
+ "diag.copied": "Diagnostik disalin"
 }

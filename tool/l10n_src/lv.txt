@@ -561,3 +561,6 @@ Saglabāšana: {name}
 Mēģināt vēlreiz
 Pieteikšanās kontā
 Pieteikšanās vairs nav derīga. Izrakstieties un piesakieties vēlreiz.
+Sinhronizācijas diagnostika
+Tehniskā informācija izstrādātājam
+Diagnostika nokopēta

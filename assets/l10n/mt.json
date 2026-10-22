@@ -561,5 +561,8 @@
  "sync.problemSave": "Issejvjar: {name}",
  "sync.retry": "Erġa' pprova",
  "sync.problemAuth": "Dħul fil-kont",
- "sync.authMismatch": "Id-dħul m'għadux validu. Oħroġ u erġa' idħol."
+ "sync.authMismatch": "Id-dħul m'għadux validu. Oħroġ u erġa' idħol.",
+ "diag.title": "Dijanjostika tas-sinkronizzazzjoni",
+ "diag.subtitle": "Informazzjoni teknika għall-iżviluppatur",
+ "diag.copied": "Dijanjostika kkupjata"
 }

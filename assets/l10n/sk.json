@@ -561,5 +561,8 @@
  "sync.problemSave": "Ukladanie: {name}",
  "sync.retry": "Skúsiť znova",
  "sync.problemAuth": "Prihlásenie do účtu",
- "sync.authMismatch": "Prihlásenie už nie je platné. Odhláste sa a znova sa prihláste."
+ "sync.authMismatch": "Prihlásenie už nie je platné. Odhláste sa a znova sa prihláste.",
+ "diag.title": "Diagnostika synchronizácie",
+ "diag.subtitle": "Technické informácie pre vývojára",
+ "diag.copied": "Diagnostika skopírovaná"
 }

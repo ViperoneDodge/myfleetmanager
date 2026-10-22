@@ -561,3 +561,6 @@ Zapis: {name}
 Spróbuj ponownie
 Logowanie do konta
 Logowanie nie jest już ważne. Wyloguj się i zaloguj ponownie.
+Diagnostyka synchronizacji
+Informacje techniczne dla twórcy aplikacji
+Diagnostyka skopiowana

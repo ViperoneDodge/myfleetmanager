@@ -561,5 +561,8 @@
  "sync.problemSave": "Speichern: {name}",
  "sync.retry": "Erneut versuchen",
  "sync.problemAuth": "Kontoanmeldung",
- "sync.authMismatch": "Deine Anmeldung ist nicht mehr gültig. Melde dich ab und wieder an."
+ "sync.authMismatch": "Deine Anmeldung ist nicht mehr gültig. Melde dich ab und wieder an.",
+ "diag.title": "Synchronisierungsdiagnose",
+ "diag.subtitle": "Technische Informationen für den Entwickler",
+ "diag.copied": "Diagnose kopiert"
 }

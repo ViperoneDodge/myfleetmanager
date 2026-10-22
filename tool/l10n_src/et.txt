@@ -561,3 +561,6 @@ Salvestamine: {name}
 Proovi uuesti
 Kontole sisselogimine
 Sisselogimine pole enam kehtiv. Logi välja ja uuesti sisse.
+Sünkroonimise diagnostika
+Tehniline teave arendajale
+Diagnostika kopeeritud
