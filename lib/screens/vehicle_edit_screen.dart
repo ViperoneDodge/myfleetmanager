@@ -573,41 +573,29 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   }
 
   Widget _powerField() {
-    Widget part(TextEditingController c, String unit, ValueChanged<String> onChanged) => Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ConstrainedBox(
-              constraints: const BoxConstraints(minWidth: 28, maxWidth: 90),
-              child: IntrinsicWidth(
-                child: TextField(
-                  controller: c,
-                  onChanged: onChanged,
-                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
-                  decoration: const InputDecoration.collapsed(hintText: '—'),
-                ),
-              ),
-            ),
-            const SizedBox(width: 6),
-            Text(unit, style: const TextStyle(fontWeight: FontWeight.w600)),
-          ],
+    final line = Theme.of(context).colorScheme.outline;
+    Widget part(TextEditingController c, ValueChanged<String> onChanged) => Expanded(
+          child: TextField(
+            controller: c,
+            onChanged: onChanged,
+            keyboardType: const TextInputType.numberWithOptions(decimal: true),
+            decoration: const InputDecoration.collapsed(hintText: '—'),
+          ),
         );
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: InputDecorator(
         decoration: InputDecoration(
-          labelText: tr('tech.powerName'),
+          labelText: '${tr('tech.powerName')} (kW / ${tr('unit.cv')})',
           filled: true,
           isDense: true,
           border: const OutlineInputBorder(),
           prefixIcon: const Icon(Icons.speed),
         ),
         child: Row(children: [
-          part(_power, 'kW', (t) => _powerCv.text = kwToCvText(t)),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
-            child: Text('=', style: TextStyle(color: Theme.of(context).colorScheme.outline)),
-          ),
-          part(_powerCv, tr('unit.cv'), (t) => _power.text = cvToKwText(t)),
+          part(_power, (t) => _powerCv.text = kwToCvText(t)),
+          SizedBox(height: 22, child: VerticalDivider(width: 24, thickness: 1, color: line)),
+          part(_powerCv, (t) => _power.text = cvToKwText(t)),
         ]),
       ),
     );

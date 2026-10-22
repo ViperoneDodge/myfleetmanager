@@ -211,9 +211,9 @@ void main() {
           await tester.drag(find.byType(ListView).first, const Offset(0, -520));
         });
         await shot(tester, VehicleEditScreen(vehicle: appState.vehicleById('g1')!.copy()), '06b_power', then: () async {
-          await tester.scrollUntilVisible(find.text(tr('unit.cv')), 300,
+          await tester.scrollUntilVisible(find.text('${tr('tech.powerName')} (kW / ${tr('unit.cv')})'), 300,
               scrollable: find.byType(Scrollable).first);
-          await Scrollable.ensureVisible(tester.element(find.text(tr('unit.cv'))), alignment: 0.25);
+          await Scrollable.ensureVisible(tester.element(find.text('${tr('tech.powerName')} (kW / ${tr('unit.cv')})')), alignment: 0.25);
         });
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '07_ocr', then: () async {
           final ctx = tester.element(find.byType(VehicleDetailScreen));
