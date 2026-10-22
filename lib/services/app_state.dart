@@ -471,9 +471,8 @@ class AppState extends ChangeNotifier {
   bool isPersonal(Vehicle v) => v.fleetId == null || v.fleetId == data.personalFleetId;
 
   bool isMine(Vehicle v) {
-    if (!isCloud) return true;
-    if (v.createdBy.isNotEmpty) return v.createdBy == session?.key;
-    return isPersonal(v);
+    if (!isCloud || isPersonal(v)) return true;
+    return v.createdBy.isNotEmpty && v.createdBy == session?.key;
   }
 
   GroupRole roleIn(String? fleetId) {
