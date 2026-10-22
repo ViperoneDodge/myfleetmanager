@@ -552,5 +552,12 @@
  "pdf.download": "Descargar",
  "pdf.share": "Compartir",
  "pdf.print": "Imprimir",
- "pdf.saved": "PDF guardado"
+ "pdf.saved": "PDF guardado",
+ "sync.problemTitle": "Problema de sincronización",
+ "sync.problemInfo": "Algunos datos no se sincronizan con la nube. Tus cambios siguen guardados en el teléfono y se enviarán en cuanto se resuelva el problema.",
+ "sync.problemGroups": "Lista de grupos",
+ "sync.problemVehicles": "Vehículos: {name}",
+ "sync.problemDocs": "Documentos: {name}",
+ "sync.problemSave": "Guardado: {name}",
+ "sync.retry": "Reintentar"
 }

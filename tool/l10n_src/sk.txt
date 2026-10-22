@@ -552,3 +552,10 @@ Stiahnuť
 Zdieľať
 Tlačiť
 PDF uložené
+Problém so synchronizáciou
+Niektoré údaje sa nesynchronizujú s cloudom. Zmeny zostávajú uložené v telefóne a odošlú sa, keď sa problém vyrieši.
+Zoznam skupín
+Vozidlá: {name}
+Dokumenty: {name}
+Ukladanie: {name}
+Skúsiť znova

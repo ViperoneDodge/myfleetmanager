@@ -552,5 +552,12 @@
  "pdf.download": "Íoslódáil",
  "pdf.share": "Comhroinn",
  "pdf.print": "Priontáil",
- "pdf.saved": "PDF sábháilte"
+ "pdf.saved": "PDF sábháilte",
+ "sync.problemTitle": "Fadhb sioncrónaithe",
+ "sync.problemInfo": "Níl roinnt sonraí á sioncrónú leis an scamall. Fanann d'athruithe sábháilte ar an bhfón agus seolfar iad a luaithe a réitítear an fhadhb.",
+ "sync.problemGroups": "Liosta grúpaí",
+ "sync.problemVehicles": "Feithiclí: {name}",
+ "sync.problemDocs": "Doiciméid: {name}",
+ "sync.problemSave": "Sábháil: {name}",
+ "sync.retry": "Bain triail eile as"
 }

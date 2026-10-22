@@ -7,6 +7,7 @@ import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../services/app_state.dart';
+import '../services/sync_service.dart' show cloudErrorMessage;
 import '../theme.dart';
 import '../widgets/common.dart';
 import '../widgets/docs_consent.dart';
@@ -197,6 +198,63 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+  Widget _syncAlert(Map<String, Object> problems) => IconButton(
+        tooltip: tr('sync.problemTitle'),
+        onPressed: () => _showSyncProblems(problems),
+        icon: Container(
+          width: 30,
+          height: 30,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: Colors.red.shade700,
+            shape: BoxShape.circle,
+            border: Border.all(color: Colors.white, width: 2),
+          ),
+          child: const Text('!!',
+              style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 14, height: 1)),
+        ),
+      );
+
+  Future<void> _showSyncProblems(Map<String, Object> problems) async {
+    final retry = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        icon: Icon(Icons.sync_problem, color: Colors.red.shade700, size: 36),
+        title: Text(tr('sync.problemTitle')),
+        content: SingleChildScrollView(
+          child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(tr('sync.problemInfo')),
+            const SizedBox(height: 12),
+            for (final e in problems.entries)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Icon(Icons.error_outline, size: 18, color: Colors.red.shade700),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(appState.syncProblemLabel(e.key), style: const TextStyle(fontWeight: FontWeight.w600)),
+                      Text(cloudErrorMessage(e.value),
+                          style: TextStyle(fontSize: 12, color: Theme.of(ctx).colorScheme.onSurfaceVariant)),
+                    ]),
+                  ),
+                ]),
+              ),
+          ]),
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.close'))),
+          FilledButton.icon(
+            onPressed: () => Navigator.pop(ctx, true),
+            icon: const Icon(Icons.refresh),
+            label: Text(tr('sync.retry')),
+          ),
+        ],
+      ),
+    );
+    if (retry == true) await appState.retrySync();
+  }
+
   Widget _syncIcon() {
     if (!appState.isCloud) return const SizedBox.shrink();
     switch (appState.syncStatus) {
@@ -231,8 +289,10 @@ class _HomeScreenState extends State<HomeScreen> {
           default:
             body = _vehiclesTab();
         }
+        final problems = appState.isCloud ? appState.syncProblems : const <String, Object>{};
         return Scaffold(
           appBar: AppBar(
+            leading: problems.isEmpty ? null : _syncAlert(problems),
             title: Text(titles[_tab]),
             actions: [
               if (_tab == 0 && appState.homeVehicles.isNotEmpty)

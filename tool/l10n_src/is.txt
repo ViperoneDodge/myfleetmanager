@@ -552,3 +552,10 @@ Sækja
 Deila
 Prenta
 PDF vistað
+Samstillingarvandi
+Sum gögn samstillast ekki við skýið. Breytingarnar þínar eru vistaðar í símanum og verða sendar um leið og vandinn leysist.
+Listi yfir hópa
+Ökutæki: {name}
+Skjöl: {name}
+Vistun: {name}
+Reyna aftur

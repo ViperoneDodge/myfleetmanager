@@ -552,5 +552,12 @@
  "pdf.download": "Downloaden",
  "pdf.share": "Delen",
  "pdf.print": "Afdrukken",
- "pdf.saved": "PDF opgeslagen"
+ "pdf.saved": "PDF opgeslagen",
+ "sync.problemTitle": "Synchronisatieprobleem",
+ "sync.problemInfo": "Sommige gegevens worden niet met de cloud gesynchroniseerd. Je wijzigingen blijven op de telefoon bewaard en worden verzonden zodra het probleem is opgelost.",
+ "sync.problemGroups": "Lijst met groepen",
+ "sync.problemVehicles": "Voertuigen: {name}",
+ "sync.problemDocs": "Documenten: {name}",
+ "sync.problemSave": "Opslaan: {name}",
+ "sync.retry": "Opnieuw proberen"
 }

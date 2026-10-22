@@ -552,3 +552,10 @@ Unduh
 Bagikan
 Cetak
 PDF disimpan
+Masalah sinkronisasi
+Sebagian data tidak tersinkron dengan cloud. Perubahan tetap tersimpan di ponsel dan akan dikirim begitu masalahnya teratasi.
+Daftar grup
+Kendaraan: {name}
+Dokumen: {name}
+Penyimpanan: {name}
+Coba lagi

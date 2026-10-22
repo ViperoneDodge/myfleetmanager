@@ -552,3 +552,10 @@ Downloaden
 Delen
 Afdrukken
 PDF opgeslagen
+Synchronisatieprobleem
+Sommige gegevens worden niet met de cloud gesynchroniseerd. Je wijzigingen blijven op de telefoon bewaard en worden verzonden zodra het probleem is opgelost.
+Lijst met groepen
+Voertuigen: {name}
+Documenten: {name}
+Opslaan: {name}
+Opnieuw proberen

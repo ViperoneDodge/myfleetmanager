@@ -552,5 +552,12 @@
  "pdf.download": "Letöltés",
  "pdf.share": "Megosztás",
  "pdf.print": "Nyomtatás",
- "pdf.saved": "PDF mentve"
+ "pdf.saved": "PDF mentve",
+ "sync.problemTitle": "Szinkronizálási hiba",
+ "sync.problemInfo": "Néhány adat nem szinkronizálódik a felhővel. A módosítások a telefonon maradnak, és elküldjük őket, amint a hiba megoldódik.",
+ "sync.problemGroups": "Csoportok listája",
+ "sync.problemVehicles": "Járművek: {name}",
+ "sync.problemDocs": "Dokumentumok: {name}",
+ "sync.problemSave": "Mentés: {name}",
+ "sync.retry": "Újra"
 }

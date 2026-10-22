@@ -552,3 +552,10 @@ Sábháil ar an bhfón
 Comhroinn
 Priontáil
 PDF sábháilte
+Fadhb sioncrónaithe
+Níl roinnt sonraí á sioncrónú leis an scamall. Fanann d'athruithe sábháilte ar an bhfón agus seolfar iad a luaithe a réitítear an fhadhb.
+Liosta grúpaí
+Feithiclí: {name}
+Doiciméid: {name}
+Sábháil: {name}
+Bain triail eile as

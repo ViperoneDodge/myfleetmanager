@@ -552,5 +552,12 @@
  "pdf.download": "Niżżel",
  "pdf.share": "Aqsam",
  "pdf.print": "Ipprintja",
- "pdf.saved": "PDF issejvjat"
+ "pdf.saved": "PDF issejvjat",
+ "sync.problemTitle": "Problema fis-sinkronizzazzjoni",
+ "sync.problemInfo": "Xi data mhix qed tissinkronizza mal-cloud. It-tibdiliet jibqgħu ssejvjati fuq it-telefon u jintbagħtu hekk kif tissolva l-problema.",
+ "sync.problemGroups": "Lista tal-gruppi",
+ "sync.problemVehicles": "Vetturi: {name}",
+ "sync.problemDocs": "Dokumenti: {name}",
+ "sync.problemSave": "Issejvjar: {name}",
+ "sync.retry": "Erġa' pprova"
 }

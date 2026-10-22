@@ -552,5 +552,12 @@
  "pdf.download": "다운로드",
  "pdf.share": "공유",
  "pdf.print": "인쇄",
- "pdf.saved": "PDF 저장됨"
+ "pdf.saved": "PDF 저장됨",
+ "sync.problemTitle": "동기화 문제",
+ "sync.problemInfo": "일부 데이터가 클라우드와 동기화되지 않습니다. 변경 내용은 휴대폰에 저장되어 있으며 문제가 해결되면 바로 전송됩니다.",
+ "sync.problemGroups": "그룹 목록",
+ "sync.problemVehicles": "차량: {name}",
+ "sync.problemDocs": "문서: {name}",
+ "sync.problemSave": "저장: {name}",
+ "sync.retry": "다시 시도"
 }

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
@@ -176,6 +177,12 @@ void main() {
         debugDisableShadows = false;
 
         await shot(tester, const HomeScreen(), '01_vehicles');
+        appState.sync.problems['groups'] = TimeoutException('groups');
+        appState.sync.problems['save:FAM7Q2K9XW'] = TimeoutException('save');
+        await shot(tester, const HomeScreen(), '01b_sync_problem', then: () async {
+          await tester.tap(find.text('!!'));
+        });
+        appState.sync.problems.clear();
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '02_vehicle');
         detailTab.value = 1;
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '02b_tech');

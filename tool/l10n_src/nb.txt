@@ -552,3 +552,10 @@ Last ned
 Del
 Skriv ut
 PDF lagret
+Synkroniseringsproblem
+Noen data synkroniseres ikke med skyen. Endringene dine blir lagret på telefonen og sendes så snart problemet er løst.
+Liste over grupper
+Kjøretøy: {name}
+Dokumenter: {name}
+Lagring: {name}
+Prøv igjen

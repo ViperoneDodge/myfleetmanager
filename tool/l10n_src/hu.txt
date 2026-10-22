@@ -552,3 +552,10 @@ Letöltés
 Megosztás
 Nyomtatás
 PDF mentve
+Szinkronizálási hiba
+Néhány adat nem szinkronizálódik a felhővel. A módosítások a telefonon maradnak, és elküldjük őket, amint a hiba megoldódik.
+Csoportok listája
+Járművek: {name}
+Dokumentumok: {name}
+Mentés: {name}
+Újra

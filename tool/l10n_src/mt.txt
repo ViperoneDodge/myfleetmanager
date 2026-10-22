@@ -552,3 +552,10 @@ Niżżel
 Aqsam
 Ipprintja
 PDF issejvjat
+Problema fis-sinkronizzazzjoni
+Xi data mhix qed tissinkronizza mal-cloud. It-tibdiliet jibqgħu ssejvjati fuq it-telefon u jintbagħtu hekk kif tissolva l-problema.
+Lista tal-gruppi
+Vetturi: {name}
+Dokumenti: {name}
+Issejvjar: {name}
+Erġa' pprova

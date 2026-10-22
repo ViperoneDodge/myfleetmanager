@@ -626,7 +626,27 @@ class AppState extends ChangeNotifier {
 
   String? langPref;
 
+  Map<String, Object> get syncProblems => sync.problems;
+
+  String syncProblemLabel(String key) {
+    final i = key.indexOf(':');
+    final kind = i < 0 ? key : key.substring(0, i);
+    final id = i < 0 ? '' : key.substring(i + 1);
+    final name = id == data.personalFleetId ? tr('fleet.mine') : (data.groupById(id)?.name ?? tr('family.defaultName'));
+    switch (kind) {
+      case 'groups':
+        return tr('sync.problemGroups');
+      case 'vehicles':
+        return tr('sync.problemVehicles', {'name': name});
+      case 'docs':
+        return tr('sync.problemDocs', {'name': name});
+      default:
+        return tr('sync.problemSave', {'name': name});
+    }
+  }
+
   Future<void> init() async {
+    sync.onHealth = notifyListeners;
     final settings = await store.readSettings();
     theme = ThemeSettings.fromJson(settings);
     langPref = settings?['lang'] as String?;

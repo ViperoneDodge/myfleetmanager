@@ -552,5 +552,12 @@
  "pdf.download": "Preuzmi",
  "pdf.share": "Podijeli",
  "pdf.print": "Ispiši",
- "pdf.saved": "PDF spremljen"
+ "pdf.saved": "PDF spremljen",
+ "sync.problemTitle": "Problem sa sinkronizacijom",
+ "sync.problemInfo": "Neki se podaci ne sinkroniziraju s oblakom. Promjene ostaju spremljene na telefonu i bit će poslane čim se problem riješi.",
+ "sync.problemGroups": "Popis grupa",
+ "sync.problemVehicles": "Vozila: {name}",
+ "sync.problemDocs": "Dokumenti: {name}",
+ "sync.problemSave": "Spremanje: {name}",
+ "sync.retry": "Pokušaj ponovno"
 }

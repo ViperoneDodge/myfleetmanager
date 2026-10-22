@@ -552,5 +552,12 @@
  "pdf.download": "ดาวน์โหลด",
  "pdf.share": "แชร์",
  "pdf.print": "พิมพ์",
- "pdf.saved": "บันทึก PDF แล้ว"
+ "pdf.saved": "บันทึก PDF แล้ว",
+ "sync.problemTitle": "ปัญหาการซิงค์",
+ "sync.problemInfo": "ข้อมูลบางส่วนซิงค์กับคลาวด์ไม่ได้ การเปลี่ยนแปลงยังบันทึกอยู่ในโทรศัพท์และจะส่งทันทีเมื่อแก้ปัญหาได้",
+ "sync.problemGroups": "รายการกลุ่ม",
+ "sync.problemVehicles": "ยานพาหนะ: {name}",
+ "sync.problemDocs": "เอกสาร: {name}",
+ "sync.problemSave": "การบันทึก: {name}",
+ "sync.retry": "ลองอีกครั้ง"
 }

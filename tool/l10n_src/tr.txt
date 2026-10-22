@@ -552,3 +552,10 @@ Telefona kaydet
 Paylaş
 Yazdır
 PDF kaydedildi
+Senkronizasyon sorunu
+Bazı veriler bulutla senkronize olmuyor. Değişiklikleriniz telefonda kayıtlı kalır ve sorun çözülür çözülmez gönderilir.
+Grup listesi
+Araçlar: {name}
+Belgeler: {name}
+Kaydetme: {name}
+Tekrar dene

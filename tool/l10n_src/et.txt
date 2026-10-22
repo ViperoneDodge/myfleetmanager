@@ -552,3 +552,10 @@ Laadi alla
 Jaga
 Prindi
 PDF salvestatud
+Sünkroonimise probleem
+Osa andmeid ei sünkroonita pilvega. Muudatused jäävad telefoni salvestatuks ja saadetakse kohe, kui probleem laheneb.
+Gruppide loend
+Sõidukid: {name}
+Dokumendid: {name}
+Salvestamine: {name}
+Proovi uuesti

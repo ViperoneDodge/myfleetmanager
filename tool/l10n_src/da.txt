@@ -552,3 +552,10 @@ Download
 Del
 Udskriv
 PDF gemt
+Synkroniseringsproblem
+Nogle data synkroniseres ikke med skyen. Dine ændringer forbliver gemt på telefonen og sendes, så snart problemet er løst.
+Liste over grupper
+Køretøjer: {name}
+Dokumenter: {name}
+Gemning: {name}
+Prøv igen

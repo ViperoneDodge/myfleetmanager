@@ -552,3 +552,10 @@ Stáhnout
 Sdílet
 Tisknout
 PDF uloženo
+Problém se synchronizací
+Některá data se nesynchronizují s cloudem. Změny zůstávají uložené v telefonu a odešlou se, jakmile bude problém vyřešen.
+Seznam skupin
+Vozidla: {name}
+Dokumenty: {name}
+Ukládání: {name}
+Zkusit znovu

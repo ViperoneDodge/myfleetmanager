@@ -552,5 +552,12 @@
  "pdf.download": "Sækja",
  "pdf.share": "Deila",
  "pdf.print": "Prenta",
- "pdf.saved": "PDF vistað"
+ "pdf.saved": "PDF vistað",
+ "sync.problemTitle": "Samstillingarvandi",
+ "sync.problemInfo": "Sum gögn samstillast ekki við skýið. Breytingarnar þínar eru vistaðar í símanum og verða sendar um leið og vandinn leysist.",
+ "sync.problemGroups": "Listi yfir hópa",
+ "sync.problemVehicles": "Ökutæki: {name}",
+ "sync.problemDocs": "Skjöl: {name}",
+ "sync.problemSave": "Vistun: {name}",
+ "sync.retry": "Reyna aftur"
 }

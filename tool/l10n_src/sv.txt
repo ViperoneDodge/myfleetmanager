@@ -552,3 +552,10 @@ Ladda ner
 Dela
 Skriv ut
 PDF sparad
+Synkroniseringsproblem
+Vissa data synkroniseras inte med molnet. Dina ändringar finns kvar i telefonen och skickas så snart problemet är löst.
+Lista över grupper
+Fordon: {name}
+Dokument: {name}
+Sparande: {name}
+Försök igen

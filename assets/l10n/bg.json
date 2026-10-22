@@ -552,5 +552,12 @@
  "pdf.download": "Изтегли",
  "pdf.share": "Сподели",
  "pdf.print": "Печат",
- "pdf.saved": "PDF е запазен"
+ "pdf.saved": "PDF е запазен",
+ "sync.problemTitle": "Проблем със синхронизацията",
+ "sync.problemInfo": "Някои данни не се синхронизират с облака. Промените остават запазени в телефона и ще бъдат изпратени веднага щом проблемът бъде решен.",
+ "sync.problemGroups": "Списък с групи",
+ "sync.problemVehicles": "Превозни средства: {name}",
+ "sync.problemDocs": "Документи: {name}",
+ "sync.problemSave": "Запазване: {name}",
+ "sync.retry": "Опитай отново"
 }

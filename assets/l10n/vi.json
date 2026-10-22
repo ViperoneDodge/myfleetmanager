@@ -552,5 +552,12 @@
  "pdf.download": "Tải xuống",
  "pdf.share": "Chia sẻ",
  "pdf.print": "In",
- "pdf.saved": "Đã lưu PDF"
+ "pdf.saved": "Đã lưu PDF",
+ "sync.problemTitle": "Lỗi đồng bộ",
+ "sync.problemInfo": "Một số dữ liệu không đồng bộ được với đám mây. Thay đổi vẫn được lưu trên điện thoại và sẽ được gửi ngay khi sự cố được khắc phục.",
+ "sync.problemGroups": "Danh sách nhóm",
+ "sync.problemVehicles": "Xe: {name}",
+ "sync.problemDocs": "Tài liệu: {name}",
+ "sync.problemSave": "Lưu: {name}",
+ "sync.retry": "Thử lại"
 }

@@ -552,5 +552,12 @@
  "pdf.download": "Lejupielādēt",
  "pdf.share": "Kopīgot",
  "pdf.print": "Drukāt",
- "pdf.saved": "PDF saglabāts"
+ "pdf.saved": "PDF saglabāts",
+ "sync.problemTitle": "Sinhronizācijas problēma",
+ "sync.problemInfo": "Daļa datu netiek sinhronizēta ar mākoni. Izmaiņas paliek saglabātas tālrunī un tiks nosūtītas, tiklīdz problēma tiks novērsta.",
+ "sync.problemGroups": "Grupu saraksts",
+ "sync.problemVehicles": "Transportlīdzekļi: {name}",
+ "sync.problemDocs": "Dokumenti: {name}",
+ "sync.problemSave": "Saglabāšana: {name}",
+ "sync.retry": "Mēģināt vēlreiz"
 }

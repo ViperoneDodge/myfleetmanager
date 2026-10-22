@@ -552,5 +552,12 @@
  "pdf.download": "下载",
  "pdf.share": "分享",
  "pdf.print": "打印",
- "pdf.saved": "PDF 已保存"
+ "pdf.saved": "PDF 已保存",
+ "sync.problemTitle": "同步出现问题",
+ "sync.problemInfo": "部分数据未能与云端同步。您的更改仍保存在手机上，问题解决后会立即上传。",
+ "sync.problemGroups": "群组列表",
+ "sync.problemVehicles": "车辆：{name}",
+ "sync.problemDocs": "文件：{name}",
+ "sync.problemSave": "保存：{name}",
+ "sync.retry": "重试"
 }

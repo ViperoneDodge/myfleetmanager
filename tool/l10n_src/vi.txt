@@ -552,3 +552,10 @@ Tải xuống
 Chia sẻ
 In
 Đã lưu PDF
+Lỗi đồng bộ
+Một số dữ liệu không đồng bộ được với đám mây. Thay đổi vẫn được lưu trên điện thoại và sẽ được gửi ngay khi sự cố được khắc phục.
+Danh sách nhóm
+Xe: {name}
+Tài liệu: {name}
+Lưu: {name}
+Thử lại

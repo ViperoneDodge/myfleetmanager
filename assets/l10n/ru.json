@@ -552,5 +552,12 @@
  "pdf.download": "Скачать",
  "pdf.share": "Поделиться",
  "pdf.print": "Печать",
- "pdf.saved": "PDF сохранён"
+ "pdf.saved": "PDF сохранён",
+ "sync.problemTitle": "Проблема синхронизации",
+ "sync.problemInfo": "Некоторые данные не синхронизируются с облаком. Изменения остаются сохранёнными на телефоне и будут отправлены, как только проблема будет решена.",
+ "sync.problemGroups": "Список групп",
+ "sync.problemVehicles": "Транспорт: {name}",
+ "sync.problemDocs": "Документы: {name}",
+ "sync.problemSave": "Сохранение: {name}",
+ "sync.retry": "Повторить"
 }

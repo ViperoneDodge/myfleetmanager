@@ -552,5 +552,12 @@
  "pdf.download": "Last ned",
  "pdf.share": "Del",
  "pdf.print": "Skriv ut",
- "pdf.saved": "PDF lagret"
+ "pdf.saved": "PDF lagret",
+ "sync.problemTitle": "Synkroniseringsproblem",
+ "sync.problemInfo": "Noen data synkroniseres ikke med skyen. Endringene dine blir lagret på telefonen og sendes så snart problemet er løst.",
+ "sync.problemGroups": "Liste over grupper",
+ "sync.problemVehicles": "Kjøretøy: {name}",
+ "sync.problemDocs": "Dokumenter: {name}",
+ "sync.problemSave": "Lagring: {name}",
+ "sync.retry": "Prøv igjen"
 }

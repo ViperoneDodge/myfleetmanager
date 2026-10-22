@@ -552,5 +552,12 @@
  "pdf.download": "İndir",
  "pdf.share": "Paylaş",
  "pdf.print": "Yazdır",
- "pdf.saved": "PDF kaydedildi"
+ "pdf.saved": "PDF kaydedildi",
+ "sync.problemTitle": "Senkronizasyon sorunu",
+ "sync.problemInfo": "Bazı veriler bulutla senkronize olmuyor. Değişiklikleriniz telefonda kayıtlı kalır ve sorun çözülür çözülmez gönderilir.",
+ "sync.problemGroups": "Grup listesi",
+ "sync.problemVehicles": "Araçlar: {name}",
+ "sync.problemDocs": "Belgeler: {name}",
+ "sync.problemSave": "Kaydetme: {name}",
+ "sync.retry": "Tekrar dene"
 }

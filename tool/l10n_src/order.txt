@@ -552,3 +552,10 @@ pdf.download
 pdf.share
 pdf.print
 pdf.saved
+sync.problemTitle
+sync.problemInfo
+sync.problemGroups
+sync.problemVehicles
+sync.problemDocs
+sync.problemSave
+sync.retry

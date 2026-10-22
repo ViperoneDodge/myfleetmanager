@@ -552,5 +552,12 @@
  "pdf.download": "Λήψη",
  "pdf.share": "Κοινοποίηση",
  "pdf.print": "Εκτύπωση",
- "pdf.saved": "Το PDF αποθηκεύτηκε"
+ "pdf.saved": "Το PDF αποθηκεύτηκε",
+ "sync.problemTitle": "Πρόβλημα συγχρονισμού",
+ "sync.problemInfo": "Ορισμένα δεδομένα δεν συγχρονίζονται με το cloud. Οι αλλαγές παραμένουν αποθηκευμένες στο τηλέφωνο και θα σταλούν μόλις λυθεί το πρόβλημα.",
+ "sync.problemGroups": "Λίστα ομάδων",
+ "sync.problemVehicles": "Οχήματα: {name}",
+ "sync.problemDocs": "Έγγραφα: {name}",
+ "sync.problemSave": "Αποθήκευση: {name}",
+ "sync.retry": "Δοκιμή ξανά"
 }

@@ -552,5 +552,12 @@
  "pdf.download": "Prenesi",
  "pdf.share": "Deli",
  "pdf.print": "Natisni",
- "pdf.saved": "PDF shranjen"
+ "pdf.saved": "PDF shranjen",
+ "sync.problemTitle": "Težava s sinhronizacijo",
+ "sync.problemInfo": "Nekateri podatki se ne sinhronizirajo z oblakom. Spremembe ostanejo shranjene v telefonu in bodo poslane, ko bo težava odpravljena.",
+ "sync.problemGroups": "Seznam skupin",
+ "sync.problemVehicles": "Vozila: {name}",
+ "sync.problemDocs": "Dokumenti: {name}",
+ "sync.problemSave": "Shranjevanje: {name}",
+ "sync.retry": "Poskusi znova"
 }

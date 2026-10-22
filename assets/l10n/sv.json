@@ -552,5 +552,12 @@
  "pdf.download": "Ladda ner",
  "pdf.share": "Dela",
  "pdf.print": "Skriv ut",
- "pdf.saved": "PDF sparad"
+ "pdf.saved": "PDF sparad",
+ "sync.problemTitle": "Synkroniseringsproblem",
+ "sync.problemInfo": "Vissa data synkroniseras inte med molnet. Dina ändringar finns kvar i telefonen och skickas så snart problemet är löst.",
+ "sync.problemGroups": "Lista över grupper",
+ "sync.problemVehicles": "Fordon: {name}",
+ "sync.problemDocs": "Dokument: {name}",
+ "sync.problemSave": "Sparande: {name}",
+ "sync.retry": "Försök igen"
 }

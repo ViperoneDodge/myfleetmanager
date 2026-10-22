@@ -47,6 +47,20 @@ class SyncService {
   void Function(String fleetId, List<Map<String, dynamic>> docs)? _onDocs;
   final Set<String> _initialPushDone = {};
 
+  final Map<String, Object> problems = {};
+  void Function()? onHealth;
+  Timer? _groupsCheck;
+  bool _groupsFromServer = false;
+
+  void _fail(String key, Object e) {
+    problems[key] = e;
+    onHealth?.call();
+  }
+
+  void _ok(String key) {
+    if (problems.remove(key) != null) onHealth?.call();
+  }
+
   Future<String> ensurePersonal(Session s) async {
     final ref = _fleets.doc(s.key);
     final snap = await ref.get(const GetOptions(source: Source.server));
@@ -325,6 +339,9 @@ class SyncService {
     stop();
     _onDocs = onDocs;
     _listenVehicles(personalId, onVehicles, localVehicles);
+    _groupsCheck = Timer(const Duration(seconds: 60), () {
+      if (_groupsSub != null && !_groupsFromServer) _fail('groups', TimeoutException('groups'));
+    });
     _groupsSub = _fleets
         .where('members', arrayContains: session.key)
         .snapshots()
@@ -359,8 +376,12 @@ class SyncService {
       for (final g in groups) {
         _listenVehicles(g.id, onVehicles, localVehicles);
       }
-      if (!snap.metadata.isFromCache) onGroups(groups);
-    }, onError: (_) {});
+      if (!snap.metadata.isFromCache) {
+        _groupsFromServer = true;
+        _ok('groups');
+        onGroups(groups);
+      }
+    }, onError: (e) => _fail('groups', e));
   }
 
   void _listenVehicles(
@@ -371,8 +392,9 @@ class SyncService {
     if (_vehSubs.containsKey(fleetId)) return;
     _docSubs[fleetId] = _fleets.doc(fleetId).collection('docs').snapshots().listen((snap) {
       if (snap.metadata.isFromCache && snap.docs.isEmpty) return;
+      if (!snap.metadata.isFromCache) _ok('docs:$fleetId');
       _onDocs?.call(fleetId, [for (final d in snap.docs) d.data()..['id'] = d.id]);
-    }, onError: (_) {});
+    }, onError: (e) => _fail('docs:$fleetId', e));
     _vehSubs[fleetId] = _fleets
         .doc(fleetId)
         .collection('vehicles')
@@ -385,6 +407,7 @@ class SyncService {
         } catch (_) {}
       }
       final fromServer = !snap.metadata.isFromCache;
+      if (fromServer) _ok('vehicles:$fleetId');
       onVehicles(fleetId, remote, fromServer);
       if (fromServer && !_initialPushDone.contains(fleetId)) {
         _initialPushDone.add(fleetId);
@@ -394,7 +417,7 @@ class SyncService {
           if (r == null || v.updatedAt > r.updatedAt) push(fleetId, v);
         }
       }
-    }, onError: (_) {});
+    }, onError: (e) => _fail('vehicles:$fleetId', e));
   }
 
   void push(String fleetId, Vehicle v) {
@@ -403,7 +426,8 @@ class SyncService {
         .collection('vehicles')
         .doc(v.id)
         .set(v.toJson(includeDocs: false))
-        .catchError((_) {});
+        .then((_) => _ok('save:$fleetId'))
+        .catchError((Object e) => _fail('save:$fleetId', e));
   }
 
   CollectionReference<Map<String, dynamic>> _docs(String fleetId) =>
@@ -451,6 +475,11 @@ class SyncService {
       _fleets.doc(fleetId).update({'shareDocs': on}).timeout(_timeout);
 
   void stop() {
+    _groupsCheck?.cancel();
+    _groupsCheck = null;
+    _groupsFromServer = false;
+    problems.clear();
+    onHealth?.call();
     _groupsSub?.cancel();
     _groupsSub = null;
     for (final s in _vehSubs.values) {

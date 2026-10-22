@@ -552,3 +552,10 @@ Lataa
 Jaa
 Tulosta
 PDF tallennettu
+Synkronointiongelma
+Osa tiedoista ei synkronoidu pilveen. Muutokset pysyvät tallessa puhelimessa ja lähetetään heti, kun ongelma ratkeaa.
+Ryhmien luettelo
+Ajoneuvot: {name}
+Asiakirjat: {name}
+Tallennus: {name}
+Yritä uudelleen

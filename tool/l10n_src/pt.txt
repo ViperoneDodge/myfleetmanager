@@ -552,3 +552,10 @@ Transferir
 Partilhar
 Imprimir
 PDF guardado
+Problema de sincronização
+Alguns dados não estão a sincronizar com a nuvem. As alterações ficam guardadas no telemóvel e serão enviadas assim que o problema for resolvido.
+Lista de grupos
+Veículos: {name}
+Documentos: {name}
+Gravação: {name}
+Tentar novamente

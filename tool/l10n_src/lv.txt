@@ -552,3 +552,10 @@ Lejupielādēt
 Kopīgot
 Drukāt
 PDF saglabāts
+Sinhronizācijas problēma
+Daļa datu netiek sinhronizēta ar mākoni. Izmaiņas paliek saglabātas tālrunī un tiks nosūtītas, tiklīdz problēma tiks novērsta.
+Grupu saraksts
+Transportlīdzekļi: {name}
+Dokumenti: {name}
+Saglabāšana: {name}
+Mēģināt vēlreiz

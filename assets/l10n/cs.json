@@ -552,5 +552,12 @@
  "pdf.download": "Stáhnout",
  "pdf.share": "Sdílet",
  "pdf.print": "Tisknout",
- "pdf.saved": "PDF uloženo"
+ "pdf.saved": "PDF uloženo",
+ "sync.problemTitle": "Problém se synchronizací",
+ "sync.problemInfo": "Některá data se nesynchronizují s cloudem. Změny zůstávají uložené v telefonu a odešlou se, jakmile bude problém vyřešen.",
+ "sync.problemGroups": "Seznam skupin",
+ "sync.problemVehicles": "Vozidla: {name}",
+ "sync.problemDocs": "Dokumenty: {name}",
+ "sync.problemSave": "Ukládání: {name}",
+ "sync.retry": "Zkusit znovu"
 }

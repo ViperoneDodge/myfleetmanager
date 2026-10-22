@@ -552,3 +552,10 @@ Prenesi
 Deli
 Natisni
 PDF shranjen
+Težava s sinhronizacijo
+Nekateri podatki se ne sinhronizirajo z oblakom. Spremembe ostanejo shranjene v telefonu in bodo poslane, ko bo težava odpravljena.
+Seznam skupin
+Vozila: {name}
+Dokumenti: {name}
+Shranjevanje: {name}
+Poskusi znova

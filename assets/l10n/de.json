@@ -552,5 +552,12 @@
  "pdf.download": "Herunterladen",
  "pdf.share": "Teilen",
  "pdf.print": "Drucken",
- "pdf.saved": "PDF gespeichert"
+ "pdf.saved": "PDF gespeichert",
+ "sync.problemTitle": "Synchronisierungsproblem",
+ "sync.problemInfo": "Einige Daten werden nicht mit der Cloud synchronisiert. Deine Änderungen bleiben auf dem Telefon gespeichert und werden gesendet, sobald das Problem behoben ist.",
+ "sync.problemGroups": "Liste der Gruppen",
+ "sync.problemVehicles": "Fahrzeuge: {name}",
+ "sync.problemDocs": "Dokumente: {name}",
+ "sync.problemSave": "Speichern: {name}",
+ "sync.retry": "Erneut versuchen"
 }

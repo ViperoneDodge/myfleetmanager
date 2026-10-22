@@ -552,5 +552,12 @@
  "pdf.download": "Laadi alla",
  "pdf.share": "Jaga",
  "pdf.print": "Prindi",
- "pdf.saved": "PDF salvestatud"
+ "pdf.saved": "PDF salvestatud",
+ "sync.problemTitle": "Sünkroonimise probleem",
+ "sync.problemInfo": "Osa andmeid ei sünkroonita pilvega. Muudatused jäävad telefoni salvestatuks ja saadetakse kohe, kui probleem laheneb.",
+ "sync.problemGroups": "Gruppide loend",
+ "sync.problemVehicles": "Sõidukid: {name}",
+ "sync.problemDocs": "Dokumendid: {name}",
+ "sync.problemSave": "Salvestamine: {name}",
+ "sync.retry": "Proovi uuesti"
 }

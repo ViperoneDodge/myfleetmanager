@@ -552,5 +552,12 @@
  "pdf.download": "Download",
  "pdf.share": "Del",
  "pdf.print": "Udskriv",
- "pdf.saved": "PDF gemt"
+ "pdf.saved": "PDF gemt",
+ "sync.problemTitle": "Synkroniseringsproblem",
+ "sync.problemInfo": "Nogle data synkroniseres ikke med skyen. Dine ændringer forbliver gemt på telefonen og sendes, så snart problemet er løst.",
+ "sync.problemGroups": "Liste over grupper",
+ "sync.problemVehicles": "Køretøjer: {name}",
+ "sync.problemDocs": "Dokumenter: {name}",
+ "sync.problemSave": "Gemning: {name}",
+ "sync.retry": "Prøv igen"
 }

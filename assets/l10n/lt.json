@@ -552,5 +552,12 @@
  "pdf.download": "Atsisiųsti",
  "pdf.share": "Bendrinti",
  "pdf.print": "Spausdinti",
- "pdf.saved": "PDF įrašytas"
+ "pdf.saved": "PDF įrašytas",
+ "sync.problemTitle": "Sinchronizavimo problema",
+ "sync.problemInfo": "Kai kurie duomenys nesinchronizuojami su debesimi. Pakeitimai lieka išsaugoti telefone ir bus išsiųsti, kai tik problema išsispręs.",
+ "sync.problemGroups": "Grupių sąrašas",
+ "sync.problemVehicles": "Transporto priemonės: {name}",
+ "sync.problemDocs": "Dokumentai: {name}",
+ "sync.problemSave": "Įrašymas: {name}",
+ "sync.retry": "Bandyti dar kartą"
 }

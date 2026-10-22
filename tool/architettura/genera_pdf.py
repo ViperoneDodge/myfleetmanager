@@ -326,7 +326,7 @@ files = [
     ['services/app_state.dart', righe('services/app_state.dart'), 'Stato centrale e orchestrazione di tutti i servizi'],
     ['services/local_store.dart', righe('services/local_store.dart'), 'Lettura e scrittura dei file JSON sul telefono (sessione, dati, impostazioni)'],
     ['services/auth_service.dart', righe('services/auth_service.dart'), 'Accesso: account locale, email e password, Google, Apple; eliminazione account'],
-    ['services/sync_service.dart', righe('services/sync_service.dart'), 'Sincronizzazione con Firestore: gruppi, veicoli, documenti, ruoli, Pro'],
+    ['services/sync_service.dart', righe('services/sync_service.dart'), 'Sincronizzazione con Firestore: gruppi, veicoli, documenti, ruoli, Pro; registra i problemi per fonte (gruppi, veicoli, documenti, salvataggi) e li toglie quando la fonte torna a funzionare'],
     ['services/notification_service.dart', righe('services/notification_service.dart'), 'Promemoria delle scadenze programmati sul telefono, canali Android, prove'],
     ['services/push_service.dart', righe('services/push_service.dart'), 'Registrazione del telefono a Firebase Cloud Messaging'],
     ['services/app_check.dart', righe('services/app_check.dart'), 'Avvio di Firebase App Check (Play Integrity su Android, App Attest su iOS): certifica che le richieste al cloud arrivano dall\'app originale'],
@@ -626,6 +626,7 @@ story += [table([
 ], [44 * mm, 66 * mm, 60 * mm]), Spacer(1, 6)]
 story += B([
     'Connessioni cifrate verso Firebase; accesso al cloud solo con utente autenticato.',
+    'Se la sincronizzazione non riesce (errore o nessuna risposta dal server sui gruppi entro un minuto) in alto a sinistra compare un\'icona rossa «!!»: un tocco mostra cosa non va e permette di riprovare.',
     'L\'account «solo su questo telefono» non invia nulla in rete.',
     'Il riconoscimento del libretto avviene interamente sul telefono.',
     'Cancellazione completa dei dati e dell\'account dall\'app, più richiesta via email per i dati residui.',

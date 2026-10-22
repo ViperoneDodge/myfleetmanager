@@ -552,3 +552,10 @@ Atsisiųsti
 Bendrinti
 Spausdinti
 PDF įrašytas
+Sinchronizavimo problema
+Kai kurie duomenys nesinchronizuojami su debesimi. Pakeitimai lieka išsaugoti telefone ir bus išsiųsti, kai tik problema išsispręs.
+Grupių sąrašas
+Transporto priemonės: {name}
+Dokumentai: {name}
+Įrašymas: {name}
+Bandyti dar kartą

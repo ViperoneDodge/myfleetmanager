@@ -552,5 +552,12 @@
  "pdf.download": "Descarcă",
  "pdf.share": "Distribuie",
  "pdf.print": "Tipărește",
- "pdf.saved": "PDF salvat"
+ "pdf.saved": "PDF salvat",
+ "sync.problemTitle": "Problemă de sincronizare",
+ "sync.problemInfo": "Unele date nu se sincronizează cu cloudul. Modificările rămân salvate pe telefon și vor fi trimise imediat ce problema se rezolvă.",
+ "sync.problemGroups": "Lista grupurilor",
+ "sync.problemVehicles": "Vehicule: {name}",
+ "sync.problemDocs": "Documente: {name}",
+ "sync.problemSave": "Salvare: {name}",
+ "sync.retry": "Reîncearcă"
 }

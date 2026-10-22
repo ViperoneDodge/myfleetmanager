@@ -552,5 +552,12 @@
  "pdf.download": "Завантажити",
  "pdf.share": "Поділитися",
  "pdf.print": "Друкувати",
- "pdf.saved": "PDF збережено"
+ "pdf.saved": "PDF збережено",
+ "sync.problemTitle": "Проблема синхронізації",
+ "sync.problemInfo": "Деякі дані не синхронізуються з хмарою. Зміни залишаються збереженими на телефоні й будуть надіслані, щойно проблему буде вирішено.",
+ "sync.problemGroups": "Список груп",
+ "sync.problemVehicles": "Транспорт: {name}",
+ "sync.problemDocs": "Документи: {name}",
+ "sync.problemSave": "Збереження: {name}",
+ "sync.retry": "Повторити"
 }

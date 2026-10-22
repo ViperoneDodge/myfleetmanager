@@ -552,5 +552,12 @@
  "pdf.download": "Download",
  "pdf.share": "Share",
  "pdf.print": "Print",
- "pdf.saved": "PDF saved"
+ "pdf.saved": "PDF saved",
+ "sync.problemTitle": "Sync problem",
+ "sync.problemInfo": "Some data is not syncing with the cloud. Your changes stay saved on the phone and will be sent as soon as the problem is solved.",
+ "sync.problemGroups": "List of groups",
+ "sync.problemVehicles": "Vehicles: {name}",
+ "sync.problemDocs": "Documents: {name}",
+ "sync.problemSave": "Saving: {name}",
+ "sync.retry": "Retry"
 }

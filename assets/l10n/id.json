@@ -552,5 +552,12 @@
  "pdf.download": "Unduh",
  "pdf.share": "Bagikan",
  "pdf.print": "Cetak",
- "pdf.saved": "PDF disimpan"
+ "pdf.saved": "PDF disimpan",
+ "sync.problemTitle": "Masalah sinkronisasi",
+ "sync.problemInfo": "Sebagian data tidak tersinkron dengan cloud. Perubahan tetap tersimpan di ponsel dan akan dikirim begitu masalahnya teratasi.",
+ "sync.problemGroups": "Daftar grup",
+ "sync.problemVehicles": "Kendaraan: {name}",
+ "sync.problemDocs": "Dokumen: {name}",
+ "sync.problemSave": "Penyimpanan: {name}",
+ "sync.retry": "Coba lagi"
 }

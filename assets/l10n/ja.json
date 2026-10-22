@@ -552,5 +552,12 @@
  "pdf.download": "ダウンロード",
  "pdf.share": "共有",
  "pdf.print": "印刷",
- "pdf.saved": "PDFを保存しました"
+ "pdf.saved": "PDFを保存しました",
+ "sync.problemTitle": "同期の問題",
+ "sync.problemInfo": "一部のデータがクラウドと同期されていません。変更はスマートフォンに保存されており、問題が解決するとすぐに送信されます。",
+ "sync.problemGroups": "グループ一覧",
+ "sync.problemVehicles": "車両：{name}",
+ "sync.problemDocs": "書類：{name}",
+ "sync.problemSave": "保存：{name}",
+ "sync.retry": "再試行"
 }

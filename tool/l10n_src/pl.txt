@@ -552,3 +552,10 @@ Pobierz
 Udostępnij
 Drukuj
 PDF zapisany
+Problem z synchronizacją
+Niektóre dane nie synchronizują się z chmurą. Zmiany pozostają zapisane w telefonie i zostaną wysłane, gdy problem zostanie rozwiązany.
+Lista grup
+Pojazdy: {name}
+Dokumenty: {name}
+Zapis: {name}
+Spróbuj ponownie

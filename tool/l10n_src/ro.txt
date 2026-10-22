@@ -552,3 +552,10 @@ Descarcă
 Distribuie
 Tipărește
 PDF salvat
+Problemă de sincronizare
+Unele date nu se sincronizează cu cloudul. Modificările rămân salvate pe telefon și vor fi trimise imediat ce problema se rezolvă.
+Lista grupurilor
+Vehicule: {name}
+Documente: {name}
+Salvare: {name}
+Reîncearcă
