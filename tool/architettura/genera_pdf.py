@@ -537,7 +537,7 @@ sett = [
     ['Orario preciso', 'Su Android 12 e successivi chiede il permesso «Sveglie e promemoria»; senza, Android può ritardare gli avvisi.'],
     ['<b>Documenti online</b>', 'Consenso alla copia online dei documenti (backup personale e condivisione nei gruppi che la '
                                'permettono), limite 25 MB per utente.'],
-    ['<b>Notifiche push</b>', 'Stato della registrazione del telefono; un tocco copia il codice per una prova dalla console Firebase.'],
+    ['<b>Notifiche push</b>', 'Lo stato della registrazione compare solo all\'amministratore oppure se la registrazione non è riuscita (un tocco riprova).'],
     ['Avvisi attività dei gruppi', 'Avvisa quando un altro membro aggiunge, modifica o elimina un veicolo, anche ad app chiusa.'],
     ['<b>Gruppi</b>', 'Elenco dei propri gruppi, creazione di un gruppo, ingresso con codice invito o QR.'],
     ['<b>Aspetto</b> – Preferiti', 'Attiva i preferiti e il selettore della pagina iniziale.'],
@@ -545,7 +545,7 @@ sett = [
     ['Colore copertina', 'Otto colori: blu, verde bosco, rosso corsa, arancio, petrolio, viola, grafite, cuoio.'],
     ['Sfondo delle pagine', 'Righe, quadretti, puntini o liscio; i testi si allineano alla rigatura.'],
     ['<b>Unità di misura</b>', 'Potenza in kW, CV o entrambe; distanze in chilometri o miglia; valuta automatica o scelta da un elenco. Nella modifica del veicolo kW e CV si compilano a vicenda.'],
-    ['<b>Supporto</b>', 'Segnala un problema (email precompilata), informativa privacy, richiesta di cancellazione dati.'],
+    ['<b>Supporto</b>', 'Segnala un problema (email precompilata) e informativa privacy; la richiesta di cancellazione via email resta indicata nell\'informativa.'],
     ['Elimina account', 'Solo account online: cancella dati e account dal cloud (con revoca di «Accedi con Apple»).'],
     ['Esci', 'Chiude la sessione; i dati restano sul telefono.'],
 ]

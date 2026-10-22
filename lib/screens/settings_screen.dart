@@ -196,6 +196,7 @@ class SettingsScreen extends StatelessWidget {
               ),
               if (!kIsWeb) ...[
                 _header(context, tr('settings.push')),
+                if (appState.isAdmin || !appState.push.registered)
                 ListTile(
                   leading: Icon(
                     appState.push.registered ? Icons.cloud_done_outlined : Icons.cloud_off_outlined,
@@ -267,20 +268,6 @@ class SettingsScreen extends StatelessWidget {
               onTap: () async {
                 final ok = await SupportService.openPrivacy();
                 if (!ok && context.mounted) showSnack(context, SupportService.privacyUrl);
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.mail_outline),
-              title: Text(tr('privacy.deleteRequest')),
-              subtitle: Text(SupportService.email),
-              onTap: () async {
-                final ok = await SupportService.openEmail(
-                  subject: 'MyFleetManager - ${tr('privacy.deleteRequest')}',
-                  body: '${tr('login.email')}: ${appState.session?.email ?? appState.session?.displayName ?? ''}\n\n',
-                );
-                if (!ok && context.mounted) {
-                  showSnack(context, tr('bug.noMail', {'email': SupportService.email}));
-                }
               },
             ),
             if (appState.isCloud)
