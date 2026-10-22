@@ -395,17 +395,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
                 onChanged: (f) => setState(() => v.fuel = f ?? ''),
               ),
             ),
-            Row(children: [
-              Expanded(
-                child: _techField(_power, tr('tech.powerName'), Icons.speed,
-                    number: true, suffix: 'kW', onChanged: (t) => _powerCv.text = kwToCvText(t)),
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: _techField(_powerCv, tr('tech.powerName'), Icons.speed,
-                    number: true, suffix: tr('unit.cv'), onChanged: (t) => _power.text = cvToKwText(t)),
-              ),
-            ]),
+            _powerField(),
             _techField(_cc, tr('tech.engine'), Icons.settings_outlined, number: true),
             _tyreEditor(scheme),
             _techField(_oil, tr('tech.oil'), Icons.oil_barrel_outlined, hint: tr('tech.oilHint')),
@@ -577,6 +567,47 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
               label: Text(tr('tyre.splitRim')),
             ),
           ]),
+        ]),
+      ),
+    );
+  }
+
+  Widget _powerField() {
+    Widget part(TextEditingController c, String unit, ValueChanged<String> onChanged) => Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ConstrainedBox(
+              constraints: const BoxConstraints(minWidth: 28, maxWidth: 90),
+              child: IntrinsicWidth(
+                child: TextField(
+                  controller: c,
+                  onChanged: onChanged,
+                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                  decoration: const InputDecoration.collapsed(hintText: '—'),
+                ),
+              ),
+            ),
+            const SizedBox(width: 6),
+            Text(unit, style: const TextStyle(fontWeight: FontWeight.w600)),
+          ],
+        );
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: InputDecorator(
+        decoration: InputDecoration(
+          labelText: tr('tech.powerName'),
+          filled: true,
+          isDense: true,
+          border: const OutlineInputBorder(),
+          prefixIcon: const Icon(Icons.speed),
+        ),
+        child: Row(children: [
+          part(_power, 'kW', (t) => _powerCv.text = kwToCvText(t)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Text('=', style: TextStyle(color: Theme.of(context).colorScheme.outline)),
+          ),
+          part(_powerCv, tr('unit.cv'), (t) => _power.text = cvToKwText(t)),
         ]),
       ),
     );
