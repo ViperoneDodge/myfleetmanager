@@ -543,5 +543,14 @@
  "units.distance": "Vegalengdir",
  "units.currency": "Gjaldmiðill",
  "units.currencyAuto": "Sjálfvirkt ({currency})",
- "maint.miles": "Mílur"
+ "maint.miles": "Mílur",
+ "fav.viewAll": "Öll",
+ "fav.allTitle": "Öll ökutæki",
+ "pdf.ready": "PDF tilbúið",
+ "pdf.open": "Opna",
+ "pdf.save": "Vista í síma",
+ "pdf.download": "Sækja",
+ "pdf.share": "Deila",
+ "pdf.print": "Prenta",
+ "pdf.saved": "PDF vistað"
 }

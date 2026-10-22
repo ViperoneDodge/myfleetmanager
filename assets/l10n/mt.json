@@ -543,5 +543,14 @@
  "units.distance": "Distanzi",
  "units.currency": "Munita",
  "units.currencyAuto": "Awtomatika ({currency})",
- "maint.miles": "Mili"
+ "maint.miles": "Mili",
+ "fav.viewAll": "Kollha",
+ "fav.allTitle": "Il-vetturi kollha",
+ "pdf.ready": "Il-PDF lest",
+ "pdf.open": "Iftaħ",
+ "pdf.save": "Issejvja fuq it-telefon",
+ "pdf.download": "Niżżel",
+ "pdf.share": "Aqsam",
+ "pdf.print": "Ipprintja",
+ "pdf.saved": "PDF issejvjat"
 }

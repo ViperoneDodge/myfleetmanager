@@ -543,5 +543,14 @@
  "units.distance": "Entfernungen",
  "units.currency": "Währung",
  "units.currencyAuto": "Automatisch ({currency})",
- "maint.miles": "Meilen"
+ "maint.miles": "Meilen",
+ "fav.viewAll": "Alle",
+ "fav.allTitle": "Alle Fahrzeuge",
+ "pdf.ready": "PDF fertig",
+ "pdf.open": "Öffnen",
+ "pdf.save": "Auf dem Telefon speichern",
+ "pdf.download": "Herunterladen",
+ "pdf.share": "Teilen",
+ "pdf.print": "Drucken",
+ "pdf.saved": "PDF gespeichert"
 }

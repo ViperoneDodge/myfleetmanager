@@ -543,3 +543,12 @@ Mesafeler
 Para birimi
 Otomatik ({currency})
 Mil
+Tümü
+Tüm araçlar
+PDF hazır
+Aç
+Telefona kaydet
+İndir
+Paylaş
+Yazdır
+PDF kaydedildi

@@ -543,3 +543,12 @@ Etäisyydet
 Valuutta
 Automaattinen ({currency})
 Mailit
+Kaikki
+Kaikki ajoneuvot
+PDF on valmis
+Avaa
+Tallenna puhelimeen
+Lataa
+Jaa
+Tulosta
+PDF tallennettu

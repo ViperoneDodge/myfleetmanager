@@ -543,3 +543,12 @@ Vzdálenosti
 Měna
 Automaticky ({currency})
 Míle
+Vše
+Všechna vozidla
+PDF je připraveno
+Otevřít
+Uložit do telefonu
+Stáhnout
+Sdílet
+Tisknout
+PDF uloženo

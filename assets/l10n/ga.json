@@ -543,5 +543,14 @@
  "units.distance": "Achair",
  "units.currency": "Airgeadra",
  "units.currencyAuto": "Uathoibríoch ({currency})",
- "maint.miles": "Mílte"
+ "maint.miles": "Mílte",
+ "fav.viewAll": "Gach ceann",
+ "fav.allTitle": "Gach feithicil",
+ "pdf.ready": "PDF réidh",
+ "pdf.open": "Oscail",
+ "pdf.save": "Sábháil ar an bhfón",
+ "pdf.download": "Íoslódáil",
+ "pdf.share": "Comhroinn",
+ "pdf.print": "Priontáil",
+ "pdf.saved": "PDF sábháilte"
 }

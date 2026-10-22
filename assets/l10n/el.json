@@ -543,5 +543,14 @@
  "units.distance": "Αποστάσεις",
  "units.currency": "Νόμισμα",
  "units.currencyAuto": "Αυτόματα ({currency})",
- "maint.miles": "Μίλια"
+ "maint.miles": "Μίλια",
+ "fav.viewAll": "Όλα",
+ "fav.allTitle": "Όλα τα οχήματα",
+ "pdf.ready": "Το PDF είναι έτοιμο",
+ "pdf.open": "Άνοιγμα",
+ "pdf.save": "Αποθήκευση στο τηλέφωνο",
+ "pdf.download": "Λήψη",
+ "pdf.share": "Κοινοποίηση",
+ "pdf.print": "Εκτύπωση",
+ "pdf.saved": "Το PDF αποθηκεύτηκε"
 }

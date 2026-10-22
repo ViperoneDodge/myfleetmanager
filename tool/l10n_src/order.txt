@@ -543,3 +543,12 @@ units.distance
 units.currency
 units.currencyAuto
 maint.miles
+fav.viewAll
+fav.allTitle
+pdf.ready
+pdf.open
+pdf.save
+pdf.download
+pdf.share
+pdf.print
+pdf.saved

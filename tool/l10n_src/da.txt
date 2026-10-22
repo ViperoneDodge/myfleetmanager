@@ -543,3 +543,12 @@ Afstande
 Valuta
 Automatisk ({currency})
 Miles
+Alle
+Alle køretøjer
+PDF klar
+Åbn
+Gem på telefonen
+Download
+Del
+Udskriv
+PDF gemt

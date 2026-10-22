@@ -52,15 +52,10 @@ class PdfExport {
     }
   }
 
-  static String _fileName(String title) {
+  static String fileName(String title) {
     final safe = title.replaceAll(RegExp(r'[^A-Za-z0-9]+'), '-').replaceAll(RegExp(r'^-+|-+$'), '');
     final day = DateFormat('yyyyMMdd').format(DateTime.now());
     return 'MyFleetManager${safe.isEmpty ? '' : '-$safe'}-$day.pdf';
-  }
-
-  static Future<void> share({required String title, required List<Vehicle> vehicles}) async {
-    final bytes = await build(title: title, vehicles: vehicles);
-    await Printing.sharePdf(bytes: bytes, filename: _fileName(title));
   }
 
   static const double _pageHeight = 842 - 32 - 32 - 24;

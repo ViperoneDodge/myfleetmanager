@@ -543,5 +543,14 @@
  "units.distance": "Attālumi",
  "units.currency": "Valūta",
  "units.currencyAuto": "Automātiski ({currency})",
- "maint.miles": "Jūdzes"
+ "maint.miles": "Jūdzes",
+ "fav.viewAll": "Visi",
+ "fav.allTitle": "Visi transportlīdzekļi",
+ "pdf.ready": "PDF ir gatavs",
+ "pdf.open": "Atvērt",
+ "pdf.save": "Saglabāt tālrunī",
+ "pdf.download": "Lejupielādēt",
+ "pdf.share": "Kopīgot",
+ "pdf.print": "Drukāt",
+ "pdf.saved": "PDF saglabāts"
 }

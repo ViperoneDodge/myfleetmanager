@@ -543,5 +543,14 @@
  "units.distance": "Razdalje",
  "units.currency": "Valuta",
  "units.currencyAuto": "Samodejno ({currency})",
- "maint.miles": "Milje"
+ "maint.miles": "Milje",
+ "fav.viewAll": "Vsa",
+ "fav.allTitle": "Vsa vozila",
+ "pdf.ready": "PDF je pripravljen",
+ "pdf.open": "Odpri",
+ "pdf.save": "Shrani v telefon",
+ "pdf.download": "Prenesi",
+ "pdf.share": "Deli",
+ "pdf.print": "Natisni",
+ "pdf.saved": "PDF shranjen"
 }

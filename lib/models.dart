@@ -645,7 +645,7 @@ String fuelLabel(String kind) => fuelKinds.contains(kind) ? tr('fuel.$kind') : k
 
 const List<String> fuelKinds = ['petrol', 'diesel', 'lpg', 'cng', 'hybrid', 'plugin', 'electric', 'other'];
 
-enum HomeView { mine, favorites, both }
+enum HomeView { mine, favorites, all }
 
 class Favorites {
   bool on;
@@ -656,7 +656,7 @@ class Favorites {
 
   Favorites({
     this.on = false,
-    this.view = HomeView.mine,
+    this.view = HomeView.all,
     Set<String>? vehicles,
     Set<String>? groups,
     Set<String>? excluded,
@@ -706,7 +706,7 @@ class Favorites {
     Set<String> ids(Object? o) => ((o as List?) ?? const []).map((e) => e.toString()).toSet();
     return Favorites(
       on: j['on'] == true,
-      view: HomeView.values.firstWhere((e) => e.name == j['view'], orElse: () => HomeView.mine),
+      view: j['view'] == 'favorites' ? HomeView.favorites : HomeView.all,
       vehicles: ids(j['vehicles']),
       groups: ids(j['groups']),
       excluded: ids(j['excluded']),

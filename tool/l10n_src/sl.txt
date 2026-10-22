@@ -543,3 +543,12 @@ Razdalje
 Valuta
 Samodejno ({currency})
 Milje
+Vsa
+Vsa vozila
+PDF je pripravljen
+Odpri
+Shrani v telefon
+Prenesi
+Deli
+Natisni
+PDF shranjen

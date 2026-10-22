@@ -543,3 +543,12 @@ Vahemaad
 Valuuta
 Automaatne ({currency})
 Miilid
+Kõik
+Kõik sõidukid
+PDF on valmis
+Ava
+Salvesta telefoni
+Laadi alla
+Jaga
+Prindi
+PDF salvestatud

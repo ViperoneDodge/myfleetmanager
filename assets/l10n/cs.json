@@ -543,5 +543,14 @@
  "units.distance": "Vzdálenosti",
  "units.currency": "Měna",
  "units.currencyAuto": "Automaticky ({currency})",
- "maint.miles": "Míle"
+ "maint.miles": "Míle",
+ "fav.viewAll": "Vše",
+ "fav.allTitle": "Všechna vozidla",
+ "pdf.ready": "PDF je připraveno",
+ "pdf.open": "Otevřít",
+ "pdf.save": "Uložit do telefonu",
+ "pdf.download": "Stáhnout",
+ "pdf.share": "Sdílet",
+ "pdf.print": "Tisknout",
+ "pdf.saved": "PDF uloženo"
 }

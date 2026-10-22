@@ -543,5 +543,14 @@
  "units.distance": "Udaljenosti",
  "units.currency": "Valuta",
  "units.currencyAuto": "Automatski ({currency})",
- "maint.miles": "Milje"
+ "maint.miles": "Milje",
+ "fav.viewAll": "Sva",
+ "fav.allTitle": "Sva vozila",
+ "pdf.ready": "PDF je spreman",
+ "pdf.open": "Otvori",
+ "pdf.save": "Spremi na telefon",
+ "pdf.download": "Preuzmi",
+ "pdf.share": "Podijeli",
+ "pdf.print": "Ispiši",
+ "pdf.saved": "PDF spremljen"
 }

@@ -543,5 +543,14 @@
  "units.distance": "Відстані",
  "units.currency": "Валюта",
  "units.currencyAuto": "Автоматично ({currency})",
- "maint.miles": "Милі"
+ "maint.miles": "Милі",
+ "fav.viewAll": "Усі",
+ "fav.allTitle": "Усі транспортні засоби",
+ "pdf.ready": "PDF готовий",
+ "pdf.open": "Відкрити",
+ "pdf.save": "Зберегти в телефоні",
+ "pdf.download": "Завантажити",
+ "pdf.share": "Поділитися",
+ "pdf.print": "Друкувати",
+ "pdf.saved": "PDF збережено"
 }

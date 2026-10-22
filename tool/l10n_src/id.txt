@@ -543,3 +543,12 @@ Jarak
 Mata uang
 Otomatis ({currency})
 Mil
+Semua
+Semua kendaraan
+PDF siap
+Buka
+Simpan ke ponsel
+Unduh
+Bagikan
+Cetak
+PDF disimpan

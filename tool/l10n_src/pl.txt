@@ -543,3 +543,12 @@ Odległości
 Waluta
 Automatycznie ({currency})
 Mile
+Wszystkie
+Wszystkie pojazdy
+PDF gotowy
+Otwórz
+Zapisz w telefonie
+Pobierz
+Udostępnij
+Drukuj
+PDF zapisany

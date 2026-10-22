@@ -397,7 +397,7 @@ story += [table([
     ['FleetGroup', 'Gruppo: nome, proprietario, membri con email, amministratori, sola visualizzazione, condivisione documenti sì/no.'],
     ['GroupRole', 'Amministratore · Può modificare · Solo visualizzazione.'],
     ['NotifySettings', 'Anticipi dei promemoria (30, 7, 1, 0 giorni) e orario (predefinito 9:00).'],
-    ['Favorites', 'Preferiti attivi sì/no, vista iniziale (I miei / Preferiti / Entrambi), veicoli, gruppi interi ed esclusioni.'],
+    ['Favorites', 'Preferiti attivi sì/no, vista iniziale (Tutti / Preferiti), veicoli, gruppi interi ed esclusioni.'],
     ['UserData', 'Insieme dei dati di un account: veicoli, gruppi, impostazioni notifiche, preferiti.'],
     ['Session', 'Account attivo: modalità (locale o online), identificativo, nome visualizzato, email.'],
     ['TyreSet', 'Gruppo di pneumatici (nome + misure), con riconoscimento automatico delle misure e divisione per cerchio.'],
@@ -499,7 +499,7 @@ screens = [
     ['Login', 'Scegliere account solo sul telefono o online; accedere con email e password, Google o Apple (su iPhone); '
               'registrarsi; recuperare la password (con conferma prima dell\'invio).'],
     ['Home – Veicoli', 'Elenco dei veicoli con filtro per tipo, ordinamento (più vecchio / più recente), stato della prossima '
-                       'scadenza; con i Preferiti attivi selettore I miei / Preferiti / Entrambi e stella su ogni veicolo; '
+                       'scadenza; con i Preferiti attivi selettore Tutti / Preferiti e stella su ogni veicolo; '
                        'esportazione PDF; aggiunta veicolo; pressione lunga per spostare il veicolo in un gruppo.'],
     ['Home – Gruppi', 'Gruppi con i loro veicoli, stella sul gruppo intero, PDF del gruppo, aggiunta di veicoli al gruppo, '
                       'accesso alla schermata del gruppo.'],
@@ -556,9 +556,10 @@ story += B([
     '<b>Filtro «In scadenza»</b> nella scheda Scadenze.',
     '<b>Preferiti</b>: stella sul veicolo (lista e scheda) e sul gruppo intero; vista iniziale ricordata.',
     '<b>Spostamento</b> di un veicolo tra «I miei veicoli» e i gruppi (pressione lunga sulla card).',
+    '<b>Solo visualizzazione</b>: chi ha questo ruolo in un gruppo non può modificare, eliminare, aggiungere manutenzioni né aggiungere o rinominare documenti.',
     '<b>Condivisione documenti</b> nel gruppo, decisa dall\'amministratore del gruppo.',
     '<b>Lettura del libretto</b> (beta) da foto o PDF, con conferma di ogni dato e assegnazione manuale del testo.',
-    '<b>Esportazione PDF</b> di veicoli, scadenze e manutenzioni (i dati tecnici non sono inclusi). Dalla pagina Gruppi l\'icona in alto chiede se esportare tutti i gruppi o uno solo.',
+    '<b>Esportazione PDF</b> di veicoli, scadenze e manutenzioni (i dati tecnici non sono inclusi). Dalla pagina Gruppi l\'icona in alto chiede se esportare tutti i gruppi o uno solo. Il PDF viene prima creato e poi si sceglie: apri, salva sul telefono, condividi o stampa.',
     '<b>Telefoni</b> bloccati in verticale; <b>tablet</b> liberi di ruotare e con testi più grandi.',
 ])
 

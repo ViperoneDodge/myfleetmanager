@@ -543,5 +543,14 @@
  "units.distance": "Avstånd",
  "units.currency": "Valuta",
  "units.currencyAuto": "Automatisk ({currency})",
- "maint.miles": "Miles"
+ "maint.miles": "Miles",
+ "fav.viewAll": "Alla",
+ "fav.allTitle": "Alla fordon",
+ "pdf.ready": "PDF klar",
+ "pdf.open": "Öppna",
+ "pdf.save": "Spara på telefonen",
+ "pdf.download": "Ladda ner",
+ "pdf.share": "Dela",
+ "pdf.print": "Skriv ut",
+ "pdf.saved": "PDF sparad"
 }

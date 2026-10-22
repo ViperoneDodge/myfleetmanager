@@ -543,5 +543,14 @@
  "units.distance": "Vahemaad",
  "units.currency": "Valuuta",
  "units.currencyAuto": "Automaatne ({currency})",
- "maint.miles": "Miilid"
+ "maint.miles": "Miilid",
+ "fav.viewAll": "Kõik",
+ "fav.allTitle": "Kõik sõidukid",
+ "pdf.ready": "PDF on valmis",
+ "pdf.open": "Ava",
+ "pdf.save": "Salvesta telefoni",
+ "pdf.download": "Laadi alla",
+ "pdf.share": "Jaga",
+ "pdf.print": "Prindi",
+ "pdf.saved": "PDF salvestatud"
 }

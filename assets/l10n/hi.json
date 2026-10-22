@@ -543,5 +543,14 @@
  "units.distance": "दूरी",
  "units.currency": "मुद्रा",
  "units.currencyAuto": "स्वचालित ({currency})",
- "maint.miles": "मील"
+ "maint.miles": "मील",
+ "fav.viewAll": "सभी",
+ "fav.allTitle": "सभी वाहन",
+ "pdf.ready": "PDF तैयार है",
+ "pdf.open": "खोलें",
+ "pdf.save": "फ़ोन में सहेजें",
+ "pdf.download": "डाउनलोड करें",
+ "pdf.share": "साझा करें",
+ "pdf.print": "प्रिंट करें",
+ "pdf.saved": "PDF सहेजा गया"
 }

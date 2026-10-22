@@ -543,5 +543,14 @@
  "units.distance": "Atstumai",
  "units.currency": "Valiuta",
  "units.currencyAuto": "Automatiškai ({currency})",
- "maint.miles": "Mylios"
+ "maint.miles": "Mylios",
+ "fav.viewAll": "Visos",
+ "fav.allTitle": "Visos transporto priemonės",
+ "pdf.ready": "PDF paruoštas",
+ "pdf.open": "Atidaryti",
+ "pdf.save": "Įrašyti telefone",
+ "pdf.download": "Atsisiųsti",
+ "pdf.share": "Bendrinti",
+ "pdf.print": "Spausdinti",
+ "pdf.saved": "PDF įrašytas"
 }

@@ -567,7 +567,8 @@ class AppState extends ChangeNotifier {
 
   bool get favoritesOn => data.favorites.on;
 
-  HomeView get homeView => favoritesOn ? data.favorites.view : HomeView.mine;
+  HomeView get homeView =>
+      !favoritesOn ? HomeView.mine : (data.favorites.view == HomeView.favorites ? HomeView.favorites : HomeView.all);
 
   bool isFavorite(Vehicle v) => data.favorites.isFavorite(v);
 
@@ -581,8 +582,8 @@ class AppState extends ChangeNotifier {
         return myVehicles;
       case HomeView.favorites:
         return favoriteVehicles;
-      case HomeView.both:
-        return sortedForList(vehicles.where((v) => isMine(v) || isFavorite(v)));
+      case HomeView.all:
+        return sortedForList(vehicles);
     }
   }
 

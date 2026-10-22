@@ -351,8 +351,8 @@ class _HomeScreenState extends State<HomeScreen> {
         return tr('fleet.mine');
       case HomeView.favorites:
         return tr('fav.title');
-      case HomeView.both:
-        return tr('fav.bothTitle');
+      case HomeView.all:
+        return tr('fav.allTitle');
     }
   }
 
@@ -362,11 +362,9 @@ class _HomeScreenState extends State<HomeScreen> {
           showSelectedIcon: false,
           segments: [
             ButtonSegment(
-                value: HomeView.mine, icon: const Icon(Icons.garage_outlined), label: Text(tr('fav.viewMine'))),
+                value: HomeView.all, icon: const Icon(Icons.garage_outlined), label: Text(tr('fav.viewAll'))),
             ButtonSegment(
                 value: HomeView.favorites, icon: const Icon(Icons.star_outline), label: Text(tr('fav.viewFav'))),
-            ButtonSegment(
-                value: HomeView.both, icon: const Icon(Icons.join_full_outlined), label: Text(tr('fav.viewBoth'))),
           ],
           selected: {appState.homeView},
           onSelectionChanged: (s) => appState.setHomeView(s.first),

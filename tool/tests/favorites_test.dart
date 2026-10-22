@@ -35,18 +35,21 @@ void main() {
   });
 
   test('salvati e riletti, veicolo spostato di gruppo', () {
-    final f = Favorites(on: true, view: HomeView.both)
+    final f = Favorites(on: true, view: HomeView.all)
       ..toggle(mine)
       ..toggleGroup('G2', [other]);
     final r = Favorites.fromJson(f.toJson());
     expect(r.on, true);
-    expect(r.view, HomeView.both);
+    expect(r.view, HomeView.all);
     expect(r.isFavorite(mine), true);
     expect(r.isFavorite(other), true);
     r.renamed('a', 'a2');
     expect(r.isFavorite(Vehicle(id: 'a2')), true);
     expect(Favorites.fromJson(null).on, false);
     final data = UserData.fromJson(UserData(favorites: r).toJson());
-    expect(data.favorites.view, HomeView.both);
+    expect(data.favorites.view, HomeView.all);
+    expect(Favorites.fromJson({'on': true, 'view': 'mine'}).view, HomeView.all);
+    expect(Favorites.fromJson({'on': true, 'view': 'both'}).view, HomeView.all);
+    expect(Favorites.fromJson({'on': true, 'view': 'favorites'}).view, HomeView.favorites);
   });
 }

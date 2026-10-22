@@ -543,3 +543,12 @@ Afstanden
 Valuta
 Automatisch ({currency})
 Mijlen
+Alle
+Alle voertuigen
+PDF klaar
+Openen
+Opslaan op telefoon
+Downloaden
+Delen
+Afdrukken
+PDF opgeslagen

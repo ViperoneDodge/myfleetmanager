@@ -1,6 +1,12 @@
+import 'dart:io';
+
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:open_filex/open_filex.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:printing/printing.dart';
 
 import '../l10n.dart';
 import '../main.dart';
@@ -180,8 +186,75 @@ class FamilyTab extends StatelessWidget {
 Future<void> exportPdf(BuildContext context, String title, List<Vehicle> vehicles) async {
   if (!await requirePro(context, reason: tr('pro.reasonPdf')) || !context.mounted) return;
   showSnack(context, tr('pdf.creating'));
+  final Uint8List bytes;
   try {
-    await PdfExport.share(title: title, vehicles: vehicles);
+    bytes = await PdfExport.build(title: title, vehicles: vehicles);
+  } catch (e) {
+    if (context.mounted) showSnack(context, tr('pdf.error', {'error': e}));
+    return;
+  }
+  if (!context.mounted) return;
+  ScaffoldMessenger.of(context).hideCurrentSnackBar();
+  final name = PdfExport.fileName(title);
+  final action = await showModalBottomSheet<String>(
+    context: context,
+    showDragHandle: true,
+    builder: (ctx) => SafeArea(
+      child: Column(mainAxisSize: MainAxisSize.min, children: [
+        ListTile(
+          leading: Icon(Icons.picture_as_pdf, color: Colors.red.shade700, size: 36),
+          title: Text(tr('pdf.ready'), style: const TextStyle(fontFamily: handFont, fontSize: 24)),
+          subtitle: Text('$name · ${(bytes.length / 1024).ceil()} KB'),
+        ),
+        const Divider(),
+        if (!kIsWeb)
+          ListTile(
+            leading: const Icon(Icons.open_in_new),
+            title: Text(tr('pdf.open')),
+            onTap: () => Navigator.pop(ctx, 'open'),
+          ),
+        ListTile(
+          leading: const Icon(Icons.download_outlined),
+          title: Text(tr(kIsWeb ? 'pdf.download' : 'pdf.save')),
+          onTap: () => Navigator.pop(ctx, 'save'),
+        ),
+        if (!kIsWeb)
+          ListTile(
+            leading: const Icon(Icons.share_outlined),
+            title: Text(tr('pdf.share')),
+            onTap: () => Navigator.pop(ctx, 'share'),
+          ),
+        ListTile(
+          leading: const Icon(Icons.print_outlined),
+          title: Text(tr('pdf.print')),
+          onTap: () => Navigator.pop(ctx, 'print'),
+        ),
+      ]),
+    ),
+  );
+  try {
+    switch (action) {
+      case 'open':
+        final dir = await getTemporaryDirectory();
+        final f = File('${dir.path}/$name');
+        await f.writeAsBytes(bytes, flush: true);
+        await OpenFilex.open(f.path, type: 'application/pdf');
+        break;
+      case 'save':
+        if (kIsWeb) {
+          await Printing.sharePdf(bytes: bytes, filename: name);
+        } else {
+          final path = await FilePicker.platform.saveFile(fileName: name, bytes: bytes);
+          if (path != null && context.mounted) showSnack(context, tr('pdf.saved'));
+        }
+        break;
+      case 'share':
+        await Printing.sharePdf(bytes: bytes, filename: name);
+        break;
+      case 'print':
+        await Printing.layoutPdf(name: name, onLayout: (_) async => bytes);
+        break;
+    }
   } catch (e) {
     if (context.mounted) showSnack(context, tr('pdf.error', {'error': e}));
   }

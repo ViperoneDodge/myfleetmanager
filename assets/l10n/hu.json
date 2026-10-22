@@ -543,5 +543,14 @@
  "units.distance": "Távolságok",
  "units.currency": "Pénznem",
  "units.currencyAuto": "Automatikus ({currency})",
- "maint.miles": "Mérföld"
+ "maint.miles": "Mérföld",
+ "fav.viewAll": "Összes",
+ "fav.allTitle": "Összes jármű",
+ "pdf.ready": "A PDF elkészült",
+ "pdf.open": "Megnyitás",
+ "pdf.save": "Mentés a telefonra",
+ "pdf.download": "Letöltés",
+ "pdf.share": "Megosztás",
+ "pdf.print": "Nyomtatás",
+ "pdf.saved": "PDF mentve"
 }

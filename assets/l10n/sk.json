@@ -543,5 +543,14 @@
  "units.distance": "Vzdialenosti",
  "units.currency": "Mena",
  "units.currencyAuto": "Automaticky ({currency})",
- "maint.miles": "Míle"
+ "maint.miles": "Míle",
+ "fav.viewAll": "Všetko",
+ "fav.allTitle": "Všetky vozidlá",
+ "pdf.ready": "PDF je pripravené",
+ "pdf.open": "Otvoriť",
+ "pdf.save": "Uložiť do telefónu",
+ "pdf.download": "Stiahnuť",
+ "pdf.share": "Zdieľať",
+ "pdf.print": "Tlačiť",
+ "pdf.saved": "PDF uložené"
 }

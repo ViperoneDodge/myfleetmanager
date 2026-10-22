@@ -543,3 +543,12 @@ Távolságok
 Pénznem
 Automatikus ({currency})
 Mérföld
+Összes
+Összes jármű
+A PDF elkészült
+Megnyitás
+Mentés a telefonra
+Letöltés
+Megosztás
+Nyomtatás
+PDF mentve

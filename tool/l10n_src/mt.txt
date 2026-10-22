@@ -543,3 +543,12 @@ Distanzi
 Munita
 Awtomatika ({currency})
 Mili
+Kollha
+Il-vetturi kollha
+Il-PDF lest
+Iftaħ
+Issejvja fuq it-telefon
+Niżżel
+Aqsam
+Ipprintja
+PDF issejvjat

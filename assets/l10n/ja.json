@@ -543,5 +543,14 @@
  "units.distance": "距離",
  "units.currency": "通貨",
  "units.currencyAuto": "自動（{currency}）",
- "maint.miles": "マイル"
+ "maint.miles": "マイル",
+ "fav.viewAll": "すべて",
+ "fav.allTitle": "すべての車両",
+ "pdf.ready": "PDFの準備ができました",
+ "pdf.open": "開く",
+ "pdf.save": "スマートフォンに保存",
+ "pdf.download": "ダウンロード",
+ "pdf.share": "共有",
+ "pdf.print": "印刷",
+ "pdf.saved": "PDFを保存しました"
 }

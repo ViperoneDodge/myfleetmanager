@@ -543,5 +543,14 @@
  "units.distance": "距离",
  "units.currency": "货币",
  "units.currencyAuto": "自动（{currency}）",
- "maint.miles": "英里"
+ "maint.miles": "英里",
+ "fav.viewAll": "全部",
+ "fav.allTitle": "全部车辆",
+ "pdf.ready": "PDF 已生成",
+ "pdf.open": "打开",
+ "pdf.save": "保存到手机",
+ "pdf.download": "下载",
+ "pdf.share": "分享",
+ "pdf.print": "打印",
+ "pdf.saved": "PDF 已保存"
 }

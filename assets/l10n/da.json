@@ -543,5 +543,14 @@
  "units.distance": "Afstande",
  "units.currency": "Valuta",
  "units.currencyAuto": "Automatisk ({currency})",
- "maint.miles": "Miles"
+ "maint.miles": "Miles",
+ "fav.viewAll": "Alle",
+ "fav.allTitle": "Alle køretøjer",
+ "pdf.ready": "PDF klar",
+ "pdf.open": "Åbn",
+ "pdf.save": "Gem på telefonen",
+ "pdf.download": "Download",
+ "pdf.share": "Del",
+ "pdf.print": "Udskriv",
+ "pdf.saved": "PDF gemt"
 }

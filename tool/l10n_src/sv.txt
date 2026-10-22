@@ -543,3 +543,12 @@ Avstånd
 Valuta
 Automatisk ({currency})
 Miles
+Alla
+Alla fordon
+PDF klar
+Öppna
+Spara på telefonen
+Ladda ner
+Dela
+Skriv ut
+PDF sparad

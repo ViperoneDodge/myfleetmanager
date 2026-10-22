@@ -543,3 +543,12 @@ Atstumai
 Valiuta
 Automatiškai ({currency})
 Mylios
+Visos
+Visos transporto priemonės
+PDF paruoštas
+Atidaryti
+Įrašyti telefone
+Atsisiųsti
+Bendrinti
+Spausdinti
+PDF įrašytas

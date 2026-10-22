@@ -543,5 +543,14 @@
  "units.distance": "ระยะทาง",
  "units.currency": "สกุลเงิน",
  "units.currencyAuto": "อัตโนมัติ ({currency})",
- "maint.miles": "ไมล์"
+ "maint.miles": "ไมล์",
+ "fav.viewAll": "ทั้งหมด",
+ "fav.allTitle": "ยานพาหนะทั้งหมด",
+ "pdf.ready": "PDF พร้อมแล้ว",
+ "pdf.open": "เปิด",
+ "pdf.save": "บันทึกลงโทรศัพท์",
+ "pdf.download": "ดาวน์โหลด",
+ "pdf.share": "แชร์",
+ "pdf.print": "พิมพ์",
+ "pdf.saved": "บันทึก PDF แล้ว"
 }

@@ -543,5 +543,14 @@
  "units.distance": "Distanțe",
  "units.currency": "Monedă",
  "units.currencyAuto": "Automată ({currency})",
- "maint.miles": "Mile"
+ "maint.miles": "Mile",
+ "fav.viewAll": "Toate",
+ "fav.allTitle": "Toate vehiculele",
+ "pdf.ready": "PDF gata",
+ "pdf.open": "Deschide",
+ "pdf.save": "Salvează pe telefon",
+ "pdf.download": "Descarcă",
+ "pdf.share": "Distribuie",
+ "pdf.print": "Tipărește",
+ "pdf.saved": "PDF salvat"
 }

@@ -543,3 +543,12 @@ Attālumi
 Valūta
 Automātiski ({currency})
 Jūdzes
+Visi
+Visi transportlīdzekļi
+PDF ir gatavs
+Atvērt
+Saglabāt tālrunī
+Lejupielādēt
+Kopīgot
+Drukāt
+PDF saglabāts

@@ -543,3 +543,12 @@ Vegalengdir
 Gjaldmiðill
 Sjálfvirkt ({currency})
 Mílur
+Öll
+Öll ökutæki
+PDF tilbúið
+Opna
+Vista í síma
+Sækja
+Deila
+Prenta
+PDF vistað

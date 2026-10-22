@@ -543,5 +543,14 @@
  "units.distance": "Afstanden",
  "units.currency": "Valuta",
  "units.currencyAuto": "Automatisch ({currency})",
- "maint.miles": "Mijlen"
+ "maint.miles": "Mijlen",
+ "fav.viewAll": "Alle",
+ "fav.allTitle": "Alle voertuigen",
+ "pdf.ready": "PDF klaar",
+ "pdf.open": "Openen",
+ "pdf.save": "Opslaan op telefoon",
+ "pdf.download": "Downloaden",
+ "pdf.share": "Delen",
+ "pdf.print": "Afdrukken",
+ "pdf.saved": "PDF opgeslagen"
 }

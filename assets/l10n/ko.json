@@ -543,5 +543,14 @@
  "units.distance": "거리",
  "units.currency": "통화",
  "units.currencyAuto": "자동({currency})",
- "maint.miles": "마일"
+ "maint.miles": "마일",
+ "fav.viewAll": "전체",
+ "fav.allTitle": "전체 차량",
+ "pdf.ready": "PDF 준비 완료",
+ "pdf.open": "열기",
+ "pdf.save": "휴대폰에 저장",
+ "pdf.download": "다운로드",
+ "pdf.share": "공유",
+ "pdf.print": "인쇄",
+ "pdf.saved": "PDF 저장됨"
 }

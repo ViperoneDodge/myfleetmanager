@@ -543,5 +543,14 @@
  "units.distance": "Mesafeler",
  "units.currency": "Para birimi",
  "units.currencyAuto": "Otomatik ({currency})",
- "maint.miles": "Mil"
+ "maint.miles": "Mil",
+ "fav.viewAll": "Tümü",
+ "fav.allTitle": "Tüm araçlar",
+ "pdf.ready": "PDF hazır",
+ "pdf.open": "Aç",
+ "pdf.save": "Telefona kaydet",
+ "pdf.download": "İndir",
+ "pdf.share": "Paylaş",
+ "pdf.print": "Yazdır",
+ "pdf.saved": "PDF kaydedildi"
 }

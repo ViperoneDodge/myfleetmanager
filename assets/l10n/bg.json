@@ -543,5 +543,14 @@
  "units.distance": "Разстояния",
  "units.currency": "Валута",
  "units.currencyAuto": "Автоматично ({currency})",
- "maint.miles": "Мили"
+ "maint.miles": "Мили",
+ "fav.viewAll": "Всички",
+ "fav.allTitle": "Всички превозни средства",
+ "pdf.ready": "PDF е готов",
+ "pdf.open": "Отвори",
+ "pdf.save": "Запази в телефона",
+ "pdf.download": "Изтегли",
+ "pdf.share": "Сподели",
+ "pdf.print": "Печат",
+ "pdf.saved": "PDF е запазен"
 }

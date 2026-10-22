@@ -543,5 +543,14 @@
  "units.distance": "Etäisyydet",
  "units.currency": "Valuutta",
  "units.currencyAuto": "Automaattinen ({currency})",
- "maint.miles": "Mailit"
+ "maint.miles": "Mailit",
+ "fav.viewAll": "Kaikki",
+ "fav.allTitle": "Kaikki ajoneuvot",
+ "pdf.ready": "PDF on valmis",
+ "pdf.open": "Avaa",
+ "pdf.save": "Tallenna puhelimeen",
+ "pdf.download": "Lataa",
+ "pdf.share": "Jaa",
+ "pdf.print": "Tulosta",
+ "pdf.saved": "PDF tallennettu"
 }

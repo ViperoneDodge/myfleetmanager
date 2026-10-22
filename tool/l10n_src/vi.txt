@@ -543,3 +543,12 @@ Khoảng cách
 Tiền tệ
 Tự động ({currency})
 Dặm
+Tất cả
+Tất cả xe
+PDF đã sẵn sàng
+Mở
+Lưu vào điện thoại
+Tải xuống
+Chia sẻ
+In
+Đã lưu PDF

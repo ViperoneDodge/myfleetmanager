@@ -543,5 +543,14 @@
  "units.distance": "Jarak",
  "units.currency": "Mata uang",
  "units.currencyAuto": "Otomatis ({currency})",
- "maint.miles": "Mil"
+ "maint.miles": "Mil",
+ "fav.viewAll": "Semua",
+ "fav.allTitle": "Semua kendaraan",
+ "pdf.ready": "PDF siap",
+ "pdf.open": "Buka",
+ "pdf.save": "Simpan ke ponsel",
+ "pdf.download": "Unduh",
+ "pdf.share": "Bagikan",
+ "pdf.print": "Cetak",
+ "pdf.saved": "PDF disimpan"
 }

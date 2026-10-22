@@ -333,7 +333,7 @@ class VehicleDetailScreen extends StatelessWidget {
               title: Text(tr('ocr.read')),
               onTap: () => Navigator.pop(ctx, 'ocr'),
             ),
-          if (!d.cloud || appState.canEdit(v))
+          if (appState.canEdit(v))
             ListTile(
               leading: const Icon(Icons.drive_file_rename_outline),
               title: Text(tr('doc.rename')),
@@ -496,7 +496,7 @@ class VehicleDetailScreen extends StatelessWidget {
                 OnRule(
                   child: Row(children: [
                     Expanded(child: _titleText(context, tr('doc.title'))),
-                    if (!kIsWeb)
+                    if (!kIsWeb && canEdit)
                     TextButton.icon(
                       style: _compactButton,
                       onPressed: () async {

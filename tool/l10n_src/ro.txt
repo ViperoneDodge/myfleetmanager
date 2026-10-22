@@ -543,3 +543,12 @@ Distanțe
 Monedă
 Automată ({currency})
 Mile
+Toate
+Toate vehiculele
+PDF gata
+Deschide
+Salvează pe telefon
+Descarcă
+Distribuie
+Tipărește
+PDF salvat

@@ -543,3 +543,12 @@ Distâncias
 Moeda
 Automática ({currency})
 Milhas
+Todos
+Todos os veículos
+PDF pronto
+Abrir
+Guardar no telemóvel
+Transferir
+Partilhar
+Imprimir
+PDF guardado

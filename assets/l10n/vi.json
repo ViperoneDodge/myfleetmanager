@@ -543,5 +543,14 @@
  "units.distance": "Khoảng cách",
  "units.currency": "Tiền tệ",
  "units.currencyAuto": "Tự động ({currency})",
- "maint.miles": "Dặm"
+ "maint.miles": "Dặm",
+ "fav.viewAll": "Tất cả",
+ "fav.allTitle": "Tất cả xe",
+ "pdf.ready": "PDF đã sẵn sàng",
+ "pdf.open": "Mở",
+ "pdf.save": "Lưu vào điện thoại",
+ "pdf.download": "Tải xuống",
+ "pdf.share": "Chia sẻ",
+ "pdf.print": "In",
+ "pdf.saved": "Đã lưu PDF"
 }
