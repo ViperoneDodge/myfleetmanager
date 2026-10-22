@@ -204,7 +204,7 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
             ),
             const SizedBox(height: 16),
             Text(tr('maint.items'), style: Theme.of(context).textTheme.titleMedium),
-            for (final k in maintenanceItems)
+            for (final k in maintenanceItemsFor(v?.type, r.items))
               _PartRow(
                 label: maintenanceItemLabel(k),
                 part: r.partOf(k),

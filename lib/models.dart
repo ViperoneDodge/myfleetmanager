@@ -202,6 +202,11 @@ const List<String> maintenanceItems = [
   'fuelFilter',
 ];
 
+List<String> maintenanceItemsFor(VehicleType? t, [Set<String> keep = const {}]) => [
+      for (final k in maintenanceItems)
+        if (t != VehicleType.moto || k != 'cabinFilter' || keep.contains(k)) k,
+    ];
+
 String maintenanceItemLabel(String k) {
   switch (k) {
     case 'oil':

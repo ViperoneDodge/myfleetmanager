@@ -44,4 +44,11 @@ void main() {
     expect(old.total, isNull);
     expect(old.toJson().containsKey('parts'), isFalse);
   });
+
+  test('moto senza filtro abitacolo, tranne se già segnato', () {
+    expect(maintenanceItemsFor(VehicleType.moto), isNot(contains('cabinFilter')));
+    expect(maintenanceItemsFor(VehicleType.auto), contains('cabinFilter'));
+    expect(maintenanceItemsFor(null), maintenanceItems);
+    expect(maintenanceItemsFor(VehicleType.moto, {'cabinFilter'}), contains('cabinFilter'));
+  });
 }
