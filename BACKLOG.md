@@ -3,7 +3,18 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.1.8)
-- [ ] (vuota)
+
+### Notifiche dei gruppi
+- [ ] **Una notifica sola invece di tante.** Oggi, con l'app aperta, ogni salvataggio di un altro utente fa partire subito una notifica. Le modifiche vanno raccolte per qualche minuto e unite per veicolo: «Mario ha modificato Panda (scadenze, manutenzione)».
+- [ ] **Una notifica per gruppo che si aggiorna** invece di accumularsene tante: elenco delle ultime modifiche nella notifica espansa, con il conteggio («5 modifiche in Famiglia»).
+- [ ] **Stessa logica nel controllo in background** (ogni 15 minuti): oggi fino a 3 modifiche escono come notifiche separate.
+- [ ] **Pagina «Attività» nell'app** (icona campanella in alto, con pallino per le novità): elenco delle modifiche dei gruppi degli ultimi 30 giorni (chi, cosa, quando), con tocco che apre il veicolo. Oggi le notifiche non si possono rivedere dentro l'app.
+
+### Ottimizzazioni
+- [ ] **APK di GitHub solo per arm64**: da circa 99 MB a circa 35 MB. L'AAB per il Play Store resta com'è (il telefono scarica già solo la sua parte).
+- [ ] **Scanner QR con il modello dei servizi Google** già presente sul telefono, invece di quello incluso nell'app: qualche MB in meno.
+- [ ] **Limite di tempo ai test nei browser**: il 22/10 l'installazione dei browser è rimasta bloccata quasi un'ora.
+- [ ] **Font Lobster ridotto ai caratteri latini** (guadagno piccolo, da fare per ultimo).
 
 ## Versione 2.1.7
 - [x] Unità di misura dentro il campo, accanto al numero (kW, CV), con etichetta corta «Potenza».
