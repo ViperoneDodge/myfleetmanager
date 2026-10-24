@@ -8,7 +8,11 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 - [ ] **Una notifica sola invece di tante.** Oggi, con l'app aperta, ogni salvataggio di un altro utente fa partire subito una notifica. Le modifiche vanno raccolte per qualche minuto e unite per veicolo: «Mario ha modificato Panda (scadenze, manutenzione)».
 - [ ] **Una notifica per gruppo che si aggiorna** invece di accumularsene tante: elenco delle ultime modifiche nella notifica espansa, con il conteggio («5 modifiche in Famiglia»).
 - [ ] **Stessa logica nel controllo in background** (ogni 15 minuti): oggi fino a 3 modifiche escono come notifiche separate.
-- [ ] **Pagina «Attività» nell'app** (icona campanella in alto, con pallino per le novità): elenco delle modifiche dei gruppi degli ultimi 30 giorni (chi, cosa, quando), con tocco che apre il veicolo. Oggi le notifiche non si possono rivedere dentro l'app.
+- [ ] **Campanella nella barra in alto** (tra cloud e impostazioni, in tutte le schede) con il numero delle notifiche non lette.
+- [ ] **Pagina «Notifiche»**: storico di tutte le notifiche diviso per giorno (Oggi, Ieri, date). Non lette in grassetto con puntino blu. Ogni riga: chi, cosa, veicolo, gruppo, parti cambiate, ora. Il tocco la segna come letta e apre il veicolo. In alto «Segna tutte come lette», nel menu «Elimina tutte» (con conferma).
+- [ ] **Selezione con pressione lunga**: singola o multipla, con «Seleziona tutte», «Segna come lette» ed «Elimina».
+- [ ] **Pallino rosso sul veicolo modificato** (angolo in alto a destra dell'icona, in Veicoli, Preferiti e Gruppi) finché la relativa notifica non è letta o cancellata.
+- [ ] Da decidere: nello storico anche i promemoria delle scadenze, o solo le modifiche dei gruppi.
 
 ### Ottimizzazioni
 - [ ] **APK di GitHub solo per arm64**: da circa 99 MB a circa 35 MB. L'AAB per il Play Store resta com'è (il telefono scarica già solo la sua parte).
