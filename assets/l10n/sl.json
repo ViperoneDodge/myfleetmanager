@@ -566,5 +566,21 @@
  "diag.subtitle": "Tehnični podatki za razvijalca",
  "diag.copied": "Diagnostika kopirana",
  "tyre.frontOne": "Sprednja",
- "tyre.rearOne": "Zadnja"
+ "tyre.rearOne": "Zadnja",
+ "notif.title": "Obvestila",
+ "notif.empty": "Ni obvestil",
+ "notif.markAllRead": "Označi vse kot prebrano",
+ "notif.deleteAll": "Izbriši vse",
+ "notif.deleteAllConfirm": "Izbrišem vsa obvestila?",
+ "notif.selected": "Izbrano: {n}",
+ "notif.selectAll": "Izberi vse",
+ "notif.markRead": "Označi kot prebrano",
+ "notif.today": "Danes",
+ "notif.yesterday": "Včeraj",
+ "notif.reminder": "Opomnik",
+ "part.details": "podatki",
+ "part.tech": "tehnični podatki",
+ "part.deadlines": "roki",
+ "part.maintenance": "vzdrževanje",
+ "part.documents": "dokumenti"
 }

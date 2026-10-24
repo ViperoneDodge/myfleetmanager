@@ -11,7 +11,9 @@ import '../services/sync_service.dart' show cloudErrorMessage;
 import '../theme.dart';
 import '../widgets/common.dart';
 import '../widgets/docs_consent.dart';
+import '../services/notification_service.dart';
 import 'family_screen.dart';
+import 'notifications_screen.dart';
 import 'pro_screen.dart';
 import 'vehicle_book.dart';
 import 'settings_screen.dart';
@@ -35,10 +37,24 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     _life = AppLifecycleListener(onResume: () => appState.refreshExact());
     _exactTimer = Timer(const Duration(seconds: 5), _askExact);
+    NotificationService.openLog.addListener(_onOpenLog);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _onOpenLog());
+  }
+
+  void _onOpenLog() {
+    if (!NotificationService.openLog.value || !mounted) return;
+    NotificationService.openLog.value = false;
+    _openLog();
+  }
+
+  void _openLog() {
+    appState.reloadLog();
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const NotificationsScreen()));
   }
 
   @override
   void dispose() {
+    NotificationService.openLog.removeListener(_onOpenLog);
     _life.dispose();
     _exactTimer?.cancel();
     super.dispose();
@@ -308,6 +324,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: _exportGroups,
                 ),
               _syncIcon(),
+              NotificationBell(onPressed: _openLog),
               IconButton(
                 tooltip: tr('settings.title'),
                 icon: const Icon(Icons.settings),
@@ -491,6 +508,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ...list.map((v) => VehicleCard(
                 vehicle: v,
+                changed: appState.hasUnreadChange(v.id),
                 selected: _twoPane && v.id == _selectedId,
                 limited: limited.contains(v.id),
                 onTap: () => limited.contains(v.id)

@@ -566,5 +566,21 @@
  "diag.subtitle": "開発者に送る技術情報",
  "diag.copied": "診断情報をコピーしました",
  "tyre.frontOne": "フロント",
- "tyre.rearOne": "リア"
+ "tyre.rearOne": "リア",
+ "notif.title": "通知",
+ "notif.empty": "通知はありません",
+ "notif.markAllRead": "すべて既読にする",
+ "notif.deleteAll": "すべて削除",
+ "notif.deleteAllConfirm": "すべての通知を削除しますか？",
+ "notif.selected": "{n} 件選択",
+ "notif.selectAll": "すべて選択",
+ "notif.markRead": "既読にする",
+ "notif.today": "今日",
+ "notif.yesterday": "昨日",
+ "notif.reminder": "リマインダー",
+ "part.details": "基本情報",
+ "part.tech": "技術データ",
+ "part.deadlines": "期限",
+ "part.maintenance": "メンテナンス",
+ "part.documents": "書類"
 }

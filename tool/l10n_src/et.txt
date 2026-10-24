@@ -566,3 +566,19 @@ Tehniline teave arendajale
 Diagnostika kopeeritud
 Esirehv
 Tagarehv
+Teavitused
+Teavitusi pole
+Märgi kõik loetuks
+Kustuta kõik
+Kas kustutada kõik teavitused?
+Valitud: {n}
+Vali kõik
+Märgi loetuks
+Täna
+Eile
+Meeldetuletus
+andmed
+tehnilised andmed
+tähtajad
+hooldus
+dokumendid

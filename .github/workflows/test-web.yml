@@ -8,6 +8,7 @@ on:
 jobs:
   browsers:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -26,6 +27,7 @@ jobs:
           flutter build web --profile --source-maps --no-web-resources-cdn
 
       - name: Prepara i browser
+        timeout-minutes: 10
         run: |
           python3 -m pip install --break-system-packages -q playwright
           python3 -m playwright install --with-deps chromium firefox webkit

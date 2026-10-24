@@ -566,5 +566,21 @@
  "diag.subtitle": "Informações técnicas para enviar ao programador",
  "diag.copied": "Diagnóstico copiado",
  "tyre.frontOne": "Dianteiro",
- "tyre.rearOne": "Traseiro"
+ "tyre.rearOne": "Traseiro",
+ "notif.title": "Notificações",
+ "notif.empty": "Sem notificações",
+ "notif.markAllRead": "Marcar todas como lidas",
+ "notif.deleteAll": "Eliminar todas",
+ "notif.deleteAllConfirm": "Eliminar todas as notificações?",
+ "notif.selected": "{n} selecionadas",
+ "notif.selectAll": "Selecionar todas",
+ "notif.markRead": "Marcar como lidas",
+ "notif.today": "Hoje",
+ "notif.yesterday": "Ontem",
+ "notif.reminder": "Lembrete",
+ "part.details": "dados",
+ "part.tech": "dados técnicos",
+ "part.deadlines": "prazos",
+ "part.maintenance": "manutenção",
+ "part.documents": "documentos"
 }

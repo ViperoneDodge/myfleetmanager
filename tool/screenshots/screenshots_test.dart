@@ -12,11 +12,13 @@ import 'package:myfleetmanager/models.dart';
 import 'package:myfleetmanager/screens/family_screen.dart';
 import 'package:myfleetmanager/screens/home_screen.dart';
 import 'package:myfleetmanager/screens/maintenance_screen.dart';
+import 'package:myfleetmanager/screens/notifications_screen.dart';
 import 'package:myfleetmanager/screens/pro_screen.dart';
 import 'package:myfleetmanager/screens/settings_screen.dart';
 import 'package:myfleetmanager/screens/vehicle_detail_screen.dart';
 import 'package:myfleetmanager/screens/vehicle_edit_screen.dart';
 import 'package:myfleetmanager/services/app_state.dart';
+import 'package:myfleetmanager/services/notification_log.dart';
 import 'package:myfleetmanager/services/pdf_export.dart';
 import 'package:myfleetmanager/theme.dart';
 import 'package:myfleetmanager/widgets/common.dart';
@@ -183,6 +185,24 @@ void main() {
           await tester.tap(find.text('!!'));
         });
         appState.sync.problems.clear();
+        final now = DateTime.now();
+        int at(int daysAgo, int h, int m) => DateTime(now.year, now.month, now.day - daysAgo, h, m).millisecondsSinceEpoch;
+        final it = L10n.code == 'it';
+        appState.log = NotificationLog(entries: [
+          LogEntry(ts: at(0, 8, 42), kind: LogKind.edited, groupId: 'FAM7Q2K9XW', group: it ? 'Famiglia' : 'Family', vehicleId: 'g1', vehicle: 'Giulia', who: 'Marco', parts: ['deadlines', 'maintenance']),
+          LogEntry(ts: at(0, 8, 5), kind: LogKind.added, groupId: 'FAM7Q2K9XW', group: it ? 'Famiglia' : 'Family', vehicleId: 'g3', vehicle: 'Vespa GTS', who: 'Giulia'),
+          LogEntry(ts: at(0, 7, 20), kind: LogKind.edited, groupId: 'FAM7Q2K9XW', group: it ? 'Famiglia' : 'Family', vehicleId: 'g2', vehicle: 'Panda', who: 'Giulia', parts: ['documents'], read: true),
+          LogEntry(ts: at(1, 21, 10), kind: LogKind.deleted, groupId: 'FAM7Q2K9XW', group: it ? 'Famiglia' : 'Family', vehicleId: 'x', vehicle: 'Punto', who: 'Marco', read: true),
+          LogEntry(ts: at(1, 9, 0), kind: LogKind.reminder, title: it ? 'Revisione tra 7 giorni' : 'Inspection in 7 days', body: 'Giulia (GD452RT)', vehicleId: 'g1', read: true),
+        ]);
+        await shot(tester, const HomeScreen(), '11_bell');
+        await shot(tester, const NotificationsScreen(), '11b_notifications');
+        await shot(tester, const NotificationsScreen(), '11c_select', then: () async {
+          await tester.longPress(find.textContaining('Marco').first);
+          await tester.pumpAndSettle();
+          await tester.tap(find.textContaining('Vespa GTS').first);
+        });
+        appState.log = NotificationLog();
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '02_vehicle');
         detailTab.value = 1;
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '02b_tech');

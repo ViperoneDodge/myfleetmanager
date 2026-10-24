@@ -566,5 +566,21 @@
  "diag.subtitle": "Tæknilegar upplýsingar fyrir forritarann",
  "diag.copied": "Greining afrituð",
  "tyre.frontOne": "Framdekk",
- "tyre.rearOne": "Afturdekk"
+ "tyre.rearOne": "Afturdekk",
+ "notif.title": "Tilkynningar",
+ "notif.empty": "Engar tilkynningar",
+ "notif.markAllRead": "Merkja allt sem lesið",
+ "notif.deleteAll": "Eyða öllu",
+ "notif.deleteAllConfirm": "Eyða öllum tilkynningum?",
+ "notif.selected": "{n} valdar",
+ "notif.selectAll": "Velja allt",
+ "notif.markRead": "Merkja sem lesið",
+ "notif.today": "Í dag",
+ "notif.yesterday": "Í gær",
+ "notif.reminder": "Áminning",
+ "part.details": "upplýsingar",
+ "part.tech": "tæknilegar upplýsingar",
+ "part.deadlines": "frestir",
+ "part.maintenance": "viðhald",
+ "part.documents": "skjöl"
 }

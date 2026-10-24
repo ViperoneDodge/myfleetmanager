@@ -566,5 +566,21 @@
  "diag.subtitle": "Tehnički podaci za razvojnog programera",
  "diag.copied": "Dijagnostika kopirana",
  "tyre.frontOne": "Prednja",
- "tyre.rearOne": "Stražnja"
+ "tyre.rearOne": "Stražnja",
+ "notif.title": "Obavijesti",
+ "notif.empty": "Nema obavijesti",
+ "notif.markAllRead": "Označi sve kao pročitano",
+ "notif.deleteAll": "Izbriši sve",
+ "notif.deleteAllConfirm": "Izbrisati sve obavijesti?",
+ "notif.selected": "Odabrano: {n}",
+ "notif.selectAll": "Odaberi sve",
+ "notif.markRead": "Označi kao pročitano",
+ "notif.today": "Danas",
+ "notif.yesterday": "Jučer",
+ "notif.reminder": "Podsjetnik",
+ "part.details": "podaci",
+ "part.tech": "tehnički podaci",
+ "part.deadlines": "rokovi",
+ "part.maintenance": "održavanje",
+ "part.documents": "dokumenti"
 }

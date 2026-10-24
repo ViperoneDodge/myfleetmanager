@@ -566,3 +566,19 @@ Thông tin kỹ thuật gửi cho nhà phát triển
 Đã sao chép chẩn đoán
 Bánh trước
 Bánh sau
+Thông báo
+Không có thông báo
+Đánh dấu tất cả đã đọc
+Xóa tất cả
+Xóa tất cả thông báo?
+Đã chọn {n}
+Chọn tất cả
+Đánh dấu đã đọc
+Hôm nay
+Hôm qua
+Lời nhắc
+thông tin
+thông số kỹ thuật
+hạn
+bảo dưỡng
+tài liệu

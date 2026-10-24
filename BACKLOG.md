@@ -2,23 +2,25 @@
 
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
-## Prossima versione (2.1.8)
+## Prossima versione (2.1.9)
+- [ ] (vuota)
 
-### Notifiche dei gruppi
-- [ ] **Una notifica sola invece di tante.** Oggi, con l'app aperta, ogni salvataggio di un altro utente fa partire subito una notifica. Le modifiche vanno raccolte per qualche minuto e unite per veicolo: «Mario ha modificato Panda (scadenze, manutenzione)».
-- [ ] **Una notifica per gruppo che si aggiorna** invece di accumularsene tante: elenco delle ultime modifiche nella notifica espansa, con il conteggio («5 modifiche in Famiglia»).
-- [ ] **Stessa logica nel controllo in background** (ogni 15 minuti): oggi fino a 3 modifiche escono come notifiche separate.
-- [ ] **Campanella nella barra in alto** (tra cloud e impostazioni, in tutte le schede) con il numero delle notifiche non lette.
-- [ ] **Pagina «Notifiche»**: storico di tutte le notifiche diviso per giorno (Oggi, Ieri, date). Non lette in grassetto con puntino blu. Ogni riga: chi, cosa, veicolo, gruppo, parti cambiate, ora. Il tocco la segna come letta e apre il veicolo. In alto «Segna tutte come lette», nel menu «Elimina tutte» (con conferma).
-- [ ] **Selezione con pressione lunga**: singola o multipla, con «Seleziona tutte», «Segna come lette» ed «Elimina».
-- [ ] **Pallino rosso sul veicolo modificato** (angolo in alto a destra dell'icona, in Veicoli, Preferiti e Gruppi) finché la relativa notifica non è letta o cancellata.
-- [ ] Da decidere: nello storico anche i promemoria delle scadenze, o solo le modifiche dei gruppi.
+## Versione 2.1.8
+
+### Notifiche
+- [x] **Una notifica per gruppo che si aggiorna**, con l'elenco delle ultime modifiche e il numero delle non lette. Suona una volta sola finché resta sullo schermo.
+- [x] **Modifiche unite per veicolo**: «Marco ha modificato Giulia (scadenze, manutenzione)», finché la notifica non è letta. Vale sia con l'app aperta sia nel controllo in background.
+- [x] **Campanella nella barra in alto** (tra cloud e impostazioni, in tutte le schede) con il numero delle non lette. Toccare una notifica del telefono apre la pagina Notifiche.
+- [x] **Pagina «Notifiche»**: storico diviso per giorno (Oggi, Ieri, date). Non lette in grassetto con puntino blu; tocco = letta e apre il veicolo. «Segna tutte come lette» e «Elimina tutte» (con conferma).
+- [x] **Selezione con pressione lunga**: singola o multipla, con «Seleziona tutte», «Segna come lette» ed «Elimina».
+- [x] **Pallino rosso sul veicolo modificato** finché la relativa notifica non è letta o cancellata.
+- [x] Nello storico anche i **promemoria delle scadenze** già scattati e i **messaggi push** ricevuti ad app aperta.
 
 ### Ottimizzazioni
-- [ ] **APK di GitHub solo per arm64**: da circa 99 MB a circa 35 MB. L'AAB per il Play Store resta com'è (il telefono scarica già solo la sua parte).
-- [ ] **Scanner QR con il modello dei servizi Google** già presente sul telefono, invece di quello incluso nell'app: qualche MB in meno.
-- [ ] **Limite di tempo ai test nei browser**: il 22/10 l'installazione dei browser è rimasta bloccata quasi un'ora.
-- [ ] **Font Lobster ridotto ai caratteri latini** (guadagno piccolo, da fare per ultimo).
+- [x] **APK di GitHub solo per arm64** (circa un terzo del peso). L'AAB per il Play Store resta per tutti i processori.
+- [x] **Scanner QR con il modello dei servizi Google**: era già attivo.
+- [x] **Limite di tempo ai test nei browser**: 10 minuti per l'installazione dei browser, 30 per tutta la prova.
+- [ ] ~~Font Lobster ridotto ai caratteri latini~~: scartato, lo slogan è tradotto anche in cirillico, greco e vietnamita e servono quei caratteri.
 
 ## Versione 2.1.7
 - [x] Unità di misura dentro il campo, accanto al numero (kW, CV), con etichetta corta «Potenza».

@@ -566,5 +566,21 @@
  "diag.subtitle": "Technische informatie voor de ontwikkelaar",
  "diag.copied": "Diagnose gekopieerd",
  "tyre.frontOne": "Voor",
- "tyre.rearOne": "Achter"
+ "tyre.rearOne": "Achter",
+ "notif.title": "Meldingen",
+ "notif.empty": "Geen meldingen",
+ "notif.markAllRead": "Alles als gelezen markeren",
+ "notif.deleteAll": "Alles verwijderen",
+ "notif.deleteAllConfirm": "Alle meldingen verwijderen?",
+ "notif.selected": "{n} geselecteerd",
+ "notif.selectAll": "Alles selecteren",
+ "notif.markRead": "Als gelezen markeren",
+ "notif.today": "Vandaag",
+ "notif.yesterday": "Gisteren",
+ "notif.reminder": "Herinnering",
+ "part.details": "gegevens",
+ "part.tech": "technische gegevens",
+ "part.deadlines": "vervaldata",
+ "part.maintenance": "onderhoud",
+ "part.documents": "documenten"
 }

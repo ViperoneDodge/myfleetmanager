@@ -12,6 +12,7 @@ import '../units.dart';
 import 'auth_service.dart';
 import 'doc_cloud.dart';
 import 'local_store.dart';
+import 'notification_log.dart';
 import 'notification_service.dart';
 import 'pro_service.dart';
 import 'group_watch.dart';
@@ -737,6 +738,8 @@ class AppState extends ChangeNotifier {
     session = s;
     data = await store.readUserData(s);
     _scheduleNotifications();
+    await reloadLog();
+    _recordReminders();
     if (s.mode == AccountMode.cloud) {
       sync.saveProfile(s).catchError((_) {});
       await _loadWatch(s);
@@ -782,6 +785,65 @@ class AppState extends ChangeNotifier {
 
   Future<void> _watchChain = Future.value();
 
+  NotificationLog log = NotificationLog();
+
+  Future<void> _logChain = Future.value();
+
+  int get unreadNotifications => log.unread;
+
+  bool hasUnreadChange(String vehicleId) => log.changedUnread(vehicleId);
+
+  Future<void> reloadLog() async {
+    final s = session;
+    if (s == null) {
+      log = NotificationLog();
+    } else {
+      final fresh = NotificationLog.fromJson(await store.readNotifLog(s));
+      if (!identical(session, s)) return;
+      log = fresh;
+    }
+    notifyListeners();
+  }
+
+  Future<void> _logOp(void Function(NotificationLog l) op) {
+    final s = session;
+    if (s == null) return Future.value();
+    return _logChain = _logChain.then((_) async {
+      final l = NotificationLog.fromJson(await store.readNotifLog(s));
+      final before = {for (final e in l.entries) if (e.isGroup && !e.read) e.groupId: e.group};
+      op(l);
+      await store.writeNotifLog(s, l.toJson());
+      if (!identical(session, s)) return;
+      log = l;
+      notifyListeners();
+      for (final g in before.entries) {
+        if (l.unreadOfGroup(g.key).isEmpty) await notifications.showGroup(g.key, g.value, const []);
+      }
+    }).catchError((_) {});
+  }
+
+  Future<void> markNotificationsRead(Set<String> ids) => _logOp((l) => l.markRead(ids));
+
+  Future<void> markAllNotificationsRead() => _logOp((l) => l.markAllRead());
+
+  Future<void> deleteNotifications(Set<String> ids) => _logOp((l) => l.delete(ids));
+
+  Future<void> clearNotifications() => _logOp((l) => l.clear());
+
+  void _recordReminders() {
+    final s = session;
+    if (s == null) return;
+    _logChain = _logChain.then((_) async {
+      await recordReminders(store, s, notifications, data);
+      await reloadLog();
+    }).catchError((_) {});
+  }
+
+  Future<void> onResume() async {
+    await reloadLog();
+    _recordReminders();
+  }
+
   bool get groupAlerts => watch.enabled;
 
   Future<void> setGroupAlerts(bool on) async {
@@ -793,7 +855,7 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> _checkGroupActivity(
-      String fleetId, List<Vehicle> remote, Set<String> existedBefore) async {
+      String fleetId, List<Vehicle> remote, Set<String> existedBefore, Map<String, Vehicle> before) async {
     final s = session;
     if (s == null || !isCloud) return;
     final fresh = await GroupWatchState.load();
@@ -816,12 +878,14 @@ class AppState extends ChangeNotifier {
     }
     if (maxTs <= since) return;
     final acts = findActivities(
+      groupId: fleetId,
       groupName: data.groupById(fleetId)?.name ?? tr('family.defaultName'),
       me: s.key,
       myName: s.displayName,
       since: since,
       remote: remote,
       existed: (id) => existedBefore.contains(id) || watch.known.contains(id),
+      previous: (id) => before[id],
     );
     watch.seen[fleetId] = maxTs;
     for (final r in remote) {
@@ -829,7 +893,10 @@ class AppState extends ChangeNotifier {
     }
     await watch.save();
     if (watch.enabled && acts.isNotEmpty) {
-      await showActivities(notifications, acts);
+      await (_logChain = _logChain.then((_) async {
+        await recordActivities(store, s, notifications, acts);
+        await reloadLog();
+      }).catchError((_) {}));
     }
   }
 
@@ -838,6 +905,7 @@ class AppState extends ChangeNotifier {
     if (s == null || s.mode != AccountMode.cloud || !auth.cloudAvailable) return;
     await push.start(s.key, onForeground: (title, body) {
       notifications.showRemote(title, body);
+      _logOp((l) => l.addMessage(title ?? 'MyFleetManager', body ?? '', DateTime.now().millisecondsSinceEpoch));
     });
     notifyListeners();
   }
@@ -868,6 +936,7 @@ class AppState extends ChangeNotifier {
     await scheduleGroupWatch(false);
     watch = GroupWatchState();
     await watch.save();
+    log = NotificationLog();
     try {
       await notifications.rescheduleAll([], data.notify);
     } catch (_) {}
@@ -1256,8 +1325,9 @@ class AppState extends ChangeNotifier {
     if (!personal) {
       final existed = data.vehicles.where((v) => !v.deleted).map((v) => v.id).toSet();
       final copy = List.of(remote);
+      final before = {for (final v in data.vehicles) v.id: v};
       _watchChain = _watchChain
-          .then((_) => _checkGroupActivity(fleetId, copy, existed))
+          .then((_) => _checkGroupActivity(fleetId, copy, existed, before))
           .catchError((_) {});
     }
     for (final r in remote) {

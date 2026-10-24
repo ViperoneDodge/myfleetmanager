@@ -566,5 +566,21 @@
  "diag.subtitle": "Teknisk information til udvikleren",
  "diag.copied": "Diagnostik kopieret",
  "tyre.frontOne": "For",
- "tyre.rearOne": "Bag"
+ "tyre.rearOne": "Bag",
+ "notif.title": "Notifikationer",
+ "notif.empty": "Ingen notifikationer",
+ "notif.markAllRead": "Markér alle som læst",
+ "notif.deleteAll": "Slet alle",
+ "notif.deleteAllConfirm": "Slet alle notifikationer?",
+ "notif.selected": "{n} valgt",
+ "notif.selectAll": "Vælg alle",
+ "notif.markRead": "Markér som læst",
+ "notif.today": "I dag",
+ "notif.yesterday": "I går",
+ "notif.reminder": "Påmindelse",
+ "part.details": "oplysninger",
+ "part.tech": "tekniske data",
+ "part.deadlines": "frister",
+ "part.maintenance": "vedligeholdelse",
+ "part.documents": "dokumenter"
 }

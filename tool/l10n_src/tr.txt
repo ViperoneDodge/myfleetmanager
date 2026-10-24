@@ -566,3 +566,19 @@ Geliştiriciye gönderilecek teknik bilgiler
 Tanılama kopyalandı
 Ön
 Arka
+Bildirimler
+Bildirim yok
+Tümünü okundu işaretle
+Tümünü sil
+Tüm bildirimler silinsin mi?
+{n} seçildi
+Tümünü seç
+Okundu işaretle
+Bugün
+Dün
+Hatırlatma
+bilgiler
+teknik veriler
+son tarihler
+bakım
+belgeler

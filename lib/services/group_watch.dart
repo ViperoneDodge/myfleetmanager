@@ -15,6 +15,7 @@ import '../l10n.dart';
 import '../models.dart';
 import 'app_check.dart';
 import 'local_store.dart';
+import 'notification_log.dart';
 import 'notification_service.dart';
 import '../platform.dart';
 
@@ -90,67 +91,77 @@ class GroupWatchState {
   }
 }
 
-enum GroupAction { added, edited, deleted }
-
-class GroupActivity {
-  final String groupName;
-  final String who;
-  final String vehicle;
-  final GroupAction action;
-  GroupActivity(this.groupName, this.who, this.vehicle, this.action);
-
-  String get text {
-    final w = who.isEmpty ? tr('groupAct.someone') : who;
-    switch (action) {
-      case GroupAction.added:
-        return tr('groupAct.added', {'who': w, 'vehicle': vehicle});
-      case GroupAction.edited:
-        return tr('groupAct.edited', {'who': w, 'vehicle': vehicle});
-      case GroupAction.deleted:
-        return tr('groupAct.deleted', {'who': w, 'vehicle': vehicle});
-    }
-  }
-}
-
-List<GroupActivity> findActivities({
+List<LogEntry> findActivities({
+  required String groupId,
   required String groupName,
   required String me,
   required String myName,
   required int since,
   required Iterable<Vehicle> remote,
   required bool Function(String id) existed,
+  Vehicle? Function(String id)? previous,
 }) {
-  final out = <GroupActivity>[];
+  final out = <LogEntry>[];
   for (final r in remote) {
     if (r.updatedAt <= since) continue;
     final mine = r.updatedByUid.isNotEmpty ? r.updatedByUid == me : r.updatedBy == myName;
     if (mine) continue;
     final label = r.name.isEmpty ? (r.plate.isEmpty ? tr('vehicle.generic') : r.plate) : r.name;
-    final action = r.deleted
-        ? GroupAction.deleted
+    final kind = r.deleted
+        ? LogKind.deleted
         : existed(r.id)
-            ? GroupAction.edited
-            : GroupAction.added;
-    if (action == GroupAction.deleted && !existed(r.id)) continue;
-    out.add(GroupActivity(groupName, r.updatedBy, label, action));
+            ? LogKind.edited
+            : LogKind.added;
+    if (kind == LogKind.deleted && !existed(r.id)) continue;
+    out.add(LogEntry(
+      ts: r.updatedAt,
+      kind: kind,
+      groupId: groupId,
+      group: groupName,
+      vehicleId: r.id,
+      vehicle: label,
+      who: r.updatedBy,
+      parts: kind == LogKind.edited ? changedParts(previous?.call(r.id), r) : null,
+    ));
   }
   return out;
 }
 
-Future<void> showActivities(NotificationService n, List<GroupActivity> acts) async {
-  final byGroup = <String, List<GroupActivity>>{};
+Future<void> recordActivities(
+  LocalStore store,
+  Session session,
+  NotificationService n,
+  List<LogEntry> acts, {
+  bool show = true,
+}) async {
+  if (acts.isEmpty) return;
+  final log = NotificationLog.fromJson(await store.readNotifLog(session));
   for (final a in acts) {
-    byGroup.putIfAbsent(a.groupName, () => []).add(a);
+    log.addActivity(a);
   }
-  for (final e in byGroup.entries) {
-    if (e.value.length <= 3) {
-      for (final a in e.value) {
-        await n.showRemote(e.key, a.text);
-      }
-    } else {
-      await n.showRemote(e.key, tr('groupAct.many', {'n': e.value.length}));
-    }
+  await store.writeNotifLog(session, log.toJson());
+  if (!show) return;
+  final groups = {for (final a in acts) a.groupId: a.group};
+  for (final g in groups.entries) {
+    await n.showGroup(g.key, g.value, log.unreadOfGroup(g.key));
   }
+}
+
+Future<void> recordReminders(LocalStore store, Session session, NotificationService n, UserData data) async {
+  final log = NotificationLog.fromJson(await store.readNotifLog(session));
+  final now = DateTime.now().millisecondsSinceEpoch;
+  if (log.reminderSince == 0) {
+    log.reminderSince = now;
+    await store.writeNotifLog(session, log.toJson());
+    return;
+  }
+  final fired = await n.firedReminders(
+      data.vehicles.where((v) => !v.deleted).toList(), data.notify, log.reminderSince, now);
+  for (final r in fired) {
+    log.addReminder(r.when, r.title, r.body, r.vehicleId);
+  }
+  log.reminderSince = now;
+  await store.writeNotifLog(session, log.toJson());
 }
 
 List<Map<String, dynamic>> newDevUnlocks(Iterable<Map<String, dynamic>> entries, int since) {
@@ -252,15 +263,20 @@ Future<void> _backgroundCheck() async {
 
   final session = await store.readSession();
   final localIds = <String>{};
+  final localById = <String, Vehicle>{};
   var myName = '';
+  UserData? local;
   if (session != null && session.key == w.uid) {
     myName = session.displayName;
-    final data = await store.readUserData(session);
-    localIds.addAll(data.vehicles.where((v) => !v.deleted).map((v) => v.id));
+    local = await store.readUserData(session);
+    localIds.addAll(local.vehicles.where((v) => !v.deleted).map((v) => v.id));
+    for (final v in local.vehicles) {
+      localById[v.id] = v;
+    }
   }
 
   final db = FirebaseFirestore.instance;
-  final acts = <GroupActivity>[];
+  final acts = <LogEntry>[];
   var unlocks = <Map<String, dynamic>>[];
   if (w.adminSince > 0) {
     try {
@@ -292,12 +308,14 @@ Future<void> _backgroundCheck() async {
         } catch (_) {}
       }
       acts.addAll(findActivities(
+        groupId: g.key,
         groupName: g.value,
         me: w.uid,
         myName: myName,
         since: since,
         remote: remote,
         existed: (id) => localIds.contains(id) || w.known.contains(id),
+        previous: (id) => localById[id],
       ));
       var maxTs = since;
       for (final r in remote) {
@@ -325,6 +343,10 @@ Future<void> _backgroundCheck() async {
     latest.remember(id);
   }
   await latest.save();
-  if (freshUnlocks.isNotEmpty) await showDevUnlocks(NotificationService(), freshUnlocks);
-  if (acts.isNotEmpty) await showActivities(NotificationService(), acts);
+  final n = NotificationService();
+  if (freshUnlocks.isNotEmpty) await showDevUnlocks(n, freshUnlocks);
+  if (session != null && session.key == w.uid) {
+    await recordActivities(store, session, n, acts);
+    if (local != null) await recordReminders(store, session, n, local);
+  }
 }

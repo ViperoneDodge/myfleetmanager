@@ -566,3 +566,19 @@ Technische informatie voor de ontwikkelaar
 Diagnose gekopieerd
 Voor
 Achter
+Meldingen
+Geen meldingen
+Alles als gelezen markeren
+Alles verwijderen
+Alle meldingen verwijderen?
+{n} geselecteerd
+Alles selecteren
+Als gelezen markeren
+Vandaag
+Gisteren
+Herinnering
+gegevens
+technische gegevens
+vervaldata
+onderhoud
+documenten

@@ -566,3 +566,19 @@ Technické informácie pre vývojára
 Diagnostika skopírovaná
 Predná
 Zadná
+Upozornenia
+Žiadne upozornenia
+Označiť všetko ako prečítané
+Vymazať všetko
+Vymazať všetky upozornenia?
+Vybrané: {n}
+Vybrať všetko
+Označiť ako prečítané
+Dnes
+Včera
+Pripomienka
+údaje
+technické údaje
+termíny
+údržba
+dokumenty

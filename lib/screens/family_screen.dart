@@ -160,6 +160,7 @@ class FamilyTab extends StatelessWidget {
           ),
         ...list.map((v) => VehicleCard(
               vehicle: v,
+              changed: appState.hasUnreadChange(v.id),
               limited: limited.contains(v.id),
               onTap: () => limited.contains(v.id)
                   ? requirePro(context,

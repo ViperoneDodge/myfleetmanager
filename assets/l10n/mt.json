@@ -566,5 +566,21 @@
  "diag.subtitle": "Informazzjoni teknika għall-iżviluppatur",
  "diag.copied": "Dijanjostika kkupjata",
  "tyre.frontOne": "Quddiem",
- "tyre.rearOne": "Wara"
+ "tyre.rearOne": "Wara",
+ "notif.title": "Notifiki",
+ "notif.empty": "L-ebda notifika",
+ "notif.markAllRead": "Immarka kollox bħala moqri",
+ "notif.deleteAll": "Ħassar kollox",
+ "notif.deleteAllConfirm": "Tħassar in-notifiki kollha?",
+ "notif.selected": "{n} magħżula",
+ "notif.selectAll": "Agħżel kollox",
+ "notif.markRead": "Immarka bħala moqri",
+ "notif.today": "Illum",
+ "notif.yesterday": "Ilbieraħ",
+ "notif.reminder": "Tfakkira",
+ "part.details": "dettalji",
+ "part.tech": "dejta teknika",
+ "part.deadlines": "skadenzi",
+ "part.maintenance": "manutenzjoni",
+ "part.documents": "dokumenti"
 }

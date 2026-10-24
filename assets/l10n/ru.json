@@ -566,5 +566,21 @@
  "diag.subtitle": "Техническая информация для разработчика",
  "diag.copied": "Диагностика скопирована",
  "tyre.frontOne": "Передняя",
- "tyre.rearOne": "Задняя"
+ "tyre.rearOne": "Задняя",
+ "notif.title": "Уведомления",
+ "notif.empty": "Нет уведомлений",
+ "notif.markAllRead": "Отметить все как прочитанные",
+ "notif.deleteAll": "Удалить все",
+ "notif.deleteAllConfirm": "Удалить все уведомления?",
+ "notif.selected": "Выбрано: {n}",
+ "notif.selectAll": "Выбрать все",
+ "notif.markRead": "Отметить как прочитанные",
+ "notif.today": "Сегодня",
+ "notif.yesterday": "Вчера",
+ "notif.reminder": "Напоминание",
+ "part.details": "данные",
+ "part.tech": "технические данные",
+ "part.deadlines": "сроки",
+ "part.maintenance": "обслуживание",
+ "part.documents": "документы"
 }

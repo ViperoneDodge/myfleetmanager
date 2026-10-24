@@ -566,3 +566,19 @@ Technické informace pro vývojáře
 Diagnostika zkopírována
 Přední
 Zadní
+Oznámení
+Žádná oznámení
+Označit vše jako přečtené
+Smazat vše
+Smazat všechna oznámení?
+Vybráno: {n}
+Vybrat vše
+Označit jako přečtené
+Dnes
+Včera
+Připomínka
+údaje
+technické údaje
+termíny
+údržba
+dokumenty

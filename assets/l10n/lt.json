@@ -566,5 +566,21 @@
  "diag.subtitle": "Techninė informacija kūrėjui",
  "diag.copied": "Diagnostika nukopijuota",
  "tyre.frontOne": "Priekinė",
- "tyre.rearOne": "Galinė"
+ "tyre.rearOne": "Galinė",
+ "notif.title": "Pranešimai",
+ "notif.empty": "Pranešimų nėra",
+ "notif.markAllRead": "Pažymėti visus kaip perskaitytus",
+ "notif.deleteAll": "Ištrinti visus",
+ "notif.deleteAllConfirm": "Ištrinti visus pranešimus?",
+ "notif.selected": "Pasirinkta: {n}",
+ "notif.selectAll": "Pasirinkti visus",
+ "notif.markRead": "Pažymėti kaip perskaitytus",
+ "notif.today": "Šiandien",
+ "notif.yesterday": "Vakar",
+ "notif.reminder": "Priminimas",
+ "part.details": "duomenys",
+ "part.tech": "techniniai duomenys",
+ "part.deadlines": "terminai",
+ "part.maintenance": "priežiūra",
+ "part.documents": "dokumentai"
 }

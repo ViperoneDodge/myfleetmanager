@@ -566,5 +566,21 @@
  "diag.subtitle": "Technické informácie pre vývojára",
  "diag.copied": "Diagnostika skopírovaná",
  "tyre.frontOne": "Predná",
- "tyre.rearOne": "Zadná"
+ "tyre.rearOne": "Zadná",
+ "notif.title": "Upozornenia",
+ "notif.empty": "Žiadne upozornenia",
+ "notif.markAllRead": "Označiť všetko ako prečítané",
+ "notif.deleteAll": "Vymazať všetko",
+ "notif.deleteAllConfirm": "Vymazať všetky upozornenia?",
+ "notif.selected": "Vybrané: {n}",
+ "notif.selectAll": "Vybrať všetko",
+ "notif.markRead": "Označiť ako prečítané",
+ "notif.today": "Dnes",
+ "notif.yesterday": "Včera",
+ "notif.reminder": "Pripomienka",
+ "part.details": "údaje",
+ "part.tech": "technické údaje",
+ "part.deadlines": "termíny",
+ "part.maintenance": "údržba",
+ "part.documents": "dokumenty"
 }

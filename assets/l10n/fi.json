@@ -566,5 +566,21 @@
  "diag.subtitle": "Tekniset tiedot kehittäjälle",
  "diag.copied": "Diagnostiikka kopioitu",
  "tyre.frontOne": "Etu",
- "tyre.rearOne": "Taka"
+ "tyre.rearOne": "Taka",
+ "notif.title": "Ilmoitukset",
+ "notif.empty": "Ei ilmoituksia",
+ "notif.markAllRead": "Merkitse kaikki luetuiksi",
+ "notif.deleteAll": "Poista kaikki",
+ "notif.deleteAllConfirm": "Poistetaanko kaikki ilmoitukset?",
+ "notif.selected": "{n} valittu",
+ "notif.selectAll": "Valitse kaikki",
+ "notif.markRead": "Merkitse luetuiksi",
+ "notif.today": "Tänään",
+ "notif.yesterday": "Eilen",
+ "notif.reminder": "Muistutus",
+ "part.details": "tiedot",
+ "part.tech": "tekniset tiedot",
+ "part.deadlines": "määräajat",
+ "part.maintenance": "huolto",
+ "part.documents": "asiakirjat"
 }

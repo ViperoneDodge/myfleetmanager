@@ -324,13 +324,14 @@ files = [
     ['theme.dart', righe('theme.dart'), 'Tema «quaderno»: colori copertina, carta (righe, quadretti, puntini, liscia), anelli, scala testi; tema calcolato una volta sola e riutilizzato (evita il lampeggio delle icone in alto)'],
     ['firebase_config.dart · version.dart', righe('firebase_config.dart', 'version.dart'), 'Parametri pubblici del progetto Firebase e numero di versione'],
     ['services/app_state.dart', righe('services/app_state.dart'), 'Stato centrale e orchestrazione di tutti i servizi'],
-    ['services/local_store.dart', righe('services/local_store.dart'), 'Lettura e scrittura dei file JSON sul telefono (sessione, dati, impostazioni)'],
+    ['services/local_store.dart', righe('services/local_store.dart'), 'Lettura e scrittura dei file JSON sul telefono (sessione, dati, impostazioni, storico notifiche)'],
     ['services/auth_service.dart', righe('services/auth_service.dart'), 'Accesso: account locale, email e password, Google, Apple; eliminazione account'],
     ['services/sync_service.dart', righe('services/sync_service.dart'), 'Sincronizzazione con Firestore: gruppi (ascolto continuo più lettura diretta dal server all\'avvio e a ogni «aggiorna»), veicoli, documenti, ruoli, Pro; registra i problemi per fonte (gruppi, veicoli, documenti, salvataggi) e li toglie quando la fonte torna a funzionare'],
     ['services/notification_service.dart', righe('services/notification_service.dart'), 'Promemoria delle scadenze programmati sul telefono, canali Android, prove'],
     ['services/push_service.dart', righe('services/push_service.dart'), 'Registrazione del telefono a Firebase Cloud Messaging'],
     ['services/app_check.dart', righe('services/app_check.dart'), 'Avvio di Firebase App Check (Play Integrity su Android, App Attest su iOS): certifica che le richieste al cloud arrivano dall\'app originale'],
-    ['services/group_watch.dart', righe('services/group_watch.dart'), 'Controllo in background delle attività dei gruppi (Android, WorkManager)'],
+    ['services/group_watch.dart', righe('services/group_watch.dart'), 'Controllo in background delle attività dei gruppi (Android, WorkManager) e registrazione nello storico'],
+    ['services/notification_log.dart', righe('services/notification_log.dart'), 'Storico delle notifiche: voci, unione per veicolo, parti cambiate, lette e cancellate'],
     ['services/pro_service.dart', righe('services/pro_service.dart'), 'Acquisto in-app della versione Pro e ripristino'],
     ['services/registration_reader.dart', righe('services/registration_reader.dart'), 'Lettura del libretto: riconoscimento testo e interpretazione dei campi UE'],
     ['services/tyres.dart', righe('services/tyres.dart'), 'Pneumatici: riconoscimento misure, gruppi, divisione per cerchio'],
@@ -338,7 +339,8 @@ files = [
     ['services/pdf_export.dart', righe('services/pdf_export.dart'), 'Esportazione del riepilogo in PDF'],
     ['services/update_service.dart', righe('services/update_service.dart'), 'Aggiornamenti automatici da Google Play'],
     ['services/support_service.dart', righe('services/support_service.dart'), 'Email al supporto, segnalazione problemi, richiesta cancellazione dati'],
-    ['screens/home_screen.dart', righe('screens/home_screen.dart'), 'Schermata principale con le tre schede in basso; icona PDF in alto nei Veicoli e nei Gruppi (scelta tra tutti i gruppi o uno solo)'],
+    ['screens/home_screen.dart', righe('screens/home_screen.dart'), 'Schermata principale con le tre schede in basso; icona PDF in alto nei Veicoli e nei Gruppi (scelta tra tutti i gruppi o uno solo); campanella delle notifiche con il numero delle non lette'],
+    ['screens/notifications_screen.dart', righe('screens/notifications_screen.dart'), 'Pagina Notifiche: storico diviso per giorno, segna come lette, elimina, selezione con pressione lunga; campanella con contatore'],
     ['screens/vehicle_detail_screen.dart', righe('screens/vehicle_detail_screen.dart'), 'Scheda del veicolo con le tre sotto-schede'],
     ['screens/vehicle_book.dart', righe('screens/vehicle_book.dart'), 'Sfoglia i veicoli con l\'animazione della pagina attorno agli anelli'],
     ['screens/vehicle_edit_screen.dart', righe('screens/vehicle_edit_screen.dart'), 'Creazione e modifica del veicolo'],
@@ -443,14 +445,23 @@ story += [module('SyncService – sincronizzazione', 'Collega l\'app a Cloud Fir
 story += [module('NotificationService – promemoria', 'Programma sul telefono le notifiche delle scadenze, anche ad app chiusa e '
                  'senza rete. Raggruppa più scadenze dello stesso giorno, usa l\'orario preciso quando Android lo permette.',
                  'init · rescheduleAll(veicoli, impostazioni) · status (permessi, orario preciso) · requestPermission · '
-                 'requestExactAlarms · scheduleTest · showTest · showRemote', 'flutter_local_notifications, fuso orario del telefono')]
+                 'requestExactAlarms · scheduleTest · showTest · showRemote · showGroup (una notifica per gruppo che si '
+                 'aggiorna, con elenco delle modifiche) · firedReminders (promemoria già scattati, per lo storico)',
+                 'flutter_local_notifications, fuso orario del telefono')]
+story += [module('NotificationLog – storico delle notifiche', 'Storico sul telefono, per account, di tutte le notifiche: '
+                 'modifiche dei gruppi, promemoria delle scadenze e messaggi push. Le modifiche dello stesso veicolo fatte '
+                 'dalla stessa persona si uniscono finché non sono lette, con le parti cambiate (dati, dati tecnici, '
+                 'scadenze, manutenzione, documenti).',
+                 'LogEntry · NotificationLog (addActivity, addReminder, addMessage, markRead, markAllRead, delete, clear, '
+                 'unread, changedUnread) · changedParts', 'LocalStore (notif_<account>.json)')]
 story += [module('PushService – notifiche push', 'Registra il telefono a Firebase Cloud Messaging e salva il codice del '
                  'dispositivo nel profilo; mostra le push ricevute ad app aperta.',
                  'start(uid, onForeground) · stop · registered · token', 'Firebase Messaging, Firestore (users/{uid})')]
 story += [module('GroupWatch – attività dei gruppi in background', 'Solo Android: ogni circa 15 minuti, ad app chiusa, controlla '
                  'se altri membri hanno aggiunto, modificato o eliminato veicoli e mostra un avviso. Per l\'amministratore '
                  'segnala anche le nuove attivazioni Pro con codice.',
-                 'scheduleGroupWatch(on) · initGroupWatch · findActivities · showActivities', 'WorkManager, Firestore, NotificationService, LocalStore')]
+                 'scheduleGroupWatch(on) · initGroupWatch · findActivities · recordActivities · recordReminders',
+                 'WorkManager, Firestore, NotificationService, NotificationLog, LocalStore')]
 story += [module('ProService – acquisto Pro', 'Gestisce l\'acquisto unico «myfleet_pro» tramite Google Play (e App Store). '
                  'Su Android ripristina in automatico gli acquisti all\'avvio; su iPhone solo su richiesta, per non chiedere '
                  'ogni volta la password Apple.',

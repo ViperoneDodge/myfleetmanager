@@ -566,3 +566,19 @@ Tekniset tiedot kehittäjälle
 Diagnostiikka kopioitu
 Etu
 Taka
+Ilmoitukset
+Ei ilmoituksia
+Merkitse kaikki luetuiksi
+Poista kaikki
+Poistetaanko kaikki ilmoitukset?
+{n} valittu
+Valitse kaikki
+Merkitse luetuiksi
+Tänään
+Eilen
+Muistutus
+tiedot
+tekniset tiedot
+määräajat
+huolto
+asiakirjat

@@ -566,5 +566,21 @@
  "diag.subtitle": "डेवलपर को भेजने के लिए तकनीकी जानकारी",
  "diag.copied": "निदान कॉपी हो गया",
  "tyre.frontOne": "आगे",
- "tyre.rearOne": "पीछे"
+ "tyre.rearOne": "पीछे",
+ "notif.title": "सूचनाएँ",
+ "notif.empty": "कोई सूचना नहीं",
+ "notif.markAllRead": "सभी को पढ़ा हुआ चिह्नित करें",
+ "notif.deleteAll": "सभी हटाएँ",
+ "notif.deleteAllConfirm": "सभी सूचनाएँ हटाएँ?",
+ "notif.selected": "{n} चयनित",
+ "notif.selectAll": "सभी चुनें",
+ "notif.markRead": "पढ़ा हुआ चिह्नित करें",
+ "notif.today": "आज",
+ "notif.yesterday": "कल",
+ "notif.reminder": "अनुस्मारक",
+ "part.details": "विवरण",
+ "part.tech": "तकनीकी डेटा",
+ "part.deadlines": "समय-सीमाएँ",
+ "part.maintenance": "रखरखाव",
+ "part.documents": "दस्तावेज़"
 }

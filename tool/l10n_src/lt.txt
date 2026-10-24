@@ -566,3 +566,19 @@ Techninė informacija kūrėjui
 Diagnostika nukopijuota
 Priekinė
 Galinė
+Pranešimai
+Pranešimų nėra
+Pažymėti visus kaip perskaitytus
+Ištrinti visus
+Ištrinti visus pranešimus?
+Pasirinkta: {n}
+Pasirinkti visus
+Pažymėti kaip perskaitytus
+Šiandien
+Vakar
+Priminimas
+duomenys
+techniniai duomenys
+terminai
+priežiūra
+dokumentai

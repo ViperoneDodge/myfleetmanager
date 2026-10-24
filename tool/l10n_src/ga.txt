@@ -566,3 +566,19 @@ Faisnéis theicniúil don fhorbróir
 Diagnóisic cóipeáilte
 Tosaigh
 Cúil
+Fógraí
+Gan fógraí
+Marcáil gach ceann léite
+Scrios gach ceann
+Gach fógra a scriosadh?
+{n} roghnaithe
+Roghnaigh gach ceann
+Marcáil léite
+Inniu
+Inné
+Meabhrúchán
+sonraí
+sonraí teicniúla
+spriocdhátaí
+cothabháil
+doiciméid

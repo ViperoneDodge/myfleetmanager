@@ -566,5 +566,21 @@
  "diag.subtitle": "Geliştiriciye gönderilecek teknik bilgiler",
  "diag.copied": "Tanılama kopyalandı",
  "tyre.frontOne": "Ön",
- "tyre.rearOne": "Arka"
+ "tyre.rearOne": "Arka",
+ "notif.title": "Bildirimler",
+ "notif.empty": "Bildirim yok",
+ "notif.markAllRead": "Tümünü okundu işaretle",
+ "notif.deleteAll": "Tümünü sil",
+ "notif.deleteAllConfirm": "Tüm bildirimler silinsin mi?",
+ "notif.selected": "{n} seçildi",
+ "notif.selectAll": "Tümünü seç",
+ "notif.markRead": "Okundu işaretle",
+ "notif.today": "Bugün",
+ "notif.yesterday": "Dün",
+ "notif.reminder": "Hatırlatma",
+ "part.details": "bilgiler",
+ "part.tech": "teknik veriler",
+ "part.deadlines": "son tarihler",
+ "part.maintenance": "bakım",
+ "part.documents": "belgeler"
 }

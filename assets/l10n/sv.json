@@ -566,5 +566,21 @@
  "diag.subtitle": "Teknisk information till utvecklaren",
  "diag.copied": "Diagnostik kopierad",
  "tyre.frontOne": "Fram",
- "tyre.rearOne": "Bak"
+ "tyre.rearOne": "Bak",
+ "notif.title": "Aviseringar",
+ "notif.empty": "Inga aviseringar",
+ "notif.markAllRead": "Markera alla som lästa",
+ "notif.deleteAll": "Radera alla",
+ "notif.deleteAllConfirm": "Radera alla aviseringar?",
+ "notif.selected": "{n} valda",
+ "notif.selectAll": "Välj alla",
+ "notif.markRead": "Markera som lästa",
+ "notif.today": "Idag",
+ "notif.yesterday": "Igår",
+ "notif.reminder": "Påminnelse",
+ "part.details": "uppgifter",
+ "part.tech": "tekniska data",
+ "part.deadlines": "förfallodatum",
+ "part.maintenance": "underhåll",
+ "part.documents": "dokument"
 }

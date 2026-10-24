@@ -566,3 +566,19 @@ Informazzjoni teknika għall-iżviluppatur
 Dijanjostika kkupjata
 Quddiem
 Wara
+Notifiki
+L-ebda notifika
+Immarka kollox bħala moqri
+Ħassar kollox
+Tħassar in-notifiki kollha?
+{n} magħżula
+Agħżel kollox
+Immarka bħala moqri
+Illum
+Ilbieraħ
+Tfakkira
+dettalji
+dejta teknika
+skadenzi
+manutenzjoni
+dokumenti

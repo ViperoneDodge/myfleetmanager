@@ -566,5 +566,21 @@
  "diag.subtitle": "Informații tehnice pentru dezvoltator",
  "diag.copied": "Diagnosticare copiată",
  "tyre.frontOne": "Față",
- "tyre.rearOne": "Spate"
+ "tyre.rearOne": "Spate",
+ "notif.title": "Notificări",
+ "notif.empty": "Nicio notificare",
+ "notif.markAllRead": "Marchează toate ca citite",
+ "notif.deleteAll": "Șterge toate",
+ "notif.deleteAllConfirm": "Ștergi toate notificările?",
+ "notif.selected": "{n} selectate",
+ "notif.selectAll": "Selectează tot",
+ "notif.markRead": "Marchează ca citite",
+ "notif.today": "Astăzi",
+ "notif.yesterday": "Ieri",
+ "notif.reminder": "Memento",
+ "part.details": "date",
+ "part.tech": "date tehnice",
+ "part.deadlines": "termene",
+ "part.maintenance": "întreținere",
+ "part.documents": "documente"
 }

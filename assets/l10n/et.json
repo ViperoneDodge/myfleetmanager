@@ -566,5 +566,21 @@
  "diag.subtitle": "Tehniline teave arendajale",
  "diag.copied": "Diagnostika kopeeritud",
  "tyre.frontOne": "Esirehv",
- "tyre.rearOne": "Tagarehv"
+ "tyre.rearOne": "Tagarehv",
+ "notif.title": "Teavitused",
+ "notif.empty": "Teavitusi pole",
+ "notif.markAllRead": "Märgi kõik loetuks",
+ "notif.deleteAll": "Kustuta kõik",
+ "notif.deleteAllConfirm": "Kas kustutada kõik teavitused?",
+ "notif.selected": "Valitud: {n}",
+ "notif.selectAll": "Vali kõik",
+ "notif.markRead": "Märgi loetuks",
+ "notif.today": "Täna",
+ "notif.yesterday": "Eile",
+ "notif.reminder": "Meeldetuletus",
+ "part.details": "andmed",
+ "part.tech": "tehnilised andmed",
+ "part.deadlines": "tähtajad",
+ "part.maintenance": "hooldus",
+ "part.documents": "dokumendid"
 }

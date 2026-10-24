@@ -566,5 +566,21 @@
  "diag.subtitle": "Technical information to send to the developer",
  "diag.copied": "Diagnostics copied",
  "tyre.frontOne": "Front",
- "tyre.rearOne": "Rear"
+ "tyre.rearOne": "Rear",
+ "notif.title": "Notifications",
+ "notif.empty": "No notifications",
+ "notif.markAllRead": "Mark all as read",
+ "notif.deleteAll": "Delete all",
+ "notif.deleteAllConfirm": "Delete all notifications?",
+ "notif.selected": "{n} selected",
+ "notif.selectAll": "Select all",
+ "notif.markRead": "Mark as read",
+ "notif.today": "Today",
+ "notif.yesterday": "Yesterday",
+ "notif.reminder": "Reminder",
+ "part.details": "details",
+ "part.tech": "technical data",
+ "part.deadlines": "deadlines",
+ "part.maintenance": "maintenance",
+ "part.documents": "documents"
 }

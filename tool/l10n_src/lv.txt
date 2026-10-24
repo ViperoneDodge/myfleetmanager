@@ -566,3 +566,19 @@ Tehniskā informācija izstrādātājam
 Diagnostika nokopēta
 Priekšējā
 Aizmugurējā
+Paziņojumi
+Nav paziņojumu
+Atzīmēt visus kā izlasītus
+Dzēst visus
+Dzēst visus paziņojumus?
+Atlasīti: {n}
+Atlasīt visus
+Atzīmēt kā izlasītus
+Šodien
+Vakar
+Atgādinājums
+dati
+tehniskie dati
+termiņi
+apkope
+dokumenti

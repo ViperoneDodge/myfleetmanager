@@ -566,3 +566,19 @@ Informații tehnice pentru dezvoltator
 Diagnosticare copiată
 Față
 Spate
+Notificări
+Nicio notificare
+Marchează toate ca citite
+Șterge toate
+Ștergi toate notificările?
+{n} selectate
+Selectează tot
+Marchează ca citite
+Astăzi
+Ieri
+Memento
+date
+date tehnice
+termene
+întreținere
+documente

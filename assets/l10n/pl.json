@@ -566,5 +566,21 @@
  "diag.subtitle": "Informacje techniczne dla twórcy aplikacji",
  "diag.copied": "Diagnostyka skopiowana",
  "tyre.frontOne": "Przednia",
- "tyre.rearOne": "Tylna"
+ "tyre.rearOne": "Tylna",
+ "notif.title": "Powiadomienia",
+ "notif.empty": "Brak powiadomień",
+ "notif.markAllRead": "Oznacz wszystkie jako przeczytane",
+ "notif.deleteAll": "Usuń wszystkie",
+ "notif.deleteAllConfirm": "Usunąć wszystkie powiadomienia?",
+ "notif.selected": "Zaznaczono: {n}",
+ "notif.selectAll": "Zaznacz wszystkie",
+ "notif.markRead": "Oznacz jako przeczytane",
+ "notif.today": "Dzisiaj",
+ "notif.yesterday": "Wczoraj",
+ "notif.reminder": "Przypomnienie",
+ "part.details": "dane",
+ "part.tech": "dane techniczne",
+ "part.deadlines": "terminy",
+ "part.maintenance": "serwis",
+ "part.documents": "dokumenty"
 }

@@ -113,9 +113,9 @@ class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state == AppLifecycleState.resumed && appState.syncStatus == SyncStatus.offline) {
-      appState.retrySync();
-    }
+    if (state != AppLifecycleState.resumed) return;
+    appState.onResume();
+    if (appState.syncStatus == SyncStatus.offline) appState.retrySync();
   }
 
   @override

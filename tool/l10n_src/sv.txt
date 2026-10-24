@@ -566,3 +566,19 @@ Teknisk information till utvecklaren
 Diagnostik kopierad
 Fram
 Bak
+Aviseringar
+Inga aviseringar
+Markera alla som lästa
+Radera alla
+Radera alla aviseringar?
+{n} valda
+Välj alla
+Markera som lästa
+Idag
+Igår
+Påminnelse
+uppgifter
+tekniska data
+förfallodatum
+underhåll
+dokument

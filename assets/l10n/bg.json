@@ -566,5 +566,21 @@
  "diag.subtitle": "Техническа информация за разработчика",
  "diag.copied": "Диагностиката е копирана",
  "tyre.frontOne": "Предна",
- "tyre.rearOne": "Задна"
+ "tyre.rearOne": "Задна",
+ "notif.title": "Известия",
+ "notif.empty": "Няма известия",
+ "notif.markAllRead": "Маркирай всички като прочетени",
+ "notif.deleteAll": "Изтрий всички",
+ "notif.deleteAllConfirm": "Да се изтрият ли всички известия?",
+ "notif.selected": "Избрани: {n}",
+ "notif.selectAll": "Избери всички",
+ "notif.markRead": "Маркирай като прочетени",
+ "notif.today": "Днес",
+ "notif.yesterday": "Вчера",
+ "notif.reminder": "Напомняне",
+ "part.details": "данни",
+ "part.tech": "технически данни",
+ "part.deadlines": "срокове",
+ "part.maintenance": "поддръжка",
+ "part.documents": "документи"
 }

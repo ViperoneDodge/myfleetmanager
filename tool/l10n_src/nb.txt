@@ -566,3 +566,19 @@ Teknisk informasjon til utvikleren
 Diagnostikk kopiert
 Foran
 Bak
+Varsler
+Ingen varsler
+Merk alle som lest
+Slett alle
+Slette alle varsler?
+{n} valgt
+Velg alle
+Merk som lest
+I dag
+I går
+Påminnelse
+opplysninger
+tekniske data
+frister
+vedlikehold
+dokumenter

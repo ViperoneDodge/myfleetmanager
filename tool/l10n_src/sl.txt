@@ -566,3 +566,19 @@ Tehnični podatki za razvijalca
 Diagnostika kopirana
 Sprednja
 Zadnja
+Obvestila
+Ni obvestil
+Označi vse kot prebrano
+Izbriši vse
+Izbrišem vsa obvestila?
+Izbrano: {n}
+Izberi vse
+Označi kot prebrano
+Danes
+Včeraj
+Opomnik
+podatki
+tehnični podatki
+roki
+vzdrževanje
+dokumenti

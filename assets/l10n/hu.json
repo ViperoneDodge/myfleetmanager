@@ -566,5 +566,21 @@
  "diag.subtitle": "Műszaki adatok a fejlesztőnek",
  "diag.copied": "Diagnosztika másolva",
  "tyre.frontOne": "Első",
- "tyre.rearOne": "Hátsó"
+ "tyre.rearOne": "Hátsó",
+ "notif.title": "Értesítések",
+ "notif.empty": "Nincs értesítés",
+ "notif.markAllRead": "Összes megjelölése olvasottként",
+ "notif.deleteAll": "Összes törlése",
+ "notif.deleteAllConfirm": "Törlöd az összes értesítést?",
+ "notif.selected": "{n} kijelölve",
+ "notif.selectAll": "Összes kijelölése",
+ "notif.markRead": "Megjelölés olvasottként",
+ "notif.today": "Ma",
+ "notif.yesterday": "Tegnap",
+ "notif.reminder": "Emlékeztető",
+ "part.details": "adatok",
+ "part.tech": "műszaki adatok",
+ "part.deadlines": "határidők",
+ "part.maintenance": "karbantartás",
+ "part.documents": "dokumentumok"
 }

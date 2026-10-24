@@ -566,3 +566,19 @@ Informações técnicas para enviar ao programador
 Diagnóstico copiado
 Dianteiro
 Traseiro
+Notificações
+Sem notificações
+Marcar todas como lidas
+Eliminar todas
+Eliminar todas as notificações?
+{n} selecionadas
+Selecionar todas
+Marcar como lidas
+Hoje
+Ontem
+Lembrete
+dados
+dados técnicos
+prazos
+manutenção
+documentos

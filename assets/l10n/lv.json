@@ -566,5 +566,21 @@
  "diag.subtitle": "Tehniskā informācija izstrādātājam",
  "diag.copied": "Diagnostika nokopēta",
  "tyre.frontOne": "Priekšējā",
- "tyre.rearOne": "Aizmugurējā"
+ "tyre.rearOne": "Aizmugurējā",
+ "notif.title": "Paziņojumi",
+ "notif.empty": "Nav paziņojumu",
+ "notif.markAllRead": "Atzīmēt visus kā izlasītus",
+ "notif.deleteAll": "Dzēst visus",
+ "notif.deleteAllConfirm": "Dzēst visus paziņojumus?",
+ "notif.selected": "Atlasīti: {n}",
+ "notif.selectAll": "Atlasīt visus",
+ "notif.markRead": "Atzīmēt kā izlasītus",
+ "notif.today": "Šodien",
+ "notif.yesterday": "Vakar",
+ "notif.reminder": "Atgādinājums",
+ "part.details": "dati",
+ "part.tech": "tehniskie dati",
+ "part.deadlines": "termiņi",
+ "part.maintenance": "apkope",
+ "part.documents": "dokumenti"
 }

@@ -566,5 +566,21 @@
  "diag.subtitle": "개발자에게 보낼 기술 정보",
  "diag.copied": "진단 정보가 복사됨",
  "tyre.frontOne": "앞",
- "tyre.rearOne": "뒤"
+ "tyre.rearOne": "뒤",
+ "notif.title": "알림",
+ "notif.empty": "알림 없음",
+ "notif.markAllRead": "모두 읽음으로 표시",
+ "notif.deleteAll": "모두 삭제",
+ "notif.deleteAllConfirm": "모든 알림을 삭제할까요?",
+ "notif.selected": "{n}개 선택됨",
+ "notif.selectAll": "모두 선택",
+ "notif.markRead": "읽음으로 표시",
+ "notif.today": "오늘",
+ "notif.yesterday": "어제",
+ "notif.reminder": "리마인더",
+ "part.details": "정보",
+ "part.tech": "기술 데이터",
+ "part.deadlines": "기한",
+ "part.maintenance": "정비",
+ "part.documents": "문서"
 }

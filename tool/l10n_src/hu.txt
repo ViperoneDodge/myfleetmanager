@@ -566,3 +566,19 @@ Műszaki adatok a fejlesztőnek
 Diagnosztika másolva
 Első
 Hátsó
+Értesítések
+Nincs értesítés
+Összes megjelölése olvasottként
+Összes törlése
+Törlöd az összes értesítést?
+{n} kijelölve
+Összes kijelölése
+Megjelölés olvasottként
+Ma
+Tegnap
+Emlékeztető
+adatok
+műszaki adatok
+határidők
+karbantartás
+dokumentumok

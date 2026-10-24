@@ -566,5 +566,21 @@
  "diag.subtitle": "Faisnéis theicniúil don fhorbróir",
  "diag.copied": "Diagnóisic cóipeáilte",
  "tyre.frontOne": "Tosaigh",
- "tyre.rearOne": "Cúil"
+ "tyre.rearOne": "Cúil",
+ "notif.title": "Fógraí",
+ "notif.empty": "Gan fógraí",
+ "notif.markAllRead": "Marcáil gach ceann léite",
+ "notif.deleteAll": "Scrios gach ceann",
+ "notif.deleteAllConfirm": "Gach fógra a scriosadh?",
+ "notif.selected": "{n} roghnaithe",
+ "notif.selectAll": "Roghnaigh gach ceann",
+ "notif.markRead": "Marcáil léite",
+ "notif.today": "Inniu",
+ "notif.yesterday": "Inné",
+ "notif.reminder": "Meabhrúchán",
+ "part.details": "sonraí",
+ "part.tech": "sonraí teicniúla",
+ "part.deadlines": "spriocdhátaí",
+ "part.maintenance": "cothabháil",
+ "part.documents": "doiciméid"
 }

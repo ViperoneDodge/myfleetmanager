@@ -566,5 +566,21 @@
  "diag.subtitle": "Τεχνικές πληροφορίες για τον προγραμματιστή",
  "diag.copied": "Τα διαγνωστικά αντιγράφηκαν",
  "tyre.frontOne": "Εμπρός",
- "tyre.rearOne": "Πίσω"
+ "tyre.rearOne": "Πίσω",
+ "notif.title": "Ειδοποιήσεις",
+ "notif.empty": "Καμία ειδοποίηση",
+ "notif.markAllRead": "Σήμανση όλων ως αναγνωσμένων",
+ "notif.deleteAll": "Διαγραφή όλων",
+ "notif.deleteAllConfirm": "Διαγραφή όλων των ειδοποιήσεων;",
+ "notif.selected": "{n} επιλεγμένες",
+ "notif.selectAll": "Επιλογή όλων",
+ "notif.markRead": "Σήμανση ως αναγνωσμένων",
+ "notif.today": "Σήμερα",
+ "notif.yesterday": "Χθες",
+ "notif.reminder": "Υπενθύμιση",
+ "part.details": "στοιχεία",
+ "part.tech": "τεχνικά στοιχεία",
+ "part.deadlines": "προθεσμίες",
+ "part.maintenance": "συντήρηση",
+ "part.documents": "έγγραφα"
 }

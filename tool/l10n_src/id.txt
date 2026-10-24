@@ -566,3 +566,19 @@ Informasi teknis untuk dikirim ke pengembang
 Diagnostik disalin
 Depan
 Belakang
+Notifikasi
+Tidak ada notifikasi
+Tandai semua sudah dibaca
+Hapus semua
+Hapus semua notifikasi?
+{n} dipilih
+Pilih semua
+Tandai sudah dibaca
+Hari ini
+Kemarin
+Pengingat
+data
+data teknis
+tenggat
+perawatan
+dokumen

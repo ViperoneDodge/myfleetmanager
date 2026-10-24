@@ -263,6 +263,8 @@ class VehicleCard extends StatelessWidget {
   final bool favorite;
 
   final VoidCallback? onFavorite;
+
+  final bool changed;
   const VehicleCard({
     super.key,
     required this.vehicle,
@@ -273,6 +275,7 @@ class VehicleCard extends StatelessWidget {
     this.limited = false,
     this.favorite = false,
     this.onFavorite,
+    this.changed = false,
   });
 
   static const ColorFilter _greyFilter = ColorFilter.matrix(<double>[
@@ -297,7 +300,23 @@ class VehicleCard extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Row(children: [
-            VehicleAvatar(vehicle: v, size: 64),
+            Stack(clipBehavior: Clip.none, children: [
+              VehicleAvatar(vehicle: v, size: 64),
+              if (changed)
+                Positioned(
+                  top: -4,
+                  right: -4,
+                  child: Container(
+                    width: 16,
+                    height: 16,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFD32F2F),
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white, width: 2),
+                    ),
+                  ),
+                ),
+            ]),
             const SizedBox(width: 12),
             Expanded(
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

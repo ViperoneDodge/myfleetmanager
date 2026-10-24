@@ -566,3 +566,19 @@ Tæknilegar upplýsingar fyrir forritarann
 Greining afrituð
 Framdekk
 Afturdekk
+Tilkynningar
+Engar tilkynningar
+Merkja allt sem lesið
+Eyða öllu
+Eyða öllum tilkynningum?
+{n} valdar
+Velja allt
+Merkja sem lesið
+Í dag
+Í gær
+Áminning
+upplýsingar
+tæknilegar upplýsingar
+frestir
+viðhald
+skjöl

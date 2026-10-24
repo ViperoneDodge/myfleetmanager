@@ -566,5 +566,21 @@
  "diag.subtitle": "Thông tin kỹ thuật gửi cho nhà phát triển",
  "diag.copied": "Đã sao chép chẩn đoán",
  "tyre.frontOne": "Bánh trước",
- "tyre.rearOne": "Bánh sau"
+ "tyre.rearOne": "Bánh sau",
+ "notif.title": "Thông báo",
+ "notif.empty": "Không có thông báo",
+ "notif.markAllRead": "Đánh dấu tất cả đã đọc",
+ "notif.deleteAll": "Xóa tất cả",
+ "notif.deleteAllConfirm": "Xóa tất cả thông báo?",
+ "notif.selected": "Đã chọn {n}",
+ "notif.selectAll": "Chọn tất cả",
+ "notif.markRead": "Đánh dấu đã đọc",
+ "notif.today": "Hôm nay",
+ "notif.yesterday": "Hôm qua",
+ "notif.reminder": "Lời nhắc",
+ "part.details": "thông tin",
+ "part.tech": "thông số kỹ thuật",
+ "part.deadlines": "hạn",
+ "part.maintenance": "bảo dưỡng",
+ "part.documents": "tài liệu"
 }

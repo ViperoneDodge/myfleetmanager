@@ -566,5 +566,21 @@
  "diag.subtitle": "Технічна інформація для розробника",
  "diag.copied": "Діагностику скопійовано",
  "tyre.frontOne": "Передня",
- "tyre.rearOne": "Задня"
+ "tyre.rearOne": "Задня",
+ "notif.title": "Сповіщення",
+ "notif.empty": "Немає сповіщень",
+ "notif.markAllRead": "Позначити всі як прочитані",
+ "notif.deleteAll": "Видалити всі",
+ "notif.deleteAllConfirm": "Видалити всі сповіщення?",
+ "notif.selected": "Вибрано: {n}",
+ "notif.selectAll": "Вибрати всі",
+ "notif.markRead": "Позначити як прочитані",
+ "notif.today": "Сьогодні",
+ "notif.yesterday": "Учора",
+ "notif.reminder": "Нагадування",
+ "part.details": "дані",
+ "part.tech": "технічні дані",
+ "part.deadlines": "терміни",
+ "part.maintenance": "обслуговування",
+ "part.documents": "документи"
 }

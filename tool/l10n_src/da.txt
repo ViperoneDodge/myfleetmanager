@@ -566,3 +566,19 @@ Teknisk information til udvikleren
 Diagnostik kopieret
 For
 Bag
+Notifikationer
+Ingen notifikationer
+Markér alle som læst
+Slet alle
+Slet alle notifikationer?
+{n} valgt
+Vælg alle
+Markér som læst
+I dag
+I går
+Påmindelse
+oplysninger
+tekniske data
+frister
+vedligeholdelse
+dokumenter

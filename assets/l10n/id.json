@@ -566,5 +566,21 @@
  "diag.subtitle": "Informasi teknis untuk dikirim ke pengembang",
  "diag.copied": "Diagnostik disalin",
  "tyre.frontOne": "Depan",
- "tyre.rearOne": "Belakang"
+ "tyre.rearOne": "Belakang",
+ "notif.title": "Notifikasi",
+ "notif.empty": "Tidak ada notifikasi",
+ "notif.markAllRead": "Tandai semua sudah dibaca",
+ "notif.deleteAll": "Hapus semua",
+ "notif.deleteAllConfirm": "Hapus semua notifikasi?",
+ "notif.selected": "{n} dipilih",
+ "notif.selectAll": "Pilih semua",
+ "notif.markRead": "Tandai sudah dibaca",
+ "notif.today": "Hari ini",
+ "notif.yesterday": "Kemarin",
+ "notif.reminder": "Pengingat",
+ "part.details": "data",
+ "part.tech": "data teknis",
+ "part.deadlines": "tenggat",
+ "part.maintenance": "perawatan",
+ "part.documents": "dokumen"
 }

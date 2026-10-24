@@ -566,3 +566,19 @@ Informacje techniczne dla twórcy aplikacji
 Diagnostyka skopiowana
 Przednia
 Tylna
+Powiadomienia
+Brak powiadomień
+Oznacz wszystkie jako przeczytane
+Usuń wszystkie
+Usunąć wszystkie powiadomienia?
+Zaznaczono: {n}
+Zaznacz wszystkie
+Oznacz jako przeczytane
+Dzisiaj
+Wczoraj
+Przypomnienie
+dane
+dane techniczne
+terminy
+serwis
+dokumenty

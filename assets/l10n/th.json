@@ -566,5 +566,21 @@
  "diag.subtitle": "ข้อมูลทางเทคนิคสำหรับส่งให้ผู้พัฒนา",
  "diag.copied": "คัดลอกการวินิจฉัยแล้ว",
  "tyre.frontOne": "ล้อหน้า",
- "tyre.rearOne": "ล้อหลัง"
+ "tyre.rearOne": "ล้อหลัง",
+ "notif.title": "การแจ้งเตือน",
+ "notif.empty": "ไม่มีการแจ้งเตือน",
+ "notif.markAllRead": "ทำเครื่องหมายว่าอ่านแล้วทั้งหมด",
+ "notif.deleteAll": "ลบทั้งหมด",
+ "notif.deleteAllConfirm": "ลบการแจ้งเตือนทั้งหมดหรือไม่",
+ "notif.selected": "เลือกแล้ว {n} รายการ",
+ "notif.selectAll": "เลือกทั้งหมด",
+ "notif.markRead": "ทำเครื่องหมายว่าอ่านแล้ว",
+ "notif.today": "วันนี้",
+ "notif.yesterday": "เมื่อวาน",
+ "notif.reminder": "การเตือน",
+ "part.details": "ข้อมูล",
+ "part.tech": "ข้อมูลทางเทคนิค",
+ "part.deadlines": "กำหนดเวลา",
+ "part.maintenance": "การบำรุงรักษา",
+ "part.documents": "เอกสาร"
 }

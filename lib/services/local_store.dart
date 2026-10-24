@@ -95,6 +95,15 @@ class LocalStore {
   Future<void> deleteUserData(Session s) async {
     try {
       await _delete('data_${s.storageKey}.json');
+      await _delete('notif_${s.storageKey}.json');
+    } catch (_) {}
+  }
+
+  Future<Map<String, dynamic>?> readNotifLog(Session s) => _readJson('notif_${s.storageKey}.json');
+
+  Future<void> writeNotifLog(Session s, Map<String, dynamic> j) async {
+    try {
+      await _writeJson('notif_${s.storageKey}.json', j);
     } catch (_) {}
   }
 
