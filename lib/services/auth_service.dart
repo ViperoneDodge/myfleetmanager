@@ -170,6 +170,20 @@ class AuthService {
     }
   }
 
+  Future<void> restored() async {
+    if (!cloudAvailable) return;
+    try {
+      await FirebaseAuth.instance.authStateChanges().first.timeout(const Duration(seconds: 6));
+    } catch (_) {}
+    if (FirebaseAuth.instance.currentUser != null) return;
+    try {
+      await FirebaseAuth.instance
+          .authStateChanges()
+          .firstWhere((u) => u != null)
+          .timeout(const Duration(seconds: 2));
+    } catch (_) {}
+  }
+
   bool cloudSessionValid(Session s) {
     if (!cloudAvailable) return false;
     final u = FirebaseAuth.instance.currentUser;

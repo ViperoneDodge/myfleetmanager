@@ -707,8 +707,9 @@ class AppState extends ChangeNotifier {
       await notifications.init();
     } catch (_) {}
     var s = await store.readSession();
-    if (s != null && s.mode == AccountMode.cloud && !auth.cloudSessionValid(s)) {
-      s = null;
+    if (s != null && s.mode == AccountMode.cloud) {
+      await auth.restored();
+      if (!auth.cloudSessionValid(s)) s = null;
     }
     if (s != null) {
       await _open(s);

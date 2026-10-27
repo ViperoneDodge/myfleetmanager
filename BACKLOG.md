@@ -3,7 +3,9 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.1.9)
-- [ ] (vuota)
+- [x] **Pagina iniziale**: icone di Scadenze, Documenti, Manutenzioni e Gruppi sempre allineate; le scritte stanno su una riga sola e si rimpiccioliscono se non c'è spazio (prima «Manutenzioni» andava a capo e spostava l'icona).
+- [x] **Accesso perso a ogni riapertura** (visto su Samsung Galaxy A54): all'avvio l'app controllava l'account Firebase prima che il telefono avesse finito di recuperarlo. Ora aspetta il recupero (al massimo pochi secondi) prima di decidere.
+- [ ] **Dato modificato evidenziato nella scheda del veicolo** (proposta, da confermare): striscia gialla in alto con chi ha modificato, quando e le parti cambiate, e pulsante «Visto» che segna la notifica come letta; pallino rosso sulle schede (Scadenze, Dati tecnici, Manutenzioni) cambiate; voce cambiata evidenziata in giallo con etichetta «Modificato» o «Nuovo».
 
 ## Versione 2.1.8
 

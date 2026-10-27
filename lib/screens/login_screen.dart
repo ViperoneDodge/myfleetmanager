@@ -185,7 +185,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(height: 8),
                     const Slogan(),
                     const SizedBox(height: 18),
-                    Row(children: [
+                    Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
                       _Feature(Icons.event_note, tr('tab.deadlines')),
                       _Feature(Icons.description_outlined, tr('doc.title')),
                       _Feature(Icons.build_circle_outlined, tr('maint.title')),
@@ -371,10 +371,16 @@ class _Feature extends StatelessWidget {
             child: Icon(icon, color: Colors.white, size: 24),
           ),
           const SizedBox(height: 6),
-          Text(label,
-              textAlign: TextAlign.center,
-              maxLines: 2,
-              style: const TextStyle(color: Colors.white70, fontSize: 12.5)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 2),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(label,
+                  textAlign: TextAlign.center,
+                  maxLines: 1,
+                  style: const TextStyle(color: Colors.white70, fontSize: 12.5)),
+            ),
+          ),
         ]),
       );
 }
