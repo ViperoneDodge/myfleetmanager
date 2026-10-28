@@ -11,6 +11,7 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import '../firebase_config.dart';
 import '../l10n.dart';
 import '../models.dart';
+import 'group_watch.dart' show restoredUser;
 import 'local_store.dart';
 import '../platform.dart';
 
@@ -172,16 +173,7 @@ class AuthService {
 
   Future<void> restored() async {
     if (!cloudAvailable) return;
-    try {
-      await FirebaseAuth.instance.authStateChanges().first.timeout(const Duration(seconds: 6));
-    } catch (_) {}
-    if (FirebaseAuth.instance.currentUser != null) return;
-    try {
-      await FirebaseAuth.instance
-          .authStateChanges()
-          .firstWhere((u) => u != null)
-          .timeout(const Duration(seconds: 2));
-    } catch (_) {}
+    await restoredUser();
   }
 
   bool cloudSessionValid(Session s) {

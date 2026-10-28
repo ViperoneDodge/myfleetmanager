@@ -195,6 +195,20 @@ Future<void> showDevUnlocks(NotificationService n, List<Map<String, dynamic>> li
   }
 }
 
+Future<User?> restoredUser() async {
+  final auth = FirebaseAuth.instance;
+  if (auth.currentUser != null) return auth.currentUser;
+  try {
+    await auth.authStateChanges().first.timeout(const Duration(seconds: 6));
+  } catch (_) {}
+  if (auth.currentUser != null) return auth.currentUser;
+  try {
+    return await auth.authStateChanges().firstWhere((u) => u != null).timeout(const Duration(seconds: 4));
+  } catch (_) {
+    return auth.currentUser;
+  }
+}
+
 const String groupWatchTask = 'myfleet-group-watch';
 
 Future<void> scheduleGroupWatch(bool on) async {
@@ -258,7 +272,7 @@ Future<void> _backgroundCheck() async {
     }
   }
   await startAppCheck();
-  final user = FirebaseAuth.instance.currentUser;
+  final user = await restoredUser();
   if (user == null || user.uid != w.uid) return;
 
   final session = await store.readSession();
