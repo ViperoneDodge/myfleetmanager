@@ -2,7 +2,10 @@
 
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
-## Prossima versione (2.1.11)
+## Prossima versione (2.1.12)
+- [ ] (vuota)
+
+## Versione 2.1.11
 - [x] **Campanella → dato modificato**: toccando una modifica nella pagina Notifiche si apre il veicolo sulla scheda cambiata e si scorre fino alla voce evidenziata. La notifica resta non letta finché non si preme «Visto» (prima veniva segnata come letta subito e l'evidenziazione spariva).
 - [x] **Accesso perso sul Samsung Galaxy A54 (secondo intervento)**: se all'avvio Firebase non ritrova l'accesso salvato, l'app lo ripristina da sola con l'account Google del telefono, senza chiedere nulla (solo per chi è entrato con Google, mai per email e password). Lo stesso vale per il controllo delle notifiche ad app chiusa.
 - [x] **Registro degli accessi** nella «Diagnostica sincronizzazione»: ultimi 12 eventi (accesso, uscita, avvio con o senza accesso Firebase, ripristino con Google e motivo dell'eventuale errore), per capire la causa vera sull'A54.
