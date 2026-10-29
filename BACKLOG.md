@@ -2,7 +2,10 @@
 
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
-## Prossima versione (2.1.10)
+## Prossima versione (2.1.11)
+- [ ] (vuota)
+
+## Versione 2.1.10
 - [x] **Dato modificato evidenziato nella scheda del veicolo** (approvato il 27/10, grafica come nell'anteprima): striscia gialla in alto con chi ha modificato, quando e le parti cambiate, e pulsante «Visto» che segna la notifica come letta; pallino rosso sulle schede (Scadenze, Dati tecnici, Manutenzioni) cambiate; voce cambiata evidenziata in giallo con etichetta «Modificato» o «Nuovo». Serve salvare nello storico anche quale scadenza, manutenzione o documento è cambiato: vale per le modifiche fatte dopo l'aggiornamento.
 
 ## Versione 2.1.9
