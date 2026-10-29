@@ -779,18 +779,24 @@ class Session {
   final String displayName;
   final String? email;
 
+  final bool google;
+
   Session({
     required this.mode,
     required this.key,
     required this.displayName,
     this.email,
+    this.google = false,
   });
+
+  Session withGoogle() => Session(mode: mode, key: key, displayName: displayName, email: email, google: true);
 
   Map<String, dynamic> toJson() => {
         'mode': mode.name,
         'key': key,
         'displayName': displayName,
         'email': email,
+        if (google) 'google': true,
       };
 
   static Session? fromJson(Map<String, dynamic>? j) {
@@ -800,6 +806,7 @@ class Session {
       key: j['key'] as String,
       displayName: j['displayName'] as String? ?? '',
       email: j['email'] as String?,
+      google: j['google'] == true,
     );
   }
 

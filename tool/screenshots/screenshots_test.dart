@@ -210,6 +210,11 @@ void main() {
             'tech:oil': 'edited',
           }),
         ]);
+        await shot(tester, const NotificationsScreen(), '12d_from_bell', then: () async {
+          await tester.tap(find.textContaining('Marco').first);
+          await tester.pumpAndSettle();
+          await tester.pump(const Duration(milliseconds: 600));
+        });
         detailTab.value = 0;
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '12_changes', then: () async {
           await tester.drag(find.byType(Scrollable).first, const Offset(0, -560));

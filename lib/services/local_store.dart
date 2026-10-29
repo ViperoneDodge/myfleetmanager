@@ -99,6 +99,19 @@ class LocalStore {
     } catch (_) {}
   }
 
+  Future<List<String>> readAuthLog() async =>
+      (((await _readJson('auth_log.json'))?['events'] as List?) ?? []).map((e) => e.toString()).toList();
+
+  Future<void> addAuthLog(String event) async {
+    try {
+      final now = DateTime.now();
+      String two(int n) => n.toString().padLeft(2, '0');
+      final stamp = '${two(now.day)}/${two(now.month)} ${two(now.hour)}:${two(now.minute)}';
+      final list = [...await readAuthLog(), '$stamp $event'];
+      await _writeJson('auth_log.json', {'events': list.length > 12 ? list.sublist(list.length - 12) : list});
+    } catch (_) {}
+  }
+
   Future<Map<String, dynamic>?> readNotifLog(Session s) => _readJson('notif_${s.storageKey}.json');
 
   Future<void> writeNotifLog(Session s, Map<String, dynamic> j) async {

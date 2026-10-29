@@ -11,7 +11,6 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import '../firebase_config.dart';
 import '../l10n.dart';
 import '../models.dart';
-import 'group_watch.dart' show restoredUser;
 import 'local_store.dart';
 import '../platform.dart';
 
@@ -20,6 +19,62 @@ class AuthException implements Exception {
   AuthException(this.message);
   @override
   String toString() => message;
+}
+
+Future<User?> restoredUser() async {
+  final auth = FirebaseAuth.instance;
+  if (auth.currentUser != null) return auth.currentUser;
+  try {
+    await auth.authStateChanges().first.timeout(const Duration(seconds: 6));
+  } catch (_) {}
+  if (auth.currentUser != null) return auth.currentUser;
+  try {
+    return await auth.authStateChanges().firstWhere((u) => u != null).timeout(const Duration(seconds: 4));
+  } catch (_) {
+    return auth.currentUser;
+  }
+}
+
+GoogleSignIn _googleClient() => GoogleSignIn(
+      scopes: const ['email'],
+      serverClientId: FirebaseConfig.googleWebClientId.isEmpty ? null : FirebaseConfig.googleWebClientId,
+    );
+
+String lastSilent = '';
+
+bool isGoogleUser(User u) => u.providerData.any((p) => p.providerId == 'google.com');
+
+Future<bool> silentGoogle(Session s) async {
+  if (kIsWeb) return false;
+  if (!s.google) {
+    lastSilent = 'account non Google';
+    return false;
+  }
+  try {
+    final acc = await _googleClient().signInSilently().timeout(const Duration(seconds: 12));
+    if (acc == null) {
+      lastSilent = 'nessun account Google collegato';
+      return false;
+    }
+    final want = s.email?.toLowerCase() ?? '';
+    if (want.isNotEmpty && acc.email.toLowerCase() != want) {
+      lastSilent = 'account Google diverso';
+      return false;
+    }
+    final a = await acc.authentication;
+    final c = await FirebaseAuth.instance.signInWithCredential(
+        GoogleAuthProvider.credential(idToken: a.idToken, accessToken: a.accessToken));
+    if (c.user?.uid == s.key) {
+      lastSilent = 'ok';
+      return true;
+    }
+    lastSilent = 'utente Firebase diverso';
+    await FirebaseAuth.instance.signOut();
+    return false;
+  } catch (e) {
+    lastSilent = 'errore: $e';
+    return false;
+  }
 }
 
 class AuthService {
@@ -71,7 +126,13 @@ class AuthService {
         key: user.uid,
         displayName: user.email ?? tr('auth.user'),
         email: user.email,
+        google: isGoogleUser(user),
       );
+
+  bool get currentIsGoogle {
+    final u = cloudAvailable ? FirebaseAuth.instance.currentUser : null;
+    return u != null && isGoogleUser(u);
+  }
 
   String _firebaseError(FirebaseAuthException e) {
     switch (e.code) {
@@ -129,12 +190,7 @@ class AuthService {
     }
   }
 
-  GoogleSignIn _google() => GoogleSignIn(
-        scopes: const ['email'],
-        serverClientId: FirebaseConfig.googleWebClientId.isEmpty
-            ? null
-            : FirebaseConfig.googleWebClientId,
-      );
+  GoogleSignIn _google() => _googleClient();
 
   Future<Session> loginGoogle() async {
     if (kIsWeb) {

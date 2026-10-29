@@ -501,6 +501,8 @@ class SettingsScreen extends StatelessWidget {
   }
 
   Future<void> _diagnostics(BuildContext context) async {
+    await appState.loadAuthLog();
+    if (!context.mounted) return;
     final text = appState.syncDiagnostics();
     await showDialog<void>(
       context: context,

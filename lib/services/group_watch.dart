@@ -14,6 +14,7 @@ import '../firebase_config.dart';
 import '../l10n.dart';
 import '../models.dart';
 import 'app_check.dart';
+import 'auth_service.dart';
 import 'local_store.dart';
 import 'notification_log.dart';
 import 'notification_service.dart';
@@ -196,20 +197,6 @@ Future<void> showDevUnlocks(NotificationService n, List<Map<String, dynamic>> li
   }
 }
 
-Future<User?> restoredUser() async {
-  final auth = FirebaseAuth.instance;
-  if (auth.currentUser != null) return auth.currentUser;
-  try {
-    await auth.authStateChanges().first.timeout(const Duration(seconds: 6));
-  } catch (_) {}
-  if (auth.currentUser != null) return auth.currentUser;
-  try {
-    return await auth.authStateChanges().firstWhere((u) => u != null).timeout(const Duration(seconds: 4));
-  } catch (_) {
-    return auth.currentUser;
-  }
-}
-
 const String groupWatchTask = 'myfleet-group-watch';
 
 Future<void> scheduleGroupWatch(bool on) async {
@@ -273,7 +260,13 @@ Future<void> _backgroundCheck() async {
     }
   }
   await startAppCheck();
-  final user = await restoredUser();
+  final session0 = await store.readSession();
+  var user = await restoredUser();
+  if (user == null && session0 != null && session0.key == w.uid) {
+    final ok = await silentGoogle(session0);
+    await store.addAuthLog(ok ? 'background: accesso Google ripristinato' : 'background: accesso assente ($lastSilent)');
+    user = FirebaseAuth.instance.currentUser;
+  }
   if (user == null || user.uid != w.uid) return;
 
   final session = await store.readSession();

@@ -26,6 +26,8 @@ import 'vehicle_edit_screen.dart';
 
 final ValueNotifier<int> detailTab = ValueNotifier(0);
 
+final ValueNotifier<String?> focusChange = ValueNotifier(null);
+
 class VehicleDetailTabs extends StatefulWidget implements PreferredSizeWidget {
   final String? vehicleId;
   const VehicleDetailTabs({super.key, this.vehicleId});
@@ -397,6 +399,23 @@ class VehicleDetailScreen extends StatelessWidget {
         final canAssign = group != null && appState.canManage(group);
         final ch = appState.log.changesFor(v.id);
         String? st(String key) => ch?.state(key);
+        final focus = ch != null && focusChange.value == v.id ? GlobalKey() : null;
+        var focusUsed = false;
+        Key? fk(String? state) {
+          if (state == null || focus == null || focusUsed) return null;
+          focusUsed = true;
+          return focus;
+        }
+
+        if (focus != null) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            focusChange.value = null;
+            final c = focus.currentContext;
+            if (c != null && c.mounted) {
+              Scrollable.ensureVisible(c, alignment: 0.3, duration: const Duration(milliseconds: 450));
+            }
+          });
+        }
         final Widget page = ValueListenableBuilder<int>(
           valueListenable: detailTab,
           builder: (context, tab, _) => KeyedSubtree(
@@ -464,6 +483,7 @@ class VehicleDetailScreen extends StatelessWidget {
                 ),
                 const BlankLine(),
                 OnRule(
+                  key: fk(st('details:name')),
                   child: Marker(
                     on: st('details:name') != null,
                     child: _titleText(context, v.name.isEmpty ? tr('vehicle.noName') : v.name,
@@ -498,14 +518,15 @@ class VehicleDetailScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                _techRow(context, tr('tech.vin'), v.vin, changed: st('tech:vin')),
+                _techRow(context, tr('tech.vin'), v.vin, changed: st('tech:vin'), key: fk(st('tech:vin'))),
                 if (appState.isCloud && appState.data.groups.isNotEmpty)
                   _line(context, appState.isPersonal(v) ? Icons.person_outline : Icons.groups_outlined,
                       appState.fleetLabel(v)),
                 const BlankLine(),
                 _title(context, tr('tab.deadlines')),
                 if (tracked.isEmpty) _text(context, tr('vehicle.noTracked')),
-                for (final d in tracked) ..._deadlineRows(context, d, st('deadline:${d.id}')),
+                for (final d in tracked)
+                  ..._deadlineRows(context, d, st('deadline:${d.id}'), key: fk(st('deadline:${d.id}'))),
                 const BlankLine(),
                 OnRule(
                   child: Row(children: [
@@ -528,6 +549,7 @@ class VehicleDetailScreen extends StatelessWidget {
                   _text(context, tr('doc.empty'), color: scheme.onSurfaceVariant),
                 for (final d in v.documents)
                   OnRule(
+                    key: fk(st('doc:${d.id}')),
                     center: true,
                     child: Card(
                       margin: const EdgeInsets.symmetric(vertical: 2),
@@ -558,6 +580,7 @@ class VehicleDetailScreen extends StatelessWidget {
                   const BlankLine(),
                   _title(context, tr('vehicle.notes')),
                   OnRule(
+                    key: fk(st('details:notes')),
                     child: Marker(
                       on: st('details:notes') != null,
                       child: RuledText(v.notes, style: const TextStyle(fontSize: 20, fontFamily: handFont)),
@@ -580,16 +603,16 @@ class VehicleDetailScreen extends StatelessWidget {
                   ..._proLocked(context, tab == 1 ? tr('pro.reasonTech') : tr('pro.reasonMaint'))
                 else if (tab == 1) ...[
                 _title(context, tr('tech.title')),
-                _techRow(context, tr('edit.type'), vehicleTypeLabel(v.type), changed: st('details:type')),
-                _techRow(context, tr('vehicle.regDate'), v.registrationDate == null ? '' : fmtDate(v.registrationDate), changed: st('details:registrationDate')),
-                _techRow(context, tr('tech.fuel'), v.fuel.isEmpty ? '' : fuelLabel(v.fuel), changed: st('tech:fuel')),
-                _techRow(context, tr('tech.powerName'), v.powerKw.isEmpty ? '' : fmtPower(v.powerKw), changed: st('tech:powerKw')),
-                _techRow(context, tr('tech.engine'), v.engineCc, changed: st('tech:engineCc')),
-                ..._tyreRows(context, v.tyres, st('tech:tyres')),
-                _techRow(context, tr('tech.oil'), v.oil, changed: st('tech:oil')),
-                _techRow(context, tr('tech.battery'), v.battery, changed: st('tech:battery')),
-                _techRow(context, tr(v.fuel == 'diesel' ? 'tech.glowPlugs' : 'tech.plugs'), v.plugs, changed: st('tech:plugs')),
-                _techRow(context, tr('tech.filters'), v.filters, changed: st('tech:filters')),
+                _techRow(context, tr('edit.type'), vehicleTypeLabel(v.type), changed: st('details:type'), key: fk(st('details:type'))),
+                _techRow(context, tr('vehicle.regDate'), v.registrationDate == null ? '' : fmtDate(v.registrationDate), changed: st('details:registrationDate'), key: fk(st('details:registrationDate'))),
+                _techRow(context, tr('tech.fuel'), v.fuel.isEmpty ? '' : fuelLabel(v.fuel), changed: st('tech:fuel'), key: fk(st('tech:fuel'))),
+                _techRow(context, tr('tech.powerName'), v.powerKw.isEmpty ? '' : fmtPower(v.powerKw), changed: st('tech:powerKw'), key: fk(st('tech:powerKw'))),
+                _techRow(context, tr('tech.engine'), v.engineCc, changed: st('tech:engineCc'), key: fk(st('tech:engineCc'))),
+                ..._tyreRows(context, v.tyres, st('tech:tyres'), fk(st('tech:tyres'))),
+                _techRow(context, tr('tech.oil'), v.oil, changed: st('tech:oil'), key: fk(st('tech:oil'))),
+                _techRow(context, tr('tech.battery'), v.battery, changed: st('tech:battery'), key: fk(st('tech:battery'))),
+                _techRow(context, tr(v.fuel == 'diesel' ? 'tech.glowPlugs' : 'tech.plugs'), v.plugs, changed: st('tech:plugs'), key: fk(st('tech:plugs'))),
+                _techRow(context, tr('tech.filters'), v.filters, changed: st('tech:filters'), key: fk(st('tech:filters'))),
                 ] else ...[
                 OnRule(
                   child: Row(children: [
@@ -614,6 +637,7 @@ class VehicleDetailScreen extends StatelessWidget {
                   _text(context, spent, color: scheme.onSurfaceVariant),
                 for (final m in v.maintenanceSorted)
                   OnRule(
+                    key: fk(st('maint:${m.id}')),
                     center: true,
                     child: Card(
                       margin: const EdgeInsets.symmetric(vertical: 2),
@@ -803,8 +827,9 @@ class VehicleDetailScreen extends StatelessWidget {
       ];
 
   Widget _techRow(BuildContext context, String label, String value,
-          {double indent = 0, bool dash = true, String? changed}) =>
+          {double indent = 0, bool dash = true, String? changed, Key? key}) =>
       OnRule(
+        key: key,
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
           SizedBox(width: indent),
           SizedBox(
@@ -821,15 +846,16 @@ class VehicleDetailScreen extends StatelessWidget {
         ]),
       );
 
-  List<Widget> _tyreRows(BuildContext context, String tyres, String? changed) {
+  List<Widget> _tyreRows(BuildContext context, String tyres, String? changed, Key? key) {
     final sets = TyreSet.parse(tyres);
     if (sets.length <= 1 && (sets.isEmpty || sets.first.label.isEmpty)) {
       return [
-        _techRow(context, tr('tech.tyres'), sets.isEmpty ? '' : sets.first.sizeList.join('\n'), changed: changed)
+        _techRow(context, tr('tech.tyres'), sets.isEmpty ? '' : sets.first.sizeList.join('\n'),
+            changed: changed, key: key)
       ];
     }
     return [
-      _techRow(context, tr('tech.tyres'), '', dash: false),
+      _techRow(context, tr('tech.tyres'), '', dash: false, key: key),
       for (final s in sets)
         _techRow(context, s.label.isEmpty ? '·' : s.label, s.sizeList.join('\n'), indent: 14, changed: changed),
     ];
@@ -946,7 +972,7 @@ class VehicleDetailScreen extends StatelessWidget {
     return '${(bytes / (1024 * 1024)).toStringAsFixed(1)} MB';
   }
 
-  List<Widget> _deadlineRows(BuildContext context, Deadline d, String? changed) {
+  List<Widget> _deadlineRows(BuildContext context, Deadline d, String? changed, {Key? key}) {
     IconData icon;
     switch (d.kind) {
       case DeadlineKind.insurance:
@@ -977,6 +1003,7 @@ class VehicleDetailScreen extends StatelessWidget {
     final indent = const EdgeInsets.only(left: 34);
     return [
       OnRule(
+        key: key,
         child: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
           Padding(padding: const EdgeInsets.only(bottom: 2), child: Icon(icon, size: 19)),
           const SizedBox(width: 12),

@@ -630,6 +630,13 @@ class AppState extends ChangeNotifier {
 
   Map<String, Object> get syncProblems => sync.problems;
 
+  List<String> authLog = [];
+
+  Future<void> loadAuthLog() async {
+    authLog = await store.readAuthLog();
+    notifyListeners();
+  }
+
   String syncDiagnostics() {
     String short(String? v) => v == null || v.isEmpty ? '-' : (v.length > 8 ? '${v.substring(0, 8)}…' : v);
     final s = session;
@@ -650,6 +657,8 @@ class AppState extends ChangeNotifier {
       'Lettura gruppi: ${sync.diag['fetch'] ?? '-'}',
       'Veicoli: ${byFleet.entries.map((e) => '${e.key}=${e.value}').join(', ')}',
       'Problemi: ${sync.problems.isEmpty ? 'nessuno' : sync.problems.entries.map((e) => '${e.key}: ${e.value}').join(' | ')}',
+      'Accessi:',
+      ...authLog.map((e) => '  $e'),
     ].join('\n');
   }
 
@@ -707,9 +716,24 @@ class AppState extends ChangeNotifier {
       await notifications.init();
     } catch (_) {}
     var s = await store.readSession();
-    if (s != null && s.mode == AccountMode.cloud) {
+    if (s != null && s.mode == AccountMode.cloud && auth.cloudAvailable) {
+      final started = DateTime.now();
       await auth.restored();
-      if (!auth.cloudSessionValid(s)) s = null;
+      final ms = DateTime.now().difference(started).inMilliseconds;
+      if (auth.cloudSessionValid(s)) {
+        await store.addAuthLog('avvio: accesso Firebase presente ($ms ms)');
+        if (!s.google && auth.currentIsGoogle) {
+          s = s.withGoogle();
+          await store.writeSession(s);
+        }
+      } else if (await silentGoogle(s)) {
+        await store.addAuthLog('avvio: accesso Firebase assente dopo $ms ms, ripristinato con Google');
+      } else {
+        await store.addAuthLog('avvio: accesso Firebase assente dopo $ms ms ($lastSilent)');
+        s = null;
+      }
+    } else if (s != null && s.mode == AccountMode.cloud) {
+      s = null;
     }
     if (s != null) {
       await _open(s);
@@ -729,6 +753,7 @@ class AppState extends ChangeNotifier {
 
   Future<void> login(Session s) async {
     await _logoutRun;
+    store.addAuthLog('accesso eseguito');
     await store.writeSession(s);
     await _open(s);
     notifications.requestPermission();
@@ -917,6 +942,7 @@ class AppState extends ChangeNotifier {
 
   Future<void> _logout() async {
     final s = session;
+    store.addAuthLog('uscita richiesta');
     sync.stop();
     _proSub?.cancel();
     _proSub = null;

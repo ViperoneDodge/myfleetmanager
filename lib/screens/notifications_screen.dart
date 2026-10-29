@@ -29,9 +29,15 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       });
 
   void _open(LogEntry e) {
-    if (!e.read) appState.markNotificationsRead({e.id});
     final v = e.vehicleId.isEmpty ? null : appState.vehicleById(e.vehicleId);
+    final ch = v == null || v.deleted || e.read || !e.isChange ? null : appState.log.changesFor(v.id);
+    if (ch == null && !e.read) appState.markNotificationsRead({e.id});
     if (v == null || v.deleted) return;
+    final tabs = ch?.tabs ?? const <int>{};
+    final pro = appState.isPro;
+    final allowed = tabs.where((t) => t == 0 || pro).toList()..sort();
+    detailTab.value = allowed.isEmpty ? 0 : allowed.first;
+    focusChange.value = ch == null ? null : v.id;
     Navigator.of(context).push(MaterialPageRoute(builder: (_) => VehicleDetailScreen(vehicleId: v.id)));
   }
 
