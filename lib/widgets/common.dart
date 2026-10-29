@@ -405,3 +405,51 @@ class FavoriteStar extends StatelessWidget {
         selectedIcon: const Icon(Icons.star, color: Color(0xFFF2B01E)),
       );
 }
+
+class Marker extends StatelessWidget {
+  final bool on;
+  final Widget child;
+  const Marker({super.key, required this.on, required this.child});
+
+  static Color color(BuildContext context) => Theme.of(context).brightness == Brightness.dark
+      ? const Color(0x66FFC107)
+      : const Color(0xB3FFE066);
+
+  @override
+  Widget build(BuildContext context) => on
+      ? DecoratedBox(
+          decoration: BoxDecoration(color: color(context), borderRadius: BorderRadius.circular(4)),
+          child: child,
+        )
+      : child;
+}
+
+class ChangeChip extends StatelessWidget {
+  final String state;
+  const ChangeChip(this.state, {super.key});
+
+  @override
+  Widget build(BuildContext context) => Container(
+        margin: const EdgeInsets.only(left: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+        decoration: BoxDecoration(color: const Color(0xFFE6A800), borderRadius: BorderRadius.circular(12)),
+        child: Text(tr(state == 'new' ? 'notif.new' : 'notif.changed'),
+            style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w700, height: 1.2)),
+      );
+}
+
+class ChangeDot extends StatelessWidget {
+  final double size;
+  const ChangeDot({super.key, this.size = 10});
+
+  @override
+  Widget build(BuildContext context) => Container(
+        width: size,
+        height: size,
+        decoration: BoxDecoration(
+          color: const Color(0xFFD32F2F),
+          shape: BoxShape.circle,
+          border: Border.all(color: Colors.white, width: size / 6),
+        ),
+      );
+}

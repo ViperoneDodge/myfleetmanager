@@ -582,3 +582,6 @@ technische gegevens
 vervaldata
 onderhoud
 documenten
+Gezien
+Gewijzigd
+Nieuw

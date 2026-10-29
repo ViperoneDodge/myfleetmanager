@@ -582,3 +582,6 @@ tekniske data
 frister
 vedligeholdelse
 dokumenter
+Set
+Ændret
+Ny

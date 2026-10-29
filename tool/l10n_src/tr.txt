@@ -582,3 +582,6 @@ teknik veriler
 son tarihler
 bakım
 belgeler
+Görüldü
+Değişti
+Yeni

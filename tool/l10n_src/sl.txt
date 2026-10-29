@@ -582,3 +582,6 @@ tehnični podatki
 roki
 vzdrževanje
 dokumenti
+Videno
+Spremenjeno
+Novo

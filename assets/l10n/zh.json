@@ -582,5 +582,8 @@
  "part.tech": "技术数据",
  "part.deadlines": "到期",
  "part.maintenance": "保养",
- "part.documents": "文件"
+ "part.documents": "文件",
+ "notif.seen": "已查看",
+ "notif.changed": "已修改",
+ "notif.new": "新增"
 }

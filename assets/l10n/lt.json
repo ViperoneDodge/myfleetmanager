@@ -582,5 +582,8 @@
  "part.tech": "techniniai duomenys",
  "part.deadlines": "terminai",
  "part.maintenance": "priežiūra",
- "part.documents": "dokumentai"
+ "part.documents": "dokumentai",
+ "notif.seen": "Matyta",
+ "notif.changed": "Pakeista",
+ "notif.new": "Nauja"
 }

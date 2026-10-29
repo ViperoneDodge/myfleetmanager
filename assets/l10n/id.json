@@ -582,5 +582,8 @@
  "part.tech": "data teknis",
  "part.deadlines": "tenggat",
  "part.maintenance": "perawatan",
- "part.documents": "dokumen"
+ "part.documents": "dokumen",
+ "notif.seen": "Dilihat",
+ "notif.changed": "Diubah",
+ "notif.new": "Baru"
 }

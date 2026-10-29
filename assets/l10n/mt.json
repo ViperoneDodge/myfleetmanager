@@ -582,5 +582,8 @@
  "part.tech": "dejta teknika",
  "part.deadlines": "skadenzi",
  "part.maintenance": "manutenzjoni",
- "part.documents": "dokumenti"
+ "part.documents": "dokumenti",
+ "notif.seen": "Rajt",
+ "notif.changed": "Mibdul",
+ "notif.new": "Ġdid"
 }

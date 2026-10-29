@@ -582,3 +582,6 @@ tehnilised andmed
 tähtajad
 hooldus
 dokumendid
+Nähtud
+Muudetud
+Uus

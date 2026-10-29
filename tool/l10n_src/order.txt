@@ -582,3 +582,6 @@ part.tech
 part.deadlines
 part.maintenance
 part.documents
+notif.seen
+notif.changed
+notif.new

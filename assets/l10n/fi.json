@@ -582,5 +582,8 @@
  "part.tech": "tekniset tiedot",
  "part.deadlines": "määräajat",
  "part.maintenance": "huolto",
- "part.documents": "asiakirjat"
+ "part.documents": "asiakirjat",
+ "notif.seen": "Nähty",
+ "notif.changed": "Muutettu",
+ "notif.new": "Uusi"
 }

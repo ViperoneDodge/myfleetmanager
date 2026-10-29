@@ -202,6 +202,23 @@ void main() {
           await tester.pumpAndSettle();
           await tester.tap(find.textContaining('Vespa GTS').first);
         });
+        final gv = appState.vehicleById('g1')!;
+        appState.log = NotificationLog(entries: [
+          LogEntry(ts: at(0, 8, 42), kind: LogKind.edited, groupId: 'FAM7Q2K9XW', group: it ? 'Famiglia' : 'Family', vehicleId: 'g1', vehicle: 'Giulia', who: 'Marco', parts: ['tech', 'deadlines', 'maintenance'], items: {
+            'deadline:${gv.deadlines.first.id}': 'edited',
+            'maint:${gv.maintenanceSorted.first.id}': 'new',
+            'tech:oil': 'edited',
+          }),
+        ]);
+        detailTab.value = 0;
+        await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '12_changes', then: () async {
+          await tester.drag(find.byType(Scrollable).first, const Offset(0, -560));
+        });
+        detailTab.value = 1;
+        await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '12b_changes_tech');
+        detailTab.value = 2;
+        await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '12c_changes_maint');
+        detailTab.value = 0;
         appState.log = NotificationLog();
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '02_vehicle');
         detailTab.value = 1;

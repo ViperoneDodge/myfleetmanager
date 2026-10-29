@@ -582,3 +582,6 @@ techniniai duomenys
 terminai
 priežiūra
 dokumentai
+Matyta
+Pakeista
+Nauja

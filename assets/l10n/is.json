@@ -582,5 +582,8 @@
  "part.tech": "tæknilegar upplýsingar",
  "part.deadlines": "frestir",
  "part.maintenance": "viðhald",
- "part.documents": "skjöl"
+ "part.documents": "skjöl",
+ "notif.seen": "Séð",
+ "notif.changed": "Breytt",
+ "notif.new": "Nýtt"
 }

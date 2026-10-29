@@ -582,5 +582,8 @@
  "part.tech": "thông số kỹ thuật",
  "part.deadlines": "hạn",
  "part.maintenance": "bảo dưỡng",
- "part.documents": "tài liệu"
+ "part.documents": "tài liệu",
+ "notif.seen": "Đã xem",
+ "notif.changed": "Đã sửa",
+ "notif.new": "Mới"
 }

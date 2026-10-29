@@ -582,5 +582,8 @@
  "part.tech": "tehniskie dati",
  "part.deadlines": "termiņi",
  "part.maintenance": "apkope",
- "part.documents": "dokumenti"
+ "part.documents": "dokumenti",
+ "notif.seen": "Redzēts",
+ "notif.changed": "Mainīts",
+ "notif.new": "Jauns"
 }

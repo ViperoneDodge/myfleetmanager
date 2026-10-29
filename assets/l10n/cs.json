@@ -582,5 +582,8 @@
  "part.tech": "technické údaje",
  "part.deadlines": "termíny",
  "part.maintenance": "údržba",
- "part.documents": "dokumenty"
+ "part.documents": "dokumenty",
+ "notif.seen": "Viděno",
+ "notif.changed": "Změněno",
+ "notif.new": "Nové"
 }

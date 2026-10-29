@@ -582,5 +582,8 @@
  "part.tech": "tehnilised andmed",
  "part.deadlines": "tähtajad",
  "part.maintenance": "hooldus",
- "part.documents": "dokumendid"
+ "part.documents": "dokumendid",
+ "notif.seen": "Nähtud",
+ "notif.changed": "Muudetud",
+ "notif.new": "Uus"
 }

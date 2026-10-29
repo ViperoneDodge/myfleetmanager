@@ -582,5 +582,8 @@
  "part.tech": "dati tecnici",
  "part.deadlines": "scadenze",
  "part.maintenance": "manutenzione",
- "part.documents": "documenti"
+ "part.documents": "documenti",
+ "notif.seen": "Visto",
+ "notif.changed": "Modificato",
+ "notif.new": "Nuovo"
 }

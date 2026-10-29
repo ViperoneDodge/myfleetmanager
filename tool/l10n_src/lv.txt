@@ -582,3 +582,6 @@ tehniskie dati
 termiņi
 apkope
 dokumenti
+Redzēts
+Mainīts
+Jauns

@@ -582,5 +582,8 @@
  "part.tech": "tehnični podatki",
  "part.deadlines": "roki",
  "part.maintenance": "vzdrževanje",
- "part.documents": "dokumenti"
+ "part.documents": "dokumenti",
+ "notif.seen": "Videno",
+ "notif.changed": "Spremenjeno",
+ "notif.new": "Novo"
 }

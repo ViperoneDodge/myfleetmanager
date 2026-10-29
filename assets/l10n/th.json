@@ -582,5 +582,8 @@
  "part.tech": "ข้อมูลทางเทคนิค",
  "part.deadlines": "กำหนดเวลา",
  "part.maintenance": "การบำรุงรักษา",
- "part.documents": "เอกสาร"
+ "part.documents": "เอกสาร",
+ "notif.seen": "ดูแล้ว",
+ "notif.changed": "แก้ไขแล้ว",
+ "notif.new": "ใหม่"
 }

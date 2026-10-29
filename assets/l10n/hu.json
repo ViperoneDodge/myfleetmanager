@@ -582,5 +582,8 @@
  "part.tech": "műszaki adatok",
  "part.deadlines": "határidők",
  "part.maintenance": "karbantartás",
- "part.documents": "dokumentumok"
+ "part.documents": "dokumentumok",
+ "notif.seen": "Láttam",
+ "notif.changed": "Módosítva",
+ "notif.new": "Új"
 }

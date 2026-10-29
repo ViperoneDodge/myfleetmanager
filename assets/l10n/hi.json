@@ -582,5 +582,8 @@
  "part.tech": "तकनीकी डेटा",
  "part.deadlines": "समय-सीमाएँ",
  "part.maintenance": "रखरखाव",
- "part.documents": "दस्तावेज़"
+ "part.documents": "दस्तावेज़",
+ "notif.seen": "देख लिया",
+ "notif.changed": "बदला गया",
+ "notif.new": "नया"
 }

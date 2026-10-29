@@ -582,5 +582,8 @@
  "part.tech": "sonraí teicniúla",
  "part.deadlines": "spriocdhátaí",
  "part.maintenance": "cothabháil",
- "part.documents": "doiciméid"
+ "part.documents": "doiciméid",
+ "notif.seen": "Feicthe",
+ "notif.changed": "Athraithe",
+ "notif.new": "Nua"
 }

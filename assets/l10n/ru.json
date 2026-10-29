@@ -582,5 +582,8 @@
  "part.tech": "технические данные",
  "part.deadlines": "сроки",
  "part.maintenance": "обслуживание",
- "part.documents": "документы"
+ "part.documents": "документы",
+ "notif.seen": "Просмотрено",
+ "notif.changed": "Изменено",
+ "notif.new": "Новое"
 }

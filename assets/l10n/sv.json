@@ -582,5 +582,8 @@
  "part.tech": "tekniska data",
  "part.deadlines": "förfallodatum",
  "part.maintenance": "underhåll",
- "part.documents": "dokument"
+ "part.documents": "dokument",
+ "notif.seen": "Sett",
+ "notif.changed": "Ändrad",
+ "notif.new": "Ny"
 }

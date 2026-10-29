@@ -582,3 +582,6 @@ tæknilegar upplýsingar
 frestir
 viðhald
 skjöl
+Séð
+Breytt
+Nýtt

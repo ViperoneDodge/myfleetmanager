@@ -582,3 +582,6 @@ data teknis
 tenggat
 perawatan
 dokumen
+Dilihat
+Diubah
+Baru

@@ -582,5 +582,8 @@
  "part.tech": "기술 데이터",
  "part.deadlines": "기한",
  "part.maintenance": "정비",
- "part.documents": "문서"
+ "part.documents": "문서",
+ "notif.seen": "확인",
+ "notif.changed": "변경됨",
+ "notif.new": "새 항목"
 }

@@ -582,5 +582,8 @@
  "part.tech": "teknik veriler",
  "part.deadlines": "son tarihler",
  "part.maintenance": "bakım",
- "part.documents": "belgeler"
+ "part.documents": "belgeler",
+ "notif.seen": "Görüldü",
+ "notif.changed": "Değişti",
+ "notif.new": "Yeni"
 }

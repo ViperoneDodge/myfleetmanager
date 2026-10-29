@@ -582,3 +582,6 @@ dados técnicos
 prazos
 manutenção
 documentos
+Visto
+Alterado
+Novo

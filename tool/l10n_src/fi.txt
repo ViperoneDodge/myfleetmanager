@@ -582,3 +582,6 @@ tekniset tiedot
 määräajat
 huolto
 asiakirjat
+Nähty
+Muutettu
+Uusi

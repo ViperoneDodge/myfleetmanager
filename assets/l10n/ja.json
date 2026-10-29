@@ -582,5 +582,8 @@
  "part.tech": "技術データ",
  "part.deadlines": "期限",
  "part.maintenance": "メンテナンス",
- "part.documents": "書類"
+ "part.documents": "書類",
+ "notif.seen": "確認済み",
+ "notif.changed": "変更",
+ "notif.new": "新規"
 }

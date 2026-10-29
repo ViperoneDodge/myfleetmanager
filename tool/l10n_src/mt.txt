@@ -582,3 +582,6 @@ dejta teknika
 skadenzi
 manutenzjoni
 dokumenti
+Rajt
+Mibdul
+Ġdid

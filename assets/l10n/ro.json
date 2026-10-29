@@ -582,5 +582,8 @@
  "part.tech": "date tehnice",
  "part.deadlines": "termene",
  "part.maintenance": "întreținere",
- "part.documents": "documente"
+ "part.documents": "documente",
+ "notif.seen": "Văzut",
+ "notif.changed": "Modificat",
+ "notif.new": "Nou"
 }

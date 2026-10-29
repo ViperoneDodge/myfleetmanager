@@ -582,5 +582,8 @@
  "part.tech": "τεχνικά στοιχεία",
  "part.deadlines": "προθεσμίες",
  "part.maintenance": "συντήρηση",
- "part.documents": "έγγραφα"
+ "part.documents": "έγγραφα",
+ "notif.seen": "Το είδα",
+ "notif.changed": "Αλλαγή",
+ "notif.new": "Νέο"
 }

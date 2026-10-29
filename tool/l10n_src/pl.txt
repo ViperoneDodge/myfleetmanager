@@ -582,3 +582,6 @@ dane techniczne
 terminy
 serwis
 dokumenty
+Widziane
+Zmienione
+Nowe

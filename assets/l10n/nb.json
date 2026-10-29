@@ -582,5 +582,8 @@
  "part.tech": "tekniske data",
  "part.deadlines": "frister",
  "part.maintenance": "vedlikehold",
- "part.documents": "dokumenter"
+ "part.documents": "dokumenter",
+ "notif.seen": "Sett",
+ "notif.changed": "Endret",
+ "notif.new": "Ny"
 }

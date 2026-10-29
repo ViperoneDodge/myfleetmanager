@@ -582,3 +582,6 @@ date tehnice
 termene
 întreținere
 documente
+Văzut
+Modificat
+Nou

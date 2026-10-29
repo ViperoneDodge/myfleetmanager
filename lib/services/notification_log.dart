@@ -41,6 +41,109 @@ List<String> changedParts(Vehicle? a, Vehicle b) {
   return out;
 }
 
+const List<String> techFields = ['vin', 'tyres', 'powerKw', 'engineCc', 'fuel', 'oil', 'battery', 'plugs', 'filters'];
+
+Map<String, String> _techValues(Vehicle v) => {
+      'vin': v.vin,
+      'tyres': v.tyres,
+      'powerKw': v.powerKw,
+      'engineCc': v.engineCc,
+      'fuel': v.fuel,
+      'oil': v.oil,
+      'battery': v.battery,
+      'plugs': v.plugs,
+      'filters': v.filters,
+    };
+
+Map<String, String> _detailValues(Vehicle v) => {
+      'name': v.name,
+      'plate': v.plate,
+      'type': v.type.name,
+      'registrationDate': v.registrationDate?.toIso8601String() ?? '',
+      'notes': v.notes,
+    };
+
+Map<String, String> changedItems(Vehicle? a, Vehicle b) {
+  if (a == null) return {};
+  final out = <String, String>{};
+  void list<T>(String prefix, List<T> before, List<T> after, String Function(T) id, Object? Function(T) data) {
+    final old = {for (final x in before) id(x): jsonEncode(data(x))};
+    for (final x in after) {
+      final k = id(x);
+      final was = old[k];
+      if (was == null) {
+        out['$prefix:$k'] = 'new';
+      } else if (was != jsonEncode(data(x))) {
+        out['$prefix:$k'] = 'edited';
+      }
+    }
+  }
+
+  list<Deadline>('deadline', a.deadlines, b.deadlines, (d) => d.id, (d) => d.toJson());
+  list<MaintenanceRecord>('maint', a.maintenance, b.maintenance, (m) => m.id, (m) => m.toJson());
+  list<VehicleDocument>('doc', a.documents, b.documents, (d) => d.id, (d) => d.name);
+  final ta = _techValues(a), tb = _techValues(b);
+  for (final k in techFields) {
+    if (ta[k] != tb[k]) out['tech:$k'] = 'edited';
+  }
+  final da = _detailValues(a), db = _detailValues(b);
+  for (final k in da.keys) {
+    if (da[k] != db[k]) out['details:$k'] = 'edited';
+  }
+  return out;
+}
+
+class VehicleChanges {
+  final List<LogEntry> entries;
+  VehicleChanges(this.entries);
+
+  List<String> get ids => [for (final e in entries) e.id];
+
+  List<String> get who => {for (final e in entries) e.who}.where((w) => w.isNotEmpty).toList();
+
+  int get ts => entries.fold(0, (m, e) => e.ts > m ? e.ts : m);
+
+  bool get added => entries.any((e) => e.kind == LogKind.added);
+
+  List<String> get parts {
+    final all = {for (final e in entries) ...e.parts};
+    return [for (final p in changeParts) if (all.contains(p)) p];
+  }
+
+  Map<String, String> get items {
+    final out = <String, String>{};
+    for (final e in entries) {
+      e.items.forEach((k, v) {
+        if (out[k] != 'new') out[k] = v;
+      });
+    }
+    return out;
+  }
+
+  String? state(String key) => items[key];
+
+  Set<int> get tabs {
+    final out = <int>{};
+    final it = items;
+    for (final k in it.keys) {
+      if (k.startsWith('maint:')) {
+        out.add(2);
+      } else if (k == 'tech:vin' || k.startsWith('deadline:') || k.startsWith('doc:') ||
+          k == 'details:name' || k == 'details:plate' || k == 'details:notes') {
+        out.add(0);
+      } else {
+        out.add(1);
+      }
+    }
+    if (it.isEmpty) {
+      for (final p in parts) {
+        out.add(p == 'maintenance' ? 2 : (p == 'tech' ? 1 : 0));
+      }
+    }
+    return out;
+  }
+}
+
 class LogEntry {
   String id;
   int ts;
@@ -51,6 +154,7 @@ class LogEntry {
   String vehicle;
   String who;
   List<String> parts;
+  Map<String, String> items;
   String title;
   String body;
   bool read;
@@ -65,11 +169,13 @@ class LogEntry {
     this.vehicle = '',
     this.who = '',
     List<String>? parts,
+    Map<String, String>? items,
     this.title = '',
     this.body = '',
     this.read = false,
   })  : id = id ?? newId(12),
-        parts = parts ?? [];
+        parts = parts ?? [],
+        items = items ?? {};
 
   bool get isChange => kind == LogKind.added || kind == LogKind.edited;
 
@@ -113,6 +219,7 @@ class LogEntry {
         if (vehicle.isNotEmpty) 'vehicle': vehicle,
         if (who.isNotEmpty) 'who': who,
         if (parts.isNotEmpty) 'parts': parts,
+        if (items.isNotEmpty) 'items': items,
         if (title.isNotEmpty) 'title': title,
         if (body.isNotEmpty) 'body': body,
         'read': read,
@@ -128,6 +235,7 @@ class LogEntry {
         vehicle: j['vehicle'] as String? ?? '',
         who: j['who'] as String? ?? '',
         parts: ((j['parts'] as List?) ?? []).map((e) => e.toString()).toList(),
+        items: Map<String, dynamic>.from((j['items'] as Map?) ?? {}).map((k, v) => MapEntry(k, v.toString())),
         title: j['title'] as String? ?? '',
         body: j['body'] as String? ?? '',
         read: j['read'] as bool? ?? false,
@@ -149,6 +257,11 @@ class NotificationLog {
   bool changedUnread(String vehicleId) =>
       entries.any((e) => !e.read && e.isChange && e.vehicleId == vehicleId);
 
+  VehicleChanges? changesFor(String vehicleId) {
+    final list = entries.where((e) => !e.read && e.isChange && e.vehicleId == vehicleId).toList();
+    return list.isEmpty ? null : VehicleChanges(list);
+  }
+
   List<LogEntry> unreadOfGroup(String groupId) =>
       sorted.where((e) => !e.read && e.isGroup && e.groupId == groupId).toList();
 
@@ -158,6 +271,9 @@ class NotificationLog {
         if (!o.read && o.isChange && o.vehicleId == e.vehicleId && o.groupId == e.groupId && o.who == e.who) {
           final parts = {...o.parts, ...e.parts};
           o.parts = [for (final p in changeParts) if (parts.contains(p)) p];
+          e.items.forEach((k, v) {
+            if (o.items[k] != 'new') o.items[k] = v;
+          });
           if (e.ts > o.ts) o.ts = e.ts;
           o.vehicle = e.vehicle;
           o.group = e.group;

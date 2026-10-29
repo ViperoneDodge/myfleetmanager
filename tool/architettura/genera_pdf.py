@@ -341,7 +341,7 @@ files = [
     ['services/support_service.dart', righe('services/support_service.dart'), 'Email al supporto, segnalazione problemi, richiesta cancellazione dati'],
     ['screens/home_screen.dart', righe('screens/home_screen.dart'), 'Schermata principale con le tre schede in basso; icona PDF in alto nei Veicoli e nei Gruppi (scelta tra tutti i gruppi o uno solo); campanella delle notifiche con il numero delle non lette'],
     ['screens/notifications_screen.dart', righe('screens/notifications_screen.dart'), 'Pagina Notifiche: storico diviso per giorno, segna come lette, elimina, selezione con pressione lunga; campanella con contatore'],
-    ['screens/vehicle_detail_screen.dart', righe('screens/vehicle_detail_screen.dart'), 'Scheda del veicolo con le tre sotto-schede'],
+    ['screens/vehicle_detail_screen.dart', righe('screens/vehicle_detail_screen.dart'), 'Scheda del veicolo con le tre sotto-schede; modifiche non lette dei gruppi evidenziate (striscia con «Visto», pallino sulle sotto-schede, voci in giallo con «Modificato» o «Nuovo»)'],
     ['screens/vehicle_book.dart', righe('screens/vehicle_book.dart'), 'Sfoglia i veicoli con l\'animazione della pagina attorno agli anelli'],
     ['screens/vehicle_edit_screen.dart', righe('screens/vehicle_edit_screen.dart'), 'Creazione e modifica del veicolo'],
     ['screens/maintenance_screen.dart', righe('screens/maintenance_screen.dart'), 'Nuova manutenzione o modifica: interventi, ricambi liberi, codici, costi, manodopera e totale'],
@@ -453,7 +453,8 @@ story += [module('NotificationLog – storico delle notifiche', 'Storico sul tel
                  'dalla stessa persona si uniscono finché non sono lette, con le parti cambiate (dati, dati tecnici, '
                  'scadenze, manutenzione, documenti).',
                  'LogEntry · NotificationLog (addActivity, addReminder, addMessage, markRead, markAllRead, delete, clear, '
-                 'unread, changedUnread) · changedParts', 'LocalStore (notif_<account>.json)')]
+                 'unread, changedUnread, changesFor) · changedParts · changedItems (quale scadenza, manutenzione, documento o '
+                 'dato è cambiato, nuovo o modificato) · VehicleChanges (riepilogo per veicolo e schede da segnare)', 'LocalStore (notif_<account>.json)')]
 story += [module('PushService – notifiche push', 'Registra il telefono a Firebase Cloud Messaging e salva il codice del '
                  'dispositivo nel profilo; mostra le push ricevute ad app aperta.',
                  'start(uid, onForeground) · stop · registered · token', 'Firebase Messaging, Firestore (users/{uid})')]

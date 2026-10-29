@@ -122,6 +122,7 @@ List<LogEntry> findActivities({
       vehicle: label,
       who: r.updatedBy,
       parts: kind == LogKind.edited ? changedParts(previous?.call(r.id), r) : null,
+      items: kind == LogKind.edited ? changedItems(previous?.call(r.id), r) : null,
     ));
   }
   return out;

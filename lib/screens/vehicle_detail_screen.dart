@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:intl/intl.dart';
 import 'package:open_filex/open_filex.dart';
 
 import '../l10n.dart';
@@ -18,6 +19,7 @@ import '../widgets/ruled.dart';
 import 'maintenance_screen.dart';
 import 'pro_screen.dart';
 import '../services/doc_cloud.dart';
+import '../services/notification_log.dart';
 import '../services/registration_reader.dart';
 import '../services/tyres.dart';
 import 'vehicle_edit_screen.dart';
@@ -25,7 +27,8 @@ import 'vehicle_edit_screen.dart';
 final ValueNotifier<int> detailTab = ValueNotifier(0);
 
 class VehicleDetailTabs extends StatefulWidget implements PreferredSizeWidget {
-  const VehicleDetailTabs({super.key});
+  final String? vehicleId;
+  const VehicleDetailTabs({super.key, this.vehicleId});
 
   @override
   Size get preferredSize => const Size.fromHeight(46);
@@ -57,14 +60,17 @@ class _VehicleDetailTabsState extends State<VehicleDetailTabs> with SingleTicker
 
   @override
   Widget build(BuildContext context) {
-    Widget label(String text, bool pro) => Tab(
+    final id = widget.vehicleId;
+    final changed = id == null ? const <int>{} : appState.log.changesFor(id)?.tabs ?? const <int>{};
+    Widget label(int i, String text, bool pro) => Tab(
           height: 46,
-          child: Row(mainAxisSize: MainAxisSize.min, children: [
+          child: Row(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
             Flexible(child: Text(text, maxLines: 1, overflow: TextOverflow.ellipsis)),
             if (pro && !appState.isPro) ...[
               const SizedBox(width: 4),
               const Icon(Icons.lock_outline, size: 14),
             ],
+            if (changed.contains(i)) const Padding(padding: EdgeInsets.only(left: 3, top: 8), child: ChangeDot()),
           ]),
         );
     return TabBar(
@@ -77,9 +83,9 @@ class _VehicleDetailTabsState extends State<VehicleDetailTabs> with SingleTicker
       labelPadding: const EdgeInsets.symmetric(horizontal: 6),
       labelStyle: const TextStyle(fontFamily: handFont, fontSize: 19),
       tabs: [
-        label(tr('tab.deadlines'), false),
-        label(tr('tech.title'), true),
-        label(tr('maint.title'), true),
+        label(0, tr('tab.deadlines'), false),
+        label(1, tr('tech.title'), true),
+        label(2, tr('maint.title'), true),
       ],
     );
   }
@@ -389,6 +395,8 @@ class VehicleDetailScreen extends StatelessWidget {
         final canEdit = appState.canEdit(v);
         final group = appState.isPersonal(v) ? null : appState.data.groupById(v.fleetId);
         final canAssign = group != null && appState.canManage(group);
+        final ch = appState.log.changesFor(v.id);
+        String? st(String key) => ch?.state(key);
         final Widget page = ValueListenableBuilder<int>(
           valueListenable: detailTab,
           builder: (context, tab, _) => KeyedSubtree(
@@ -396,6 +404,7 @@ class VehicleDetailScreen extends StatelessWidget {
             child: RuledPage(
               padding: const EdgeInsets.fromLTRB(8, 14, 10, 96),
               children: [
+                if (ch != null) _changesBanner(context, v, ch),
                 if (!canEdit)
                   OnRule(
                     center: true,
@@ -454,8 +463,13 @@ class VehicleDetailScreen extends StatelessWidget {
                   ),
                 ),
                 const BlankLine(),
-                _title(context, v.name.isEmpty ? tr('vehicle.noName') : v.name,
-                    Theme.of(context).textTheme.headlineSmall),
+                OnRule(
+                  child: Marker(
+                    on: st('details:name') != null,
+                    child: _titleText(context, v.name.isEmpty ? tr('vehicle.noName') : v.name,
+                        Theme.of(context).textTheme.headlineSmall),
+                  ),
+                ),
                 OnRule(
                   child: Wrap(
                     spacing: 12,
@@ -464,7 +478,7 @@ class VehicleDetailScreen extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: st('details:plate') != null ? const Color(0xFFFFE066) : Colors.white,
                           border: Border.all(color: Colors.black87, width: 1.4),
                           borderRadius: BorderRadius.circular(6),
                         ),
@@ -484,14 +498,14 @@ class VehicleDetailScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                _techRow(context, tr('tech.vin'), v.vin),
+                _techRow(context, tr('tech.vin'), v.vin, changed: st('tech:vin')),
                 if (appState.isCloud && appState.data.groups.isNotEmpty)
                   _line(context, appState.isPersonal(v) ? Icons.person_outline : Icons.groups_outlined,
                       appState.fleetLabel(v)),
                 const BlankLine(),
                 _title(context, tr('tab.deadlines')),
                 if (tracked.isEmpty) _text(context, tr('vehicle.noTracked')),
-                for (final d in tracked) ..._deadlineRows(context, d),
+                for (final d in tracked) ..._deadlineRows(context, d, st('deadline:${d.id}')),
                 const BlankLine(),
                 OnRule(
                   child: Row(children: [
@@ -517,13 +531,17 @@ class VehicleDetailScreen extends StatelessWidget {
                     center: true,
                     child: Card(
                       margin: const EdgeInsets.symmetric(vertical: 2),
+                      color: st('doc:${d.id}') != null ? Marker.color(context) : null,
                       child: ListTile(
                         leading: Icon(
                           d.isPdf ? Icons.picture_as_pdf : Icons.image_outlined,
                           color: d.isPdf ? Colors.red.shade400 : scheme.primary,
                           size: 30,
                         ),
-                        title: Text(d.name),
+                        title: Row(children: [
+                          Flexible(child: Text(d.name)),
+                          if (st('doc:${d.id}') case final s?) ChangeChip(s),
+                        ]),
                         subtitle: Text(
                             '${d.isPdf ? 'PDF' : tr('doc.image')} · ${_size(d.size)} · ${fmtDate(DateTime.fromMillisecondsSinceEpoch(d.addedAt))}\n${_docState(v, d)}'),
                         onTap: () => _openDocument(context, v, d),
@@ -539,7 +557,12 @@ class VehicleDetailScreen extends StatelessWidget {
                 if (v.notes.trim().isNotEmpty) ...[
                   const BlankLine(),
                   _title(context, tr('vehicle.notes')),
-                  _text(context, v.notes, size: 20, hand: true),
+                  OnRule(
+                    child: Marker(
+                      on: st('details:notes') != null,
+                      child: RuledText(v.notes, style: const TextStyle(fontSize: 20, fontFamily: handFont)),
+                    ),
+                  ),
                 ],
                 if (appState.isCloud && v.updatedBy.isNotEmpty) ...[
                   const BlankLine(),
@@ -557,16 +580,16 @@ class VehicleDetailScreen extends StatelessWidget {
                   ..._proLocked(context, tab == 1 ? tr('pro.reasonTech') : tr('pro.reasonMaint'))
                 else if (tab == 1) ...[
                 _title(context, tr('tech.title')),
-                _techRow(context, tr('edit.type'), vehicleTypeLabel(v.type)),
-                _techRow(context, tr('vehicle.regDate'), v.registrationDate == null ? '' : fmtDate(v.registrationDate)),
-                _techRow(context, tr('tech.fuel'), v.fuel.isEmpty ? '' : fuelLabel(v.fuel)),
-                _techRow(context, tr('tech.powerName'), v.powerKw.isEmpty ? '' : fmtPower(v.powerKw)),
-                _techRow(context, tr('tech.engine'), v.engineCc),
-                ..._tyreRows(context, v.tyres),
-                _techRow(context, tr('tech.oil'), v.oil),
-                _techRow(context, tr('tech.battery'), v.battery),
-                _techRow(context, tr(v.fuel == 'diesel' ? 'tech.glowPlugs' : 'tech.plugs'), v.plugs),
-                _techRow(context, tr('tech.filters'), v.filters),
+                _techRow(context, tr('edit.type'), vehicleTypeLabel(v.type), changed: st('details:type')),
+                _techRow(context, tr('vehicle.regDate'), v.registrationDate == null ? '' : fmtDate(v.registrationDate), changed: st('details:registrationDate')),
+                _techRow(context, tr('tech.fuel'), v.fuel.isEmpty ? '' : fuelLabel(v.fuel), changed: st('tech:fuel')),
+                _techRow(context, tr('tech.powerName'), v.powerKw.isEmpty ? '' : fmtPower(v.powerKw), changed: st('tech:powerKw')),
+                _techRow(context, tr('tech.engine'), v.engineCc, changed: st('tech:engineCc')),
+                ..._tyreRows(context, v.tyres, st('tech:tyres')),
+                _techRow(context, tr('tech.oil'), v.oil, changed: st('tech:oil')),
+                _techRow(context, tr('tech.battery'), v.battery, changed: st('tech:battery')),
+                _techRow(context, tr(v.fuel == 'diesel' ? 'tech.glowPlugs' : 'tech.plugs'), v.plugs, changed: st('tech:plugs')),
+                _techRow(context, tr('tech.filters'), v.filters, changed: st('tech:filters')),
                 ] else ...[
                 OnRule(
                   child: Row(children: [
@@ -594,10 +617,15 @@ class VehicleDetailScreen extends StatelessWidget {
                     center: true,
                     child: Card(
                       margin: const EdgeInsets.symmetric(vertical: 2),
+                      color: st('maint:${m.id}') != null ? Marker.color(context) : null,
                       child: ListTile(
                         leading: Icon(Icons.build_circle_outlined, color: scheme.primary, size: 30),
-                        title: Text(
-                            '${fmtDate(m.date)}${m.km != null ? ' · ${fmtKm(m.km!)}' : ''}'),
+                        title: Row(children: [
+                          Flexible(
+                            child: Text('${fmtDate(m.date)}${m.km != null ? ' · ${fmtKm(m.km!)}' : ''}'),
+                          ),
+                          if (st('maint:${m.id}') case final s?) ChangeChip(s),
+                        ]),
                         subtitle: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
                           Expanded(
                             child: Text(_maintSummary(m), maxLines: 4, overflow: TextOverflow.ellipsis),
@@ -622,7 +650,7 @@ class VehicleDetailScreen extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: !embedded,
-            bottom: const VehicleDetailTabs(),
+            bottom: VehicleDetailTabs(vehicleId: v.id),
             title: Text(v.name.isEmpty ? tr('vehicle.generic') : v.name),
             actions: [
               if (appState.favoritesOn)
@@ -655,6 +683,55 @@ class VehicleDetailScreen extends StatelessWidget {
           body: wrapBody == null ? page : wrapBody!(page),
         );
       },
+    );
+  }
+
+  Widget _changesBanner(BuildContext context, Vehicle v, VehicleChanges ch) {
+    final when = DateTime.fromMillisecondsSinceEpoch(ch.ts);
+    final now = DateTime.now();
+    final sameDay = when.year == now.year && when.month == now.month && when.day == now.day;
+    final time = DateFormat(sameDay ? 'HH:mm' : 'dd/MM HH:mm').format(when);
+    final who = ch.who.isEmpty ? tr('groupAct.someone') : ch.who.join(', ');
+    final name = v.name.isEmpty ? v.plate : v.name;
+    final head = tr(ch.added ? 'groupAct.added' : 'groupAct.edited', {'who': who, 'vehicle': name});
+    final parts = ch.parts.map(partLabel).join(', ');
+    const ink = Color(0xFF3C2D00);
+    return OnRule(
+      center: true,
+      child: Card(
+        margin: const EdgeInsets.symmetric(vertical: 2),
+        color: const Color(0xFFFFF3C4),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14),
+          side: const BorderSide(color: Color(0xFFE6BE3C), width: 1.5),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(12, 8, 8, 8),
+          child: Row(children: [
+            const ChangeDot(size: 14),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text(head,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(color: ink, fontWeight: FontWeight.w600, fontSize: 14)),
+                Text(parts.isEmpty ? time : '$time · $parts', style: const TextStyle(color: ink, fontSize: 13)),
+              ]),
+            ),
+            const SizedBox(width: 6),
+            FilledButton.tonal(
+              style: FilledButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: const Color(0xFF0257C3),
+                visualDensity: VisualDensity.compact,
+              ),
+              onPressed: () => appState.markNotificationsRead(ch.ids.toSet()),
+              child: Text(tr('notif.seen')),
+            ),
+          ]),
+        ),
+      ),
     );
   }
 
@@ -725,7 +802,8 @@ class VehicleDetailScreen extends StatelessWidget {
         ),
       ];
 
-  Widget _techRow(BuildContext context, String label, String value, {double indent = 0, bool dash = true}) =>
+  Widget _techRow(BuildContext context, String label, String value,
+          {double indent = 0, bool dash = true, String? changed}) =>
       OnRule(
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
           SizedBox(width: indent),
@@ -734,19 +812,26 @@ class VehicleDetailScreen extends StatelessWidget {
             child: RuledText(label,
                 style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant)),
           ),
-          Expanded(child: RuledText(value.isEmpty && dash ? '—' : value)),
+          Expanded(
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Marker(on: changed != null, child: RuledText(value.isEmpty && dash ? '—' : value)),
+            ),
+          ),
         ]),
       );
 
-  List<Widget> _tyreRows(BuildContext context, String tyres) {
+  List<Widget> _tyreRows(BuildContext context, String tyres, String? changed) {
     final sets = TyreSet.parse(tyres);
     if (sets.length <= 1 && (sets.isEmpty || sets.first.label.isEmpty)) {
-      return [_techRow(context, tr('tech.tyres'), sets.isEmpty ? '' : sets.first.sizeList.join('\n'))];
+      return [
+        _techRow(context, tr('tech.tyres'), sets.isEmpty ? '' : sets.first.sizeList.join('\n'), changed: changed)
+      ];
     }
     return [
       _techRow(context, tr('tech.tyres'), '', dash: false),
       for (final s in sets)
-        _techRow(context, s.label.isEmpty ? '·' : s.label, s.sizeList.join('\n'), indent: 14),
+        _techRow(context, s.label.isEmpty ? '·' : s.label, s.sizeList.join('\n'), indent: 14, changed: changed),
     ];
   }
 
@@ -861,7 +946,7 @@ class VehicleDetailScreen extends StatelessWidget {
     return '${(bytes / (1024 * 1024)).toStringAsFixed(1)} MB';
   }
 
-  List<Widget> _deadlineRows(BuildContext context, Deadline d) {
+  List<Widget> _deadlineRows(BuildContext context, Deadline d, String? changed) {
     IconData icon;
     switch (d.kind) {
       case DeadlineKind.insurance:
@@ -895,16 +980,26 @@ class VehicleDetailScreen extends StatelessWidget {
         child: Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
           Padding(padding: const EdgeInsets.only(bottom: 2), child: Icon(icon, size: 19)),
           const SizedBox(width: 12),
-          Expanded(
-            child: RuledText(d.displayLabel,
-                style: const TextStyle(fontFamily: handFont, fontSize: 21, height: 1.0)),
+          Flexible(
+            child: Marker(
+              on: changed != null,
+              child: RuledText(d.displayLabel,
+                  style: const TextStyle(fontFamily: handFont, fontSize: 21, height: 1.0)),
+            ),
           ),
+          if (changed != null) Padding(padding: const EdgeInsets.only(bottom: 3), child: ChangeChip(changed)),
         ]),
       ),
       OnRule(
         child: Padding(
           padding: indent,
-          child: RuledText(subtitle, style: Theme.of(context).textTheme.bodySmall, size: 12),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Marker(
+              on: changed != null,
+              child: RuledText(subtitle, style: Theme.of(context).textTheme.bodySmall, size: 12),
+            ),
+          ),
         ),
       ),
       if (d.dueDate != null)

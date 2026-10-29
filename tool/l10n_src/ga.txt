@@ -582,3 +582,6 @@ sonraí teicniúla
 spriocdhátaí
 cothabháil
 doiciméid
+Feicthe
+Athraithe
+Nua

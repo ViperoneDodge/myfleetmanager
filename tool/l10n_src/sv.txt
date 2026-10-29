@@ -582,3 +582,6 @@ tekniska data
 förfallodatum
 underhåll
 dokument
+Sett
+Ändrad
+Ny

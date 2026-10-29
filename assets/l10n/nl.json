@@ -582,5 +582,8 @@
  "part.tech": "technische gegevens",
  "part.deadlines": "vervaldata",
  "part.maintenance": "onderhoud",
- "part.documents": "documenten"
+ "part.documents": "documenten",
+ "notif.seen": "Gezien",
+ "notif.changed": "Gewijzigd",
+ "notif.new": "Nieuw"
 }

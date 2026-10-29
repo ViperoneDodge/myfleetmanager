@@ -582,3 +582,6 @@ technické údaje
 termíny
 údržba
 dokumenty
+Videné
+Zmenené
+Nové
