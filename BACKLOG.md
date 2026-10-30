@@ -3,7 +3,9 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.1.12)
-- [ ] (vuota)
+- [x] **Offuscamento Java/Kotlin più forte**: R8 raggruppa tutte le classi in un unico pacchetto anonimo (`-repackageclasses`, `-allowaccessmodification`). Da provare dopo la build: notifiche, acquisto Pro, accesso Google, scanner QR, lettura del libretto.
+- [x] **Simboli nativi dentro l'AAB** (`debugSymbolLevel = SYMBOL_TABLE`): Play Console li legge da solo per mostrare i crash del codice nativo leggibili.
+- [ ] **File di deoffuscamento (`mapping.txt`) per Play Console**: rimandato al repository privato. L'AAB oggi è pubblicato nelle Release pubbliche e con la mappa dentro chiunque potrebbe annullare l'offuscamento.
 
 ## Versione 2.1.11
 - [x] **Campanella → dato modificato**: toccando una modifica nella pagina Notifiche si apre il veicolo sulla scheda cambiata e si scorre fino alla voce evidenziata. La notifica resta non letta finché non si preme «Visto» (prima veniva segnata come letta subito e l'evidenziazione spariva).
