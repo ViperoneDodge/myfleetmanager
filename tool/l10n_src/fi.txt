@@ -598,3 +598,14 @@ Lukituksen avaus epäonnistui, yritä uudelleen
 Tee ilmoituksista luotettavampia
 Avaa sovelluksen asetukset ja valitse Akku → Rajoittamaton: Android keskeyttää tarkistukset harvemmin, kun sovellus on suljettu
 Sovelluksen asetuksia ei voitu avata
+Vaihda salasana
+Nykyinen salasana
+Uusi salasana
+Toista uusi salasana
+Näytä salasanat
+Uuden salasanan on oltava vähintään 8 merkkiä.
+Uudet salasanat eivät täsmää.
+Uuden salasanan on oltava eri kuin nykyinen.
+Salasana vaihdettu
+Etkö muista sitä? Saat sähköpostin sen nollaamiseksi
+Google-kirjautuminen: salasanaa hallitaan Google-tililläsi

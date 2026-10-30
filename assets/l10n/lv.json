@@ -598,5 +598,16 @@
  "lock.retry": "Atbloķēšana neizdevās, mēģini vēlreiz",
  "settings.batteryTitle": "Padarīt brīdinājumus uzticamākus",
  "settings.batterySub": "Atver lietotnes iestatījumus un izvēlies Akumulators → Bez ierobežojumiem: Android retāk apturēs pārbaudes, kad lietotne ir aizvērta",
- "settings.batteryFailed": "Neizdevās atvērt lietotnes iestatījumus"
+ "settings.batteryFailed": "Neizdevās atvērt lietotnes iestatījumus",
+ "pw.change": "Mainīt paroli",
+ "pw.current": "Pašreizējā parole",
+ "pw.new": "Jaunā parole",
+ "pw.confirm": "Atkārto jauno paroli",
+ "pw.show": "Rādīt paroles",
+ "pw.short": "Jaunajai parolei jābūt vismaz 8 rakstzīmes garai.",
+ "pw.mismatch": "Jaunās paroles nesakrīt.",
+ "pw.same": "Jaunajai parolei jāatšķiras no pašreizējās.",
+ "pw.done": "Parole nomainīta",
+ "pw.forgot": "Neatceries? Saņem e-pastu, lai to atiestatītu",
+ "pw.google": "Pieteikšanās ar Google: paroli pārvaldi savā Google kontā"
 }

@@ -598,5 +598,16 @@
  "lock.retry": "Atrakinti nepavyko, bandyk dar kartą",
  "settings.batteryTitle": "Patikimesni įspėjimai",
  "settings.batterySub": "Atidaryk programos nustatymus ir pasirink Akumuliatorius → Neribota: Android rečiau sustabdys patikras, kai programa uždaryta",
- "settings.batteryFailed": "Nepavyko atidaryti programos nustatymų"
+ "settings.batteryFailed": "Nepavyko atidaryti programos nustatymų",
+ "pw.change": "Keisti slaptažodį",
+ "pw.current": "Dabartinis slaptažodis",
+ "pw.new": "Naujas slaptažodis",
+ "pw.confirm": "Pakartok naują slaptažodį",
+ "pw.show": "Rodyti slaptažodžius",
+ "pw.short": "Naujame slaptažodyje turi būti bent 8 simboliai.",
+ "pw.mismatch": "Nauji slaptažodžiai nesutampa.",
+ "pw.same": "Naujas slaptažodis turi skirtis nuo dabartinio.",
+ "pw.done": "Slaptažodis pakeistas",
+ "pw.forgot": "Neprisimeni? Gauk el. laišką jam atkurti",
+ "pw.google": "Prisijungimas per Google: slaptažodį tvarkai savo Google paskyroje"
 }

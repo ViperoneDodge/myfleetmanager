@@ -598,3 +598,14 @@ Upplåsningen misslyckades, försök igen
 Gör aviseringarna mer pålitliga
 Öppna appinställningarna och välj Batteri → Obegränsad: Android pausar kontrollerna mindre när appen är stängd
 Kunde inte öppna appinställningarna
+Byt lösenord
+Nuvarande lösenord
+Nytt lösenord
+Upprepa det nya lösenordet
+Visa lösenord
+Det nya lösenordet måste ha minst 8 tecken.
+De två nya lösenorden stämmer inte överens.
+Det nya lösenordet måste skilja sig från det nuvarande.
+Lösenordet har bytts
+Kommer du inte ihåg det? Få ett mejl för att återställa det
+Inloggning med Google: lösenordet hanteras i ditt Google-konto

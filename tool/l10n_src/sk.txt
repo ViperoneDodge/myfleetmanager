@@ -598,3 +598,14 @@ Odomknutie zlyhalo, skús to znova
 Spoľahlivejšie upozornenia
 Otvor nastavenia aplikácie a zvoľ Batéria → Bez obmedzení: Android bude kontroly pri zatvorenej aplikácii pozastavovať menej
 Nastavenia aplikácie nemožno otvoriť
+Zmeniť heslo
+Aktuálne heslo
+Nové heslo
+Zopakuj nové heslo
+Zobraziť heslá
+Nové heslo musí mať aspoň 8 znakov.
+Nové heslá sa nezhodujú.
+Nové heslo sa musí líšiť od aktuálneho.
+Heslo bolo zmenené
+Nepamätáš si ho? Získaj e-mail na obnovenie
+Prihlásenie cez Google: heslo spravuješ vo svojom účte Google

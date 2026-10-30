@@ -598,3 +598,14 @@ A feloldás nem sikerült, próbáld újra
 Megbízhatóbb értesítések
 Nyisd meg az alkalmazás beállításait, és válaszd: Akkumulátor → Korlátozás nélkül – így az Android ritkábban szünetelteti az ellenőrzéseket bezárt alkalmazásnál
 Az alkalmazás beállításai nem nyithatók meg
+Jelszó módosítása
+Jelenlegi jelszó
+Új jelszó
+Új jelszó újra
+Jelszavak megjelenítése
+Az új jelszónak legalább 8 karakterből kell állnia.
+A két új jelszó nem egyezik.
+Az új jelszó nem lehet azonos a jelenlegivel.
+Jelszó módosítva
+Nem emlékszel rá? Kérj e-mailt a visszaállításhoz
+Google-bejelentkezés: a jelszót a Google-fiókodban kezelheted

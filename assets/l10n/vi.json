@@ -598,5 +598,16 @@
  "lock.retry": "Mở khóa không thành công, hãy thử lại",
  "settings.batteryTitle": "Giúp cảnh báo đáng tin cậy hơn",
  "settings.batterySub": "Mở cài đặt ứng dụng và chọn Pin → Không hạn chế: Android sẽ ít tạm dừng việc kiểm tra khi ứng dụng đóng",
- "settings.batteryFailed": "Không thể mở cài đặt ứng dụng"
+ "settings.batteryFailed": "Không thể mở cài đặt ứng dụng",
+ "pw.change": "Đổi mật khẩu",
+ "pw.current": "Mật khẩu hiện tại",
+ "pw.new": "Mật khẩu mới",
+ "pw.confirm": "Nhập lại mật khẩu mới",
+ "pw.show": "Hiện mật khẩu",
+ "pw.short": "Mật khẩu mới phải có ít nhất 8 ký tự.",
+ "pw.mismatch": "Hai mật khẩu mới không khớp.",
+ "pw.same": "Mật khẩu mới phải khác mật khẩu hiện tại.",
+ "pw.done": "Đã đổi mật khẩu",
+ "pw.forgot": "Không nhớ? Nhận email để đặt lại",
+ "pw.google": "Đăng nhập bằng Google: mật khẩu được quản lý trong tài khoản Google của bạn"
 }

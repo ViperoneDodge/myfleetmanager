@@ -598,3 +598,14 @@ lock.retry
 settings.batteryTitle
 settings.batterySub
 settings.batteryFailed
+pw.change
+pw.current
+pw.new
+pw.confirm
+pw.show
+pw.short
+pw.mismatch
+pw.same
+pw.done
+pw.forgot
+pw.google

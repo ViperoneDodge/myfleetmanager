@@ -598,5 +598,16 @@
  "lock.retry": "Il-ftuħ ma rnexxiex, erġa’ pprova",
  "settings.batteryTitle": "Agħmel it-twissijiet aktar affidabbli",
  "settings.batterySub": "Iftaħ is-settings tal-app u agħżel Batterija → Mingħajr restrizzjonijiet: Android jieqaf inqas mill-kontrolli meta l-app tkun magħluqa",
- "settings.batteryFailed": "Ma setgħux jinfetħu s-settings tal-app"
+ "settings.batteryFailed": "Ma setgħux jinfetħu s-settings tal-app",
+ "pw.change": "Ibdel il-password",
+ "pw.current": "Password attwali",
+ "pw.new": "Password ġdida",
+ "pw.confirm": "Erġa’ ikteb il-password il-ġdida",
+ "pw.show": "Uri l-passwords",
+ "pw.short": "Il-password il-ġdida trid ikollha mill-inqas 8 karattri.",
+ "pw.mismatch": "Iż-żewġ passwords ġodda mhumiex l-istess.",
+ "pw.same": "Il-password il-ġdida trid tkun differenti mill-attwali.",
+ "pw.done": "Il-password inbidlet",
+ "pw.forgot": "Ma tiftakarhiex? Irċievi email biex terġa’ tissettjaha",
+ "pw.google": "Dħul b’Google: il-password tiġi mmaniġġjata fil-kont Google tiegħek"
 }

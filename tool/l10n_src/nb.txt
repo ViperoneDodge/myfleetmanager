@@ -598,3 +598,14 @@ Opplåsingen mislyktes, prøv igjen
 Gjør varslene mer pålitelige
 Åpne appinnstillingene og velg Batteri → Ubegrenset: Android setter kontrollene mindre på pause når appen er lukket
 Kunne ikke åpne appinnstillingene
+Endre passord
+Nåværende passord
+Nytt passord
+Gjenta det nye passordet
+Vis passord
+Det nye passordet må ha minst 8 tegn.
+De to nye passordene er ikke like.
+Det nye passordet må være forskjellig fra det nåværende.
+Passordet er endret
+Husker du det ikke? Få en e-post for å tilbakestille det
+Pålogging med Google: passordet administreres i Google-kontoen din

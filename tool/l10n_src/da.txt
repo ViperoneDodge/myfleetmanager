@@ -598,3 +598,14 @@ Oplåsning mislykkedes, prøv igen
 Gør advarslerne mere pålidelige
 Åbn appindstillingerne og vælg Batteri → Ubegrænset: Android sætter kontrollerne mindre på pause, når appen er lukket
 Kunne ikke åbne appindstillingerne
+Skift adgangskode
+Nuværende adgangskode
+Ny adgangskode
+Gentag den nye adgangskode
+Vis adgangskoder
+Den nye adgangskode skal være på mindst 8 tegn.
+De to nye adgangskoder er ikke ens.
+Den nye adgangskode skal være forskellig fra den nuværende.
+Adgangskoden er skiftet
+Kan du ikke huske den? Få en e-mail til at nulstille den
+Login med Google: adgangskoden administreres i din Google-konto

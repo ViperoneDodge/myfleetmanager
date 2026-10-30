@@ -598,3 +598,14 @@ Desbloqueio falhou, tenta novamente
 Tornar os alertas mais fiáveis
 Abre as definições da app e escolhe Bateria → Sem restrições: o Android vai suspender menos as verificações com a app fechada
 Não foi possível abrir as definições da app
+Alterar palavra-passe
+Palavra-passe atual
+Nova palavra-passe
+Repete a nova palavra-passe
+Mostrar palavras-passe
+A nova palavra-passe deve ter pelo menos 8 caracteres.
+As duas novas palavras-passe não coincidem.
+A nova palavra-passe deve ser diferente da atual.
+Palavra-passe alterada
+Não te lembras? Recebe um e-mail para a redefinir
+Acesso com Google: a palavra-passe é gerida na tua conta Google

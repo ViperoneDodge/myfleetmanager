@@ -598,3 +598,14 @@ Ekki tókst að opna, reyndu aftur
 Gera tilkynningar áreiðanlegri
 Opnaðu stillingar forritsins og veldu Rafhlaða → Án takmarkana: Android stöðvar athuganir sjaldnar þegar forritið er lokað
 Ekki tókst að opna stillingar forritsins
+Breyta lykilorði
+Núverandi lykilorð
+Nýtt lykilorð
+Endurtaktu nýja lykilorðið
+Sýna lykilorð
+Nýja lykilorðið verður að vera minnst 8 stafir.
+Nýju lykilorðin passa ekki saman.
+Nýja lykilorðið verður að vera annað en það núverandi.
+Lykilorði breytt
+Manstu það ekki? Fáðu tölvupóst til að endurstilla það
+Innskráning með Google: lykilorðinu er stjórnað í Google-reikningnum þínum

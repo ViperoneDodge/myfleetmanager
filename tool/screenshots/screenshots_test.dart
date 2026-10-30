@@ -199,6 +199,7 @@ void main() {
           LogEntry(ts: at(1, 9, 0), kind: LogKind.reminder, title: it ? 'Revisione tra 7 giorni' : 'Inspection in 7 days', body: 'Giulia (GD452RT)', vehicleId: 'g1', read: true),
         ]);
         await shot(tester, const Scaffold(body: Stack(children: [LockScreen()])), '13_lock');
+        await shot(tester, const Scaffold(body: ChangePasswordDialog()), '14_password');
         await shot(tester, const HomeScreen(), '11_bell');
         await shot(tester, const NotificationsScreen(), '11b_notifications');
         await shot(tester, const NotificationsScreen(), '11c_select', then: () async {

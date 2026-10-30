@@ -598,5 +598,16 @@
  "lock.retry": "Ontgrendelen mislukt, probeer opnieuw",
  "settings.batteryTitle": "Meldingen betrouwbaarder maken",
  "settings.batterySub": "Open de app-instellingen en kies Batterij → Onbeperkt: Android pauzeert de controles minder als de app gesloten is",
- "settings.batteryFailed": "Kon de app-instellingen niet openen"
+ "settings.batteryFailed": "Kon de app-instellingen niet openen",
+ "pw.change": "Wachtwoord wijzigen",
+ "pw.current": "Huidig wachtwoord",
+ "pw.new": "Nieuw wachtwoord",
+ "pw.confirm": "Herhaal het nieuwe wachtwoord",
+ "pw.show": "Wachtwoorden tonen",
+ "pw.short": "Het nieuwe wachtwoord moet minstens 8 tekens lang zijn.",
+ "pw.mismatch": "De twee nieuwe wachtwoorden komen niet overeen.",
+ "pw.same": "Het nieuwe wachtwoord moet anders zijn dan het huidige.",
+ "pw.done": "Wachtwoord gewijzigd",
+ "pw.forgot": "Weet je het niet meer? Ontvang een e-mail om het opnieuw in te stellen",
+ "pw.google": "Inloggen met Google: het wachtwoord beheer je in je Google-account"
 }

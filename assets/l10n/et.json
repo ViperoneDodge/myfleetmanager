@@ -598,5 +598,16 @@
  "lock.retry": "Avamine ebaõnnestus, proovi uuesti",
  "settings.batteryTitle": "Muuda teavitused usaldusväärsemaks",
  "settings.batterySub": "Ava rakenduse seaded ja vali Aku → Piiranguteta: Android peatab kontrolle suletud rakenduse korral harvem",
- "settings.batteryFailed": "Rakenduse seadeid ei saanud avada"
+ "settings.batteryFailed": "Rakenduse seadeid ei saanud avada",
+ "pw.change": "Muuda parooli",
+ "pw.current": "Praegune parool",
+ "pw.new": "Uus parool",
+ "pw.confirm": "Korda uut parooli",
+ "pw.show": "Näita paroole",
+ "pw.short": "Uues paroolis peab olema vähemalt 8 märki.",
+ "pw.mismatch": "Uued paroolid ei ühti.",
+ "pw.same": "Uus parool peab erinema praegusest.",
+ "pw.done": "Parool muudetud",
+ "pw.forgot": "Ei mäleta? Saa e-kiri selle lähtestamiseks",
+ "pw.google": "Google’iga sisselogimine: parooli haldad oma Google’i kontol"
 }

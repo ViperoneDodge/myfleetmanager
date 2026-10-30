@@ -598,5 +598,16 @@
  "lock.retry": "Deblocarea a eșuat, încearcă din nou",
  "settings.batteryTitle": "Alerte mai sigure",
  "settings.batterySub": "Deschide setările aplicației și alege Baterie → Fără restricții: Android va suspenda mai rar verificările când aplicația e închisă",
- "settings.batteryFailed": "Nu s-au putut deschide setările aplicației"
+ "settings.batteryFailed": "Nu s-au putut deschide setările aplicației",
+ "pw.change": "Schimbă parola",
+ "pw.current": "Parola actuală",
+ "pw.new": "Parola nouă",
+ "pw.confirm": "Repetă parola nouă",
+ "pw.show": "Afișează parolele",
+ "pw.short": "Parola nouă trebuie să aibă cel puțin 8 caractere.",
+ "pw.mismatch": "Cele două parole noi nu coincid.",
+ "pw.same": "Parola nouă trebuie să fie diferită de cea actuală.",
+ "pw.done": "Parola a fost schimbată",
+ "pw.forgot": "Nu ți-o amintești? Primește un e-mail pentru resetare",
+ "pw.google": "Conectare cu Google: parola se gestionează în contul tău Google"
 }

@@ -598,5 +598,16 @@
  "lock.retry": "Entsperren fehlgeschlagen, versuche es erneut",
  "settings.batteryTitle": "Hinweise zuverlässiger machen",
  "settings.batterySub": "Öffne die App-Einstellungen und wähle Akku → Nicht eingeschränkt: Android pausiert die Prüfungen bei geschlossener App seltener",
- "settings.batteryFailed": "App-Einstellungen konnten nicht geöffnet werden"
+ "settings.batteryFailed": "App-Einstellungen konnten nicht geöffnet werden",
+ "pw.change": "Passwort ändern",
+ "pw.current": "Aktuelles Passwort",
+ "pw.new": "Neues Passwort",
+ "pw.confirm": "Neues Passwort wiederholen",
+ "pw.show": "Passwörter anzeigen",
+ "pw.short": "Das neue Passwort muss mindestens 8 Zeichen lang sein.",
+ "pw.mismatch": "Die beiden neuen Passwörter stimmen nicht überein.",
+ "pw.same": "Das neue Passwort muss sich vom aktuellen unterscheiden.",
+ "pw.done": "Passwort geändert",
+ "pw.forgot": "Vergessen? Erhalte eine E-Mail zum Zurücksetzen",
+ "pw.google": "Google-Anmeldung: Das Passwort wird in deinem Google-Konto verwaltet"
 }

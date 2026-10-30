@@ -598,3 +598,14 @@ Avamine ebaõnnestus, proovi uuesti
 Muuda teavitused usaldusväärsemaks
 Ava rakenduse seaded ja vali Aku → Piiranguteta: Android peatab kontrolle suletud rakenduse korral harvem
 Rakenduse seadeid ei saanud avada
+Muuda parooli
+Praegune parool
+Uus parool
+Korda uut parooli
+Näita paroole
+Uues paroolis peab olema vähemalt 8 märki.
+Uued paroolid ei ühti.
+Uus parool peab erinema praegusest.
+Parool muudetud
+Ei mäleta? Saa e-kiri selle lähtestamiseks
+Google’iga sisselogimine: parooli haldad oma Google’i kontol

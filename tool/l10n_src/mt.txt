@@ -598,3 +598,14 @@ Il-ftuħ ma rnexxiex, erġa’ pprova
 Agħmel it-twissijiet aktar affidabbli
 Iftaħ is-settings tal-app u agħżel Batterija → Mingħajr restrizzjonijiet: Android jieqaf inqas mill-kontrolli meta l-app tkun magħluqa
 Ma setgħux jinfetħu s-settings tal-app
+Ibdel il-password
+Password attwali
+Password ġdida
+Erġa’ ikteb il-password il-ġdida
+Uri l-passwords
+Il-password il-ġdida trid ikollha mill-inqas 8 karattri.
+Iż-żewġ passwords ġodda mhumiex l-istess.
+Il-password il-ġdida trid tkun differenti mill-attwali.
+Il-password inbidlet
+Ma tiftakarhiex? Irċievi email biex terġa’ tissettjaha
+Dħul b’Google: il-password tiġi mmaniġġjata fil-kont Google tiegħek

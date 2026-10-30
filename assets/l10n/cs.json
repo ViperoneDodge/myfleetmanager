@@ -598,5 +598,16 @@
  "lock.retry": "Odemknutí se nezdařilo, zkus to znovu",
  "settings.batteryTitle": "Spolehlivější upozornění",
  "settings.batterySub": "Otevři nastavení aplikace a zvol Baterie → Bez omezení: Android bude kontroly při zavřené aplikaci pozastavovat méně",
- "settings.batteryFailed": "Nastavení aplikace nelze otevřít"
+ "settings.batteryFailed": "Nastavení aplikace nelze otevřít",
+ "pw.change": "Změnit heslo",
+ "pw.current": "Současné heslo",
+ "pw.new": "Nové heslo",
+ "pw.confirm": "Zopakuj nové heslo",
+ "pw.show": "Zobrazit hesla",
+ "pw.short": "Nové heslo musí mít alespoň 8 znaků.",
+ "pw.mismatch": "Nová hesla se neshodují.",
+ "pw.same": "Nové heslo se musí lišit od současného.",
+ "pw.done": "Heslo bylo změněno",
+ "pw.forgot": "Nepamatuješ si ho? Získej e-mail pro obnovení",
+ "pw.google": "Přihlášení přes Google: heslo spravuješ ve svém účtu Google"
 }

@@ -598,3 +598,14 @@ Kilit açılamadı, tekrar dene
 Uyarıları daha güvenilir yap
 Uygulama ayarlarını aç ve Pil → Kısıtlamasız seç: Android, uygulama kapalıyken kontrolleri daha az duraklatır
 Uygulama ayarları açılamadı
+Şifreyi değiştir
+Mevcut şifre
+Yeni şifre
+Yeni şifreyi tekrarla
+Şifreleri göster
+Yeni şifre en az 8 karakter olmalı.
+İki yeni şifre eşleşmiyor.
+Yeni şifre mevcut şifreden farklı olmalı.
+Şifre değiştirildi
+Hatırlamıyor musun? Sıfırlamak için e-posta al
+Google ile giriş: şifre Google hesabında yönetilir

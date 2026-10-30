@@ -598,5 +598,16 @@
  "lock.retry": "Otključavanje nije uspjelo, pokušaj ponovno",
  "settings.batteryTitle": "Učini upozorenja pouzdanijima",
  "settings.batterySub": "Otvori postavke aplikacije i odaberi Baterija → Bez ograničenja: Android će rjeđe pauzirati provjere dok je aplikacija zatvorena",
- "settings.batteryFailed": "Nije moguće otvoriti postavke aplikacije"
+ "settings.batteryFailed": "Nije moguće otvoriti postavke aplikacije",
+ "pw.change": "Promijeni lozinku",
+ "pw.current": "Trenutačna lozinka",
+ "pw.new": "Nova lozinka",
+ "pw.confirm": "Ponovi novu lozinku",
+ "pw.show": "Prikaži lozinke",
+ "pw.short": "Nova lozinka mora imati najmanje 8 znakova.",
+ "pw.mismatch": "Dvije nove lozinke se ne podudaraju.",
+ "pw.same": "Nova lozinka mora se razlikovati od trenutačne.",
+ "pw.done": "Lozinka je promijenjena",
+ "pw.forgot": "Ne sjećaš je se? Primi e-poruku za ponovno postavljanje",
+ "pw.google": "Prijava putem Googlea: lozinkom upravljaš u svom Google računu"
 }

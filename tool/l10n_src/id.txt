@@ -598,3 +598,14 @@ Gagal membuka kunci, coba lagi
 Buat peringatan lebih andal
 Buka setelan aplikasi lalu pilih Baterai → Tidak dibatasi: Android akan lebih jarang menjeda pemeriksaan saat aplikasi ditutup
 Tidak dapat membuka setelan aplikasi
+Ubah kata sandi
+Kata sandi saat ini
+Kata sandi baru
+Ulangi kata sandi baru
+Tampilkan kata sandi
+Kata sandi baru minimal 8 karakter.
+Kedua kata sandi baru tidak sama.
+Kata sandi baru harus berbeda dari yang sekarang.
+Kata sandi diubah
+Lupa? Dapatkan email untuk mengatur ulang
+Masuk dengan Google: kata sandi dikelola di akun Google Anda

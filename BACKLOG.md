@@ -3,6 +3,7 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.1.14)
+- [x] **Cambia password** (Impostazioni → Account, solo account con email e password): password attuale, nuova (almeno 8 caratteri) e conferma; link per ricevere l'email di reimpostazione senza uscire. Per gli account Google la riga spiega che la password si gestisce nell'account Google. Da provare prima della build.
 - [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
 
 ## Versione 2.1.13

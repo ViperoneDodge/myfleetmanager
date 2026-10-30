@@ -598,3 +598,14 @@ Atbloķēšana neizdevās, mēģini vēlreiz
 Padarīt brīdinājumus uzticamākus
 Atver lietotnes iestatījumus un izvēlies Akumulators → Bez ierobežojumiem: Android retāk apturēs pārbaudes, kad lietotne ir aizvērta
 Neizdevās atvērt lietotnes iestatījumus
+Mainīt paroli
+Pašreizējā parole
+Jaunā parole
+Atkārto jauno paroli
+Rādīt paroles
+Jaunajai parolei jābūt vismaz 8 rakstzīmes garai.
+Jaunās paroles nesakrīt.
+Jaunajai parolei jāatšķiras no pašreizējās.
+Parole nomainīta
+Neatceries? Saņem e-pastu, lai to atiestatītu
+Pieteikšanās ar Google: paroli pārvaldi savā Google kontā

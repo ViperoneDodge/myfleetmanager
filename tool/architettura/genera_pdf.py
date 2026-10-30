@@ -325,7 +325,7 @@ files = [
     ['firebase_config.dart · version.dart', righe('firebase_config.dart', 'version.dart'), 'Parametri pubblici del progetto Firebase e numero di versione'],
     ['services/app_state.dart', righe('services/app_state.dart'), 'Stato centrale e orchestrazione di tutti i servizi'],
     ['services/local_store.dart', righe('services/local_store.dart'), 'Lettura e scrittura dei file JSON sul telefono (sessione, dati, impostazioni, storico notifiche, registro degli accessi)'],
-    ['services/auth_service.dart', righe('services/auth_service.dart'), 'Accesso: account locale, email e password, Google, Apple; eliminazione account; attesa del recupero dell\'accesso Firebase e ripristino silenzioso con Google'],
+    ['services/auth_service.dart', righe('services/auth_service.dart'), 'Accesso: account locale, email e password, Google, Apple; eliminazione account; attesa del recupero dell\'accesso Firebase e ripristino silenzioso con Google; cambio password con nuova verifica dell\'identità'],
     ['services/sync_service.dart', righe('services/sync_service.dart'), 'Sincronizzazione con Firestore: gruppi (ascolto continuo più lettura diretta dal server all\'avvio e a ogni «aggiorna»), veicoli, documenti, ruoli, Pro; registra i problemi per fonte (gruppi, veicoli, documenti, salvataggi) e li toglie quando la fonte torna a funzionare'],
     ['services/notification_service.dart', righe('services/notification_service.dart'), 'Promemoria delle scadenze programmati sul telefono, canali Android, prove'],
     ['services/push_service.dart', righe('services/push_service.dart'), 'Registrazione del telefono a Firebase Cloud Messaging'],

@@ -598,5 +598,16 @@
  "lock.retry": "Unlock failed, try again",
  "settings.batteryTitle": "Make alerts more reliable",
  "settings.batterySub": "Open the app settings and choose Battery → Unrestricted: Android will pause the checks less while the app is closed",
- "settings.batteryFailed": "Could not open the app settings"
+ "settings.batteryFailed": "Could not open the app settings",
+ "pw.change": "Change password",
+ "pw.current": "Current password",
+ "pw.new": "New password",
+ "pw.confirm": "Repeat the new password",
+ "pw.show": "Show passwords",
+ "pw.short": "The new password must be at least 8 characters long.",
+ "pw.mismatch": "The two new passwords do not match.",
+ "pw.same": "The new password must be different from the current one.",
+ "pw.done": "Password changed",
+ "pw.forgot": "Can't remember it? Get an email to reset it",
+ "pw.google": "Google sign-in: the password is managed in your Google account"
 }

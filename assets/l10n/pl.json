@@ -598,5 +598,16 @@
  "lock.retry": "Odblokowanie nie powiodło się, spróbuj ponownie",
  "settings.batteryTitle": "Zwiększ niezawodność alertów",
  "settings.batterySub": "Otwórz ustawienia aplikacji i wybierz Bateria → Bez ograniczeń: Android rzadziej wstrzyma sprawdzanie przy zamkniętej aplikacji",
- "settings.batteryFailed": "Nie można otworzyć ustawień aplikacji"
+ "settings.batteryFailed": "Nie można otworzyć ustawień aplikacji",
+ "pw.change": "Zmień hasło",
+ "pw.current": "Obecne hasło",
+ "pw.new": "Nowe hasło",
+ "pw.confirm": "Powtórz nowe hasło",
+ "pw.show": "Pokaż hasła",
+ "pw.short": "Nowe hasło musi mieć co najmniej 8 znaków.",
+ "pw.mismatch": "Nowe hasła nie są takie same.",
+ "pw.same": "Nowe hasło musi być inne niż obecne.",
+ "pw.done": "Hasło zostało zmienione",
+ "pw.forgot": "Nie pamiętasz? Otrzymaj e-mail do zresetowania",
+ "pw.google": "Logowanie przez Google: hasłem zarządzasz w koncie Google"
 }

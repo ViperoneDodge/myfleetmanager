@@ -598,3 +598,14 @@ Atrakinti nepavyko, bandyk dar kartą
 Patikimesni įspėjimai
 Atidaryk programos nustatymus ir pasirink Akumuliatorius → Neribota: Android rečiau sustabdys patikras, kai programa uždaryta
 Nepavyko atidaryti programos nustatymų
+Keisti slaptažodį
+Dabartinis slaptažodis
+Naujas slaptažodis
+Pakartok naują slaptažodį
+Rodyti slaptažodžius
+Naujame slaptažodyje turi būti bent 8 simboliai.
+Nauji slaptažodžiai nesutampa.
+Naujas slaptažodis turi skirtis nuo dabartinio.
+Slaptažodis pakeistas
+Neprisimeni? Gauk el. laišką jam atkurti
+Prisijungimas per Google: slaptažodį tvarkai savo Google paskyroje

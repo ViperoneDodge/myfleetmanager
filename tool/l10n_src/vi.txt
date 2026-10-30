@@ -598,3 +598,14 @@ Mở khóa không thành công, hãy thử lại
 Giúp cảnh báo đáng tin cậy hơn
 Mở cài đặt ứng dụng và chọn Pin → Không hạn chế: Android sẽ ít tạm dừng việc kiểm tra khi ứng dụng đóng
 Không thể mở cài đặt ứng dụng
+Đổi mật khẩu
+Mật khẩu hiện tại
+Mật khẩu mới
+Nhập lại mật khẩu mới
+Hiện mật khẩu
+Mật khẩu mới phải có ít nhất 8 ký tự.
+Hai mật khẩu mới không khớp.
+Mật khẩu mới phải khác mật khẩu hiện tại.
+Đã đổi mật khẩu
+Không nhớ? Nhận email để đặt lại
+Đăng nhập bằng Google: mật khẩu được quản lý trong tài khoản Google của bạn

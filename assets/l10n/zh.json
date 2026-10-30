@@ -598,5 +598,16 @@
  "lock.retry": "解锁失败，请重试",
  "settings.batteryTitle": "让提醒更可靠",
  "settings.batterySub": "打开应用设置并选择 电池 → 无限制：应用关闭时 Android 会更少暂停检查",
- "settings.batteryFailed": "无法打开应用设置"
+ "settings.batteryFailed": "无法打开应用设置",
+ "pw.change": "更改密码",
+ "pw.current": "当前密码",
+ "pw.new": "新密码",
+ "pw.confirm": "再次输入新密码",
+ "pw.show": "显示密码",
+ "pw.short": "新密码至少需要 8 个字符。",
+ "pw.mismatch": "两次输入的新密码不一致。",
+ "pw.same": "新密码必须与当前密码不同。",
+ "pw.done": "密码已更改",
+ "pw.forgot": "忘记了？接收重置邮件",
+ "pw.google": "使用 Google 登录：密码在你的 Google 账号中管理"
 }

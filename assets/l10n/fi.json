@@ -598,5 +598,16 @@
  "lock.retry": "Lukituksen avaus epäonnistui, yritä uudelleen",
  "settings.batteryTitle": "Tee ilmoituksista luotettavampia",
  "settings.batterySub": "Avaa sovelluksen asetukset ja valitse Akku → Rajoittamaton: Android keskeyttää tarkistukset harvemmin, kun sovellus on suljettu",
- "settings.batteryFailed": "Sovelluksen asetuksia ei voitu avata"
+ "settings.batteryFailed": "Sovelluksen asetuksia ei voitu avata",
+ "pw.change": "Vaihda salasana",
+ "pw.current": "Nykyinen salasana",
+ "pw.new": "Uusi salasana",
+ "pw.confirm": "Toista uusi salasana",
+ "pw.show": "Näytä salasanat",
+ "pw.short": "Uuden salasanan on oltava vähintään 8 merkkiä.",
+ "pw.mismatch": "Uudet salasanat eivät täsmää.",
+ "pw.same": "Uuden salasanan on oltava eri kuin nykyinen.",
+ "pw.done": "Salasana vaihdettu",
+ "pw.forgot": "Etkö muista sitä? Saat sähköpostin sen nollaamiseksi",
+ "pw.google": "Google-kirjautuminen: salasanaa hallitaan Google-tililläsi"
 }

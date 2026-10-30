@@ -598,3 +598,14 @@ Theip ar an díghlasáil, bain triail eile as
 Déan foláirimh níos iontaofa
 Oscail socruithe na haipe agus roghnaigh Ceallra → Gan srian: cuirfidh Android na seiceálacha ar sos níos lú nuair atá an aip dúnta
 Níorbh fhéidir socruithe na haipe a oscailt
+Athraigh an focal faire
+Focal faire reatha
+Focal faire nua
+Athscríobh an focal faire nua
+Taispeáin na focail fhaire
+Caithfidh 8 gcarachtar ar a laghad a bheith san fhocal faire nua.
+Ní hionann an dá fhocal faire nua.
+Caithfidh an focal faire nua a bheith difriúil ón gceann reatha.
+Athraíodh an focal faire
+Ní cuimhin leat é? Faigh ríomhphost chun é a athshocrú
+Síniú isteach le Google: bainistítear an focal faire i do chuntas Google

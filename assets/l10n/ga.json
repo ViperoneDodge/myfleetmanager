@@ -598,5 +598,16 @@
  "lock.retry": "Theip ar an díghlasáil, bain triail eile as",
  "settings.batteryTitle": "Déan foláirimh níos iontaofa",
  "settings.batterySub": "Oscail socruithe na haipe agus roghnaigh Ceallra → Gan srian: cuirfidh Android na seiceálacha ar sos níos lú nuair atá an aip dúnta",
- "settings.batteryFailed": "Níorbh fhéidir socruithe na haipe a oscailt"
+ "settings.batteryFailed": "Níorbh fhéidir socruithe na haipe a oscailt",
+ "pw.change": "Athraigh an focal faire",
+ "pw.current": "Focal faire reatha",
+ "pw.new": "Focal faire nua",
+ "pw.confirm": "Athscríobh an focal faire nua",
+ "pw.show": "Taispeáin na focail fhaire",
+ "pw.short": "Caithfidh 8 gcarachtar ar a laghad a bheith san fhocal faire nua.",
+ "pw.mismatch": "Ní hionann an dá fhocal faire nua.",
+ "pw.same": "Caithfidh an focal faire nua a bheith difriúil ón gceann reatha.",
+ "pw.done": "Athraíodh an focal faire",
+ "pw.forgot": "Ní cuimhin leat é? Faigh ríomhphost chun é a athshocrú",
+ "pw.google": "Síniú isteach le Google: bainistítear an focal faire i do chuntas Google"
 }

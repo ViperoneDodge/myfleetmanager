@@ -598,5 +598,16 @@
  "lock.retry": "A feloldás nem sikerült, próbáld újra",
  "settings.batteryTitle": "Megbízhatóbb értesítések",
  "settings.batterySub": "Nyisd meg az alkalmazás beállításait, és válaszd: Akkumulátor → Korlátozás nélkül – így az Android ritkábban szünetelteti az ellenőrzéseket bezárt alkalmazásnál",
- "settings.batteryFailed": "Az alkalmazás beállításai nem nyithatók meg"
+ "settings.batteryFailed": "Az alkalmazás beállításai nem nyithatók meg",
+ "pw.change": "Jelszó módosítása",
+ "pw.current": "Jelenlegi jelszó",
+ "pw.new": "Új jelszó",
+ "pw.confirm": "Új jelszó újra",
+ "pw.show": "Jelszavak megjelenítése",
+ "pw.short": "Az új jelszónak legalább 8 karakterből kell állnia.",
+ "pw.mismatch": "A két új jelszó nem egyezik.",
+ "pw.same": "Az új jelszó nem lehet azonos a jelenlegivel.",
+ "pw.done": "Jelszó módosítva",
+ "pw.forgot": "Nem emlékszel rá? Kérj e-mailt a visszaállításhoz",
+ "pw.google": "Google-bejelentkezés: a jelszót a Google-fiókodban kezelheted"
 }

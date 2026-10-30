@@ -11,6 +11,7 @@ import '../models.dart';
 import '../platform.dart';
 import '../services/app_lock.dart';
 import '../services/app_state.dart' show AppState;
+import '../services/auth_service.dart' show AuthService;
 import '../services/group_watch.dart' show testGroupWatchNow;
 import '../services/notification_service.dart';
 import '../services/support_service.dart';
@@ -50,6 +51,19 @@ class SettingsScreen extends StatelessWidget {
                   ? tr('settings.accountCloud')
                   : tr('settings.accountLocal')),
             ),
+            if (appState.isCloud && appState.auth.currentHasPassword)
+              ListTile(
+                leading: const Icon(Icons.password),
+                title: Text(tr('pw.change')),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => showDialog<void>(context: context, builder: (_) => const ChangePasswordDialog()),
+              )
+            else if (appState.isCloud && appState.auth.currentIsGoogle)
+              ListTile(
+                leading: const Icon(Icons.password),
+                title: Text(tr('pw.change')),
+                subtitle: Text(tr('pw.google')),
+              ),
             if (!appState.isCloud && appState.auth.cloudAvailable)
               ListTile(
                 leading: const Icon(Icons.cloud_upload_outlined),
@@ -905,6 +919,122 @@ class _DevCodeFieldState extends State<_DevCodeField> {
           ),
         );
       },
+    );
+  }
+}
+
+class ChangePasswordDialog extends StatefulWidget {
+  const ChangePasswordDialog();
+
+  @override
+  State<ChangePasswordDialog> createState() => ChangePasswordDialogState();
+}
+
+class ChangePasswordDialogState extends State<ChangePasswordDialog> {
+  final _current = TextEditingController();
+  final _next = TextEditingController();
+  final _confirm = TextEditingController();
+  bool _show = false;
+  bool _busy = false;
+  String? _error;
+
+  @override
+  void dispose() {
+    _current.dispose();
+    _next.dispose();
+    _confirm.dispose();
+    super.dispose();
+  }
+
+  Future<void> _save() async {
+    final err = AuthService.passwordChangeError(_current.text, _next.text, _confirm.text);
+    if (err != null) {
+      setState(() => _error = tr(err));
+      return;
+    }
+    setState(() {
+      _busy = true;
+      _error = null;
+    });
+    try {
+      await appState.auth.changePassword(_current.text, _next.text);
+      if (!mounted) return;
+      Navigator.pop(context);
+      showSnack(context, tr('pw.done'));
+    } catch (e) {
+      if (mounted) {
+        setState(() {
+          _busy = false;
+          _error = e.toString();
+        });
+      }
+    }
+  }
+
+  Future<void> _forgot() async {
+    final email = appState.session?.email ?? '';
+    if (email.isEmpty) return;
+    try {
+      await appState.auth.resetPassword(email);
+      if (!mounted) return;
+      Navigator.pop(context);
+      showSnack(context, tr('login.forgotSent', {'email': email}));
+    } catch (e) {
+      if (mounted) setState(() => _error = e.toString());
+    }
+  }
+
+  Widget _field(TextEditingController c, String label, {bool last = false}) => Padding(
+        padding: const EdgeInsets.only(bottom: 10),
+        child: TextField(
+          controller: c,
+          obscureText: !_show,
+          enabled: !_busy,
+          textInputAction: last ? TextInputAction.done : TextInputAction.next,
+          onSubmitted: last ? (_) => _save() : null,
+          decoration: InputDecoration(labelText: label, border: const OutlineInputBorder(), isDense: true),
+        ),
+      );
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return AlertDialog(
+      title: Text(tr('pw.change')),
+      content: SingleChildScrollView(
+        child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+          _field(_current, tr('pw.current')),
+          _field(_next, tr('pw.new')),
+          _field(_confirm, tr('pw.confirm'), last: true),
+          CheckboxListTile(
+            contentPadding: EdgeInsets.zero,
+            dense: true,
+            controlAffinity: ListTileControlAffinity.leading,
+            value: _show,
+            onChanged: _busy ? null : (v) => setState(() => _show = v ?? false),
+            title: Text(tr('pw.show')),
+          ),
+          if (_error != null)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: Text(_error!, style: TextStyle(color: scheme.error)),
+            ),
+          TextButton(
+            style: TextButton.styleFrom(padding: EdgeInsets.zero, alignment: Alignment.centerLeft),
+            onPressed: _busy ? null : _forgot,
+            child: Text(tr('pw.forgot')),
+          ),
+        ]),
+      ),
+      actions: [
+        TextButton(onPressed: _busy ? null : () => Navigator.pop(context), child: Text(tr('common.cancel'))),
+        FilledButton(
+          onPressed: _busy ? null : _save,
+          child: _busy
+              ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2))
+              : Text(tr('common.save')),
+        ),
+      ],
     );
   }
 }

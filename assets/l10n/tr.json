@@ -598,5 +598,16 @@
  "lock.retry": "Kilit açılamadı, tekrar dene",
  "settings.batteryTitle": "Uyarıları daha güvenilir yap",
  "settings.batterySub": "Uygulama ayarlarını aç ve Pil → Kısıtlamasız seç: Android, uygulama kapalıyken kontrolleri daha az duraklatır",
- "settings.batteryFailed": "Uygulama ayarları açılamadı"
+ "settings.batteryFailed": "Uygulama ayarları açılamadı",
+ "pw.change": "Şifreyi değiştir",
+ "pw.current": "Mevcut şifre",
+ "pw.new": "Yeni şifre",
+ "pw.confirm": "Yeni şifreyi tekrarla",
+ "pw.show": "Şifreleri göster",
+ "pw.short": "Yeni şifre en az 8 karakter olmalı.",
+ "pw.mismatch": "İki yeni şifre eşleşmiyor.",
+ "pw.same": "Yeni şifre mevcut şifreden farklı olmalı.",
+ "pw.done": "Şifre değiştirildi",
+ "pw.forgot": "Hatırlamıyor musun? Sıfırlamak için e-posta al",
+ "pw.google": "Google ile giriş: şifre Google hesabında yönetilir"
 }

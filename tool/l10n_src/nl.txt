@@ -598,3 +598,14 @@ Ontgrendelen mislukt, probeer opnieuw
 Meldingen betrouwbaarder maken
 Open de app-instellingen en kies Batterij → Onbeperkt: Android pauzeert de controles minder als de app gesloten is
 Kon de app-instellingen niet openen
+Wachtwoord wijzigen
+Huidig wachtwoord
+Nieuw wachtwoord
+Herhaal het nieuwe wachtwoord
+Wachtwoorden tonen
+Het nieuwe wachtwoord moet minstens 8 tekens lang zijn.
+De twee nieuwe wachtwoorden komen niet overeen.
+Het nieuwe wachtwoord moet anders zijn dan het huidige.
+Wachtwoord gewijzigd
+Weet je het niet meer? Ontvang een e-mail om het opnieuw in te stellen
+Inloggen met Google: het wachtwoord beheer je in je Google-account

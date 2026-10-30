@@ -598,5 +598,16 @@
  "lock.retry": "Oplåsning mislykkedes, prøv igen",
  "settings.batteryTitle": "Gør advarslerne mere pålidelige",
  "settings.batterySub": "Åbn appindstillingerne og vælg Batteri → Ubegrænset: Android sætter kontrollerne mindre på pause, når appen er lukket",
- "settings.batteryFailed": "Kunne ikke åbne appindstillingerne"
+ "settings.batteryFailed": "Kunne ikke åbne appindstillingerne",
+ "pw.change": "Skift adgangskode",
+ "pw.current": "Nuværende adgangskode",
+ "pw.new": "Ny adgangskode",
+ "pw.confirm": "Gentag den nye adgangskode",
+ "pw.show": "Vis adgangskoder",
+ "pw.short": "Den nye adgangskode skal være på mindst 8 tegn.",
+ "pw.mismatch": "De to nye adgangskoder er ikke ens.",
+ "pw.same": "Den nye adgangskode skal være forskellig fra den nuværende.",
+ "pw.done": "Adgangskoden er skiftet",
+ "pw.forgot": "Kan du ikke huske den? Få en e-mail til at nulstille den",
+ "pw.google": "Login med Google: adgangskoden administreres i din Google-konto"
 }

@@ -598,5 +598,16 @@
  "lock.retry": "Ekki tókst að opna, reyndu aftur",
  "settings.batteryTitle": "Gera tilkynningar áreiðanlegri",
  "settings.batterySub": "Opnaðu stillingar forritsins og veldu Rafhlaða → Án takmarkana: Android stöðvar athuganir sjaldnar þegar forritið er lokað",
- "settings.batteryFailed": "Ekki tókst að opna stillingar forritsins"
+ "settings.batteryFailed": "Ekki tókst að opna stillingar forritsins",
+ "pw.change": "Breyta lykilorði",
+ "pw.current": "Núverandi lykilorð",
+ "pw.new": "Nýtt lykilorð",
+ "pw.confirm": "Endurtaktu nýja lykilorðið",
+ "pw.show": "Sýna lykilorð",
+ "pw.short": "Nýja lykilorðið verður að vera minnst 8 stafir.",
+ "pw.mismatch": "Nýju lykilorðin passa ekki saman.",
+ "pw.same": "Nýja lykilorðið verður að vera annað en það núverandi.",
+ "pw.done": "Lykilorði breytt",
+ "pw.forgot": "Manstu það ekki? Fáðu tölvupóst til að endurstilla það",
+ "pw.google": "Innskráning með Google: lykilorðinu er stjórnað í Google-reikningnum þínum"
 }

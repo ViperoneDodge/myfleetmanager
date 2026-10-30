@@ -598,3 +598,14 @@ Deblocarea a eșuat, încearcă din nou
 Alerte mai sigure
 Deschide setările aplicației și alege Baterie → Fără restricții: Android va suspenda mai rar verificările când aplicația e închisă
 Nu s-au putut deschide setările aplicației
+Schimbă parola
+Parola actuală
+Parola nouă
+Repetă parola nouă
+Afișează parolele
+Parola nouă trebuie să aibă cel puțin 8 caractere.
+Cele două parole noi nu coincid.
+Parola nouă trebuie să fie diferită de cea actuală.
+Parola a fost schimbată
+Nu ți-o amintești? Primește un e-mail pentru resetare
+Conectare cu Google: parola se gestionează în contul tău Google

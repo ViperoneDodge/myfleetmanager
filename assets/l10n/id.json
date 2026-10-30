@@ -598,5 +598,16 @@
  "lock.retry": "Gagal membuka kunci, coba lagi",
  "settings.batteryTitle": "Buat peringatan lebih andal",
  "settings.batterySub": "Buka setelan aplikasi lalu pilih Baterai → Tidak dibatasi: Android akan lebih jarang menjeda pemeriksaan saat aplikasi ditutup",
- "settings.batteryFailed": "Tidak dapat membuka setelan aplikasi"
+ "settings.batteryFailed": "Tidak dapat membuka setelan aplikasi",
+ "pw.change": "Ubah kata sandi",
+ "pw.current": "Kata sandi saat ini",
+ "pw.new": "Kata sandi baru",
+ "pw.confirm": "Ulangi kata sandi baru",
+ "pw.show": "Tampilkan kata sandi",
+ "pw.short": "Kata sandi baru minimal 8 karakter.",
+ "pw.mismatch": "Kedua kata sandi baru tidak sama.",
+ "pw.same": "Kata sandi baru harus berbeda dari yang sekarang.",
+ "pw.done": "Kata sandi diubah",
+ "pw.forgot": "Lupa? Dapatkan email untuk mengatur ulang",
+ "pw.google": "Masuk dengan Google: kata sandi dikelola di akun Google Anda"
 }

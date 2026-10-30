@@ -129,6 +129,36 @@ class AuthService {
         google: isGoogleUser(user),
       );
 
+  bool get currentHasPassword {
+    final u = cloudAvailable ? FirebaseAuth.instance.currentUser : null;
+    return u != null && u.providerData.any((p) => p.providerId == 'password');
+  }
+
+  static String? passwordChangeError(String current, String next, String confirm) {
+    if (current.isEmpty || next.isEmpty || confirm.isEmpty) return 'login.fillAll';
+    if (next.length < 8) return 'pw.short';
+    if (next != confirm) return 'pw.mismatch';
+    if (next == current) return 'pw.same';
+    return null;
+  }
+
+  Future<void> changePassword(String current, String next) async {
+    final u = cloudAvailable ? FirebaseAuth.instance.currentUser : null;
+    final email = u?.email;
+    if (u == null || email == null) throw AuthException(tr('auth.generic', {'code': 'no-user'}));
+    try {
+      await u.reauthenticateWithCredential(EmailAuthProvider.credential(email: email, password: current));
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'wrong-password' || e.code == 'invalid-credential') throw AuthException(tr('auth.wrongPass'));
+      throw AuthException(_firebaseError(e));
+    }
+    try {
+      await u.updatePassword(next);
+    } on FirebaseAuthException catch (e) {
+      throw AuthException(_firebaseError(e));
+    }
+  }
+
   bool get currentIsGoogle {
     final u = cloudAvailable ? FirebaseAuth.instance.currentUser : null;
     return u != null && isGoogleUser(u);

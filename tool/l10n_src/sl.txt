@@ -598,3 +598,14 @@ Odklepanje ni uspelo, poskusi znova
 Naredi opozorila zanesljivejša
 Odpri nastavitve aplikacije in izberi Baterija → Neomejeno: Android bo redkeje ustavljal preverjanja, ko je aplikacija zaprta
 Nastavitev aplikacije ni mogoče odpreti
+Spremeni geslo
+Trenutno geslo
+Novo geslo
+Ponovi novo geslo
+Prikaži gesli
+Novo geslo mora imeti vsaj 8 znakov.
+Novi gesli se ne ujemata.
+Novo geslo mora biti drugačno od trenutnega.
+Geslo je spremenjeno
+Se ga ne spomniš? Prejmi e-pošto za ponastavitev
+Prijava z Googlom: geslo upravljaš v svojem Google računu

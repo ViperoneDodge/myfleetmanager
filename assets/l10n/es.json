@@ -598,5 +598,16 @@
  "lock.retry": "No se pudo desbloquear, inténtalo de nuevo",
  "settings.batteryTitle": "Hacer los avisos más fiables",
  "settings.batterySub": "Abre los ajustes de la app y elige Batería → Sin restricciones: Android pausará menos las comprobaciones con la app cerrada",
- "settings.batteryFailed": "No se pudieron abrir los ajustes de la app"
+ "settings.batteryFailed": "No se pudieron abrir los ajustes de la app",
+ "pw.change": "Cambiar contraseña",
+ "pw.current": "Contraseña actual",
+ "pw.new": "Nueva contraseña",
+ "pw.confirm": "Repite la nueva contraseña",
+ "pw.show": "Mostrar contraseñas",
+ "pw.short": "La nueva contraseña debe tener al menos 8 caracteres.",
+ "pw.mismatch": "Las dos contraseñas nuevas no coinciden.",
+ "pw.same": "La nueva contraseña debe ser distinta de la actual.",
+ "pw.done": "Contraseña cambiada",
+ "pw.forgot": "¿No la recuerdas? Recibe un correo para restablecerla",
+ "pw.google": "Acceso con Google: la contraseña se gestiona en tu cuenta de Google"
 }
