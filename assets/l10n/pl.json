@@ -595,5 +595,8 @@
  "lock.unlock": "Odblokuj",
  "lock.reason": "Odblokuj MyFleetManager",
  "lock.unavailable": "Na tym telefonie nie ustawiono blokady ekranu ani odblokowania biometrycznego",
- "lock.retry": "Odblokowanie nie powiodło się, spróbuj ponownie"
+ "lock.retry": "Odblokowanie nie powiodło się, spróbuj ponownie",
+ "settings.batteryTitle": "Zwiększ niezawodność alertów",
+ "settings.batterySub": "Otwórz ustawienia aplikacji i wybierz Bateria → Bez ograniczeń: Android rzadziej wstrzyma sprawdzanie przy zamkniętej aplikacji",
+ "settings.batteryFailed": "Nie można otworzyć ustawień aplikacji"
 }

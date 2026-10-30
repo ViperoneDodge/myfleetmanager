@@ -595,3 +595,6 @@ Odblokuj
 Odblokuj MyFleetManager
 Na tym telefonie nie ustawiono blokady ekranu ani odblokowania biometrycznego
 Odblokowanie nie powiodło się, spróbuj ponownie
+Zwiększ niezawodność alertów
+Otwórz ustawienia aplikacji i wybierz Bateria → Bez ograniczeń: Android rzadziej wstrzyma sprawdzanie przy zamkniętej aplikacji
+Nie można otworzyć ustawień aplikacji

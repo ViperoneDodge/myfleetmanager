@@ -595,5 +595,8 @@
  "lock.unlock": "Buka kunci",
  "lock.reason": "Buka kunci MyFleetManager",
  "lock.unavailable": "Ponsel ini tidak memiliki kunci layar atau buka kunci biometrik",
- "lock.retry": "Gagal membuka kunci, coba lagi"
+ "lock.retry": "Gagal membuka kunci, coba lagi",
+ "settings.batteryTitle": "Buat peringatan lebih andal",
+ "settings.batterySub": "Buka setelan aplikasi lalu pilih Baterai → Tidak dibatasi: Android akan lebih jarang menjeda pemeriksaan saat aplikasi ditutup",
+ "settings.batteryFailed": "Tidak dapat membuka setelan aplikasi"
 }

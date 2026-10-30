@@ -595,3 +595,6 @@ Odemknout
 Odemknout MyFleetManager
 Na tomto telefonu není nastaven zámek obrazovky ani biometrické odemykání
 Odemknutí se nezdařilo, zkus to znovu
+Spolehlivější upozornění
+Otevři nastavení aplikace a zvol Baterie → Bez omezení: Android bude kontroly při zavřené aplikaci pozastavovat méně
+Nastavení aplikace nelze otevřít

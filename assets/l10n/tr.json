@@ -595,5 +595,8 @@
  "lock.unlock": "Kilidi aç",
  "lock.reason": "MyFleetManager kilidini aç",
  "lock.unavailable": "Bu telefonda ekran kilidi veya biyometrik kilit açma ayarlanmamış",
- "lock.retry": "Kilit açılamadı, tekrar dene"
+ "lock.retry": "Kilit açılamadı, tekrar dene",
+ "settings.batteryTitle": "Uyarıları daha güvenilir yap",
+ "settings.batterySub": "Uygulama ayarlarını aç ve Pil → Kısıtlamasız seç: Android, uygulama kapalıyken kontrolleri daha az duraklatır",
+ "settings.batteryFailed": "Uygulama ayarları açılamadı"
 }

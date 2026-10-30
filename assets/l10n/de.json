@@ -595,5 +595,8 @@
  "lock.unlock": "Entsperren",
  "lock.reason": "MyFleetManager entsperren",
  "lock.unavailable": "Auf diesem Telefon ist keine Displaysperre und keine biometrische Entsperrung eingerichtet",
- "lock.retry": "Entsperren fehlgeschlagen, versuche es erneut"
+ "lock.retry": "Entsperren fehlgeschlagen, versuche es erneut",
+ "settings.batteryTitle": "Hinweise zuverlässiger machen",
+ "settings.batterySub": "Öffne die App-Einstellungen und wähle Akku → Nicht eingeschränkt: Android pausiert die Prüfungen bei geschlossener App seltener",
+ "settings.batteryFailed": "App-Einstellungen konnten nicht geöffnet werden"
 }

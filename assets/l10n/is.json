@@ -595,5 +595,8 @@
  "lock.unlock": "Opna",
  "lock.reason": "Opna MyFleetManager",
  "lock.unavailable": "Enginn skjálás eða lífkennaopnun er stillt á þessum síma",
- "lock.retry": "Ekki tókst að opna, reyndu aftur"
+ "lock.retry": "Ekki tókst að opna, reyndu aftur",
+ "settings.batteryTitle": "Gera tilkynningar áreiðanlegri",
+ "settings.batterySub": "Opnaðu stillingar forritsins og veldu Rafhlaða → Án takmarkana: Android stöðvar athuganir sjaldnar þegar forritið er lokað",
+ "settings.batteryFailed": "Ekki tókst að opna stillingar forritsins"
 }

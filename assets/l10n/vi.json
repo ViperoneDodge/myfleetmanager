@@ -595,5 +595,8 @@
  "lock.unlock": "Mở khóa",
  "lock.reason": "Mở khóa MyFleetManager",
  "lock.unavailable": "Điện thoại này chưa cài khóa màn hình hoặc mở khóa sinh trắc học",
- "lock.retry": "Mở khóa không thành công, hãy thử lại"
+ "lock.retry": "Mở khóa không thành công, hãy thử lại",
+ "settings.batteryTitle": "Giúp cảnh báo đáng tin cậy hơn",
+ "settings.batterySub": "Mở cài đặt ứng dụng và chọn Pin → Không hạn chế: Android sẽ ít tạm dừng việc kiểm tra khi ứng dụng đóng",
+ "settings.batteryFailed": "Không thể mở cài đặt ứng dụng"
 }

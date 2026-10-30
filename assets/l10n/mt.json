@@ -595,5 +595,8 @@
  "lock.unlock": "Iftaħ",
  "lock.reason": "Iftaħ MyFleetManager",
  "lock.unavailable": "Dan it-telefon m’għandux lock tal-iskrin jew ftuħ bijometriku",
- "lock.retry": "Il-ftuħ ma rnexxiex, erġa’ pprova"
+ "lock.retry": "Il-ftuħ ma rnexxiex, erġa’ pprova",
+ "settings.batteryTitle": "Agħmel it-twissijiet aktar affidabbli",
+ "settings.batterySub": "Iftaħ is-settings tal-app u agħżel Batterija → Mingħajr restrizzjonijiet: Android jieqaf inqas mill-kontrolli meta l-app tkun magħluqa",
+ "settings.batteryFailed": "Ma setgħux jinfetħu s-settings tal-app"
 }

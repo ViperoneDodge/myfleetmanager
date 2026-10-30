@@ -595,5 +595,8 @@
  "lock.unlock": "Avaa lukitus",
  "lock.reason": "Avaa MyFleetManagerin lukitus",
  "lock.unavailable": "Tässä puhelimessa ei ole näytön lukitusta eikä biometristä lukituksen avausta",
- "lock.retry": "Lukituksen avaus epäonnistui, yritä uudelleen"
+ "lock.retry": "Lukituksen avaus epäonnistui, yritä uudelleen",
+ "settings.batteryTitle": "Tee ilmoituksista luotettavampia",
+ "settings.batterySub": "Avaa sovelluksen asetukset ja valitse Akku → Rajoittamaton: Android keskeyttää tarkistukset harvemmin, kun sovellus on suljettu",
+ "settings.batteryFailed": "Sovelluksen asetuksia ei voitu avata"
 }

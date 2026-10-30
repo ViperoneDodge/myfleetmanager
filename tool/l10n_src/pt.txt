@@ -595,3 +595,6 @@ Desbloquear
 Desbloquear a MyFleetManager
 Este telemóvel não tem bloqueio de ecrã nem desbloqueio biométrico configurado
 Desbloqueio falhou, tenta novamente
+Tornar os alertas mais fiáveis
+Abre as definições da app e escolhe Bateria → Sem restrições: o Android vai suspender menos as verificações com a app fechada
+Não foi possível abrir as definições da app

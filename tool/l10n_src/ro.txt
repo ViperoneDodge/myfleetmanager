@@ -595,3 +595,6 @@ Deblochează
 Deblochează MyFleetManager
 Pe acest telefon nu este setată nicio blocare a ecranului sau deblocare biometrică
 Deblocarea a eșuat, încearcă din nou
+Alerte mai sigure
+Deschide setările aplicației și alege Baterie → Fără restricții: Android va suspenda mai rar verificările când aplicația e închisă
+Nu s-au putut deschide setările aplicației

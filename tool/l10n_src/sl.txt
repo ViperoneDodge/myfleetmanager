@@ -595,3 +595,6 @@ Odkleni
 Odkleni MyFleetManager
 Na tem telefonu ni nastavljeno zaklepanje zaslona ali biometrično odklepanje
 Odklepanje ni uspelo, poskusi znova
+Naredi opozorila zanesljivejša
+Odpri nastavitve aplikacije in izberi Baterija → Neomejeno: Android bo redkeje ustavljal preverjanja, ko je aplikacija zaprta
+Nastavitev aplikacije ni mogoče odpreti

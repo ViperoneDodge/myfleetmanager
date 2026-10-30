@@ -595,3 +595,6 @@ lock.unlock
 lock.reason
 lock.unavailable
 lock.retry
+settings.batteryTitle
+settings.batterySub
+settings.batteryFailed

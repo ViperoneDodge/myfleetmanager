@@ -595,5 +595,8 @@
  "lock.unlock": "解锁",
  "lock.reason": "解锁 MyFleetManager",
  "lock.unavailable": "此手机未设置屏幕锁定或生物识别解锁",
- "lock.retry": "解锁失败，请重试"
+ "lock.retry": "解锁失败，请重试",
+ "settings.batteryTitle": "让提醒更可靠",
+ "settings.batterySub": "打开应用设置并选择 电池 → 无限制：应用关闭时 Android 会更少暂停检查",
+ "settings.batteryFailed": "无法打开应用设置"
 }

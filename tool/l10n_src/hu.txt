@@ -595,3 +595,6 @@ Feloldás
 MyFleetManager feloldása
 Ezen a telefonon nincs beállítva képernyőzár vagy biometrikus feloldás
 A feloldás nem sikerült, próbáld újra
+Megbízhatóbb értesítések
+Nyisd meg az alkalmazás beállításait, és válaszd: Akkumulátor → Korlátozás nélkül – így az Android ritkábban szünetelteti az ellenőrzéseket bezárt alkalmazásnál
+Az alkalmazás beállításai nem nyithatók meg

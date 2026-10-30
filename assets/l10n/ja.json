@@ -595,5 +595,8 @@
  "lock.unlock": "ロック解除",
  "lock.reason": "MyFleetManager のロックを解除",
  "lock.unavailable": "この端末には画面ロックも生体認証も設定されていません",
- "lock.retry": "ロックを解除できませんでした。もう一度お試しください"
+ "lock.retry": "ロックを解除できませんでした。もう一度お試しください",
+ "settings.batteryTitle": "通知の信頼性を上げる",
+ "settings.batterySub": "アプリの設定を開き、バッテリー → 制限なし を選択すると、アプリを閉じているときのチェックが止められにくくなります",
+ "settings.batteryFailed": "アプリの設定を開けませんでした"
 }

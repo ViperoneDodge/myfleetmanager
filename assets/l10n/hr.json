@@ -595,5 +595,8 @@
  "lock.unlock": "Otključaj",
  "lock.reason": "Otključaj MyFleetManager",
  "lock.unavailable": "Na ovom telefonu nije postavljeno zaključavanje zaslona ni biometrijsko otključavanje",
- "lock.retry": "Otključavanje nije uspjelo, pokušaj ponovno"
+ "lock.retry": "Otključavanje nije uspjelo, pokušaj ponovno",
+ "settings.batteryTitle": "Učini upozorenja pouzdanijima",
+ "settings.batterySub": "Otvori postavke aplikacije i odaberi Baterija → Bez ograničenja: Android će rjeđe pauzirati provjere dok je aplikacija zatvorena",
+ "settings.batteryFailed": "Nije moguće otvoriti postavke aplikacije"
 }

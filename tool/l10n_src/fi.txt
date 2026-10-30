@@ -595,3 +595,6 @@ Avaa lukitus
 Avaa MyFleetManagerin lukitus
 Tässä puhelimessa ei ole näytön lukitusta eikä biometristä lukituksen avausta
 Lukituksen avaus epäonnistui, yritä uudelleen
+Tee ilmoituksista luotettavampia
+Avaa sovelluksen asetukset ja valitse Akku → Rajoittamaton: Android keskeyttää tarkistukset harvemmin, kun sovellus on suljettu
+Sovelluksen asetuksia ei voitu avata

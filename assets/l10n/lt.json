@@ -595,5 +595,8 @@
  "lock.unlock": "Atrakinti",
  "lock.reason": "Atrakinti MyFleetManager",
  "lock.unavailable": "Šiame telefone nenustatytas ekrano užraktas ar biometrinis atrakinimas",
- "lock.retry": "Atrakinti nepavyko, bandyk dar kartą"
+ "lock.retry": "Atrakinti nepavyko, bandyk dar kartą",
+ "settings.batteryTitle": "Patikimesni įspėjimai",
+ "settings.batterySub": "Atidaryk programos nustatymus ir pasirink Akumuliatorius → Neribota: Android rečiau sustabdys patikras, kai programa uždaryta",
+ "settings.batteryFailed": "Nepavyko atidaryti programos nustatymų"
 }

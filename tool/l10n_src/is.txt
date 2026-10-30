@@ -595,3 +595,6 @@ Opna
 Opna MyFleetManager
 Enginn skjálás eða lífkennaopnun er stillt á þessum síma
 Ekki tókst að opna, reyndu aftur
+Gera tilkynningar áreiðanlegri
+Opnaðu stillingar forritsins og veldu Rafhlaða → Án takmarkana: Android stöðvar athuganir sjaldnar þegar forritið er lokað
+Ekki tókst að opna stillingar forritsins

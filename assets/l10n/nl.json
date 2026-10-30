@@ -595,5 +595,8 @@
  "lock.unlock": "Ontgrendelen",
  "lock.reason": "MyFleetManager ontgrendelen",
  "lock.unavailable": "Op deze telefoon is geen schermvergrendeling of biometrische ontgrendeling ingesteld",
- "lock.retry": "Ontgrendelen mislukt, probeer opnieuw"
+ "lock.retry": "Ontgrendelen mislukt, probeer opnieuw",
+ "settings.batteryTitle": "Meldingen betrouwbaarder maken",
+ "settings.batterySub": "Open de app-instellingen en kies Batterij → Onbeperkt: Android pauzeert de controles minder als de app gesloten is",
+ "settings.batteryFailed": "Kon de app-instellingen niet openen"
 }

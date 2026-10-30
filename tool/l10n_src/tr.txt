@@ -595,3 +595,6 @@ Kilidi aç
 MyFleetManager kilidini aç
 Bu telefonda ekran kilidi veya biyometrik kilit açma ayarlanmamış
 Kilit açılamadı, tekrar dene
+Uyarıları daha güvenilir yap
+Uygulama ayarlarını aç ve Pil → Kısıtlamasız seç: Android, uygulama kapalıyken kontrolleri daha az duraklatır
+Uygulama ayarları açılamadı

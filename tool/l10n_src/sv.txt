@@ -595,3 +595,6 @@ Lås upp
 Lås upp MyFleetManager
 Den här telefonen har inget skärmlås eller biometrisk upplåsning inställt
 Upplåsningen misslyckades, försök igen
+Gör aviseringarna mer pålitliga
+Öppna appinställningarna och välj Batteri → Obegränsad: Android pausar kontrollerna mindre när appen är stängd
+Kunde inte öppna appinställningarna

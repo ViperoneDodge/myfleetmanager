@@ -595,3 +595,6 @@ Ontgrendelen
 MyFleetManager ontgrendelen
 Op deze telefoon is geen schermvergrendeling of biometrische ontgrendeling ingesteld
 Ontgrendelen mislukt, probeer opnieuw
+Meldingen betrouwbaarder maken
+Open de app-instellingen en kies Batterij → Onbeperkt: Android pauzeert de controles minder als de app gesloten is
+Kon de app-instellingen niet openen

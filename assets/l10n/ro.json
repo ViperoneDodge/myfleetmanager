@@ -595,5 +595,8 @@
  "lock.unlock": "Deblochează",
  "lock.reason": "Deblochează MyFleetManager",
  "lock.unavailable": "Pe acest telefon nu este setată nicio blocare a ecranului sau deblocare biometrică",
- "lock.retry": "Deblocarea a eșuat, încearcă din nou"
+ "lock.retry": "Deblocarea a eșuat, încearcă din nou",
+ "settings.batteryTitle": "Alerte mai sigure",
+ "settings.batterySub": "Deschide setările aplicației și alege Baterie → Fără restricții: Android va suspenda mai rar verificările când aplicația e închisă",
+ "settings.batteryFailed": "Nu s-au putut deschide setările aplicației"
 }

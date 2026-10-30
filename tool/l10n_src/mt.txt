@@ -595,3 +595,6 @@ Iftaħ
 Iftaħ MyFleetManager
 Dan it-telefon m’għandux lock tal-iskrin jew ftuħ bijometriku
 Il-ftuħ ma rnexxiex, erġa’ pprova
+Agħmel it-twissijiet aktar affidabbli
+Iftaħ is-settings tal-app u agħżel Batterija → Mingħajr restrizzjonijiet: Android jieqaf inqas mill-kontrolli meta l-app tkun magħluqa
+Ma setgħux jinfetħu s-settings tal-app

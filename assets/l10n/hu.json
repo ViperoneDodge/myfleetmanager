@@ -595,5 +595,8 @@
  "lock.unlock": "Feloldás",
  "lock.reason": "MyFleetManager feloldása",
  "lock.unavailable": "Ezen a telefonon nincs beállítva képernyőzár vagy biometrikus feloldás",
- "lock.retry": "A feloldás nem sikerült, próbáld újra"
+ "lock.retry": "A feloldás nem sikerült, próbáld újra",
+ "settings.batteryTitle": "Megbízhatóbb értesítések",
+ "settings.batterySub": "Nyisd meg az alkalmazás beállításait, és válaszd: Akkumulátor → Korlátozás nélkül – így az Android ritkábban szünetelteti az ellenőrzéseket bezárt alkalmazásnál",
+ "settings.batteryFailed": "Az alkalmazás beállításai nem nyithatók meg"
 }

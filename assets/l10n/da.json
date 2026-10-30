@@ -595,5 +595,8 @@
  "lock.unlock": "Lås op",
  "lock.reason": "Lås MyFleetManager op",
  "lock.unavailable": "Denne telefon har ingen skærmlås eller biometrisk oplåsning konfigureret",
- "lock.retry": "Oplåsning mislykkedes, prøv igen"
+ "lock.retry": "Oplåsning mislykkedes, prøv igen",
+ "settings.batteryTitle": "Gør advarslerne mere pålidelige",
+ "settings.batterySub": "Åbn appindstillingerne og vælg Batteri → Ubegrænset: Android sætter kontrollerne mindre på pause, når appen er lukket",
+ "settings.batteryFailed": "Kunne ikke åbne appindstillingerne"
 }

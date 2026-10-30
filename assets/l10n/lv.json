@@ -595,5 +595,8 @@
  "lock.unlock": "Atbloķēt",
  "lock.reason": "Atbloķēt MyFleetManager",
  "lock.unavailable": "Šajā tālrunī nav iestatīta ekrāna bloķēšana vai biometriskā atbloķēšana",
- "lock.retry": "Atbloķēšana neizdevās, mēģini vēlreiz"
+ "lock.retry": "Atbloķēšana neizdevās, mēģini vēlreiz",
+ "settings.batteryTitle": "Padarīt brīdinājumus uzticamākus",
+ "settings.batterySub": "Atver lietotnes iestatījumus un izvēlies Akumulators → Bez ierobežojumiem: Android retāk apturēs pārbaudes, kad lietotne ir aizvērta",
+ "settings.batteryFailed": "Neizdevās atvērt lietotnes iestatījumus"
 }

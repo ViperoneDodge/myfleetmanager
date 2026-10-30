@@ -595,5 +595,8 @@
  "lock.unlock": "Desbloquear",
  "lock.reason": "Desbloquear MyFleetManager",
  "lock.unavailable": "Este teléfono no tiene bloqueo de pantalla ni desbloqueo biométrico configurado",
- "lock.retry": "No se pudo desbloquear, inténtalo de nuevo"
+ "lock.retry": "No se pudo desbloquear, inténtalo de nuevo",
+ "settings.batteryTitle": "Hacer los avisos más fiables",
+ "settings.batterySub": "Abre los ajustes de la app y elige Batería → Sin restricciones: Android pausará menos las comprobaciones con la app cerrada",
+ "settings.batteryFailed": "No se pudieron abrir los ajustes de la app"
 }

@@ -595,3 +595,6 @@ Mở khóa
 Mở khóa MyFleetManager
 Điện thoại này chưa cài khóa màn hình hoặc mở khóa sinh trắc học
 Mở khóa không thành công, hãy thử lại
+Giúp cảnh báo đáng tin cậy hơn
+Mở cài đặt ứng dụng và chọn Pin → Không hạn chế: Android sẽ ít tạm dừng việc kiểm tra khi ứng dụng đóng
+Không thể mở cài đặt ứng dụng

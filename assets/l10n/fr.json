@@ -595,5 +595,8 @@
  "lock.unlock": "Déverrouiller",
  "lock.reason": "Déverrouiller MyFleetManager",
  "lock.unavailable": "Aucun verrouillage d'écran ni déverrouillage biométrique n'est configuré sur ce téléphone",
- "lock.retry": "Déverrouillage échoué, réessaie"
+ "lock.retry": "Déverrouillage échoué, réessaie",
+ "settings.batteryTitle": "Rendre les alertes plus fiables",
+ "settings.batterySub": "Ouvre les paramètres de l'app et choisis Batterie → Non restreinte : Android suspendra moins les vérifications quand l'app est fermée",
+ "settings.batteryFailed": "Impossible d'ouvrir les paramètres de l'app"
 }

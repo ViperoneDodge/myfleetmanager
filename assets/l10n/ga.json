@@ -595,5 +595,8 @@
  "lock.unlock": "Díghlasáil",
  "lock.reason": "Díghlasáil MyFleetManager",
  "lock.unavailable": "Níl glas scáileáin ná díghlasáil bhithmhéadrach socraithe ar an bhfón seo",
- "lock.retry": "Theip ar an díghlasáil, bain triail eile as"
+ "lock.retry": "Theip ar an díghlasáil, bain triail eile as",
+ "settings.batteryTitle": "Déan foláirimh níos iontaofa",
+ "settings.batterySub": "Oscail socruithe na haipe agus roghnaigh Ceallra → Gan srian: cuirfidh Android na seiceálacha ar sos níos lú nuair atá an aip dúnta",
+ "settings.batteryFailed": "Níorbh fhéidir socruithe na haipe a oscailt"
 }

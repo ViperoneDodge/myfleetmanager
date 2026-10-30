@@ -595,5 +595,8 @@
  "lock.unlock": "잠금 해제",
  "lock.reason": "MyFleetManager 잠금 해제",
  "lock.unavailable": "이 휴대전화에 화면 잠금이나 생체 인증이 설정되어 있지 않습니다",
- "lock.retry": "잠금 해제에 실패했습니다. 다시 시도하세요"
+ "lock.retry": "잠금 해제에 실패했습니다. 다시 시도하세요",
+ "settings.batteryTitle": "알림을 더 안정적으로",
+ "settings.batterySub": "앱 설정을 열고 배터리 → 제한 없음을 선택하면 앱이 닫혀 있을 때 확인이 덜 중단됩니다",
+ "settings.batteryFailed": "앱 설정을 열 수 없습니다"
 }

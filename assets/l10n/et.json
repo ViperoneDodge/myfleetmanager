@@ -595,5 +595,8 @@
  "lock.unlock": "Ava",
  "lock.reason": "Ava MyFleetManager",
  "lock.unavailable": "Selles telefonis pole ekraanilukku ega biomeetrilist avamist seadistatud",
- "lock.retry": "Avamine ebaõnnestus, proovi uuesti"
+ "lock.retry": "Avamine ebaõnnestus, proovi uuesti",
+ "settings.batteryTitle": "Muuda teavitused usaldusväärsemaks",
+ "settings.batterySub": "Ava rakenduse seaded ja vali Aku → Piiranguteta: Android peatab kontrolle suletud rakenduse korral harvem",
+ "settings.batteryFailed": "Rakenduse seadeid ei saanud avada"
 }

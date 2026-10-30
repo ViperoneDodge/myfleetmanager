@@ -595,3 +595,6 @@ Atrakinti
 Atrakinti MyFleetManager
 Šiame telefone nenustatytas ekrano užraktas ar biometrinis atrakinimas
 Atrakinti nepavyko, bandyk dar kartą
+Patikimesni įspėjimai
+Atidaryk programos nustatymus ir pasirink Akumuliatorius → Neribota: Android rečiau sustabdys patikras, kai programa uždaryta
+Nepavyko atidaryti programos nustatymų

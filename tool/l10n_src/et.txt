@@ -595,3 +595,6 @@ Ava
 Ava MyFleetManager
 Selles telefonis pole ekraanilukku ega biomeetrilist avamist seadistatud
 Avamine ebaõnnestus, proovi uuesti
+Muuda teavitused usaldusväärsemaks
+Ava rakenduse seaded ja vali Aku → Piiranguteta: Android peatab kontrolle suletud rakenduse korral harvem
+Rakenduse seadeid ei saanud avada

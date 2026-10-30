@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:android_intent_plus/android_intent.dart';
 
 import '../l10n.dart';
 import '../main.dart';
@@ -230,6 +231,14 @@ class SettingsScreen extends StatelessWidget {
                   value: appState.groupAlerts,
                   onChanged: (on) => appState.setGroupAlerts(on),
                 ),
+                if (isAndroid && appState.groupAlerts)
+                  ListTile(
+                    leading: const Icon(Icons.battery_saver_outlined),
+                    title: Text(tr('settings.batteryTitle')),
+                    subtitle: Text(tr('settings.batterySub')),
+                    trailing: const Icon(Icons.open_in_new, size: 18),
+                    onTap: () => _openAppSettings(context),
+                  ),
               ],
             ],
             if (AppLock.available && appState.session != null)
@@ -512,6 +521,17 @@ class SettingsScreen extends StatelessWidget {
         ),
       ),
     ];
+  }
+
+  Future<void> _openAppSettings(BuildContext context) async {
+    try {
+      await const AndroidIntent(
+        action: 'android.settings.APPLICATION_DETAILS_SETTINGS',
+        data: 'package:it.myfleet.myfleetmanager',
+      ).launch();
+    } catch (_) {
+      if (context.mounted) showSnack(context, tr('settings.batteryFailed'));
+    }
   }
 
   Future<void> _diagnostics(BuildContext context) async {

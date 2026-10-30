@@ -595,3 +595,6 @@ Buka kunci
 Buka kunci MyFleetManager
 Ponsel ini tidak memiliki kunci layar atau buka kunci biometrik
 Gagal membuka kunci, coba lagi
+Buat peringatan lebih andal
+Buka setelan aplikasi lalu pilih Baterai → Tidak dibatasi: Android akan lebih jarang menjeda pemeriksaan saat aplikasi ditutup
+Tidak dapat membuka setelan aplikasi

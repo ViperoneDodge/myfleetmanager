@@ -595,5 +595,8 @@
  "lock.unlock": "Odomknúť",
  "lock.reason": "Odomknúť MyFleetManager",
  "lock.unavailable": "Na tomto telefóne nie je nastavený zámok obrazovky ani biometrické odomykanie",
- "lock.retry": "Odomknutie zlyhalo, skús to znova"
+ "lock.retry": "Odomknutie zlyhalo, skús to znova",
+ "settings.batteryTitle": "Spoľahlivejšie upozornenia",
+ "settings.batterySub": "Otvor nastavenia aplikácie a zvoľ Batéria → Bez obmedzení: Android bude kontroly pri zatvorenej aplikácii pozastavovať menej",
+ "settings.batteryFailed": "Nastavenia aplikácie nemožno otvoriť"
 }

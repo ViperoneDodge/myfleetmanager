@@ -595,5 +595,8 @@
  "lock.unlock": "Unlock",
  "lock.reason": "Unlock MyFleetManager",
  "lock.unavailable": "This phone has no screen lock or biometric unlock set up",
- "lock.retry": "Unlock failed, try again"
+ "lock.retry": "Unlock failed, try again",
+ "settings.batteryTitle": "Make alerts more reliable",
+ "settings.batterySub": "Open the app settings and choose Battery → Unrestricted: Android will pause the checks less while the app is closed",
+ "settings.batteryFailed": "Could not open the app settings"
 }

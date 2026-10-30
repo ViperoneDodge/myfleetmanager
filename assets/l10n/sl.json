@@ -595,5 +595,8 @@
  "lock.unlock": "Odkleni",
  "lock.reason": "Odkleni MyFleetManager",
  "lock.unavailable": "Na tem telefonu ni nastavljeno zaklepanje zaslona ali biometrično odklepanje",
- "lock.retry": "Odklepanje ni uspelo, poskusi znova"
+ "lock.retry": "Odklepanje ni uspelo, poskusi znova",
+ "settings.batteryTitle": "Naredi opozorila zanesljivejša",
+ "settings.batterySub": "Odpri nastavitve aplikacije in izberi Baterija → Neomejeno: Android bo redkeje ustavljal preverjanja, ko je aplikacija zaprta",
+ "settings.batteryFailed": "Nastavitev aplikacije ni mogoče odpreti"
 }

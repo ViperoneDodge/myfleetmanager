@@ -595,3 +595,6 @@ Odomknúť
 Odomknúť MyFleetManager
 Na tomto telefóne nie je nastavený zámok obrazovky ani biometrické odomykanie
 Odomknutie zlyhalo, skús to znova
+Spoľahlivejšie upozornenia
+Otvor nastavenia aplikácie a zvoľ Batéria → Bez obmedzení: Android bude kontroly pri zatvorenej aplikácii pozastavovať menej
+Nastavenia aplikácie nemožno otvoriť
