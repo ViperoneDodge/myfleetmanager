@@ -588,5 +588,12 @@
  "notif.new": "Baru",
  "diag.bgTest": "Uji peringatan",
  "diag.bgTestStarted": "Pemeriksaan dimulai: buka lagi diagnostik dalam satu menit",
- "diag.bgTestFailed": "Pemeriksaan tidak dapat dimulai"
+ "diag.bgTestFailed": "Pemeriksaan tidak dapat dimulai",
+ "lock.setting": "Kunci dengan sidik jari atau wajah",
+ "lock.settingSub": "Saat aplikasi dibuka dan saat kembali setelah lebih dari satu menit",
+ "lock.title": "MyFleetManager terkunci",
+ "lock.unlock": "Buka kunci",
+ "lock.reason": "Buka kunci MyFleetManager",
+ "lock.unavailable": "Ponsel ini tidak memiliki kunci layar atau buka kunci biometrik",
+ "lock.retry": "Gagal membuka kunci, coba lagi"
 }

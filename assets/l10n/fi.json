@@ -588,5 +588,12 @@
  "notif.new": "Uusi",
  "diag.bgTest": "Testaa ilmoitukset",
  "diag.bgTestStarted": "Tarkistus aloitettu: avaa diagnostiikka uudelleen minuutin päästä",
- "diag.bgTestFailed": "Tarkistusta ei voitu aloittaa"
+ "diag.bgTestFailed": "Tarkistusta ei voitu aloittaa",
+ "lock.setting": "Lukitse sormenjäljellä tai kasvoilla",
+ "lock.settingSub": "Avattaessa ja kun palaat yli minuutin jälkeen",
+ "lock.title": "MyFleetManager on lukittu",
+ "lock.unlock": "Avaa lukitus",
+ "lock.reason": "Avaa MyFleetManagerin lukitus",
+ "lock.unavailable": "Tässä puhelimessa ei ole näytön lukitusta eikä biometristä lukituksen avausta",
+ "lock.retry": "Lukituksen avaus epäonnistui, yritä uudelleen"
 }

@@ -588,5 +588,12 @@
  "notif.new": "Nové",
  "diag.bgTest": "Vyzkoušet upozornění",
  "diag.bgTestStarted": "Kontrola spuštěna: za minutu znovu otevři diagnostiku",
- "diag.bgTestFailed": "Kontrolu nelze spustit"
+ "diag.bgTestFailed": "Kontrolu nelze spustit",
+ "lock.setting": "Zamknout otiskem prstu nebo obličejem",
+ "lock.settingSub": "Při otevření a při návratu po více než minutě",
+ "lock.title": "MyFleetManager je zamčená",
+ "lock.unlock": "Odemknout",
+ "lock.reason": "Odemknout MyFleetManager",
+ "lock.unavailable": "Na tomto telefonu není nastaven zámek obrazovky ani biometrické odemykání",
+ "lock.retry": "Odemknutí se nezdařilo, zkus to znovu"
 }

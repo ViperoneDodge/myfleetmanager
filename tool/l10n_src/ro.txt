@@ -588,3 +588,10 @@ Nou
 Testează alertele
 Verificare pornită: redeschide diagnosticarea peste un minut
 Verificarea nu a putut porni
+Blochează cu amprenta sau fața
+La deschidere și când revii după mai mult de un minut
+MyFleetManager este blocată
+Deblochează
+Deblochează MyFleetManager
+Pe acest telefon nu este setată nicio blocare a ecranului sau deblocare biometrică
+Deblocarea a eșuat, încearcă din nou

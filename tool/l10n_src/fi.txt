@@ -588,3 +588,10 @@ Uusi
 Testaa ilmoitukset
 Tarkistus aloitettu: avaa diagnostiikka uudelleen minuutin päästä
 Tarkistusta ei voitu aloittaa
+Lukitse sormenjäljellä tai kasvoilla
+Avattaessa ja kun palaat yli minuutin jälkeen
+MyFleetManager on lukittu
+Avaa lukitus
+Avaa MyFleetManagerin lukitus
+Tässä puhelimessa ei ole näytön lukitusta eikä biometristä lukituksen avausta
+Lukituksen avaus epäonnistui, yritä uudelleen

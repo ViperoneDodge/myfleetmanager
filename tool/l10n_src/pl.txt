@@ -588,3 +588,10 @@ Nowe
 Testuj alerty
 Sprawdzanie rozpoczęte: otwórz diagnostykę ponownie za minutę
 Nie można rozpocząć sprawdzania
+Blokuj odciskiem palca lub twarzą
+Przy otwarciu i po powrocie po ponad minucie
+MyFleetManager jest zablokowana
+Odblokuj
+Odblokuj MyFleetManager
+Na tym telefonie nie ustawiono blokady ekranu ani odblokowania biometrycznego
+Odblokowanie nie powiodło się, spróbuj ponownie

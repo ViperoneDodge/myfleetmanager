@@ -588,5 +588,12 @@
  "notif.new": "Novo",
  "diag.bgTest": "Testiraj upozorenja",
  "diag.bgTestStarted": "Provjera pokrenuta: ponovno otvori dijagnostiku za minutu",
- "diag.bgTestFailed": "Provjeru nije moguće pokrenuti"
+ "diag.bgTestFailed": "Provjeru nije moguće pokrenuti",
+ "lock.setting": "Zaključaj otiskom prsta ili licem",
+ "lock.settingSub": "Pri otvaranju i kad se vratiš nakon više od minute",
+ "lock.title": "MyFleetManager je zaključan",
+ "lock.unlock": "Otključaj",
+ "lock.reason": "Otključaj MyFleetManager",
+ "lock.unavailable": "Na ovom telefonu nije postavljeno zaključavanje zaslona ni biometrijsko otključavanje",
+ "lock.retry": "Otključavanje nije uspjelo, pokušaj ponovno"
 }

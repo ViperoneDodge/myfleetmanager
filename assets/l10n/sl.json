@@ -588,5 +588,12 @@
  "notif.new": "Novo",
  "diag.bgTest": "Preizkusi opozorila",
  "diag.bgTestStarted": "Preverjanje se je začelo: čez minuto znova odpri diagnostiko",
- "diag.bgTestFailed": "Preverjanja ni mogoče zagnati"
+ "diag.bgTestFailed": "Preverjanja ni mogoče zagnati",
+ "lock.setting": "Zakleni s prstnim odtisom ali obrazom",
+ "lock.settingSub": "Ob odprtju in ko se vrneš po več kot minuti",
+ "lock.title": "MyFleetManager je zaklenjen",
+ "lock.unlock": "Odkleni",
+ "lock.reason": "Odkleni MyFleetManager",
+ "lock.unavailable": "Na tem telefonu ni nastavljeno zaklepanje zaslona ali biometrično odklepanje",
+ "lock.retry": "Odklepanje ni uspelo, poskusi znova"
 }

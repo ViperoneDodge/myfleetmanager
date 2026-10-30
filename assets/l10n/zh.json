@@ -588,5 +588,12 @@
  "notif.new": "新增",
  "diag.bgTest": "测试提醒",
  "diag.bgTestStarted": "检查已开始：一分钟后重新打开诊断",
- "diag.bgTestFailed": "无法开始检查"
+ "diag.bgTestFailed": "无法开始检查",
+ "lock.setting": "使用指纹或面容锁定",
+ "lock.settingSub": "打开应用时以及离开超过一分钟后返回时",
+ "lock.title": "MyFleetManager 已锁定",
+ "lock.unlock": "解锁",
+ "lock.reason": "解锁 MyFleetManager",
+ "lock.unavailable": "此手机未设置屏幕锁定或生物识别解锁",
+ "lock.retry": "解锁失败，请重试"
 }

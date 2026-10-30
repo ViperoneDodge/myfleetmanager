@@ -588,3 +588,10 @@ Jauns
 Pārbaudīt brīdinājumus
 Pārbaude sākta: pēc minūtes atkal atver diagnostiku
 Pārbaudi neizdevās sākt
+Bloķēt ar pirkstu nospiedumu vai seju
+Atverot un atgriežoties pēc vairāk nekā minūtes
+MyFleetManager ir bloķēta
+Atbloķēt
+Atbloķēt MyFleetManager
+Šajā tālrunī nav iestatīta ekrāna bloķēšana vai biometriskā atbloķēšana
+Atbloķēšana neizdevās, mēģini vēlreiz

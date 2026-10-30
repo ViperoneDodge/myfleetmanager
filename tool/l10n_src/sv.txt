@@ -588,3 +588,10 @@ Ny
 Testa aviseringar
 Kontrollen har startat: öppna diagnostiken igen om en minut
 Kontrollen kunde inte startas
+Lås med fingeravtryck eller ansikte
+När appen öppnas och när du kommer tillbaka efter mer än en minut
+MyFleetManager är låst
+Lås upp
+Lås upp MyFleetManager
+Den här telefonen har inget skärmlås eller biometrisk upplåsning inställt
+Upplåsningen misslyckades, försök igen

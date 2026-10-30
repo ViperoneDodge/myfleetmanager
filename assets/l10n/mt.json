@@ -588,5 +588,12 @@
  "notif.new": "Ġdid",
  "diag.bgTest": "Ittestja t-twissijiet",
  "diag.bgTestStarted": "Il-kontroll beda: erġa’ iftaħ id-dijanjostika wara minuta",
- "diag.bgTestFailed": "Ma setax jibda l-kontroll"
+ "diag.bgTestFailed": "Ma setax jibda l-kontroll",
+ "lock.setting": "Issakkar b’marka tas-saba’ jew wiċċ",
+ "lock.settingSub": "Meta tiftaħ l-app u meta terġa’ lura wara aktar minn minuta",
+ "lock.title": "MyFleetManager hija msakkra",
+ "lock.unlock": "Iftaħ",
+ "lock.reason": "Iftaħ MyFleetManager",
+ "lock.unavailable": "Dan it-telefon m’għandux lock tal-iskrin jew ftuħ bijometriku",
+ "lock.retry": "Il-ftuħ ma rnexxiex, erġa’ pprova"
 }

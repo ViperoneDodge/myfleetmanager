@@ -588,5 +588,12 @@
  "notif.new": "新規",
  "diag.bgTest": "通知をテスト",
  "diag.bgTestStarted": "チェックを開始しました。1分後に診断を開き直してください",
- "diag.bgTestFailed": "チェックを開始できませんでした"
+ "diag.bgTestFailed": "チェックを開始できませんでした",
+ "lock.setting": "指紋または顔でロック",
+ "lock.settingSub": "起動時と、1分以上たってから戻ったとき",
+ "lock.title": "MyFleetManager はロックされています",
+ "lock.unlock": "ロック解除",
+ "lock.reason": "MyFleetManager のロックを解除",
+ "lock.unavailable": "この端末には画面ロックも生体認証も設定されていません",
+ "lock.retry": "ロックを解除できませんでした。もう一度お試しください"
 }

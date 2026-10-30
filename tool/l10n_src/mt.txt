@@ -588,3 +588,10 @@ Mibdul
 Ittestja t-twissijiet
 Il-kontroll beda: erġa’ iftaħ id-dijanjostika wara minuta
 Ma setax jibda l-kontroll
+Issakkar b’marka tas-saba’ jew wiċċ
+Meta tiftaħ l-app u meta terġa’ lura wara aktar minn minuta
+MyFleetManager hija msakkra
+Iftaħ
+Iftaħ MyFleetManager
+Dan it-telefon m’għandux lock tal-iskrin jew ftuħ bijometriku
+Il-ftuħ ma rnexxiex, erġa’ pprova

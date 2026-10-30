@@ -588,3 +588,10 @@ Mới
 Thử cảnh báo
 Đã bắt đầu kiểm tra: mở lại chẩn đoán sau một phút
 Không thể bắt đầu kiểm tra
+Khóa bằng vân tay hoặc khuôn mặt
+Khi mở ứng dụng và khi quay lại sau hơn một phút
+MyFleetManager đã bị khóa
+Mở khóa
+Mở khóa MyFleetManager
+Điện thoại này chưa cài khóa màn hình hoặc mở khóa sinh trắc học
+Mở khóa không thành công, hãy thử lại

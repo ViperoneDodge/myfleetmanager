@@ -588,5 +588,12 @@
  "notif.new": "Nouveau",
  "diag.bgTest": "Tester les alertes",
  "diag.bgTestStarted": "Vérification lancée : rouvre le diagnostic dans une minute",
- "diag.bgTestFailed": "Impossible de lancer la vérification"
+ "diag.bgTestFailed": "Impossible de lancer la vérification",
+ "lock.setting": "Verrouiller par empreinte ou visage",
+ "lock.settingSub": "À l'ouverture et quand tu reviens après plus d'une minute",
+ "lock.title": "MyFleetManager est verrouillée",
+ "lock.unlock": "Déverrouiller",
+ "lock.reason": "Déverrouiller MyFleetManager",
+ "lock.unavailable": "Aucun verrouillage d'écran ni déverrouillage biométrique n'est configuré sur ce téléphone",
+ "lock.retry": "Déverrouillage échoué, réessaie"
 }

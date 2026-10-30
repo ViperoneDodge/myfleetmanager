@@ -588,5 +588,12 @@
  "notif.new": "Nowe",
  "diag.bgTest": "Testuj alerty",
  "diag.bgTestStarted": "Sprawdzanie rozpoczęte: otwórz diagnostykę ponownie za minutę",
- "diag.bgTestFailed": "Nie można rozpocząć sprawdzania"
+ "diag.bgTestFailed": "Nie można rozpocząć sprawdzania",
+ "lock.setting": "Blokuj odciskiem palca lub twarzą",
+ "lock.settingSub": "Przy otwarciu i po powrocie po ponad minucie",
+ "lock.title": "MyFleetManager jest zablokowana",
+ "lock.unlock": "Odblokuj",
+ "lock.reason": "Odblokuj MyFleetManager",
+ "lock.unavailable": "Na tym telefonie nie ustawiono blokady ekranu ani odblokowania biometrycznego",
+ "lock.retry": "Odblokowanie nie powiodło się, spróbuj ponownie"
 }

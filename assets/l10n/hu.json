@@ -588,5 +588,12 @@
  "notif.new": "Új",
  "diag.bgTest": "Értesítések próbája",
  "diag.bgTestStarted": "Ellenőrzés elindítva: egy perc múlva nyisd meg újra a diagnosztikát",
- "diag.bgTestFailed": "Az ellenőrzés nem indítható"
+ "diag.bgTestFailed": "Az ellenőrzés nem indítható",
+ "lock.setting": "Zárolás ujjlenyomattal vagy arccal",
+ "lock.settingSub": "Megnyitáskor és ha több mint egy perc után térsz vissza",
+ "lock.title": "A MyFleetManager zárolva van",
+ "lock.unlock": "Feloldás",
+ "lock.reason": "MyFleetManager feloldása",
+ "lock.unavailable": "Ezen a telefonon nincs beállítva képernyőzár vagy biometrikus feloldás",
+ "lock.retry": "A feloldás nem sikerült, próbáld újra"
 }

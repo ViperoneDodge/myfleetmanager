@@ -588,3 +588,10 @@ Yeni
 Uyarıları test et
 Kontrol başladı: bir dakika sonra tanılamayı yeniden aç
 Kontrol başlatılamadı
+Parmak izi veya yüzle kilitle
+Açılışta ve bir dakikadan uzun süre sonra döndüğünde
+MyFleetManager kilitli
+Kilidi aç
+MyFleetManager kilidini aç
+Bu telefonda ekran kilidi veya biyometrik kilit açma ayarlanmamış
+Kilit açılamadı, tekrar dene

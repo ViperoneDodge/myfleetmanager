@@ -588,5 +588,12 @@
  "notif.new": "Mới",
  "diag.bgTest": "Thử cảnh báo",
  "diag.bgTestStarted": "Đã bắt đầu kiểm tra: mở lại chẩn đoán sau một phút",
- "diag.bgTestFailed": "Không thể bắt đầu kiểm tra"
+ "diag.bgTestFailed": "Không thể bắt đầu kiểm tra",
+ "lock.setting": "Khóa bằng vân tay hoặc khuôn mặt",
+ "lock.settingSub": "Khi mở ứng dụng và khi quay lại sau hơn một phút",
+ "lock.title": "MyFleetManager đã bị khóa",
+ "lock.unlock": "Mở khóa",
+ "lock.reason": "Mở khóa MyFleetManager",
+ "lock.unavailable": "Điện thoại này chưa cài khóa màn hình hoặc mở khóa sinh trắc học",
+ "lock.retry": "Mở khóa không thành công, hãy thử lại"
 }

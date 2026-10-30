@@ -588,5 +588,12 @@
  "notif.new": "Nuovo",
  "diag.bgTest": "Prova avvisi",
  "diag.bgTestStarted": "Controllo avviato: riapri la diagnostica tra un minuto",
- "diag.bgTestFailed": "Impossibile avviare il controllo"
+ "diag.bgTestFailed": "Impossibile avviare il controllo",
+ "lock.setting": "Blocca con impronta o volto",
+ "lock.settingSub": "All'apertura e quando torni nell'app dopo più di un minuto",
+ "lock.title": "MyFleetManager è bloccata",
+ "lock.unlock": "Sblocca",
+ "lock.reason": "Sblocca MyFleetManager",
+ "lock.unavailable": "Su questo telefono non è impostato né un blocco schermo né un riconoscimento biometrico",
+ "lock.retry": "Sblocco non riuscito, riprova"
 }

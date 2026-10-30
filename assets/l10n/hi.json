@@ -588,5 +588,12 @@
  "notif.new": "नया",
  "diag.bgTest": "अलर्ट जाँचें",
  "diag.bgTestStarted": "जाँच शुरू हुई: एक मिनट बाद निदान फिर से खोलें",
- "diag.bgTestFailed": "जाँच शुरू नहीं हो सकी"
+ "diag.bgTestFailed": "जाँच शुरू नहीं हो सकी",
+ "lock.setting": "फ़िंगरप्रिंट या चेहरे से लॉक करें",
+ "lock.settingSub": "ऐप खोलते समय और एक मिनट से अधिक बाद लौटने पर",
+ "lock.title": "MyFleetManager लॉक है",
+ "lock.unlock": "अनलॉक करें",
+ "lock.reason": "MyFleetManager अनलॉक करें",
+ "lock.unavailable": "इस फ़ोन पर स्क्रीन लॉक या बायोमेट्रिक अनलॉक सेट नहीं है",
+ "lock.retry": "अनलॉक नहीं हुआ, फिर से कोशिश करें"
 }

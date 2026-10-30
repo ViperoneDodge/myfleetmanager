@@ -588,5 +588,12 @@
  "notif.new": "Nua",
  "diag.bgTest": "Tástáil foláirimh",
  "diag.bgTestStarted": "Seiceáil tosaithe: oscail an diagnóisic arís i gceann nóiméid",
- "diag.bgTestFailed": "Níorbh fhéidir an tseiceáil a thosú"
+ "diag.bgTestFailed": "Níorbh fhéidir an tseiceáil a thosú",
+ "lock.setting": "Glasáil le méarlorg nó aghaidh",
+ "lock.settingSub": "Nuair a osclaítear an aip agus nuair a fhilleann tú tar éis níos mó ná nóiméad",
+ "lock.title": "Tá MyFleetManager faoi ghlas",
+ "lock.unlock": "Díghlasáil",
+ "lock.reason": "Díghlasáil MyFleetManager",
+ "lock.unavailable": "Níl glas scáileáin ná díghlasáil bhithmhéadrach socraithe ar an bhfón seo",
+ "lock.retry": "Theip ar an díghlasáil, bain triail eile as"
 }

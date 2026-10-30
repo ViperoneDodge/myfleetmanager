@@ -588,3 +588,10 @@ Novo
 Preizkusi opozorila
 Preverjanje se je začelo: čez minuto znova odpri diagnostiko
 Preverjanja ni mogoče zagnati
+Zakleni s prstnim odtisom ali obrazom
+Ob odprtju in ko se vrneš po več kot minuti
+MyFleetManager je zaklenjen
+Odkleni
+Odkleni MyFleetManager
+Na tem telefonu ni nastavljeno zaklepanje zaslona ali biometrično odklepanje
+Odklepanje ni uspelo, poskusi znova

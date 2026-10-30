@@ -588,5 +588,12 @@
  "notif.new": "Ny",
  "diag.bgTest": "Testa aviseringar",
  "diag.bgTestStarted": "Kontrollen har startat: öppna diagnostiken igen om en minut",
- "diag.bgTestFailed": "Kontrollen kunde inte startas"
+ "diag.bgTestFailed": "Kontrollen kunde inte startas",
+ "lock.setting": "Lås med fingeravtryck eller ansikte",
+ "lock.settingSub": "När appen öppnas och när du kommer tillbaka efter mer än en minut",
+ "lock.title": "MyFleetManager är låst",
+ "lock.unlock": "Lås upp",
+ "lock.reason": "Lås upp MyFleetManager",
+ "lock.unavailable": "Den här telefonen har inget skärmlås eller biometrisk upplåsning inställt",
+ "lock.retry": "Upplåsningen misslyckades, försök igen"
 }

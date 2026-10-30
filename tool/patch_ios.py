@@ -11,6 +11,7 @@ if plist.exists():
     keys = {
         "NSCameraUsageDescription": "MyFleetManager uses the camera to photograph your vehicles and documents and to scan group invitation QR codes.",
         "NSPhotoLibraryUsageDescription": "MyFleetManager uses your photos to choose vehicle pictures, documents and QR code images.",
+        "NSFaceIDUsageDescription": "MyFleetManager uses Face ID to unlock the app when you turn on the lock in Settings.",
         "CFBundleDisplayName": "MyFleetManager",
     }
     for k, v in keys.items():

@@ -588,5 +588,12 @@
  "notif.new": "Jauns",
  "diag.bgTest": "Pārbaudīt brīdinājumus",
  "diag.bgTestStarted": "Pārbaude sākta: pēc minūtes atkal atver diagnostiku",
- "diag.bgTestFailed": "Pārbaudi neizdevās sākt"
+ "diag.bgTestFailed": "Pārbaudi neizdevās sākt",
+ "lock.setting": "Bloķēt ar pirkstu nospiedumu vai seju",
+ "lock.settingSub": "Atverot un atgriežoties pēc vairāk nekā minūtes",
+ "lock.title": "MyFleetManager ir bloķēta",
+ "lock.unlock": "Atbloķēt",
+ "lock.reason": "Atbloķēt MyFleetManager",
+ "lock.unavailable": "Šajā tālrunī nav iestatīta ekrāna bloķēšana vai biometriskā atbloķēšana",
+ "lock.retry": "Atbloķēšana neizdevās, mēģini vēlreiz"
 }

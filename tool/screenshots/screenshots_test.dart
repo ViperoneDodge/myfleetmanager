@@ -11,6 +11,7 @@ import 'package:myfleetmanager/main.dart';
 import 'package:myfleetmanager/models.dart';
 import 'package:myfleetmanager/screens/family_screen.dart';
 import 'package:myfleetmanager/screens/home_screen.dart';
+import 'package:myfleetmanager/screens/lock_screen.dart';
 import 'package:myfleetmanager/screens/maintenance_screen.dart';
 import 'package:myfleetmanager/screens/notifications_screen.dart';
 import 'package:myfleetmanager/screens/pro_screen.dart';
@@ -40,6 +41,8 @@ Future<void> loadFonts() async {
   await f('Roboto', ['$m/Roboto-Regular.ttf', '$m/Roboto-Medium.ttf', '$m/Roboto-Bold.ttf']);
   await f('MaterialIcons', ['$m/MaterialIcons-Regular.otf']);
   await f('PatrickHand', ['assets/fonts/PatrickHand-Regular.ttf']);
+  await f('Lobster', ['assets/fonts/Lobster-Regular.ttf']);
+  await f('LobsterTwo', ['assets/fonts/LobsterTwo-Regular.ttf']);
 }
 
 Vehicle v(String id, String name, String plate, VehicleType t, DateTime reg, List<int> days,
@@ -195,6 +198,7 @@ void main() {
           LogEntry(ts: at(1, 21, 10), kind: LogKind.deleted, groupId: 'FAM7Q2K9XW', group: it ? 'Famiglia' : 'Family', vehicleId: 'x', vehicle: 'Punto', who: 'Marco', read: true),
           LogEntry(ts: at(1, 9, 0), kind: LogKind.reminder, title: it ? 'Revisione tra 7 giorni' : 'Inspection in 7 days', body: 'Giulia (GD452RT)', vehicleId: 'g1', read: true),
         ]);
+        await shot(tester, const Scaffold(body: Stack(children: [LockScreen()])), '13_lock');
         await shot(tester, const HomeScreen(), '11_bell');
         await shot(tester, const NotificationsScreen(), '11b_notifications');
         await shot(tester, const NotificationsScreen(), '11c_select', then: () async {

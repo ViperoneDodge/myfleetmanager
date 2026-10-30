@@ -588,3 +588,10 @@ Nýtt
 Prófa tilkynningar
 Athugun hafin: opnaðu greininguna aftur eftir mínútu
 Ekki tókst að hefja athugun
+Læsa með fingrafari eða andliti
+Þegar appið opnast og þegar þú kemur aftur eftir meira en mínútu
+MyFleetManager er læst
+Opna
+Opna MyFleetManager
+Enginn skjálás eða lífkennaopnun er stillt á þessum síma
+Ekki tókst að opna, reyndu aftur

@@ -588,3 +588,10 @@ Nové
 Vyzkoušet upozornění
 Kontrola spuštěna: za minutu znovu otevři diagnostiku
 Kontrolu nelze spustit
+Zamknout otiskem prstu nebo obličejem
+Při otevření a při návratu po více než minutě
+MyFleetManager je zamčená
+Odemknout
+Odemknout MyFleetManager
+Na tomto telefonu není nastaven zámek obrazovky ani biometrické odemykání
+Odemknutí se nezdařilo, zkus to znovu

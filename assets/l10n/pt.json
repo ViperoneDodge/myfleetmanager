@@ -588,5 +588,12 @@
  "notif.new": "Novo",
  "diag.bgTest": "Testar alertas",
  "diag.bgTestStarted": "Verificação iniciada: volta a abrir o diagnóstico daqui a um minuto",
- "diag.bgTestFailed": "Não foi possível iniciar a verificação"
+ "diag.bgTestFailed": "Não foi possível iniciar a verificação",
+ "lock.setting": "Bloquear com impressão digital ou rosto",
+ "lock.settingSub": "Ao abrir a app e ao voltar depois de mais de um minuto",
+ "lock.title": "A MyFleetManager está bloqueada",
+ "lock.unlock": "Desbloquear",
+ "lock.reason": "Desbloquear a MyFleetManager",
+ "lock.unavailable": "Este telemóvel não tem bloqueio de ecrã nem desbloqueio biométrico configurado",
+ "lock.retry": "Desbloqueio falhou, tenta novamente"
 }

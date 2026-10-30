@@ -588,3 +588,10 @@ Módosítva
 Értesítések próbája
 Ellenőrzés elindítva: egy perc múlva nyisd meg újra a diagnosztikát
 Az ellenőrzés nem indítható
+Zárolás ujjlenyomattal vagy arccal
+Megnyitáskor és ha több mint egy perc után térsz vissza
+A MyFleetManager zárolva van
+Feloldás
+MyFleetManager feloldása
+Ezen a telefonon nincs beállítva képernyőzár vagy biometrikus feloldás
+A feloldás nem sikerült, próbáld újra

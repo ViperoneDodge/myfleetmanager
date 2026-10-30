@@ -588,5 +588,12 @@
  "notif.new": "Nauja",
  "diag.bgTest": "Išbandyti įspėjimus",
  "diag.bgTestStarted": "Patikra pradėta: po minutės vėl atidaryk diagnostiką",
- "diag.bgTestFailed": "Nepavyko pradėti patikros"
+ "diag.bgTestFailed": "Nepavyko pradėti patikros",
+ "lock.setting": "Užrakinti piršto atspaudu arba veidu",
+ "lock.settingSub": "Atidarant ir grįžus po daugiau nei minutės",
+ "lock.title": "MyFleetManager užrakinta",
+ "lock.unlock": "Atrakinti",
+ "lock.reason": "Atrakinti MyFleetManager",
+ "lock.unavailable": "Šiame telefone nenustatytas ekrano užraktas ar biometrinis atrakinimas",
+ "lock.retry": "Atrakinti nepavyko, bandyk dar kartą"
 }

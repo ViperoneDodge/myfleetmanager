@@ -588,3 +588,10 @@ Nua
 Tástáil foláirimh
 Seiceáil tosaithe: oscail an diagnóisic arís i gceann nóiméid
 Níorbh fhéidir an tseiceáil a thosú
+Glasáil le méarlorg nó aghaidh
+Nuair a osclaítear an aip agus nuair a fhilleann tú tar éis níos mó ná nóiméad
+Tá MyFleetManager faoi ghlas
+Díghlasáil
+Díghlasáil MyFleetManager
+Níl glas scáileáin ná díghlasáil bhithmhéadrach socraithe ar an bhfón seo
+Theip ar an díghlasáil, bain triail eile as

@@ -588,3 +588,10 @@ Nauja
 Išbandyti įspėjimus
 Patikra pradėta: po minutės vėl atidaryk diagnostiką
 Nepavyko pradėti patikros
+Užrakinti piršto atspaudu arba veidu
+Atidarant ir grįžus po daugiau nei minutės
+MyFleetManager užrakinta
+Atrakinti
+Atrakinti MyFleetManager
+Šiame telefone nenustatytas ekrano užraktas ar biometrinis atrakinimas
+Atrakinti nepavyko, bandyk dar kartą

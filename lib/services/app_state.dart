@@ -9,6 +9,7 @@ import '../l10n.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../units.dart';
+import 'app_lock.dart';
 import 'auth_service.dart';
 import 'doc_cloud.dart';
 import 'local_store.dart';
@@ -700,6 +701,7 @@ class AppState extends ChangeNotifier {
     Units.load(settings);
     deadlinesSoonOnly = settings?['deadlinesSoon'] == true;
     exactAsked = settings?['exactAsked'] == true;
+    appLock = settings?['appLock'] == true && AppLock.available;
     final dc = settings?['docsConsent'];
     docsConsent = dc is bool ? dc : null;
     if (devPro && devProVersion != appVersion) {
@@ -745,6 +747,7 @@ class AppState extends ChangeNotifier {
     if (s != null) {
       await _open(s);
     }
+    locked = appLock && session != null;
     loading = false;
     notifyListeners();
     if (session != null) {
@@ -873,8 +876,55 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> onResume() async {
+    if (AppLock.shouldLock(enabled: appLock && session != null, awaySince: _awaySince, now: DateTime.now()) &&
+        !_unlocking) {
+      locked = true;
+      notifyListeners();
+    }
+    if (!_unlocking) _awaySince = null;
     await reloadLog();
     _recordReminders();
+  }
+
+  bool appLock = false;
+
+  bool locked = false;
+
+  DateTime? _awaySince;
+
+  bool _unlocking = false;
+
+  void onAway() {
+    if (_unlocking) return;
+    _awaySince ??= DateTime.now();
+  }
+
+  Future<bool> unlockApp() async {
+    if (_unlocking) return false;
+    _unlocking = true;
+    final ok = await AppLock.unlock();
+    _unlocking = false;
+    _awaySince = null;
+    if (ok) {
+      locked = false;
+      notifyListeners();
+    }
+    return ok;
+  }
+
+  Future<String?> setAppLock(bool on) async {
+    if (on) {
+      if (!await AppLock.supported()) return 'unavailable';
+      _unlocking = true;
+      final ok = await AppLock.unlock();
+      _unlocking = false;
+      _awaySince = null;
+      if (!ok) return 'failed';
+    }
+    appLock = on;
+    notifyListeners();
+    await _writeSettings();
+    return null;
   }
 
   bool get groupAlerts => watch.enabled;
@@ -950,6 +1000,7 @@ class AppState extends ChangeNotifier {
   Future<void> _logout() async {
     final s = session;
     store.addAuthLog('uscita richiesta');
+    locked = false;
     sync.stop();
     _proSub?.cancel();
     _proSub = null;
@@ -1202,6 +1253,7 @@ class AppState extends ChangeNotifier {
         ...Units.toJson(),
         'deadlinesSoon': deadlinesSoonOnly,
         'exactAsked': exactAsked,
+        'appLock': appLock,
         if (docsConsent != null) 'docsConsent': docsConsent,
       });
 

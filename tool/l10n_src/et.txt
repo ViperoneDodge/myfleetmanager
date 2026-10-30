@@ -588,3 +588,10 @@ Uus
 Testi teavitusi
 Kontroll käivitati: ava diagnostika minuti pärast uuesti
 Kontrolli ei saanud käivitada
+Lukusta sõrmejälje või näoga
+Avamisel ja kui naased rohkem kui minuti pärast
+MyFleetManager on lukus
+Ava
+Ava MyFleetManager
+Selles telefonis pole ekraanilukku ega biomeetrilist avamist seadistatud
+Avamine ebaõnnestus, proovi uuesti

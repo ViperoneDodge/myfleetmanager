@@ -588,3 +588,10 @@ Novo
 Testar alertas
 Verificação iniciada: volta a abrir o diagnóstico daqui a um minuto
 Não foi possível iniciar a verificação
+Bloquear com impressão digital ou rosto
+Ao abrir a app e ao voltar depois de mais de um minuto
+A MyFleetManager está bloqueada
+Desbloquear
+Desbloquear a MyFleetManager
+Este telemóvel não tem bloqueio de ecrã nem desbloqueio biométrico configurado
+Desbloqueio falhou, tenta novamente

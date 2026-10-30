@@ -588,5 +588,12 @@
  "notif.new": "Neu",
  "diag.bgTest": "Hinweise testen",
  "diag.bgTestStarted": "Prüfung gestartet: öffne die Diagnose in einer Minute erneut",
- "diag.bgTestFailed": "Prüfung konnte nicht gestartet werden"
+ "diag.bgTestFailed": "Prüfung konnte nicht gestartet werden",
+ "lock.setting": "Mit Fingerabdruck oder Gesicht sperren",
+ "lock.settingSub": "Beim Öffnen und wenn du nach mehr als einer Minute zurückkehrst",
+ "lock.title": "MyFleetManager ist gesperrt",
+ "lock.unlock": "Entsperren",
+ "lock.reason": "MyFleetManager entsperren",
+ "lock.unavailable": "Auf diesem Telefon ist keine Displaysperre und keine biometrische Entsperrung eingerichtet",
+ "lock.retry": "Entsperren fehlgeschlagen, versuche es erneut"
 }

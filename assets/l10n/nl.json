@@ -588,5 +588,12 @@
  "notif.new": "Nieuw",
  "diag.bgTest": "Meldingen testen",
  "diag.bgTestStarted": "Controle gestart: open de diagnose over een minuut opnieuw",
- "diag.bgTestFailed": "Controle kon niet worden gestart"
+ "diag.bgTestFailed": "Controle kon niet worden gestart",
+ "lock.setting": "Vergrendelen met vingerafdruk of gezicht",
+ "lock.settingSub": "Bij het openen en als je na meer dan een minuut terugkomt",
+ "lock.title": "MyFleetManager is vergrendeld",
+ "lock.unlock": "Ontgrendelen",
+ "lock.reason": "MyFleetManager ontgrendelen",
+ "lock.unavailable": "Op deze telefoon is geen schermvergrendeling of biometrische ontgrendeling ingesteld",
+ "lock.retry": "Ontgrendelen mislukt, probeer opnieuw"
 }

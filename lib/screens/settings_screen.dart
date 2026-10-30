@@ -8,6 +8,7 @@ import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../platform.dart';
+import '../services/app_lock.dart';
 import '../services/app_state.dart' show AppState;
 import '../services/group_watch.dart' show testGroupWatchNow;
 import '../services/notification_service.dart';
@@ -231,6 +232,17 @@ class SettingsScreen extends StatelessWidget {
                 ),
               ],
             ],
+            if (AppLock.available && appState.session != null)
+              SwitchListTile(
+                secondary: const Icon(Icons.fingerprint),
+                title: Text(tr('lock.setting')),
+                subtitle: Text(tr('lock.settingSub')),
+                value: appState.appLock,
+                onChanged: (on) async {
+                  final r = await appState.setAppLock(on);
+                  if (r == 'unavailable' && context.mounted) showSnack(context, tr('lock.unavailable'));
+                },
+              ),
 
             _header(context, tr('settings.groups')),
             if (!appState.isCloud)

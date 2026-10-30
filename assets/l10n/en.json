@@ -588,5 +588,12 @@
  "notif.new": "New",
  "diag.bgTest": "Test alerts",
  "diag.bgTestStarted": "Check started: reopen the diagnostics in a minute",
- "diag.bgTestFailed": "Could not start the check"
+ "diag.bgTestFailed": "Could not start the check",
+ "lock.setting": "Lock with fingerprint or face",
+ "lock.settingSub": "When the app opens and when you return after more than a minute",
+ "lock.title": "MyFleetManager is locked",
+ "lock.unlock": "Unlock",
+ "lock.reason": "Unlock MyFleetManager",
+ "lock.unavailable": "This phone has no screen lock or biometric unlock set up",
+ "lock.retry": "Unlock failed, try again"
 }

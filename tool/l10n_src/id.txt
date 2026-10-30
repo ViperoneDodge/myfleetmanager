@@ -588,3 +588,10 @@ Baru
 Uji peringatan
 Pemeriksaan dimulai: buka lagi diagnostik dalam satu menit
 Pemeriksaan tidak dapat dimulai
+Kunci dengan sidik jari atau wajah
+Saat aplikasi dibuka dan saat kembali setelah lebih dari satu menit
+MyFleetManager terkunci
+Buka kunci
+Buka kunci MyFleetManager
+Ponsel ini tidak memiliki kunci layar atau buka kunci biometrik
+Gagal membuka kunci, coba lagi

@@ -588,3 +588,10 @@ Nieuw
 Meldingen testen
 Controle gestart: open de diagnose over een minuut opnieuw
 Controle kon niet worden gestart
+Vergrendelen met vingerafdruk of gezicht
+Bij het openen en als je na meer dan een minuut terugkomt
+MyFleetManager is vergrendeld
+Ontgrendelen
+MyFleetManager ontgrendelen
+Op deze telefoon is geen schermvergrendeling of biometrische ontgrendeling ingesteld
+Ontgrendelen mislukt, probeer opnieuw

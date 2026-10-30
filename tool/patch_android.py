@@ -257,3 +257,26 @@ if props.exists():
     if "mobile_scanner.useUnbundled" not in gp:
         props.write_text(gp.rstrip("\n") + "\ndev.steenbakker.mobile_scanner.useUnbundled=true\n")
     print("Patched", props)
+
+for ma in (APP / "src" / "main").rglob("MainActivity.kt"):
+    t = ma.read_text()
+    t = t.replace("io.flutter.embedding.android.FlutterActivity", "io.flutter.embedding.android.FlutterFragmentActivity")
+    t = re.sub(r":\s*FlutterActivity\(\)", ": FlutterFragmentActivity()", t)
+    if "FlutterFragmentActivity()" not in t:
+        raise SystemExit("MainActivity: FlutterFragmentActivity non impostata")
+    ma.write_text(t)
+    print("Patched", ma)
+for ma in (APP / "src" / "main").rglob("MainActivity.java"):
+    t = ma.read_text()
+    t = t.replace("io.flutter.embedding.android.FlutterActivity", "io.flutter.embedding.android.FlutterFragmentActivity")
+    t = re.sub(r"extends\s+FlutterActivity\b", "extends FlutterFragmentActivity", t)
+    ma.write_text(t)
+    print("Patched", ma)
+
+for d, parent in (("values", "Theme.AppCompat.Light.NoActionBar"), ("values-night", "Theme.AppCompat.NoActionBar")):
+    st = res / d / "styles.xml"
+    if st.exists():
+        t = st.read_text()
+        t = re.sub(r'parent="@android:style/Theme\.(Light\.|Black\.)?NoTitleBar"', f'parent="{parent}"', t)
+        st.write_text(t)
+        print("Patched", st)

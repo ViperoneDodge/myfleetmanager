@@ -588,5 +588,12 @@
  "notif.new": "Uus",
  "diag.bgTest": "Testi teavitusi",
  "diag.bgTestStarted": "Kontroll käivitati: ava diagnostika minuti pärast uuesti",
- "diag.bgTestFailed": "Kontrolli ei saanud käivitada"
+ "diag.bgTestFailed": "Kontrolli ei saanud käivitada",
+ "lock.setting": "Lukusta sõrmejälje või näoga",
+ "lock.settingSub": "Avamisel ja kui naased rohkem kui minuti pärast",
+ "lock.title": "MyFleetManager on lukus",
+ "lock.unlock": "Ava",
+ "lock.reason": "Ava MyFleetManager",
+ "lock.unavailable": "Selles telefonis pole ekraanilukku ega biomeetrilist avamist seadistatud",
+ "lock.retry": "Avamine ebaõnnestus, proovi uuesti"
 }

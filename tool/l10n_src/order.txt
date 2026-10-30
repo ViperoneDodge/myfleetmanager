@@ -588,3 +588,10 @@ notif.new
 diag.bgTest
 diag.bgTestStarted
 diag.bgTestFailed
+lock.setting
+lock.settingSub
+lock.title
+lock.unlock
+lock.reason
+lock.unavailable
+lock.retry

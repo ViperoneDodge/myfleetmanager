@@ -8,6 +8,7 @@ import 'firebase_config.dart';
 import 'l10n.dart';
 import 'screens/home_screen.dart';
 import 'screens/intro_screen.dart';
+import 'screens/lock_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/web_pro_gate.dart';
 import 'services/app_check.dart';
@@ -113,6 +114,7 @@ class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.paused || state == AppLifecycleState.hidden) appState.onAway();
     if (state != AppLifecycleState.resumed) return;
     appState.onResume();
     if (appState.syncStatus == SyncStatus.offline) appState.retrySync();
@@ -143,7 +145,12 @@ class _FleetAppState extends State<FleetApp> with WidgetsBindingObserver {
           themeMode: t.mode,
           theme: cachedTheme(t, Brightness.light),
           darkTheme: cachedTheme(t, Brightness.dark),
-          builder: (context, child) => ScreenScale(child: child ?? const SizedBox()),
+          builder: (context, child) => ScreenScale(
+            child: Stack(children: [
+              child ?? const SizedBox(),
+              if (appState.locked && !appState.loading) const LockScreen(),
+            ]),
+          ),
           home: AnimatedSwitcher(
             duration: const Duration(milliseconds: 500),
             child: (!_introDone || appState.loading)
