@@ -585,3 +585,6 @@ dokumenty
 Videné
 Zmenené
 Nové
+Vyskúšať upozornenia
+Kontrola spustená: o minútu znova otvor diagnostiku
+Kontrolu nemožno spustiť

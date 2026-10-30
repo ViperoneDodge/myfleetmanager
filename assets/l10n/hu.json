@@ -585,5 +585,8 @@
  "part.documents": "dokumentumok",
  "notif.seen": "Láttam",
  "notif.changed": "Módosítva",
- "notif.new": "Új"
+ "notif.new": "Új",
+ "diag.bgTest": "Értesítések próbája",
+ "diag.bgTestStarted": "Ellenőrzés elindítva: egy perc múlva nyisd meg újra a diagnosztikát",
+ "diag.bgTestFailed": "Az ellenőrzés nem indítható"
 }

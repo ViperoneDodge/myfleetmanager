@@ -585,5 +585,8 @@
  "part.documents": "dokument",
  "notif.seen": "Sett",
  "notif.changed": "Ändrad",
- "notif.new": "Ny"
+ "notif.new": "Ny",
+ "diag.bgTest": "Testa aviseringar",
+ "diag.bgTestStarted": "Kontrollen har startat: öppna diagnostiken igen om en minut",
+ "diag.bgTestFailed": "Kontrollen kunde inte startas"
 }

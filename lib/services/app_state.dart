@@ -632,8 +632,11 @@ class AppState extends ChangeNotifier {
 
   List<String> authLog = [];
 
+  List<String> watchLog = [];
+
   Future<void> loadAuthLog() async {
     authLog = await store.readAuthLog();
+    watchLog = await store.readWatchLog();
     notifyListeners();
   }
 
@@ -659,6 +662,10 @@ class AppState extends ChangeNotifier {
       'Problemi: ${sync.problems.isEmpty ? 'nessuno' : sync.problems.entries.map((e) => '${e.key}: ${e.value}').join(' | ')}',
       'Accessi:',
       ...authLog.map((e) => '  $e'),
+      'Avvisi dei gruppi: ${watch.enabled ? 'attivi' : 'spenti'} · gruppi ${watch.groups.length} · controllo ${_watchNeeded ? 'programmato' : 'non programmato'}',
+      'Controlli ad app chiusa:',
+      if (watchLog.isEmpty) '  nessuno finora',
+      ...watchLog.map((e) => '  $e'),
     ].join('\n');
   }
 

@@ -585,5 +585,8 @@
  "part.documents": "документи",
  "notif.seen": "Переглянуто",
  "notif.changed": "Змінено",
- "notif.new": "Нове"
+ "notif.new": "Нове",
+ "diag.bgTest": "Перевірити сповіщення",
+ "diag.bgTestStarted": "Перевірку запущено: відкрийте діагностику знову за хвилину",
+ "diag.bgTestFailed": "Не вдалося запустити перевірку"
 }

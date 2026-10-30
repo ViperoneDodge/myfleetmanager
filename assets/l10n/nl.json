@@ -585,5 +585,8 @@
  "part.documents": "documenten",
  "notif.seen": "Gezien",
  "notif.changed": "Gewijzigd",
- "notif.new": "Nieuw"
+ "notif.new": "Nieuw",
+ "diag.bgTest": "Meldingen testen",
+ "diag.bgTestStarted": "Controle gestart: open de diagnose over een minuut opnieuw",
+ "diag.bgTestFailed": "Controle kon niet worden gestart"
 }

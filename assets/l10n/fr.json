@@ -585,5 +585,8 @@
  "part.documents": "documents",
  "notif.seen": "Vu",
  "notif.changed": "Modifié",
- "notif.new": "Nouveau"
+ "notif.new": "Nouveau",
+ "diag.bgTest": "Tester les alertes",
+ "diag.bgTestStarted": "Vérification lancée : rouvre le diagnostic dans une minute",
+ "diag.bgTestFailed": "Impossible de lancer la vérification"
 }

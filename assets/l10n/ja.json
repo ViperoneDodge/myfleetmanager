@@ -585,5 +585,8 @@
  "part.documents": "書類",
  "notif.seen": "確認済み",
  "notif.changed": "変更",
- "notif.new": "新規"
+ "notif.new": "新規",
+ "diag.bgTest": "通知をテスト",
+ "diag.bgTestStarted": "チェックを開始しました。1分後に診断を開き直してください",
+ "diag.bgTestFailed": "チェックを開始できませんでした"
 }

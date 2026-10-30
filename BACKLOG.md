@@ -3,7 +3,10 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.1.12)
-- [ ] (vuota)
+- [x] **Diagnostica degli avvisi ad app chiusa**: la «Diagnostica sincronizzazione» mostra se il controllo in background è programmato e le ultime 15 esecuzioni (gruppi controllati, modifiche trovate, oppure dove si è fermato e perché). Pulsante «Prova avvisi» per lanciarlo subito.
+- [ ] **Avvisi ad app chiusa ancora assenti** (prova del 30/10 su più telefoni, oltre 15 minuti): capire con la diagnostica se Android non avvia il controllo o se si ferma. Soluzione affidabile: notifiche push inviate dal server a ogni modifica (Cloud Functions, serve il piano Blaze).
+- [ ] **Blocco con impronta** (proposta): da decidere.
+- [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
 
 ### Offuscamento: verifica del 30/10 (Play Console: «Percentuale di offuscamento 43%»)
 - Il codice dell'app (Dart, in `libapp.so`) è offuscato del tutto: nessun nome interno leggibile.

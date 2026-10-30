@@ -585,5 +585,8 @@
  "part.documents": "เอกสาร",
  "notif.seen": "ดูแล้ว",
  "notif.changed": "แก้ไขแล้ว",
- "notif.new": "ใหม่"
+ "notif.new": "ใหม่",
+ "diag.bgTest": "ทดสอบการแจ้งเตือน",
+ "diag.bgTestStarted": "เริ่มตรวจสอบแล้ว: เปิดการวินิจฉัยอีกครั้งในอีกหนึ่งนาที",
+ "diag.bgTestFailed": "ไม่สามารถเริ่มการตรวจสอบได้"
 }

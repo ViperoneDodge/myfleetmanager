@@ -585,5 +585,8 @@
  "part.documents": "asiakirjat",
  "notif.seen": "Nähty",
  "notif.changed": "Muutettu",
- "notif.new": "Uusi"
+ "notif.new": "Uusi",
+ "diag.bgTest": "Testaa ilmoitukset",
+ "diag.bgTestStarted": "Tarkistus aloitettu: avaa diagnostiikka uudelleen minuutin päästä",
+ "diag.bgTestFailed": "Tarkistusta ei voitu aloittaa"
 }

@@ -585,5 +585,8 @@
  "part.documents": "belgeler",
  "notif.seen": "Görüldü",
  "notif.changed": "Değişti",
- "notif.new": "Yeni"
+ "notif.new": "Yeni",
+ "diag.bgTest": "Uyarıları test et",
+ "diag.bgTestStarted": "Kontrol başladı: bir dakika sonra tanılamayı yeniden aç",
+ "diag.bgTestFailed": "Kontrol başlatılamadı"
 }

@@ -585,5 +585,8 @@
  "part.documents": "documenti",
  "notif.seen": "Visto",
  "notif.changed": "Modificato",
- "notif.new": "Nuovo"
+ "notif.new": "Nuovo",
+ "diag.bgTest": "Prova avvisi",
+ "diag.bgTestStarted": "Controllo avviato: riapri la diagnostica tra un minuto",
+ "diag.bgTestFailed": "Impossibile avviare il controllo"
 }

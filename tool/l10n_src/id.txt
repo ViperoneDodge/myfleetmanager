@@ -585,3 +585,6 @@ dokumen
 Dilihat
 Diubah
 Baru
+Uji peringatan
+Pemeriksaan dimulai: buka lagi diagnostik dalam satu menit
+Pemeriksaan tidak dapat dimulai

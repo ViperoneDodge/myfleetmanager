@@ -585,3 +585,6 @@ documenten
 Gezien
 Gewijzigd
 Nieuw
+Meldingen testen
+Controle gestart: open de diagnose over een minuut opnieuw
+Controle kon niet worden gestart

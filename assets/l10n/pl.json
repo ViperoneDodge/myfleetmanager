@@ -585,5 +585,8 @@
  "part.documents": "dokumenty",
  "notif.seen": "Widziane",
  "notif.changed": "Zmienione",
- "notif.new": "Nowe"
+ "notif.new": "Nowe",
+ "diag.bgTest": "Testuj alerty",
+ "diag.bgTestStarted": "Sprawdzanie rozpoczęte: otwórz diagnostykę ponownie za minutę",
+ "diag.bgTestFailed": "Nie można rozpocząć sprawdzania"
 }

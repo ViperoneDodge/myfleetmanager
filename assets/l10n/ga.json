@@ -585,5 +585,8 @@
  "part.documents": "doiciméid",
  "notif.seen": "Feicthe",
  "notif.changed": "Athraithe",
- "notif.new": "Nua"
+ "notif.new": "Nua",
+ "diag.bgTest": "Tástáil foláirimh",
+ "diag.bgTestStarted": "Seiceáil tosaithe: oscail an diagnóisic arís i gceann nóiméid",
+ "diag.bgTestFailed": "Níorbh fhéidir an tseiceáil a thosú"
 }

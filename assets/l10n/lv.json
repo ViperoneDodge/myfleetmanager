@@ -585,5 +585,8 @@
  "part.documents": "dokumenti",
  "notif.seen": "Redzēts",
  "notif.changed": "Mainīts",
- "notif.new": "Jauns"
+ "notif.new": "Jauns",
+ "diag.bgTest": "Pārbaudīt brīdinājumus",
+ "diag.bgTestStarted": "Pārbaude sākta: pēc minūtes atkal atver diagnostiku",
+ "diag.bgTestFailed": "Pārbaudi neizdevās sākt"
 }

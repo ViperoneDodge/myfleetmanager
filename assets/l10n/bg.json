@@ -585,5 +585,8 @@
  "part.documents": "документи",
  "notif.seen": "Видяно",
  "notif.changed": "Променено",
- "notif.new": "Ново"
+ "notif.new": "Ново",
+ "diag.bgTest": "Тест на известията",
+ "diag.bgTestStarted": "Проверката започна: отвори диагностиката отново след минута",
+ "diag.bgTestFailed": "Проверката не може да започне"
 }

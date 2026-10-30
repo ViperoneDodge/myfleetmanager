@@ -585,5 +585,8 @@
  "part.documents": "dokumenti",
  "notif.seen": "Viđeno",
  "notif.changed": "Izmijenjeno",
- "notif.new": "Novo"
+ "notif.new": "Novo",
+ "diag.bgTest": "Testiraj upozorenja",
+ "diag.bgTestStarted": "Provjera pokrenuta: ponovno otvori dijagnostiku za minutu",
+ "diag.bgTestFailed": "Provjeru nije moguće pokrenuti"
 }

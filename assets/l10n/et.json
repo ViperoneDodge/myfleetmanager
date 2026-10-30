@@ -585,5 +585,8 @@
  "part.documents": "dokumendid",
  "notif.seen": "Nähtud",
  "notif.changed": "Muudetud",
- "notif.new": "Uus"
+ "notif.new": "Uus",
+ "diag.bgTest": "Testi teavitusi",
+ "diag.bgTestStarted": "Kontroll käivitati: ava diagnostika minuti pärast uuesti",
+ "diag.bgTestFailed": "Kontrolli ei saanud käivitada"
 }

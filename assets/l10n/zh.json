@@ -585,5 +585,8 @@
  "part.documents": "文件",
  "notif.seen": "已查看",
  "notif.changed": "已修改",
- "notif.new": "新增"
+ "notif.new": "新增",
+ "diag.bgTest": "测试提醒",
+ "diag.bgTestStarted": "检查已开始：一分钟后重新打开诊断",
+ "diag.bgTestFailed": "无法开始检查"
 }

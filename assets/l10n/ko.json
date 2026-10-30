@@ -585,5 +585,8 @@
  "part.documents": "문서",
  "notif.seen": "확인",
  "notif.changed": "변경됨",
- "notif.new": "새 항목"
+ "notif.new": "새 항목",
+ "diag.bgTest": "알림 테스트",
+ "diag.bgTestStarted": "확인을 시작했습니다. 1분 후 진단을 다시 여세요",
+ "diag.bgTestFailed": "확인을 시작할 수 없습니다"
 }

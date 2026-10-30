@@ -99,18 +99,26 @@ class LocalStore {
     } catch (_) {}
   }
 
-  Future<List<String>> readAuthLog() async =>
-      (((await _readJson('auth_log.json'))?['events'] as List?) ?? []).map((e) => e.toString()).toList();
+  Future<List<String>> readEvents(String name) async =>
+      (((await _readJson(name))?['events'] as List?) ?? []).map((e) => e.toString()).toList();
 
-  Future<void> addAuthLog(String event) async {
+  Future<void> addEvent(String name, String event, {int keep = 12}) async {
     try {
       final now = DateTime.now();
       String two(int n) => n.toString().padLeft(2, '0');
       final stamp = '${two(now.day)}/${two(now.month)} ${two(now.hour)}:${two(now.minute)}';
-      final list = [...await readAuthLog(), '$stamp $event'];
-      await _writeJson('auth_log.json', {'events': list.length > 12 ? list.sublist(list.length - 12) : list});
+      final list = [...await readEvents(name), '$stamp $event'];
+      await _writeJson(name, {'events': list.length > keep ? list.sublist(list.length - keep) : list});
     } catch (_) {}
   }
+
+  Future<List<String>> readAuthLog() => readEvents('auth_log.json');
+
+  Future<void> addAuthLog(String event) => addEvent('auth_log.json', event);
+
+  Future<List<String>> readWatchLog() => readEvents('watch_log.json');
+
+  Future<void> addWatchLog(String event) => addEvent('watch_log.json', event, keep: 15);
 
   Future<Map<String, dynamic>?> readNotifLog(Session s) => _readJson('notif_${s.storageKey}.json');
 

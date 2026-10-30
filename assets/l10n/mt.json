@@ -585,5 +585,8 @@
  "part.documents": "dokumenti",
  "notif.seen": "Rajt",
  "notif.changed": "Mibdul",
- "notif.new": "Ġdid"
+ "notif.new": "Ġdid",
+ "diag.bgTest": "Ittestja t-twissijiet",
+ "diag.bgTestStarted": "Il-kontroll beda: erġa’ iftaħ id-dijanjostika wara minuta",
+ "diag.bgTestFailed": "Ma setax jibda l-kontroll"
 }

@@ -199,6 +199,23 @@ Future<void> showDevUnlocks(NotificationService n, List<Map<String, dynamic>> li
 
 const String groupWatchTask = 'myfleet-group-watch';
 
+const String groupWatchTestTask = 'myfleet-group-watch-test';
+
+Future<bool> testGroupWatchNow() async {
+  if (!isAndroid) return false;
+  try {
+    await Workmanager().registerOneOffTask(
+      groupWatchTestTask,
+      groupWatchTask,
+      constraints: Constraints(networkType: NetworkType.connected),
+      existingWorkPolicy: ExistingWorkPolicy.replace,
+    );
+    return true;
+  } catch (_) {
+    return false;
+  }
+}
+
 Future<void> scheduleGroupWatch(bool on) async {
   if (!isAndroid) return;
   try {
@@ -228,19 +245,31 @@ void groupWatchDispatcher() {
   Workmanager().executeTask((task, input) async {
     try {
       await _backgroundCheck();
-    } catch (_) {}
+    } catch (e) {
+      try {
+        await LocalStore().addWatchLog('errore: ${_short(e)}');
+      } catch (_) {}
+    }
     return true;
   });
+}
+
+String _short(Object e) {
+  final t = e.toString().replaceAll('\n', ' ');
+  return t.length > 140 ? '${t.substring(0, 140)}…' : t;
 }
 
 Future<void> _backgroundCheck() async {
   WidgetsFlutterBinding.ensureInitialized();
   DartPluginRegistrant.ensureInitialized();
+  final store = LocalStore();
   final w = await GroupWatchState.load();
   final groupsOn = w.enabled && w.groups.isNotEmpty;
-  if (w.uid.isEmpty || (!groupsOn && w.adminSince == 0)) return;
+  if (w.uid.isEmpty || (!groupsOn && w.adminSince == 0)) {
+    await store.addWatchLog(w.uid.isEmpty ? 'fermo: nessun account' : 'fermo: avvisi dei gruppi spenti o nessun gruppo');
+    return;
+  }
 
-  final store = LocalStore();
   final settings = await store.readSettings();
   await L10n.load(L10n.resolve(settings?['lang'] as String?));
 
@@ -267,7 +296,10 @@ Future<void> _backgroundCheck() async {
     await store.addAuthLog(ok ? 'background: accesso Google ripristinato' : 'background: accesso assente ($lastSilent)');
     user = FirebaseAuth.instance.currentUser;
   }
-  if (user == null || user.uid != w.uid) return;
+  if (user == null || user.uid != w.uid) {
+    await store.addWatchLog(user == null ? 'fermo: accesso Firebase assente' : 'fermo: account Firebase diverso');
+    return;
+  }
 
   final session = await store.readSession();
   final localIds = <String>{};
@@ -298,9 +330,15 @@ Future<void> _backgroundCheck() async {
       w.adminSince = latestUnlock(entries, w.adminSince);
     } catch (_) {}
   }
+  var checked = 0;
+  var skipped = 0;
+  final errors = <String>[];
   for (final g in (groupsOn ? w.groups : const <String, String>{}).entries) {
     final since = w.seen[g.key];
-    if (since == null) continue;
+    if (since == null) {
+      skipped++;
+      continue;
+    }
     try {
       final snap = await db
           .collection('fleets')
@@ -331,8 +369,17 @@ Future<void> _backgroundCheck() async {
         if (!r.deleted) w.remember(r.id);
       }
       w.seen[g.key] = maxTs;
-    } catch (_) {}
+      checked++;
+    } catch (e) {
+      errors.add('${g.value}: ${_short(e)}');
+    }
   }
+  await store.addWatchLog([
+    'gruppi controllati $checked',
+    if (skipped > 0) 'mai aperti $skipped',
+    'modifiche ${acts.length}',
+    ...errors,
+  ].join(' · '));
   final latest = await GroupWatchState.load();
   if (latest.uid != w.uid) return;
   final freshUnlocks = latest.adminSince > 0

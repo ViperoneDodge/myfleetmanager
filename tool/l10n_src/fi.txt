@@ -585,3 +585,6 @@ asiakirjat
 Nähty
 Muutettu
 Uusi
+Testaa ilmoitukset
+Tarkistus aloitettu: avaa diagnostiikka uudelleen minuutin päästä
+Tarkistusta ei voitu aloittaa

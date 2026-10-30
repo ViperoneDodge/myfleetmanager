@@ -585,5 +585,8 @@
  "part.documents": "दस्तावेज़",
  "notif.seen": "देख लिया",
  "notif.changed": "बदला गया",
- "notif.new": "नया"
+ "notif.new": "नया",
+ "diag.bgTest": "अलर्ट जाँचें",
+ "diag.bgTestStarted": "जाँच शुरू हुई: एक मिनट बाद निदान फिर से खोलें",
+ "diag.bgTestFailed": "जाँच शुरू नहीं हो सकी"
 }

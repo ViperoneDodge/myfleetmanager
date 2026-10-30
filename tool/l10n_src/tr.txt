@@ -585,3 +585,6 @@ belgeler
 Görüldü
 Değişti
 Yeni
+Uyarıları test et
+Kontrol başladı: bir dakika sonra tanılamayı yeniden aç
+Kontrol başlatılamadı

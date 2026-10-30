@@ -585,5 +585,8 @@
  "part.documents": "έγγραφα",
  "notif.seen": "Το είδα",
  "notif.changed": "Αλλαγή",
- "notif.new": "Νέο"
+ "notif.new": "Νέο",
+ "diag.bgTest": "Δοκιμή ειδοποιήσεων",
+ "diag.bgTestStarted": "Ο έλεγχος ξεκίνησε: άνοιξε ξανά τα διαγνωστικά σε ένα λεπτό",
+ "diag.bgTestFailed": "Δεν ήταν δυνατή η έναρξη του ελέγχου"
 }

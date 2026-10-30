@@ -585,5 +585,8 @@
  "part.documents": "dokumenti",
  "notif.seen": "Videno",
  "notif.changed": "Spremenjeno",
- "notif.new": "Novo"
+ "notif.new": "Novo",
+ "diag.bgTest": "Preizkusi opozorila",
+ "diag.bgTestStarted": "Preverjanje se je začelo: čez minuto znova odpri diagnostiko",
+ "diag.bgTestFailed": "Preverjanja ni mogoče zagnati"
 }

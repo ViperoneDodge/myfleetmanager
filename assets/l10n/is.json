@@ -585,5 +585,8 @@
  "part.documents": "skjöl",
  "notif.seen": "Séð",
  "notif.changed": "Breytt",
- "notif.new": "Nýtt"
+ "notif.new": "Nýtt",
+ "diag.bgTest": "Prófa tilkynningar",
+ "diag.bgTestStarted": "Athugun hafin: opnaðu greininguna aftur eftir mínútu",
+ "diag.bgTestFailed": "Ekki tókst að hefja athugun"
 }

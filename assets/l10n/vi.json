@@ -585,5 +585,8 @@
  "part.documents": "tài liệu",
  "notif.seen": "Đã xem",
  "notif.changed": "Đã sửa",
- "notif.new": "Mới"
+ "notif.new": "Mới",
+ "diag.bgTest": "Thử cảnh báo",
+ "diag.bgTestStarted": "Đã bắt đầu kiểm tra: mở lại chẩn đoán sau một phút",
+ "diag.bgTestFailed": "Không thể bắt đầu kiểm tra"
 }

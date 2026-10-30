@@ -585,5 +585,8 @@
  "part.documents": "dokumenty",
  "notif.seen": "Videné",
  "notif.changed": "Zmenené",
- "notif.new": "Nové"
+ "notif.new": "Nové",
+ "diag.bgTest": "Vyskúšať upozornenia",
+ "diag.bgTestStarted": "Kontrola spustená: o minútu znova otvor diagnostiku",
+ "diag.bgTestFailed": "Kontrolu nemožno spustiť"
 }

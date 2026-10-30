@@ -585,3 +585,6 @@ dokumenti
 Rajt
 Mibdul
 Ġdid
+Ittestja t-twissijiet
+Il-kontroll beda: erġa’ iftaħ id-dijanjostika wara minuta
+Ma setax jibda l-kontroll

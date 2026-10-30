@@ -585,5 +585,8 @@
  "part.documents": "dokumen",
  "notif.seen": "Dilihat",
  "notif.changed": "Diubah",
- "notif.new": "Baru"
+ "notif.new": "Baru",
+ "diag.bgTest": "Uji peringatan",
+ "diag.bgTestStarted": "Pemeriksaan dimulai: buka lagi diagnostik dalam satu menit",
+ "diag.bgTestFailed": "Pemeriksaan tidak dapat dimulai"
 }

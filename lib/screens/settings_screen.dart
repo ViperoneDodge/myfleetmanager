@@ -7,7 +7,9 @@ import 'package:flutter/services.dart';
 import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
+import '../platform.dart';
 import '../services/app_state.dart' show AppState;
+import '../services/group_watch.dart' show testGroupWatchNow;
 import '../services/notification_service.dart';
 import '../services/support_service.dart';
 import '../services/sync_service.dart' show cloudErrorMessage;
@@ -512,6 +514,16 @@ class SettingsScreen extends StatelessWidget {
           child: SelectableText(text, style: const TextStyle(fontFamily: 'monospace', fontSize: 12)),
         ),
         actions: [
+          if (isAndroid && appState.isCloud)
+            TextButton(
+              onPressed: () async {
+                final ok = await testGroupWatchNow();
+                if (!ctx.mounted) return;
+                Navigator.pop(ctx);
+                showSnack(context, tr(ok ? 'diag.bgTestStarted' : 'diag.bgTestFailed'));
+              },
+              child: Text(tr('diag.bgTest')),
+            ),
           TextButton(
             onPressed: () async {
               await appState.retrySync();

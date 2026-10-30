@@ -585,5 +585,8 @@
  "part.documents": "dokumentai",
  "notif.seen": "Matyta",
  "notif.changed": "Pakeista",
- "notif.new": "Nauja"
+ "notif.new": "Nauja",
+ "diag.bgTest": "Išbandyti įspėjimus",
+ "diag.bgTestStarted": "Patikra pradėta: po minutės vėl atidaryk diagnostiką",
+ "diag.bgTestFailed": "Nepavyko pradėti patikros"
 }

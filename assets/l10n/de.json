@@ -585,5 +585,8 @@
  "part.documents": "Dokumente",
  "notif.seen": "Gesehen",
  "notif.changed": "Geändert",
- "notif.new": "Neu"
+ "notif.new": "Neu",
+ "diag.bgTest": "Hinweise testen",
+ "diag.bgTestStarted": "Prüfung gestartet: öffne die Diagnose in einer Minute erneut",
+ "diag.bgTestFailed": "Prüfung konnte nicht gestartet werden"
 }

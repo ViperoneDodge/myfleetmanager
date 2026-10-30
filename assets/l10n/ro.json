@@ -585,5 +585,8 @@
  "part.documents": "documente",
  "notif.seen": "Văzut",
  "notif.changed": "Modificat",
- "notif.new": "Nou"
+ "notif.new": "Nou",
+ "diag.bgTest": "Testează alertele",
+ "diag.bgTestStarted": "Verificare pornită: redeschide diagnosticarea peste un minut",
+ "diag.bgTestFailed": "Verificarea nu a putut porni"
 }
