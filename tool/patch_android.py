@@ -42,11 +42,6 @@ if kts.exists():
                       'signingConfigs.getByName(if (System.getenv("FLEET_SIGN") == "upload") "upload" else "fleet")')
         if 'getByName(if (System.getenv("FLEET_SIGN")' not in g:
             raise SystemExit("Impossibile impostare la firma")
-    if "debugSymbolLevel" not in g:
-        g, n = re.subn(r'(\n(\s*)signingConfig = signingConfigs\.getByName\(if \(System\.getenv\("FLEET_SIGN"\)[^\n]*)',
-                       r'\1\n\2ndk { debugSymbolLevel = "SYMBOL_TABLE" }', g, count=1)
-        if n == 0:
-            raise SystemExit("Impossibile attivare i simboli nativi")
     kts.write_text(g)
     print("Patched", kts)
 elif groovy.exists():
@@ -124,8 +119,6 @@ if gjson.exists():
 -keep class * implements com.google.gson.JsonDeserializer
 -keep,allowobfuscation,allowshrinking class com.google.gson.reflect.TypeToken
 -keep,allowobfuscation,allowshrinking class * extends com.google.gson.reflect.TypeToken
--repackageclasses ''
--allowaccessmodification
 -dontwarn com.google.android.play.core.**
 -dontwarn com.google.mlkit.vision.text.chinese.**
 -dontwarn com.google.mlkit.vision.text.devanagari.**

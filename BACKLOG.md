@@ -3,9 +3,13 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.1.12)
-- [x] **Offuscamento Java/Kotlin più forte**: R8 raggruppa tutte le classi in un unico pacchetto anonimo (`-repackageclasses`, `-allowaccessmodification`). Da provare dopo la build: notifiche, acquisto Pro, accesso Google, scanner QR, lettura del libretto.
-- [x] **Simboli nativi dentro l'AAB** (`debugSymbolLevel = SYMBOL_TABLE`): Play Console li legge da solo per mostrare i crash del codice nativo leggibili.
-- [ ] **File di deoffuscamento (`mapping.txt`) per Play Console**: rimandato al repository privato. L'AAB oggi è pubblicato nelle Release pubbliche e con la mappa dentro chiunque potrebbe annullare l'offuscamento.
+- [ ] (vuota)
+
+### Offuscamento: verifica del 30/10 (Play Console: «Percentuale di offuscamento 43%»)
+- Il codice dell'app (Dart, in `libapp.so`) è offuscato del tutto: nessun nome interno leggibile.
+- Il 43% riguarda solo il codice Java/Kotlin dell'AAB (8,0 MB, sotto la soglia di 10 MB oltre cui Play manda avvisi). Su 12.626 classi, 6.784 restano col nome originale, quasi tutte librerie Google già offuscate all'origine (Firebase Auth, ML Kit, Play Billing, reCAPTCHA) che le loro regole proteggono. Le regole nostre (gson e notifiche locali) ne tengono in chiaro solo 265: toglierle darebbe circa il 2% in più col rischio di rompere le notifiche programmate. Scartato.
+- Scartati anche `-repackageclasses` e i simboli nativi: i simboli e la mappa di R8 sono già dentro l'AAB.
+- [ ] **AAB fuori dalle Release pubbliche** quando il repository diventa privato: oggi l'AAB pubblico contiene la mappa di R8 (`proguard.map`), che rende leggibili i nomi delle librerie Java (non il codice Dart dell'app).
 
 ## Versione 2.1.11
 - [x] **Campanella → dato modificato**: toccando una modifica nella pagina Notifiche si apre il veicolo sulla scheda cambiata e si scorre fino alla voce evidenziata. La notifica resta non letta finché non si preme «Visto» (prima veniva segnata come letta subito e l'evidenziazione spariva).
