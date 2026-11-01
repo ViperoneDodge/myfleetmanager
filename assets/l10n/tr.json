@@ -609,5 +609,7 @@
  "pw.same": "Yeni şifre mevcut şifreden farklı olmalı.",
  "pw.done": "Şifre değiştirildi",
  "pw.forgot": "Hatırlamıyor musun? Sıfırlamak için e-posta al",
- "pw.google": "Google ile giriş: şifre Google hesabında yönetilir"
+ "pw.google": "Google ile giriş: şifre Google hesabında yönetilir",
+ "tech.pressure": "Lastik basıncı",
+ "units.pressure": "Lastik basıncı"
 }

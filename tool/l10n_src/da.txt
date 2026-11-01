@@ -609,3 +609,5 @@ Den nye adgangskode skal være forskellig fra den nuværende.
 Adgangskoden er skiftet
 Kan du ikke huske den? Få en e-mail til at nulstille den
 Login med Google: adgangskoden administreres i din Google-konto
+Dæktryk
+Dæktryk

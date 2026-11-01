@@ -609,3 +609,5 @@ Uuden salasanan on oltava eri kuin nykyinen.
 Salasana vaihdettu
 Etkö muista sitä? Saat sähköpostin sen nollaamiseksi
 Google-kirjautuminen: salasanaa hallitaan Google-tililläsi
+Rengaspaine
+Rengaspaine

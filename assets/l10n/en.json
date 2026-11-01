@@ -609,5 +609,7 @@
  "pw.same": "The new password must be different from the current one.",
  "pw.done": "Password changed",
  "pw.forgot": "Can't remember it? Get an email to reset it",
- "pw.google": "Google sign-in: the password is managed in your Google account"
+ "pw.google": "Google sign-in: the password is managed in your Google account",
+ "tech.pressure": "Tyre pressure",
+ "units.pressure": "Tyre pressure"
 }

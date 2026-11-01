@@ -609,3 +609,5 @@ Jaunajai parolei jāatšķiras no pašreizējās.
 Parole nomainīta
 Neatceries? Saņem e-pastu, lai to atiestatītu
 Pieteikšanās ar Google: paroli pārvaldi savā Google kontā
+Riepu spiediens
+Riepu spiediens

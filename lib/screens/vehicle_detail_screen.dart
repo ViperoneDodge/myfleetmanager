@@ -609,6 +609,17 @@ class VehicleDetailScreen extends StatelessWidget {
                 _techRow(context, tr('tech.powerName'), v.powerKw.isEmpty ? '' : fmtPower(v.powerKw), changed: st('tech:powerKw'), key: fk(st('tech:powerKw'))),
                 _techRow(context, tr('tech.engine'), v.engineCc, changed: st('tech:engineCc'), key: fk(st('tech:engineCc'))),
                 ..._tyreRows(context, v.tyres, st('tech:tyres'), fk(st('tech:tyres'))),
+                if (v.pressureFront.isNotEmpty || v.pressureRear.isNotEmpty)
+                  _techRow(
+                    context,
+                    tr('tech.pressure'),
+                    [
+                      if (v.pressureFront.isNotEmpty) '${tr('tyre.frontOne')} ${fmtPressure(v.pressureFront)}',
+                      if (v.pressureRear.isNotEmpty) '${tr('tyre.rearOne')} ${fmtPressure(v.pressureRear)}',
+                    ].join('\n'),
+                    changed: st('tech:pressureFront') ?? st('tech:pressureRear'),
+                    key: fk(st('tech:pressureFront') ?? st('tech:pressureRear')),
+                  ),
                 _techRow(context, tr('tech.oil'), v.oil, changed: st('tech:oil'), key: fk(st('tech:oil'))),
                 _techRow(context, tr('tech.battery'), v.battery, changed: st('tech:battery'), key: fk(st('tech:battery'))),
                 _techRow(context, tr(v.fuel == 'diesel' ? 'tech.glowPlugs' : 'tech.plugs'), v.plugs, changed: st('tech:plugs'), key: fk(st('tech:plugs'))),

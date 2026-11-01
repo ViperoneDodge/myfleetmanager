@@ -609,5 +609,7 @@
  "pw.same": "Nowe hasło musi być inne niż obecne.",
  "pw.done": "Hasło zostało zmienione",
  "pw.forgot": "Nie pamiętasz? Otrzymaj e-mail do zresetowania",
- "pw.google": "Logowanie przez Google: hasłem zarządzasz w koncie Google"
+ "pw.google": "Logowanie przez Google: hasłem zarządzasz w koncie Google",
+ "tech.pressure": "Ciśnienie w oponach",
+ "units.pressure": "Ciśnienie w oponach"
 }

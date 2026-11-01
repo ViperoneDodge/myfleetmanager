@@ -529,11 +529,12 @@ class AppState extends ChangeNotifier {
     await _writeSettings();
   }
 
-  Future<void> setUnits({String? power, String? distance, String? currency}) async {
+  Future<void> setUnits({String? power, String? distance, String? currency, String? pressure}) async {
     Units.load({
       'unitPower': power ?? Units.power,
       'unitDistance': distance ?? Units.distance,
       'unitCurrency': currency ?? Units.currency,
+      'unitPressure': pressure ?? Units.pressure,
     });
     notifyListeners();
     await _writeSettings();

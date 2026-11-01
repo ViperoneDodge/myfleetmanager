@@ -3,6 +3,8 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.1.14)
+- [x] **Selezione del testo nel pannello del ricambio** (Manutenzione → ricambio, campi codice/costo): le maniglie della selezione saltavano o si fermavano perché il pannello si chiudeva trascinandolo in giù e «rubava» il gesto. Ora il pannello non si trascina più: si chiude toccando fuori, con OK o con indietro. Da verificare sul telefono.
+- [x] **Pressione dei pneumatici** anteriore e posteriore: casella unica divisa a metà nella modifica del veicolo, riga «Pressione pneumatici» nei Dati tecnici, unità bar o psi nelle Unità di misura (salvata sempre in bar). Le modifiche alla pressione compaiono anche nelle notifiche ed evidenziate.
 - [x] **Cambia password** (Impostazioni → Account, solo account con email e password): password attuale, nuova (almeno 8 caratteri) e conferma; link per ricevere l'email di reimpostazione senza uscire. Per gli account Google la riga spiega che la password si gestisce nell'account Google. Da provare prima della build.
 - [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
 

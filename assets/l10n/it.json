@@ -609,5 +609,7 @@
  "pw.same": "La nuova password deve essere diversa da quella attuale.",
  "pw.done": "Password cambiata",
  "pw.forgot": "Non la ricordi? Ricevi un'email per reimpostarla",
- "pw.google": "Accesso con Google: la password si gestisce dal tuo account Google"
+ "pw.google": "Accesso con Google: la password si gestisce dal tuo account Google",
+ "tech.pressure": "Pressione pneumatici",
+ "units.pressure": "Pressione pneumatici"
 }

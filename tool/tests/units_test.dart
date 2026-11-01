@@ -41,4 +41,19 @@ void main() {
     Units.load({'unitPower': 'x', 'unitDistance': 'y', 'unitCurrency': 'ZZZ'});
     expect([Units.power, Units.distance, Units.currency], ['kw', 'km', '']);
   });
+
+  test('pressione in bar o psi, salvata sempre in bar', () {
+    expect(barToShownText('2.3'), '2.3');
+    expect(fmtPressure('2.5'), '2.5 bar');
+    expect(shownToBarText('2,4'), '2.4');
+    expect(shownToBarText(''), '');
+    expect(shownToBarText('0'), '');
+    Units.load({'unitPressure': 'psi'});
+    expect(barToShownText('2.3'), '33');
+    expect(fmtPressure('2.3'), '33 psi');
+    expect(shownToBarText('33'), '2.28');
+    expect(barToShownText(shownToBarText('36')), '36');
+    Units.load({'unitPressure': 'kpa'});
+    expect(Units.pressure, 'bar');
+  });
 }

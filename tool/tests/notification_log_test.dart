@@ -35,6 +35,8 @@ void main() {
       'details:notes': 'edited',
     });
     expect(changedItems(null, b), isEmpty);
+    expect(changedItems(a, a.copy()..pressureRear = '2.5'), {'tech:pressureRear': 'edited'});
+    expect(changedParts(a, a.copy()..pressureFront = '2.3'), ['tech']);
     final log = NotificationLog();
     log.addActivity(LogEntry(ts: 1, kind: LogKind.edited, groupId: 'g', vehicleId: 'v1', who: 'Marco', items: {'maint:${m.id}': 'new'}));
     log.addActivity(LogEntry(ts: 2, kind: LogKind.edited, groupId: 'g', vehicleId: 'v1', who: 'Marco', items: {'maint:${m.id}': 'edited', 'tech:oil': 'edited'}));

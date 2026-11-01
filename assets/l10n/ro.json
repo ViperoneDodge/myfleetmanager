@@ -609,5 +609,7 @@
  "pw.same": "Parola nouă trebuie să fie diferită de cea actuală.",
  "pw.done": "Parola a fost schimbată",
  "pw.forgot": "Nu ți-o amintești? Primește un e-mail pentru resetare",
- "pw.google": "Conectare cu Google: parola se gestionează în contul tău Google"
+ "pw.google": "Conectare cu Google: parola se gestionează în contul tău Google",
+ "tech.pressure": "Presiunea în anvelope",
+ "units.pressure": "Presiunea în anvelope"
 }

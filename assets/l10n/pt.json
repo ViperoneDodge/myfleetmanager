@@ -609,5 +609,7 @@
  "pw.same": "A nova palavra-passe deve ser diferente da atual.",
  "pw.done": "Palavra-passe alterada",
  "pw.forgot": "Não te lembras? Recebe um e-mail para a redefinir",
- "pw.google": "Acesso com Google: a palavra-passe é gerida na tua conta Google"
+ "pw.google": "Acesso com Google: a palavra-passe é gerida na tua conta Google",
+ "tech.pressure": "Pressão dos pneus",
+ "units.pressure": "Pressão dos pneus"
 }

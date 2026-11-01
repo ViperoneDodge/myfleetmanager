@@ -609,5 +609,7 @@
  "pw.same": "Das neue Passwort muss sich vom aktuellen unterscheiden.",
  "pw.done": "Passwort geändert",
  "pw.forgot": "Vergessen? Erhalte eine E-Mail zum Zurücksetzen",
- "pw.google": "Google-Anmeldung: Das Passwort wird in deinem Google-Konto verwaltet"
+ "pw.google": "Google-Anmeldung: Das Passwort wird in deinem Google-Konto verwaltet",
+ "tech.pressure": "Reifendruck",
+ "units.pressure": "Reifendruck"
 }

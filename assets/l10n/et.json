@@ -609,5 +609,7 @@
  "pw.same": "Uus parool peab erinema praegusest.",
  "pw.done": "Parool muudetud",
  "pw.forgot": "Ei mäleta? Saa e-kiri selle lähtestamiseks",
- "pw.google": "Google’iga sisselogimine: parooli haldad oma Google’i kontol"
+ "pw.google": "Google’iga sisselogimine: parooli haldad oma Google’i kontol",
+ "tech.pressure": "Rehvirõhk",
+ "units.pressure": "Rehvirõhk"
 }

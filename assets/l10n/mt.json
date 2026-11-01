@@ -609,5 +609,7 @@
  "pw.same": "Il-password il-ġdida trid tkun differenti mill-attwali.",
  "pw.done": "Il-password inbidlet",
  "pw.forgot": "Ma tiftakarhiex? Irċievi email biex terġa’ tissettjaha",
- "pw.google": "Dħul b’Google: il-password tiġi mmaniġġjata fil-kont Google tiegħek"
+ "pw.google": "Dħul b’Google: il-password tiġi mmaniġġjata fil-kont Google tiegħek",
+ "tech.pressure": "Pressjoni tat-tajers",
+ "units.pressure": "Pressjoni tat-tajers"
 }

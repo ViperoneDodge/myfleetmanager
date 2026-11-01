@@ -34,6 +34,8 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
   ];
   late final TextEditingController _power = TextEditingController(text: v.powerKw);
   late final TextEditingController _powerCv = TextEditingController(text: kwToCvText(v.powerKw));
+  late final TextEditingController _pressFront = TextEditingController(text: barToShownText(v.pressureFront));
+  late final TextEditingController _pressRear = TextEditingController(text: barToShownText(v.pressureRear));
   late final TextEditingController _cc = TextEditingController(text: v.engineCc);
   late final TextEditingController _oil = TextEditingController(text: v.oil);
   late final TextEditingController _battery = TextEditingController(text: v.battery);
@@ -86,6 +88,8 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     }
     _power.dispose();
     _powerCv.dispose();
+    _pressFront.dispose();
+    _pressRear.dispose();
     _cc.dispose();
     _oil.dispose();
     _battery.dispose();
@@ -236,6 +240,8 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
     v.vin = _vin.text.trim().toUpperCase();
     v.tyres = TyreSet.format(_tyreSnapshot());
     v.powerKw = _power.text.trim();
+    v.pressureFront = shownToBarText(_pressFront.text);
+    v.pressureRear = shownToBarText(_pressRear.text);
     v.engineCc = _cc.text.trim();
     v.oil = _oil.text.trim();
     v.battery = _battery.text.trim();
@@ -407,6 +413,7 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
             _powerField(),
             _techField(_cc, tr('tech.engine'), Icons.settings_outlined, number: true),
             _tyreEditor(scheme),
+            _pressureField(),
             _techField(_oil, tr('tech.oil'), Icons.oil_barrel_outlined, hint: tr('tech.oilHint')),
             _techField(_battery, tr('tech.battery'), Icons.battery_charging_full_outlined,
                 hint: tr('tech.batteryHint')),
@@ -615,6 +622,40 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
           part(_power, (t) => _powerCv.text = kwToCvText(t)),
           SizedBox(height: 22, child: VerticalDivider(width: 24, thickness: 1, color: line)),
           part(_powerCv, (t) => _power.text = cvToKwText(t)),
+        ]),
+      ),
+    );
+  }
+
+  Widget _pressureField() {
+    final scheme = Theme.of(context).colorScheme;
+    Widget part(TextEditingController c, String label) => Expanded(
+          child: Row(children: [
+            Text(label, style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
+            const SizedBox(width: 8),
+            Expanded(
+              child: TextField(
+                controller: c,
+                keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                decoration: const InputDecoration.collapsed(hintText: '—'),
+              ),
+            ),
+          ]),
+        );
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: InputDecorator(
+        decoration: InputDecoration(
+          labelText: '${tr('tech.pressure')} ($pressureUnit)',
+          filled: true,
+          isDense: true,
+          border: const OutlineInputBorder(),
+          prefixIcon: const Icon(Icons.tire_repair_outlined),
+        ),
+        child: Row(children: [
+          part(_pressFront, tr('tyre.frontOne')),
+          SizedBox(height: 22, child: VerticalDivider(width: 24, thickness: 1, color: scheme.outline)),
+          part(_pressRear, tr('tyre.rearOne')),
         ]),
       ),
     );

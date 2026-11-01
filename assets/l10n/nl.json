@@ -609,5 +609,7 @@
  "pw.same": "Het nieuwe wachtwoord moet anders zijn dan het huidige.",
  "pw.done": "Wachtwoord gewijzigd",
  "pw.forgot": "Weet je het niet meer? Ontvang een e-mail om het opnieuw in te stellen",
- "pw.google": "Inloggen met Google: het wachtwoord beheer je in je Google-account"
+ "pw.google": "Inloggen met Google: het wachtwoord beheer je in je Google-account",
+ "tech.pressure": "Bandenspanning",
+ "units.pressure": "Bandenspanning"
 }

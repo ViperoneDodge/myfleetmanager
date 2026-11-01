@@ -609,5 +609,7 @@
  "pw.same": "Caithfidh an focal faire nua a bheith difriúil ón gceann reatha.",
  "pw.done": "Athraíodh an focal faire",
  "pw.forgot": "Ní cuimhin leat é? Faigh ríomhphost chun é a athshocrú",
- "pw.google": "Síniú isteach le Google: bainistítear an focal faire i do chuntas Google"
+ "pw.google": "Síniú isteach le Google: bainistítear an focal faire i do chuntas Google",
+ "tech.pressure": "Brú na mbonn",
+ "units.pressure": "Brú na mbonn"
 }

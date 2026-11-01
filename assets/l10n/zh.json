@@ -609,5 +609,7 @@
  "pw.same": "新密码必须与当前密码不同。",
  "pw.done": "密码已更改",
  "pw.forgot": "忘记了？接收重置邮件",
- "pw.google": "使用 Google 登录：密码在你的 Google 账号中管理"
+ "pw.google": "使用 Google 登录：密码在你的 Google 账号中管理",
+ "tech.pressure": "胎压",
+ "units.pressure": "胎压"
 }

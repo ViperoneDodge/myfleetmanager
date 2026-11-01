@@ -364,6 +364,8 @@ class Vehicle {
   String battery;
   String plugs;
   String filters;
+  String pressureFront;
+  String pressureRear;
   int updatedAt;
   String updatedBy;
 
@@ -399,6 +401,8 @@ class Vehicle {
     this.battery = '',
     this.plugs = '',
     this.filters = '',
+    this.pressureFront = '',
+    this.pressureRear = '',
     int? updatedAt,
     this.updatedBy = '',
     this.updatedByUid = '',
@@ -503,6 +507,8 @@ class Vehicle {
         if (battery.isNotEmpty) 'battery': battery,
         if (plugs.isNotEmpty) 'plugs': plugs,
         if (filters.isNotEmpty) 'filters': filters,
+        if (pressureFront.isNotEmpty) 'pressureFront': pressureFront,
+        if (pressureRear.isNotEmpty) 'pressureRear': pressureRear,
         'updatedAt': updatedAt,
         'updatedBy': updatedBy,
         'updatedByUid': updatedByUid,
@@ -541,6 +547,8 @@ class Vehicle {
         battery: j['battery'] as String? ?? '',
         plugs: j['plugs'] as String? ?? '',
         filters: j['filters'] as String? ?? '',
+        pressureFront: j['pressureFront'] as String? ?? '',
+        pressureRear: j['pressureRear'] as String? ?? '',
         updatedAt: (j['updatedAt'] as num?)?.toInt() ?? 0,
         updatedBy: j['updatedBy'] as String? ?? '',
         updatedByUid: j['updatedByUid'] as String? ?? '',

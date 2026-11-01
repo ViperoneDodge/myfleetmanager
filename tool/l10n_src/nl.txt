@@ -609,3 +609,5 @@ Het nieuwe wachtwoord moet anders zijn dan het huidige.
 Wachtwoord gewijzigd
 Weet je het niet meer? Ontvang een e-mail om het opnieuw in te stellen
 Inloggen met Google: het wachtwoord beheer je in je Google-account
+Bandenspanning
+Bandenspanning

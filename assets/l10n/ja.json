@@ -609,5 +609,7 @@
  "pw.same": "新しいパスワードは現在のものと別にしてください。",
  "pw.done": "パスワードを変更しました",
  "pw.forgot": "思い出せない場合はリセット用のメールを受け取る",
- "pw.google": "Google でログイン：パスワードは Google アカウントで管理します"
+ "pw.google": "Google でログイン：パスワードは Google アカウントで管理します",
+ "tech.pressure": "タイヤ空気圧",
+ "units.pressure": "タイヤ空気圧"
 }

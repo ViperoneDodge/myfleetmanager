@@ -609,5 +609,7 @@
  "pw.same": "Nýja lykilorðið verður að vera annað en það núverandi.",
  "pw.done": "Lykilorði breytt",
  "pw.forgot": "Manstu það ekki? Fáðu tölvupóst til að endurstilla það",
- "pw.google": "Innskráning með Google: lykilorðinu er stjórnað í Google-reikningnum þínum"
+ "pw.google": "Innskráning með Google: lykilorðinu er stjórnað í Google-reikningnum þínum",
+ "tech.pressure": "Loftþrýstingur í dekkjum",
+ "units.pressure": "Loftþrýstingur í dekkjum"
 }

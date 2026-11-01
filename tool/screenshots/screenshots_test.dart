@@ -102,6 +102,8 @@ void setupData() {
     ..engineCc = '1598'
     ..fuel = 'diesel'
     ..oil = '5W-30 ACEA C3'
+    ..pressureFront = '2.3'
+    ..pressureRear = '2.5'
     ..battery = '12V 70Ah 680A AGM'
     ..plugs = 'Bosch 0 250 202 142'
     ..filters = 'Mann HU 7008 z\nMann C 27 009\nMann CUK 2939';
@@ -263,8 +265,8 @@ void main() {
           await Scrollable.ensureVisible(tester.element(find.text('${tr('tech.powerName')} (kW / ${tr('unit.cv')})')), alignment: 0.25);
         });
         await shot(tester, VehicleEditScreen(vehicle: appState.vehicleById('g3')!.copy()..tyres = ''), '06c_moto_tyres', then: () async {
-          await tester.scrollUntilVisible(find.text(tr('tyre.rearOne')), 300, scrollable: find.byType(Scrollable).first);
-          await Scrollable.ensureVisible(tester.element(find.text(tr('tyre.frontOne'))), alignment: 0.3);
+          await tester.scrollUntilVisible(find.text('${tr('tech.pressure')} (bar)'), 300, scrollable: find.byType(Scrollable).first);
+          await Scrollable.ensureVisible(tester.element(find.text(tr('tyre.frontOne')).first), alignment: 0.3);
         });
         await shot(tester, const VehicleDetailScreen(vehicleId: 'g1'), '07_ocr', then: () async {
           final ctx = tester.element(find.byType(VehicleDetailScreen));

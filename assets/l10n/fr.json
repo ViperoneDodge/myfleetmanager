@@ -609,5 +609,7 @@
  "pw.same": "Le nouveau mot de passe doit être différent de l'actuel.",
  "pw.done": "Mot de passe modifié",
  "pw.forgot": "Tu ne t’en souviens plus ? Reçois un e-mail pour le réinitialiser",
- "pw.google": "Connexion Google : le mot de passe se gère dans ton compte Google"
+ "pw.google": "Connexion Google : le mot de passe se gère dans ton compte Google",
+ "tech.pressure": "Pression des pneus",
+ "units.pressure": "Pression des pneus"
 }

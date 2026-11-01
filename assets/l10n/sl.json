@@ -609,5 +609,7 @@
  "pw.same": "Novo geslo mora biti drugačno od trenutnega.",
  "pw.done": "Geslo je spremenjeno",
  "pw.forgot": "Se ga ne spomniš? Prejmi e-pošto za ponastavitev",
- "pw.google": "Prijava z Googlom: geslo upravljaš v svojem Google računu"
+ "pw.google": "Prijava z Googlom: geslo upravljaš v svojem Google računu",
+ "tech.pressure": "Tlak v pnevmatikah",
+ "units.pressure": "Tlak v pnevmatikah"
 }

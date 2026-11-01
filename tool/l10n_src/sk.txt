@@ -609,3 +609,5 @@ Nové heslo sa musí líšiť od aktuálneho.
 Heslo bolo zmenené
 Nepamätáš si ho? Získaj e-mail na obnovenie
 Prihlásenie cez Google: heslo spravuješ vo svojom účte Google
+Tlak v pneumatikách
+Tlak v pneumatikách

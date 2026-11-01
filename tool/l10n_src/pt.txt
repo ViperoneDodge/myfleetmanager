@@ -609,3 +609,5 @@ A nova palavra-passe deve ser diferente da atual.
 Palavra-passe alterada
 Não te lembras? Recebe um e-mail para a redefinir
 Acesso com Google: a palavra-passe é gerida na tua conta Google
+Pressão dos pneus
+Pressão dos pneus

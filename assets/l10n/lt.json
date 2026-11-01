@@ -609,5 +609,7 @@
  "pw.same": "Naujas slaptažodis turi skirtis nuo dabartinio.",
  "pw.done": "Slaptažodis pakeistas",
  "pw.forgot": "Neprisimeni? Gauk el. laišką jam atkurti",
- "pw.google": "Prisijungimas per Google: slaptažodį tvarkai savo Google paskyroje"
+ "pw.google": "Prisijungimas per Google: slaptažodį tvarkai savo Google paskyroje",
+ "tech.pressure": "Padangų slėgis",
+ "units.pressure": "Padangų slėgis"
 }

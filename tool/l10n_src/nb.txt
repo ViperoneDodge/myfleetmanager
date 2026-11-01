@@ -609,3 +609,5 @@ Det nye passordet må være forskjellig fra det nåværende.
 Passordet er endret
 Husker du det ikke? Få en e-post for å tilbakestille det
 Pålogging med Google: passordet administreres i Google-kontoen din
+Dekktrykk
+Dekktrykk

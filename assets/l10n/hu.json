@@ -609,5 +609,7 @@
  "pw.same": "Az új jelszó nem lehet azonos a jelenlegivel.",
  "pw.done": "Jelszó módosítva",
  "pw.forgot": "Nem emlékszel rá? Kérj e-mailt a visszaállításhoz",
- "pw.google": "Google-bejelentkezés: a jelszót a Google-fiókodban kezelheted"
+ "pw.google": "Google-bejelentkezés: a jelszót a Google-fiókodban kezelheted",
+ "tech.pressure": "Guminyomás",
+ "units.pressure": "Guminyomás"
 }

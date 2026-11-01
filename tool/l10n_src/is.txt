@@ -609,3 +609,5 @@ Nýja lykilorðið verður að vera annað en það núverandi.
 Lykilorði breytt
 Manstu það ekki? Fáðu tölvupóst til að endurstilla það
 Innskráning með Google: lykilorðinu er stjórnað í Google-reikningnum þínum
+Loftþrýstingur í dekkjum
+Loftþrýstingur í dekkjum

@@ -609,5 +609,7 @@
  "pw.same": "Det nye passordet må være forskjellig fra det nåværende.",
  "pw.done": "Passordet er endret",
  "pw.forgot": "Husker du det ikke? Få en e-post for å tilbakestille det",
- "pw.google": "Pålogging med Google: passordet administreres i Google-kontoen din"
+ "pw.google": "Pålogging med Google: passordet administreres i Google-kontoen din",
+ "tech.pressure": "Dekktrykk",
+ "units.pressure": "Dekktrykk"
 }

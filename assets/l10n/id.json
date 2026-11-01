@@ -609,5 +609,7 @@
  "pw.same": "Kata sandi baru harus berbeda dari yang sekarang.",
  "pw.done": "Kata sandi diubah",
  "pw.forgot": "Lupa? Dapatkan email untuk mengatur ulang",
- "pw.google": "Masuk dengan Google: kata sandi dikelola di akun Google Anda"
+ "pw.google": "Masuk dengan Google: kata sandi dikelola di akun Google Anda",
+ "tech.pressure": "Tekanan ban",
+ "units.pressure": "Tekanan ban"
 }

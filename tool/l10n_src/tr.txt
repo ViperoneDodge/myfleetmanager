@@ -609,3 +609,5 @@ Yeni şifre mevcut şifreden farklı olmalı.
 Şifre değiştirildi
 Hatırlamıyor musun? Sıfırlamak için e-posta al
 Google ile giriş: şifre Google hesabında yönetilir
+Lastik basıncı
+Lastik basıncı

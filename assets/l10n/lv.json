@@ -609,5 +609,7 @@
  "pw.same": "Jaunajai parolei jāatšķiras no pašreizējās.",
  "pw.done": "Parole nomainīta",
  "pw.forgot": "Neatceries? Saņem e-pastu, lai to atiestatītu",
- "pw.google": "Pieteikšanās ar Google: paroli pārvaldi savā Google kontā"
+ "pw.google": "Pieteikšanās ar Google: paroli pārvaldi savā Google kontā",
+ "tech.pressure": "Riepu spiediens",
+ "units.pressure": "Riepu spiediens"
 }

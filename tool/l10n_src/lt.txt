@@ -609,3 +609,5 @@ Naujas slaptažodis turi skirtis nuo dabartinio.
 Slaptažodis pakeistas
 Neprisimeni? Gauk el. laišką jam atkurti
 Prisijungimas per Google: slaptažodį tvarkai savo Google paskyroje
+Padangų slėgis
+Padangų slėgis

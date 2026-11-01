@@ -609,3 +609,5 @@ Az új jelszó nem lehet azonos a jelenlegivel.
 Jelszó módosítva
 Nem emlékszel rá? Kérj e-mailt a visszaállításhoz
 Google-bejelentkezés: a jelszót a Google-fiókodban kezelheted
+Guminyomás
+Guminyomás

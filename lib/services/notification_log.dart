@@ -25,8 +25,8 @@ List<String> changedParts(Vehicle? a, Vehicle b) {
       j([b.name, b.plate, b.type.name, b.registrationDate?.toIso8601String(), b.notes])) {
     out.add('details');
   }
-  if (j([a.vin, a.tyres, a.powerKw, a.engineCc, a.fuel, a.oil, a.battery, a.plugs, a.filters]) !=
-      j([b.vin, b.tyres, b.powerKw, b.engineCc, b.fuel, b.oil, b.battery, b.plugs, b.filters])) {
+  if (j([a.vin, a.tyres, a.pressureFront, a.pressureRear, a.powerKw, a.engineCc, a.fuel, a.oil, a.battery, a.plugs, a.filters]) !=
+      j([b.vin, b.tyres, b.pressureFront, b.pressureRear, b.powerKw, b.engineCc, b.fuel, b.oil, b.battery, b.plugs, b.filters])) {
     out.add('tech');
   }
   if (j(a.deadlines.map((d) => d.toJson()).toList()) != j(b.deadlines.map((d) => d.toJson()).toList())) {
@@ -41,11 +41,15 @@ List<String> changedParts(Vehicle? a, Vehicle b) {
   return out;
 }
 
-const List<String> techFields = ['vin', 'tyres', 'powerKw', 'engineCc', 'fuel', 'oil', 'battery', 'plugs', 'filters'];
+const List<String> techFields = [
+  'vin', 'tyres', 'pressureFront', 'pressureRear', 'powerKw', 'engineCc', 'fuel', 'oil', 'battery', 'plugs', 'filters',
+];
 
 Map<String, String> _techValues(Vehicle v) => {
       'vin': v.vin,
       'tyres': v.tyres,
+      'pressureFront': v.pressureFront,
+      'pressureRear': v.pressureRear,
       'powerKw': v.powerKw,
       'engineCc': v.engineCc,
       'fuel': v.fuel,

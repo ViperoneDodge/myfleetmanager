@@ -76,9 +76,9 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
     final ok = await showModalBottomSheet<bool>(
       context: context,
       isScrollControlled: true,
-      showDragHandle: true,
+      enableDrag: false,
       builder: (ctx) => Padding(
-        padding: EdgeInsets.fromLTRB(20, 0, 20, 20 + MediaQuery.of(ctx).viewInsets.bottom),
+        padding: EdgeInsets.fromLTRB(20, 24, 20, 20 + MediaQuery.of(ctx).viewInsets.bottom),
         child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           if (custom)
             TextField(
