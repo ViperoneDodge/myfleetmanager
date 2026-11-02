@@ -614,5 +614,14 @@
  "units.pressure": "Däcktryck",
  "pro.benefitNoAds": "Ingen reklam",
  "ads.privacy": "Annonsintegritet",
- "ads.privacySub": "Se över dina val för anpassade annonser"
+ "ads.privacySub": "Se över dina val för anpassade annonser",
+ "reward.title": "Fler fordon med reklam",
+ "reward.info": "Titta på {n} annonser för att låsa upp ett fordon till, för alltid. Du kan sluta när du vill: dina framsteg sparas.",
+ "reward.slot": "Fordon {n}",
+ "reward.watch": "Titta ({done}/{total})",
+ "reward.unlocked": "Upplåst",
+ "reward.locked": "Lås först upp fordon {n}",
+ "reward.notReady": "Ingen annons klar än: försök igen om några sekunder",
+ "reward.noReward": "Annonsen avbröts: den räknas bara om du ser den till slutet",
+ "reward.done": "Nu kan du hantera {n} fordon"
 }

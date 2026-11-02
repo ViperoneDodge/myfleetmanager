@@ -614,3 +614,12 @@ Brú na mbonn
 Gan fógraí
 Príobháideachas fógraí
 Athbhreithnigh do roghanna faoi fhógraí pearsantaithe
+Tuilleadh feithiclí le fógraí
+Féach ar {n} fógra chun feithicil eile a dhíghlasáil go buan. Is féidir leat stopadh am ar bith: sábháiltear do dhul chun cinn.
+Feithicil {n}
+Féach ({done}/{total})
+Díghlasáilte
+Díghlasáil feithicil {n} ar dtús
+Níl aon fhógra réidh fós: bain triail eile as i gceann cúpla soicind
+Stopadh an fógra: ní áirítear é ach má fhéachann tú air go deireadh
+Is féidir leat {n} feithicil a bhainistiú anois

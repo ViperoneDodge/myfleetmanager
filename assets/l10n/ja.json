@@ -614,5 +614,14 @@
  "units.pressure": "タイヤ空気圧",
  "pro.benefitNoAds": "広告なし",
  "ads.privacy": "広告のプライバシー",
- "ads.privacySub": "パーソナライズ広告の設定を確認"
+ "ads.privacySub": "パーソナライズ広告の設定を確認",
+ "reward.title": "広告で車両を追加",
+ "reward.info": "広告を{n}本見ると車両を1台、永続的に追加できます。いつでも中断でき、進行状況は保存されます。",
+ "reward.slot": "{n}台目の車両",
+ "reward.watch": "視聴する（{done}/{total}）",
+ "reward.unlocked": "解除済み",
+ "reward.locked": "先に{n}台目を解除してください",
+ "reward.notReady": "まだ広告の準備ができていません。数秒後にお試しください",
+ "reward.noReward": "広告が中断されました。最後まで見た場合のみカウントされます",
+ "reward.done": "{n}台まで管理できるようになりました"
 }

@@ -614,5 +614,14 @@
  "units.pressure": "Reifendruck",
  "pro.benefitNoAds": "Keine Werbung",
  "ads.privacy": "Werbe-Datenschutz",
- "ads.privacySub": "Deine Auswahl zu personalisierter Werbung prüfen"
+ "ads.privacySub": "Deine Auswahl zu personalisierter Werbung prüfen",
+ "reward.title": "Mehr Fahrzeuge mit Werbung",
+ "reward.info": "Sieh dir {n} Anzeigen an, um dauerhaft ein weiteres Fahrzeug freizuschalten. Du kannst jederzeit aufhören: dein Fortschritt bleibt gespeichert.",
+ "reward.slot": "Fahrzeug {n}",
+ "reward.watch": "Ansehen ({done}/{total})",
+ "reward.unlocked": "Freigeschaltet",
+ "reward.locked": "Schalte zuerst Fahrzeug {n} frei",
+ "reward.notReady": "Noch keine Anzeige bereit: versuche es in ein paar Sekunden erneut",
+ "reward.noReward": "Anzeige abgebrochen: sie zählt nur, wenn du sie bis zum Ende ansiehst",
+ "reward.done": "Du kannst jetzt {n} Fahrzeuge verwalten"
 }

@@ -614,5 +614,14 @@
  "units.pressure": "Brú na mbonn",
  "pro.benefitNoAds": "Gan fógraí",
  "ads.privacy": "Príobháideachas fógraí",
- "ads.privacySub": "Athbhreithnigh do roghanna faoi fhógraí pearsantaithe"
+ "ads.privacySub": "Athbhreithnigh do roghanna faoi fhógraí pearsantaithe",
+ "reward.title": "Tuilleadh feithiclí le fógraí",
+ "reward.info": "Féach ar {n} fógra chun feithicil eile a dhíghlasáil go buan. Is féidir leat stopadh am ar bith: sábháiltear do dhul chun cinn.",
+ "reward.slot": "Feithicil {n}",
+ "reward.watch": "Féach ({done}/{total})",
+ "reward.unlocked": "Díghlasáilte",
+ "reward.locked": "Díghlasáil feithicil {n} ar dtús",
+ "reward.notReady": "Níl aon fhógra réidh fós: bain triail eile as i gceann cúpla soicind",
+ "reward.noReward": "Stopadh an fógra: ní áirítear é ach má fhéachann tú air go deireadh",
+ "reward.done": "Is féidir leat {n} feithicil a bhainistiú anois"
 }

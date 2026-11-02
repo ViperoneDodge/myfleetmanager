@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -5,8 +7,17 @@ import '../ads_config.dart';
 import '../platform.dart';
 
 class AdsRules {
-  static const Duration gap = Duration(hours: 4);
-  static const Duration newUser = Duration(hours: 24);
+  static const Duration gap = AdsConfig.testBuild ? Duration(minutes: 5) : Duration(hours: 4);
+  static const Duration newUser = AdsConfig.testBuild ? Duration(minutes: 5) : Duration(hours: 24);
+
+  static const int adsPerSlot = 10;
+  static const int maxSlots = 2;
+
+  static ({int slots, int progress}) afterReward(int slots, int progress) {
+    if (slots >= maxSlots) return (slots: slots, progress: 0);
+    final p = progress + 1;
+    return p >= adsPerSlot ? (slots: slots + 1, progress: 0) : (slots: slots, progress: p);
+  }
 
   static bool allowed({
     required bool hasSession,
@@ -41,7 +52,74 @@ class AdsService {
   bool privacyRequired = false;
   VoidCallback? onChanged;
 
-  String get _unit => isIOS ? AdsConfig.iosAppOpen : AdsConfig.androidAppOpen;
+  String get _unit => AdsConfig.testBuild
+      ? (isIOS ? AdsConfig.testIosAppOpen : AdsConfig.testAndroidAppOpen)
+      : (isIOS ? AdsConfig.iosAppOpen : AdsConfig.androidAppOpen);
+
+  String get _rewardedUnit {
+    final real = isIOS ? AdsConfig.iosRewarded : AdsConfig.androidRewarded;
+    if (AdsConfig.testBuild || real.isEmpty) {
+      return isIOS ? AdsConfig.testIosRewarded : AdsConfig.testAndroidRewarded;
+    }
+    return real;
+  }
+
+  RewardedAd? _rewarded;
+  bool _rewardedLoading = false;
+  bool _wantRewarded = false;
+
+  bool get rewardedReady => _rewarded != null;
+
+  bool get rewardedLoading => _rewardedLoading || (_wantRewarded && !_ready);
+
+  void preloadRewarded() {
+    if (!supported) return;
+    _wantRewarded = true;
+    start();
+    if (!_ready || _rewardedLoading || _rewarded != null) return;
+    _rewardedLoading = true;
+    onChanged?.call();
+    RewardedAd.load(
+      adUnitId: _rewardedUnit,
+      request: const AdRequest(),
+      rewardedAdLoadCallback: RewardedAdLoadCallback(
+        onAdLoaded: (ad) {
+          _rewarded = ad;
+          _rewardedLoading = false;
+          onChanged?.call();
+        },
+        onAdFailedToLoad: (_) {
+          _rewardedLoading = false;
+          onChanged?.call();
+        },
+      ),
+    );
+  }
+
+  Future<bool> showRewarded() async {
+    final ad = _rewarded;
+    if (ad == null || _showing) {
+      preloadRewarded();
+      return false;
+    }
+    _rewarded = null;
+    _showing = true;
+    var earned = false;
+    final done = Completer<bool>();
+    void finish(Ad a) {
+      _showing = false;
+      a.dispose();
+      preloadRewarded();
+      if (!done.isCompleted) done.complete(earned);
+    }
+
+    ad.fullScreenContentCallback = FullScreenContentCallback(
+      onAdDismissedFullScreenContent: finish,
+      onAdFailedToShowFullScreenContent: (a, _) => finish(a),
+    );
+    await ad.show(onUserEarnedReward: (_, __) => earned = true);
+    return done.future;
+  }
 
   bool get showing => _showing;
 
@@ -63,6 +141,7 @@ class AdsService {
       await MobileAds.instance.initialize();
       _ready = true;
       _load();
+      if (_wantRewarded) preloadRewarded();
     } catch (_) {}
   }
 

@@ -614,5 +614,14 @@
  "units.pressure": "Áp suất lốp",
  "pro.benefitNoAds": "Không quảng cáo",
  "ads.privacy": "Quyền riêng tư quảng cáo",
- "ads.privacySub": "Xem lại lựa chọn về quảng cáo được cá nhân hóa"
+ "ads.privacySub": "Xem lại lựa chọn về quảng cáo được cá nhân hóa",
+ "reward.title": "Thêm xe nhờ quảng cáo",
+ "reward.info": "Xem {n} quảng cáo để mở khóa thêm một xe, vĩnh viễn. Bạn có thể dừng bất cứ lúc nào: tiến độ được lưu lại.",
+ "reward.slot": "Xe thứ {n}",
+ "reward.watch": "Xem ({done}/{total})",
+ "reward.unlocked": "Đã mở khóa",
+ "reward.locked": "Hãy mở khóa xe thứ {n} trước",
+ "reward.notReady": "Chưa có quảng cáo sẵn sàng: thử lại sau vài giây",
+ "reward.noReward": "Quảng cáo bị dừng: chỉ được tính khi xem đến hết",
+ "reward.done": "Giờ bạn có thể quản lý {n} xe"
 }

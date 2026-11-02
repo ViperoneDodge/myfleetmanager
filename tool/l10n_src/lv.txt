@@ -614,3 +614,12 @@ Riepu spiediens
 Bez reklāmām
 Reklāmu privātums
 Pārskati savas izvēles par personalizētām reklāmām
+Vairāk transportlīdzekļu ar reklāmām
+Noskaties {n} reklāmas, lai uz visiem laikiem atbloķētu vēl vienu transportlīdzekli. Vari apstāties jebkurā brīdī: progress tiek saglabāts.
+{n}. transportlīdzeklis
+Skatīties ({done}/{total})
+Atbloķēts
+Vispirms atbloķē {n}. transportlīdzekli
+Neviena reklāma vēl nav gatava: mēģini pēc dažām sekundēm
+Reklāma pārtraukta: tā tiek ieskaitīta tikai, ja noskaties līdz galam
+Tagad vari pārvaldīt {n} transportlīdzekļus

@@ -614,5 +614,14 @@
  "units.pressure": "Lastik basıncı",
  "pro.benefitNoAds": "Reklamsız",
  "ads.privacy": "Reklam gizliliği",
- "ads.privacySub": "Kişiselleştirilmiş reklam tercihlerini gözden geçir"
+ "ads.privacySub": "Kişiselleştirilmiş reklam tercihlerini gözden geçir",
+ "reward.title": "Reklamla daha fazla araç",
+ "reward.info": "Bir aracın kilidini kalıcı olarak açmak için {n} reklam izle. İstediğin zaman durabilirsin: ilerlemen kaydedilir.",
+ "reward.slot": "{n}. araç",
+ "reward.watch": "İzle ({done}/{total})",
+ "reward.unlocked": "Kilit açıldı",
+ "reward.locked": "Önce {n}. aracın kilidini aç",
+ "reward.notReady": "Henüz hazır reklam yok: birkaç saniye sonra tekrar dene",
+ "reward.noReward": "Reklam yarıda kesildi: yalnızca sonuna kadar izlenirse sayılır",
+ "reward.done": "Artık {n} aracı yönetebilirsin"
 }

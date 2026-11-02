@@ -614,3 +614,12 @@ Pressão dos pneus
 Sem publicidade
 Privacidade dos anúncios
 Revê as tuas escolhas sobre anúncios personalizados
+Mais veículos com publicidade
+Vê {n} anúncios para desbloquear mais um veículo, para sempre. Podes parar quando quiseres: o progresso fica guardado.
+Veículo {n}
+Ver ({done}/{total})
+Desbloqueado
+Desbloqueia primeiro o veículo {n}
+Ainda não há anúncio pronto: tenta daqui a uns segundos
+Anúncio interrompido: só conta se o vires até ao fim
+Agora podes gerir {n} veículos

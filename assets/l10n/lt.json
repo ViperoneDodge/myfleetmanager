@@ -614,5 +614,14 @@
  "units.pressure": "Padangų slėgis",
  "pro.benefitNoAds": "Be reklamų",
  "ads.privacy": "Reklamų privatumas",
- "ads.privacySub": "Peržiūrėk savo pasirinkimus dėl suasmenintų reklamų"
+ "ads.privacySub": "Peržiūrėk savo pasirinkimus dėl suasmenintų reklamų",
+ "reward.title": "Daugiau transporto priemonių su reklamomis",
+ "reward.info": "Peržiūrėk {n} reklamų ir visam laikui atrakink dar vieną transporto priemonę. Gali sustoti bet kada: pažanga išsaugoma.",
+ "reward.slot": "{n}-oji transporto priemonė",
+ "reward.watch": "Žiūrėti ({done}/{total})",
+ "reward.unlocked": "Atrakinta",
+ "reward.locked": "Pirmiausia atrakink {n}-ąją transporto priemonę",
+ "reward.notReady": "Dar nėra paruoštos reklamos: bandyk po kelių sekundžių",
+ "reward.noReward": "Reklama nutraukta: ji įskaitoma tik peržiūrėjus iki galo",
+ "reward.done": "Dabar gali tvarkyti {n} transporto priemones"
 }

@@ -614,5 +614,14 @@
  "units.pressure": "Loftþrýstingur í dekkjum",
  "pro.benefitNoAds": "Engar auglýsingar",
  "ads.privacy": "Persónuvernd auglýsinga",
- "ads.privacySub": "Farðu yfir val þitt um sérsniðnar auglýsingar"
+ "ads.privacySub": "Farðu yfir val þitt um sérsniðnar auglýsingar",
+ "reward.title": "Fleiri ökutæki með auglýsingum",
+ "reward.info": "Horfðu á {n} auglýsingar til að opna eitt ökutæki í viðbót, til frambúðar. Þú getur hætt hvenær sem er: framvindan vistast.",
+ "reward.slot": "Ökutæki {n}",
+ "reward.watch": "Horfa ({done}/{total})",
+ "reward.unlocked": "Opnað",
+ "reward.locked": "Opnaðu fyrst ökutæki {n}",
+ "reward.notReady": "Engin auglýsing tilbúin enn: reyndu aftur eftir nokkrar sekúndur",
+ "reward.noReward": "Auglýsing stöðvuð: hún telur aðeins ef þú horfir á hana til enda",
+ "reward.done": "Nú geturðu haldið utan um {n} ökutæki"
 }

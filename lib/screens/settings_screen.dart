@@ -84,7 +84,7 @@ class SettingsScreen extends StatelessWidget {
                   ? (appState.devPro && !appState.purchasedPro
                       ? tr('pro.activeDev')
                       : tr('pro.activeThanks'))
-                  : tr('pro.freeInfo', {'n': 3})),
+                  : tr('pro.freeInfo', {'n': appState.freeVehicleLimit})),
               trailing: const Icon(Icons.chevron_right),
               onTap: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (_) => const ProScreen())),

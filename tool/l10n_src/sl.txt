@@ -614,3 +614,12 @@ Tlak v pnevmatikah
 Brez oglasov
 Zasebnost oglasov
 Preglej svoje izbire za prilagojene oglase
+Več vozil z oglasi
+Oglej si {n} oglasov in za vedno odkleni še eno vozilo. Ustaviš se lahko kadar koli: napredek ostane shranjen.
+Vozilo {n}
+Oglej si ({done}/{total})
+Odklenjeno
+Najprej odkleni vozilo {n}
+Noben oglas še ni pripravljen: poskusi čez nekaj sekund
+Oglas prekinjen: šteje le, če si ga ogledaš do konca
+Zdaj lahko upravljaš {n} vozil

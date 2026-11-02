@@ -614,5 +614,14 @@
  "units.pressure": "Bandenspanning",
  "pro.benefitNoAds": "Geen advertenties",
  "ads.privacy": "Advertentieprivacy",
- "ads.privacySub": "Bekijk je keuzes voor gepersonaliseerde advertenties"
+ "ads.privacySub": "Bekijk je keuzes voor gepersonaliseerde advertenties",
+ "reward.title": "Meer voertuigen met advertenties",
+ "reward.info": "Bekijk {n} advertenties om voorgoed een extra voertuig te ontgrendelen. Je kunt altijd stoppen: je voortgang wordt bewaard.",
+ "reward.slot": "Voertuig {n}",
+ "reward.watch": "Bekijken ({done}/{total})",
+ "reward.unlocked": "Ontgrendeld",
+ "reward.locked": "Ontgrendel eerst voertuig {n}",
+ "reward.notReady": "Nog geen advertentie klaar: probeer het over een paar seconden opnieuw",
+ "reward.noReward": "Advertentie onderbroken: telt alleen als je hem tot het einde bekijkt",
+ "reward.done": "Je kunt nu {n} voertuigen beheren"
 }

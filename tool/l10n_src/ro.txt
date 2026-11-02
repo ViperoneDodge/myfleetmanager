@@ -614,3 +614,12 @@ Presiunea în anvelope
 Fără reclame
 Confidențialitatea reclamelor
 Revizuiește alegerile despre reclamele personalizate
+Mai multe vehicule cu reclame
+Urmărește {n} reclame ca să deblochezi încă un vehicul, pentru totdeauna. Te poți opri oricând: progresul rămâne salvat.
+Vehiculul {n}
+Urmărește ({done}/{total})
+Deblocat
+Deblochează mai întâi vehiculul {n}
+Nicio reclamă pregătită: încearcă din nou peste câteva secunde
+Reclamă întreruptă: contează doar dacă o urmărești până la capăt
+Acum poți gestiona {n} vehicule

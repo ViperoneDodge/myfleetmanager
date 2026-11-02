@@ -614,3 +614,12 @@ Pressjoni tat-tajers
 Ebda reklami
 Privatezza tar-reklami
 Irrevedi l-għażliet tiegħek dwar reklami personalizzati
+Aktar vetturi bir-reklami
+Ara {n} reklami biex tiftaħ vettura oħra għal dejjem. Tista’ tieqaf meta trid: il-progress jibqa’ salvat.
+Vettura {n}
+Ara ({done}/{total})
+Miftuħa
+L-ewwel iftaħ il-vettura {n}
+Għadu ma hemm l-ebda reklam lest: erġa’ pprova fi ftit sekondi
+Reklam interrott: jgħodd biss jekk tarah sal-aħħar
+Issa tista’ timmaniġġja {n} vetturi

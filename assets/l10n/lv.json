@@ -614,5 +614,14 @@
  "units.pressure": "Riepu spiediens",
  "pro.benefitNoAds": "Bez reklāmām",
  "ads.privacy": "Reklāmu privātums",
- "ads.privacySub": "Pārskati savas izvēles par personalizētām reklāmām"
+ "ads.privacySub": "Pārskati savas izvēles par personalizētām reklāmām",
+ "reward.title": "Vairāk transportlīdzekļu ar reklāmām",
+ "reward.info": "Noskaties {n} reklāmas, lai uz visiem laikiem atbloķētu vēl vienu transportlīdzekli. Vari apstāties jebkurā brīdī: progress tiek saglabāts.",
+ "reward.slot": "{n}. transportlīdzeklis",
+ "reward.watch": "Skatīties ({done}/{total})",
+ "reward.unlocked": "Atbloķēts",
+ "reward.locked": "Vispirms atbloķē {n}. transportlīdzekli",
+ "reward.notReady": "Neviena reklāma vēl nav gatava: mēģini pēc dažām sekundēm",
+ "reward.noReward": "Reklāma pārtraukta: tā tiek ieskaitīta tikai, ja noskaties līdz galam",
+ "reward.done": "Tagad vari pārvaldīt {n} transportlīdzekļus"
 }

@@ -614,5 +614,14 @@
  "units.pressure": "Pressione pneumatici",
  "pro.benefitNoAds": "Nessuna pubblicità",
  "ads.privacy": "Privacy della pubblicità",
- "ads.privacySub": "Rivedi le tue scelte sugli annunci personalizzati"
+ "ads.privacySub": "Rivedi le tue scelte sugli annunci personalizzati",
+ "reward.title": "Più veicoli con la pubblicità",
+ "reward.info": "Guarda {n} annunci per sbloccare un veicolo in più, per sempre. Puoi fermarti quando vuoi: il conteggio resta salvato.",
+ "reward.slot": "{n}° veicolo",
+ "reward.watch": "Guarda ({done}/{total})",
+ "reward.unlocked": "Sbloccato",
+ "reward.locked": "Prima sblocca il {n}° veicolo",
+ "reward.notReady": "Nessun annuncio pronto: riprova tra qualche secondo",
+ "reward.noReward": "Annuncio interrotto: per contare va guardato fino alla fine",
+ "reward.done": "Ora puoi gestire {n} veicoli"
 }

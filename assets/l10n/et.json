@@ -614,5 +614,14 @@
  "units.pressure": "Rehvirõhk",
  "pro.benefitNoAds": "Reklaamivaba",
  "ads.privacy": "Reklaamide privaatsus",
- "ads.privacySub": "Vaata üle oma valikud isikupärastatud reklaamide kohta"
+ "ads.privacySub": "Vaata üle oma valikud isikupärastatud reklaamide kohta",
+ "reward.title": "Rohkem sõidukeid reklaamide abil",
+ "reward.info": "Vaata {n} reklaami ja ava jäädavalt veel üks sõiduk. Võid igal ajal lõpetada: edenemine salvestatakse.",
+ "reward.slot": "Sõiduk {n}",
+ "reward.watch": "Vaata ({done}/{total})",
+ "reward.unlocked": "Avatud",
+ "reward.locked": "Ava kõigepealt sõiduk {n}",
+ "reward.notReady": "Ühtegi reklaami pole veel valmis: proovi mõne sekundi pärast uuesti",
+ "reward.noReward": "Reklaam katkes: see loeb ainult siis, kui vaatad lõpuni",
+ "reward.done": "Nüüd saad hallata {n} sõidukit"
 }

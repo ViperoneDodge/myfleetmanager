@@ -614,3 +614,12 @@ Tekanan ban
 Tanpa iklan
 Privasi iklan
 Tinjau pilihan Anda tentang iklan yang dipersonalisasi
+Lebih banyak kendaraan dengan iklan
+Tonton {n} iklan untuk membuka satu kendaraan lagi, selamanya. Anda bisa berhenti kapan saja: progres tetap tersimpan.
+Kendaraan {n}
+Tonton ({done}/{total})
+Terbuka
+Buka dulu kendaraan {n}
+Belum ada iklan yang siap: coba lagi beberapa detik lagi
+Iklan dihentikan: hanya dihitung jika ditonton sampai selesai
+Sekarang Anda bisa mengelola {n} kendaraan

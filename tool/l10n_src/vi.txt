@@ -614,3 +614,12 @@ Không nhớ? Nhận email để đặt lại
 Không quảng cáo
 Quyền riêng tư quảng cáo
 Xem lại lựa chọn về quảng cáo được cá nhân hóa
+Thêm xe nhờ quảng cáo
+Xem {n} quảng cáo để mở khóa thêm một xe, vĩnh viễn. Bạn có thể dừng bất cứ lúc nào: tiến độ được lưu lại.
+Xe thứ {n}
+Xem ({done}/{total})
+Đã mở khóa
+Hãy mở khóa xe thứ {n} trước
+Chưa có quảng cáo sẵn sàng: thử lại sau vài giây
+Quảng cáo bị dừng: chỉ được tính khi xem đến hết
+Giờ bạn có thể quản lý {n} xe

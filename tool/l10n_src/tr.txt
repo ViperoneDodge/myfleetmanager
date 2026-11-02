@@ -614,3 +614,12 @@ Lastik basıncı
 Reklamsız
 Reklam gizliliği
 Kişiselleştirilmiş reklam tercihlerini gözden geçir
+Reklamla daha fazla araç
+Bir aracın kilidini kalıcı olarak açmak için {n} reklam izle. İstediğin zaman durabilirsin: ilerlemen kaydedilir.
+{n}. araç
+İzle ({done}/{total})
+Kilit açıldı
+Önce {n}. aracın kilidini aç
+Henüz hazır reklam yok: birkaç saniye sonra tekrar dene
+Reklam yarıda kesildi: yalnızca sonuna kadar izlenirse sayılır
+Artık {n} aracı yönetebilirsin

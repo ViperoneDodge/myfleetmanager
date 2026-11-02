@@ -165,6 +165,20 @@ class SyncService {
         'seenAt': DateTime.now().millisecondsSinceEpoch,
       }, SetOptions(merge: true)).timeout(_timeout);
 
+  Future<void> saveRewards(String uid, int slots, int progress) => _db.collection('users').doc(uid).set({
+        'rewardSlots': slots,
+        'rewardProgress': progress,
+      }, SetOptions(merge: true)).timeout(_timeout);
+
+  Future<({int slots, int progress})> readRewards(String uid) async {
+    final d = await _db.collection('users').doc(uid).get().timeout(_timeout);
+    final j = d.data() ?? const <String, dynamic>{};
+    return (
+      slots: (j['rewardSlots'] as num?)?.toInt() ?? 0,
+      progress: (j['rewardProgress'] as num?)?.toInt() ?? 0,
+    );
+  }
+
   Stream<List<Map<String, dynamic>>> watchAllUsers() => _db
       .collection('users')
       .snapshots()

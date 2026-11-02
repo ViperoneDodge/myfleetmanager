@@ -614,5 +614,14 @@
  "units.pressure": "Rengaspaine",
  "pro.benefitNoAds": "Ei mainoksia",
  "ads.privacy": "Mainosten tietosuoja",
- "ads.privacySub": "Tarkista valintasi kohdennetuista mainoksista"
+ "ads.privacySub": "Tarkista valintasi kohdennetuista mainoksista",
+ "reward.title": "Lisää ajoneuvoja mainosten avulla",
+ "reward.info": "Katso {n} mainosta ja avaa pysyvästi yksi ajoneuvo lisää. Voit lopettaa milloin tahansa: edistyminen tallentuu.",
+ "reward.slot": "Ajoneuvo {n}",
+ "reward.watch": "Katso ({done}/{total})",
+ "reward.unlocked": "Avattu",
+ "reward.locked": "Avaa ensin ajoneuvo {n}",
+ "reward.notReady": "Mainosta ei ole vielä valmiina: yritä hetken päästä uudelleen",
+ "reward.noReward": "Mainos keskeytyi: se lasketaan vain, jos katsot sen loppuun",
+ "reward.done": "Voit nyt hallita {n} ajoneuvoa"
 }

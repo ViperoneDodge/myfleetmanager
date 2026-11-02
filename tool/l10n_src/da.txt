@@ -614,3 +614,12 @@ Dæktryk
 Ingen reklamer
 Annoncepersondata
 Gennemgå dine valg om tilpassede annoncer
+Flere køretøjer med reklamer
+Se {n} reklamer for at låse et køretøj mere op for altid. Du kan stoppe når som helst: dine fremskridt gemmes.
+Køretøj {n}
+Se ({done}/{total})
+Låst op
+Lås først køretøj {n} op
+Ingen reklame klar endnu: prøv igen om et par sekunder
+Reklamen blev afbrudt: den tæller kun, hvis du ser den til ende
+Nu kan du administrere {n} køretøjer

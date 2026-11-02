@@ -614,3 +614,12 @@ Bandenspanning
 Geen advertenties
 Advertentieprivacy
 Bekijk je keuzes voor gepersonaliseerde advertenties
+Meer voertuigen met advertenties
+Bekijk {n} advertenties om voorgoed een extra voertuig te ontgrendelen. Je kunt altijd stoppen: je voortgang wordt bewaard.
+Voertuig {n}
+Bekijken ({done}/{total})
+Ontgrendeld
+Ontgrendel eerst voertuig {n}
+Nog geen advertentie klaar: probeer het over een paar seconden opnieuw
+Advertentie onderbroken: telt alleen als je hem tot het einde bekijkt
+Je kunt nu {n} voertuigen beheren

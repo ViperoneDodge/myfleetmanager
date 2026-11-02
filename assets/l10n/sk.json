@@ -614,5 +614,14 @@
  "units.pressure": "Tlak v pneumatikách",
  "pro.benefitNoAds": "Bez reklám",
  "ads.privacy": "Súkromie reklám",
- "ads.privacySub": "Skontroluj svoje voľby pre prispôsobené reklamy"
+ "ads.privacySub": "Skontroluj svoje voľby pre prispôsobené reklamy",
+ "reward.title": "Viac vozidiel vďaka reklamám",
+ "reward.info": "Pozri si {n} reklám a natrvalo odomkni ďalšie vozidlo. Môžeš kedykoľvek prestať: postup zostane uložený.",
+ "reward.slot": "Vozidlo {n}",
+ "reward.watch": "Prehrať ({done}/{total})",
+ "reward.unlocked": "Odomknuté",
+ "reward.locked": "Najprv odomkni vozidlo {n}",
+ "reward.notReady": "Zatiaľ nie je pripravená žiadna reklama: skús to o pár sekúnd",
+ "reward.noReward": "Reklama prerušená: počíta sa len pozretá do konca",
+ "reward.done": "Teraz môžeš spravovať {n} vozidiel"
 }

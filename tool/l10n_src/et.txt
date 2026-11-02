@@ -614,3 +614,12 @@ Rehvirõhk
 Reklaamivaba
 Reklaamide privaatsus
 Vaata üle oma valikud isikupärastatud reklaamide kohta
+Rohkem sõidukeid reklaamide abil
+Vaata {n} reklaami ja ava jäädavalt veel üks sõiduk. Võid igal ajal lõpetada: edenemine salvestatakse.
+Sõiduk {n}
+Vaata ({done}/{total})
+Avatud
+Ava kõigepealt sõiduk {n}
+Ühtegi reklaami pole veel valmis: proovi mõne sekundi pärast uuesti
+Reklaam katkes: see loeb ainult siis, kui vaatad lõpuni
+Nüüd saad hallata {n} sõidukit

@@ -614,5 +614,14 @@
  "units.pressure": "Ciśnienie w oponach",
  "pro.benefitNoAds": "Bez reklam",
  "ads.privacy": "Prywatność reklam",
- "ads.privacySub": "Sprawdź swoje wybory dotyczące spersonalizowanych reklam"
+ "ads.privacySub": "Sprawdź swoje wybory dotyczące spersonalizowanych reklam",
+ "reward.title": "Więcej pojazdów dzięki reklamom",
+ "reward.info": "Obejrzyj {n} reklam, aby na zawsze odblokować jeszcze jeden pojazd. Możesz przerwać w dowolnej chwili: postęp zostanie zapisany.",
+ "reward.slot": "Pojazd {n}",
+ "reward.watch": "Obejrzyj ({done}/{total})",
+ "reward.unlocked": "Odblokowano",
+ "reward.locked": "Najpierw odblokuj pojazd {n}",
+ "reward.notReady": "Brak gotowej reklamy: spróbuj za kilka sekund",
+ "reward.noReward": "Reklama przerwana: liczy się tylko obejrzana do końca",
+ "reward.done": "Możesz teraz zarządzać {n} pojazdami"
 }

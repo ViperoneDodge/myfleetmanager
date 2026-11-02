@@ -614,5 +614,14 @@
  "units.pressure": "Tekanan ban",
  "pro.benefitNoAds": "Tanpa iklan",
  "ads.privacy": "Privasi iklan",
- "ads.privacySub": "Tinjau pilihan Anda tentang iklan yang dipersonalisasi"
+ "ads.privacySub": "Tinjau pilihan Anda tentang iklan yang dipersonalisasi",
+ "reward.title": "Lebih banyak kendaraan dengan iklan",
+ "reward.info": "Tonton {n} iklan untuk membuka satu kendaraan lagi, selamanya. Anda bisa berhenti kapan saja: progres tetap tersimpan.",
+ "reward.slot": "Kendaraan {n}",
+ "reward.watch": "Tonton ({done}/{total})",
+ "reward.unlocked": "Terbuka",
+ "reward.locked": "Buka dulu kendaraan {n}",
+ "reward.notReady": "Belum ada iklan yang siap: coba lagi beberapa detik lagi",
+ "reward.noReward": "Iklan dihentikan: hanya dihitung jika ditonton sampai selesai",
+ "reward.done": "Sekarang Anda bisa mengelola {n} kendaraan"
 }

@@ -2,10 +2,16 @@
 
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
-## Prossima versione (2.1.16)
+## Prossima versione (2.2.0) — prima uscita pubblica con pubblicità e premi
+- [ ] **Spegnere la modalità di prova** in `lib/ads_config.dart` (`testBuild = false`): tempi veri (primo annuncio dopo 24 ore, poi al massimo uno ogni 4 ore) e unità AdMob vere.
+- [ ] **ID dell'unità «Con premio»** (Rewarded, non «Interstitial con premio») in `androidRewarded`.
 - [x] **Identificativi AdMob veri per Android** in `lib/ads_config.dart` (app ca-app-pub-6901766595403947~4185829925, apertura app …/7951308405). iOS resta con quelli di prova finché non c'è l'app iPhone in AdMob.
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 - [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
+
+## Versione 2.1.15-2 (prova)
+- [x] **Modalità di prova della pubblicità**: primo annuncio dopo 5 minuti e poi al massimo uno ogni 5 minuti; unità di prova di Google anche con l'ID app vero, per provare senza rischi.
+- [x] **4° e 5° veicolo sbloccabili con annunci con premio**: nella pagina Pro due voci in sequenza (il 5° si attiva dopo il 4°), 10 annunci per ciascuna, ognuno avviato con un tocco come chiedono le regole AdMob; si può interrompere, il conteggio resta salvato sul telefono e nel profilo online; contatore in alto a destra; sblocco permanente. Solo per chi non ha la Pro, non sul web.
 
 ## Versione 2.1.15
 - [x] **Pubblicità AdMob nella versione gratuita** (preparata, con gli identificativi di prova di Google finché non arrivano quelli veri): annuncio all'apertura solo per utenti non Pro, mai nelle prime 24 ore, al massimo uno ogni 4 ore, mai sul web; consenso GDPR (UMP) al primo avvio e riga «Privacy della pubblicità» nelle Impostazioni; vantaggio «Nessuna pubblicità» nella pagina Pro; informativa privacy aggiornata (IT/EN). Android minimo 7.0 (richiesto dalla libreria AdMob).

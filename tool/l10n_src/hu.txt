@@ -614,3 +614,12 @@ Guminyomás
 Reklámmentes
 Hirdetési adatvédelem
 Személyre szabott hirdetésekkel kapcsolatos döntéseid áttekintése
+Több jármű hirdetésekkel
+Nézz meg {n} hirdetést, és véglegesen feloldasz egy újabb járművet. Bármikor abbahagyhatod: az előrehaladás mentésre kerül.
+{n}. jármű
+Megnézem ({done}/{total})
+Feloldva
+Előbb oldd fel a(z) {n}. járművet
+Még nincs kész hirdetés: próbáld újra néhány másodperc múlva
+Hirdetés megszakítva: csak akkor számít, ha végignézed
+Most már {n} járművet kezelhetsz

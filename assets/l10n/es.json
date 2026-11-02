@@ -614,5 +614,14 @@
  "units.pressure": "Presión de los neumáticos",
  "pro.benefitNoAds": "Sin publicidad",
  "ads.privacy": "Privacidad de los anuncios",
- "ads.privacySub": "Revisa tus opciones sobre anuncios personalizados"
+ "ads.privacySub": "Revisa tus opciones sobre anuncios personalizados",
+ "reward.title": "Más vehículos con publicidad",
+ "reward.info": "Mira {n} anuncios para desbloquear un vehículo más, para siempre. Puedes parar cuando quieras: tu progreso se guarda.",
+ "reward.slot": "Vehículo {n}",
+ "reward.watch": "Ver ({done}/{total})",
+ "reward.unlocked": "Desbloqueado",
+ "reward.locked": "Desbloquea primero el vehículo {n}",
+ "reward.notReady": "Aún no hay ningún anuncio listo: inténtalo en unos segundos",
+ "reward.noReward": "Anuncio interrumpido: solo cuenta si lo ves hasta el final",
+ "reward.done": "Ahora puedes gestionar {n} vehículos"
 }

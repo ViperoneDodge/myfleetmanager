@@ -614,5 +614,14 @@
  "units.pressure": "타이어 공기압",
  "pro.benefitNoAds": "광고 없음",
  "ads.privacy": "광고 개인정보",
- "ads.privacySub": "맞춤 광고에 대한 선택 검토"
+ "ads.privacySub": "맞춤 광고에 대한 선택 검토",
+ "reward.title": "광고로 차량 추가",
+ "reward.info": "광고 {n}개를 보면 차량 한 대를 영구적으로 추가할 수 있어요. 언제든 멈출 수 있으며 진행 상황은 저장됩니다.",
+ "reward.slot": "{n}번째 차량",
+ "reward.watch": "보기 ({done}/{total})",
+ "reward.unlocked": "잠금 해제됨",
+ "reward.locked": "먼저 {n}번째 차량을 잠금 해제하세요",
+ "reward.notReady": "아직 준비된 광고가 없습니다. 몇 초 후 다시 시도하세요",
+ "reward.noReward": "광고가 중단되었습니다. 끝까지 봐야 인정됩니다",
+ "reward.done": "이제 차량 {n}대를 관리할 수 있어요"
 }

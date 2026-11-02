@@ -37,7 +37,57 @@ class AppState extends ChangeNotifier {
   GroupWatchState watch = GroupWatchState();
   final ProService pro = ProService();
 
-  static const int freeVehicleLimit = 3;
+  static const int baseVehicleLimit = 3;
+
+  int get freeVehicleLimit => baseVehicleLimit + data.rewardSlots.clamp(0, AdsRules.maxSlots);
+
+  int get rewardSlots => data.rewardSlots;
+
+  int get rewardProgress => data.rewardProgress;
+
+  bool get rewardsAvailable => AdsService.supported && !isPro && session != null;
+
+  Future<String> watchRewardAd() async {
+    if (!rewardsAvailable || data.rewardSlots >= AdsRules.maxSlots) return 'none';
+    final ads = AdsService.instance;
+    if (!ads.rewardedReady) {
+      ads.preloadRewarded();
+      return 'notReady';
+    }
+    final earned = await ads.showRewarded();
+    if (!earned) return 'noReward';
+    final before = data.rewardSlots;
+    final r = AdsRules.afterReward(data.rewardSlots, data.rewardProgress);
+    data.rewardSlots = r.slots;
+    data.rewardProgress = r.progress;
+    notifyListeners();
+    await _persist();
+    _saveRewardsCloud();
+    return r.slots > before ? 'unlocked' : 'counted';
+  }
+
+  void _saveRewardsCloud() {
+    final s = session;
+    if (s == null || !isCloud) return;
+    sync.saveRewards(s.key, data.rewardSlots, data.rewardProgress).catchError((_) {});
+  }
+
+  Future<void> _loadRewardsCloud(Session s) async {
+    try {
+      final c = await sync.readRewards(s.key);
+      if (!identical(session, s)) return;
+      final local = data.rewardSlots * AdsRules.adsPerSlot + data.rewardProgress;
+      final cloud = c.slots * AdsRules.adsPerSlot + c.progress;
+      if (cloud > local) {
+        data.rewardSlots = c.slots;
+        data.rewardProgress = c.progress;
+        notifyListeners();
+        await _persist();
+      } else if (local > cloud) {
+        _saveRewardsCloud();
+      }
+    } catch (_) {}
+  }
 
   bool purchasedPro = false;
 
@@ -789,6 +839,7 @@ class AppState extends ChangeNotifier {
     _recordReminders();
     if (s.mode == AccountMode.cloud) {
       sync.saveProfile(s).catchError((_) {});
+      _loadRewardsCloud(s);
       await _loadWatch(s);
       _startSync();
       startPush();

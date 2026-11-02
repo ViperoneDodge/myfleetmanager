@@ -614,5 +614,14 @@
  "units.pressure": "Tlak v pnevmatikah",
  "pro.benefitNoAds": "Brez oglasov",
  "ads.privacy": "Zasebnost oglasov",
- "ads.privacySub": "Preglej svoje izbire za prilagojene oglase"
+ "ads.privacySub": "Preglej svoje izbire za prilagojene oglase",
+ "reward.title": "Več vozil z oglasi",
+ "reward.info": "Oglej si {n} oglasov in za vedno odkleni še eno vozilo. Ustaviš se lahko kadar koli: napredek ostane shranjen.",
+ "reward.slot": "Vozilo {n}",
+ "reward.watch": "Oglej si ({done}/{total})",
+ "reward.unlocked": "Odklenjeno",
+ "reward.locked": "Najprej odkleni vozilo {n}",
+ "reward.notReady": "Noben oglas še ni pripravljen: poskusi čez nekaj sekund",
+ "reward.noReward": "Oglas prekinjen: šteje le, če si ga ogledaš do konca",
+ "reward.done": "Zdaj lahko upravljaš {n} vozil"
 }

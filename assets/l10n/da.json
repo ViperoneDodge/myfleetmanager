@@ -614,5 +614,14 @@
  "units.pressure": "Dæktryk",
  "pro.benefitNoAds": "Ingen reklamer",
  "ads.privacy": "Annoncepersondata",
- "ads.privacySub": "Gennemgå dine valg om tilpassede annoncer"
+ "ads.privacySub": "Gennemgå dine valg om tilpassede annoncer",
+ "reward.title": "Flere køretøjer med reklamer",
+ "reward.info": "Se {n} reklamer for at låse et køretøj mere op for altid. Du kan stoppe når som helst: dine fremskridt gemmes.",
+ "reward.slot": "Køretøj {n}",
+ "reward.watch": "Se ({done}/{total})",
+ "reward.unlocked": "Låst op",
+ "reward.locked": "Lås først køretøj {n} op",
+ "reward.notReady": "Ingen reklame klar endnu: prøv igen om et par sekunder",
+ "reward.noReward": "Reklamen blev afbrudt: den tæller kun, hvis du ser den til ende",
+ "reward.done": "Nu kan du administrere {n} køretøjer"
 }

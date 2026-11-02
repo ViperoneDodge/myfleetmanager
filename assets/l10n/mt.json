@@ -614,5 +614,14 @@
  "units.pressure": "Pressjoni tat-tajers",
  "pro.benefitNoAds": "Ebda reklami",
  "ads.privacy": "Privatezza tar-reklami",
- "ads.privacySub": "Irrevedi l-għażliet tiegħek dwar reklami personalizzati"
+ "ads.privacySub": "Irrevedi l-għażliet tiegħek dwar reklami personalizzati",
+ "reward.title": "Aktar vetturi bir-reklami",
+ "reward.info": "Ara {n} reklami biex tiftaħ vettura oħra għal dejjem. Tista’ tieqaf meta trid: il-progress jibqa’ salvat.",
+ "reward.slot": "Vettura {n}",
+ "reward.watch": "Ara ({done}/{total})",
+ "reward.unlocked": "Miftuħa",
+ "reward.locked": "L-ewwel iftaħ il-vettura {n}",
+ "reward.notReady": "Għadu ma hemm l-ebda reklam lest: erġa’ pprova fi ftit sekondi",
+ "reward.noReward": "Reklam interrott: jgħodd biss jekk tarah sal-aħħar",
+ "reward.done": "Issa tista’ timmaniġġja {n} vetturi"
 }

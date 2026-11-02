@@ -614,5 +614,14 @@
  "units.pressure": "胎压",
  "pro.benefitNoAds": "无广告",
  "ads.privacy": "广告隐私",
- "ads.privacySub": "查看你对个性化广告的选择"
+ "ads.privacySub": "查看你对个性化广告的选择",
+ "reward.title": "看广告解锁更多车辆",
+ "reward.info": "观看 {n} 个广告即可永久解锁一辆车。你可以随时停止，进度会被保存。",
+ "reward.slot": "第 {n} 辆车",
+ "reward.watch": "观看（{done}/{total}）",
+ "reward.unlocked": "已解锁",
+ "reward.locked": "请先解锁第 {n} 辆车",
+ "reward.notReady": "暂无可用广告，请几秒后重试",
+ "reward.noReward": "广告已中断：只有看完才计数",
+ "reward.done": "现在你可以管理 {n} 辆车"
 }

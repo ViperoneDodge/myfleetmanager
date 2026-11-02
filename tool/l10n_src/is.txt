@@ -614,3 +614,12 @@ Loftþrýstingur í dekkjum
 Engar auglýsingar
 Persónuvernd auglýsinga
 Farðu yfir val þitt um sérsniðnar auglýsingar
+Fleiri ökutæki með auglýsingum
+Horfðu á {n} auglýsingar til að opna eitt ökutæki í viðbót, til frambúðar. Þú getur hætt hvenær sem er: framvindan vistast.
+Ökutæki {n}
+Horfa ({done}/{total})
+Opnað
+Opnaðu fyrst ökutæki {n}
+Engin auglýsing tilbúin enn: reyndu aftur eftir nokkrar sekúndur
+Auglýsing stöðvuð: hún telur aðeins ef þú horfir á hana til enda
+Nú geturðu haldið utan um {n} ökutæki

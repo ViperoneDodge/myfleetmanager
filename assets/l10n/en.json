@@ -614,5 +614,14 @@
  "units.pressure": "Tyre pressure",
  "pro.benefitNoAds": "No ads",
  "ads.privacy": "Ad privacy",
- "ads.privacySub": "Review your choices about personalised ads"
+ "ads.privacySub": "Review your choices about personalised ads",
+ "reward.title": "More vehicles with ads",
+ "reward.info": "Watch {n} ads to unlock one more vehicle, forever. You can stop at any time: your progress is saved.",
+ "reward.slot": "Vehicle {n}",
+ "reward.watch": "Watch ({done}/{total})",
+ "reward.unlocked": "Unlocked",
+ "reward.locked": "Unlock vehicle {n} first",
+ "reward.notReady": "No ad ready yet: try again in a few seconds",
+ "reward.noReward": "Ad stopped: it only counts if you watch it to the end",
+ "reward.done": "You can now manage {n} vehicles"
 }

@@ -614,5 +614,14 @@
  "units.pressure": "Guminyomás",
  "pro.benefitNoAds": "Reklámmentes",
  "ads.privacy": "Hirdetési adatvédelem",
- "ads.privacySub": "Személyre szabott hirdetésekkel kapcsolatos döntéseid áttekintése"
+ "ads.privacySub": "Személyre szabott hirdetésekkel kapcsolatos döntéseid áttekintése",
+ "reward.title": "Több jármű hirdetésekkel",
+ "reward.info": "Nézz meg {n} hirdetést, és véglegesen feloldasz egy újabb járművet. Bármikor abbahagyhatod: az előrehaladás mentésre kerül.",
+ "reward.slot": "{n}. jármű",
+ "reward.watch": "Megnézem ({done}/{total})",
+ "reward.unlocked": "Feloldva",
+ "reward.locked": "Előbb oldd fel a(z) {n}. járművet",
+ "reward.notReady": "Még nincs kész hirdetés: próbáld újra néhány másodperc múlva",
+ "reward.noReward": "Hirdetés megszakítva: csak akkor számít, ha végignézed",
+ "reward.done": "Most már {n} járművet kezelhetsz"
 }

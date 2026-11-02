@@ -614,3 +614,12 @@ Tlak v pneumatikách
 Bez reklam
 Soukromí reklam
 Zkontroluj své volby pro personalizované reklamy
+Více vozidel díky reklamám
+Podívej se na {n} reklam a natrvalo odemkni další vozidlo. Můžeš kdykoli přestat: postup zůstane uložen.
+Vozidlo {n}
+Přehrát ({done}/{total})
+Odemčeno
+Nejdřív odemkni vozidlo {n}
+Zatím není připravena žádná reklama: zkus to za pár sekund
+Reklama přerušena: počítá se jen zhlédnutá do konce
+Teď můžeš spravovat {n} vozidel

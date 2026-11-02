@@ -614,3 +614,12 @@ Rengaspaine
 Ei mainoksia
 Mainosten tietosuoja
 Tarkista valintasi kohdennetuista mainoksista
+Lisää ajoneuvoja mainosten avulla
+Katso {n} mainosta ja avaa pysyvästi yksi ajoneuvo lisää. Voit lopettaa milloin tahansa: edistyminen tallentuu.
+Ajoneuvo {n}
+Katso ({done}/{total})
+Avattu
+Avaa ensin ajoneuvo {n}
+Mainosta ei ole vielä valmiina: yritä hetken päästä uudelleen
+Mainos keskeytyi: se lasketaan vain, jos katsot sen loppuun
+Voit nyt hallita {n} ajoneuvoa

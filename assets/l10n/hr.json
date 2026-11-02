@@ -614,5 +614,14 @@
  "units.pressure": "Tlak u gumama",
  "pro.benefitNoAds": "Bez oglasa",
  "ads.privacy": "Privatnost oglasa",
- "ads.privacySub": "Pregledaj svoje izbore za personalizirane oglase"
+ "ads.privacySub": "Pregledaj svoje izbore za personalizirane oglase",
+ "reward.title": "Više vozila uz oglase",
+ "reward.info": "Pogledaj {n} oglasa i zauvijek otključaj još jedno vozilo. Možeš stati kad god želiš: napredak se sprema.",
+ "reward.slot": "Vozilo {n}",
+ "reward.watch": "Pogledaj ({done}/{total})",
+ "reward.unlocked": "Otključano",
+ "reward.locked": "Najprije otključaj vozilo {n}",
+ "reward.notReady": "Još nema spremnog oglasa: pokušaj za nekoliko sekundi",
+ "reward.noReward": "Oglas je prekinut: vrijedi samo ako ga pogledaš do kraja",
+ "reward.done": "Sada možeš upravljati s {n} vozila"
 }

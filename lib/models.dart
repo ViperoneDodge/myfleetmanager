@@ -735,12 +735,17 @@ class UserData {
   String? personalFleetId;
   List<FleetGroup> groups;
 
+  int rewardSlots;
+  int rewardProgress;
+
   UserData({
     List<Vehicle>? vehicles,
     NotifySettings? notify,
     this.personalFleetId,
     List<FleetGroup>? groups,
     Favorites? favorites,
+    this.rewardSlots = 0,
+    this.rewardProgress = 0,
   })  : vehicles = vehicles ?? [],
         notify = notify ?? NotifySettings(),
         groups = groups ?? [],
@@ -759,6 +764,8 @@ class UserData {
         'personalFleetId': personalFleetId,
         'groups': groups.map((g) => g.toJson()).toList(),
         'favorites': favorites.toJson(),
+        if (rewardSlots > 0) 'rewardSlots': rewardSlots,
+        if (rewardProgress > 0) 'rewardProgress': rewardProgress,
       };
 
   factory UserData.fromJson(Map<String, dynamic> j) => UserData(
@@ -775,6 +782,8 @@ class UserData {
             [],
         favorites: Favorites.fromJson(
             j['favorites'] == null ? null : Map<String, dynamic>.from(j['favorites'] as Map)),
+        rewardSlots: (j['rewardSlots'] as num?)?.toInt() ?? 0,
+        rewardProgress: (j['rewardProgress'] as num?)?.toInt() ?? 0,
       );
 }
 

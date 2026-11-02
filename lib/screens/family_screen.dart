@@ -12,7 +12,6 @@ import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../theme.dart';
-import '../services/app_state.dart' show AppState;
 import '../services/pdf_export.dart';
 import '../services/support_service.dart';
 import '../services/sync_service.dart' show cloudErrorMessage;
@@ -164,7 +163,7 @@ class FamilyTab extends StatelessWidget {
               limited: limited.contains(v.id),
               onTap: () => limited.contains(v.id)
                   ? requirePro(context,
-                      reason: tr('pro.reasonLimited', {'n': AppState.freeVehicleLimit}))
+                      reason: tr('pro.reasonLimited', {'n': appState.freeVehicleLimit}))
                   : onOpen(v, list.where((x) => !limited.contains(x.id)).toList()),
               onLongPress: () => moveVehicleSheet(context, v),
               favorite: appState.isFavorite(v),

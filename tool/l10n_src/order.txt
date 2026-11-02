@@ -614,3 +614,12 @@ units.pressure
 pro.benefitNoAds
 ads.privacy
 ads.privacySub
+reward.title
+reward.info
+reward.slot
+reward.watch
+reward.unlocked
+reward.locked
+reward.notReady
+reward.noReward
+reward.done

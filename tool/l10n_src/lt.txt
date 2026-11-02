@@ -614,3 +614,12 @@ Padangų slėgis
 Be reklamų
 Reklamų privatumas
 Peržiūrėk savo pasirinkimus dėl suasmenintų reklamų
+Daugiau transporto priemonių su reklamomis
+Peržiūrėk {n} reklamų ir visam laikui atrakink dar vieną transporto priemonę. Gali sustoti bet kada: pažanga išsaugoma.
+{n}-oji transporto priemonė
+Žiūrėti ({done}/{total})
+Atrakinta
+Pirmiausia atrakink {n}-ąją transporto priemonę
+Dar nėra paruoštos reklamos: bandyk po kelių sekundžių
+Reklama nutraukta: ji įskaitoma tik peržiūrėjus iki galo
+Dabar gali tvarkyti {n} transporto priemones

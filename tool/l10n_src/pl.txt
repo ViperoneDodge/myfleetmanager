@@ -614,3 +614,12 @@ Ciśnienie w oponach
 Bez reklam
 Prywatność reklam
 Sprawdź swoje wybory dotyczące spersonalizowanych reklam
+Więcej pojazdów dzięki reklamom
+Obejrzyj {n} reklam, aby na zawsze odblokować jeszcze jeden pojazd. Możesz przerwać w dowolnej chwili: postęp zostanie zapisany.
+Pojazd {n}
+Obejrzyj ({done}/{total})
+Odblokowano
+Najpierw odblokuj pojazd {n}
+Brak gotowej reklamy: spróbuj za kilka sekund
+Reklama przerwana: liczy się tylko obejrzana do końca
+Możesz teraz zarządzać {n} pojazdami

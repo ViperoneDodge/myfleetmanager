@@ -614,3 +614,12 @@ Dekktrykk
 Ingen reklame
 Annonsepersonvern
 Se over valgene dine for tilpassede annonser
+Flere kjøretøy med reklame
+Se {n} annonser for å låse opp ett kjøretøy til, for alltid. Du kan stoppe når du vil: fremdriften lagres.
+Kjøretøy {n}
+Se ({done}/{total})
+Låst opp
+Lås først opp kjøretøy {n}
+Ingen annonse klar ennå: prøv igjen om noen sekunder
+Annonsen ble avbrutt: den teller bare hvis du ser den til slutt
+Nå kan du administrere {n} kjøretøy

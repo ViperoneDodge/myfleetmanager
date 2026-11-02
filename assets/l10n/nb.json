@@ -614,5 +614,14 @@
  "units.pressure": "Dekktrykk",
  "pro.benefitNoAds": "Ingen reklame",
  "ads.privacy": "Annonsepersonvern",
- "ads.privacySub": "Se over valgene dine for tilpassede annonser"
+ "ads.privacySub": "Se over valgene dine for tilpassede annonser",
+ "reward.title": "Flere kjøretøy med reklame",
+ "reward.info": "Se {n} annonser for å låse opp ett kjøretøy til, for alltid. Du kan stoppe når du vil: fremdriften lagres.",
+ "reward.slot": "Kjøretøy {n}",
+ "reward.watch": "Se ({done}/{total})",
+ "reward.unlocked": "Låst opp",
+ "reward.locked": "Lås først opp kjøretøy {n}",
+ "reward.notReady": "Ingen annonse klar ennå: prøv igjen om noen sekunder",
+ "reward.noReward": "Annonsen ble avbrutt: den teller bare hvis du ser den til slutt",
+ "reward.done": "Nå kan du administrere {n} kjøretøy"
 }
