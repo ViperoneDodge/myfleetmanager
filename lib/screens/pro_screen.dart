@@ -171,7 +171,18 @@ class _RewardSlotsState extends State<RewardSlots> {
   @override
   void initState() {
     super.initState();
+    appState.addListener(_changed);
     if (appState.rewardSlots < AdsRules.maxSlots) AdsService.instance.preloadRewarded();
+  }
+
+  @override
+  void dispose() {
+    appState.removeListener(_changed);
+    super.dispose();
+  }
+
+  void _changed() {
+    if (mounted) setState(() {});
   }
 
   Future<void> _watch() async {

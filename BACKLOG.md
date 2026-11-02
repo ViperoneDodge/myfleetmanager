@@ -8,7 +8,7 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 - [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
 
 ## Versione 2.1.15-4 (prova)
-- [x] **Annuncio con premio successivo che restava in caricamento** (prova della 2.1.15-3): dopo un premio il nuovo annuncio si carica un secondo dopo la chiusura del precedente, un caricamento appeso da più di 35 secondi viene ripreso da capo e toccando il pulsante mentre carica si riparte subito. Nelle versioni di prova sotto il pulsante c'è lo stato completo della pubblicità (con i secondi di caricamento).
+- [x] **Annuncio con premio successivo che restava in caricamento** (prova della 2.1.15-3): la parte della pagina Pro con i premi non si aggiornava quando il nuovo annuncio era pronto (serviva uscire e rientrare); ora si aggiorna da sola. Inoltre dopo un premio il nuovo annuncio si carica un secondo dopo la chiusura del precedente, un caricamento appeso da più di 35 secondi viene ripreso da capo e toccando il pulsante mentre carica si riparte subito. Nelle versioni di prova sotto il pulsante c'è lo stato completo della pubblicità (con i secondi di caricamento).
 
 ## Versione 2.1.15-3 (prova)
 - [x] **Caricamento dell'annuncio con premio che girava all'infinito** (prova della 2.1.15-2): il caricamento poteva restare appeso se Google rispondeva con un'eccezione o non rispondeva; ora c'è un limite di 30 secondi per il caricamento e di 15 per l'apertura, poi nuovo tentativo. L'annuncio con premio si carica già all'avvio dell'app (non solo aprendo la pagina Pro).
