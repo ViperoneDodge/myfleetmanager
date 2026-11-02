@@ -4,7 +4,7 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 
 ## Prossima versione (2.2.0) — prima uscita pubblica con pubblicità e premi
 - [ ] **Spegnere la modalità di prova** in `lib/ads_config.dart` (`testBuild = false`): tempi veri (primo annuncio dopo 24 ore, poi al massimo uno ogni 4 ore) e unità AdMob vere.
-- [ ] **ID dell'unità «Con premio»** (Rewarded, non «Interstitial con premio») in `androidRewarded`.
+- [x] **ID dell'unità «Con premio»** Android in `androidRewarded` (ca-app-pub-6901766595403947/8047511324), da verificare in AdMob che sia di tipo «Con premio».
 - [x] **Identificativi AdMob veri per Android** in `lib/ads_config.dart` (app ca-app-pub-6901766595403947~4185829925, apertura app …/7951308405). iOS resta con quelli di prova finché non c'è l'app iPhone in AdMob.
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 - [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).

@@ -3,7 +3,7 @@ class AdsConfig {
   static const String iosAppId = 'ca-app-pub-3940256099942544~1458002511';
   static const String androidAppOpen = 'ca-app-pub-6901766595403947/7951308405';
   static const String iosAppOpen = 'ca-app-pub-3940256099942544/5575463023';
-  static const String androidRewarded = '';
+  static const String androidRewarded = 'ca-app-pub-6901766595403947/8047511324';
   static const String iosRewarded = '';
 
   static const bool testBuild = true;
