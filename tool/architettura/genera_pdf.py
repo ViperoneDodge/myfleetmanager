@@ -18,7 +18,7 @@ import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 OUT = sys.argv[1] if len(sys.argv) > 1 else str(ROOT / 'tool' / 'architettura' / 'MyFleetManager_Architettura.pdf')
-_ver = re.search(r'^version:\s*([0-9.]+)\+(\d+)', (ROOT / 'pubspec.yaml').read_text(), re.M)
+_ver = re.search(r'^version:\s*([0-9.]+(?:-[0-9A-Za-z.]+)?)\+(\d+)', (ROOT / 'pubspec.yaml').read_text(), re.M)
 VERSION, BUILD = _ver.group(1), _ver.group(2)
 MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre',
         'novembre', 'dicembre']
