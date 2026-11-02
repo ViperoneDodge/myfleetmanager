@@ -3,6 +3,10 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.1.15)
+- [x] **SafetyNet tolto** (avviso di Play Console «versione dell'SDK con una nota critica di play-services-safetynet»): arrivava dalla libreria App Check 0.3. Librerie Firebase aggiornate (core 4, auth 6, Firestore 6, messaging 16, App Check 0.4, che usa solo Play Integrity). Da riprovare: accesso, sincronizzazione dei gruppi, notifiche, App Check.
+- [x] **Foto dei veicoli caricate alla misura mostrata** (avviso «downsampling della bitmap»): miniature e foto nelle schede non vengono più decodificate a piena risoluzione.
+- [x] **Selezione del testo (secondo intervento)**: i campi su una riga, con testo più lungo della casella, scorrevano di lato e «rubavano» il gesto alla maniglia della selezione. I campi di testo libero del ricambio e dei dati tecnici ora vanno a capo invece di scorrere.
+- Edge-to-edge e ottimizzazione R8 (altri avvisi di Play Console): nel nostro codice non c'è nulla di deprecato; arrivano da Flutter e dalle librerie Google. Nessuna azione.
 - [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
 
 ## Versione 2.1.14

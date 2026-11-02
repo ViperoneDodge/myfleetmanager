@@ -456,7 +456,9 @@ class VehicleDetailScreen extends StatelessWidget {
                             width: 250,
                             height: 160,
                             child: bytes != null
-                                ? Image.memory(bytes, fit: BoxFit.cover)
+                                ? Image.memory(bytes,
+                                    fit: BoxFit.cover,
+                                    cacheWidth: (250 * MediaQuery.devicePixelRatioOf(context) * 1.6).round())
                                 : Container(
                                     color: scheme.primaryContainer,
                                     padding: const EdgeInsets.all(22),

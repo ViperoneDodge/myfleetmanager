@@ -182,7 +182,10 @@ class VehicleAvatar extends StatelessWidget {
         height: size,
         color: scheme.primaryContainer,
         child: bytes != null
-            ? Image.memory(bytes, fit: BoxFit.cover, gaplessPlayback: true)
+            ? Image.memory(bytes,
+                fit: BoxFit.cover,
+                gaplessPlayback: true,
+                cacheWidth: (size * MediaQuery.devicePixelRatioOf(context) * 2).round())
             : Padding(
                 padding: EdgeInsets.all(size * 0.1),
                 child: VehicleSilhouette(type: vehicle.type, color: scheme.onPrimaryContainer),

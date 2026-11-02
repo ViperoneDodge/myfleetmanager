@@ -84,6 +84,10 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
             TextField(
               controller: name,
               autofocus: isNew,
+              minLines: 1,
+              maxLines: null,
+              keyboardType: TextInputType.text,
+              textInputAction: TextInputAction.next,
               textCapitalization: TextCapitalization.sentences,
               decoration: InputDecoration(labelText: tr('maint.partName'), border: const OutlineInputBorder()),
             )
@@ -93,6 +97,10 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
           TextField(
             controller: code,
             autofocus: !custom,
+            minLines: 1,
+            maxLines: null,
+            keyboardType: TextInputType.text,
+            textInputAction: TextInputAction.next,
             decoration: InputDecoration(labelText: tr('maint.partCode'), border: const OutlineInputBorder()),
           ),
           const SizedBox(height: 12),

@@ -327,7 +327,8 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
                     height: 140,
                     color: scheme.primaryContainer,
                     child: bytes != null
-                        ? Image.memory(bytes, fit: BoxFit.cover)
+                        ? Image.memory(bytes,
+                            fit: BoxFit.cover, cacheWidth: (220 * MediaQuery.devicePixelRatioOf(context) * 1.6).round())
                         : Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                             Icon(Icons.add_a_photo, size: 40, color: scheme.onPrimaryContainer),
                             const SizedBox(height: 6),
@@ -674,7 +675,8 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
           controller: c,
           onChanged: onChanged,
           minLines: 1,
-          maxLines: lines,
+          maxLines: number ? 1 : (lines == 1 ? null : lines),
+          textInputAction: number || lines == 1 ? TextInputAction.next : null,
           textCapitalization: caps ? TextCapitalization.characters : TextCapitalization.none,
           keyboardType: number ? const TextInputType.numberWithOptions(decimal: true) : TextInputType.text,
           decoration: InputDecoration(

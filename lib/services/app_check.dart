@@ -7,8 +7,8 @@ Future<void> startAppCheck() async {
   if (!isMobile || Firebase.apps.isEmpty) return;
   try {
     await FirebaseAppCheck.instance.activate(
-      androidProvider: AndroidProvider.playIntegrity,
-      appleProvider: AppleProvider.appAttestWithDeviceCheckFallback,
+      providerAndroid: const AndroidPlayIntegrityProvider(),
+      providerApple: const AppleAppAttestWithDeviceCheckFallbackProvider(),
     );
   } catch (_) {}
 }
