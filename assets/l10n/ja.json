@@ -624,5 +624,12 @@
  "reward.notReady": "まだ広告の準備ができていません。数秒後にお試しください",
  "reward.noReward": "広告が中断されました。最後まで見た場合のみカウントされます",
  "reward.done": "{n}台まで管理できるようになりました",
- "reward.loading": "広告を読み込み中…"
+ "reward.loading": "広告を読み込み中…",
+ "reward.chooseTitle": "{n}台目の車両を選択",
+ "reward.change": "変更",
+ "reward.none": "車両が選択されていません",
+ "reward.useAs": "{n}台目として使う",
+ "reward.replaces": "{vehicle} の代わりに",
+ "reward.chosen": "{vehicle} が{n}台目になりました",
+ "reward.noCandidates": "選択できる他の車やバイクはありません"
 }

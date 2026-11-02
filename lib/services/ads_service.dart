@@ -19,6 +19,31 @@ class AdsRules {
     return p >= adsPerSlot ? (slots: slots + 1, progress: 0) : (slots: slots, progress: p);
   }
 
+  static ({List<String> base, List<String> slots, Set<String> limited}) plan(
+    List<String> ordered, {
+    required Set<String> excluded,
+    required int base,
+    required int extra,
+    required List<String> chosen,
+  }) {
+    final eligible = [for (final id in ordered) if (!excluded.contains(id)) id];
+    final baseIds = eligible.take(base).toList();
+    final rest = eligible.skip(base).toList();
+    final slots = List<String?>.filled(extra, null);
+    final used = <String>{};
+    for (var i = 0; i < extra && i < chosen.length; i++) {
+      final c = chosen[i];
+      if (rest.contains(c) && used.add(c)) slots[i] = c;
+    }
+    final free = rest.where((id) => !used.contains(id)).iterator;
+    for (var i = 0; i < extra; i++) {
+      if (slots[i] == null && free.moveNext()) slots[i] = free.current;
+    }
+    final filled = [for (final s in slots) if (s != null) s];
+    final active = {...baseIds, ...filled};
+    return (base: baseIds, slots: filled, limited: {for (final id in ordered) if (!active.contains(id)) id});
+  }
+
   static bool allowed({
     required bool hasSession,
     required bool pro,

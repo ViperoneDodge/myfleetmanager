@@ -7,6 +7,9 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 - [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
 
+## Versione 2.1.15-5 (prova)
+- [x] **Scelta del 4° e del 5° veicolo**: i primi 3 veicoli restano quelli di sempre, mentre i veicoli sbloccati con i premi si scelgono nella pagina Pro («Cambia») oppure toccando un veicolo bloccato («Usa come 4° veicolo», al posto di quello attuale). La scelta è salvata sul telefono.
+
 ## Versione 2.1.15-4 (prova)
 - [x] **Annuncio con premio successivo che restava in caricamento** (prova della 2.1.15-3): la parte della pagina Pro con i premi non si aggiornava quando il nuovo annuncio era pronto (serviva uscire e rientrare); ora si aggiorna da sola. Inoltre dopo un premio il nuovo annuncio si carica un secondo dopo la chiusura del precedente, un caricamento appeso da più di 35 secondi viene ripreso da capo e toccando il pulsante mentre carica si riparte subito. Nelle versioni di prova sotto il pulsante c'è lo stato completo della pubblicità (con i secondi di caricamento).
 

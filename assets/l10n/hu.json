@@ -624,5 +624,12 @@
  "reward.notReady": "Még nincs kész hirdetés: próbáld újra néhány másodperc múlva",
  "reward.noReward": "Hirdetés megszakítva: csak akkor számít, ha végignézed",
  "reward.done": "Most már {n} járművet kezelhetsz",
- "reward.loading": "Hirdetés betöltése…"
+ "reward.loading": "Hirdetés betöltése…",
+ "reward.chooseTitle": "{n}. jármű kiválasztása",
+ "reward.change": "Módosítás",
+ "reward.none": "Nincs kiválasztott jármű",
+ "reward.useAs": "Használat {n}. járműként",
+ "reward.replaces": "{vehicle} helyett",
+ "reward.chosen": "{vehicle} most a {n}. jármű",
+ "reward.noCandidates": "Nincs más választható autó vagy motor"
 }

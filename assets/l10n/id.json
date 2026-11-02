@@ -624,5 +624,12 @@
  "reward.notReady": "Belum ada iklan yang siap: coba lagi beberapa detik lagi",
  "reward.noReward": "Iklan dihentikan: hanya dihitung jika ditonton sampai selesai",
  "reward.done": "Sekarang Anda bisa mengelola {n} kendaraan",
- "reward.loading": "Memuat iklan…"
+ "reward.loading": "Memuat iklan…",
+ "reward.chooseTitle": "Pilih kendaraan ke-{n}",
+ "reward.change": "Ubah",
+ "reward.none": "Belum ada kendaraan dipilih",
+ "reward.useAs": "Gunakan sebagai kendaraan ke-{n}",
+ "reward.replaces": "menggantikan {vehicle}",
+ "reward.chosen": "{vehicle} sekarang kendaraan ke-{n}",
+ "reward.noCandidates": "Tidak ada mobil atau motor lain untuk dipilih"
 }

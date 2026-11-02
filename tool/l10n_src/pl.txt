@@ -624,3 +624,10 @@ Brak gotowej reklamy: spróbuj za kilka sekund
 Reklama przerwana: liczy się tylko obejrzana do końca
 Możesz teraz zarządzać {n} pojazdami
 Ładowanie reklamy…
+Wybierz pojazd nr {n}
+Zmień
+Nie wybrano pojazdu
+Użyj jako pojazd nr {n}
+zamiast {vehicle}
+{vehicle} jest teraz pojazdem nr {n}
+Brak innych samochodów lub motocykli do wyboru

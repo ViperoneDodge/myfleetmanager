@@ -624,5 +624,12 @@
  "reward.notReady": "Реклама ще не готова: спробуйте за кілька секунд",
  "reward.noReward": "Рекламу перервано: зараховується лише перегляд до кінця",
  "reward.done": "Тепер можна вести {n} авто",
- "reward.loading": "Завантаження реклами…"
+ "reward.loading": "Завантаження реклами…",
+ "reward.chooseTitle": "Виберіть транспорт № {n}",
+ "reward.change": "Змінити",
+ "reward.none": "Транспорт не вибрано",
+ "reward.useAs": "Використовувати як транспорт № {n}",
+ "reward.replaces": "замість {vehicle}",
+ "reward.chosen": "{vehicle} тепер транспорт № {n}",
+ "reward.noCandidates": "Немає інших автомобілів чи мотоциклів для вибору"
 }

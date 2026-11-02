@@ -105,27 +105,57 @@ class AppState extends ChangeNotifier {
       t == VehicleType.rimorchio ||
       t == VehicleType.agricolo;
 
-  Set<String> get limitedIds {
-    if (isPro) return const {};
+  List<Vehicle> get _orderedVehicles {
     final groupOrder = {for (var i = 0; i < data.groups.length; i++) data.groups[i].id: i};
     int fleetRank(Vehicle v) => isMine(v) ? -1 : (groupOrder[v.fleetId] ?? 9999);
-    final ordered = data.vehicles.where((v) => !v.deleted).toList()
+    return data.vehicles.where((v) => !v.deleted).toList()
       ..sort((a, b) {
         final f = fleetRank(a).compareTo(fleetRank(b));
         if (f != 0) return f;
         final c = a.createdAt.compareTo(b.createdAt);
         return c != 0 ? c : a.id.compareTo(b.id);
       });
-    var active = 0;
-    final limited = <String>{};
-    for (final v in ordered) {
-      if (!isProType(v.type) && active < freeVehicleLimit) {
-        active++;
-      } else {
-        limited.add(v.id);
-      }
-    }
-    return limited;
+  }
+
+  ({List<String> base, List<String> slots, Set<String> limited}) get _plan {
+    final ordered = _orderedVehicles;
+    return AdsRules.plan(
+      [for (final v in ordered) v.id],
+      excluded: {for (final v in ordered) if (isProType(v.type)) v.id},
+      base: baseVehicleLimit,
+      extra: data.rewardSlots.clamp(0, AdsRules.maxSlots),
+      chosen: data.rewardVehicles,
+    );
+  }
+
+  Set<String> get limitedIds => isPro ? const {} : _plan.limited;
+
+  List<Vehicle?> get rewardVehicles {
+    final slots = _plan.slots;
+    return [
+      for (var i = 0; i < data.rewardSlots.clamp(0, AdsRules.maxSlots); i++)
+        i < slots.length ? vehicleById(slots[i]) : null,
+    ];
+  }
+
+  List<Vehicle> get rewardCandidates {
+    final p = _plan;
+    final base = p.base.toSet();
+    return [for (final v in _orderedVehicles) if (!isProType(v.type) && !base.contains(v.id)) v];
+  }
+
+  bool canUseAsReward(Vehicle v) =>
+      !isPro && data.rewardSlots > 0 && !isProType(v.type) && rewardCandidates.any((c) => c.id == v.id);
+
+  Future<void> chooseRewardVehicle(int slot, String id) async {
+    final current = [for (final v in rewardVehicles) v?.id ?? ''];
+    if (slot < 0 || slot >= current.length) return;
+    final other = current.indexOf(id);
+    if (other >= 0 && other != slot) current[other] = current[slot];
+    current[slot] = id;
+    data.rewardVehicles = current;
+    notifyListeners();
+    await _persist();
   }
 
   bool isLimited(Vehicle v) => limitedIds.contains(v.id);

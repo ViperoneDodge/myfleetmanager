@@ -624,3 +624,10 @@ Ingen reklame klar endnu: prøv igen om et par sekunder
 Reklamen blev afbrudt: den tæller kun, hvis du ser den til ende
 Nu kan du administrere {n} køretøjer
 Indlæser reklamen…
+Vælg køretøj nr. {n}
+Skift
+Intet køretøj valgt
+Brug som køretøj nr. {n}
+i stedet for {vehicle}
+{vehicle} er nu køretøj nr. {n}
+Der er ingen andre biler eller motorcykler at vælge

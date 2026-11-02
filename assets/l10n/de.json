@@ -624,5 +624,12 @@
  "reward.notReady": "Noch keine Anzeige bereit: versuche es in ein paar Sekunden erneut",
  "reward.noReward": "Anzeige abgebrochen: sie zählt nur, wenn du sie bis zum Ende ansiehst",
  "reward.done": "Du kannst jetzt {n} Fahrzeuge verwalten",
- "reward.loading": "Anzeige wird geladen…"
+ "reward.loading": "Anzeige wird geladen…",
+ "reward.chooseTitle": "Fahrzeug Nr. {n} wählen",
+ "reward.change": "Ändern",
+ "reward.none": "Kein Fahrzeug gewählt",
+ "reward.useAs": "Als Fahrzeug Nr. {n} verwenden",
+ "reward.replaces": "anstelle von {vehicle}",
+ "reward.chosen": "{vehicle} ist jetzt Fahrzeug Nr. {n}",
+ "reward.noCandidates": "Keine weiteren Autos oder Motorräder zur Auswahl"
 }

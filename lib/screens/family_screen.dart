@@ -162,8 +162,7 @@ class FamilyTab extends StatelessWidget {
               changed: appState.hasUnreadChange(v.id),
               limited: limited.contains(v.id),
               onTap: () => limited.contains(v.id)
-                  ? requirePro(context,
-                      reason: tr('pro.reasonLimited', {'n': appState.freeVehicleLimit}))
+                  ? openLimitedVehicle(context, v)
                   : onOpen(v, list.where((x) => !limited.contains(x.id)).toList()),
               onLongPress: () => moveVehicleSheet(context, v),
               favorite: appState.isFavorite(v),

@@ -624,3 +624,10 @@ Nog geen advertentie klaar: probeer het over een paar seconden opnieuw
 Advertentie onderbroken: telt alleen als je hem tot het einde bekijkt
 Je kunt nu {n} voertuigen beheren
 Advertentie laden…
+Kies voertuig nr. {n}
+Wijzigen
+Geen voertuig gekozen
+Gebruiken als voertuig nr. {n}
+in plaats van {vehicle}
+{vehicle} is nu voertuig nr. {n}
+Er zijn geen andere auto's of motoren om te kiezen

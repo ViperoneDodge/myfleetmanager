@@ -624,5 +624,12 @@
  "reward.notReady": "Ingen annons klar än: försök igen om några sekunder",
  "reward.noReward": "Annonsen avbröts: den räknas bara om du ser den till slutet",
  "reward.done": "Nu kan du hantera {n} fordon",
- "reward.loading": "Laddar annonsen…"
+ "reward.loading": "Laddar annonsen…",
+ "reward.chooseTitle": "Välj fordon nr {n}",
+ "reward.change": "Ändra",
+ "reward.none": "Inget fordon valt",
+ "reward.useAs": "Använd som fordon nr {n}",
+ "reward.replaces": "i stället för {vehicle}",
+ "reward.chosen": "{vehicle} är nu fordon nr {n}",
+ "reward.noCandidates": "Det finns inga andra bilar eller motorcyklar att välja"
 }

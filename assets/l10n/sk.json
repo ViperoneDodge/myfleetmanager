@@ -624,5 +624,12 @@
  "reward.notReady": "Zatiaľ nie je pripravená žiadna reklama: skús to o pár sekúnd",
  "reward.noReward": "Reklama prerušená: počíta sa len pozretá do konca",
  "reward.done": "Teraz môžeš spravovať {n} vozidiel",
- "reward.loading": "Načítava sa reklama…"
+ "reward.loading": "Načítava sa reklama…",
+ "reward.chooseTitle": "Vyberte vozidlo č. {n}",
+ "reward.change": "Zmeniť",
+ "reward.none": "Nie je vybraté žiadne vozidlo",
+ "reward.useAs": "Použiť ako vozidlo č. {n}",
+ "reward.replaces": "namiesto {vehicle}",
+ "reward.chosen": "{vehicle} je teraz vozidlo č. {n}",
+ "reward.noCandidates": "Nie sú k dispozícii ďalšie autá ani motorky"
 }

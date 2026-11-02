@@ -624,3 +624,10 @@ Belum ada iklan yang siap: coba lagi beberapa detik lagi
 Iklan dihentikan: hanya dihitung jika ditonton sampai selesai
 Sekarang Anda bisa mengelola {n} kendaraan
 Memuat iklan…
+Pilih kendaraan ke-{n}
+Ubah
+Belum ada kendaraan dipilih
+Gunakan sebagai kendaraan ke-{n}
+menggantikan {vehicle}
+{vehicle} sekarang kendaraan ke-{n}
+Tidak ada mobil atau motor lain untuk dipilih

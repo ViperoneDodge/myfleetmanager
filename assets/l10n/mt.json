@@ -624,5 +624,12 @@
  "reward.notReady": "Għadu ma hemm l-ebda reklam lest: erġa’ pprova fi ftit sekondi",
  "reward.noReward": "Reklam interrott: jgħodd biss jekk tarah sal-aħħar",
  "reward.done": "Issa tista’ timmaniġġja {n} vetturi",
- "reward.loading": "Qed jitgħabba r-reklam…"
+ "reward.loading": "Qed jitgħabba r-reklam…",
+ "reward.chooseTitle": "Agħżel il-vettura nru {n}",
+ "reward.change": "Ibdel",
+ "reward.none": "L-ebda vettura magħżula",
+ "reward.useAs": "Uża bħala l-vettura nru {n}",
+ "reward.replaces": "minflok {vehicle}",
+ "reward.chosen": "{vehicle} issa hija l-vettura nru {n}",
+ "reward.noCandidates": "M'hemmx karozzi jew muturi oħra x'tagħżel"
 }

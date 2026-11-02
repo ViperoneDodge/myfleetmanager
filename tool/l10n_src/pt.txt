@@ -624,3 +624,10 @@ Ainda não há anúncio pronto: tenta daqui a uns segundos
 Anúncio interrompido: só conta se o vires até ao fim
 Agora podes gerir {n} veículos
 A carregar o anúncio…
+Escolher o veículo n.º {n}
+Alterar
+Nenhum veículo escolhido
+Usar como veículo n.º {n}
+em vez de {vehicle}
+{vehicle} é agora o veículo n.º {n}
+Não há outros carros ou motos para escolher

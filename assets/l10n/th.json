@@ -624,5 +624,12 @@
  "reward.notReady": "ยังไม่มีโฆษณาพร้อม ลองใหม่ในอีกไม่กี่วินาที",
  "reward.noReward": "โฆษณาถูกหยุด จะนับก็ต่อเมื่อดูจนจบ",
  "reward.done": "ตอนนี้คุณจัดการรถได้ {n} คัน",
- "reward.loading": "กำลังโหลดโฆษณา…"
+ "reward.loading": "กำลังโหลดโฆษณา…",
+ "reward.chooseTitle": "เลือกยานพาหนะคันที่ {n}",
+ "reward.change": "เปลี่ยน",
+ "reward.none": "ยังไม่ได้เลือกยานพาหนะ",
+ "reward.useAs": "ใช้เป็นยานพาหนะคันที่ {n}",
+ "reward.replaces": "แทน {vehicle}",
+ "reward.chosen": "ตอนนี้ {vehicle} เป็นยานพาหนะคันที่ {n}",
+ "reward.noCandidates": "ไม่มีรถยนต์หรือรถจักรยานยนต์อื่นให้เลือก"
 }

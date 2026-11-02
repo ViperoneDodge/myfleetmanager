@@ -624,5 +624,12 @@
  "reward.notReady": "Nicio reclamă pregătită: încearcă din nou peste câteva secunde",
  "reward.noReward": "Reclamă întreruptă: contează doar dacă o urmărești până la capăt",
  "reward.done": "Acum poți gestiona {n} vehicule",
- "reward.loading": "Se încarcă reclama…"
+ "reward.loading": "Se încarcă reclama…",
+ "reward.chooseTitle": "Alege vehiculul nr. {n}",
+ "reward.change": "Schimbă",
+ "reward.none": "Niciun vehicul ales",
+ "reward.useAs": "Folosește ca vehiculul nr. {n}",
+ "reward.replaces": "în locul {vehicle}",
+ "reward.chosen": "{vehicle} este acum vehiculul nr. {n}",
+ "reward.noCandidates": "Nu există alte mașini sau motociclete de ales"
 }

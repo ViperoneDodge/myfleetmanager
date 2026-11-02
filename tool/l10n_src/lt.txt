@@ -624,3 +624,10 @@ Dar nėra paruoštos reklamos: bandyk po kelių sekundžių
 Reklama nutraukta: ji įskaitoma tik peržiūrėjus iki galo
 Dabar gali tvarkyti {n} transporto priemones
 Įkeliama reklama…
+Pasirinkite transporto priemonę nr. {n}
+Keisti
+Transporto priemonė nepasirinkta
+Naudoti kaip transporto priemonę nr. {n}
+vietoj {vehicle}
+{vehicle} dabar yra transporto priemonė nr. {n}
+Nėra kitų automobilių ar motociklų pasirinkti

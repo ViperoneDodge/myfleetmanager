@@ -624,5 +624,12 @@
  "reward.notReady": "Brak gotowej reklamy: spróbuj za kilka sekund",
  "reward.noReward": "Reklama przerwana: liczy się tylko obejrzana do końca",
  "reward.done": "Możesz teraz zarządzać {n} pojazdami",
- "reward.loading": "Ładowanie reklamy…"
+ "reward.loading": "Ładowanie reklamy…",
+ "reward.chooseTitle": "Wybierz pojazd nr {n}",
+ "reward.change": "Zmień",
+ "reward.none": "Nie wybrano pojazdu",
+ "reward.useAs": "Użyj jako pojazd nr {n}",
+ "reward.replaces": "zamiast {vehicle}",
+ "reward.chosen": "{vehicle} jest teraz pojazdem nr {n}",
+ "reward.noCandidates": "Brak innych samochodów lub motocykli do wyboru"
 }

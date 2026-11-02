@@ -624,5 +624,12 @@
  "reward.notReady": "Chưa có quảng cáo sẵn sàng: thử lại sau vài giây",
  "reward.noReward": "Quảng cáo bị dừng: chỉ được tính khi xem đến hết",
  "reward.done": "Giờ bạn có thể quản lý {n} xe",
- "reward.loading": "Đang tải quảng cáo…"
+ "reward.loading": "Đang tải quảng cáo…",
+ "reward.chooseTitle": "Chọn xe thứ {n}",
+ "reward.change": "Đổi",
+ "reward.none": "Chưa chọn xe",
+ "reward.useAs": "Dùng làm xe thứ {n}",
+ "reward.replaces": "thay cho {vehicle}",
+ "reward.chosen": "{vehicle} giờ là xe thứ {n}",
+ "reward.noCandidates": "Không còn ô tô hoặc xe máy nào khác để chọn"
 }

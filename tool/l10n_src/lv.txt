@@ -624,3 +624,10 @@ Neviena reklāma vēl nav gatava: mēģini pēc dažām sekundēm
 Reklāma pārtraukta: tā tiek ieskaitīta tikai, ja noskaties līdz galam
 Tagad vari pārvaldīt {n} transportlīdzekļus
 Ielādē reklāmu…
+Izvēlieties transportlīdzekli nr. {n}
+Mainīt
+Nav izvēlēts transportlīdzeklis
+Izmantot kā transportlīdzekli nr. {n}
+{vehicle} vietā
+{vehicle} tagad ir transportlīdzeklis nr. {n}
+Nav citu automašīnu vai motociklu, ko izvēlēties

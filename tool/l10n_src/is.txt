@@ -624,3 +624,10 @@ Engin auglýsing tilbúin enn: reyndu aftur eftir nokkrar sekúndur
 Auglýsing stöðvuð: hún telur aðeins ef þú horfir á hana til enda
 Nú geturðu haldið utan um {n} ökutæki
 Hleður auglýsingu…
+Veldu ökutæki nr. {n}
+Breyta
+Ekkert ökutæki valið
+Nota sem ökutæki nr. {n}
+í stað {vehicle}
+{vehicle} er nú ökutæki nr. {n}
+Engir aðrir bílar eða bifhjól til að velja

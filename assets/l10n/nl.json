@@ -624,5 +624,12 @@
  "reward.notReady": "Nog geen advertentie klaar: probeer het over een paar seconden opnieuw",
  "reward.noReward": "Advertentie onderbroken: telt alleen als je hem tot het einde bekijkt",
  "reward.done": "Je kunt nu {n} voertuigen beheren",
- "reward.loading": "Advertentie laden…"
+ "reward.loading": "Advertentie laden…",
+ "reward.chooseTitle": "Kies voertuig nr. {n}",
+ "reward.change": "Wijzigen",
+ "reward.none": "Geen voertuig gekozen",
+ "reward.useAs": "Gebruiken als voertuig nr. {n}",
+ "reward.replaces": "in plaats van {vehicle}",
+ "reward.chosen": "{vehicle} is nu voertuig nr. {n}",
+ "reward.noCandidates": "Er zijn geen andere auto's of motoren om te kiezen"
 }

@@ -624,3 +624,10 @@ Zatím není připravena žádná reklama: zkus to za pár sekund
 Reklama přerušena: počítá se jen zhlédnutá do konce
 Teď můžeš spravovat {n} vozidel
 Načítání reklamy…
+Vyberte vozidlo č. {n}
+Změnit
+Není vybráno žádné vozidlo
+Použít jako vozidlo č. {n}
+místo {vehicle}
+{vehicle} je nyní vozidlo č. {n}
+Nejsou k dispozici další auta ani motorky

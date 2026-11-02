@@ -624,5 +624,12 @@
  "reward.notReady": "Dar nėra paruoštos reklamos: bandyk po kelių sekundžių",
  "reward.noReward": "Reklama nutraukta: ji įskaitoma tik peržiūrėjus iki galo",
  "reward.done": "Dabar gali tvarkyti {n} transporto priemones",
- "reward.loading": "Įkeliama reklama…"
+ "reward.loading": "Įkeliama reklama…",
+ "reward.chooseTitle": "Pasirinkite transporto priemonę nr. {n}",
+ "reward.change": "Keisti",
+ "reward.none": "Transporto priemonė nepasirinkta",
+ "reward.useAs": "Naudoti kaip transporto priemonę nr. {n}",
+ "reward.replaces": "vietoj {vehicle}",
+ "reward.chosen": "{vehicle} dabar yra transporto priemonė nr. {n}",
+ "reward.noCandidates": "Nėra kitų automobilių ar motociklų pasirinkti"
 }

@@ -624,5 +624,12 @@
  "reward.notReady": "Nessun annuncio pronto: riprova tra qualche secondo",
  "reward.noReward": "Annuncio interrotto: per contare va guardato fino alla fine",
  "reward.done": "Ora puoi gestire {n} veicoli",
- "reward.loading": "Caricamento dell'annuncio…"
+ "reward.loading": "Caricamento dell'annuncio…",
+ "reward.chooseTitle": "Scegli il {n}° veicolo",
+ "reward.change": "Cambia",
+ "reward.none": "Nessun veicolo scelto",
+ "reward.useAs": "Usa come {n}° veicolo",
+ "reward.replaces": "al posto di {vehicle}",
+ "reward.chosen": "{vehicle} ora è il {n}° veicolo",
+ "reward.noCandidates": "Non ci sono altre auto o moto da scegliere"
 }

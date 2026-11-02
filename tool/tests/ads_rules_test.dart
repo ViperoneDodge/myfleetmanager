@@ -39,4 +39,21 @@ void main() {
     expect(s, (slots: 2, progress: 0));
     expect(AdsRules.afterReward(2, 0), (slots: 2, progress: 0));
   });
+
+  test('4° e 5° veicolo scelti dall\'utente, i primi 3 restano fissi', () {
+    final ids = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+    var p = AdsRules.plan(ids, excluded: {'b'}, base: 3, extra: 0, chosen: const []);
+    expect(p.base, ['a', 'c', 'd']);
+    expect(p.limited, {'b', 'e', 'f', 'g'});
+    p = AdsRules.plan(ids, excluded: {'b'}, base: 3, extra: 2, chosen: const []);
+    expect(p.slots, ['e', 'f']);
+    p = AdsRules.plan(ids, excluded: {'b'}, base: 3, extra: 2, chosen: const ['g', '']);
+    expect(p.slots, ['g', 'e']);
+    expect(p.limited, {'b', 'f'});
+    p = AdsRules.plan(ids, excluded: {'b'}, base: 3, extra: 1, chosen: const ['a', 'b', 'f']);
+    expect(p.slots, ['e']);
+    p = AdsRules.plan(['a', 'b'], excluded: const {}, base: 3, extra: 2, chosen: const ['x']);
+    expect(p.slots, isEmpty);
+    expect(p.limited, isEmpty);
+  });
 }

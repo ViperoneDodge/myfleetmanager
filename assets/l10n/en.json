@@ -624,5 +624,12 @@
  "reward.notReady": "No ad ready yet: try again in a few seconds",
  "reward.noReward": "Ad stopped: it only counts if you watch it to the end",
  "reward.done": "You can now manage {n} vehicles",
- "reward.loading": "Loading the ad…"
+ "reward.loading": "Loading the ad…",
+ "reward.chooseTitle": "Choose vehicle no. {n}",
+ "reward.change": "Change",
+ "reward.none": "No vehicle chosen",
+ "reward.useAs": "Use as vehicle no. {n}",
+ "reward.replaces": "instead of {vehicle}",
+ "reward.chosen": "{vehicle} is now vehicle no. {n}",
+ "reward.noCandidates": "There are no other cars or motorbikes to choose"
 }

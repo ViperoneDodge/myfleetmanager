@@ -624,5 +624,12 @@
  "reward.notReady": "Henüz hazır reklam yok: birkaç saniye sonra tekrar dene",
  "reward.noReward": "Reklam yarıda kesildi: yalnızca sonuna kadar izlenirse sayılır",
  "reward.done": "Artık {n} aracı yönetebilirsin",
- "reward.loading": "Reklam yükleniyor…"
+ "reward.loading": "Reklam yükleniyor…",
+ "reward.chooseTitle": "{n}. aracı seçin",
+ "reward.change": "Değiştir",
+ "reward.none": "Araç seçilmedi",
+ "reward.useAs": "{n}. araç olarak kullan",
+ "reward.replaces": "{vehicle} yerine",
+ "reward.chosen": "{vehicle} artık {n}. araç",
+ "reward.noCandidates": "Seçilecek başka otomobil veya motosiklet yok"
 }

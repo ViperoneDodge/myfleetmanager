@@ -624,5 +624,12 @@
  "reward.notReady": "Neviena reklāma vēl nav gatava: mēģini pēc dažām sekundēm",
  "reward.noReward": "Reklāma pārtraukta: tā tiek ieskaitīta tikai, ja noskaties līdz galam",
  "reward.done": "Tagad vari pārvaldīt {n} transportlīdzekļus",
- "reward.loading": "Ielādē reklāmu…"
+ "reward.loading": "Ielādē reklāmu…",
+ "reward.chooseTitle": "Izvēlieties transportlīdzekli nr. {n}",
+ "reward.change": "Mainīt",
+ "reward.none": "Nav izvēlēts transportlīdzeklis",
+ "reward.useAs": "Izmantot kā transportlīdzekli nr. {n}",
+ "reward.replaces": "{vehicle} vietā",
+ "reward.chosen": "{vehicle} tagad ir transportlīdzeklis nr. {n}",
+ "reward.noCandidates": "Nav citu automašīnu vai motociklu, ko izvēlēties"
 }

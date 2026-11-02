@@ -624,5 +624,12 @@
  "reward.notReady": "Ingen reklame klar endnu: prøv igen om et par sekunder",
  "reward.noReward": "Reklamen blev afbrudt: den tæller kun, hvis du ser den til ende",
  "reward.done": "Nu kan du administrere {n} køretøjer",
- "reward.loading": "Indlæser reklamen…"
+ "reward.loading": "Indlæser reklamen…",
+ "reward.chooseTitle": "Vælg køretøj nr. {n}",
+ "reward.change": "Skift",
+ "reward.none": "Intet køretøj valgt",
+ "reward.useAs": "Brug som køretøj nr. {n}",
+ "reward.replaces": "i stedet for {vehicle}",
+ "reward.chosen": "{vehicle} er nu køretøj nr. {n}",
+ "reward.noCandidates": "Der er ingen andre biler eller motorcykler at vælge"
 }

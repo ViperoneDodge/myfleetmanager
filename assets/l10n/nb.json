@@ -624,5 +624,12 @@
  "reward.notReady": "Ingen annonse klar ennå: prøv igjen om noen sekunder",
  "reward.noReward": "Annonsen ble avbrutt: den teller bare hvis du ser den til slutt",
  "reward.done": "Nå kan du administrere {n} kjøretøy",
- "reward.loading": "Laster inn annonsen…"
+ "reward.loading": "Laster inn annonsen…",
+ "reward.chooseTitle": "Velg kjøretøy nr. {n}",
+ "reward.change": "Endre",
+ "reward.none": "Ingen kjøretøy valgt",
+ "reward.useAs": "Bruk som kjøretøy nr. {n}",
+ "reward.replaces": "i stedet for {vehicle}",
+ "reward.chosen": "{vehicle} er nå kjøretøy nr. {n}",
+ "reward.noCandidates": "Det finnes ingen andre biler eller motorsykler å velge"
 }

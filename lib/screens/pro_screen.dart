@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../l10n.dart';
 import '../ads_config.dart';
 import '../main.dart';
+import '../models.dart';
 import '../services/ads_service.dart';
 import '../services/app_state.dart' show AppState;
 import '../theme.dart';
@@ -12,6 +13,79 @@ Future<bool> requirePro(BuildContext context, {String? reason}) async {
   if (appState.isPro) return true;
   await Navigator.of(context).push(MaterialPageRoute(builder: (_) => ProScreen(reason: reason)));
   return appState.isPro;
+}
+
+String vehicleLabel(Vehicle v) => v.plate.isEmpty ? v.name : '${v.name} (${v.plate})';
+
+Future<void> chooseRewardVehicle(BuildContext context, int slot) async {
+  final n = AppState.baseVehicleLimit + slot + 1;
+  final current = appState.rewardVehicles.elementAtOrNull(slot);
+  final candidates = appState.rewardCandidates;
+  final picked = await showModalBottomSheet<Vehicle>(
+    context: context,
+    showDragHandle: true,
+    builder: (ctx) => SafeArea(
+      child: ListView(shrinkWrap: true, children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+          child: Text(tr('reward.chooseTitle', {'n': n}), style: Theme.of(ctx).textTheme.titleMedium),
+        ),
+        if (candidates.isEmpty)
+          Padding(padding: const EdgeInsets.all(20), child: Text(tr('reward.noCandidates'))),
+        for (final v in candidates)
+          ListTile(
+            leading: Icon(v.id == current?.id ? Icons.radio_button_checked : Icons.radio_button_unchecked),
+            title: Text(vehicleLabel(v)),
+            onTap: () => Navigator.pop(ctx, v),
+          ),
+      ]),
+    ),
+  );
+  if (picked == null || !context.mounted) return;
+  await appState.chooseRewardVehicle(slot, picked.id);
+  if (context.mounted) showSnack(context, tr('reward.chosen', {'vehicle': vehicleLabel(picked), 'n': n}));
+}
+
+Future<void> openLimitedVehicle(BuildContext context, Vehicle v) async {
+  final reason = tr('pro.reasonLimited', {'n': appState.freeVehicleLimit});
+  if (!appState.canUseAsReward(v)) {
+    await requirePro(context, reason: reason);
+    return;
+  }
+  final slots = appState.rewardVehicles;
+  final choice = await showModalBottomSheet<int>(
+    context: context,
+    showDragHandle: true,
+    builder: (ctx) => SafeArea(
+      child: ListView(shrinkWrap: true, children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+          child: Text(vehicleLabel(v), style: Theme.of(ctx).textTheme.titleMedium),
+        ),
+        for (var i = 0; i < slots.length; i++)
+          ListTile(
+            leading: const Icon(Icons.swap_horiz),
+            title: Text(tr('reward.useAs', {'n': AppState.baseVehicleLimit + i + 1})),
+            subtitle: slots[i] == null ? null : Text(tr('reward.replaces', {'vehicle': vehicleLabel(slots[i]!)})),
+            onTap: () => Navigator.pop(ctx, i),
+          ),
+        ListTile(
+          leading: const Icon(Icons.workspace_premium_outlined),
+          title: Text(tr('pro.discover')),
+          onTap: () => Navigator.pop(ctx, -1),
+        ),
+      ]),
+    ),
+  );
+  if (choice == null || !context.mounted) return;
+  if (choice < 0) {
+    await requirePro(context, reason: reason);
+    return;
+  }
+  await appState.chooseRewardVehicle(choice, v.id);
+  if (context.mounted) {
+    showSnack(context, tr('reward.chosen', {'vehicle': vehicleLabel(v), 'n': AppState.baseVehicleLimit + choice + 1}));
+  }
 }
 
 Future<bool> ensureCanAddVehicle(BuildContext context) async {
@@ -217,11 +291,9 @@ class _RewardSlotsState extends State<RewardSlots> {
     final ads = AdsService.instance;
     final loading = _busy || (current && !ads.rewardedReady && ads.rewardedLoading);
     Widget trailing;
+    final chosen = done ? appState.rewardVehicles.elementAtOrNull(index) : null;
     if (done) {
-      trailing = Chip(
-        avatar: const Icon(Icons.check_circle, color: Colors.green, size: 18),
-        label: Text(tr('reward.unlocked')),
-      );
+      trailing = TextButton(onPressed: () => chooseRewardVehicle(context, index), child: Text(tr('reward.change')));
     } else if (current) {
       trailing = FilledButton.tonalIcon(
         onPressed: _busy ? null : _watch,
@@ -238,11 +310,15 @@ class _RewardSlotsState extends State<RewardSlots> {
       child: Padding(
         padding: const EdgeInsets.fromLTRB(12, 10, 10, 10),
         child: Row(children: [
-          Icon(Icons.directions_car_outlined, color: done || current ? scheme.primary : scheme.outline),
+          Icon(done ? Icons.check_circle : Icons.directions_car_outlined,
+              color: done ? Colors.green : (current ? scheme.primary : scheme.outline)),
           const SizedBox(width: 10),
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(tr('reward.slot', {'n': n}), style: const TextStyle(fontWeight: FontWeight.w600)),
+              if (done)
+                Text(chosen == null ? tr('reward.none') : vehicleLabel(chosen),
+                    style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
               if (current) ...[
                 Padding(
                   padding: const EdgeInsets.only(top: 6, right: 8),

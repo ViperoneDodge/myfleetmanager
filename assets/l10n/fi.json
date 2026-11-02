@@ -624,5 +624,12 @@
  "reward.notReady": "Mainosta ei ole vielä valmiina: yritä hetken päästä uudelleen",
  "reward.noReward": "Mainos keskeytyi: se lasketaan vain, jos katsot sen loppuun",
  "reward.done": "Voit nyt hallita {n} ajoneuvoa",
- "reward.loading": "Ladataan mainosta…"
+ "reward.loading": "Ladataan mainosta…",
+ "reward.chooseTitle": "Valitse ajoneuvo nro {n}",
+ "reward.change": "Vaihda",
+ "reward.none": "Ajoneuvoa ei ole valittu",
+ "reward.useAs": "Käytä ajoneuvona nro {n}",
+ "reward.replaces": "{vehicle} tilalle",
+ "reward.chosen": "{vehicle} on nyt ajoneuvo nro {n}",
+ "reward.noCandidates": "Muita autoja tai moottoripyöriä ei ole valittavana"
 }

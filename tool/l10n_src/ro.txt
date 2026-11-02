@@ -624,3 +624,10 @@ Nicio reclamă pregătită: încearcă din nou peste câteva secunde
 Reclamă întreruptă: contează doar dacă o urmărești până la capăt
 Acum poți gestiona {n} vehicule
 Se încarcă reclama…
+Alege vehiculul nr. {n}
+Schimbă
+Niciun vehicul ales
+Folosește ca vehiculul nr. {n}
+în locul {vehicle}
+{vehicle} este acum vehiculul nr. {n}
+Nu există alte mașini sau motociclete de ales

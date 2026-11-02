@@ -624,5 +624,12 @@
  "reward.notReady": "Noben oglas še ni pripravljen: poskusi čez nekaj sekund",
  "reward.noReward": "Oglas prekinjen: šteje le, če si ga ogledaš do konca",
  "reward.done": "Zdaj lahko upravljaš {n} vozil",
- "reward.loading": "Nalaganje oglasa…"
+ "reward.loading": "Nalaganje oglasa…",
+ "reward.chooseTitle": "Izberi {n}. vozilo",
+ "reward.change": "Spremeni",
+ "reward.none": "Ni izbranega vozila",
+ "reward.useAs": "Uporabi kot {n}. vozilo",
+ "reward.replaces": "namesto {vehicle}",
+ "reward.chosen": "{vehicle} je zdaj {n}. vozilo",
+ "reward.noCandidates": "Ni drugih avtomobilov ali motorjev za izbiro"
 }

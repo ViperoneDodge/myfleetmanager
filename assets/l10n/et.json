@@ -624,5 +624,12 @@
  "reward.notReady": "Ühtegi reklaami pole veel valmis: proovi mõne sekundi pärast uuesti",
  "reward.noReward": "Reklaam katkes: see loeb ainult siis, kui vaatad lõpuni",
  "reward.done": "Nüüd saad hallata {n} sõidukit",
- "reward.loading": "Reklaami laadimine…"
+ "reward.loading": "Reklaami laadimine…",
+ "reward.chooseTitle": "Vali sõiduk nr {n}",
+ "reward.change": "Muuda",
+ "reward.none": "Sõidukit pole valitud",
+ "reward.useAs": "Kasuta sõidukina nr {n}",
+ "reward.replaces": "{vehicle} asemel",
+ "reward.chosen": "{vehicle} on nüüd sõiduk nr {n}",
+ "reward.noCandidates": "Muid autosid ega mootorrattaid valida pole"
 }

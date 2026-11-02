@@ -624,3 +624,10 @@ Chưa có quảng cáo sẵn sàng: thử lại sau vài giây
 Quảng cáo bị dừng: chỉ được tính khi xem đến hết
 Giờ bạn có thể quản lý {n} xe
 Đang tải quảng cáo…
+Chọn xe thứ {n}
+Đổi
+Chưa chọn xe
+Dùng làm xe thứ {n}
+thay cho {vehicle}
+{vehicle} giờ là xe thứ {n}
+Không còn ô tô hoặc xe máy nào khác để chọn

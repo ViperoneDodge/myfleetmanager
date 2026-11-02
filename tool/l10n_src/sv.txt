@@ -624,3 +624,10 @@ Ingen annons klar än: försök igen om några sekunder
 Annonsen avbröts: den räknas bara om du ser den till slutet
 Nu kan du hantera {n} fordon
 Laddar annonsen…
+Välj fordon nr {n}
+Ändra
+Inget fordon valt
+Använd som fordon nr {n}
+i stället för {vehicle}
+{vehicle} är nu fordon nr {n}
+Det finns inga andra bilar eller motorcyklar att välja

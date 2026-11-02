@@ -624,3 +624,10 @@ Ingen annonse klar ennå: prøv igjen om noen sekunder
 Annonsen ble avbrutt: den teller bare hvis du ser den til slutt
 Nå kan du administrere {n} kjøretøy
 Laster inn annonsen…
+Velg kjøretøy nr. {n}
+Endre
+Ingen kjøretøy valgt
+Bruk som kjøretøy nr. {n}
+i stedet for {vehicle}
+{vehicle} er nå kjøretøy nr. {n}
+Det finnes ingen andre biler eller motorsykler å velge

@@ -624,5 +624,12 @@
  "reward.notReady": "Níl aon fhógra réidh fós: bain triail eile as i gceann cúpla soicind",
  "reward.noReward": "Stopadh an fógra: ní áirítear é ach má fhéachann tú air go deireadh",
  "reward.done": "Is féidir leat {n} feithicil a bhainistiú anois",
- "reward.loading": "Fógra á lódáil…"
+ "reward.loading": "Fógra á lódáil…",
+ "reward.chooseTitle": "Roghnaigh feithicil uimh. {n}",
+ "reward.change": "Athraigh",
+ "reward.none": "Níor roghnaíodh feithicil",
+ "reward.useAs": "Úsáid mar fheithicil uimh. {n}",
+ "reward.replaces": "in ionad {vehicle}",
+ "reward.chosen": "Is é {vehicle} feithicil uimh. {n} anois",
+ "reward.noCandidates": "Níl gluaisteáin ná gluaisrothair eile le roghnú"
 }

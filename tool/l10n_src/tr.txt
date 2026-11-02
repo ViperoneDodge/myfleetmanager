@@ -624,3 +624,10 @@ Henüz hazır reklam yok: birkaç saniye sonra tekrar dene
 Reklam yarıda kesildi: yalnızca sonuna kadar izlenirse sayılır
 Artık {n} aracı yönetebilirsin
 Reklam yükleniyor…
+{n}. aracı seçin
+Değiştir
+Araç seçilmedi
+{n}. araç olarak kullan
+{vehicle} yerine
+{vehicle} artık {n}. araç
+Seçilecek başka otomobil veya motosiklet yok

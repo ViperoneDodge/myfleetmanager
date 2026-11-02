@@ -737,6 +737,7 @@ class UserData {
 
   int rewardSlots;
   int rewardProgress;
+  List<String> rewardVehicles;
 
   UserData({
     List<Vehicle>? vehicles,
@@ -746,7 +747,9 @@ class UserData {
     Favorites? favorites,
     this.rewardSlots = 0,
     this.rewardProgress = 0,
+    List<String>? rewardVehicles,
   })  : vehicles = vehicles ?? [],
+        rewardVehicles = rewardVehicles ?? [],
         notify = notify ?? NotifySettings(),
         groups = groups ?? [],
         favorites = favorites ?? Favorites();
@@ -766,6 +769,7 @@ class UserData {
         'favorites': favorites.toJson(),
         if (rewardSlots > 0) 'rewardSlots': rewardSlots,
         if (rewardProgress > 0) 'rewardProgress': rewardProgress,
+        if (rewardVehicles.isNotEmpty) 'rewardVehicles': rewardVehicles,
       };
 
   factory UserData.fromJson(Map<String, dynamic> j) => UserData(
@@ -784,6 +788,7 @@ class UserData {
             j['favorites'] == null ? null : Map<String, dynamic>.from(j['favorites'] as Map)),
         rewardSlots: (j['rewardSlots'] as num?)?.toInt() ?? 0,
         rewardProgress: (j['rewardProgress'] as num?)?.toInt() ?? 0,
+        rewardVehicles: ((j['rewardVehicles'] as List?) ?? []).map((e) => e.toString()).toList(),
       );
 }
 

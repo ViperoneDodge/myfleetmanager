@@ -624,5 +624,12 @@
  "reward.notReady": "अभी कोई विज्ञापन तैयार नहीं है: कुछ सेकंड बाद फिर कोशिश करें",
  "reward.noReward": "विज्ञापन रुक गया: यह तभी गिना जाता है जब पूरा देखें",
  "reward.done": "अब आप {n} वाहन संभाल सकते हैं",
- "reward.loading": "विज्ञापन लोड हो रहा है…"
+ "reward.loading": "विज्ञापन लोड हो रहा है…",
+ "reward.chooseTitle": "वाहन क्रमांक {n} चुनें",
+ "reward.change": "बदलें",
+ "reward.none": "कोई वाहन नहीं चुना गया",
+ "reward.useAs": "वाहन क्रमांक {n} के रूप में उपयोग करें",
+ "reward.replaces": "{vehicle} के स्थान पर",
+ "reward.chosen": "{vehicle} अब वाहन क्रमांक {n} है",
+ "reward.noCandidates": "चुनने के लिए कोई अन्य कार या मोटरसाइकिल नहीं है"
 }

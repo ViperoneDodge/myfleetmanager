@@ -624,3 +624,10 @@ reward.notReady
 reward.noReward
 reward.done
 reward.loading
+reward.chooseTitle
+reward.change
+reward.none
+reward.useAs
+reward.replaces
+reward.chosen
+reward.noCandidates

@@ -624,3 +624,10 @@ Mainosta ei ole vielä valmiina: yritä hetken päästä uudelleen
 Mainos keskeytyi: se lasketaan vain, jos katsot sen loppuun
 Voit nyt hallita {n} ajoneuvoa
 Ladataan mainosta…
+Valitse ajoneuvo nro {n}
+Vaihda
+Ajoneuvoa ei ole valittu
+Käytä ajoneuvona nro {n}
+{vehicle} tilalle
+{vehicle} on nyt ajoneuvo nro {n}
+Muita autoja tai moottoripyöriä ei ole valittavana
