@@ -70,7 +70,7 @@ class AdsService {
 
   bool get rewardedReady => _rewarded != null;
 
-  bool get rewardedLoading => _rewardedLoading || _retry != null || (_wantRewarded && !_ready);
+  bool get rewardedLoading => _rewardedLoading || _retry != null;
 
   String? rewardedError;
   String? appOpenError;
@@ -94,34 +94,57 @@ class AdsService {
     if (!supported) return;
     _wantRewarded = true;
     start();
-    if (!_ready || _rewardedLoading || _rewarded != null) return;
+    if (!_ready) {
+      rewardedError ??= 'pubblicità non ancora pronta';
+      return;
+    }
+    if (_rewardedLoading || _rewarded != null) return;
     _rewardedLoading = true;
     onChanged?.call();
-    RewardedAd.load(
-      adUnitId: _rewardedUnit,
-      request: const AdRequest(),
-      rewardedAdLoadCallback: RewardedAdLoadCallback(
-        onAdLoaded: (ad) {
-          _rewarded = ad;
-          _rewardedLoading = false;
-          _failures = 0;
-          rewardedError = null;
-          onChanged?.call();
-        },
-        onAdFailedToLoad: (e) {
-          _rewardedLoading = false;
-          rewardedError = '${e.code} ${e.message}';
-          _failures++;
-          if (_failures <= 3) {
-            _retry = Timer(Duration(seconds: 5 * _failures), () {
-              _retry = null;
-              preloadRewarded();
-            });
-          }
-          onChanged?.call();
-        },
-      ),
-    );
+    late final Timer guard;
+    var settled = false;
+    void failed(String why) {
+      if (settled) return;
+      settled = true;
+      guard.cancel();
+      _rewardedLoading = false;
+      rewardedError = why;
+      _failures++;
+      if (_failures <= 3) {
+        _retry?.cancel();
+        _retry = Timer(Duration(seconds: 5 * _failures), () {
+          _retry = null;
+          preloadRewarded();
+        });
+      }
+      onChanged?.call();
+    }
+
+    guard = Timer(const Duration(seconds: 30), () => failed('tempo scaduto'));
+    try {
+      RewardedAd.load(
+        adUnitId: _rewardedUnit,
+        request: const AdRequest(),
+        rewardedAdLoadCallback: RewardedAdLoadCallback(
+          onAdLoaded: (ad) {
+            if (settled) {
+              ad.dispose();
+              return;
+            }
+            settled = true;
+            guard.cancel();
+            _rewarded = ad;
+            _rewardedLoading = false;
+            _failures = 0;
+            rewardedError = null;
+            onChanged?.call();
+          },
+          onAdFailedToLoad: (e) => failed('${e.code} ${e.message}'),
+        ),
+      ).catchError((Object e) => failed('$e'));
+    } catch (e) {
+      failed('$e');
+    }
   }
 
   Future<bool> showRewarded() async {
@@ -135,7 +158,9 @@ class AdsService {
     _showing = true;
     var earned = false;
     final done = Completer<bool>();
+    Timer? guard;
     void finish(Ad a) {
+      guard?.cancel();
       _showing = false;
       a.dispose();
       preloadRewarded();
@@ -143,10 +168,20 @@ class AdsService {
     }
 
     ad.fullScreenContentCallback = FullScreenContentCallback(
+      onAdShowedFullScreenContent: (_) => guard?.cancel(),
       onAdDismissedFullScreenContent: finish,
-      onAdFailedToShowFullScreenContent: (a, _) => finish(a),
+      onAdFailedToShowFullScreenContent: (a, e) {
+        rewardedError = '${e.code} ${e.message}';
+        finish(a);
+      },
     );
-    await ad.show(onUserEarnedReward: (_, __) => earned = true);
+    guard = Timer(const Duration(seconds: 15), () => finish(ad));
+    try {
+      await ad.show(onUserEarnedReward: (_, __) => earned = true);
+    } catch (e) {
+      rewardedError = '$e';
+      finish(ad);
+    }
     return done.future;
   }
 
@@ -169,6 +204,7 @@ class AdsService {
       if (_ready || !await ConsentInformation.instance.canRequestAds()) return;
       await MobileAds.instance.initialize();
       _ready = true;
+      rewardedError = null;
       _load();
       if (_wantRewarded) preloadRewarded();
     } catch (_) {}

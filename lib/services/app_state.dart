@@ -974,6 +974,7 @@ class AppState extends ChangeNotifier {
     if (!AdsService.supported || session == null || isPro) return;
     AdsService.instance.onChanged = notifyListeners;
     AdsService.instance.start();
+    if (data.rewardSlots < AdsRules.maxSlots) AdsService.instance.preloadRewarded();
   }
 
   void maybeShowAd() {
