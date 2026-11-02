@@ -611,5 +611,8 @@
  "pw.forgot": "Nu ți-o amintești? Primește un e-mail pentru resetare",
  "pw.google": "Conectare cu Google: parola se gestionează în contul tău Google",
  "tech.pressure": "Presiunea în anvelope",
- "units.pressure": "Presiunea în anvelope"
+ "units.pressure": "Presiunea în anvelope",
+ "pro.benefitNoAds": "Fără reclame",
+ "ads.privacy": "Confidențialitatea reclamelor",
+ "ads.privacySub": "Revizuiește alegerile despre reclamele personalizate"
 }

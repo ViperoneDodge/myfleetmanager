@@ -611,5 +611,8 @@
  "pw.forgot": "Nie pamiętasz? Otrzymaj e-mail do zresetowania",
  "pw.google": "Logowanie przez Google: hasłem zarządzasz w koncie Google",
  "tech.pressure": "Ciśnienie w oponach",
- "units.pressure": "Ciśnienie w oponach"
+ "units.pressure": "Ciśnienie w oponach",
+ "pro.benefitNoAds": "Bez reklam",
+ "ads.privacy": "Prywatność reklam",
+ "ads.privacySub": "Sprawdź swoje wybory dotyczące spersonalizowanych reklam"
 }

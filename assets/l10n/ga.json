@@ -611,5 +611,8 @@
  "pw.forgot": "Ní cuimhin leat é? Faigh ríomhphost chun é a athshocrú",
  "pw.google": "Síniú isteach le Google: bainistítear an focal faire i do chuntas Google",
  "tech.pressure": "Brú na mbonn",
- "units.pressure": "Brú na mbonn"
+ "units.pressure": "Brú na mbonn",
+ "pro.benefitNoAds": "Gan fógraí",
+ "ads.privacy": "Príobháideachas fógraí",
+ "ads.privacySub": "Athbhreithnigh do roghanna faoi fhógraí pearsantaithe"
 }

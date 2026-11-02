@@ -611,5 +611,8 @@
  "pw.forgot": "Ma tiftakarhiex? Irċievi email biex terġa’ tissettjaha",
  "pw.google": "Dħul b’Google: il-password tiġi mmaniġġjata fil-kont Google tiegħek",
  "tech.pressure": "Pressjoni tat-tajers",
- "units.pressure": "Pressjoni tat-tajers"
+ "units.pressure": "Pressjoni tat-tajers",
+ "pro.benefitNoAds": "Ebda reklami",
+ "ads.privacy": "Privatezza tar-reklami",
+ "ads.privacySub": "Irrevedi l-għażliet tiegħek dwar reklami personalizzati"
 }

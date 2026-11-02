@@ -611,3 +611,6 @@ Không nhớ? Nhận email để đặt lại
 Đăng nhập bằng Google: mật khẩu được quản lý trong tài khoản Google của bạn
 Áp suất lốp
 Áp suất lốp
+Không quảng cáo
+Quyền riêng tư quảng cáo
+Xem lại lựa chọn về quảng cáo được cá nhân hóa

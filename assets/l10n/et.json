@@ -611,5 +611,8 @@
  "pw.forgot": "Ei mäleta? Saa e-kiri selle lähtestamiseks",
  "pw.google": "Google’iga sisselogimine: parooli haldad oma Google’i kontol",
  "tech.pressure": "Rehvirõhk",
- "units.pressure": "Rehvirõhk"
+ "units.pressure": "Rehvirõhk",
+ "pro.benefitNoAds": "Reklaamivaba",
+ "ads.privacy": "Reklaamide privaatsus",
+ "ads.privacySub": "Vaata üle oma valikud isikupärastatud reklaamide kohta"
 }

@@ -611,3 +611,6 @@ Ei mäleta? Saa e-kiri selle lähtestamiseks
 Google’iga sisselogimine: parooli haldad oma Google’i kontol
 Rehvirõhk
 Rehvirõhk
+Reklaamivaba
+Reklaamide privaatsus
+Vaata üle oma valikud isikupärastatud reklaamide kohta

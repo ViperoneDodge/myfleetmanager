@@ -611,5 +611,8 @@
  "pw.forgot": "Hatırlamıyor musun? Sıfırlamak için e-posta al",
  "pw.google": "Google ile giriş: şifre Google hesabında yönetilir",
  "tech.pressure": "Lastik basıncı",
- "units.pressure": "Lastik basıncı"
+ "units.pressure": "Lastik basıncı",
+ "pro.benefitNoAds": "Reklamsız",
+ "ads.privacy": "Reklam gizliliği",
+ "ads.privacySub": "Kişiselleştirilmiş reklam tercihlerini gözden geçir"
 }

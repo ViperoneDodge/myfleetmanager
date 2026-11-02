@@ -611,5 +611,8 @@
  "pw.forgot": "기억나지 않나요? 재설정 이메일 받기",
  "pw.google": "Google 로그인: 비밀번호는 Google 계정에서 관리합니다",
  "tech.pressure": "타이어 공기압",
- "units.pressure": "타이어 공기압"
+ "units.pressure": "타이어 공기압",
+ "pro.benefitNoAds": "광고 없음",
+ "ads.privacy": "광고 개인정보",
+ "ads.privacySub": "맞춤 광고에 대한 선택 검토"
 }

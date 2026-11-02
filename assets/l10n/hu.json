@@ -611,5 +611,8 @@
  "pw.forgot": "Nem emlékszel rá? Kérj e-mailt a visszaállításhoz",
  "pw.google": "Google-bejelentkezés: a jelszót a Google-fiókodban kezelheted",
  "tech.pressure": "Guminyomás",
- "units.pressure": "Guminyomás"
+ "units.pressure": "Guminyomás",
+ "pro.benefitNoAds": "Reklámmentes",
+ "ads.privacy": "Hirdetési adatvédelem",
+ "ads.privacySub": "Személyre szabott hirdetésekkel kapcsolatos döntéseid áttekintése"
 }

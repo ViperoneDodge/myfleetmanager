@@ -611,5 +611,8 @@
  "pw.forgot": "Neprisimeni? Gauk el. laišką jam atkurti",
  "pw.google": "Prisijungimas per Google: slaptažodį tvarkai savo Google paskyroje",
  "tech.pressure": "Padangų slėgis",
- "units.pressure": "Padangų slėgis"
+ "units.pressure": "Padangų slėgis",
+ "pro.benefitNoAds": "Be reklamų",
+ "ads.privacy": "Reklamų privatumas",
+ "ads.privacySub": "Peržiūrėk savo pasirinkimus dėl suasmenintų reklamų"
 }

@@ -9,7 +9,7 @@ kts = APP / "build.gradle.kts"
 groovy = APP / "build.gradle"
 if kts.exists():
     g = kts.read_text()
-    g = re.sub(r"minSdk\s*=\s*flutter\.minSdkVersion", "minSdk = maxOf(23, flutter.minSdkVersion)", g)
+    g = re.sub(r"minSdk\s*=\s*flutter\.minSdkVersion", "minSdk = maxOf(24, flutter.minSdkVersion)", g)
     g = re.sub(r"targetSdk\s*=\s*flutter\.targetSdkVersion", "targetSdk = 36", g)
     g = re.sub(r"compileSdk\s*=\s*flutter\.compileSdkVersion", "compileSdk = 36", g)
     if "isCoreLibraryDesugaringEnabled" not in g:
@@ -280,3 +280,16 @@ for d, parent in (("values", "Theme.AppCompat.Light.NoActionBar"), ("values-nigh
         t = re.sub(r'parent="@android:style/Theme\.(Light\.|Black\.)?NoTitleBar"', f'parent="{parent}"', t)
         st.write_text(t)
         print("Patched", st)
+
+ads = (ROOT / "lib" / "ads_config.dart").read_text()
+ads_app = re.search(r"androidAppId\s*=\s*'([^']+)'", ads).group(1)
+man = APP / "src" / "main" / "AndroidManifest.xml"
+m = man.read_text()
+if "com.google.android.gms.ads.APPLICATION_ID" not in m:
+    m, n = re.subn(r"(<application[^>]*>)",
+                   r'\1\n        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="' + ads_app + '"/>',
+                   m, count=1)
+    if n == 0:
+        raise SystemExit("AndroidManifest: application non trovata per AdMob")
+    man.write_text(m)
+print("AdMob app id impostato")

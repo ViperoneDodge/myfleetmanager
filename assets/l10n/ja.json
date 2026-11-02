@@ -611,5 +611,8 @@
  "pw.forgot": "思い出せない場合はリセット用のメールを受け取る",
  "pw.google": "Google でログイン：パスワードは Google アカウントで管理します",
  "tech.pressure": "タイヤ空気圧",
- "units.pressure": "タイヤ空気圧"
+ "units.pressure": "タイヤ空気圧",
+ "pro.benefitNoAds": "広告なし",
+ "ads.privacy": "広告のプライバシー",
+ "ads.privacySub": "パーソナライズ広告の設定を確認"
 }

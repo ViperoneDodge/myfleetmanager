@@ -611,5 +611,8 @@
  "pw.forgot": "Husker du det ikke? Få en e-post for å tilbakestille det",
  "pw.google": "Pålogging med Google: passordet administreres i Google-kontoen din",
  "tech.pressure": "Dekktrykk",
- "units.pressure": "Dekktrykk"
+ "units.pressure": "Dekktrykk",
+ "pro.benefitNoAds": "Ingen reklame",
+ "ads.privacy": "Annonsepersonvern",
+ "ads.privacySub": "Se over valgene dine for tilpassede annonser"
 }

@@ -611,5 +611,8 @@
  "pw.forgot": "Nepamätáš si ho? Získaj e-mail na obnovenie",
  "pw.google": "Prihlásenie cez Google: heslo spravuješ vo svojom účte Google",
  "tech.pressure": "Tlak v pneumatikách",
- "units.pressure": "Tlak v pneumatikách"
+ "units.pressure": "Tlak v pneumatikách",
+ "pro.benefitNoAds": "Bez reklám",
+ "ads.privacy": "Súkromie reklám",
+ "ads.privacySub": "Skontroluj svoje voľby pre prispôsobené reklamy"
 }

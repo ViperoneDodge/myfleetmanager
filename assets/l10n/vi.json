@@ -611,5 +611,8 @@
  "pw.forgot": "Không nhớ? Nhận email để đặt lại",
  "pw.google": "Đăng nhập bằng Google: mật khẩu được quản lý trong tài khoản Google của bạn",
  "tech.pressure": "Áp suất lốp",
- "units.pressure": "Áp suất lốp"
+ "units.pressure": "Áp suất lốp",
+ "pro.benefitNoAds": "Không quảng cáo",
+ "ads.privacy": "Quyền riêng tư quảng cáo",
+ "ads.privacySub": "Xem lại lựa chọn về quảng cáo được cá nhân hóa"
 }

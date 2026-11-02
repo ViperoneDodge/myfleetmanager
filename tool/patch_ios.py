@@ -13,12 +13,15 @@ if plist.exists():
         "NSPhotoLibraryUsageDescription": "MyFleetManager uses your photos to choose vehicle pictures, documents and QR code images.",
         "NSFaceIDUsageDescription": "MyFleetManager uses Face ID to unlock the app when you turn on the lock in Settings.",
         "CFBundleDisplayName": "MyFleetManager",
+        "GADApplicationIdentifier": re.search(r"iosAppId\s*=\s*'([^']+)'", (ROOT / "lib" / "ads_config.dart").read_text()).group(1),
     }
     for k, v in keys.items():
         if f"<key>{k}</key>" in p:
             p = re.sub(rf"(<key>{k}</key>\s*<string>)[^<]*(</string>)", rf"\g<1>{v}\g<2>", p)
         else:
             p = p.replace("<dict>", f"<dict>\n\t<key>{k}</key>\n\t<string>{v}</string>", 1)
+    if "<key>SKAdNetworkItems</key>" not in p:
+        p = p.replace("<dict>", "<dict>\n\t<key>SKAdNetworkItems</key>\n\t<array>\n\t\t<dict>\n\t\t\t<key>SKAdNetworkIdentifier</key>\n\t\t\t<string>cstr6suwn9.skadnetwork</string>\n\t\t</dict>\n\t</array>", 1)
     plist.write_text(p)
     print("Patched", plist)
 

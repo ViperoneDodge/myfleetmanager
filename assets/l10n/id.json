@@ -611,5 +611,8 @@
  "pw.forgot": "Lupa? Dapatkan email untuk mengatur ulang",
  "pw.google": "Masuk dengan Google: kata sandi dikelola di akun Google Anda",
  "tech.pressure": "Tekanan ban",
- "units.pressure": "Tekanan ban"
+ "units.pressure": "Tekanan ban",
+ "pro.benefitNoAds": "Tanpa iklan",
+ "ads.privacy": "Privasi iklan",
+ "ads.privacySub": "Tinjau pilihan Anda tentang iklan yang dipersonalisasi"
 }

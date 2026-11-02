@@ -9,6 +9,7 @@ import '../l10n.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../units.dart';
+import 'ads_service.dart';
 import 'app_lock.dart';
 import 'auth_service.dart';
 import 'doc_cloud.dart';
@@ -703,6 +704,8 @@ class AppState extends ChangeNotifier {
     deadlinesSoonOnly = settings?['deadlinesSoon'] == true;
     exactAsked = settings?['exactAsked'] == true;
     appLock = settings?['appLock'] == true && AppLock.available;
+    adsFirstSeen = (settings?['adsFirstSeen'] as num?)?.toInt() ?? 0;
+    adsLastShown = (settings?['adsLastShown'] as num?)?.toInt() ?? 0;
     final dc = settings?['docsConsent'];
     docsConsent = dc is bool ? dc : null;
     if (devPro && devProVersion != appVersion) {
@@ -750,6 +753,12 @@ class AppState extends ChangeNotifier {
     }
     locked = appLock && session != null;
     loading = false;
+    if (adsFirstSeen == 0) {
+      adsFirstSeen = DateTime.now().millisecondsSinceEpoch;
+      await _writeSettings();
+    }
+    _startAds();
+    Future.delayed(const Duration(seconds: 4), maybeShowAd);
     notifyListeners();
     if (session != null) {
       Future.delayed(const Duration(seconds: 3), () async {
@@ -769,6 +778,7 @@ class AppState extends ChangeNotifier {
     await _open(s);
     notifications.requestPermission();
     notifyListeners();
+    _startAds();
   }
 
   Future<void> _open(Session s) async {
@@ -877,17 +887,53 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> onResume() async {
+    final awayLong = _awaySince != null && DateTime.now().difference(_awaySince!) >= AppLock.grace;
     if (AppLock.shouldLock(enabled: appLock && session != null, awaySince: _awaySince, now: DateTime.now()) &&
         !_unlocking) {
       locked = true;
       notifyListeners();
     }
+    if (awayLong && !_unlocking) maybeShowAd();
     if (!_unlocking) _awaySince = null;
     await reloadLog();
     _recordReminders();
   }
 
   bool appLock = false;
+
+  int adsFirstSeen = 0;
+
+  int adsLastShown = 0;
+
+  bool get adsAllowed =>
+      AdsService.supported &&
+      AdsRules.allowed(
+        hasSession: session != null,
+        pro: isPro,
+        locked: locked,
+        firstSeen: adsFirstSeen,
+        lastShown: adsLastShown,
+        now: DateTime.now(),
+      );
+
+  bool get adsPrivacyOption => AdsService.supported && !isPro && AdsService.instance.privacyRequired;
+
+  void _startAds() {
+    if (!AdsService.supported || session == null || isPro) return;
+    AdsService.instance.onChanged = notifyListeners;
+    AdsService.instance.start();
+  }
+
+  void maybeShowAd() {
+    if (!adsAllowed) {
+      if (session != null && !isPro) _startAds();
+      return;
+    }
+    AdsService.instance.showIfReady(() {
+      adsLastShown = DateTime.now().millisecondsSinceEpoch;
+      _writeSettings();
+    });
+  }
 
   bool locked = false;
 
@@ -1255,6 +1301,8 @@ class AppState extends ChangeNotifier {
         'deadlinesSoon': deadlinesSoonOnly,
         'exactAsked': exactAsked,
         'appLock': appLock,
+        'adsFirstSeen': adsFirstSeen,
+        'adsLastShown': adsLastShown,
         if (docsConsent != null) 'docsConsent': docsConsent,
       });
 

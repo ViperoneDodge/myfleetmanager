@@ -611,5 +611,8 @@
  "pw.forgot": "Kan du ikke huske den? Få en e-mail til at nulstille den",
  "pw.google": "Login med Google: adgangskoden administreres i din Google-konto",
  "tech.pressure": "Dæktryk",
- "units.pressure": "Dæktryk"
+ "units.pressure": "Dæktryk",
+ "pro.benefitNoAds": "Ingen reklamer",
+ "ads.privacy": "Annoncepersondata",
+ "ads.privacySub": "Gennemgå dine valg om tilpassede annoncer"
 }

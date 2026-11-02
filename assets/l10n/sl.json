@@ -611,5 +611,8 @@
  "pw.forgot": "Se ga ne spomniš? Prejmi e-pošto za ponastavitev",
  "pw.google": "Prijava z Googlom: geslo upravljaš v svojem Google računu",
  "tech.pressure": "Tlak v pnevmatikah",
- "units.pressure": "Tlak v pnevmatikah"
+ "units.pressure": "Tlak v pnevmatikah",
+ "pro.benefitNoAds": "Brez oglasov",
+ "ads.privacy": "Zasebnost oglasov",
+ "ads.privacySub": "Preglej svoje izbire za prilagojene oglase"
 }

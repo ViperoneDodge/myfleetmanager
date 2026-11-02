@@ -611,5 +611,8 @@
  "pw.forgot": "忘记了？接收重置邮件",
  "pw.google": "使用 Google 登录：密码在你的 Google 账号中管理",
  "tech.pressure": "胎压",
- "units.pressure": "胎压"
+ "units.pressure": "胎压",
+ "pro.benefitNoAds": "无广告",
+ "ads.privacy": "广告隐私",
+ "ads.privacySub": "查看你对个性化广告的选择"
 }

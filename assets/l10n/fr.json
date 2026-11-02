@@ -611,5 +611,8 @@
  "pw.forgot": "Tu ne t’en souviens plus ? Reçois un e-mail pour le réinitialiser",
  "pw.google": "Connexion Google : le mot de passe se gère dans ton compte Google",
  "tech.pressure": "Pression des pneus",
- "units.pressure": "Pression des pneus"
+ "units.pressure": "Pression des pneus",
+ "pro.benefitNoAds": "Aucune publicité",
+ "ads.privacy": "Confidentialité des annonces",
+ "ads.privacySub": "Revois tes choix sur les annonces personnalisées"
 }

@@ -611,5 +611,8 @@
  "pw.forgot": "याद नहीं? रीसेट के लिए ईमेल पाएँ",
  "pw.google": "Google से लॉगिन: पासवर्ड आपके Google खाते में प्रबंधित होता है",
  "tech.pressure": "टायर का दबाव",
- "units.pressure": "टायर का दबाव"
+ "units.pressure": "टायर का दबाव",
+ "pro.benefitNoAds": "कोई विज्ञापन नहीं",
+ "ads.privacy": "विज्ञापन निजता",
+ "ads.privacySub": "व्यक्तिगत विज्ञापनों के बारे में अपनी पसंद देखें"
 }

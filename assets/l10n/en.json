@@ -611,5 +611,8 @@
  "pw.forgot": "Can't remember it? Get an email to reset it",
  "pw.google": "Google sign-in: the password is managed in your Google account",
  "tech.pressure": "Tyre pressure",
- "units.pressure": "Tyre pressure"
+ "units.pressure": "Tyre pressure",
+ "pro.benefitNoAds": "No ads",
+ "ads.privacy": "Ad privacy",
+ "ads.privacySub": "Review your choices about personalised ads"
 }

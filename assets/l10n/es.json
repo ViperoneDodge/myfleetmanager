@@ -611,5 +611,8 @@
  "pw.forgot": "¿No la recuerdas? Recibe un correo para restablecerla",
  "pw.google": "Acceso con Google: la contraseña se gestiona en tu cuenta de Google",
  "tech.pressure": "Presión de los neumáticos",
- "units.pressure": "Presión de los neumáticos"
+ "units.pressure": "Presión de los neumáticos",
+ "pro.benefitNoAds": "Sin publicidad",
+ "ads.privacy": "Privacidad de los anuncios",
+ "ads.privacySub": "Revisa tus opciones sobre anuncios personalizados"
 }

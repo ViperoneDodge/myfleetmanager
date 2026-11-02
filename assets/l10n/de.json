@@ -611,5 +611,8 @@
  "pw.forgot": "Vergessen? Erhalte eine E-Mail zum Zurücksetzen",
  "pw.google": "Google-Anmeldung: Das Passwort wird in deinem Google-Konto verwaltet",
  "tech.pressure": "Reifendruck",
- "units.pressure": "Reifendruck"
+ "units.pressure": "Reifendruck",
+ "pro.benefitNoAds": "Keine Werbung",
+ "ads.privacy": "Werbe-Datenschutz",
+ "ads.privacySub": "Deine Auswahl zu personalisierter Werbung prüfen"
 }

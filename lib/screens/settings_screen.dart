@@ -9,6 +9,7 @@ import '../l10n.dart';
 import '../main.dart';
 import '../models.dart';
 import '../platform.dart';
+import '../services/ads_service.dart';
 import '../services/app_lock.dart';
 import '../services/app_state.dart' show AppState;
 import '../services/auth_service.dart' show AuthService;
@@ -255,6 +256,13 @@ class SettingsScreen extends StatelessWidget {
                   ),
               ],
             ],
+            if (appState.adsPrivacyOption)
+              ListTile(
+                leading: const Icon(Icons.privacy_tip_outlined),
+                title: Text(tr('ads.privacy')),
+                subtitle: Text(tr('ads.privacySub')),
+                onTap: () => AdsService.instance.showPrivacyOptions(),
+              ),
             if (AppLock.available && appState.session != null)
               SwitchListTile(
                 secondary: const Icon(Icons.fingerprint),

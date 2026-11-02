@@ -611,3 +611,6 @@ Se ga ne spomniš? Prejmi e-pošto za ponastavitev
 Prijava z Googlom: geslo upravljaš v svojem Google računu
 Tlak v pnevmatikah
 Tlak v pnevmatikah
+Brez oglasov
+Zasebnost oglasov
+Preglej svoje izbire za prilagojene oglase

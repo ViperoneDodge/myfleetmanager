@@ -611,5 +611,8 @@
  "pw.forgot": "Kommer du inte ihåg det? Få ett mejl för att återställa det",
  "pw.google": "Inloggning med Google: lösenordet hanteras i ditt Google-konto",
  "tech.pressure": "Däcktryck",
- "units.pressure": "Däcktryck"
+ "units.pressure": "Däcktryck",
+ "pro.benefitNoAds": "Ingen reklam",
+ "ads.privacy": "Annonsintegritet",
+ "ads.privacySub": "Se över dina val för anpassade annonser"
 }

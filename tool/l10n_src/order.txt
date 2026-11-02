@@ -611,3 +611,6 @@ pw.forgot
 pw.google
 tech.pressure
 units.pressure
+pro.benefitNoAds
+ads.privacy
+ads.privacySub
