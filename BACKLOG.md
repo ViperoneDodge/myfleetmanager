@@ -3,11 +3,13 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.2.0) — prima uscita pubblica con pubblicità e premi
-- [ ] **Spegnere la modalità di prova** in `lib/ads_config.dart` (`testBuild = false`): tempi veri (primo annuncio dopo 24 ore, poi al massimo uno ogni 4 ore) e unità AdMob vere.
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
-- [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
 
 ## Versione 2.1.15-5 (prova)
+- [x] **Modalità di prova della pubblicità spenta** (`testBuild = false`): unità AdMob vere, primo annuncio all'apertura dopo 24 ore e poi al massimo uno ogni 4 ore; niente più stato tecnico sotto il pulsante dei premi.
+- [x] **APK di GitHub più leggero**: senza le librerie arm32 e x86 del lettore del libretto (circa 18 MB in meno); l'AAB per il Play Store le tiene tutte.
+- [x] **Blocco con impronta dopo 5 minuti** fuori dall'app (prima 1 minuto).
+- [x] **Scheda del Play Store** aggiornata per la 2.2.0 (video con premio, scelta dei veicoli, note di rilascio).
 - [x] **Scelta del 4° e del 5° veicolo**: i primi 3 veicoli restano quelli di sempre, mentre i veicoli sbloccati con i premi si scelgono nella pagina Pro («Cambia») oppure toccando un veicolo bloccato («Usa come 4° veicolo», al posto di quello attuale). La scelta è salvata sul telefono.
 
 ## Versione 2.1.15-4 (prova)

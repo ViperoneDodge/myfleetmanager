@@ -589,7 +589,7 @@ Test advarsler
 Kontrol startet: åbn diagnosticeringen igen om et minut
 Kontrollen kunne ikke startes
 Lås med fingeraftryk eller ansigt
-Når appen åbnes, og når du vender tilbage efter mere end et minut
+Når appen åbnes, og når du vender tilbage efter mere end 5 minutter
 MyFleetManager er låst
 Lås op
 Lås MyFleetManager op

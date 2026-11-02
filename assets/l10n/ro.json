@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Verificare pornită: redeschide diagnosticarea peste un minut",
  "diag.bgTestFailed": "Verificarea nu a putut porni",
  "lock.setting": "Blochează cu amprenta sau fața",
- "lock.settingSub": "La deschidere și când revii după mai mult de un minut",
+ "lock.settingSub": "La deschidere și când revii după mai mult de 5 minute",
  "lock.title": "MyFleetManager este blocată",
  "lock.unlock": "Deblochează",
  "lock.reason": "Deblochează MyFleetManager",

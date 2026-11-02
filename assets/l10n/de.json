@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Prüfung gestartet: öffne die Diagnose in einer Minute erneut",
  "diag.bgTestFailed": "Prüfung konnte nicht gestartet werden",
  "lock.setting": "Mit Fingerabdruck oder Gesicht sperren",
- "lock.settingSub": "Beim Öffnen und wenn du nach mehr als einer Minute zurückkehrst",
+ "lock.settingSub": "Beim Öffnen und wenn du nach mehr als 5 Minuten zurückkehrst",
  "lock.title": "MyFleetManager ist gesperrt",
  "lock.unlock": "Entsperren",
  "lock.reason": "MyFleetManager entsperren",

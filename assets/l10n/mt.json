@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Il-kontroll beda: erġa’ iftaħ id-dijanjostika wara minuta",
  "diag.bgTestFailed": "Ma setax jibda l-kontroll",
  "lock.setting": "Issakkar b’marka tas-saba’ jew wiċċ",
- "lock.settingSub": "Meta tiftaħ l-app u meta terġa’ lura wara aktar minn minuta",
+ "lock.settingSub": "Meta tiftaħ l-app u meta terġa' lura wara aktar minn 5 minuti",
  "lock.title": "MyFleetManager hija msakkra",
  "lock.unlock": "Iftaħ",
  "lock.reason": "Iftaħ MyFleetManager",

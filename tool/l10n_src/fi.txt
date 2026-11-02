@@ -589,7 +589,7 @@ Testaa ilmoitukset
 Tarkistus aloitettu: avaa diagnostiikka uudelleen minuutin päästä
 Tarkistusta ei voitu aloittaa
 Lukitse sormenjäljellä tai kasvoilla
-Avattaessa ja kun palaat yli minuutin jälkeen
+Avattaessa ja kun palaat yli 5 minuutin jälkeen
 MyFleetManager on lukittu
 Avaa lukitus
 Avaa MyFleetManagerin lukitus

@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Verificação iniciada: volta a abrir o diagnóstico daqui a um minuto",
  "diag.bgTestFailed": "Não foi possível iniciar a verificação",
  "lock.setting": "Bloquear com impressão digital ou rosto",
- "lock.settingSub": "Ao abrir a app e ao voltar depois de mais de um minuto",
+ "lock.settingSub": "Ao abrir a app e ao voltar depois de mais de 5 minutos",
  "lock.title": "A MyFleetManager está bloqueada",
  "lock.unlock": "Desbloquear",
  "lock.reason": "Desbloquear a MyFleetManager",

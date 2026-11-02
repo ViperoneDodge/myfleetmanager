@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Kontrollen har startat: öppna diagnostiken igen om en minut",
  "diag.bgTestFailed": "Kontrollen kunde inte startas",
  "lock.setting": "Lås med fingeravtryck eller ansikte",
- "lock.settingSub": "När appen öppnas och när du kommer tillbaka efter mer än en minut",
+ "lock.settingSub": "När appen öppnas och när du kommer tillbaka efter mer än 5 minuter",
  "lock.title": "MyFleetManager är låst",
  "lock.unlock": "Lås upp",
  "lock.reason": "Lås upp MyFleetManager",

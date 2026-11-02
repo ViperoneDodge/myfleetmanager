@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Tarkistus aloitettu: avaa diagnostiikka uudelleen minuutin päästä",
  "diag.bgTestFailed": "Tarkistusta ei voitu aloittaa",
  "lock.setting": "Lukitse sormenjäljellä tai kasvoilla",
- "lock.settingSub": "Avattaessa ja kun palaat yli minuutin jälkeen",
+ "lock.settingSub": "Avattaessa ja kun palaat yli 5 minuutin jälkeen",
  "lock.title": "MyFleetManager on lukittu",
  "lock.unlock": "Avaa lukitus",
  "lock.reason": "Avaa MyFleetManagerin lukitus",

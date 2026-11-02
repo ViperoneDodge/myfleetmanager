@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "チェックを開始しました。1分後に診断を開き直してください",
  "diag.bgTestFailed": "チェックを開始できませんでした",
  "lock.setting": "指紋または顔でロック",
- "lock.settingSub": "起動時と、1分以上たってから戻ったとき",
+ "lock.settingSub": "起動時と、5分以上たってから戻ったとき",
  "lock.title": "MyFleetManager はロックされています",
  "lock.unlock": "ロック解除",
  "lock.reason": "MyFleetManager のロックを解除",

@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Đã bắt đầu kiểm tra: mở lại chẩn đoán sau một phút",
  "diag.bgTestFailed": "Không thể bắt đầu kiểm tra",
  "lock.setting": "Khóa bằng vân tay hoặc khuôn mặt",
- "lock.settingSub": "Khi mở ứng dụng và khi quay lại sau hơn một phút",
+ "lock.settingSub": "Khi mở ứng dụng và khi quay lại sau hơn 5 phút",
  "lock.title": "MyFleetManager đã bị khóa",
  "lock.unlock": "Mở khóa",
  "lock.reason": "Mở khóa MyFleetManager",

@@ -589,7 +589,7 @@ Preizkusi opozorila
 Preverjanje se je začelo: čez minuto znova odpri diagnostiko
 Preverjanja ni mogoče zagnati
 Zakleni s prstnim odtisom ali obrazom
-Ob odprtju in ko se vrneš po več kot minuti
+Ob odprtju in ko se vrneš po več kot 5 minutah
 MyFleetManager je zaklenjen
 Odkleni
 Odkleni MyFleetManager

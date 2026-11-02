@@ -589,7 +589,7 @@ Testează alertele
 Verificare pornită: redeschide diagnosticarea peste un minut
 Verificarea nu a putut porni
 Blochează cu amprenta sau fața
-La deschidere și când revii după mai mult de un minut
+La deschidere și când revii după mai mult de 5 minute
 MyFleetManager este blocată
 Deblochează
 Deblochează MyFleetManager

@@ -589,7 +589,7 @@ Módosítva
 Ellenőrzés elindítva: egy perc múlva nyisd meg újra a diagnosztikát
 Az ellenőrzés nem indítható
 Zárolás ujjlenyomattal vagy arccal
-Megnyitáskor és ha több mint egy perc után térsz vissza
+Megnyitáskor és ha több mint 5 perc után térsz vissza
 A MyFleetManager zárolva van
 Feloldás
 MyFleetManager feloldása

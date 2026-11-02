@@ -589,7 +589,7 @@ Test varsler
 Kontroll startet: åpne diagnostikken igjen om ett minutt
 Kunne ikke starte kontrollen
 Lås med fingeravtrykk eller ansikt
-Når appen åpnes, og når du kommer tilbake etter mer enn ett minutt
+Når appen åpnes, og når du kommer tilbake etter mer enn 5 minutter
 MyFleetManager er låst
 Lås opp
 Lås opp MyFleetManager

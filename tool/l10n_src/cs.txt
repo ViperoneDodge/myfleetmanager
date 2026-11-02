@@ -589,7 +589,7 @@ Vyzkoušet upozornění
 Kontrola spuštěna: za minutu znovu otevři diagnostiku
 Kontrolu nelze spustit
 Zamknout otiskem prstu nebo obličejem
-Při otevření a při návratu po více než minutě
+Při otevření a při návratu po více než 5 minutách
 MyFleetManager je zamčená
 Odemknout
 Odemknout MyFleetManager

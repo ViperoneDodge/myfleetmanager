@@ -589,7 +589,7 @@ Testuj alerty
 Sprawdzanie rozpoczęte: otwórz diagnostykę ponownie za minutę
 Nie można rozpocząć sprawdzania
 Blokuj odciskiem palca lub twarzą
-Przy otwarciu i po powrocie po ponad minucie
+Przy otwarciu i po powrocie po ponad 5 minutach
 MyFleetManager jest zablokowana
 Odblokuj
 Odblokuj MyFleetManager

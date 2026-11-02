@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Athugun hafin: opnaðu greininguna aftur eftir mínútu",
  "diag.bgTestFailed": "Ekki tókst að hefja athugun",
  "lock.setting": "Læsa með fingrafari eða andliti",
- "lock.settingSub": "Þegar appið opnast og þegar þú kemur aftur eftir meira en mínútu",
+ "lock.settingSub": "Þegar appið opnast og þegar þú kemur aftur eftir meira en 5 mínútur",
  "lock.title": "MyFleetManager er læst",
  "lock.unlock": "Opna",
  "lock.reason": "Opna MyFleetManager",

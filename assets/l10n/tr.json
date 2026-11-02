@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Kontrol başladı: bir dakika sonra tanılamayı yeniden aç",
  "diag.bgTestFailed": "Kontrol başlatılamadı",
  "lock.setting": "Parmak izi veya yüzle kilitle",
- "lock.settingSub": "Açılışta ve bir dakikadan uzun süre sonra döndüğünde",
+ "lock.settingSub": "Açılışta ve 5 dakikadan uzun süre sonra döndüğünde",
  "lock.title": "MyFleetManager kilitli",
  "lock.unlock": "Kilidi aç",
  "lock.reason": "MyFleetManager kilidini aç",

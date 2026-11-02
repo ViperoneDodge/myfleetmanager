@@ -589,7 +589,7 @@ Uji peringatan
 Pemeriksaan dimulai: buka lagi diagnostik dalam satu menit
 Pemeriksaan tidak dapat dimulai
 Kunci dengan sidik jari atau wajah
-Saat aplikasi dibuka dan saat kembali setelah lebih dari satu menit
+Saat aplikasi dibuka dan saat kembali setelah lebih dari 5 menit
 MyFleetManager terkunci
 Buka kunci
 Buka kunci MyFleetManager

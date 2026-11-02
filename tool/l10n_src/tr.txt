@@ -589,7 +589,7 @@ Uyarıları test et
 Kontrol başladı: bir dakika sonra tanılamayı yeniden aç
 Kontrol başlatılamadı
 Parmak izi veya yüzle kilitle
-Açılışta ve bir dakikadan uzun süre sonra döndüğünde
+Açılışta ve 5 dakikadan uzun süre sonra döndüğünde
 MyFleetManager kilitli
 Kilidi aç
 MyFleetManager kilidini aç

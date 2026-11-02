@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Controllo avviato: riapri la diagnostica tra un minuto",
  "diag.bgTestFailed": "Impossibile avviare il controllo",
  "lock.setting": "Blocca con impronta o volto",
- "lock.settingSub": "All'apertura e quando torni nell'app dopo più di un minuto",
+ "lock.settingSub": "All'apertura e quando torni nell'app dopo più di 5 minuti",
  "lock.title": "MyFleetManager è bloccata",
  "lock.unlock": "Sblocca",
  "lock.reason": "Sblocca MyFleetManager",

@@ -1,6 +1,6 @@
 # MyFleetManager — scheda Play Store
 
-Aggiornata per la versione 2.1.15.
+Aggiornata per la versione 2.2.0.
 
 File pronti:
 - `tool/store/icon_512.png` — icona 512×512
@@ -73,16 +73,18 @@ SICUREZZA E PRIVACY
 
 VERSIONE GRATUITA E PRO
 • Gratis: fino a 3 veicoli (auto o moto) con scadenze e notifiche; è presente un annuncio all'apertura, al massimo uno ogni 4 ore
+• Fino a 5 veicoli gratis: guardando 10 video con premio sblocchi per sempre il 4° veicolo, con altri 10 il 5°, e scegli tu quali veicoli usare
 • Pro, con un solo acquisto e senza abbonamento: nessuna pubblicità, veicoli illimitati, tutti i tipi di veicolo, manutenzioni e costi, dati tecnici, documenti, lettura del libretto ed esportazione PDF
 
 Disponibile in 36 lingue. Funziona su telefoni, tablet e pieghevoli.
 
-**Note di rilascio 2.1.15** (max 500)
+**Note di rilascio 2.2.0** (max 500)
+• Fino a 5 veicoli gratis: sblocca il 4° e il 5° veicolo guardando 10 video con premio, per sempre
+• Scegli tu quali veicoli usare come 4° e 5°
 • Pubblicità solo nella versione gratuita: al massimo un annuncio all'apertura ogni 4 ore (nessuna con la Pro)
-• Pressione dei pneumatici anteriore e posteriore, in bar o psi
-• Cambio password dalle Impostazioni
-• Selezione del testo più semplice nei campi lunghi
-• Foto più leggere e librerie aggiornate
+• Blocco con impronta dopo 5 minuti fuori dall'app
+• «Cambia password» solo per gli account con email e password
+• Correzioni e miglioramenti
 
 ---
 
@@ -140,16 +142,18 @@ SECURITY AND PRIVACY
 
 FREE AND PRO
 • Free: up to 3 vehicles (cars or motorbikes) with deadlines and reminders; includes an app-open ad, at most one every 4 hours
+• Up to 5 vehicles for free: watch 10 rewarded videos to unlock a 4th vehicle forever, 10 more for a 5th, and choose which vehicles to use
 • Pro, with a one-time purchase and no subscription: no ads, unlimited vehicles, all vehicle types, maintenance and costs, technical data, documents, registration reading and PDF export
 
 Available in 36 languages. Works on phones, tablets and foldables.
 
-**Release notes 2.1.15** (max 500)
+**Release notes 2.2.0** (max 500)
+• Up to 5 vehicles for free: unlock a 4th and 5th vehicle forever by watching 10 rewarded videos
+• Choose which vehicles to use as the 4th and 5th
 • Ads in the free version only: at most one app-open ad every 4 hours (none with Pro)
-• Front and rear tyre pressure, in bar or psi
-• Change your password from Settings
-• Easier text selection in long fields
-• Lighter photos and updated libraries
+• Fingerprint lock after 5 minutes away from the app
+• "Change password" only for email and password accounts
+• Fixes and improvements
 
 ---
 
@@ -158,7 +162,7 @@ Available in 36 languages. Works on phones, tablets and foldables.
 - **Categoria**: Auto e veicoli · **Tag**: promemoria, manutenzione auto
 - **Email di contatto**: appmyfleetmanager@gmail.com
 - **Informativa privacy**: https://myfleetmanager-3ca03.web.app/privacy.html
-- **Annunci**: **Sì, l'app contiene annunci** (da cambiare quando si carica la 2.1.15)
+- **Annunci**: **Sì, l'app contiene annunci** (apertura app e video con premio)
 - **ID pubblicità**: **Sì**, usato per la pubblicità (Google AdMob)
 - **Accesso all'app**: account di prova con email e password (non Google) + istruzioni in inglese
 - **Classificazione contenuti (IARC)**: categoria "Utilità/produttività"; nessuna violenza, sesso, linguaggio, droghe, gioco d'azzardo; interazione tra utenti: sì (gruppi su invito, senza chat); condivisione posizione: no; acquisti digitali: sì

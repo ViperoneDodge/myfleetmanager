@@ -42,6 +42,18 @@ if kts.exists():
                       'signingConfigs.getByName(if (System.getenv("FLEET_SIGN") == "upload") "upload" else "fleet")')
         if 'getByName(if (System.getenv("FLEET_SIGN")' not in g:
             raise SystemExit("Impossibile impostare la firma")
+    if "lib/x86_64/**" not in g:
+        g = g.replace("    buildTypes {", '''    packaging {
+        jniLibs {
+            if (System.getenv("FLEET_SIGN") != "upload") {
+                excludes += listOf("lib/armeabi-v7a/**", "lib/x86_64/**", "lib/x86/**")
+            }
+        }
+    }
+
+    buildTypes {''', 1)
+        if "lib/x86_64/**" not in g:
+            raise SystemExit("Impossibile alleggerire l'APK")
     kts.write_text(g)
     print("Patched", kts)
 elif groovy.exists():

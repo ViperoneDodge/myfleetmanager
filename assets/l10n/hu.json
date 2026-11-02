@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Ellenőrzés elindítva: egy perc múlva nyisd meg újra a diagnosztikát",
  "diag.bgTestFailed": "Az ellenőrzés nem indítható",
  "lock.setting": "Zárolás ujjlenyomattal vagy arccal",
- "lock.settingSub": "Megnyitáskor és ha több mint egy perc után térsz vissza",
+ "lock.settingSub": "Megnyitáskor és ha több mint 5 perc után térsz vissza",
  "lock.title": "A MyFleetManager zárolva van",
  "lock.unlock": "Feloldás",
  "lock.reason": "MyFleetManager feloldása",

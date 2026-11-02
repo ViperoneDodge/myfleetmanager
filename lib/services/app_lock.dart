@@ -7,7 +7,7 @@ import '../platform.dart';
 class AppLock {
   static final LocalAuthentication _auth = LocalAuthentication();
 
-  static const Duration grace = Duration(minutes: 1);
+  static const Duration grace = Duration(minutes: 5);
 
   static bool get available => !kIsWeb && (isAndroid || isIOS);
 

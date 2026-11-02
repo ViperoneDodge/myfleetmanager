@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Vérification lancée : rouvre le diagnostic dans une minute",
  "diag.bgTestFailed": "Impossible de lancer la vérification",
  "lock.setting": "Verrouiller par empreinte ou visage",
- "lock.settingSub": "À l'ouverture et quand tu reviens après plus d'une minute",
+ "lock.settingSub": "À l'ouverture et quand tu reviens après plus de 5 minutes",
  "lock.title": "MyFleetManager est verrouillée",
  "lock.unlock": "Déverrouiller",
  "lock.reason": "Déverrouiller MyFleetManager",

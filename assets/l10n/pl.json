@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Sprawdzanie rozpoczęte: otwórz diagnostykę ponownie za minutę",
  "diag.bgTestFailed": "Nie można rozpocząć sprawdzania",
  "lock.setting": "Blokuj odciskiem palca lub twarzą",
- "lock.settingSub": "Przy otwarciu i po powrocie po ponad minucie",
+ "lock.settingSub": "Przy otwarciu i po powrocie po ponad 5 minutach",
  "lock.title": "MyFleetManager jest zablokowana",
  "lock.unlock": "Odblokuj",
  "lock.reason": "Odblokuj MyFleetManager",

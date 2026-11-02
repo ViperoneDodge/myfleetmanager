@@ -589,7 +589,7 @@ Prófa tilkynningar
 Athugun hafin: opnaðu greininguna aftur eftir mínútu
 Ekki tókst að hefja athugun
 Læsa með fingrafari eða andliti
-Þegar appið opnast og þegar þú kemur aftur eftir meira en mínútu
+Þegar appið opnast og þegar þú kemur aftur eftir meira en 5 mínútur
 MyFleetManager er læst
 Opna
 Opna MyFleetManager

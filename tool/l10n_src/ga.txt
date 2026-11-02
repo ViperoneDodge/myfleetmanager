@@ -589,7 +589,7 @@ Tástáil foláirimh
 Seiceáil tosaithe: oscail an diagnóisic arís i gceann nóiméid
 Níorbh fhéidir an tseiceáil a thosú
 Glasáil le méarlorg nó aghaidh
-Nuair a osclaítear an aip agus nuair a fhilleann tú tar éis níos mó ná nóiméad
+Nuair a osclaítear an aip agus nuair a fhilleann tú tar éis níos mó ná 5 nóiméad
 Tá MyFleetManager faoi ghlas
 Díghlasáil
 Díghlasáil MyFleetManager

@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Pārbaude sākta: pēc minūtes atkal atver diagnostiku",
  "diag.bgTestFailed": "Pārbaudi neizdevās sākt",
  "lock.setting": "Bloķēt ar pirkstu nospiedumu vai seju",
- "lock.settingSub": "Atverot un atgriežoties pēc vairāk nekā minūtes",
+ "lock.settingSub": "Atverot un atgriežoties pēc vairāk nekā 5 minūtēm",
  "lock.title": "MyFleetManager ir bloķēta",
  "lock.unlock": "Atbloķēt",
  "lock.reason": "Atbloķēt MyFleetManager",

@@ -590,7 +590,7 @@
  "diag.bgTestStarted": "Kontrola spuštěna: za minutu znovu otevři diagnostiku",
  "diag.bgTestFailed": "Kontrolu nelze spustit",
  "lock.setting": "Zamknout otiskem prstu nebo obličejem",
- "lock.settingSub": "Při otevření a při návratu po více než minutě",
+ "lock.settingSub": "Při otevření a při návratu po více než 5 minutách",
  "lock.title": "MyFleetManager je zamčená",
  "lock.unlock": "Odemknout",
  "lock.reason": "Odemknout MyFleetManager",
