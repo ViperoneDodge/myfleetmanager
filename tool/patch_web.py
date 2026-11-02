@@ -106,6 +106,9 @@ if WEB.exists():
 for name in ("privacy.html", "join.html", "gian_trip_logo.png"):
     shutil.copy(PAGES / name, WEB / name)
 shutil.copy(PAGES / "icon.png", WEB / "app-icon.png")
+if (PAGES / "app-ads.txt").exists():
+    shutil.copy(PAGES / "app-ads.txt", WEB / "app-ads.txt")
+    print("app-ads.txt copiato")
 for name in ("privacy.html", "join.html"):
     t = (WEB / name).read_text(encoding="utf-8").replace('"icon.png"', '"app-icon.png"')
     (WEB / name).write_text(t, encoding="utf-8")
