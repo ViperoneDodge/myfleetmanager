@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../l10n.dart';
+import '../ads_config.dart';
 import '../main.dart';
 import '../services/ads_service.dart';
 import '../services/app_state.dart' show AppState;
@@ -243,6 +244,11 @@ class _RewardSlotsState extends State<RewardSlots> {
                   Padding(
                     padding: const EdgeInsets.only(top: 4),
                     child: Text(tr('reward.notReady'), style: TextStyle(fontSize: 12, color: scheme.error)),
+                  ),
+                if (AdsConfig.testBuild && ads.rewardedError != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2),
+                    child: SelectableText(ads.rewardedError!, style: TextStyle(fontSize: 11, color: scheme.outline)),
                   ),
               ]
               else if (!done)

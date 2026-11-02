@@ -3,14 +3,17 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.2.0) — prima uscita pubblica con pubblicità e premi
+- [ ] **Spegnere la modalità di prova** in `lib/ads_config.dart` (`testBuild = false`): tempi veri (primo annuncio dopo 24 ore, poi al massimo uno ogni 4 ore) e unità AdMob vere.
+- [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
+- [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
+
+## Versione 2.1.15-3 (prova)
 - [x] **Caricamento dell'annuncio con premio che girava all'infinito** (prova della 2.1.15-2): il caricamento poteva restare appeso se Google rispondeva con un'eccezione o non rispondeva; ora c'è un limite di 30 secondi per il caricamento e di 15 per l'apertura, poi nuovo tentativo. L'annuncio con premio si carica già all'avvio dell'app (non solo aprendo la pagina Pro).
 - [x] **Annunci con premio più affidabili**: «Caricamento dell'annuncio…» sotto il pulsante; se Google non fornisce l'annuncio l'app riprova da sola (3 volte) e poi mostra «Nessun annuncio pronto»; stato e ultimo errore della pubblicità nella Diagnostica. Il tempo passato dentro un annuncio non fa più scattare l'annuncio all'apertura né il blocco con impronta al ritorno. Tra un annuncio con premio e l'altro non c'è nessuna attesa.
 - [x] **«Cambia password» solo per chi è entrato con email e password**: con l'accesso Google la riga non compare più, nemmeno come informazione. L'app ora salva nella sessione il metodo di accesso usato; le sessioni vecchie vengono riconosciute una volta all'avvio.
-- [ ] **Spegnere la modalità di prova** in `lib/ads_config.dart` (`testBuild = false`): tempi veri (primo annuncio dopo 24 ore, poi al massimo uno ogni 4 ore) e unità AdMob vere.
 - [x] **ID dell'unità «Con premio»** Android in `androidRewarded` (ca-app-pub-6901766595403947/8047511324), da verificare in AdMob che sia di tipo «Con premio».
 - [x] **Identificativi AdMob veri per Android** in `lib/ads_config.dart` (app ca-app-pub-6901766595403947~4185829925, apertura app …/7951308405). iOS resta con quelli di prova finché non c'è l'app iPhone in AdMob.
-- [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
-- [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
+- [x] **«Diagnostica sincronizzazione» visibile solo all'amministratore** (non più agli utenti). Nelle versioni di prova il codice d'errore di Google per gli annunci con premio compare nella pagina Pro, sotto il pulsante.
 
 ## Versione 2.1.15-2 (prova)
 - [x] **Modalità di prova della pubblicità**: primo annuncio dopo 5 minuti e poi al massimo uno ogni 5 minuti; unità di prova di Google anche con l'ID app vero, per provare senza rischi.

@@ -293,7 +293,7 @@ class SettingsScreen extends StatelessWidget {
                 onTap: () => Navigator.of(context)
                     .push(MaterialPageRoute(builder: (_) => const AdminScreen())),
               ),
-            if (appState.isCloud)
+            if (appState.isCloud && appState.isAdmin)
               ListTile(
                 leading: const Icon(Icons.troubleshoot),
                 title: Text(tr('diag.title')),
