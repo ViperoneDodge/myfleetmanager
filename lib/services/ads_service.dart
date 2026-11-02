@@ -76,6 +76,8 @@ class AdsService {
   String? appOpenError;
   int _failures = 0;
   Timer? _retry;
+  int _gen = 0;
+  DateTime? _loadStarted;
 
   bool get rewardedFailed => !rewardedReady && !rewardedLoading && rewardedError != null;
 
@@ -85,7 +87,7 @@ class AdsService {
     if (!_ready) return 'in attesa del consenso';
     return [
       'apertura ${_fresh ? 'pronta' : (_loading ? 'in caricamento' : 'assente')}${appOpenError == null ? '' : ' (errore: $appOpenError)'}',
-      'premio ${rewardedReady ? 'pronto' : (rewardedLoading ? 'in caricamento' : 'assente')}${rewardedError == null ? '' : ' (errore: $rewardedError)'}',
+      'premio ${rewardedReady ? 'pronto' : (rewardedLoading ? 'in caricamento${_loadStarted == null ? '' : ' da ${DateTime.now().difference(_loadStarted!).inSeconds} s'}' : 'assente')}${rewardedError == null ? '' : ' (errore: $rewardedError)'}',
       if (AdsConfig.testBuild) 'annunci di prova',
     ].join(' · ');
   }
@@ -98,16 +100,23 @@ class AdsService {
       rewardedError ??= 'pubblicità non ancora pronta';
       return;
     }
-    if (_rewardedLoading || _rewarded != null) return;
+    if (_rewarded != null) return;
+    if (_rewardedLoading) {
+      final since = _loadStarted;
+      if (since == null || DateTime.now().difference(since) < const Duration(seconds: 35)) return;
+    }
+    final gen = ++_gen;
     _rewardedLoading = true;
+    _loadStarted = DateTime.now();
     onChanged?.call();
     late final Timer guard;
     var settled = false;
     void failed(String why) {
-      if (settled) return;
+      if (settled || gen != _gen) return;
       settled = true;
       guard.cancel();
       _rewardedLoading = false;
+      _loadStarted = null;
       rewardedError = why;
       _failures++;
       if (_failures <= 3) {
@@ -127,7 +136,7 @@ class AdsService {
         request: const AdRequest(),
         rewardedAdLoadCallback: RewardedAdLoadCallback(
           onAdLoaded: (ad) {
-            if (settled) {
+            if (settled || gen != _gen) {
               ad.dispose();
               return;
             }
@@ -135,6 +144,7 @@ class AdsService {
             guard.cancel();
             _rewarded = ad;
             _rewardedLoading = false;
+            _loadStarted = null;
             _failures = 0;
             rewardedError = null;
             onChanged?.call();
@@ -145,6 +155,17 @@ class AdsService {
     } catch (e) {
       failed('$e');
     }
+  }
+
+  void reloadRewarded() {
+    if (_rewarded != null) return;
+    _retry?.cancel();
+    _retry = null;
+    _failures = 0;
+    _gen++;
+    _rewardedLoading = false;
+    _loadStarted = null;
+    preloadRewarded();
   }
 
   Future<bool> showRewarded() async {
@@ -159,11 +180,15 @@ class AdsService {
     var earned = false;
     final done = Completer<bool>();
     Timer? guard;
+    var closed = false;
     void finish(Ad a) {
       guard?.cancel();
+      if (closed) return;
+      closed = true;
       _showing = false;
       a.dispose();
-      preloadRewarded();
+      _failures = 0;
+      Timer(const Duration(seconds: 1), reloadRewarded);
       if (!done.isCompleted) done.complete(earned);
     }
 

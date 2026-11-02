@@ -51,7 +51,7 @@ class AppState extends ChangeNotifier {
     if (!rewardsAvailable || data.rewardSlots >= AdsRules.maxSlots) return 'none';
     final ads = AdsService.instance;
     if (!ads.rewardedReady) {
-      ads.preloadRewarded();
+      ads.reloadRewarded();
       return 'notReady';
     }
     final earned = await ads.showRewarded();

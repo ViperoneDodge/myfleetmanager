@@ -176,6 +176,12 @@ class _RewardSlotsState extends State<RewardSlots> {
 
   Future<void> _watch() async {
     setState(() => _busy = true);
+    final ads = AdsService.instance;
+    if (!ads.rewardedReady && ads.rewardedLoading) {
+      ads.reloadRewarded();
+      setState(() => _busy = false);
+      return;
+    }
     final r = await appState.watchRewardAd();
     if (!mounted) return;
     setState(() => _busy = false);
@@ -207,7 +213,7 @@ class _RewardSlotsState extends State<RewardSlots> {
       );
     } else if (current) {
       trailing = FilledButton.tonalIcon(
-        onPressed: loading ? null : _watch,
+        onPressed: _busy ? null : _watch,
         icon: loading
             ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2))
             : const Icon(Icons.play_circle_outline),
@@ -245,10 +251,10 @@ class _RewardSlotsState extends State<RewardSlots> {
                     padding: const EdgeInsets.only(top: 4),
                     child: Text(tr('reward.notReady'), style: TextStyle(fontSize: 12, color: scheme.error)),
                   ),
-                if (AdsConfig.testBuild && ads.rewardedError != null)
+                if (AdsConfig.testBuild)
                   Padding(
                     padding: const EdgeInsets.only(top: 2),
-                    child: SelectableText(ads.rewardedError!, style: TextStyle(fontSize: 11, color: scheme.outline)),
+                    child: SelectableText(ads.status, style: TextStyle(fontSize: 11, color: scheme.outline)),
                   ),
               ]
               else if (!done)

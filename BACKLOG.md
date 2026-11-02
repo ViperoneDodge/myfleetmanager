@@ -7,6 +7,9 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 - [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
 
+## Versione 2.1.15-4 (prova)
+- [x] **Annuncio con premio successivo che restava in caricamento** (prova della 2.1.15-3): dopo un premio il nuovo annuncio si carica un secondo dopo la chiusura del precedente, un caricamento appeso da più di 35 secondi viene ripreso da capo e toccando il pulsante mentre carica si riparte subito. Nelle versioni di prova sotto il pulsante c'è lo stato completo della pubblicità (con i secondi di caricamento).
+
 ## Versione 2.1.15-3 (prova)
 - [x] **Caricamento dell'annuncio con premio che girava all'infinito** (prova della 2.1.15-2): il caricamento poteva restare appeso se Google rispondeva con un'eccezione o non rispondeva; ora c'è un limite di 30 secondi per il caricamento e di 15 per l'apertura, poi nuovo tentativo. L'annuncio con premio si carica già all'avvio dell'app (non solo aprendo la pagina Pro).
 - [x] **Annunci con premio più affidabili**: «Caricamento dell'annuncio…» sotto il pulsante; se Google non fornisce l'annuncio l'app riprova da sola (3 volte) e poi mostra «Nessun annuncio pronto»; stato e ultimo errore della pubblicità nella Diagnostica. Il tempo passato dentro un annuncio non fa più scattare l'annuncio all'apertura né il blocco con impronta al ritorno. Tra un annuncio con premio e l'altro non c'è nessuna attesa.
