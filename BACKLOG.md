@@ -3,7 +3,8 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.1.16)
-- [ ] **Identificativi AdMob veri** in `lib/ads_config.dart` (app Android, app iOS, annuncio all'apertura Android e iOS) prima di pubblicare in produzione: la 2.1.15 usa ancora quelli di prova di Google («Test Ad», nessun ricavo).
+- [x] **Identificativi AdMob veri per Android** in `lib/ads_config.dart` (app ca-app-pub-6901766595403947~4185829925, apertura app …/7951308405). iOS resta con quelli di prova finché non c'è l'app iPhone in AdMob.
+- [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 - [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
 
 ## Versione 2.1.15
