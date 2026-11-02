@@ -4,7 +4,7 @@ Aggiornata per la versione 2.1.15.
 
 File pronti:
 - `tool/store/icon_512.png` — icona 512×512
-- `tool/store/feature_it.png`, `tool/store/feature_en.png` — grafica in evidenza 1024×500
+- `tool/store/feature_it.png`, `tool/store/feature_en.png` — immagine in primo piano 1024×500, con i 6 tipi di veicolo e le funzioni principali; si rigenera con `python3 tool/store/genera_feature.py` (dopo gli screenshot)
 - screenshot telefono 1080×1920 in `tool/screenshots/out/it/` e `tool/screenshots/out/en/` (dati inventati)
 
 Screenshot da caricare, in questo ordine (8, il massimo che conviene):

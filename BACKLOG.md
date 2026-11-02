@@ -2,15 +2,19 @@
 
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
-## Prossima versione (2.1.15)
+## Prossima versione (2.1.16)
+- [ ] **Identificativi AdMob veri** in `lib/ads_config.dart` (app Android, app iOS, annuncio all'apertura Android e iOS) prima di pubblicare in produzione: la 2.1.15 usa ancora quelli di prova di Google («Test Ad», nessun ricavo).
+- [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
+
+## Versione 2.1.15
 - [x] **Pubblicità AdMob nella versione gratuita** (preparata, con gli identificativi di prova di Google finché non arrivano quelli veri): annuncio all'apertura solo per utenti non Pro, mai nelle prime 24 ore, al massimo uno ogni 4 ore, mai sul web; consenso GDPR (UMP) al primo avvio e riga «Privacy della pubblicità» nelle Impostazioni; vantaggio «Nessuna pubblicità» nella pagina Pro; informativa privacy aggiornata (IT/EN). Android minimo 7.0 (richiesto dalla libreria AdMob).
 - [x] **Scheda dello Store aggiornata** (`tool/store/scheda_play_store.md`): descrizioni IT/EN con le funzioni nuove, note di rilascio, scelta degli 8 screenshot, dati per «Annunci», «ID pubblicità» e «Sicurezza dei dati».
-- [ ] **Identificativi AdMob veri** in `lib/ads_config.dart` (app Android, app iOS, annuncio all'apertura Android e iOS) prima di pubblicare la 2.1.15.
 - [x] **SafetyNet tolto** (avviso di Play Console «versione dell'SDK con una nota critica di play-services-safetynet»): arrivava dalla libreria App Check 0.3. Librerie Firebase aggiornate (core 4, auth 6, Firestore 6, messaging 16, App Check 0.4, che usa solo Play Integrity). Da riprovare: accesso, sincronizzazione dei gruppi, notifiche, App Check.
 - [x] **Foto dei veicoli caricate alla misura mostrata** (avviso «downsampling della bitmap»): miniature e foto nelle schede non vengono più decodificate a piena risoluzione.
 - [x] **Selezione del testo (secondo intervento)**: i campi su una riga, con testo più lungo della casella, scorrevano di lato e «rubavano» il gesto alla maniglia della selezione. I campi di testo libero del ricambio e dei dati tecnici ora vanno a capo invece di scorrere.
 - Edge-to-edge e ottimizzazione R8 (altri avvisi di Play Console): nel nostro codice non c'è nulla di deprecato; arrivano da Flutter e dalle librerie Google. Nessuna azione.
-- [ ] **APK di GitHub senza le librerie arm32 e x86 inutilizzate** (circa 18 MB in meno).
+- [x] **Immagine in primo piano** nuova (IT/EN), con i 6 tipi di veicolo, le funzioni principali e uno screenshot vero; script `tool/store/genera_feature.py`.
+- [x] **app-ads.txt** pubblicato sul sito Firebase (`/app-ads.txt`, ID editore pub-6901766595403947).
 
 ## Versione 2.1.14
 - [x] **Selezione del testo nel pannello del ricambio** (Manutenzione → ricambio, campi codice/costo): le maniglie della selezione saltavano o si fermavano perché il pannello si chiudeva trascinandolo in giù e «rubava» il gesto. Ora il pannello non si trascina più: si chiude toccando fuori, con OK o con indietro. Da verificare sul telefono.
