@@ -12,7 +12,8 @@ void main() {
     expect(back.key, 'uid-demo');
     expect(back.email, 'demo@example.com');
     expect(Session.fromJson(s.toJson())!.google, isFalse);
-    expect(s.toJson().containsKey('google'), isFalse);
+    expect(Session.fromJson(s.toJson())!.methodKnown, isTrue);
+    expect(Session.fromJson({'mode': 'cloud', 'key': 'uid-old', 'displayName': 'x'})!.methodKnown, isFalse);
     expect(await silentGoogle(s), isFalse);
     expect(lastSilent, 'account non Google');
   });

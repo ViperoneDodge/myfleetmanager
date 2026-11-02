@@ -798,12 +798,15 @@ class Session {
 
   final bool google;
 
+  final bool methodKnown;
+
   Session({
     required this.mode,
     required this.key,
     required this.displayName,
     this.email,
     this.google = false,
+    this.methodKnown = true,
   });
 
   Session withGoogle() => Session(mode: mode, key: key, displayName: displayName, email: email, google: true);
@@ -813,7 +816,7 @@ class Session {
         'key': key,
         'displayName': displayName,
         'email': email,
-        if (google) 'google': true,
+        'google': google,
       };
 
   static Session? fromJson(Map<String, dynamic>? j) {
@@ -824,6 +827,7 @@ class Session {
       displayName: j['displayName'] as String? ?? '',
       email: j['email'] as String?,
       google: j['google'] == true,
+      methodKnown: j.containsKey('google'),
     );
   }
 

@@ -52,18 +52,12 @@ class SettingsScreen extends StatelessWidget {
                   ? tr('settings.accountCloud')
                   : tr('settings.accountLocal')),
             ),
-            if (appState.isCloud && appState.auth.currentHasPassword)
+            if (appState.isCloud && s?.google != true && appState.auth.currentHasPassword)
               ListTile(
                 leading: const Icon(Icons.password),
                 title: Text(tr('pw.change')),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () => showDialog<void>(context: context, builder: (_) => const ChangePasswordDialog()),
-              )
-            else if (appState.isCloud && appState.auth.currentIsGoogle)
-              ListTile(
-                leading: const Icon(Icons.password),
-                title: Text(tr('pw.change')),
-                subtitle: Text(tr('pw.google')),
               ),
             if (!appState.isCloud && appState.auth.cloudAvailable)
               ListTile(

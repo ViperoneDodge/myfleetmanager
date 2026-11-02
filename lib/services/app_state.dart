@@ -785,7 +785,7 @@ class AppState extends ChangeNotifier {
       final ms = DateTime.now().difference(started).inMilliseconds;
       if (auth.cloudSessionValid(s)) {
         await store.addAuthLog('avvio: accesso Firebase presente ($ms ms)');
-        if (!s.google && auth.currentIsGoogle) {
+        if (!s.methodKnown && auth.currentIsGoogle) {
           s = s.withGoogle();
           await store.writeSession(s);
         }

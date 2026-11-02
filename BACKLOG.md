@@ -3,6 +3,7 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.2.0) — prima uscita pubblica con pubblicità e premi
+- [x] **«Cambia password» solo per chi è entrato con email e password**: con l'accesso Google la riga non compare più, nemmeno come informazione. L'app ora salva nella sessione il metodo di accesso usato; le sessioni vecchie vengono riconosciute una volta all'avvio.
 - [ ] **Spegnere la modalità di prova** in `lib/ads_config.dart` (`testBuild = false`): tempi veri (primo annuncio dopo 24 ore, poi al massimo uno ogni 4 ore) e unità AdMob vere.
 - [x] **ID dell'unità «Con premio»** Android in `androidRewarded` (ca-app-pub-6901766595403947/8047511324), da verificare in AdMob che sia di tipo «Con premio».
 - [x] **Identificativi AdMob veri per Android** in `lib/ads_config.dart` (app ca-app-pub-6901766595403947~4185829925, apertura app …/7951308405). iOS resta con quelli di prova finché non c'è l'app iPhone in AdMob.

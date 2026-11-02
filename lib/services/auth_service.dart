@@ -121,12 +121,12 @@ class AuthService {
         mode: AccountMode.local, key: u, displayName: (m['display'] as String?) ?? u);
   }
 
-  Session _fromUser(User user) => Session(
+  Session _fromUser(User user, {bool? google}) => Session(
         mode: AccountMode.cloud,
         key: user.uid,
         displayName: user.email ?? tr('auth.user'),
         email: user.email,
-        google: isGoogleUser(user),
+        google: google ?? isGoogleUser(user),
       );
 
   bool get currentHasPassword {
@@ -193,7 +193,7 @@ class AuthService {
     try {
       final c = await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email.trim(), password: password);
-      return _fromUser(c.user!);
+      return _fromUser(c.user!, google: false);
     } on FirebaseAuthException catch (e) {
       throw AuthException(_firebaseError(e));
     }
@@ -203,7 +203,7 @@ class AuthService {
     try {
       final c = await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email.trim(), password: password);
-      return _fromUser(c.user!);
+      return _fromUser(c.user!, google: false);
     } on FirebaseAuthException catch (e) {
       throw AuthException(_firebaseError(e));
     }
@@ -226,7 +226,7 @@ class AuthService {
     if (kIsWeb) {
       try {
         final c = await FirebaseAuth.instance.signInWithPopup(GoogleAuthProvider());
-        return _fromUser(c.user!);
+        return _fromUser(c.user!, google: true);
       } on FirebaseAuthException catch (e) {
         if (e.code == 'popup-closed-by-user' || e.code == 'cancelled-popup-request') {
           throw AuthException(tr('auth.googleCancelled'));
@@ -247,7 +247,7 @@ class AuthService {
         accessToken: auth.accessToken,
       );
       final c = await FirebaseAuth.instance.signInWithCredential(cred);
-      return _fromUser(c.user!);
+      return _fromUser(c.user!, google: true);
     } on FirebaseAuthException catch (e) {
       throw AuthException(_firebaseError(e));
     } on AuthException {
