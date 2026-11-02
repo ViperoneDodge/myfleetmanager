@@ -623,5 +623,6 @@
  "reward.locked": "先に{n}台目を解除してください",
  "reward.notReady": "まだ広告の準備ができていません。数秒後にお試しください",
  "reward.noReward": "広告が中断されました。最後まで見た場合のみカウントされます",
- "reward.done": "{n}台まで管理できるようになりました"
+ "reward.done": "{n}台まで管理できるようになりました",
+ "reward.loading": "広告を読み込み中…"
 }

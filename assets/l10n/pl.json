@@ -623,5 +623,6 @@
  "reward.locked": "Najpierw odblokuj pojazd {n}",
  "reward.notReady": "Brak gotowej reklamy: spróbuj za kilka sekund",
  "reward.noReward": "Reklama przerwana: liczy się tylko obejrzana do końca",
- "reward.done": "Możesz teraz zarządzać {n} pojazdami"
+ "reward.done": "Możesz teraz zarządzać {n} pojazdami",
+ "reward.loading": "Ładowanie reklamy…"
 }

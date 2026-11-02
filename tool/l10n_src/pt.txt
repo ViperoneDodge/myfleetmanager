@@ -623,3 +623,4 @@ Desbloqueia primeiro o veículo {n}
 Ainda não há anúncio pronto: tenta daqui a uns segundos
 Anúncio interrompido: só conta se o vires até ao fim
 Agora podes gerir {n} veículos
+A carregar o anúncio…

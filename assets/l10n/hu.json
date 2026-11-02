@@ -623,5 +623,6 @@
  "reward.locked": "Előbb oldd fel a(z) {n}. járművet",
  "reward.notReady": "Még nincs kész hirdetés: próbáld újra néhány másodperc múlva",
  "reward.noReward": "Hirdetés megszakítva: csak akkor számít, ha végignézed",
- "reward.done": "Most már {n} járművet kezelhetsz"
+ "reward.done": "Most már {n} járművet kezelhetsz",
+ "reward.loading": "Hirdetés betöltése…"
 }

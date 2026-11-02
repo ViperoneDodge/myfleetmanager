@@ -716,6 +716,7 @@ class AppState extends ChangeNotifier {
       'Accessi:',
       ...authLog.map((e) => '  $e'),
       'Avvisi dei gruppi: ${watch.enabled ? 'attivi' : 'spenti'} · gruppi ${watch.groups.length} · controllo ${_watchNeeded ? 'programmato' : 'non programmato'}',
+      if (AdsService.supported) 'Pubblicità: ${isPro ? 'nessuna (Pro)' : AdsService.instance.status}',
       'Controlli ad app chiusa:',
       if (watchLog.isEmpty) '  nessuno finora',
       ...watchLog.map((e) => '  $e'),
@@ -993,7 +994,7 @@ class AppState extends ChangeNotifier {
   bool _unlocking = false;
 
   void onAway() {
-    if (_unlocking) return;
+    if (_unlocking || AdsService.instance.showing) return;
     _awaySince ??= DateTime.now();
   }
 

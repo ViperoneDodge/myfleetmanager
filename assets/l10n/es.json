@@ -623,5 +623,6 @@
  "reward.locked": "Desbloquea primero el vehículo {n}",
  "reward.notReady": "Aún no hay ningún anuncio listo: inténtalo en unos segundos",
  "reward.noReward": "Anuncio interrumpido: solo cuenta si lo ves hasta el final",
- "reward.done": "Ahora puedes gestionar {n} vehículos"
+ "reward.done": "Ahora puedes gestionar {n} vehículos",
+ "reward.loading": "Cargando el anuncio…"
 }

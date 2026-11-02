@@ -623,5 +623,6 @@
  "reward.locked": "Najprv odomkni vozidlo {n}",
  "reward.notReady": "Zatiaľ nie je pripravená žiadna reklama: skús to o pár sekúnd",
  "reward.noReward": "Reklama prerušená: počíta sa len pozretá do konca",
- "reward.done": "Teraz môžeš spravovať {n} vozidiel"
+ "reward.done": "Teraz môžeš spravovať {n} vozidiel",
+ "reward.loading": "Načítava sa reklama…"
 }

@@ -623,3 +623,4 @@ Lås først opp kjøretøy {n}
 Ingen annonse klar ennå: prøv igjen om noen sekunder
 Annonsen ble avbrutt: den teller bare hvis du ser den til slutt
 Nå kan du administrere {n} kjøretøy
+Laster inn annonsen…

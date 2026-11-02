@@ -623,5 +623,6 @@
  "reward.locked": "Lås først køretøj {n} op",
  "reward.notReady": "Ingen reklame klar endnu: prøv igen om et par sekunder",
  "reward.noReward": "Reklamen blev afbrudt: den tæller kun, hvis du ser den til ende",
- "reward.done": "Nu kan du administrere {n} køretøjer"
+ "reward.done": "Nu kan du administrere {n} køretøjer",
+ "reward.loading": "Indlæser reklamen…"
 }

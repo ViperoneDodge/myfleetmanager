@@ -623,5 +623,6 @@
  "reward.locked": "Díghlasáil feithicil {n} ar dtús",
  "reward.notReady": "Níl aon fhógra réidh fós: bain triail eile as i gceann cúpla soicind",
  "reward.noReward": "Stopadh an fógra: ní áirítear é ach má fhéachann tú air go deireadh",
- "reward.done": "Is féidir leat {n} feithicil a bhainistiú anois"
+ "reward.done": "Is féidir leat {n} feithicil a bhainistiú anois",
+ "reward.loading": "Fógra á lódáil…"
 }

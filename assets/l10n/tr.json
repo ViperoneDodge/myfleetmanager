@@ -623,5 +623,6 @@
  "reward.locked": "Önce {n}. aracın kilidini aç",
  "reward.notReady": "Henüz hazır reklam yok: birkaç saniye sonra tekrar dene",
  "reward.noReward": "Reklam yarıda kesildi: yalnızca sonuna kadar izlenirse sayılır",
- "reward.done": "Artık {n} aracı yönetebilirsin"
+ "reward.done": "Artık {n} aracı yönetebilirsin",
+ "reward.loading": "Reklam yükleniyor…"
 }

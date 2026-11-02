@@ -225,7 +225,7 @@ class _RewardSlotsState extends State<RewardSlots> {
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(tr('reward.slot', {'n': n}), style: const TextStyle(fontWeight: FontWeight.w600)),
-              if (current)
+              if (current) ...[
                 Padding(
                   padding: const EdgeInsets.only(top: 6, right: 8),
                   child: LinearProgressIndicator(
@@ -233,7 +233,18 @@ class _RewardSlotsState extends State<RewardSlots> {
                     minHeight: 6,
                     borderRadius: BorderRadius.circular(3),
                   ),
-                )
+                ),
+                if (loading && !_busy)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4),
+                    child: Text(tr('reward.loading'), style: TextStyle(fontSize: 12, color: scheme.outline)),
+                  )
+                else if (ads.rewardedFailed)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4),
+                    child: Text(tr('reward.notReady'), style: TextStyle(fontSize: 12, color: scheme.error)),
+                  ),
+              ]
               else if (!done)
                 Text(tr('reward.locked', {'n': n - 1}), style: TextStyle(fontSize: 12, color: scheme.outline)),
             ]),

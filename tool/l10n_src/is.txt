@@ -623,3 +623,4 @@ Opnaðu fyrst ökutæki {n}
 Engin auglýsing tilbúin enn: reyndu aftur eftir nokkrar sekúndur
 Auglýsing stöðvuð: hún telur aðeins ef þú horfir á hana til enda
 Nú geturðu haldið utan um {n} ökutæki
+Hleður auglýsingu…

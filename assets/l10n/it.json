@@ -623,5 +623,6 @@
  "reward.locked": "Prima sblocca il {n}° veicolo",
  "reward.notReady": "Nessun annuncio pronto: riprova tra qualche secondo",
  "reward.noReward": "Annuncio interrotto: per contare va guardato fino alla fine",
- "reward.done": "Ora puoi gestire {n} veicoli"
+ "reward.done": "Ora puoi gestire {n} veicoli",
+ "reward.loading": "Caricamento dell'annuncio…"
 }

@@ -623,5 +623,6 @@
  "reward.locked": "Unlock vehicle {n} first",
  "reward.notReady": "No ad ready yet: try again in a few seconds",
  "reward.noReward": "Ad stopped: it only counts if you watch it to the end",
- "reward.done": "You can now manage {n} vehicles"
+ "reward.done": "You can now manage {n} vehicles",
+ "reward.loading": "Loading the ad…"
 }

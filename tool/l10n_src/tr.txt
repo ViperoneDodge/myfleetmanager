@@ -623,3 +623,4 @@ Kilit açıldı
 Henüz hazır reklam yok: birkaç saniye sonra tekrar dene
 Reklam yarıda kesildi: yalnızca sonuna kadar izlenirse sayılır
 Artık {n} aracı yönetebilirsin
+Reklam yükleniyor…

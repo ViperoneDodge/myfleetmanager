@@ -623,5 +623,6 @@
  "reward.locked": "Lås først opp kjøretøy {n}",
  "reward.notReady": "Ingen annonse klar ennå: prøv igjen om noen sekunder",
  "reward.noReward": "Annonsen ble avbrutt: den teller bare hvis du ser den til slutt",
- "reward.done": "Nå kan du administrere {n} kjøretøy"
+ "reward.done": "Nå kan du administrere {n} kjøretøy",
+ "reward.loading": "Laster inn annonsen…"
 }

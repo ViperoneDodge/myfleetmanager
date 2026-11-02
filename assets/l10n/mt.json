@@ -623,5 +623,6 @@
  "reward.locked": "L-ewwel iftaħ il-vettura {n}",
  "reward.notReady": "Għadu ma hemm l-ebda reklam lest: erġa’ pprova fi ftit sekondi",
  "reward.noReward": "Reklam interrott: jgħodd biss jekk tarah sal-aħħar",
- "reward.done": "Issa tista’ timmaniġġja {n} vetturi"
+ "reward.done": "Issa tista’ timmaniġġja {n} vetturi",
+ "reward.loading": "Qed jitgħabba r-reklam…"
 }

@@ -3,6 +3,7 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione (2.2.0) — prima uscita pubblica con pubblicità e premi
+- [x] **Annunci con premio più affidabili**: «Caricamento dell'annuncio…» sotto il pulsante; se Google non fornisce l'annuncio l'app riprova da sola (3 volte) e poi mostra «Nessun annuncio pronto»; stato e ultimo errore della pubblicità nella Diagnostica. Il tempo passato dentro un annuncio non fa più scattare l'annuncio all'apertura né il blocco con impronta al ritorno. Tra un annuncio con premio e l'altro non c'è nessuna attesa.
 - [x] **«Cambia password» solo per chi è entrato con email e password**: con l'accesso Google la riga non compare più, nemmeno come informazione. L'app ora salva nella sessione il metodo di accesso usato; le sessioni vecchie vengono riconosciute una volta all'avvio.
 - [ ] **Spegnere la modalità di prova** in `lib/ads_config.dart` (`testBuild = false`): tempi veri (primo annuncio dopo 24 ore, poi al massimo uno ogni 4 ore) e unità AdMob vere.
 - [x] **ID dell'unità «Con premio»** Android in `androidRewarded` (ca-app-pub-6901766595403947/8047511324), da verificare in AdMob che sia di tipo «Con premio».

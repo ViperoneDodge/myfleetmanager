@@ -623,5 +623,6 @@
  "reward.locked": "请先解锁第 {n} 辆车",
  "reward.notReady": "暂无可用广告，请几秒后重试",
  "reward.noReward": "广告已中断：只有看完才计数",
- "reward.done": "现在你可以管理 {n} 辆车"
+ "reward.done": "现在你可以管理 {n} 辆车",
+ "reward.loading": "正在加载广告…"
 }

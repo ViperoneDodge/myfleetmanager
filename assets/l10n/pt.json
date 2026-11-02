@@ -623,5 +623,6 @@
  "reward.locked": "Desbloqueia primeiro o veículo {n}",
  "reward.notReady": "Ainda não há anúncio pronto: tenta daqui a uns segundos",
  "reward.noReward": "Anúncio interrompido: só conta se o vires até ao fim",
- "reward.done": "Agora podes gerir {n} veículos"
+ "reward.done": "Agora podes gerir {n} veículos",
+ "reward.loading": "A carregar o anúncio…"
 }

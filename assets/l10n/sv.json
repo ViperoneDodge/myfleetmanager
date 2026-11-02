@@ -623,5 +623,6 @@
  "reward.locked": "Lås först upp fordon {n}",
  "reward.notReady": "Ingen annons klar än: försök igen om några sekunder",
  "reward.noReward": "Annonsen avbröts: den räknas bara om du ser den till slutet",
- "reward.done": "Nu kan du hantera {n} fordon"
+ "reward.done": "Nu kan du hantera {n} fordon",
+ "reward.loading": "Laddar annonsen…"
 }

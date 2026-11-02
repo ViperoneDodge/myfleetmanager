@@ -623,3 +623,4 @@ Najprv odomkni vozidlo {n}
 Zatiaľ nie je pripravená žiadna reklama: skús to o pár sekúnd
 Reklama prerušená: počíta sa len pozretá do konca
 Teraz môžeš spravovať {n} vozidiel
+Načítava sa reklama…

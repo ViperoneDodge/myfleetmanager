@@ -623,3 +623,4 @@ Najpierw odblokuj pojazd {n}
 Brak gotowej reklamy: spróbuj za kilka sekund
 Reklama przerwana: liczy się tylko obejrzana do końca
 Możesz teraz zarządzać {n} pojazdami
+Ładowanie reklamy…

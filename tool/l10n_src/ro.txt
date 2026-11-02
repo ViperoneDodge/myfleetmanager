@@ -623,3 +623,4 @@ Deblochează mai întâi vehiculul {n}
 Nicio reclamă pregătită: încearcă din nou peste câteva secunde
 Reclamă întreruptă: contează doar dacă o urmărești până la capăt
 Acum poți gestiona {n} vehicule
+Se încarcă reclama…

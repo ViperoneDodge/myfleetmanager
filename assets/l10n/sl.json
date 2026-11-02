@@ -623,5 +623,6 @@
  "reward.locked": "Najprej odkleni vozilo {n}",
  "reward.notReady": "Noben oglas še ni pripravljen: poskusi čez nekaj sekund",
  "reward.noReward": "Oglas prekinjen: šteje le, če si ga ogledaš do konca",
- "reward.done": "Zdaj lahko upravljaš {n} vozil"
+ "reward.done": "Zdaj lahko upravljaš {n} vozil",
+ "reward.loading": "Nalaganje oglasa…"
 }

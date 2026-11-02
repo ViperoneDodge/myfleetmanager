@@ -623,5 +623,6 @@
  "reward.locked": "먼저 {n}번째 차량을 잠금 해제하세요",
  "reward.notReady": "아직 준비된 광고가 없습니다. 몇 초 후 다시 시도하세요",
  "reward.noReward": "광고가 중단되었습니다. 끝까지 봐야 인정됩니다",
- "reward.done": "이제 차량 {n}대를 관리할 수 있어요"
+ "reward.done": "이제 차량 {n}대를 관리할 수 있어요",
+ "reward.loading": "광고를 불러오는 중…"
 }

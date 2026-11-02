@@ -623,3 +623,4 @@ Avaa ensin ajoneuvo {n}
 Mainosta ei ole vielä valmiina: yritä hetken päästä uudelleen
 Mainos keskeytyi: se lasketaan vain, jos katsot sen loppuun
 Voit nyt hallita {n} ajoneuvoa
+Ladataan mainosta…

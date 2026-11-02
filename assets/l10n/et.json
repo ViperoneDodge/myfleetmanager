@@ -623,5 +623,6 @@
  "reward.locked": "Ava kõigepealt sõiduk {n}",
  "reward.notReady": "Ühtegi reklaami pole veel valmis: proovi mõne sekundi pärast uuesti",
  "reward.noReward": "Reklaam katkes: see loeb ainult siis, kui vaatad lõpuni",
- "reward.done": "Nüüd saad hallata {n} sõidukit"
+ "reward.done": "Nüüd saad hallata {n} sõidukit",
+ "reward.loading": "Reklaami laadimine…"
 }

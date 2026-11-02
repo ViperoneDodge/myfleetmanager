@@ -623,3 +623,4 @@ Ava kõigepealt sõiduk {n}
 Ühtegi reklaami pole veel valmis: proovi mõne sekundi pärast uuesti
 Reklaam katkes: see loeb ainult siis, kui vaatad lõpuni
 Nüüd saad hallata {n} sõidukit
+Reklaami laadimine…

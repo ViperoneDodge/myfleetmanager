@@ -623,3 +623,4 @@ Pirmiausia atrakink {n}-ąją transporto priemonę
 Dar nėra paruoštos reklamos: bandyk po kelių sekundžių
 Reklama nutraukta: ji įskaitoma tik peržiūrėjus iki galo
 Dabar gali tvarkyti {n} transporto priemones
+Įkeliama reklama…

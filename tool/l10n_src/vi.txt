@@ -623,3 +623,4 @@ Hãy mở khóa xe thứ {n} trước
 Chưa có quảng cáo sẵn sàng: thử lại sau vài giây
 Quảng cáo bị dừng: chỉ được tính khi xem đến hết
 Giờ bạn có thể quản lý {n} xe
+Đang tải quảng cáo…

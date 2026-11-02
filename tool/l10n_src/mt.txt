@@ -623,3 +623,4 @@ L-ewwel iftaħ il-vettura {n}
 Għadu ma hemm l-ebda reklam lest: erġa’ pprova fi ftit sekondi
 Reklam interrott: jgħodd biss jekk tarah sal-aħħar
 Issa tista’ timmaniġġja {n} vetturi
+Qed jitgħabba r-reklam…

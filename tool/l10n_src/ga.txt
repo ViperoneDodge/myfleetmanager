@@ -623,3 +623,4 @@ Díghlasáil feithicil {n} ar dtús
 Níl aon fhógra réidh fós: bain triail eile as i gceann cúpla soicind
 Stopadh an fógra: ní áirítear é ach má fhéachann tú air go deireadh
 Is féidir leat {n} feithicil a bhainistiú anois
+Fógra á lódáil…

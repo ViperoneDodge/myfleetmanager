@@ -623,5 +623,6 @@
  "reward.locked": "Opnaðu fyrst ökutæki {n}",
  "reward.notReady": "Engin auglýsing tilbúin enn: reyndu aftur eftir nokkrar sekúndur",
  "reward.noReward": "Auglýsing stöðvuð: hún telur aðeins ef þú horfir á hana til enda",
- "reward.done": "Nú geturðu haldið utan um {n} ökutæki"
+ "reward.done": "Nú geturðu haldið utan um {n} ökutæki",
+ "reward.loading": "Hleður auglýsingu…"
 }

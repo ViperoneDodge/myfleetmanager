@@ -623,3 +623,4 @@ Lås först upp fordon {n}
 Ingen annons klar än: försök igen om några sekunder
 Annonsen avbröts: den räknas bara om du ser den till slutet
 Nu kan du hantera {n} fordon
+Laddar annonsen…

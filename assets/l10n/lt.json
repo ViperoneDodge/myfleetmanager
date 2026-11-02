@@ -623,5 +623,6 @@
  "reward.locked": "Pirmiausia atrakink {n}-ąją transporto priemonę",
  "reward.notReady": "Dar nėra paruoštos reklamos: bandyk po kelių sekundžių",
  "reward.noReward": "Reklama nutraukta: ji įskaitoma tik peržiūrėjus iki galo",
- "reward.done": "Dabar gali tvarkyti {n} transporto priemones"
+ "reward.done": "Dabar gali tvarkyti {n} transporto priemones",
+ "reward.loading": "Įkeliama reklama…"
 }

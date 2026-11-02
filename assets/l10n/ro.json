@@ -623,5 +623,6 @@
  "reward.locked": "Deblochează mai întâi vehiculul {n}",
  "reward.notReady": "Nicio reclamă pregătită: încearcă din nou peste câteva secunde",
  "reward.noReward": "Reclamă întreruptă: contează doar dacă o urmărești până la capăt",
- "reward.done": "Acum poți gestiona {n} vehicule"
+ "reward.done": "Acum poți gestiona {n} vehicule",
+ "reward.loading": "Se încarcă reclama…"
 }

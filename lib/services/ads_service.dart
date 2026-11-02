@@ -70,7 +70,25 @@ class AdsService {
 
   bool get rewardedReady => _rewarded != null;
 
-  bool get rewardedLoading => _rewardedLoading || (_wantRewarded && !_ready);
+  bool get rewardedLoading => _rewardedLoading || _retry != null || (_wantRewarded && !_ready);
+
+  String? rewardedError;
+  String? appOpenError;
+  int _failures = 0;
+  Timer? _retry;
+
+  bool get rewardedFailed => !rewardedReady && !rewardedLoading && rewardedError != null;
+
+  String get status {
+    if (!supported) return 'non disponibile';
+    if (!_started) return 'non avviata';
+    if (!_ready) return 'in attesa del consenso';
+    return [
+      'apertura ${_fresh ? 'pronta' : (_loading ? 'in caricamento' : 'assente')}${appOpenError == null ? '' : ' (errore: $appOpenError)'}',
+      'premio ${rewardedReady ? 'pronto' : (rewardedLoading ? 'in caricamento' : 'assente')}${rewardedError == null ? '' : ' (errore: $rewardedError)'}',
+      if (AdsConfig.testBuild) 'annunci di prova',
+    ].join(' · ');
+  }
 
   void preloadRewarded() {
     if (!supported) return;
@@ -86,10 +104,20 @@ class AdsService {
         onAdLoaded: (ad) {
           _rewarded = ad;
           _rewardedLoading = false;
+          _failures = 0;
+          rewardedError = null;
           onChanged?.call();
         },
-        onAdFailedToLoad: (_) {
+        onAdFailedToLoad: (e) {
           _rewardedLoading = false;
+          rewardedError = '${e.code} ${e.message}';
+          _failures++;
+          if (_failures <= 3) {
+            _retry = Timer(Duration(seconds: 5 * _failures), () {
+              _retry = null;
+              preloadRewarded();
+            });
+          }
           onChanged?.call();
         },
       ),
@@ -99,6 +127,7 @@ class AdsService {
   Future<bool> showRewarded() async {
     final ad = _rewarded;
     if (ad == null || _showing) {
+      if (_retry == null) _failures = 0;
       preloadRewarded();
       return false;
     }
@@ -156,8 +185,12 @@ class AdsService {
           _ad = ad;
           _loadedAt = DateTime.now();
           _loading = false;
+          appOpenError = null;
         },
-        onAdFailedToLoad: (_) => _loading = false,
+        onAdFailedToLoad: (e) {
+          _loading = false;
+          appOpenError = '${e.code} ${e.message}';
+        },
       ),
     );
   }

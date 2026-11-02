@@ -623,5 +623,6 @@
  "reward.locked": "Schalte zuerst Fahrzeug {n} frei",
  "reward.notReady": "Noch keine Anzeige bereit: versuche es in ein paar Sekunden erneut",
  "reward.noReward": "Anzeige abgebrochen: sie zählt nur, wenn du sie bis zum Ende ansiehst",
- "reward.done": "Du kannst jetzt {n} Fahrzeuge verwalten"
+ "reward.done": "Du kannst jetzt {n} Fahrzeuge verwalten",
+ "reward.loading": "Anzeige wird geladen…"
 }

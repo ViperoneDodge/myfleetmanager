@@ -623,5 +623,6 @@
  "reward.locked": "Avaa ensin ajoneuvo {n}",
  "reward.notReady": "Mainosta ei ole vielä valmiina: yritä hetken päästä uudelleen",
  "reward.noReward": "Mainos keskeytyi: se lasketaan vain, jos katsot sen loppuun",
- "reward.done": "Voit nyt hallita {n} ajoneuvoa"
+ "reward.done": "Voit nyt hallita {n} ajoneuvoa",
+ "reward.loading": "Ladataan mainosta…"
 }

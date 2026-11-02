@@ -623,3 +623,4 @@ Lås først køretøj {n} op
 Ingen reklame klar endnu: prøv igen om et par sekunder
 Reklamen blev afbrudt: den tæller kun, hvis du ser den til ende
 Nu kan du administrere {n} køretøjer
+Indlæser reklamen…

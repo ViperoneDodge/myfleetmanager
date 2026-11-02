@@ -623,3 +623,4 @@ Najprej odkleni vozilo {n}
 Noben oglas še ni pripravljen: poskusi čez nekaj sekund
 Oglas prekinjen: šteje le, če si ga ogledaš do konca
 Zdaj lahko upravljaš {n} vozil
+Nalaganje oglasa…

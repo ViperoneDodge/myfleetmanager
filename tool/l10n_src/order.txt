@@ -623,3 +623,4 @@ reward.locked
 reward.notReady
 reward.noReward
 reward.done
+reward.loading

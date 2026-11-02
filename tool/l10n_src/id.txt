@@ -623,3 +623,4 @@ Buka dulu kendaraan {n}
 Belum ada iklan yang siap: coba lagi beberapa detik lagi
 Iklan dihentikan: hanya dihitung jika ditonton sampai selesai
 Sekarang Anda bisa mengelola {n} kendaraan
+Memuat iklan…

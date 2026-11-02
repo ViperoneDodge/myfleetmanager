@@ -623,5 +623,6 @@
  "reward.locked": "Hãy mở khóa xe thứ {n} trước",
  "reward.notReady": "Chưa có quảng cáo sẵn sàng: thử lại sau vài giây",
  "reward.noReward": "Quảng cáo bị dừng: chỉ được tính khi xem đến hết",
- "reward.done": "Giờ bạn có thể quản lý {n} xe"
+ "reward.done": "Giờ bạn có thể quản lý {n} xe",
+ "reward.loading": "Đang tải quảng cáo…"
 }

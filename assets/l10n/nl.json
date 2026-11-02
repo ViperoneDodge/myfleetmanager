@@ -623,5 +623,6 @@
  "reward.locked": "Ontgrendel eerst voertuig {n}",
  "reward.notReady": "Nog geen advertentie klaar: probeer het over een paar seconden opnieuw",
  "reward.noReward": "Advertentie onderbroken: telt alleen als je hem tot het einde bekijkt",
- "reward.done": "Je kunt nu {n} voertuigen beheren"
+ "reward.done": "Je kunt nu {n} voertuigen beheren",
+ "reward.loading": "Advertentie laden…"
 }
