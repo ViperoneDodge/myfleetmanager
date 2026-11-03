@@ -65,6 +65,18 @@ jobs:
               print("Chiave API valida. App trovate:", apps or "nessuna")
           except urllib.error.HTTPError as e:
               print("Apple ha rifiutato la chiave API:", e.code, e.read().decode()[:400])
+              kid = os.environ["ASC_KEY_ID"].strip()
+              if kid == "77348YVM9J":
+                  print("ASC_KEY_ID è il Key ID della chiave delle notifiche (APNs), non della chiave API di App Store Connect.")
+              personal = jwt.encode(
+                  {"sub": "user", "iat": now, "exp": now + 600, "aud": "appstoreconnect-v1"},
+                  key, algorithm="ES256", headers={"kid": kid, "typ": "JWT"},
+              )
+              try:
+                  urllib.request.urlopen(urllib.request.Request(req.full_url, headers={"Authorization": "Bearer " + personal}))
+                  print("La chiave funziona solo come chiave INDIVIDUALE: serve una chiave del TEAM (scheda Chiavi del team).")
+              except urllib.error.HTTPError as e2:
+                  print("Anche come chiave individuale: rifiutata", e2.code, "-> Key ID, Issuer ID e file .p8 non appartengono alla stessa chiave API.")
               raise SystemExit(1)
           PY
 
