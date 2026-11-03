@@ -33,6 +33,40 @@ jobs:
           mkdir -p "$RUNNER_TEMP/keys"
           printf '%s\n' "$ASC_KEY_P8" > "$RUNNER_TEMP/keys/AuthKey.p8"
           grep -q "BEGIN PRIVATE KEY" "$RUNNER_TEMP/keys/AuthKey.p8" || { echo "ASC_KEY_P8 non contiene una chiave .p8 completa"; exit 1; }
+          K=$(printf '%s' "$ASC_KEY_ID" | tr -d '[:space:]')
+          I=$(printf '%s' "$ASC_ISSUER_ID" | tr -d '[:space:]')
+          echo "Lunghezza ASC_KEY_ID: ${#K} (deve essere 10)"
+          echo "Lunghezza ASC_ISSUER_ID: ${#I} (deve essere 36)"
+
+      - name: Prova la chiave API con Apple
+        shell: bash
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          python3 -m venv "$RUNNER_TEMP/jwt"
+          "$RUNNER_TEMP/jwt/bin/pip" install -q pyjwt cryptography
+          "$RUNNER_TEMP/jwt/bin/python" - <<'PY'
+          import json, os, time, urllib.request, urllib.error
+          import jwt
+          key = open(os.path.join(os.environ["RUNNER_TEMP"], "keys", "AuthKey.p8")).read()
+          now = int(time.time())
+          token = jwt.encode(
+              {"iss": os.environ["ASC_ISSUER_ID"].strip(), "iat": now, "exp": now + 600, "aud": "appstoreconnect-v1"},
+              key, algorithm="ES256", headers={"kid": os.environ["ASC_KEY_ID"].strip(), "typ": "JWT"},
+          )
+          req = urllib.request.Request(
+              "https://api.appstoreconnect.apple.com/v1/apps?filter[bundleId]=it.myfleet.myfleetmanager",
+              headers={"Authorization": "Bearer " + token},
+          )
+          try:
+              data = json.load(urllib.request.urlopen(req))
+              apps = [a["attributes"]["name"] for a in data.get("data", [])]
+              print("Chiave API valida. App trovate:", apps or "nessuna")
+          except urllib.error.HTTPError as e:
+              print("Apple ha rifiutato la chiave API:", e.code, e.read().decode()[:400])
+              raise SystemExit(1)
+          PY
 
       - name: Prepara progetto iOS
         shell: bash
@@ -54,6 +88,8 @@ jobs:
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
         run: |
           set -o pipefail
+          ASC_KEY_ID=$(printf '%s' "$ASC_KEY_ID" | tr -d '[:space:]')
+          ASC_ISSUER_ID=$(printf '%s' "$ASC_ISSUER_ID" | tr -d '[:space:]')
           xcodebuild -workspace ios/Runner.xcworkspace -scheme Runner -configuration Release \
             -destination 'generic/platform=iOS' -archivePath build/Runner.xcarchive archive \
             -allowProvisioningUpdates \
@@ -69,6 +105,8 @@ jobs:
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
         run: |
           set -o pipefail
+          ASC_KEY_ID=$(printf '%s' "$ASC_KEY_ID" | tr -d '[:space:]')
+          ASC_ISSUER_ID=$(printf '%s' "$ASC_ISSUER_ID" | tr -d '[:space:]')
           cat > ExportOptions.plist <<'PLIST'
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
