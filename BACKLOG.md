@@ -124,11 +124,14 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 - [ ] Prove solo con gli **annunci di prova** di Google: non cliccare mai gli annunci veri.
 
 ### Apple / iPhone
-- [ ] **Account Apple Developer** e TestFlight.
+- [x] **Account Apple Developer** attivo; App ID `it.myfleet.myfleetmanager` con notifiche push e accesso con Apple (Team C4WH22N952).
+- [x] **Build firmata per TestFlight** (comando manuale «iOS su TestFlight»): firma automatica con la chiave API di App Store Connect nei secret `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8`.
+- [x] Testo per la **richiesta di tracciamento (ATT)** e dichiarazione di crittografia standard nell'Info.plist.
+- [ ] **Scheda dell'app in App Store Connect** e prime prove su TestFlight.
 - [ ] **App iOS in Firebase** con `GoogleService-Info.plist`.
 - [ ] **Chiave APNs** per le notifiche push.
 - [ ] **Accesso con Apple** da verificare sul dispositivo.
-- [ ] **Richiesta di tracciamento (ATT)**, se si attivano gli annunci su iOS.
+- [ ] **App iOS in AdMob** (ID app e unità) e messaggio per la richiesta di tracciamento in AdMob → Privacy e messaggi.
 
 ## Note
 - Quando esce una versione con nuovi dati, chi modifica una manutenzione da un'app vecchia può perdere i campi nuovi (per esempio i costi della 2.1.2). Conviene mandare la campagna Firebase sull'argomento `updates` appena la versione è sul Play Store.

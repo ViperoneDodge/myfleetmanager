@@ -4,6 +4,7 @@ import re
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 IOS = ROOT / "ios"
 TARGET = "15.5"
+TEAM = "C4WH22N952"
 
 plist = IOS / "Runner" / "Info.plist"
 if plist.exists():
@@ -12,6 +13,7 @@ if plist.exists():
         "NSCameraUsageDescription": "MyFleetManager uses the camera to photograph your vehicles and documents and to scan group invitation QR codes.",
         "NSPhotoLibraryUsageDescription": "MyFleetManager uses your photos to choose vehicle pictures, documents and QR code images.",
         "NSFaceIDUsageDescription": "MyFleetManager uses Face ID to unlock the app when you turn on the lock in Settings.",
+        "NSUserTrackingUsageDescription": "MyFleetManager uses this identifier only to show ads that are more relevant to you in the free version.",
         "CFBundleDisplayName": "MyFleetManager",
         "GADApplicationIdentifier": re.search(r"iosAppId\s*=\s*'([^']+)'", (ROOT / "lib" / "ads_config.dart").read_text()).group(1),
     }
@@ -20,6 +22,8 @@ if plist.exists():
             p = re.sub(rf"(<key>{k}</key>\s*<string>)[^<]*(</string>)", rf"\g<1>{v}\g<2>", p)
         else:
             p = p.replace("<dict>", f"<dict>\n\t<key>{k}</key>\n\t<string>{v}</string>", 1)
+    if "<key>ITSAppUsesNonExemptEncryption</key>" not in p:
+        p = p.replace("<dict>", "<dict>\n\t<key>ITSAppUsesNonExemptEncryption</key>\n\t<false/>", 1)
     if "<key>SKAdNetworkItems</key>" not in p:
         p = p.replace("<dict>", "<dict>\n\t<key>SKAdNetworkItems</key>\n\t<array>\n\t\t<dict>\n\t\t\t<key>SKAdNetworkIdentifier</key>\n\t\t\t<string>cstr6suwn9.skadnetwork</string>\n\t\t</dict>\n\t</array>", 1)
     plist.write_text(p)
@@ -75,3 +79,12 @@ if pbx.exists():
         )
         pbx.write_text(t)
         print("Entitlements set in", pbx)
+    t = pbx.read_text()
+    if "DEVELOPMENT_TEAM = " + TEAM not in t:
+        t = re.sub(r"\n\s*DEVELOPMENT_TEAM = [^;]*;", "", t)
+        t = t.replace(
+            "INFOPLIST_FILE = Runner/Info.plist;",
+            f"CODE_SIGN_STYLE = Automatic;\n\t\t\t\tDEVELOPMENT_TEAM = {TEAM};\n\t\t\t\tINFOPLIST_FILE = Runner/Info.plist;",
+        )
+        pbx.write_text(t)
+        print("Signing team set in", pbx)
