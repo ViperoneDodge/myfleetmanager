@@ -22,7 +22,7 @@ Da caricare, in questo ordine (massimo 10):
 5. `04_groups.png` — gruppi condivisi
 6. `11b_notifications.png` — storico delle notifiche
 7. `12_changes.png` — modifica del gruppo evidenziata
-8. `10_pdf.png` — riepilogo PDF
+8. `07_ocr.png` — lettura automatica del libretto
 
 ---
 
