@@ -163,7 +163,7 @@ if "xmlns:tools" not in m:
 media_remove = """    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" tools:node="remove"/>
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" tools:node="remove"/>
     <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" tools:node="remove"/>
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
 """
 if "READ_MEDIA_IMAGES" not in m:
     m = m.replace("<application", media_remove + "    <application", 1)

@@ -648,7 +648,7 @@ story += B([
     'L\'account «solo su questo telefono» non invia nulla in rete.',
     'Il riconoscimento del libretto avviene interamente sul telefono.',
     'Cancellazione completa dei dati e dell\'account dall\'app, più richiesta via email per i dati residui.',
-    'Nessuna pubblicità e nessun identificativo pubblicitario (permesso AD_ID rimosso).',
+    'Pubblicità solo nella versione gratuita (Google AdMob) con consenso GDPR; permesso AD_ID dichiarato per l\'ID pubblicità.',
     'Codice Dart offuscato nelle build Android e iOS (nomi di classi e funzioni resi illeggibili) e codice Java ridotto da R8; '
     'la versione web è compilata e minimizzata.',
     'Sito web con intestazioni di sicurezza: HTTPS obbligatorio (HSTS), divieto di inserimento in altre pagine, '
