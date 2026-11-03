@@ -632,5 +632,9 @@
  "reward.replaces": "vietoj {vehicle}",
  "reward.chosen": "{vehicle} dabar yra transporto priemonė nr. {n}",
  "reward.noCandidates": "Nėra kitų automobilių ar motociklų pasirinkti",
- "docs.withdrawConfirm": "Internetinės tavo dokumentų kopijos bus ištrintos. Dokumentai liks šiame telefone."
+ "docs.withdrawConfirm": "Internetinės tavo dokumentų kopijos bus ištrintos. Dokumentai liks šiame telefone.",
+ "reward.choose": "Pasirinkti",
+ "reward.once": "Pasirinkti galima tik kartą",
+ "reward.fixed": "Galutinis pasirinkimas",
+ "reward.confirm": "{vehicle} taps tavo transporto priemone nr. {n}. Pasirinkimas galutinis ir vėliau jo pakeisti negalėsi. Patvirtinti?"
 }

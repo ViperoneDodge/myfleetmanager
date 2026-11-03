@@ -632,3 +632,7 @@ Folosește ca vehiculul nr. {n}
 {vehicle} este acum vehiculul nr. {n}
 Nu există alte mașini sau motociclete de ales
 Copiile online ale documentelor tale vor fi șterse. Documentele rămân pe acest telefon.
+Alege
+Poți alege o singură dată
+Alegere definitivă
+{vehicle} va deveni vehiculul tău nr. {n}. Alegerea este definitivă și nu mai poate fi schimbată. Confirmi?

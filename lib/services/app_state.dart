@@ -69,7 +69,7 @@ class AppState extends ChangeNotifier {
   void _saveRewardsCloud() {
     final s = session;
     if (s == null || !isCloud) return;
-    sync.saveRewards(s.key, data.rewardSlots, data.rewardProgress).catchError((_) {});
+    sync.saveRewards(s.key, data.rewardSlots, data.rewardProgress, data.rewardVehicles).catchError((_) {});
   }
 
   Future<void> _loadRewardsCloud(Session s) async {
@@ -78,14 +78,19 @@ class AppState extends ChangeNotifier {
       if (!identical(session, s)) return;
       final local = data.rewardSlots * AdsRules.adsPerSlot + data.rewardProgress;
       final cloud = c.slots * AdsRules.adsPerSlot + c.progress;
+      final merged = AdsRules.mergeChosen(data.rewardVehicles, c.vehicles);
+      final chosenChanged = merged.join('|') != data.rewardVehicles.join('|');
+      final cloudBehind = merged.join('|') != c.vehicles.join('|');
+      if (chosenChanged) data.rewardVehicles = merged;
       if (cloud > local) {
         data.rewardSlots = c.slots;
         data.rewardProgress = c.progress;
+      }
+      if (cloud > local || chosenChanged) {
         notifyListeners();
         await _persist();
-      } else if (local > cloud) {
-        _saveRewardsCloud();
       }
+      if (local > cloud || cloudBehind) _saveRewardsCloud();
     } catch (_) {}
   }
 
@@ -144,18 +149,30 @@ class AppState extends ChangeNotifier {
     return [for (final v in _orderedVehicles) if (!isProType(v.type) && !base.contains(v.id)) v];
   }
 
-  bool canUseAsReward(Vehicle v) =>
-      !isPro && data.rewardSlots > 0 && !isProType(v.type) && rewardCandidates.any((c) => c.id == v.id);
+  int get _rewardExtra => data.rewardSlots.clamp(0, AdsRules.maxSlots);
 
-  Future<void> chooseRewardVehicle(int slot, String id) async {
-    final current = [for (final v in rewardVehicles) v?.id ?? ''];
-    if (slot < 0 || slot >= current.length) return;
-    final other = current.indexOf(id);
-    if (other >= 0 && other != slot) current[other] = current[slot];
-    current[slot] = id;
-    data.rewardVehicles = current;
+  bool rewardSlotLocked(int slot) => AdsRules.slotLocked(data.rewardVehicles, _plan.slots, slot);
+
+  List<int> get openRewardSlots => [
+        for (var i = 0; i < _rewardExtra; i++)
+          if (!rewardSlotLocked(i)) i,
+      ];
+
+  bool canUseAsReward(Vehicle v) =>
+      !isPro &&
+      openRewardSlots.isNotEmpty &&
+      !isProType(v.type) &&
+      rewardCandidates.any((c) => c.id == v.id) &&
+      ![for (var i = 0; i < _rewardExtra; i++) if (rewardSlotLocked(i)) data.rewardVehicles[i]].contains(v.id);
+
+  Future<bool> chooseRewardVehicle(int slot, String id) async {
+    final next = AdsRules.choose(data.rewardVehicles, _plan.slots, _rewardExtra, slot, id);
+    if (next == null) return false;
+    data.rewardVehicles = next;
     notifyListeners();
     await _persist();
+    _saveRewardsCloud();
+    return true;
   }
 
   bool isLimited(Vehicle v) => limitedIds.contains(v.id);
@@ -1235,6 +1252,10 @@ class AppState extends ChangeNotifier {
       ];
       data.vehicles.add(moved);
       data.favorites.renamed(old.id, moved.id);
+      if (data.rewardVehicles.contains(old.id)) {
+        data.rewardVehicles = [for (final r in data.rewardVehicles) r == old.id ? moved.id : r];
+        _saveRewardsCloud();
+      }
       v = moved;
     } else if (i >= 0) {
       data.vehicles[i] = v;

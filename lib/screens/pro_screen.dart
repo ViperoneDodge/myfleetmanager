@@ -19,8 +19,13 @@ String vehicleLabel(Vehicle v) => v.plate.isEmpty ? v.name : '${v.name} (${v.pla
 
 Future<void> chooseRewardVehicle(BuildContext context, int slot) async {
   final n = AppState.baseVehicleLimit + slot + 1;
+  if (appState.rewardSlotLocked(slot)) return;
   final current = appState.rewardVehicles.elementAtOrNull(slot);
-  final candidates = appState.rewardCandidates;
+  final taken = {
+    for (var i = 0; i < appState.rewardVehicles.length; i++)
+      if (i != slot && appState.rewardSlotLocked(i)) appState.rewardVehicles[i]?.id,
+  };
+  final candidates = appState.rewardCandidates.where((v) => !taken.contains(v.id)).toList();
   final picked = await showModalBottomSheet<Vehicle>(
     context: context,
     showDragHandle: true,
@@ -42,8 +47,26 @@ Future<void> chooseRewardVehicle(BuildContext context, int slot) async {
     ),
   );
   if (picked == null || !context.mounted) return;
-  await appState.chooseRewardVehicle(slot, picked.id);
-  if (context.mounted) showSnack(context, tr('reward.chosen', {'vehicle': vehicleLabel(picked), 'n': n}));
+  await _confirmAndChoose(context, slot, picked);
+}
+
+Future<void> _confirmAndChoose(BuildContext context, int slot, Vehicle v) async {
+  final n = AppState.baseVehicleLimit + slot + 1;
+  final ok = await showDialog<bool>(
+    context: context,
+    builder: (ctx) => AlertDialog(
+      icon: const Icon(Icons.lock_outline),
+      content: Text(tr('reward.confirm', {'vehicle': vehicleLabel(v), 'n': n})),
+      actions: [
+        TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
+        FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(tr('common.ok'))),
+      ],
+    ),
+  );
+  if (ok != true || !context.mounted) return;
+  if (await appState.chooseRewardVehicle(slot, v.id) && context.mounted) {
+    showSnack(context, tr('reward.chosen', {'vehicle': vehicleLabel(v), 'n': n}));
+  }
 }
 
 Future<void> openLimitedVehicle(BuildContext context, Vehicle v) async {
@@ -53,6 +76,7 @@ Future<void> openLimitedVehicle(BuildContext context, Vehicle v) async {
     return;
   }
   final slots = appState.rewardVehicles;
+  final open = appState.openRewardSlots;
   final choice = await showModalBottomSheet<int>(
     context: context,
     showDragHandle: true,
@@ -62,7 +86,7 @@ Future<void> openLimitedVehicle(BuildContext context, Vehicle v) async {
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
           child: Text(vehicleLabel(v), style: Theme.of(ctx).textTheme.titleMedium),
         ),
-        for (var i = 0; i < slots.length; i++)
+        for (final i in open)
           ListTile(
             leading: const Icon(Icons.swap_horiz),
             title: Text(tr('reward.useAs', {'n': AppState.baseVehicleLimit + i + 1})),
@@ -82,10 +106,7 @@ Future<void> openLimitedVehicle(BuildContext context, Vehicle v) async {
     await requirePro(context, reason: reason);
     return;
   }
-  await appState.chooseRewardVehicle(choice, v.id);
-  if (context.mounted) {
-    showSnack(context, tr('reward.chosen', {'vehicle': vehicleLabel(v), 'n': AppState.baseVehicleLimit + choice + 1}));
-  }
+  await _confirmAndChoose(context, choice, v);
 }
 
 Future<bool> ensureCanAddVehicle(BuildContext context) async {
@@ -292,8 +313,11 @@ class _RewardSlotsState extends State<RewardSlots> {
     final loading = _busy || (current && !ads.rewardedReady && ads.rewardedLoading);
     Widget trailing;
     final chosen = done ? appState.rewardVehicles.elementAtOrNull(index) : null;
-    if (done) {
-      trailing = TextButton(onPressed: () => chooseRewardVehicle(context, index), child: Text(tr('reward.change')));
+    final fixed = done && appState.rewardSlotLocked(index);
+    if (fixed) {
+      trailing = Icon(Icons.lock_outline, color: scheme.outline);
+    } else if (done) {
+      trailing = TextButton(onPressed: () => chooseRewardVehicle(context, index), child: Text(tr('reward.choose')));
     } else if (current) {
       trailing = FilledButton.tonalIcon(
         onPressed: _busy ? null : _watch,
@@ -319,6 +343,9 @@ class _RewardSlotsState extends State<RewardSlots> {
               if (done)
                 Text(chosen == null ? tr('reward.none') : vehicleLabel(chosen),
                     style: TextStyle(fontSize: 12, color: scheme.onSurfaceVariant)),
+              if (done)
+                Text(fixed ? tr('reward.fixed') : tr('reward.once'),
+                    style: TextStyle(fontSize: 11, color: scheme.outline)),
               if (current) ...[
                 Padding(
                   padding: const EdgeInsets.only(top: 6, right: 8),

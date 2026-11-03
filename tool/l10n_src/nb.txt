@@ -632,3 +632,7 @@ i stedet for {vehicle}
 {vehicle} er nå kjøretøy nr. {n}
 Det finnes ingen andre biler eller motorsykler å velge
 Nettkopiene av dokumentene dine slettes. Dokumentene blir værende på denne telefonen.
+Velg
+Du kan bare velge én gang
+Endelig valg
+{vehicle} blir kjøretøy nr. {n}. Valget er endelig og kan ikke endres senere. Bekrefte?

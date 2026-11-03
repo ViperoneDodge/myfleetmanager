@@ -632,3 +632,7 @@ menggantikan {vehicle}
 {vehicle} sekarang kendaraan ke-{n}
 Tidak ada mobil atau motor lain untuk dipilih
 Salinan online dokumenmu akan dihapus. Dokumen tetap ada di ponsel ini.
+Pilih
+Hanya bisa dipilih sekali
+Pilihan final
+{vehicle} akan menjadi kendaraan ke-{n}. Pilihan ini final dan tidak bisa diubah nanti. Konfirmasi?

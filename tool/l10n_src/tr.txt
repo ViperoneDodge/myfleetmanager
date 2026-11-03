@@ -632,3 +632,7 @@ Araç seçilmedi
 {vehicle} artık {n}. araç
 Seçilecek başka otomobil veya motosiklet yok
 Belgelerinin çevrimiçi kopyaları silinecek. Belgeler bu telefonda kalır.
+Seç
+Yalnızca bir kez seçebilirsin
+Kesin seçim
+{vehicle} {n}. aracın olacak. Bu seçim kesindir ve daha sonra değiştirilemez. Onaylıyor musun?

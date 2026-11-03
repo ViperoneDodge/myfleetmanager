@@ -632,5 +632,9 @@
  "reward.replaces": "menggantikan {vehicle}",
  "reward.chosen": "{vehicle} sekarang kendaraan ke-{n}",
  "reward.noCandidates": "Tidak ada mobil atau motor lain untuk dipilih",
- "docs.withdrawConfirm": "Salinan online dokumenmu akan dihapus. Dokumen tetap ada di ponsel ini."
+ "docs.withdrawConfirm": "Salinan online dokumenmu akan dihapus. Dokumen tetap ada di ponsel ini.",
+ "reward.choose": "Pilih",
+ "reward.once": "Hanya bisa dipilih sekali",
+ "reward.fixed": "Pilihan final",
+ "reward.confirm": "{vehicle} akan menjadi kendaraan ke-{n}. Pilihan ini final dan tidak bisa diubah nanti. Konfirmasi?"
 }

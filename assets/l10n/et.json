@@ -632,5 +632,9 @@
  "reward.replaces": "{vehicle} asemel",
  "reward.chosen": "{vehicle} on nüüd sõiduk nr {n}",
  "reward.noCandidates": "Muid autosid ega mootorrattaid valida pole",
- "docs.withdrawConfirm": "Sinu dokumentide veebikoopiad kustutatakse. Dokumendid jäävad sellesse telefoni."
+ "docs.withdrawConfirm": "Sinu dokumentide veebikoopiad kustutatakse. Dokumendid jäävad sellesse telefoni.",
+ "reward.choose": "Vali",
+ "reward.once": "Saad valida ainult ühe korra",
+ "reward.fixed": "Lõplik valik",
+ "reward.confirm": "{vehicle} saab sinu sõidukiks nr {n}. Valik on lõplik ja seda ei saa hiljem muuta. Kinnitad?"
 }

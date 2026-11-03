@@ -56,4 +56,21 @@ void main() {
     expect(p.slots, isEmpty);
     expect(p.limited, isEmpty);
   });
+
+  test('4° e 5° veicolo si scelgono una volta sola', () {
+    expect(AdsRules.slotLocked(const [], const ['e', 'f'], 0), isFalse);
+    var chosen = AdsRules.choose(const [], const ['e', 'f'], 2, 0, 'g')!;
+    expect(chosen, ['g', '']);
+    expect(AdsRules.slotLocked(chosen, const ['g', 'e'], 0), isTrue);
+    expect(AdsRules.slotLocked(chosen, const ['g', 'e'], 1), isFalse);
+    expect(AdsRules.choose(chosen, const ['g', 'e'], 2, 0, 'f'), isNull);
+    expect(AdsRules.choose(chosen, const ['g', 'e'], 2, 1, 'g'), isNull);
+    chosen = AdsRules.choose(chosen, const ['g', 'e'], 2, 1, 'f')!;
+    expect(chosen, ['g', 'f']);
+    expect(AdsRules.slotLocked(['x', 'f'], const ['e', 'f'], 0), isFalse);
+    expect(AdsRules.choose(const ['', 'e'], const ['f', 'e'], 2, 0, 'e'), isNull);
+    expect(AdsRules.choose(const [], const ['e', 'f'], 2, 1, 'e'), ['', 'e']);
+    expect(AdsRules.mergeChosen(const ['', 'f'], const ['g', 'h']), ['g', 'f']);
+    expect(AdsRules.mergeChosen(const [], const ['g']), ['g']);
+  });
 }

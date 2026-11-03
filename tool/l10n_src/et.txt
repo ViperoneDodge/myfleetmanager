@@ -632,3 +632,7 @@ Kasuta sõidukina nr {n}
 {vehicle} on nüüd sõiduk nr {n}
 Muid autosid ega mootorrattaid valida pole
 Sinu dokumentide veebikoopiad kustutatakse. Dokumendid jäävad sellesse telefoni.
+Vali
+Saad valida ainult ühe korra
+Lõplik valik
+{vehicle} saab sinu sõidukiks nr {n}. Valik on lõplik ja seda ei saa hiljem muuta. Kinnitad?

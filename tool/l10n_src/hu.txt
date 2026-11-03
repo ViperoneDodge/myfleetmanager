@@ -632,3 +632,7 @@ Használat {n}. járműként
 {vehicle} most a {n}. jármű
 Nincs más választható autó vagy motor
 A dokumentumaid online másolatai törlődnek. A dokumentumok ezen a telefonon maradnak.
+Kiválasztás
+Csak egyszer választhatsz
+Végleges választás
+A(z) {vehicle} lesz a {n}. járműved. A választás végleges, később nem módosítható. Megerősíted?

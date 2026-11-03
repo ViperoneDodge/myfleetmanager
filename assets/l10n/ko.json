@@ -632,5 +632,9 @@
  "reward.replaces": "{vehicle} 대신",
  "reward.chosen": "{vehicle}이(가) 이제 {n}번째 차량입니다",
  "reward.noCandidates": "선택할 다른 자동차나 오토바이가 없습니다",
- "docs.withdrawConfirm": "문서의 온라인 사본이 삭제됩니다. 문서는 이 휴대폰에 그대로 남습니다."
+ "docs.withdrawConfirm": "문서의 온라인 사본이 삭제됩니다. 문서는 이 휴대폰에 그대로 남습니다.",
+ "reward.choose": "선택",
+ "reward.once": "한 번만 선택할 수 있습니다",
+ "reward.fixed": "최종 선택",
+ "reward.confirm": "{vehicle}이(가) {n}번째 차량이 됩니다. 이 선택은 최종이며 나중에 변경할 수 없습니다. 확인하시겠습니까?"
 }

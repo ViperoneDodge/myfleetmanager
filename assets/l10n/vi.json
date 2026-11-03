@@ -632,5 +632,9 @@
  "reward.replaces": "thay cho {vehicle}",
  "reward.chosen": "{vehicle} giờ là xe thứ {n}",
  "reward.noCandidates": "Không còn ô tô hoặc xe máy nào khác để chọn",
- "docs.withdrawConfirm": "Các bản sao trực tuyến của tài liệu sẽ bị xóa. Tài liệu vẫn còn trên điện thoại này."
+ "docs.withdrawConfirm": "Các bản sao trực tuyến của tài liệu sẽ bị xóa. Tài liệu vẫn còn trên điện thoại này.",
+ "reward.choose": "Chọn",
+ "reward.once": "Bạn chỉ có thể chọn một lần",
+ "reward.fixed": "Lựa chọn cố định",
+ "reward.confirm": "{vehicle} sẽ trở thành xe thứ {n} của bạn. Lựa chọn này là cố định và không thể đổi sau. Xác nhận?"
 }

@@ -632,5 +632,9 @@
  "reward.replaces": "instead of {vehicle}",
  "reward.chosen": "{vehicle} is now vehicle no. {n}",
  "reward.noCandidates": "There are no other cars or motorbikes to choose",
- "docs.withdrawConfirm": "The online copies of your documents will be deleted. The documents stay on this phone."
+ "docs.withdrawConfirm": "The online copies of your documents will be deleted. The documents stay on this phone.",
+ "reward.choose": "Choose",
+ "reward.once": "You can choose it only once",
+ "reward.fixed": "Final choice",
+ "reward.confirm": "{vehicle} will become your vehicle no. {n}. This choice is final and cannot be changed later. Confirm?"
 }

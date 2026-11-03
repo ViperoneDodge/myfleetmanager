@@ -632,5 +632,9 @@
  "reward.replaces": "i stedet for {vehicle}",
  "reward.chosen": "{vehicle} er nu køretøj nr. {n}",
  "reward.noCandidates": "Der er ingen andre biler eller motorcykler at vælge",
- "docs.withdrawConfirm": "Onlinekopierne af dine dokumenter slettes. Dokumenterne bliver på denne telefon."
+ "docs.withdrawConfirm": "Onlinekopierne af dine dokumenter slettes. Dokumenterne bliver på denne telefon.",
+ "reward.choose": "Vælg",
+ "reward.once": "Du kan kun vælge én gang",
+ "reward.fixed": "Endeligt valg",
+ "reward.confirm": "{vehicle} bliver dit køretøj nr. {n}. Valget er endeligt og kan ikke ændres senere. Bekræft?"
 }

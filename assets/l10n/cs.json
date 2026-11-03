@@ -632,5 +632,9 @@
  "reward.replaces": "místo {vehicle}",
  "reward.chosen": "{vehicle} je nyní vozidlo č. {n}",
  "reward.noCandidates": "Nejsou k dispozici další auta ani motorky",
- "docs.withdrawConfirm": "Online kopie tvých dokumentů budou smazány. Dokumenty zůstanou v tomto telefonu."
+ "docs.withdrawConfirm": "Online kopie tvých dokumentů budou smazány. Dokumenty zůstanou v tomto telefonu.",
+ "reward.choose": "Vybrat",
+ "reward.once": "Vybrat můžeš jen jednou",
+ "reward.fixed": "Konečná volba",
+ "reward.confirm": "{vehicle} bude tvé vozidlo č. {n}. Volba je konečná a nelze ji později změnit. Potvrdit?"
 }

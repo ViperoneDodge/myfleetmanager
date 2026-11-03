@@ -632,5 +632,9 @@
  "reward.replaces": "in plaats van {vehicle}",
  "reward.chosen": "{vehicle} is nu voertuig nr. {n}",
  "reward.noCandidates": "Er zijn geen andere auto's of motoren om te kiezen",
- "docs.withdrawConfirm": "De online kopieën van je documenten worden verwijderd. De documenten blijven op deze telefoon."
+ "docs.withdrawConfirm": "De online kopieën van je documenten worden verwijderd. De documenten blijven op deze telefoon.",
+ "reward.choose": "Kiezen",
+ "reward.once": "Je kunt maar één keer kiezen",
+ "reward.fixed": "Definitieve keuze",
+ "reward.confirm": "{vehicle} wordt je voertuig nr. {n}. Deze keuze is definitief en kan niet meer worden gewijzigd. Bevestigen?"
 }

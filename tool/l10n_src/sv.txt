@@ -632,3 +632,7 @@ i stället för {vehicle}
 {vehicle} är nu fordon nr {n}
 Det finns inga andra bilar eller motorcyklar att välja
 Onlinekopiorna av dina dokument raderas. Dokumenten finns kvar på den här telefonen.
+Välj
+Du kan bara välja en gång
+Slutgiltigt val
+{vehicle} blir ditt fordon nr {n}. Valet är slutgiltigt och kan inte ändras senare. Bekräfta?

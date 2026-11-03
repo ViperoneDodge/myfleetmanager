@@ -632,3 +632,7 @@ Käytä ajoneuvona nro {n}
 {vehicle} on nyt ajoneuvo nro {n}
 Muita autoja tai moottoripyöriä ei ole valittavana
 Asiakirjojesi verkkokopiot poistetaan. Asiakirjat jäävät tähän puhelimeen.
+Valitse
+Voit valita vain kerran
+Lopullinen valinta
+{vehicle} tulee ajoneuvoksesi nro {n}. Valinta on lopullinen eikä sitä voi myöhemmin muuttaa. Vahvistetaanko?

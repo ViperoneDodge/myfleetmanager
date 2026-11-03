@@ -632,5 +632,9 @@
  "reward.replaces": "minflok {vehicle}",
  "reward.chosen": "{vehicle} issa hija l-vettura nru {n}",
  "reward.noCandidates": "M'hemmx karozzi jew muturi oħra x'tagħżel",
- "docs.withdrawConfirm": "Il-kopji online tad-dokumenti tiegħek se jitħassru. Id-dokumenti jibqgħu fuq dan it-telefon."
+ "docs.withdrawConfirm": "Il-kopji online tad-dokumenti tiegħek se jitħassru. Id-dokumenti jibqgħu fuq dan it-telefon.",
+ "reward.choose": "Agħżel",
+ "reward.once": "Tista' tagħżel darba biss",
+ "reward.fixed": "Għażla finali",
+ "reward.confirm": "{vehicle} se ssir il-vettura nru {n} tiegħek. L-għażla hija finali u ma tistax tinbidel. Tikkonferma?"
 }

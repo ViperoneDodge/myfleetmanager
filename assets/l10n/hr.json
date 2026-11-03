@@ -632,5 +632,9 @@
  "reward.replaces": "umjesto {vehicle}",
  "reward.chosen": "{vehicle} je sada {n}. vozilo",
  "reward.noCandidates": "Nema drugih automobila ili motocikala za odabir",
- "docs.withdrawConfirm": "Mrežne kopije tvojih dokumenata bit će izbrisane. Dokumenti ostaju na ovom telefonu."
+ "docs.withdrawConfirm": "Mrežne kopije tvojih dokumenata bit će izbrisane. Dokumenti ostaju na ovom telefonu.",
+ "reward.choose": "Odaberi",
+ "reward.once": "Možeš odabrati samo jednom",
+ "reward.fixed": "Konačan odabir",
+ "reward.confirm": "{vehicle} postat će tvoje {n}. vozilo. Odabir je konačan i ne može se promijeniti. Potvrđuješ?"
 }

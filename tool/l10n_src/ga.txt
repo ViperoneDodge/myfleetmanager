@@ -632,3 +632,7 @@ in ionad {vehicle}
 Is é {vehicle} feithicil uimh. {n} anois
 Níl gluaisteáin ná gluaisrothair eile le roghnú
 Scriosfar na cóipeanna ar líne de do dhoiciméid. Fanfaidh na doiciméid ar an bhfón seo.
+Roghnaigh
+Ní féidir é a roghnú ach uair amháin
+Rogha deiridh
+Beidh {vehicle} mar fheithicil uimh. {n} agat. Is rogha deiridh í seo agus ní féidir í a athrú. An ndeimhníonn tú?

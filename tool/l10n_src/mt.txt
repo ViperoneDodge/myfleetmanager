@@ -632,3 +632,7 @@ minflok {vehicle}
 {vehicle} issa hija l-vettura nru {n}
 M'hemmx karozzi jew muturi oħra x'tagħżel
 Il-kopji online tad-dokumenti tiegħek se jitħassru. Id-dokumenti jibqgħu fuq dan it-telefon.
+Agħżel
+Tista' tagħżel darba biss
+Għażla finali
+{vehicle} se ssir il-vettura nru {n} tiegħek. L-għażla hija finali u ma tistax tinbidel. Tikkonferma?

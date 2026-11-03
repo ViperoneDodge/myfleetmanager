@@ -632,5 +632,9 @@
  "reward.replaces": "en lugar de {vehicle}",
  "reward.chosen": "{vehicle} es ahora el vehículo n.º {n}",
  "reward.noCandidates": "No hay otros coches o motos para elegir",
- "docs.withdrawConfirm": "Se eliminarán las copias en línea de tus documentos. Los documentos se quedan en este teléfono."
+ "docs.withdrawConfirm": "Se eliminarán las copias en línea de tus documentos. Los documentos se quedan en este teléfono.",
+ "reward.choose": "Elegir",
+ "reward.once": "Solo puedes elegirlo una vez",
+ "reward.fixed": "Elección definitiva",
+ "reward.confirm": "{vehicle} será tu vehículo n.º {n}. La elección es definitiva y no podrás cambiarla. ¿Confirmas?"
 }

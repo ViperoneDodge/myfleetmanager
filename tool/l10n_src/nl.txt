@@ -632,3 +632,7 @@ in plaats van {vehicle}
 {vehicle} is nu voertuig nr. {n}
 Er zijn geen andere auto's of motoren om te kiezen
 De online kopieën van je documenten worden verwijderd. De documenten blijven op deze telefoon.
+Kiezen
+Je kunt maar één keer kiezen
+Definitieve keuze
+{vehicle} wordt je voertuig nr. {n}. Deze keuze is definitief en kan niet meer worden gewijzigd. Bevestigen?

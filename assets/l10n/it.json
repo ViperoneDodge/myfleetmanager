@@ -632,5 +632,9 @@
  "reward.replaces": "al posto di {vehicle}",
  "reward.chosen": "{vehicle} ora è il {n}° veicolo",
  "reward.noCandidates": "Non ci sono altre auto o moto da scegliere",
- "docs.withdrawConfirm": "Le copie online dei tuoi documenti verranno cancellate. I documenti restano su questo telefono."
+ "docs.withdrawConfirm": "Le copie online dei tuoi documenti verranno cancellate. I documenti restano su questo telefono.",
+ "reward.choose": "Scegli",
+ "reward.once": "Puoi sceglierlo una volta sola",
+ "reward.fixed": "Scelta definitiva",
+ "reward.confirm": "{vehicle} diventerà il tuo {n}° veicolo. La scelta è definitiva e non potrai più cambiarla. Confermi?"
 }

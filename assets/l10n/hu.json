@@ -632,5 +632,9 @@
  "reward.replaces": "{vehicle} helyett",
  "reward.chosen": "{vehicle} most a {n}. jármű",
  "reward.noCandidates": "Nincs más választható autó vagy motor",
- "docs.withdrawConfirm": "A dokumentumaid online másolatai törlődnek. A dokumentumok ezen a telefonon maradnak."
+ "docs.withdrawConfirm": "A dokumentumaid online másolatai törlődnek. A dokumentumok ezen a telefonon maradnak.",
+ "reward.choose": "Kiválasztás",
+ "reward.once": "Csak egyszer választhatsz",
+ "reward.fixed": "Végleges választás",
+ "reward.confirm": "A(z) {vehicle} lesz a {n}. járműved. A választás végleges, később nem módosítható. Megerősíted?"
 }

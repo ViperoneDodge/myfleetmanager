@@ -632,5 +632,9 @@
  "reward.replaces": "i stället för {vehicle}",
  "reward.chosen": "{vehicle} är nu fordon nr {n}",
  "reward.noCandidates": "Det finns inga andra bilar eller motorcyklar att välja",
- "docs.withdrawConfirm": "Onlinekopiorna av dina dokument raderas. Dokumenten finns kvar på den här telefonen."
+ "docs.withdrawConfirm": "Onlinekopiorna av dina dokument raderas. Dokumenten finns kvar på den här telefonen.",
+ "reward.choose": "Välj",
+ "reward.once": "Du kan bara välja en gång",
+ "reward.fixed": "Slutgiltigt val",
+ "reward.confirm": "{vehicle} blir ditt fordon nr {n}. Valet är slutgiltigt och kan inte ändras senare. Bekräfta?"
 }

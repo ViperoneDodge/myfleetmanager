@@ -632,5 +632,9 @@
  "reward.replaces": "{vehicle} の代わりに",
  "reward.chosen": "{vehicle} が{n}台目になりました",
  "reward.noCandidates": "選択できる他の車やバイクはありません",
- "docs.withdrawConfirm": "書類のオンラインコピーは削除されます。書類はこのスマートフォンに残ります。"
+ "docs.withdrawConfirm": "書類のオンラインコピーは削除されます。書類はこのスマートフォンに残ります。",
+ "reward.choose": "選択",
+ "reward.once": "選べるのは一度だけです",
+ "reward.fixed": "確定済み",
+ "reward.confirm": "{vehicle} が{n}台目の車両になります。この選択は確定で、後から変更できません。よろしいですか？"
 }

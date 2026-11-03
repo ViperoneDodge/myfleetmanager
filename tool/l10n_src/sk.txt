@@ -632,3 +632,7 @@ namiesto {vehicle}
 {vehicle} je teraz vozidlo č. {n}
 Nie sú k dispozícii ďalšie autá ani motorky
 Online kópie tvojich dokumentov budú vymazané. Dokumenty zostanú v tomto telefóne.
+Vybrať
+Vybrať môžeš iba raz
+Konečná voľba
+{vehicle} bude tvoje vozidlo č. {n}. Voľba je konečná a nedá sa neskôr zmeniť. Potvrdiť?

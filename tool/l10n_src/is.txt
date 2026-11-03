@@ -632,3 +632,7 @@ Nota sem ökutæki nr. {n}
 {vehicle} er nú ökutæki nr. {n}
 Engir aðrir bílar eða bifhjól til að velja
 Netafritum skjalanna þinna verður eytt. Skjölin verða áfram á þessum síma.
+Velja
+Þú getur aðeins valið einu sinni
+Endanlegt val
+{vehicle} verður ökutæki nr. {n}. Valið er endanlegt og ekki hægt að breyta því síðar. Staðfesta?

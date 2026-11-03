@@ -44,6 +44,30 @@ class AdsRules {
     return (base: baseIds, slots: filled, limited: {for (final id in ordered) if (!active.contains(id)) id});
   }
 
+  static bool slotLocked(List<String> chosen, List<String> planSlots, int slot) =>
+      slot < chosen.length && chosen[slot].isNotEmpty && slot < planSlots.length && planSlots[slot] == chosen[slot];
+
+  static List<String>? choose(List<String> chosen, List<String> planSlots, int extra, int slot, String id) {
+    if (slot < 0 || slot >= extra || slotLocked(chosen, planSlots, slot)) return null;
+    for (var i = 0; i < extra; i++) {
+      if (i != slot && slotLocked(chosen, planSlots, i) && chosen[i] == id) return null;
+    }
+    final out = List.generate(extra, (i) => i < chosen.length ? chosen[i] : '');
+    for (var i = 0; i < extra; i++) {
+      if (i != slot && out[i] == id) out[i] = '';
+    }
+    out[slot] = id;
+    return out;
+  }
+
+  static List<String> mergeChosen(List<String> local, List<String> cloud) {
+    final n = local.length > cloud.length ? local.length : cloud.length;
+    return [
+      for (var i = 0; i < n; i++)
+        (i < local.length && local[i].isNotEmpty) ? local[i] : (i < cloud.length ? cloud[i] : ''),
+    ];
+  }
+
   static bool allowed({
     required bool hasSession,
     required bool pro,

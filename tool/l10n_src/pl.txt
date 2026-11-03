@@ -632,3 +632,7 @@ zamiast {vehicle}
 {vehicle} jest teraz pojazdem nr {n}
 Brak innych samochodów lub motocykli do wyboru
 Kopie online twoich dokumentów zostaną usunięte. Dokumenty pozostaną na tym telefonie.
+Wybierz
+Możesz wybrać tylko raz
+Wybór ostateczny
+{vehicle} stanie się twoim pojazdem nr {n}. Wybór jest ostateczny i nie można go zmienić. Potwierdzasz?

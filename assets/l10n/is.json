@@ -632,5 +632,9 @@
  "reward.replaces": "í stað {vehicle}",
  "reward.chosen": "{vehicle} er nú ökutæki nr. {n}",
  "reward.noCandidates": "Engir aðrir bílar eða bifhjól til að velja",
- "docs.withdrawConfirm": "Netafritum skjalanna þinna verður eytt. Skjölin verða áfram á þessum síma."
+ "docs.withdrawConfirm": "Netafritum skjalanna þinna verður eytt. Skjölin verða áfram á þessum síma.",
+ "reward.choose": "Velja",
+ "reward.once": "Þú getur aðeins valið einu sinni",
+ "reward.fixed": "Endanlegt val",
+ "reward.confirm": "{vehicle} verður ökutæki nr. {n}. Valið er endanlegt og ekki hægt að breyta því síðar. Staðfesta?"
 }

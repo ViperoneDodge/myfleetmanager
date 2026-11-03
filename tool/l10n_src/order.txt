@@ -632,3 +632,7 @@ reward.replaces
 reward.chosen
 reward.noCandidates
 docs.withdrawConfirm
+reward.choose
+reward.once
+reward.fixed
+reward.confirm

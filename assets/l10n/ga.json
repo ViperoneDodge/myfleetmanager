@@ -632,5 +632,9 @@
  "reward.replaces": "in ionad {vehicle}",
  "reward.chosen": "Is é {vehicle} feithicil uimh. {n} anois",
  "reward.noCandidates": "Níl gluaisteáin ná gluaisrothair eile le roghnú",
- "docs.withdrawConfirm": "Scriosfar na cóipeanna ar líne de do dhoiciméid. Fanfaidh na doiciméid ar an bhfón seo."
+ "docs.withdrawConfirm": "Scriosfar na cóipeanna ar líne de do dhoiciméid. Fanfaidh na doiciméid ar an bhfón seo.",
+ "reward.choose": "Roghnaigh",
+ "reward.once": "Ní féidir é a roghnú ach uair amháin",
+ "reward.fixed": "Rogha deiridh",
+ "reward.confirm": "Beidh {vehicle} mar fheithicil uimh. {n} agat. Is rogha deiridh í seo agus ní féidir í a athrú. An ndeimhníonn tú?"
 }
