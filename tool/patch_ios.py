@@ -22,6 +22,12 @@ if plist.exists():
             p = re.sub(rf"(<key>{k}</key>\s*<string>)[^<]*(</string>)", rf"\g<1>{v}\g<2>", p)
         else:
             p = p.replace("<dict>", f"<dict>\n\t<key>{k}</key>\n\t<string>{v}</string>", 1)
+    gs = ROOT / "tool" / "GoogleService-Info.plist"
+    if gs.exists() and "<key>CFBundleURLTypes</key>" not in p:
+        g = gs.read_text()
+        rev = re.search(r"<key>REVERSED_CLIENT_ID</key>\s*<string>([^<]+)</string>", g).group(1)
+        cid = re.search(r"<key>CLIENT_ID</key>\s*<string>([^<]+)</string>", g).group(1)
+        p = p.replace("<dict>", f"<dict>\n\t<key>GIDClientID</key>\n\t<string>{cid}</string>\n\t<key>CFBundleURLTypes</key>\n\t<array>\n\t\t<dict>\n\t\t\t<key>CFBundleTypeRole</key>\n\t\t\t<string>Editor</string>\n\t\t\t<key>CFBundleURLSchemes</key>\n\t\t\t<array>\n\t\t\t\t<string>{rev}</string>\n\t\t\t</array>\n\t\t</dict>\n\t</array>", 1)
     if "<key>ITSAppUsesNonExemptEncryption</key>" not in p:
         p = p.replace("<dict>", "<dict>\n\t<key>ITSAppUsesNonExemptEncryption</key>\n\t<false/>", 1)
     if "<key>SKAdNetworkItems</key>" not in p:

@@ -37,6 +37,7 @@ Future<User?> restoredUser() async {
 
 GoogleSignIn _googleClient() => GoogleSignIn(
       scopes: const ['email'],
+      clientId: isIOS ? FirebaseConfig.iosClientId : null,
       serverClientId: FirebaseConfig.googleWebClientId.isEmpty ? null : FirebaseConfig.googleWebClientId,
     );
 

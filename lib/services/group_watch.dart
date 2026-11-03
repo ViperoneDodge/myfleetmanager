@@ -277,15 +277,7 @@ Future<void> _backgroundCheck() async {
     try {
       await Firebase.initializeApp();
     } catch (_) {
-      await Firebase.initializeApp(
-        options: const FirebaseOptions(
-          apiKey: FirebaseConfig.apiKey,
-          appId: FirebaseConfig.appId,
-          messagingSenderId: FirebaseConfig.messagingSenderId,
-          projectId: FirebaseConfig.projectId,
-          storageBucket: FirebaseConfig.storageBucket,
-        ),
-      );
+      await Firebase.initializeApp(options: FirebaseConfig.nativeOptions);
     }
   }
   await startAppCheck();
