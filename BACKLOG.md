@@ -131,7 +131,8 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 - [x] **App iOS in Firebase** (`tool/GoogleService-Info.plist`): configurazione iOS nell'app, accesso Google su iPhone (ID client e schema URL nell'Info.plist).
 - [ ] **Chiave APNs** per le notifiche push.
 - [ ] **Accesso con Apple** da verificare sul dispositivo.
-- [ ] **App iOS in AdMob** (ID app e unità) e messaggio per la richiesta di tracciamento in AdMob → Privacy e messaggi.
+- [x] **App iOS in AdMob**: ID app ~6937020308, apertura app /8058530282, con premio /4630633193.
+- [ ] Messaggio **«Spiegazione dell'IDFA»** in AdMob → Privacy e messaggi (iOS), prima della richiesta di tracciamento di Apple.
 
 ## Note
 - Quando esce una versione con nuovi dati, chi modifica una manutenzione da un'app vecchia può perdere i campi nuovi (per esempio i costi della 2.1.2). Conviene mandare la campagna Firebase sull'argomento `updates` appena la versione è sul Play Store.
