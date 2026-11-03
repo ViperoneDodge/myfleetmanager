@@ -80,6 +80,24 @@ jobs:
               raise SystemExit(1)
           PY
 
+      - name: Certificato e profilo di distribuzione
+        shell: bash
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set -e
+          "$RUNNER_TEMP/jwt/bin/python" tool/ios_signing.py create
+          KC="$RUNNER_TEMP/ci.keychain-db"
+          security create-keychain -p ci "$KC"
+          security set-keychain-settings -lut 7200 "$KC"
+          security unlock-keychain -p ci "$KC"
+          security import "$RUNNER_TEMP/dist.p12" -k "$KC" -P "$IOS_P12_PASSWORD" -T /usr/bin/codesign -T /usr/bin/security
+          security set-key-partition-list -S apple-tool:,apple: -s -k ci "$KC" > /dev/null
+          security list-keychains -d user -s "$KC" $(security list-keychains -d user | tr -d '"')
+          rm -f "$RUNNER_TEMP/dist.p12"
+          security find-identity -v -p codesigning "$KC"
+
       - name: Prepara progetto iOS
         shell: bash
         run: |
@@ -131,7 +149,14 @@ jobs:
             <key>teamID</key>
             <string>C4WH22N952</string>
             <key>signingStyle</key>
-            <string>automatic</string>
+            <string>manual</string>
+            <key>signingCertificate</key>
+            <string>Apple Distribution</string>
+            <key>provisioningProfiles</key>
+            <dict>
+              <key>it.myfleet.myfleetmanager</key>
+              <string>PROFILE_NAME</string>
+            </dict>
             <key>uploadSymbols</key>
             <true/>
             <key>manageAppVersionAndBuildNumber</key>
@@ -139,6 +164,7 @@ jobs:
           </dict>
           </plist>
           PLIST
+          sed -i '' "s/PROFILE_NAME/$IOS_PROFILE_NAME/" ExportOptions.plist
           xcodebuild -exportArchive -archivePath build/Runner.xcarchive \
             -exportOptionsPlist ExportOptions.plist -exportPath build/export \
             -allowProvisioningUpdates \
@@ -146,10 +172,18 @@ jobs:
             -authenticationKeyID "$ASC_KEY_ID" \
             -authenticationKeyIssuerID "$ASC_ISSUER_ID" 2>&1 | tee export.log | tail -40
 
-      - name: Cancella la chiave
+      - name: Elimina certificato, profilo e chiave
         if: always()
         shell: bash
-        run: rm -rf "$RUNNER_TEMP/keys"
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          if [ -x "$RUNNER_TEMP/jwt/bin/python" ] && [ -f "$RUNNER_TEMP/keys/AuthKey.p8" ]; then
+            "$RUNNER_TEMP/jwt/bin/python" tool/ios_signing.py cleanup || true
+          fi
+          security delete-keychain "$RUNNER_TEMP/ci.keychain-db" 2>/dev/null || true
+          rm -rf "$RUNNER_TEMP/keys"
 
       - uses: actions/upload-artifact@v4
         if: always()

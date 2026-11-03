@@ -1,3 +1,4 @@
+import os
 import pathlib
 import re
 
@@ -94,16 +95,19 @@ if pbx.exists():
         )
         pbx.write_text(t)
         print("Signing team set in", pbx)
+    profile_name = os.environ.get("IOS_PROFILE_NAME", "")
     t = pbx.read_text()
-    if "Apple Distribution" not in t:
+    if profile_name and "PROVISIONING_PROFILE_SPECIFIER" not in t:
         def dist(m):
             body = m.group(0)
             if m.group(1) in ("Release", "Profile") and "INFOPLIST_FILE = Runner/Info.plist;" in body:
+                body = body.replace("CODE_SIGN_STYLE = Automatic;", "CODE_SIGN_STYLE = Manual;")
                 body = body.replace(
                     "INFOPLIST_FILE = Runner/Info.plist;",
-                    '"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";\n\t\t\t\tINFOPLIST_FILE = Runner/Info.plist;',
+                    '"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";\n\t\t\t\t'
+                    f'PROVISIONING_PROFILE_SPECIFIER = "{profile_name}";\n\t\t\t\tINFOPLIST_FILE = Runner/Info.plist;',
                 )
             return body
         t = re.sub(r"/\* (Debug|Release|Profile) \*/ = \{\s*isa = XCBuildConfiguration;.*?\n\t\t\};", dist, t, flags=re.S)
         pbx.write_text(t)
-        print("Distribution identity set in", pbx)
+        print("Manual distribution signing set in", pbx)
