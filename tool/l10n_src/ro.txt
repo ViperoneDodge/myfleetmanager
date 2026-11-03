@@ -631,3 +631,4 @@ Folosește ca vehiculul nr. {n}
 în locul {vehicle}
 {vehicle} este acum vehiculul nr. {n}
 Nu există alte mașini sau motociclete de ales
+Copiile online ale documentelor tale vor fi șterse. Documentele rămân pe acest telefon.

@@ -631,3 +631,4 @@ Uporabi kot {n}. vozilo
 namesto {vehicle}
 {vehicle} je zdaj {n}. vozilo
 Ni drugih avtomobilov ali motorjev za izbiro
+Spletne kopije tvojih dokumentov bodo izbrisane. Dokumenti ostanejo na tem telefonu.

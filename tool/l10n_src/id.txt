@@ -631,3 +631,4 @@ Gunakan sebagai kendaraan ke-{n}
 menggantikan {vehicle}
 {vehicle} sekarang kendaraan ke-{n}
 Tidak ada mobil atau motor lain untuk dipilih
+Salinan online dokumenmu akan dihapus. Dokumen tetap ada di ponsel ini.

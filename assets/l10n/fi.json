@@ -631,5 +631,6 @@
  "reward.useAs": "Käytä ajoneuvona nro {n}",
  "reward.replaces": "{vehicle} tilalle",
  "reward.chosen": "{vehicle} on nyt ajoneuvo nro {n}",
- "reward.noCandidates": "Muita autoja tai moottoripyöriä ei ole valittavana"
+ "reward.noCandidates": "Muita autoja tai moottoripyöriä ei ole valittavana",
+ "docs.withdrawConfirm": "Asiakirjojesi verkkokopiot poistetaan. Asiakirjat jäävät tähän puhelimeen."
 }

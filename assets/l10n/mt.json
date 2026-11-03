@@ -631,5 +631,6 @@
  "reward.useAs": "Uża bħala l-vettura nru {n}",
  "reward.replaces": "minflok {vehicle}",
  "reward.chosen": "{vehicle} issa hija l-vettura nru {n}",
- "reward.noCandidates": "M'hemmx karozzi jew muturi oħra x'tagħżel"
+ "reward.noCandidates": "M'hemmx karozzi jew muturi oħra x'tagħżel",
+ "docs.withdrawConfirm": "Il-kopji online tad-dokumenti tiegħek se jitħassru. Id-dokumenti jibqgħu fuq dan it-telefon."
 }

@@ -631,3 +631,4 @@ Použiť ako vozidlo č. {n}
 namiesto {vehicle}
 {vehicle} je teraz vozidlo č. {n}
 Nie sú k dispozícii ďalšie autá ani motorky
+Online kópie tvojich dokumentov budú vymazané. Dokumenty zostanú v tomto telefóne.

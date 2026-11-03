@@ -631,5 +631,6 @@
  "reward.useAs": "Gebruiken als voertuig nr. {n}",
  "reward.replaces": "in plaats van {vehicle}",
  "reward.chosen": "{vehicle} is nu voertuig nr. {n}",
- "reward.noCandidates": "Er zijn geen andere auto's of motoren om te kiezen"
+ "reward.noCandidates": "Er zijn geen andere auto's of motoren om te kiezen",
+ "docs.withdrawConfirm": "De online kopieën van je documenten worden verwijderd. De documenten blijven op deze telefoon."
 }

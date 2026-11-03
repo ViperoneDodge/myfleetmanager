@@ -631,5 +631,6 @@
  "reward.useAs": "Použít jako vozidlo č. {n}",
  "reward.replaces": "místo {vehicle}",
  "reward.chosen": "{vehicle} je nyní vozidlo č. {n}",
- "reward.noCandidates": "Nejsou k dispozici další auta ani motorky"
+ "reward.noCandidates": "Nejsou k dispozici další auta ani motorky",
+ "docs.withdrawConfirm": "Online kopie tvých dokumentů budou smazány. Dokumenty zůstanou v tomto telefonu."
 }

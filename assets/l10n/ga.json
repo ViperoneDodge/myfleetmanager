@@ -631,5 +631,6 @@
  "reward.useAs": "Úsáid mar fheithicil uimh. {n}",
  "reward.replaces": "in ionad {vehicle}",
  "reward.chosen": "Is é {vehicle} feithicil uimh. {n} anois",
- "reward.noCandidates": "Níl gluaisteáin ná gluaisrothair eile le roghnú"
+ "reward.noCandidates": "Níl gluaisteáin ná gluaisrothair eile le roghnú",
+ "docs.withdrawConfirm": "Scriosfar na cóipeanna ar líne de do dhoiciméid. Fanfaidh na doiciméid ar an bhfón seo."
 }

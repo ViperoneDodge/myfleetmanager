@@ -631,3 +631,4 @@ Gebruiken als voertuig nr. {n}
 in plaats van {vehicle}
 {vehicle} is nu voertuig nr. {n}
 Er zijn geen andere auto's of motoren om te kiezen
+De online kopieën van je documenten worden verwijderd. De documenten blijven op deze telefoon.

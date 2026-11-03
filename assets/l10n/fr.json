@@ -631,5 +631,6 @@
  "reward.useAs": "Utiliser comme véhicule n° {n}",
  "reward.replaces": "à la place de {vehicle}",
  "reward.chosen": "{vehicle} est maintenant le véhicule n° {n}",
- "reward.noCandidates": "Il n'y a pas d'autres voitures ou motos à choisir"
+ "reward.noCandidates": "Il n'y a pas d'autres voitures ou motos à choisir",
+ "docs.withdrawConfirm": "Les copies en ligne de tes documents seront supprimées. Les documents restent sur ce téléphone."
 }

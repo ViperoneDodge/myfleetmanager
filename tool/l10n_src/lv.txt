@@ -631,3 +631,4 @@ Izmantot kā transportlīdzekli nr. {n}
 {vehicle} vietā
 {vehicle} tagad ir transportlīdzeklis nr. {n}
 Nav citu automašīnu vai motociklu, ko izvēlēties
+Tavu dokumentu tiešsaistes kopijas tiks dzēstas. Dokumenti paliek šajā tālrunī.

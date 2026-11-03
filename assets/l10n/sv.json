@@ -631,5 +631,6 @@
  "reward.useAs": "Använd som fordon nr {n}",
  "reward.replaces": "i stället för {vehicle}",
  "reward.chosen": "{vehicle} är nu fordon nr {n}",
- "reward.noCandidates": "Det finns inga andra bilar eller motorcyklar att välja"
+ "reward.noCandidates": "Det finns inga andra bilar eller motorcyklar att välja",
+ "docs.withdrawConfirm": "Onlinekopiorna av dina dokument raderas. Dokumenten finns kvar på den här telefonen."
 }

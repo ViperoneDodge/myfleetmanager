@@ -631,3 +631,4 @@ Nota sem ökutæki nr. {n}
 í stað {vehicle}
 {vehicle} er nú ökutæki nr. {n}
 Engir aðrir bílar eða bifhjól til að velja
+Netafritum skjalanna þinna verður eytt. Skjölin verða áfram á þessum síma.

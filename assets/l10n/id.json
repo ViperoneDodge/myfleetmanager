@@ -631,5 +631,6 @@
  "reward.useAs": "Gunakan sebagai kendaraan ke-{n}",
  "reward.replaces": "menggantikan {vehicle}",
  "reward.chosen": "{vehicle} sekarang kendaraan ke-{n}",
- "reward.noCandidates": "Tidak ada mobil atau motor lain untuk dipilih"
+ "reward.noCandidates": "Tidak ada mobil atau motor lain untuk dipilih",
+ "docs.withdrawConfirm": "Salinan online dokumenmu akan dihapus. Dokumen tetap ada di ponsel ini."
 }

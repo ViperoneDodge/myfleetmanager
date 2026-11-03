@@ -631,5 +631,6 @@
  "reward.useAs": "{n}台目として使う",
  "reward.replaces": "{vehicle} の代わりに",
  "reward.chosen": "{vehicle} が{n}台目になりました",
- "reward.noCandidates": "選択できる他の車やバイクはありません"
+ "reward.noCandidates": "選択できる他の車やバイクはありません",
+ "docs.withdrawConfirm": "書類のオンラインコピーは削除されます。書類はこのスマートフォンに残ります。"
 }

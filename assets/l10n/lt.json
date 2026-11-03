@@ -631,5 +631,6 @@
  "reward.useAs": "Naudoti kaip transporto priemonę nr. {n}",
  "reward.replaces": "vietoj {vehicle}",
  "reward.chosen": "{vehicle} dabar yra transporto priemonė nr. {n}",
- "reward.noCandidates": "Nėra kitų automobilių ar motociklų pasirinkti"
+ "reward.noCandidates": "Nėra kitų automobilių ar motociklų pasirinkti",
+ "docs.withdrawConfirm": "Internetinės tavo dokumentų kopijos bus ištrintos. Dokumentai liks šiame telefone."
 }

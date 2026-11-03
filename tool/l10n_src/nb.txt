@@ -631,3 +631,4 @@ Bruk som kjøretøy nr. {n}
 i stedet for {vehicle}
 {vehicle} er nå kjøretøy nr. {n}
 Det finnes ingen andre biler eller motorsykler å velge
+Nettkopiene av dokumentene dine slettes. Dokumentene blir værende på denne telefonen.

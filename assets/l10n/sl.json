@@ -631,5 +631,6 @@
  "reward.useAs": "Uporabi kot {n}. vozilo",
  "reward.replaces": "namesto {vehicle}",
  "reward.chosen": "{vehicle} je zdaj {n}. vozilo",
- "reward.noCandidates": "Ni drugih avtomobilov ali motorjev za izbiro"
+ "reward.noCandidates": "Ni drugih avtomobilov ali motorjev za izbiro",
+ "docs.withdrawConfirm": "Spletne kopije tvojih dokumentov bodo izbrisane. Dokumenti ostanejo na tem telefonu."
 }

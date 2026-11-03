@@ -631,5 +631,6 @@
  "reward.useAs": "Folosește ca vehiculul nr. {n}",
  "reward.replaces": "în locul {vehicle}",
  "reward.chosen": "{vehicle} este acum vehiculul nr. {n}",
- "reward.noCandidates": "Nu există alte mașini sau motociclete de ales"
+ "reward.noCandidates": "Nu există alte mașini sau motociclete de ales",
+ "docs.withdrawConfirm": "Copiile online ale documentelor tale vor fi șterse. Documentele rămân pe acest telefon."
 }

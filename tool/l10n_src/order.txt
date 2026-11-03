@@ -631,3 +631,4 @@ reward.useAs
 reward.replaces
 reward.chosen
 reward.noCandidates
+docs.withdrawConfirm

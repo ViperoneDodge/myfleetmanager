@@ -631,3 +631,4 @@ Naudoti kaip transporto priemonę nr. {n}
 vietoj {vehicle}
 {vehicle} dabar yra transporto priemonė nr. {n}
 Nėra kitų automobilių ar motociklų pasirinkti
+Internetinės tavo dokumentų kopijos bus ištrintos. Dokumentai liks šiame telefone.

@@ -631,5 +631,6 @@
  "reward.useAs": "Nota sem ökutæki nr. {n}",
  "reward.replaces": "í stað {vehicle}",
  "reward.chosen": "{vehicle} er nú ökutæki nr. {n}",
- "reward.noCandidates": "Engir aðrir bílar eða bifhjól til að velja"
+ "reward.noCandidates": "Engir aðrir bílar eða bifhjól til að velja",
+ "docs.withdrawConfirm": "Netafritum skjalanna þinna verður eytt. Skjölin verða áfram á þessum síma."
 }

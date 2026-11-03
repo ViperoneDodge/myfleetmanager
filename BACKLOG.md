@@ -5,6 +5,9 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 ## Prossima versione
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 
+## Versione 2.2.1
+- [x] **Documenti online cancellati dopo una reinstallazione** (errore grave): la scelta «copia online dei documenti» è salvata solo sul telefono; dopo una reinstallazione l'app la richiedeva e con «No, solo sul telefono» cancellava dal cloud tutti i documenti caricati dall'utente. Ora: se nel cloud ci sono già documenti caricati dall'utente la copia online risulta attiva senza chiedere; il «No» della prima richiesta non cancella più niente; spegnere la copia online dalle Impostazioni chiede conferma prima di cancellare.
+
 ## Versione 2.2.0 — prima uscita pubblica con pubblicità e premi
 - [x] **Pubblicità e premi attivi sul Play Store**: annuncio all'apertura (dopo 24 ore, poi al massimo uno ogni 4 ore) e video con premio per sbloccare per sempre il 4° e il 5° veicolo, con la scelta dei veicoli; raccoglie tutte le versioni di prova 2.1.15-2 … 2.1.15-5 qui sotto.
 - [x] **App verificata e approvata in AdMob** (app-ads.txt sul sito indicato nella scheda Play Store).

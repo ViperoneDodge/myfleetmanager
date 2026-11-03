@@ -631,5 +631,6 @@
  "reward.useAs": "Kasuta sõidukina nr {n}",
  "reward.replaces": "{vehicle} asemel",
  "reward.chosen": "{vehicle} on nüüd sõiduk nr {n}",
- "reward.noCandidates": "Muid autosid ega mootorrattaid valida pole"
+ "reward.noCandidates": "Muid autosid ega mootorrattaid valida pole",
+ "docs.withdrawConfirm": "Sinu dokumentide veebikoopiad kustutatakse. Dokumendid jäävad sellesse telefoni."
 }

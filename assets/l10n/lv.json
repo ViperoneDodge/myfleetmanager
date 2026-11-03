@@ -631,5 +631,6 @@
  "reward.useAs": "Izmantot kā transportlīdzekli nr. {n}",
  "reward.replaces": "{vehicle} vietā",
  "reward.chosen": "{vehicle} tagad ir transportlīdzeklis nr. {n}",
- "reward.noCandidates": "Nav citu automašīnu vai motociklu, ko izvēlēties"
+ "reward.noCandidates": "Nav citu automašīnu vai motociklu, ko izvēlēties",
+ "docs.withdrawConfirm": "Tavu dokumentu tiešsaistes kopijas tiks dzēstas. Dokumenti paliek šajā tālrunī."
 }

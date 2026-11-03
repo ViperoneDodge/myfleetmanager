@@ -631,3 +631,4 @@ Dùng làm xe thứ {n}
 thay cho {vehicle}
 {vehicle} giờ là xe thứ {n}
 Không còn ô tô hoặc xe máy nào khác để chọn
+Các bản sao trực tuyến của tài liệu sẽ bị xóa. Tài liệu vẫn còn trên điện thoại này.

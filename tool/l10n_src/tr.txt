@@ -631,3 +631,4 @@ Araç seçilmedi
 {vehicle} yerine
 {vehicle} artık {n}. araç
 Seçilecek başka otomobil veya motosiklet yok
+Belgelerinin çevrimiçi kopyaları silinecek. Belgeler bu telefonda kalır.

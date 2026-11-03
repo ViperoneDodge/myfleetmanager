@@ -307,13 +307,13 @@ class AppState extends ChangeNotifier {
   bool shouldAskDocsConsent() =>
       isCloud && docsConsent == null && data.vehicles.any((v) => !v.deleted && v.documents.isNotEmpty);
 
-  Future<void> setDocsConsent(bool on) async {
+  Future<void> setDocsConsent(bool on, {bool withdraw = false}) async {
     docsConsent = on;
     await _writeSettings();
     notifyListeners();
     if (on) {
       _queueDocUploads();
-    } else {
+    } else if (withdraw) {
       await _withdrawMyDocs();
     }
   }
@@ -363,6 +363,10 @@ class AppState extends ChangeNotifier {
     if (remote == null) return false;
     final me = session?.key;
     var changed = false;
+    if (docsConsent == null && me != null && remote.any((r) => r['by'] == me)) {
+      docsConsent = true;
+      _writeSettings();
+    }
     final byVehicle = <String, List<Map<String, dynamic>>>{};
     for (final r in remote) {
       byVehicle.putIfAbsent((r['vehicleId'] ?? '').toString(), () => []).add(r);

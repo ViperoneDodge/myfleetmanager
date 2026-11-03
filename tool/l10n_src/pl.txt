@@ -631,3 +631,4 @@ Użyj jako pojazd nr {n}
 zamiast {vehicle}
 {vehicle} jest teraz pojazdem nr {n}
 Brak innych samochodów lub motocykli do wyboru
+Kopie online twoich dokumentów zostaną usunięte. Dokumenty pozostaną na tym telefonie.

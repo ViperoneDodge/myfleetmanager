@@ -631,5 +631,6 @@
  "reward.useAs": "{n}. araç olarak kullan",
  "reward.replaces": "{vehicle} yerine",
  "reward.chosen": "{vehicle} artık {n}. araç",
- "reward.noCandidates": "Seçilecek başka otomobil veya motosiklet yok"
+ "reward.noCandidates": "Seçilecek başka otomobil veya motosiklet yok",
+ "docs.withdrawConfirm": "Belgelerinin çevrimiçi kopyaları silinecek. Belgeler bu telefonda kalır."
 }

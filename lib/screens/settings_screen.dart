@@ -203,7 +203,18 @@ class SettingsScreen extends StatelessWidget {
                   if (on) {
                     await askDocsConsent(context, force: true);
                   } else {
-                    await appState.setDocsConsent(false);
+                    final ok = await showDialog<bool>(
+                      context: context,
+                      builder: (ctx) => AlertDialog(
+                        icon: const Icon(Icons.cloud_off_outlined),
+                        content: Text(tr('docs.withdrawConfirm')),
+                        actions: [
+                          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(tr('common.cancel'))),
+                          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(tr('common.delete'))),
+                        ],
+                      ),
+                    );
+                    if (ok == true) await appState.setDocsConsent(false, withdraw: true);
                   }
                 },
               ),

@@ -631,3 +631,4 @@ Használat {n}. járműként
 {vehicle} helyett
 {vehicle} most a {n}. jármű
 Nincs más választható autó vagy motor
+A dokumentumaid online másolatai törlődnek. A dokumentumok ezen a telefonon maradnak.

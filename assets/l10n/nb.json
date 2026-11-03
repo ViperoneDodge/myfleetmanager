@@ -631,5 +631,6 @@
  "reward.useAs": "Bruk som kjøretøy nr. {n}",
  "reward.replaces": "i stedet for {vehicle}",
  "reward.chosen": "{vehicle} er nå kjøretøy nr. {n}",
- "reward.noCandidates": "Det finnes ingen andre biler eller motorsykler å velge"
+ "reward.noCandidates": "Det finnes ingen andre biler eller motorsykler å velge",
+ "docs.withdrawConfirm": "Nettkopiene av dokumentene dine slettes. Dokumentene blir værende på denne telefonen."
 }

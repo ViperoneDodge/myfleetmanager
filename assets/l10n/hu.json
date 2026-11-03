@@ -631,5 +631,6 @@
  "reward.useAs": "Használat {n}. járműként",
  "reward.replaces": "{vehicle} helyett",
  "reward.chosen": "{vehicle} most a {n}. jármű",
- "reward.noCandidates": "Nincs más választható autó vagy motor"
+ "reward.noCandidates": "Nincs más választható autó vagy motor",
+ "docs.withdrawConfirm": "A dokumentumaid online másolatai törlődnek. A dokumentumok ezen a telefonon maradnak."
 }

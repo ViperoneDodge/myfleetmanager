@@ -631,3 +631,4 @@ Níor roghnaíodh feithicil
 in ionad {vehicle}
 Is é {vehicle} feithicil uimh. {n} anois
 Níl gluaisteáin ná gluaisrothair eile le roghnú
+Scriosfar na cóipeanna ar líne de do dhoiciméid. Fanfaidh na doiciméid ar an bhfón seo.

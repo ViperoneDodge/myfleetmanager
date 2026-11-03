@@ -631,3 +631,4 @@ Usar como veículo n.º {n}
 em vez de {vehicle}
 {vehicle} é agora o veículo n.º {n}
 Não há outros carros ou motos para escolher
+As cópias online dos teus documentos serão eliminadas. Os documentos ficam neste telemóvel.

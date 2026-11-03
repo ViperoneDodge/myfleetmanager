@@ -631,5 +631,6 @@
  "reward.useAs": "用作第 {n} 辆车",
  "reward.replaces": "替换 {vehicle}",
  "reward.chosen": "{vehicle} 现在是第 {n} 辆车",
- "reward.noCandidates": "没有其他汽车或摩托车可选"
+ "reward.noCandidates": "没有其他汽车或摩托车可选",
+ "docs.withdrawConfirm": "你的文件的在线副本将被删除。文件会保留在这部手机上。"
 }
