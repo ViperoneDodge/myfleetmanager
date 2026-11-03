@@ -129,7 +129,8 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 - [x] **Build firmata per TestFlight** (comando manuale «iOS su TestFlight»): firma automatica con la chiave API di App Store Connect nei secret `ASC_KEY_ID`, `ASC_ISSUER_ID`, `ASC_KEY_P8`.
 - [x] Testo per la **richiesta di tracciamento (ATT)** e dichiarazione di crittografia standard nell'Info.plist.
 - [x] **Scheda dell'app in App Store Connect** creata; testi, parole chiave, etichette privacy e note per la revisione in `tool/store/scheda_app_store.md`; screenshot iPhone (1290×2796) e iPad (2064×2752) generati con `SHOT_SIZE=ios` / `SHOT_SIZE=ipad`.
-- [ ] Prime prove su **TestFlight**.
+- [x] **Primo caricamento su TestFlight** riuscito (2.2.1, build 59.13): Mac macOS 26 con l'Xcode più recente, firma manuale con certificato di distribuzione e profilo App Store creati e revocati a ogni caricamento tramite l'API di App Store Connect (`tool/ios_signing.py`).
+- [ ] Prove dell'app su iPhone con TestFlight (accesso email/Google/Apple, notifiche, Face ID, annunci, acquisto Pro).
 - [ ] **Acquisto in-app `myfleet_pro`** in App Store Connect (non consumabile), dopo il contratto per le app a pagamento.
 - [ ] **Account di prova per la revisione Apple** con dati inventati.
 - [ ] Revoca dell'accesso con Apple quando un utente elimina l'account (chiave «Sign in with Apple» in Firebase).
