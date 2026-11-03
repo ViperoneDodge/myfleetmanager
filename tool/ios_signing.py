@@ -71,10 +71,16 @@ def create():
     der = base64.b64decode(cert["attributes"]["certificateContent"])
     certificate = x509.load_der_x509_certificate(der)
     password = base64.b16encode(os.urandom(12)).decode()
-    p12 = pkcs12.serialize_key_and_certificates(
-        b"MyFleetManager CI", key, certificate, None, serialization.BestAvailableEncryption(password.encode())
+    legacy = (
+        serialization.PrivateFormat.PKCS12.encryption_builder()
+        .kdf_rounds(50000)
+        .key_cert_algorithm(pkcs12.PBES.PBESv1SHA1And3KeyTripleDESCBC)
+        .hmac_hash(hashes.SHA1())
+        .build(password.encode())
     )
+    p12 = pkcs12.serialize_key_and_certificates(b"MyFleetManager CI", key, certificate, None, legacy)
     open(os.path.join(TEMP, "dist.p12"), "wb").write(p12)
+    open(os.path.join(TEMP, "dist.pass"), "w").write(password)
 
     name = f"MyFleetManager CI {int(time.time())}"
     profile = call("POST", "/profiles", {

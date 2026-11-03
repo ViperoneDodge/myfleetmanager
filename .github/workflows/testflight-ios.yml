@@ -92,10 +92,10 @@ jobs:
           security create-keychain -p ci "$KC"
           security set-keychain-settings -lut 7200 "$KC"
           security unlock-keychain -p ci "$KC"
-          security import "$RUNNER_TEMP/dist.p12" -k "$KC" -P "$IOS_P12_PASSWORD" -T /usr/bin/codesign -T /usr/bin/security
+          security import "$RUNNER_TEMP/dist.p12" -k "$KC" -P "$(cat "$RUNNER_TEMP/dist.pass")" -T /usr/bin/codesign -T /usr/bin/security
           security set-key-partition-list -S apple-tool:,apple: -s -k ci "$KC" > /dev/null
           security list-keychains -d user -s "$KC" $(security list-keychains -d user | tr -d '"')
-          rm -f "$RUNNER_TEMP/dist.p12"
+          rm -f "$RUNNER_TEMP/dist.p12" "$RUNNER_TEMP/dist.pass"
           security find-identity -v -p codesigning "$KC"
 
       - name: Prepara progetto iOS
