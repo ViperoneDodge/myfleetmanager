@@ -636,5 +636,7 @@
  "reward.choose": "Izvēlēties",
  "reward.once": "Izvēlēties var tikai vienreiz",
  "reward.fixed": "Galīga izvēle",
- "reward.confirm": "{vehicle} kļūs par tavu transportlīdzekli nr. {n}. Izvēle ir galīga, un to vairs nevarēs mainīt. Apstiprināt?"
+ "reward.confirm": "{vehicle} kļūs par tavu transportlīdzekli nr. {n}. Izvēle ir galīga, un to vairs nevarēs mainīt. Apstiprināt?",
+ "due.inYears": "Pēc {n} gadiem",
+ "due.expiredYears": "Beidzās pirms {n} gadiem"
 }

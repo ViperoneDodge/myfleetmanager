@@ -636,5 +636,7 @@
  "reward.choose": "Kiezen",
  "reward.once": "Je kunt maar één keer kiezen",
  "reward.fixed": "Definitieve keuze",
- "reward.confirm": "{vehicle} wordt je voertuig nr. {n}. Deze keuze is definitief en kan niet meer worden gewijzigd. Bevestigen?"
+ "reward.confirm": "{vehicle} wordt je voertuig nr. {n}. Deze keuze is definitief en kan niet meer worden gewijzigd. Bevestigen?",
+ "due.inYears": "Over {n} jaar",
+ "due.expiredYears": "{n} jaar geleden verlopen"
 }

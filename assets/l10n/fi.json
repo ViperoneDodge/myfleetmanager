@@ -636,5 +636,7 @@
  "reward.choose": "Valitse",
  "reward.once": "Voit valita vain kerran",
  "reward.fixed": "Lopullinen valinta",
- "reward.confirm": "{vehicle} tulee ajoneuvoksesi nro {n}. Valinta on lopullinen eikä sitä voi myöhemmin muuttaa. Vahvistetaanko?"
+ "reward.confirm": "{vehicle} tulee ajoneuvoksesi nro {n}. Valinta on lopullinen eikä sitä voi myöhemmin muuttaa. Vahvistetaanko?",
+ "due.inYears": "{n} vuoden päästä",
+ "due.expiredYears": "Umpeutui {n} vuotta sitten"
 }

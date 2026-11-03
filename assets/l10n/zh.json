@@ -636,5 +636,7 @@
  "reward.choose": "选择",
  "reward.once": "只能选择一次",
  "reward.fixed": "最终选择",
- "reward.confirm": "{vehicle} 将成为你的第 {n} 辆车。此选择为最终选择，之后无法更改。确认吗？"
+ "reward.confirm": "{vehicle} 将成为你的第 {n} 辆车。此选择为最终选择，之后无法更改。确认吗？",
+ "due.inYears": "{n} 年后",
+ "due.expiredYears": "已过期 {n} 年"
 }

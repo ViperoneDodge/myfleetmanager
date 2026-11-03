@@ -636,5 +636,7 @@
  "reward.choose": "Velja",
  "reward.once": "Þú getur aðeins valið einu sinni",
  "reward.fixed": "Endanlegt val",
- "reward.confirm": "{vehicle} verður ökutæki nr. {n}. Valið er endanlegt og ekki hægt að breyta því síðar. Staðfesta?"
+ "reward.confirm": "{vehicle} verður ökutæki nr. {n}. Valið er endanlegt og ekki hægt að breyta því síðar. Staðfesta?",
+ "due.inYears": "Eftir {n} ár",
+ "due.expiredYears": "Rann út fyrir {n} árum"
 }

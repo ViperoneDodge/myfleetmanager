@@ -636,3 +636,5 @@ Välj
 Du kan bara välja en gång
 Slutgiltigt val
 {vehicle} blir ditt fordon nr {n}. Valet är slutgiltigt och kan inte ändras senare. Bekräfta?
+Om {n} år
+Gick ut för {n} år sedan

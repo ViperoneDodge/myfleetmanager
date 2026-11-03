@@ -636,5 +636,7 @@
  "reward.choose": "選択",
  "reward.once": "選べるのは一度だけです",
  "reward.fixed": "確定済み",
- "reward.confirm": "{vehicle} が{n}台目の車両になります。この選択は確定で、後から変更できません。よろしいですか？"
+ "reward.confirm": "{vehicle} が{n}台目の車両になります。この選択は確定で、後から変更できません。よろしいですか？",
+ "due.inYears": "あと{n}年",
+ "due.expiredYears": "{n}年前に期限切れ"
 }

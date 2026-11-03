@@ -6,6 +6,7 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 
 ## Versione 2.2.1
+- [x] **Scadenze oltre i 2 anni in anni interi** («Tra 3 anni», «Scaduta da 3 anni») invece che in giorni, in tutte le 36 lingue.
 - [x] **4° e 5° veicolo scelti una volta sola**: prima si poteva cambiare in continuazione e usare così tutti i veicoli. Ora ogni posto sbloccato con i premi si sceglie una volta, con conferma («La scelta è definitiva»), e poi resta bloccato; si libera solo se il veicolo viene eliminato. La scelta è salvata anche nel profilo online, quindi resta dopo una reinstallazione; se un veicolo cambia gruppo resta nel suo posto.
 - [x] **Documenti online cancellati dopo una reinstallazione** (errore grave): la scelta «copia online dei documenti» è salvata solo sul telefono; dopo una reinstallazione l'app la richiedeva e con «No, solo sul telefono» cancellava dal cloud tutti i documenti caricati dall'utente. Ora: se nel cloud ci sono già documenti caricati dall'utente la copia online risulta attiva senza chiedere; il «No» della prima richiesta non cancella più niente; spegnere la copia online dalle Impostazioni chiede conferma prima di cancellare.
 

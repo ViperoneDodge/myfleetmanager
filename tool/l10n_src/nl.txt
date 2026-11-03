@@ -636,3 +636,5 @@ Kiezen
 Je kunt maar één keer kiezen
 Definitieve keuze
 {vehicle} wordt je voertuig nr. {n}. Deze keuze is definitief en kan niet meer worden gewijzigd. Bevestigen?
+Over {n} jaar
+{n} jaar geleden verlopen

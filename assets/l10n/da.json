@@ -636,5 +636,7 @@
  "reward.choose": "Vælg",
  "reward.once": "Du kan kun vælge én gang",
  "reward.fixed": "Endeligt valg",
- "reward.confirm": "{vehicle} bliver dit køretøj nr. {n}. Valget er endeligt og kan ikke ændres senere. Bekræft?"
+ "reward.confirm": "{vehicle} bliver dit køretøj nr. {n}. Valget er endeligt og kan ikke ændres senere. Bekræft?",
+ "due.inYears": "Om {n} år",
+ "due.expiredYears": "Udløb for {n} år siden"
 }

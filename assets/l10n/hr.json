@@ -636,5 +636,7 @@
  "reward.choose": "Odaberi",
  "reward.once": "Možeš odabrati samo jednom",
  "reward.fixed": "Konačan odabir",
- "reward.confirm": "{vehicle} postat će tvoje {n}. vozilo. Odabir je konačan i ne može se promijeniti. Potvrđuješ?"
+ "reward.confirm": "{vehicle} postat će tvoje {n}. vozilo. Odabir je konačan i ne može se promijeniti. Potvrđuješ?",
+ "due.inYears": "Za {n} god.",
+ "due.expiredYears": "Isteklo prije {n} god."
 }

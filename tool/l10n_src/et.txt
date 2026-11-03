@@ -636,3 +636,5 @@ Vali
 Saad valida ainult ühe korra
 Lõplik valik
 {vehicle} saab sinu sõidukiks nr {n}. Valik on lõplik ja seda ei saa hiljem muuta. Kinnitad?
+{n} aasta pärast
+Aegus {n} aastat tagasi

@@ -636,3 +636,5 @@ Vybrať
 Vybrať môžeš iba raz
 Konečná voľba
 {vehicle} bude tvoje vozidlo č. {n}. Voľba je konečná a nedá sa neskôr zmeniť. Potvrdiť?
+O {n} rokov
+Vypršalo pred {n} rokmi

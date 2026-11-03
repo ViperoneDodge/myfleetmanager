@@ -636,3 +636,5 @@ Alege
 Poți alege o singură dată
 Alegere definitivă
 {vehicle} va deveni vehiculul tău nr. {n}. Alegerea este definitivă și nu mai poate fi schimbată. Confirmi?
+Peste {n} ani
+Expirat de {n} ani

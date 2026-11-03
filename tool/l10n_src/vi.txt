@@ -636,3 +636,5 @@ Chọn
 Bạn chỉ có thể chọn một lần
 Lựa chọn cố định
 {vehicle} sẽ trở thành xe thứ {n} của bạn. Lựa chọn này là cố định và không thể đổi sau. Xác nhận?
+Còn {n} năm
+Đã hết hạn {n} năm trước

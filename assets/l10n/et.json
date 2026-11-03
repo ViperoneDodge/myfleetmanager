@@ -636,5 +636,7 @@
  "reward.choose": "Vali",
  "reward.once": "Saad valida ainult ühe korra",
  "reward.fixed": "Lõplik valik",
- "reward.confirm": "{vehicle} saab sinu sõidukiks nr {n}. Valik on lõplik ja seda ei saa hiljem muuta. Kinnitad?"
+ "reward.confirm": "{vehicle} saab sinu sõidukiks nr {n}. Valik on lõplik ja seda ei saa hiljem muuta. Kinnitad?",
+ "due.inYears": "{n} aasta pärast",
+ "due.expiredYears": "Aegus {n} aastat tagasi"
 }

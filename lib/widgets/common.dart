@@ -116,6 +116,16 @@ const Color dueGreen = Color(0xFF2E7D32);
   return (t.substring(0, sp), t.substring(sp + 1));
 }
 
+int fullYearsBetween(DateTime a, DateTime b) {
+  final from = a.isBefore(b) ? a : b;
+  final to = a.isBefore(b) ? b : a;
+  var y = to.year - from.year;
+  if (to.month < from.month || (to.month == from.month && to.day < from.day)) y--;
+  return y;
+}
+
+const int yearsAfterDays = 730;
+
 DueStatus dueStatus(DateTime due) {
   final n = daysUntil(due);
   final Color color;
@@ -128,6 +138,10 @@ DueStatus dueStatus(DateTime due) {
     if (n == -1) {
       text = tr('due.yesterday');
       lines = _splitWords(text);
+    } else if (-n > yearsAfterDays) {
+      final y = fullYearsBetween(DateTime.now(), due);
+      text = tr('due.expiredYears', {'n': y});
+      lines = _splitAround('due.expiredYears', y);
     } else {
       text = tr('due.expiredDays', {'n': -n});
       lines = _splitAround('due.expiredDays', -n);
@@ -141,6 +155,10 @@ DueStatus dueStatus(DateTime due) {
     } else if (n == 1) {
       text = tr('due.tomorrow');
       lines = _splitWords(text);
+    } else if (n > yearsAfterDays) {
+      final y = fullYearsBetween(DateTime.now(), due);
+      text = tr('due.inYears', {'n': y});
+      lines = _splitAround('due.inYears', y);
     } else {
       text = tr('due.inDays', {'n': n});
       lines = _splitAround('due.inDays', n);

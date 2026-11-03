@@ -636,5 +636,7 @@
  "reward.choose": "Pasirinkti",
  "reward.once": "Pasirinkti galima tik kartą",
  "reward.fixed": "Galutinis pasirinkimas",
- "reward.confirm": "{vehicle} taps tavo transporto priemone nr. {n}. Pasirinkimas galutinis ir vėliau jo pakeisti negalėsi. Patvirtinti?"
+ "reward.confirm": "{vehicle} taps tavo transporto priemone nr. {n}. Pasirinkimas galutinis ir vėliau jo pakeisti negalėsi. Patvirtinti?",
+ "due.inYears": "Po {n} m.",
+ "due.expiredYears": "Baigėsi prieš {n} m."
 }

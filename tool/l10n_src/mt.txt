@@ -636,3 +636,5 @@ Agħżel
 Tista' tagħżel darba biss
 Għażla finali
 {vehicle} se ssir il-vettura nru {n} tiegħek. L-għażla hija finali u ma tistax tinbidel. Tikkonferma?
+Fi {n} snin
+Skada {n} snin ilu

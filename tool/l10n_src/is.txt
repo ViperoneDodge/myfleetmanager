@@ -636,3 +636,5 @@ Velja
 Þú getur aðeins valið einu sinni
 Endanlegt val
 {vehicle} verður ökutæki nr. {n}. Valið er endanlegt og ekki hægt að breyta því síðar. Staðfesta?
+Eftir {n} ár
+Rann út fyrir {n} árum

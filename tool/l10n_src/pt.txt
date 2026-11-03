@@ -636,3 +636,5 @@ Escolher
 Só podes escolher uma vez
 Escolha definitiva
 {vehicle} será o teu veículo n.º {n}. A escolha é definitiva e não poderás alterá-la. Confirmas?
+Daqui a {n} anos
+Expirou há {n} anos

@@ -636,3 +636,5 @@ Izvēlēties
 Izvēlēties var tikai vienreiz
 Galīga izvēle
 {vehicle} kļūs par tavu transportlīdzekli nr. {n}. Izvēle ir galīga, un to vairs nevarēs mainīt. Apstiprināt?
+Pēc {n} gadiem
+Beidzās pirms {n} gadiem

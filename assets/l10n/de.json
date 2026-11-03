@@ -636,5 +636,7 @@
  "reward.choose": "Wählen",
  "reward.once": "Du kannst es nur einmal wählen",
  "reward.fixed": "Endgültige Wahl",
- "reward.confirm": "{vehicle} wird dein Fahrzeug Nr. {n}. Die Wahl ist endgültig und kann nicht mehr geändert werden. Bestätigen?"
+ "reward.confirm": "{vehicle} wird dein Fahrzeug Nr. {n}. Die Wahl ist endgültig und kann nicht mehr geändert werden. Bestätigen?",
+ "due.inYears": "In {n} Jahren",
+ "due.expiredYears": "Seit {n} Jahren abgelaufen"
 }

@@ -636,5 +636,7 @@
  "reward.choose": "Choose",
  "reward.once": "You can choose it only once",
  "reward.fixed": "Final choice",
- "reward.confirm": "{vehicle} will become your vehicle no. {n}. This choice is final and cannot be changed later. Confirm?"
+ "reward.confirm": "{vehicle} will become your vehicle no. {n}. This choice is final and cannot be changed later. Confirm?",
+ "due.inYears": "In {n} years",
+ "due.expiredYears": "Expired {n} years ago"
 }

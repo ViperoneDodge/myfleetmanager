@@ -636,5 +636,7 @@
  "reward.choose": "Vybrat",
  "reward.once": "Vybrat můžeš jen jednou",
  "reward.fixed": "Konečná volba",
- "reward.confirm": "{vehicle} bude tvé vozidlo č. {n}. Volba je konečná a nelze ji později změnit. Potvrdit?"
+ "reward.confirm": "{vehicle} bude tvé vozidlo č. {n}. Volba je konečná a nelze ji později změnit. Potvrdit?",
+ "due.inYears": "Za {n} let",
+ "due.expiredYears": "Vypršelo před {n} lety"
 }

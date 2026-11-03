@@ -636,5 +636,7 @@
  "reward.choose": "Alege",
  "reward.once": "Poți alege o singură dată",
  "reward.fixed": "Alegere definitivă",
- "reward.confirm": "{vehicle} va deveni vehiculul tău nr. {n}. Alegerea este definitivă și nu mai poate fi schimbată. Confirmi?"
+ "reward.confirm": "{vehicle} va deveni vehiculul tău nr. {n}. Alegerea este definitivă și nu mai poate fi schimbată. Confirmi?",
+ "due.inYears": "Peste {n} ani",
+ "due.expiredYears": "Expirat de {n} ani"
 }

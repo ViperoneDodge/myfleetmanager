@@ -636,5 +636,7 @@
  "reward.choose": "Chọn",
  "reward.once": "Bạn chỉ có thể chọn một lần",
  "reward.fixed": "Lựa chọn cố định",
- "reward.confirm": "{vehicle} sẽ trở thành xe thứ {n} của bạn. Lựa chọn này là cố định và không thể đổi sau. Xác nhận?"
+ "reward.confirm": "{vehicle} sẽ trở thành xe thứ {n} của bạn. Lựa chọn này là cố định và không thể đổi sau. Xác nhận?",
+ "due.inYears": "Còn {n} năm",
+ "due.expiredYears": "Đã hết hạn {n} năm trước"
 }

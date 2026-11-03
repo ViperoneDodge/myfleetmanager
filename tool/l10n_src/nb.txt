@@ -636,3 +636,5 @@ Velg
 Du kan bare velge én gang
 Endelig valg
 {vehicle} blir kjøretøy nr. {n}. Valget er endelig og kan ikke endres senere. Bekrefte?
+Om {n} år
+Utløp for {n} år siden
