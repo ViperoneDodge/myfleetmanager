@@ -1,0 +1,39 @@
+name: Pulizia release
+
+on:
+  workflow_dispatch:
+    inputs:
+      fino_a_build:
+        description: Cancella le release con numero di build minore o uguale a questo
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  pulizia:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancella le release vecchie
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          MAX: ${{ inputs.fino_a_build }}
+        run: |
+          set -euo pipefail
+          [[ "$MAX" =~ ^[0-9]+$ ]] || { echo "Numero di build non valido: $MAX"; exit 1; }
+          n=0
+          gh release list --repo "$REPO" --limit 500 --json tagName --jq '.[].tagName' > tags.txt
+          while read -r tag; do
+            b=$(echo "$tag" | sed -n 's/.*-build\([0-9]\+\)$/\1/p')
+            [ -z "$b" ] && b=0
+            if [ "$b" -le "$MAX" ]; then
+              echo "Cancello $tag"
+              gh release delete "$tag" --repo "$REPO" --yes
+              n=$((n+1))
+            else
+              echo "Tengo $tag"
+            fi
+          done < tags.txt
+          echo "Release cancellate: $n"
