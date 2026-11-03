@@ -94,3 +94,16 @@ if pbx.exists():
         )
         pbx.write_text(t)
         print("Signing team set in", pbx)
+    t = pbx.read_text()
+    if "Apple Distribution" not in t:
+        def dist(m):
+            body = m.group(0)
+            if m.group(1) in ("Release", "Profile") and "INFOPLIST_FILE = Runner/Info.plist;" in body:
+                body = body.replace(
+                    "INFOPLIST_FILE = Runner/Info.plist;",
+                    '"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";\n\t\t\t\tINFOPLIST_FILE = Runner/Info.plist;',
+                )
+            return body
+        t = re.sub(r"/\* (Debug|Release|Profile) \*/ = \{\s*isa = XCBuildConfiguration;.*?\n\t\t\};", dist, t, flags=re.S)
+        pbx.write_text(t)
+        print("Distribution identity set in", pbx)
