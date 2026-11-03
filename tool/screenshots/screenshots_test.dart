@@ -26,6 +26,8 @@ import 'package:myfleetmanager/widgets/common.dart';
 
 const me = 'demo-me';
 
+final String shotSize = Platform.environment['SHOT_SIZE'] ?? '';
+
 Future<void> loadFonts() async {
   final sdk = Platform.environment['FLUTTER_ROOT']!;
   Future<void> f(String family, List<String> files) async {
@@ -161,7 +163,7 @@ Future<void> shot(WidgetTester tester, Widget home, String name, {Future<void> F
     await tester.pumpAndSettle();
     await precacheAll(tester);
   }
-  await expectLater(find.byType(MaterialApp), matchesGoldenFile('out/${L10n.code}/$name.png'));
+  await expectLater(find.byType(MaterialApp), matchesGoldenFile('${shotSize.isEmpty ? 'out' : 'out_$shotSize'}/${L10n.code}/$name.png'));
 }
 
 void main() {
@@ -178,8 +180,16 @@ void main() {
       });
       testWidgets('screens', (tester) async {
         await tester.runAsync(loadFonts);
-        tester.view.physicalSize = const Size(1080, 1920);
-        tester.view.devicePixelRatio = 2.625;
+        tester.view.physicalSize = switch (shotSize) {
+          'ios' => const Size(1290, 2796),
+          'ipad' => const Size(2064, 2752),
+          _ => const Size(1080, 1920),
+        };
+        tester.view.devicePixelRatio = switch (shotSize) {
+          'ios' => 3.0,
+          'ipad' => 2.0,
+          _ => 2.625,
+        };
         addTearDown(tester.view.reset);
         debugDisableShadows = false;
 
