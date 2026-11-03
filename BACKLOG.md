@@ -107,9 +107,9 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 - [ ] **App Check: registrazione e blocco** dalla console Firebase (Play Integrity collegato alla Play Console). Per il web serve una chiave reCAPTCHA. Con il blocco attivo, l'APK scaricato da GitHub non accede più al cloud: va distribuita solo la versione del Play Store.
 
 ### Pubblicità per utenti non Pro (Google AdMob) — passi da fare in console
-- [ ] **Account AdMob**, app collegata al Play Store, ID app e ID unità «Apertura app» (Android e iOS).
-- [ ] **Messaggio di consenso GDPR** in AdMob (Privacy e messaggi).
-- [ ] **app-ads.txt** pubblicato sul sito dello sviluppatore indicato in Play Console.
+- [x] **Account AdMob**, app collegata al Play Store, ID app e ID unità «Apertura app» e «Con premio» (Android; iOS da fare).
+- [x] **Messaggio di consenso GDPR** in AdMob (Privacy e messaggi).
+- [x] **app-ads.txt** pubblicato su https://myfleetmanager-3ca03.web.app, sito indicato nei dati di contatto della scheda Play Store: app verificata in AdMob, approvazione in preparazione.
 - [ ] **Play Console**: «L'app contiene annunci», «ID pubblicità: sì», Sicurezza dei dati aggiornata.
 - [x] Codice dell'app, pagina Pro, informativa sulla privacy (versione 2.1.15).
 - [ ] Prove solo con gli **annunci di prova** di Google: non cliccare mai gli annunci veri.
