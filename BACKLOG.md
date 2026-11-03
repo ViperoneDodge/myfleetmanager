@@ -8,7 +8,7 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 ## Versione 2.2.0 — prima uscita pubblica con pubblicità e premi
 - [x] **Pubblicità e premi attivi sul Play Store**: annuncio all'apertura (dopo 24 ore, poi al massimo uno ogni 4 ore) e video con premio per sbloccare per sempre il 4° e il 5° veicolo, con la scelta dei veicoli; raccoglie tutte le versioni di prova 2.1.15-2 … 2.1.15-5 qui sotto.
 - [x] **App verificata e approvata in AdMob** (app-ads.txt sul sito indicato nella scheda Play Store).
-- [x] **Permesso AD_ID nel manifest** (build 57): prima veniva tolto perché l'app non aveva pubblicità; la Play Console rifiutava la release con la dichiarazione «ID pubblicità: sì».
+- [x] **Permesso AD_ID nel manifest** (codice 57 e 58): prima veniva tolto perché l'app non aveva pubblicità; la Play Console rifiutava la release con la dichiarazione «ID pubblicità: sì».
 
 ## Versione 2.1.15-5 (prova)
 - [x] **Modalità di prova della pubblicità spenta** (`testBuild = false`): unità AdMob vere, primo annuncio all'apertura dopo 24 ore e poi al massimo uno ogni 4 ore; niente più stato tecnico sotto il pulsante dei premi.
