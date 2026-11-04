@@ -6,6 +6,7 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 
 ## Versione 2.2.2 — stessa versione su Android e iPhone
+- [x] **Pagina di assistenza** `support.html` sul sito (italiano e inglese: contatto e domande frequenti), da usare come «URL di supporto» nell'App Store.
 - [x] **Nuove regole per l'annuncio all'apertura**: niente attesa il primo giorno; almeno 2 ore tra un annuncio e il successivo (chiudere e riaprire subito non ne mostra un altro); al massimo 5 al giorno. I video con premio restano come prima (10 per veicolo, senza attesa). Informativa privacy e schede degli store aggiornate.
 - [x] Contiene anche tutte le modifiche della 2.2.1 (uscita solo su TestFlight).
 - [x] **Firma iPhone corretta**: la build 2.2.1 è stata respinta da Apple (ITMS-90035, firma non valida) perché il certificato temporaneo veniva revocato subito dopo il caricamento. Ora il certificato temporaneo serve solo per l'archivio e viene eliminato prima dell'esportazione; l'app inviata ad Apple è firmata con il certificato di distribuzione gestito da Apple nel cloud.

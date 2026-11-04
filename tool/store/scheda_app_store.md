@@ -168,7 +168,8 @@ First version for iPhone and iPad.
 
 - **Categoria principale**: Utilità · **Secondaria**: Produttività
 - **Prezzo**: gratis
-- **URL di supporto**: https://myfleetmanager-3ca03.web.app
+- **URL di supporto**: https://myfleetmanager-3ca03.web.app/support.html
+- **URL marketing** (facoltativo): lasciare vuoto
 - **URL informativa privacy**: https://myfleetmanager-3ca03.web.app/privacy.html
 - **Copyright**: 2026 Gianluca Caprioglio
 - **Classificazione per età**: nessun contenuto sensibile; «Contenuti generati dagli utenti / comunicazione tra utenti»: gruppi su invito, senza chat → 4+ (o quello che propone il questionario)
