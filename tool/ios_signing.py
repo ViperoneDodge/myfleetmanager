@@ -114,6 +114,7 @@ def cleanup():
         call("DELETE", f"/profiles/{state['profile']}")
     if "certificate" in state:
         call("DELETE", f"/certificates/{state['certificate']}")
+    os.remove(STATE)
     print("Certificato e profilo temporanei eliminati")
 
 

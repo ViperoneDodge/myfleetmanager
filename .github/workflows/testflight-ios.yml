@@ -144,6 +144,9 @@ jobs:
           set -o pipefail
           ASC_KEY_ID=$(printf '%s' "$ASC_KEY_ID" | tr -d '[:space:]')
           ASC_ISSUER_ID=$(printf '%s' "$ASC_ISSUER_ID" | tr -d '[:space:]')
+          security delete-keychain "$RUNNER_TEMP/ci.keychain-db" 2>/dev/null || true
+          "$RUNNER_TEMP/jwt/bin/python" tool/ios_signing.py cleanup
+          security find-identity -v -p codesigning || true
           cat > ExportOptions.plist <<'PLIST'
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -156,14 +159,7 @@ jobs:
             <key>teamID</key>
             <string>C4WH22N952</string>
             <key>signingStyle</key>
-            <string>manual</string>
-            <key>signingCertificate</key>
-            <string>Apple Distribution</string>
-            <key>provisioningProfiles</key>
-            <dict>
-              <key>it.myfleet.myfleetmanager</key>
-              <string>PROFILE_NAME</string>
-            </dict>
+            <string>automatic</string>
             <key>uploadSymbols</key>
             <true/>
             <key>manageAppVersionAndBuildNumber</key>
@@ -171,7 +167,6 @@ jobs:
           </dict>
           </plist>
           PLIST
-          sed -i '' "s/PROFILE_NAME/$IOS_PROFILE_NAME/" ExportOptions.plist
           xcodebuild -exportArchive -archivePath build/Runner.xcarchive \
             -exportOptionsPlist ExportOptions.plist -exportPath build/export \
             -allowProvisioningUpdates \
