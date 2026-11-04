@@ -3,10 +3,13 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione
-- [x] **Nuovo slogan** «Tutta la tua flotta in un tocco» / «All your fleet. One touch away.» in tutte le 36 lingue, nella pagina di accesso, nella schermata di avvio del sito, nell'immagine in evidenza del Play Store e nelle schede degli store.
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 
-## Versione 2.2.2 — stessa versione su Android e iPhone
+## Versione 2.2.3 — prima versione comune su Android e iPhone
+- [x] **Nuovo slogan** «Tutta la tua flotta in un tocco» / «All your fleet. One touch away.» in tutte le 36 lingue, nella pagina di accesso, nella schermata di avvio del sito, nell'immagine in evidenza del Play Store e nelle schede degli store.
+- [x] Contiene tutte le modifiche della 2.2.2 (uscita solo su TestFlight, build 60.14): su Android si passa direttamente dalla 2.2.0 alla 2.2.3, con lo stesso numero di versione dell'iPhone.
+
+## Versione 2.2.2 — solo TestFlight
 - [x] **Pagina di assistenza** `support.html` sul sito (italiano e inglese: contatto e domande frequenti), da usare come «URL di supporto» nell'App Store.
 - [x] **Nuove regole per l'annuncio all'apertura**: niente attesa il primo giorno; almeno 2 ore tra un annuncio e il successivo (chiudere e riaprire subito non ne mostra un altro); al massimo 5 al giorno. I video con premio restano come prima (10 per veicolo, senza attesa). Informativa privacy e schede degli store aggiornate.
 - [x] Contiene anche tutte le modifiche della 2.2.1 (uscita solo su TestFlight).

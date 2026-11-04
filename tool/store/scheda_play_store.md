@@ -1,6 +1,6 @@
 # MyFleetManager — scheda Play Store
 
-Aggiornata per la versione 2.2.2.
+Aggiornata per la versione 2.2.3.
 
 File pronti:
 - `tool/store/icon_512.png` — icona 512×512
@@ -78,7 +78,8 @@ VERSIONE GRATUITA E PRO
 
 Disponibile in 36 lingue. Funziona su telefoni, tablet e pieghevoli.
 
-**Note di rilascio 2.2.2** (max 500)
+**Note di rilascio 2.2.3** (max 500)
+• Nuovo slogan: «Tutta la tua flotta in un tocco»
 • Annuncio all'apertura al massimo ogni 2 ore e 5 al giorno (nessuno con la Pro)
 • Il 4° e il 5° veicolo sbloccati con i premi si scelgono una volta sola
 • Scadenze oltre i 2 anni indicate in anni
@@ -146,7 +147,8 @@ FREE AND PRO
 
 Available in 36 languages. Works on phones, tablets and foldables.
 
-**Release notes 2.2.2** (max 500)
+**Release notes 2.2.3** (max 500)
+• New slogan: «All your fleet. One touch away.»
 • App-open ad at most every 2 hours and 5 a day (none with Pro)
 • The 4th and 5th vehicles unlocked with rewards are chosen once
 • Deadlines more than 2 years away shown in years

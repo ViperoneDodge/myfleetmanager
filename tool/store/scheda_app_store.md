@@ -1,6 +1,6 @@
 # MyFleetManager — scheda App Store
 
-Aggiornata per la versione 2.2.2. Tutti i dati degli screenshot sono inventati.
+Aggiornata per la versione 2.2.3. Tutti i dati degli screenshot sono inventati.
 
 ## Schermate di presentazione (da caricare)
 
