@@ -2,6 +2,12 @@
 
 Aggiornata per la versione 2.2.2. Tutti i dati degli screenshot sono inventati.
 
+## Schermate di presentazione (da caricare)
+
+Solo in inglese, usate per tutte le lingue. Si generano con `python3 tool/store/genera_presentazione.py` dopo gli screenshot:
+- iPhone 6,9" (1290×2796): `tool/store/presentazione/iphone/en/`
+- iPad 13" (2064×2752): `tool/store/presentazione/ipad/en/`
+
 ## Screenshot
 
 Si generano con:

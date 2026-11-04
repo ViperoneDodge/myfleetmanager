@@ -193,7 +193,11 @@ void main() {
         addTearDown(tester.view.reset);
         debugDisableShadows = false;
 
-        await shot(tester, const HomeScreen(), '01_vehicles');
+        await shot(tester, const HomeScreen(), '01_vehicles', then: shotSize == 'ipad'
+            ? () async {
+                await tester.tap(find.text('Giulia').first);
+              }
+            : null);
         appState.sync.problems['groups'] = TimeoutException('groups');
         appState.sync.problems['save:FAM7Q2K9XW'] = TimeoutException('save');
         await shot(tester, const HomeScreen(), '01b_sync_problem', then: () async {
@@ -256,6 +260,10 @@ void main() {
         detailTab.value = 0;
         await shot(tester, const HomeScreen(), '03_deadlines', then: () async {
           await tester.tap(find.text(tr('tab.deadlines')).last);
+          if (shotSize == 'ipad') {
+            await tester.pumpAndSettle();
+            await tester.tap(find.text('Giulia').first);
+          }
         });
         await shot(tester, const HomeScreen(), '04_groups', then: () async {
           await tester.tap(find.text(tr('tab.family')).last);
