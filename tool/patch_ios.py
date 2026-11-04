@@ -111,3 +111,15 @@ if pbx.exists():
         t = re.sub(r"/\* (Debug|Release|Profile) \*/ = \{\s*isa = XCBuildConfiguration;.*?\n\t\t\};", dist, t, flags=re.S)
         pbx.write_text(t)
         print("Manual distribution signing set in", pbx)
+
+icon = ROOT / "tool" / "icons_ios" / "icon-1024.png"
+appicon = IOS / "Runner" / "Assets.xcassets" / "AppIcon.appiconset"
+if icon.exists() and appicon.exists():
+    for f in appicon.iterdir():
+        f.unlink()
+    (appicon / "icon-1024.png").write_bytes(icon.read_bytes())
+    (appicon / "Contents.json").write_text(
+        '{"images":[{"filename":"icon-1024.png","idiom":"universal","platform":"ios","size":"1024x1024"}],'
+        '"info":{"author":"xcode","version":1}}\n'
+    )
+    print("App icon set in", appicon)
