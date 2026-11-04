@@ -180,16 +180,21 @@ void main() {
       });
       testWidgets('screens', (tester) async {
         await tester.runAsync(loadFonts);
-        tester.view.physicalSize = switch (shotSize) {
-          'ios' => const Size(1290, 2796),
-          'ipad' => const Size(2064, 2752),
-          _ => const Size(1080, 1920),
-        };
-        tester.view.devicePixelRatio = switch (shotSize) {
-          'ios' => 3.0,
-          'ipad' => 2.0,
-          _ => 2.625,
-        };
+        final custom = RegExp(r'^(\d+)x(\d+)@(\d+(?:\.\d+)?)$').firstMatch(shotSize);
+        tester.view.physicalSize = custom != null
+            ? Size(double.parse(custom.group(1)!), double.parse(custom.group(2)!))
+            : switch (shotSize) {
+                'ios' => const Size(1290, 2796),
+                'ipad' => const Size(2064, 2752),
+                _ => const Size(1080, 1920),
+              };
+        tester.view.devicePixelRatio = custom != null
+            ? double.parse(custom.group(3)!)
+            : switch (shotSize) {
+                'ios' => 3.0,
+                'ipad' => 2.0,
+                _ => 2.625,
+              };
         addTearDown(tester.view.reset);
         debugDisableShadows = false;
 

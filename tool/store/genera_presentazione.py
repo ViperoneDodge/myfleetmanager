@@ -10,6 +10,8 @@ OUT = ROOT / "tool" / "store" / "presentazione"
 DEVICES = {
     "iphone": {"size": (1290, 2796), "src": "out_ios", "radius": 70, "top": 520, "side": 90},
     "ipad": {"size": (2064, 2752), "src": "out_ipad", "radius": 50, "top": 470, "side": 150},
+    "iphone_medio_1206x2622": {"size": (1206, 2622), "src": "out_1206x2622@3", "radius": 66, "top": 490, "side": 84},
+    "iphone_medio_1179x2556": {"size": (1179, 2556), "src": "out_1179x2556@3", "radius": 64, "top": 480, "side": 82},
 }
 
 SCREENS = [
