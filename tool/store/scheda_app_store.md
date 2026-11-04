@@ -8,6 +8,12 @@ Solo in inglese, usate per tutte le lingue. Si generano con `python3 tool/store/
 - iPhone 6,9" (1290×2796): `tool/store/presentazione/iphone/en/`
 - iPad 13" (2064×2752): `tool/store/presentazione/ipad/en/`
 
+## Header e Search Results (creative assets)
+
+Si generano con `python3 tool/store/genera_header.py` dopo gli screenshot iOS:
+- Header (5244×2950): `tool/store/header/header_5244x2950.png`
+- Search Results (3840×1646): `tool/store/header/search_3840x1646.png`
+
 ## Screenshot
 
 Si generano con:
