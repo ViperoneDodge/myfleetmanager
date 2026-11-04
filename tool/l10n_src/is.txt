@@ -531,7 +531,7 @@ Samtals
 Eytt árið {year}: {amount}
 Samtals: {amount}
 Athugasemdir (verkstæði, ábyrgð…)
-Bílaflotinn þinn í lófa þínum
+Allur bílaflotinn þinn. Í einni snertingu.
 Hvað viltu flytja út?
 Allir hópar
 hö

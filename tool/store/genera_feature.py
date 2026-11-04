@@ -10,7 +10,7 @@ W, H = 1024 * K, 500 * K
 
 TEXT = {
     "it": {
-        "slogan": "La tua flotta nel palmo della mano",
+        "slogan": "Tutta la tua flotta in un tocco",
         "features": [
             "Scadenze e promemoria",
             "Manutenzioni e costi",
@@ -22,7 +22,7 @@ TEXT = {
         "types": "Auto · Moto · Furgoni · Camion · Rimorchi · Agricoli",
     },
     "en": {
-        "slogan": "Your fleet in the palm of your hand",
+        "slogan": "All your fleet. One touch away.",
         "features": [
             "Deadlines & reminders",
             "Maintenance & costs",

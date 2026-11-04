@@ -531,7 +531,7 @@ I alt
 Brugt i {year}: {amount}
 I alt: {amount}
 Noter (værksted, garanti…)
-Din vognpark i din hånd
+Hele din vognpark. Ét tryk væk.
 Hvad vil du eksportere?
 Alle grupper
 hk

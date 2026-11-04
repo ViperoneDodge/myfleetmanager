@@ -54,7 +54,7 @@ scadenze,auto,moto,bollo,revisione,assicurazione,tagliando,manutenzione,promemor
 
 **Descrizione** (max 4000)
 
-MyFleetManager è il quaderno digitale dei tuoi veicoli: tiene d'occhio scadenze, manutenzioni e documenti e ti avvisa in tempo, così non dimentichi più assicurazione, bollo o revisione. La tua flotta nel palmo della mano.
+MyFleetManager è il quaderno digitale dei tuoi veicoli: tiene d'occhio scadenze, manutenzioni e documenti e ti avvisa in tempo, così non dimentichi più assicurazione, bollo o revisione. Tutta la tua flotta in un tocco.
 
 SCADENZE SOTTO CONTROLLO
 • Assicurazione, bollo, revisione, tagliando e scadenze personalizzate
@@ -120,7 +120,7 @@ car,deadlines,motorbike,insurance,mot,road tax,service,maintenance,reminder,gara
 
 **Description** (max 4000)
 
-MyFleetManager is the digital notebook for your vehicles: it keeps track of deadlines, maintenance and documents and reminds you in time, so you never forget insurance, road tax or the MOT again. Your fleet in the palm of your hand.
+MyFleetManager is the digital notebook for your vehicles: it keeps track of deadlines, maintenance and documents and reminds you in time, so you never forget insurance, road tax or the MOT again. All your fleet. One touch away.
 
 DEADLINES UNDER CONTROL
 • Insurance, road tax, MOT/inspection, service and custom deadlines

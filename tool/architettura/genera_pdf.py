@@ -351,7 +351,7 @@ files = [
     ['screens/family_screen.dart', righe('screens/family_screen.dart'), 'Scheda Gruppi, schermata del gruppo, spostamento veicoli'],
     ['screens/settings_screen.dart', righe('screens/settings_screen.dart'), 'Impostazioni, compresa la sezione «Unità di misura»'],
     ['screens/lock_screen.dart', righe('screens/lock_screen.dart'), 'Schermata di sblocco mostrata sopra l\'app quando il blocco con impronta è attivo'],
-    ['screens/login_screen.dart', righe('screens/login_screen.dart'), 'Accesso e registrazione; in alto lo slogan «La tua flotta nel palmo della mano» e le quattro funzioni principali (Scadenze, Documenti, Manutenzioni, Gruppi)'],
+    ['screens/login_screen.dart', righe('screens/login_screen.dart'), 'Accesso e registrazione; in alto lo slogan «Tutta la tua flotta in un tocco» e le quattro funzioni principali (Scadenze, Documenti, Manutenzioni, Gruppi)'],
     ['screens/pro_screen.dart', righe('screens/pro_screen.dart'), 'Presentazione e acquisto della versione Pro'],
     ['screens/web_pro_gate.dart', righe('screens/web_pro_gate.dart'), 'Versione web: pagina per chi accede senza la Pro'],
     ['screens/intro_screen.dart', righe('screens/intro_screen.dart'), 'Animazione iniziale con logo e slogan'],

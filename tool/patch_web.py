@@ -48,7 +48,7 @@ if WEB.exists():
     (function () {{
       var it0 = (navigator.language || 'it').toLowerCase().indexOf('it') === 0;
       document.getElementById('slogan').innerHTML = it0
-        ? 'La tua flotta nel<br>palmo della mano' : 'Your fleet in the<br>palm of your hand';
+        ? 'Tutta la tua flotta<br>in un tocco' : 'All your fleet.<br>One touch away.';
       var ok = 'noModule' in document.createElement('script') && !!window.fetch && !!window.Promise
         && !!window.ResizeObserver && typeof Array.prototype.at === 'function'
         && typeof structuredClone === 'function';

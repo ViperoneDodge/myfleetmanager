@@ -531,7 +531,7 @@ Munkadíj
 {year}-ban költve: {amount}
 Összesen: {amount}
 Megjegyzés (szerviz, garancia…)
-A flottád a tenyeredben
+A teljes flottád. Egy érintésnyire.
 Mit szeretnél exportálni?
 Összes csoport
 LE

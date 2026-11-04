@@ -532,7 +532,7 @@
  "maint.spentYear": "Kulutatud {year}: {amount}",
  "maint.spentAll": "Kokku: {amount}",
  "maint.notesHint": "Märkmed (töökoda, garantii…)",
- "app.slogan": "Sinu sõidukipark sinu peopesal",
+ "app.slogan": "Kogu sinu sõidukipark. Ühe puudutuse kaugusel.",
  "pdf.chooseGroups": "Mida soovid eksportida?",
  "pdf.allGroups": "Kõik grupid",
  "unit.cv": "hj",

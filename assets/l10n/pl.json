@@ -532,7 +532,7 @@
  "maint.spentYear": "Wydano w {year}: {amount}",
  "maint.spentAll": "Razem: {amount}",
  "maint.notesHint": "Notatki (warsztat, gwarancja…)",
- "app.slogan": "Twoja flota w zasięgu ręki",
+ "app.slogan": "Cała Twoja flota. Na jedno dotknięcie.",
  "pdf.chooseGroups": "Co chcesz wyeksportować?",
  "pdf.allGroups": "Wszystkie grupy",
  "unit.cv": "KM",

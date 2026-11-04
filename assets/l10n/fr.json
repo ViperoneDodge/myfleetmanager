@@ -532,7 +532,7 @@
  "maint.spentYear": "Dépensé en {year} : {amount}",
  "maint.spentAll": "Total : {amount}",
  "maint.notesHint": "Notes (garage, garantie…)",
- "app.slogan": "Votre flotte dans le creux de la main",
+ "app.slogan": "Toute votre flotte. À portée de doigt.",
  "pdf.chooseGroups": "Que voulez-vous exporter ?",
  "pdf.allGroups": "Tous les groupes",
  "unit.cv": "ch",

@@ -531,7 +531,7 @@ Totalt
 Spenderat {year}: {amount}
 Totalt: {amount}
 Anteckningar (verkstad, garanti…)
-Din fordonsflotta i din hand
+Hela din fordonsflotta. Ett tryck bort.
 Vad vill du exportera?
 Alla grupper
 hk

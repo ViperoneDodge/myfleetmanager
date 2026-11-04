@@ -531,7 +531,7 @@ Razem
 Wydano w {year}: {amount}
 Razem: {amount}
 Notatki (warsztat, gwarancja…)
-Twoja flota w zasięgu ręki
+Cała Twoja flota. Na jedno dotknięcie.
 Co chcesz wyeksportować?
 Wszystkie grupy
 KM

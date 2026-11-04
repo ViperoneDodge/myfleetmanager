@@ -531,7 +531,7 @@ Skupaj
 Porabljeno v {year}: {amount}
 Skupaj: {amount}
 Opombe (servis, garancija…)
-Tvoj vozni park na dlani
+Ves tvoj vozni park. Na en dotik.
 Kaj želiš izvoziti?
 Vse skupine
 KM

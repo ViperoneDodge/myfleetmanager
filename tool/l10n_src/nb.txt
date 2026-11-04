@@ -531,7 +531,7 @@ Totalt
 Brukt i {year}: {amount}
 Totalt: {amount}
 Notater (verksted, garanti…)
-Bilparken din i hånden
+Hele bilparken din. Ett trykk unna.
 Hva vil du eksportere?
 Alle grupper
 hk

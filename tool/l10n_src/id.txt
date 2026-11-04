@@ -531,7 +531,7 @@ Total
 Pengeluaran {year}: {amount}
 Total: {amount}
 Catatan (bengkel, garansi…)
-Armada Anda dalam genggaman
+Seluruh armada Anda. Cukup satu sentuhan.
 Apa yang ingin diekspor?
 Semua grup
 HP

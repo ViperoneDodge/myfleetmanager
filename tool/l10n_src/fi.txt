@@ -531,7 +531,7 @@ Yhteensä
 Käytetty {year}: {amount}
 Yhteensä: {amount}
 Muistiinpanot (korjaamo, takuu…)
-Ajoneuvosi kämmenelläsi
+Koko ajoneuvokantasi. Yhden kosketuksen päässä.
 Mitä haluat viedä?
 Kaikki ryhmät
 hv

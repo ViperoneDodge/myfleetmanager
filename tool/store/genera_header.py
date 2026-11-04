@@ -24,6 +24,9 @@ CARDS = [
 ]
 
 
+FLEET = [["auto", "moto", "furgone"], ["camion", "rimorchio", "agricolo"]]
+
+
 def font(name, size):
     return ImageFont.truetype(str(FONTS / name), int(size))
 
@@ -138,12 +141,46 @@ def glass_card(im, title, subtitle, color, cx, cy, scale):
     d.text((tx, y0 + pad + tf.size * 1.25), subtitle, font=sf, fill=(220, 232, 255, 235))
 
 
+def silhouette(name, height):
+    v = Image.open(ROOT / "assets" / "vehicles" / f"{name}.png").convert("RGBA")
+    v = v.resize((int(v.width * height / v.height), int(height)), Image.LANCZOS)
+    white = Image.new("RGBA", v.size, (225, 238, 255, 255))
+    white.putalpha(v.getchannel("A").point(lambda a: int(a * 0.8)))
+    glow = Image.new("RGBA", v.size, (90, 170, 255, 255))
+    glow.putalpha(v.getchannel("A").point(lambda a: int(a * 0.6)))
+    pad = int(height * 0.3)
+    out = Image.new("RGBA", (v.width + pad * 2, v.height + pad * 2), (0, 0, 0, 0))
+    out.alpha_composite(glow, (pad, pad))
+    out = out.filter(ImageFilter.GaussianBlur(height * 0.12))
+    out.alpha_composite(white, (pad, pad))
+    return out, pad
+
+
+def fleet(im, names, x0, x1, base, height):
+    natural = 0
+    for n in names:
+        v = Image.open(ROOT / "assets" / "vehicles" / f"{n}.png")
+        natural += v.width * height / v.height
+    height *= min(1.0, (x1 - x0) * 0.82 / natural)
+    sprites = [silhouette(n, height) for n in names]
+    widths = [s.width - 2 * pad for s, pad in sprites]
+    gap = (x1 - x0 - sum(widths)) / max(1, len(sprites) - 1)
+    x = x0
+    for (s, pad), sw in zip(sprites, widths):
+        im.alpha_composite(s, (int(x - pad), int(base - s.height + pad)))
+        x += sw + gap
+
+
 def build(name, size):
     w, h = size
     im = background(w, h)
     ph = h * (0.78 if w / h < 2 else 0.86)
     spread = min(w * 0.36, ph * 0.62)
     cy = h * 0.53
+    vh = h * (0.075 if w / h < 2 else 0.1)
+    edge = 0.205 if w / h < 2 else 0.255
+    fleet(im, FLEET[0], w * 0.025, w * edge, h * 0.93, vh)
+    fleet(im, FLEET[1], w * (1 - edge), w * 0.975, h * 0.93, vh)
     for shot, angle, scale, dx in PHONES:
         place(im, phone(shot, ph * scale), w / 2 + dx * spread * 2, cy + (1 - scale) * ph * 0.25, angle)
     card_scale = ph / 2300

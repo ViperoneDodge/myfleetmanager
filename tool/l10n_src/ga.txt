@@ -531,7 +531,7 @@ Iomlán
 Caite in {year}: {amount}
 Iomlán: {amount}
 Nótaí (garáiste, baránta…)
-Do chabhlach i mbos do láimhe
+Do chabhlach ar fad. Teagmháil amháin uait.
 Cad ba mhaith leat a easpórtáil?
 Gach grúpa
 hp

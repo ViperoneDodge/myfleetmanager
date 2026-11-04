@@ -531,7 +531,7 @@ Total
 Gasto em {year}: {amount}
 Total: {amount}
 Notas (oficina, garantia…)
-A sua frota na palma da mão
+Toda a sua frota. A um toque.
 O que pretende exportar?
 Todos os grupos
 cv

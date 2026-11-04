@@ -532,7 +532,7 @@
  "maint.spentYear": "Потрачено в {year}: {amount}",
  "maint.spentAll": "Итого: {amount}",
  "maint.notesHint": "Заметки (сервис, гарантия…)",
- "app.slogan": "Твой автопарк у тебя на ладони",
+ "app.slogan": "Весь твой автопарк. Одним касанием.",
  "pdf.chooseGroups": "Что вы хотите экспортировать?",
  "pdf.allGroups": "Все группы",
  "unit.cv": "л.с.",

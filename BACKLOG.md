@@ -3,6 +3,7 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione
+- [x] **Nuovo slogan** «Tutta la tua flotta in un tocco» / «All your fleet. One touch away.» in tutte le 36 lingue, nella pagina di accesso, nella schermata di avvio del sito, nell'immagine in evidenza del Play Store e nelle schede degli store.
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 
 ## Versione 2.2.2 — stessa versione su Android e iPhone

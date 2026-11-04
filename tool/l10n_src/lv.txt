@@ -531,7 +531,7 @@ Kopā
 Iztērēts {year}. gadā: {amount}
 Kopā: {amount}
 Piezīmes (serviss, garantija…)
-Tavs autoparks tavā plaukstā
+Viss tavs autoparks. Viena pieskāriena attālumā.
 Ko vēlies eksportēt?
 Visas grupas
 ZS

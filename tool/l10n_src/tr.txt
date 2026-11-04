@@ -531,7 +531,7 @@ Toplam
 {year} harcaması: {amount}
 Toplam: {amount}
 Notlar (servis, garanti…)
-Filon avucunun içinde
+Tüm filon. Bir dokunuş uzağında.
 Neyi dışa aktarmak istiyorsun?
 Tüm gruplar
 BG

@@ -531,7 +531,7 @@ Totaal
 Uitgegeven in {year}: {amount}
 Totaal: {amount}
 Notities (garage, garantie…)
-Je wagenpark in de palm van je hand
+Je hele wagenpark. Eén tik verwijderd.
 Wat wil je exporteren?
 Alle groepen
 pk
