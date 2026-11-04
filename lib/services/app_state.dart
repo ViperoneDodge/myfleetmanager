@@ -808,6 +808,8 @@ class AppState extends ChangeNotifier {
     appLock = settings?['appLock'] == true && AppLock.available;
     adsFirstSeen = (settings?['adsFirstSeen'] as num?)?.toInt() ?? 0;
     adsLastShown = (settings?['adsLastShown'] as num?)?.toInt() ?? 0;
+    adsDay = (settings?['adsDay'] as num?)?.toInt() ?? 0;
+    adsDayCount = (settings?['adsDayCount'] as num?)?.toInt() ?? 0;
     final dc = settings?['docsConsent'];
     docsConsent = dc is bool ? dc : null;
     if (devPro && devProVersion != appVersion) {
@@ -1008,6 +1010,12 @@ class AppState extends ChangeNotifier {
 
   int adsLastShown = 0;
 
+  int adsDay = 0;
+
+  int adsDayCount = 0;
+
+  int get adsShownToday => adsDay == AdsRules.dayKey(DateTime.now()) ? adsDayCount : 0;
+
   bool get adsAllowed =>
       AdsService.supported &&
       AdsRules.allowed(
@@ -1017,6 +1025,7 @@ class AppState extends ChangeNotifier {
         firstSeen: adsFirstSeen,
         lastShown: adsLastShown,
         now: DateTime.now(),
+        shownToday: adsShownToday,
       );
 
   bool get adsPrivacyOption => AdsService.supported && !isPro && AdsService.instance.privacyRequired;
@@ -1034,7 +1043,10 @@ class AppState extends ChangeNotifier {
       return;
     }
     AdsService.instance.showIfReady(() {
-      adsLastShown = DateTime.now().millisecondsSinceEpoch;
+      final now = DateTime.now();
+      adsLastShown = now.millisecondsSinceEpoch;
+      adsDayCount = adsShownToday + 1;
+      adsDay = AdsRules.dayKey(now);
       _writeSettings();
     });
   }
@@ -1411,6 +1423,8 @@ class AppState extends ChangeNotifier {
         'appLock': appLock,
         'adsFirstSeen': adsFirstSeen,
         'adsLastShown': adsLastShown,
+        'adsDay': adsDay,
+        'adsDayCount': adsDayCount,
         if (docsConsent != null) 'docsConsent': docsConsent,
       });
 

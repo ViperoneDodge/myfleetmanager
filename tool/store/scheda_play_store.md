@@ -1,6 +1,6 @@
 # MyFleetManager — scheda Play Store
 
-Aggiornata per la versione 2.2.0.
+Aggiornata per la versione 2.2.2.
 
 File pronti:
 - `tool/store/icon_512.png` — icona 512×512
@@ -72,18 +72,17 @@ SICUREZZA E PRIVACY
 • Unità di misura a scelta: kW o CV, km o miglia, bar o psi, valuta
 
 VERSIONE GRATUITA E PRO
-• Gratis: fino a 3 veicoli (auto o moto) con scadenze e notifiche; è presente un annuncio all'apertura, al massimo uno ogni 4 ore
+• Gratis: fino a 3 veicoli (auto o moto) con scadenze e notifiche; è presente un annuncio all'apertura, al massimo uno ogni 2 ore e 5 al giorno
 • Fino a 5 veicoli gratis: guardando 10 video con premio sblocchi per sempre il 4° veicolo, con altri 10 il 5°, e scegli tu quali veicoli usare
 • Pro, con un solo acquisto e senza abbonamento: nessuna pubblicità, veicoli illimitati, tutti i tipi di veicolo, manutenzioni e costi, dati tecnici, documenti, lettura del libretto ed esportazione PDF
 
 Disponibile in 36 lingue. Funziona su telefoni, tablet e pieghevoli.
 
-**Note di rilascio 2.2.0** (max 500)
-• Fino a 5 veicoli gratis: sblocca il 4° e il 5° veicolo guardando 10 video con premio, per sempre
-• Scegli tu quali veicoli usare come 4° e 5°
-• Pubblicità solo nella versione gratuita: al massimo un annuncio all'apertura ogni 4 ore (nessuna con la Pro)
-• Blocco con impronta dopo 5 minuti fuori dall'app
-• «Cambia password» solo per gli account con email e password
+**Note di rilascio 2.2.2** (max 500)
+• Annuncio all'apertura al massimo ogni 2 ore e 5 al giorno (nessuno con la Pro)
+• Il 4° e il 5° veicolo sbloccati con i premi si scelgono una volta sola
+• Scadenze oltre i 2 anni indicate in anni
+• Più sicurezza per le copie online dei documenti
 • Correzioni e miglioramenti
 
 ---
@@ -141,18 +140,17 @@ SECURITY AND PRIVACY
 • Choose your units: kW or HP, km or miles, bar or psi, currency
 
 FREE AND PRO
-• Free: up to 3 vehicles (cars or motorbikes) with deadlines and reminders; includes an app-open ad, at most one every 4 hours
+• Free: up to 3 vehicles (cars or motorbikes) with deadlines and reminders; includes an app-open ad, at most one every 2 hours and 5 a day
 • Up to 5 vehicles for free: watch 10 rewarded videos to unlock a 4th vehicle forever, 10 more for a 5th, and choose which vehicles to use
 • Pro, with a one-time purchase and no subscription: no ads, unlimited vehicles, all vehicle types, maintenance and costs, technical data, documents, registration reading and PDF export
 
 Available in 36 languages. Works on phones, tablets and foldables.
 
-**Release notes 2.2.0** (max 500)
-• Up to 5 vehicles for free: unlock a 4th and 5th vehicle forever by watching 10 rewarded videos
-• Choose which vehicles to use as the 4th and 5th
-• Ads in the free version only: at most one app-open ad every 4 hours (none with Pro)
-• Fingerprint lock after 5 minutes away from the app
-• "Change password" only for email and password accounts
+**Release notes 2.2.2** (max 500)
+• App-open ad at most every 2 hours and 5 a day (none with Pro)
+• The 4th and 5th vehicles unlocked with rewards are chosen once
+• Deadlines more than 2 years away shown in years
+• Safer online copies of documents
 • Fixes and improvements
 
 ---

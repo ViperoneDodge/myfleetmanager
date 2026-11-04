@@ -2,26 +2,29 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:myfleetmanager/services/ads_service.dart';
 
 void main() {
-  test('annunci solo per chi non è Pro, mai subito, non troppo spesso', () {
+  test('annunci solo per chi non è Pro, almeno 2 ore tra due, al massimo 5 al giorno', () {
     final now = DateTime(2026, 11, 2, 12);
     int ago(Duration d) => now.subtract(d).millisecondsSinceEpoch;
-    final old = AdsRules.newUser * 3;
-    bool ok({bool session = true, bool pro = false, bool locked = false, Duration? first, Duration? last}) =>
+    bool ok({bool session = true, bool pro = false, bool locked = false, Duration? last, int today = 0}) =>
         AdsRules.allowed(
           hasSession: session,
           pro: pro,
           locked: locked,
-          firstSeen: ago(first ?? old),
+          firstSeen: ago(const Duration(minutes: 1)),
           lastShown: last == null ? 0 : ago(last),
           now: now,
+          shownToday: today,
         );
+    expect(AdsRules.gap, const Duration(hours: 2));
     expect(ok(), isTrue);
     expect(ok(pro: true), isFalse);
     expect(ok(session: false), isFalse);
     expect(ok(locked: true), isFalse);
-    expect(ok(first: AdsRules.newUser ~/ 2), isFalse);
-    expect(ok(last: AdsRules.gap ~/ 2), isFalse);
-    expect(ok(last: AdsRules.gap), isTrue);
+    expect(ok(last: const Duration(minutes: 119)), isFalse);
+    expect(ok(last: const Duration(hours: 2)), isTrue);
+    expect(ok(last: const Duration(hours: 3), today: 4), isTrue);
+    expect(ok(last: const Duration(hours: 3), today: 5), isFalse);
+    expect(AdsRules.dayKey(DateTime(2026, 11, 2, 23, 59)), 20261102);
     expect(AdsRules.allowed(hasSession: true, pro: false, locked: false, firstSeen: 0, lastShown: 0, now: now), isFalse);
   });
 

@@ -330,7 +330,7 @@ files = [
     ['services/sync_service.dart', righe('services/sync_service.dart'), 'Sincronizzazione con Firestore: gruppi (ascolto continuo più lettura diretta dal server all\'avvio e a ogni «aggiorna»), veicoli, documenti, ruoli, Pro; registra i problemi per fonte (gruppi, veicoli, documenti, salvataggi) e li toglie quando la fonte torna a funzionare'],
     ['services/notification_service.dart', righe('services/notification_service.dart'), 'Promemoria delle scadenze programmati sul telefono, canali Android, prove'],
     ['services/push_service.dart', righe('services/push_service.dart'), 'Registrazione del telefono a Firebase Cloud Messaging'],
-    ['services/ads_service.dart', righe('services/ads_service.dart'), 'Pubblicità Google AdMob nella versione gratuita: consenso GDPR (UMP), annuncio all\'apertura al massimo ogni 4 ore, mai il primo giorno, mai per Pro e web'],
+    ['services/ads_service.dart', righe('services/ads_service.dart'), 'Pubblicità Google AdMob nella versione gratuita: consenso GDPR (UMP), annuncio all\'apertura al massimo ogni 2 ore e 5 al giorno, mai per Pro e web'],
     ['services/app_lock.dart', righe('services/app_lock.dart'), 'Blocco con impronta o volto (facoltativo): sblocco all\'apertura e dopo un minuto fuori dall\'app, con ripiego sul PIN del telefono'],
     ['services/app_check.dart', righe('services/app_check.dart'), 'Avvio di Firebase App Check (Play Integrity su Android, App Attest su iOS): certifica che le richieste al cloud arrivano dall\'app originale'],
     ['services/group_watch.dart', righe('services/group_watch.dart'), 'Controllo in background delle attività dei gruppi (Android, WorkManager) e registrazione nello storico'],

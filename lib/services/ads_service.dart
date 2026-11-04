@@ -7,8 +7,11 @@ import '../ads_config.dart';
 import '../platform.dart';
 
 class AdsRules {
-  static const Duration gap = AdsConfig.testBuild ? Duration(minutes: 5) : Duration(hours: 4);
-  static const Duration newUser = AdsConfig.testBuild ? Duration(minutes: 5) : Duration(hours: 24);
+  static const Duration gap = AdsConfig.testBuild ? Duration(minutes: 5) : Duration(hours: 2);
+  static const Duration newUser = Duration.zero;
+  static const int maxPerDay = 5;
+
+  static int dayKey(DateTime d) => d.year * 10000 + d.month * 100 + d.day;
 
   static const int adsPerSlot = 10;
   static const int maxSlots = 2;
@@ -75,8 +78,10 @@ class AdsRules {
     required int firstSeen,
     required int lastShown,
     required DateTime now,
+    int shownToday = 0,
   }) {
     if (!hasSession || pro || locked || firstSeen == 0) return false;
+    if (shownToday >= maxPerDay) return false;
     final t = now.millisecondsSinceEpoch;
     if (t - firstSeen < newUser.inMilliseconds) return false;
     return t - lastShown >= gap.inMilliseconds;

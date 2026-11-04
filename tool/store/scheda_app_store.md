@@ -1,6 +1,6 @@
 # MyFleetManager — scheda App Store
 
-Aggiornata per la versione 2.2.1. Tutti i dati degli screenshot sono inventati.
+Aggiornata per la versione 2.2.2. Tutti i dati degli screenshot sono inventati.
 
 ## Screenshot
 
@@ -81,7 +81,7 @@ SICUREZZA E PRIVACY
 • Unità di misura a scelta: kW o CV, km o miglia, bar o psi, valuta
 
 VERSIONE GRATUITA E PRO
-• Gratis: fino a 3 veicoli (auto o moto) con scadenze e notifiche; un annuncio all'apertura, al massimo uno ogni 4 ore
+• Gratis: fino a 3 veicoli (auto o moto) con scadenze e notifiche; un annuncio all'apertura, al massimo uno ogni 2 ore e 5 al giorno
 • Fino a 5 veicoli gratis: guardando 10 video con premio sblocchi per sempre il 4° veicolo, con altri 10 il 5°
 • Pro, con un solo acquisto e senza abbonamento: nessuna pubblicità, veicoli illimitati, tutti i tipi di veicolo, manutenzioni e costi, dati tecnici, documenti, lettura del libretto ed esportazione PDF
 
@@ -147,7 +147,7 @@ SECURITY AND PRIVACY
 • Choose your units: kW or HP, km or miles, bar or psi, currency
 
 FREE AND PRO
-• Free: up to 3 vehicles (cars or motorbikes) with deadlines and reminders; one app-open ad, at most every 4 hours
+• Free: up to 3 vehicles (cars or motorbikes) with deadlines and reminders; one app-open ad, at most every 2 hours and 5 a day
 • Up to 5 vehicles for free: watch 10 rewarded videos to unlock a 4th vehicle forever, 10 more for a 5th
 • Pro, with a one-time purchase and no subscription: no ads, unlimited vehicles, all vehicle types, maintenance and costs, technical data, documents, registration reading and PDF export
 
