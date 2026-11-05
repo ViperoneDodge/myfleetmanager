@@ -638,6 +638,5 @@
  "reward.fixed": "Lõplik valik",
  "reward.confirm": "{vehicle} saab sinu sõidukiks nr {n}. Valik on lõplik ja seda ei saa hiljem muuta. Kinnitad?",
  "due.inYears": "{n} aasta pärast",
- "due.expiredYears": "Aegus {n} aastat tagasi",
- "edit.serviceToMaint": "Salvesta läbisõit, kulud ja tööd hoolduses"
+ "due.expiredYears": "Aegus {n} aastat tagasi"
 }

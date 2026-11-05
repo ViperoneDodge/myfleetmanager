@@ -638,6 +638,5 @@
  "reward.fixed": "Final choice",
  "reward.confirm": "{vehicle} will become your vehicle no. {n}. This choice is final and cannot be changed later. Confirm?",
  "due.inYears": "In {n} years",
- "due.expiredYears": "Expired {n} years ago",
- "edit.serviceToMaint": "Record mileage, costs and work in maintenance"
+ "due.expiredYears": "Expired {n} years ago"
 }

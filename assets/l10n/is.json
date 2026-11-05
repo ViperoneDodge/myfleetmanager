@@ -638,6 +638,5 @@
  "reward.fixed": "Endanlegt val",
  "reward.confirm": "{vehicle} verður ökutæki nr. {n}. Valið er endanlegt og ekki hægt að breyta því síðar. Staðfesta?",
  "due.inYears": "Eftir {n} ár",
- "due.expiredYears": "Rann út fyrir {n} árum",
- "edit.serviceToMaint": "Skrá km, kostnað og verk í viðhaldi"
+ "due.expiredYears": "Rann út fyrir {n} árum"
 }

@@ -638,4 +638,3 @@ Endelig valg
 {vehicle} blir kjøretøy nr. {n}. Valget er endelig og kan ikke endres senere. Bekrefte?
 Om {n} år
 Utløp for {n} år siden
-Registrer km, kostnader og arbeid under vedlikehold

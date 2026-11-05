@@ -1044,6 +1044,22 @@ class VehicleDetailScreen extends StatelessWidget {
       ),
       if (d.dueDate != null)
         OnRule(center: true, child: Padding(padding: indent, child: Align(alignment: Alignment.centerLeft, child: StatusChip(due: d.dueDate!)))),
+      if (d.kind == DeadlineKind.service)
+        OnRule(
+          center: true,
+          child: Padding(
+            padding: indent,
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: TextButton.icon(
+                style: _compactButton,
+                onPressed: () => detailTab.value = 2,
+                icon: const Icon(Icons.build_circle_outlined, size: 18),
+                label: Text('${tr('maint.title')} ›'),
+              ),
+            ),
+          ),
+        ),
     ];
   }
 }

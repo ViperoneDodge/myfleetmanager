@@ -638,6 +638,5 @@
  "reward.fixed": "Lopullinen valinta",
  "reward.confirm": "{vehicle} tulee ajoneuvoksesi nro {n}. Valinta on lopullinen eikä sitä voi myöhemmin muuttaa. Vahvistetaanko?",
  "due.inYears": "{n} vuoden päästä",
- "due.expiredYears": "Umpeutui {n} vuotta sitten",
- "edit.serviceToMaint": "Kirjaa kilometrit, kulut ja työt huoltoihin"
+ "due.expiredYears": "Umpeutui {n} vuotta sitten"
 }

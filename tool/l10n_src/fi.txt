@@ -638,4 +638,3 @@ Lopullinen valinta
 {vehicle} tulee ajoneuvoksesi nro {n}. Valinta on lopullinen eikä sitä voi myöhemmin muuttaa. Vahvistetaanko?
 {n} vuoden päästä
 Umpeutui {n} vuotta sitten
-Kirjaa kilometrit, kulut ja työt huoltoihin

@@ -638,4 +638,3 @@ Lõplik valik
 {vehicle} saab sinu sõidukiks nr {n}. Valik on lõplik ja seda ei saa hiljem muuta. Kinnitad?
 {n} aasta pärast
 Aegus {n} aastat tagasi
-Salvesta läbisõit, kulud ja tööd hoolduses

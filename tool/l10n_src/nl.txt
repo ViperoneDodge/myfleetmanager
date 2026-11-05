@@ -638,4 +638,3 @@ Definitieve keuze
 {vehicle} wordt je voertuig nr. {n}. Deze keuze is definitief en kan niet meer worden gewijzigd. Bevestigen?
 Over {n} jaar
 {n} jaar geleden verlopen
-Kilometerstand, kosten en werk vastleggen in onderhoud

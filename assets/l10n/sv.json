@@ -638,6 +638,5 @@
  "reward.fixed": "Slutgiltigt val",
  "reward.confirm": "{vehicle} blir ditt fordon nr {n}. Valet är slutgiltigt och kan inte ändras senare. Bekräfta?",
  "due.inYears": "Om {n} år",
- "due.expiredYears": "Gick ut för {n} år sedan",
- "edit.serviceToMaint": "Registrera mätarställning, kostnader och arbeten i underhåll"
+ "due.expiredYears": "Gick ut för {n} år sedan"
 }

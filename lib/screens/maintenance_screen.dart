@@ -11,8 +11,7 @@ class MaintenanceEditScreen extends StatefulWidget {
   final String vehicleId;
 
   final MaintenanceRecord? record;
-  final bool asService;
-  const MaintenanceEditScreen({super.key, required this.vehicleId, this.record, this.asService = false});
+  const MaintenanceEditScreen({super.key, required this.vehicleId, this.record});
 
   @override
   State<MaintenanceEditScreen> createState() => _MaintenanceEditScreenState();
@@ -24,7 +23,7 @@ class _MaintenanceEditScreenState extends State<MaintenanceEditScreen> {
   late final TextEditingController _km = TextEditingController(text: r.km == null ? '' : kmToShown(r.km!).toString());
   late final TextEditingController _notes = TextEditingController(text: r.notes);
   late final TextEditingController _labor = TextEditingController(text: centsText(r.labor));
-  late bool _asService = widget.asService;
+  bool _asService = false;
   bool _saving = false;
 
   bool get _isNew => widget.record == null;

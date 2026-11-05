@@ -638,6 +638,5 @@
  "reward.fixed": "Végleges választás",
  "reward.confirm": "A(z) {vehicle} lesz a {n}. járműved. A választás végleges, később nem módosítható. Megerősíted?",
  "due.inYears": "{n} év múlva",
- "due.expiredYears": "{n} éve lejárt",
- "edit.serviceToMaint": "Km, költségek és munkák rögzítése a karbantartásban"
+ "due.expiredYears": "{n} éve lejárt"
 }

@@ -622,7 +622,10 @@ class _HomeScreenState extends State<HomeScreen> {
             for (var k = 0; k < g.ds.length; k++) ...[
               if (k > 0) Divider(height: 1, indent: 12, endIndent: 12, color: scheme.outlineVariant),
               InkWell(
-                onTap: () => _openDetail(g.v),
+                onTap: () {
+                  detailTab.value = g.ds[k].kind == DeadlineKind.service ? 2 : 0;
+                  _openDetail(g.v);
+                },
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(14, 8, 10, 8),
                   child: Row(children: [

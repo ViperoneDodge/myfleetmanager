@@ -638,6 +638,5 @@
  "reward.fixed": "Rogha deiridh",
  "reward.confirm": "Beidh {vehicle} mar fheithicil uimh. {n} agat. Is rogha deiridh í seo agus ní féidir í a athrú. An ndeimhníonn tú?",
  "due.inYears": "I gceann {n} bliain",
- "due.expiredYears": "D'éag {n} bliain ó shin",
- "edit.serviceToMaint": "Taifead km, costais agus obair sa chothabháil"
+ "due.expiredYears": "D'éag {n} bliain ó shin"
 }

@@ -638,6 +638,5 @@
  "reward.fixed": "Lựa chọn cố định",
  "reward.confirm": "{vehicle} sẽ trở thành xe thứ {n} của bạn. Lựa chọn này là cố định và không thể đổi sau. Xác nhận?",
  "due.inYears": "Còn {n} năm",
- "due.expiredYears": "Đã hết hạn {n} năm trước",
- "edit.serviceToMaint": "Ghi km, chi phí và công việc vào bảo dưỡng"
+ "due.expiredYears": "Đã hết hạn {n} năm trước"
 }

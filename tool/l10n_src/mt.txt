@@ -638,4 +638,3 @@ Għażla finali
 {vehicle} se ssir il-vettura nru {n} tiegħek. L-għażla hija finali u ma tistax tinbidel. Tikkonferma?
 Fi {n} snin
 Skada {n} snin ilu
-Irreġistra l-km, l-ispejjeż u x-xogħol fil-manutenzjoni

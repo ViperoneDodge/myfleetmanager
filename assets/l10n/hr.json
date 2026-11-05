@@ -638,6 +638,5 @@
  "reward.fixed": "Konačan odabir",
  "reward.confirm": "{vehicle} postat će tvoje {n}. vozilo. Odabir je konačan i ne može se promijeniti. Potvrđuješ?",
  "due.inYears": "Za {n} god.",
- "due.expiredYears": "Isteklo prije {n} god.",
- "edit.serviceToMaint": "Upiši km, troškove i radove u održavanje"
+ "due.expiredYears": "Isteklo prije {n} god."
 }

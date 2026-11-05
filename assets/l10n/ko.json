@@ -638,6 +638,5 @@
  "reward.fixed": "최종 선택",
  "reward.confirm": "{vehicle}이(가) {n}번째 차량이 됩니다. 이 선택은 최종이며 나중에 변경할 수 없습니다. 확인하시겠습니까?",
  "due.inYears": "{n}년 후",
- "due.expiredYears": "{n}년 전에 만료",
- "edit.serviceToMaint": "주행거리, 비용, 작업을 정비에 기록"
+ "due.expiredYears": "{n}년 전에 만료"
 }
