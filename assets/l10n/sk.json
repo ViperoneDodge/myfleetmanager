@@ -638,5 +638,6 @@
  "reward.fixed": "Konečná voľba",
  "reward.confirm": "{vehicle} bude tvoje vozidlo č. {n}. Voľba je konečná a nedá sa neskôr zmeniť. Potvrdiť?",
  "due.inYears": "O {n} rokov",
- "due.expiredYears": "Vypršalo pred {n} rokmi"
+ "due.expiredYears": "Vypršalo pred {n} rokmi",
+ "edit.serviceToMaint": "Zapísať km, náklady a práce do údržby"
 }

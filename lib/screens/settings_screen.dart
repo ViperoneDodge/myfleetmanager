@@ -636,7 +636,7 @@ class SettingsScreen extends StatelessWidget {
         }
       }, (v) => appState.setUnits(power: v)),
       segmented(tr('units.distance'), Units.distances, Units.distance,
-          (v) => tr(v == 'mi' ? 'maint.miles' : 'maint.km'), (v) => appState.setUnits(distance: v)),
+          (v) => v, (v) => appState.setUnits(distance: v)),
       segmented(tr('units.pressure'), Units.pressures, Units.pressure, (v) => v,
           (v) => appState.setUnits(pressure: v)),
       ListTile(

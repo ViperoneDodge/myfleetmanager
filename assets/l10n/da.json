@@ -638,5 +638,6 @@
  "reward.fixed": "Endeligt valg",
  "reward.confirm": "{vehicle} bliver dit køretøj nr. {n}. Valget er endeligt og kan ikke ændres senere. Bekræft?",
  "due.inYears": "Om {n} år",
- "due.expiredYears": "Udløb for {n} år siden"
+ "due.expiredYears": "Udløb for {n} år siden",
+ "edit.serviceToMaint": "Registrér km, omkostninger og arbejde under vedligeholdelse"
 }

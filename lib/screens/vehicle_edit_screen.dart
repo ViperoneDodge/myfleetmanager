@@ -12,6 +12,7 @@ import '../services/app_state.dart';
 import '../models.dart';
 import '../theme.dart';
 import '../widgets/common.dart';
+import 'maintenance_screen.dart';
 import 'pro_screen.dart';
 
 class VehicleEditScreen extends StatefulWidget {
@@ -691,6 +692,26 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
         ),
       );
 
+  Future<void> _serviceToMaintenance() async {
+    if (!await requirePro(context, reason: tr('pro.reasonMaint')) || !mounted) return;
+    await Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => MaintenanceEditScreen(vehicleId: v.id, asService: true),
+    ));
+    final saved = appState.vehicleById(v.id);
+    if (saved == null || !mounted) return;
+    setState(() {
+      v.maintenance = [for (final m in saved.maintenance) m.copy()];
+      for (final s in saved.deadlines.where((d) => d.kind == DeadlineKind.service)) {
+        for (final d in v.deadlines.where((d) => d.kind == DeadlineKind.service)) {
+          if (s.date != null && (d.date == null || s.date!.isAfter(d.date!))) {
+            d.date = s.date;
+            d.enabled = true;
+          }
+        }
+      }
+    });
+  }
+
   Widget _deadlineCard(Deadline d) {
     final isCustom = d.kind == DeadlineKind.custom;
     final isService = d.kind == DeadlineKind.service;
@@ -757,6 +778,13 @@ class _VehicleEditScreenState extends State<VehicleEditScreen> {
                       style: TextStyle(color: scheme.onSurfaceVariant)),
                   StatusChip(due: d.dueDate!, compact: true),
                 ]),
+              if (!_isNew)
+                TextButton.icon(
+                  style: TextButton.styleFrom(padding: EdgeInsets.zero),
+                  onPressed: _serviceToMaintenance,
+                  icon: const Icon(Icons.build_circle_outlined, size: 20),
+                  label: Text(tr('edit.serviceToMaint')),
+                ),
             ],
           ],
         ]),

@@ -638,3 +638,4 @@ Galīga izvēle
 {vehicle} kļūs par tavu transportlīdzekli nr. {n}. Izvēle ir galīga, un to vairs nevarēs mainīt. Apstiprināt?
 Pēc {n} gadiem
 Beidzās pirms {n} gadiem
+Ierakstīt km, izmaksas un darbus apkopē

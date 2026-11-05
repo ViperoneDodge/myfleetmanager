@@ -638,3 +638,4 @@ Galutinis pasirinkimas
 {vehicle} taps tavo transporto priemone nr. {n}. Pasirinkimas galutinis ir vėliau jo pakeisti negalėsi. Patvirtinti?
 Po {n} m.
 Baigėsi prieš {n} m.
+Įrašyti km, išlaidas ir darbus į priežiūrą

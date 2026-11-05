@@ -638,3 +638,4 @@ Konečná volba
 {vehicle} bude tvé vozidlo č. {n}. Volba je konečná a nelze ji později změnit. Potvrdit?
 Za {n} let
 Vypršelo před {n} lety
+Zapsat km, náklady a práce do údržby

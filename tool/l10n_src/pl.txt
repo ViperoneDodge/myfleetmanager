@@ -638,3 +638,4 @@ Wybór ostateczny
 {vehicle} stanie się twoim pojazdem nr {n}. Wybór jest ostateczny i nie można go zmienić. Potwierdzasz?
 Za {n} lat(a)
 Wygasło {n} lat(a) temu
+Zapisz przebieg, koszty i prace w serwisie

@@ -638,5 +638,6 @@
  "reward.fixed": "確定済み",
  "reward.confirm": "{vehicle} が{n}台目の車両になります。この選択は確定で、後から変更できません。よろしいですか？",
  "due.inYears": "あと{n}年",
- "due.expiredYears": "{n}年前に期限切れ"
+ "due.expiredYears": "{n}年前に期限切れ",
+ "edit.serviceToMaint": "走行距離・費用・作業内容をメンテナンスに記録"
 }

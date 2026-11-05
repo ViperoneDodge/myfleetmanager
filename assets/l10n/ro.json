@@ -638,5 +638,6 @@
  "reward.fixed": "Alegere definitivă",
  "reward.confirm": "{vehicle} va deveni vehiculul tău nr. {n}. Alegerea este definitivă și nu mai poate fi schimbată. Confirmi?",
  "due.inYears": "Peste {n} ani",
- "due.expiredYears": "Expirat de {n} ani"
+ "due.expiredYears": "Expirat de {n} ani",
+ "edit.serviceToMaint": "Înregistrează km, costuri și lucrări la întreținere"
 }

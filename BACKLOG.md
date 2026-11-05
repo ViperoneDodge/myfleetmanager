@@ -7,6 +7,8 @@ Lavori rimandati, da fare prima di andare in produzione o in una versione succes
 
 ## Versione 2.2.3 — prima versione comune su Android e iPhone
 - [x] **Nuovo slogan** «Tutta la tua flotta in un tocco» / «All your fleet. One touch away.» in tutte le 36 lingue, nella pagina di accesso, nella schermata di avvio del sito, nell'immagine in evidenza del Play Store e nelle schede degli store.
+- [x] **Distanze in km e mi** nelle Impostazioni (prima «Chilometraggio» / «Miglia», poco chiaro): segnalazione da TestFlight.
+- [x] **Dal tagliando alle manutenzioni**: nella modifica del veicolo, sotto «Ultimo tagliando», il pulsante «Registra km, costi e lavori nelle manutenzioni» apre una nuova manutenzione già segnata come tagliando (versione Pro); al ritorno la data del tagliando si aggiorna anche nella modifica in corso. Segnalazione da TestFlight.
 - [x] Contiene tutte le modifiche della 2.2.2 (uscita solo su TestFlight, build 60.14): su Android si passa direttamente dalla 2.2.0 alla 2.2.3, con lo stesso numero di versione dell'iPhone.
 
 ## Versione 2.2.2 — solo TestFlight

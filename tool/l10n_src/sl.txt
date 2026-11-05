@@ -638,3 +638,4 @@ Dokončna izbira
 {vehicle} bo postalo tvoje {n}. vozilo. Izbira je dokončna in je ne moreš več spremeniti. Potrdiš?
 Čez {n} let
 Poteklo pred {n} leti
+Vpiši km, stroške in dela v vzdrževanje

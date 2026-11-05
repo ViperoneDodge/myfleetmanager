@@ -80,6 +80,8 @@ Disponibile in 36 lingue. Funziona su telefoni, tablet e pieghevoli.
 
 **Note di rilascio 2.2.3** (max 500)
 • Nuovo slogan: «Tutta la tua flotta in un tocco»
+• Dal tagliando si registrano subito km, costi e lavori nelle manutenzioni
+• Distanze indicate in km e mi
 • Annuncio all'apertura al massimo ogni 2 ore e 5 al giorno (nessuno con la Pro)
 • Il 4° e il 5° veicolo sbloccati con i premi si scelgono una volta sola
 • Scadenze oltre i 2 anni indicate in anni
@@ -149,6 +151,8 @@ Available in 36 languages. Works on phones, tablets and foldables.
 
 **Release notes 2.2.3** (max 500)
 • New slogan: «All your fleet. One touch away.»
+• From the service, record mileage, costs and work in maintenance at once
+• Distances shown in km and mi
 • App-open ad at most every 2 hours and 5 a day (none with Pro)
 • The 4th and 5th vehicles unlocked with rewards are chosen once
 • Deadlines more than 2 years away shown in years

@@ -638,5 +638,6 @@
  "reward.fixed": "Galīga izvēle",
  "reward.confirm": "{vehicle} kļūs par tavu transportlīdzekli nr. {n}. Izvēle ir galīga, un to vairs nevarēs mainīt. Apstiprināt?",
  "due.inYears": "Pēc {n} gadiem",
- "due.expiredYears": "Beidzās pirms {n} gadiem"
+ "due.expiredYears": "Beidzās pirms {n} gadiem",
+ "edit.serviceToMaint": "Ierakstīt km, izmaksas un darbus apkopē"
 }

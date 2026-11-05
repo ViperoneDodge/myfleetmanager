@@ -638,5 +638,6 @@
  "reward.fixed": "Pilihan final",
  "reward.confirm": "{vehicle} akan menjadi kendaraan ke-{n}. Pilihan ini final dan tidak bisa diubah nanti. Konfirmasi?",
  "due.inYears": "{n} tahun lagi",
- "due.expiredYears": "Berakhir {n} tahun lalu"
+ "due.expiredYears": "Berakhir {n} tahun lalu",
+ "edit.serviceToMaint": "Catat km, biaya, dan pekerjaan di perawatan"
 }

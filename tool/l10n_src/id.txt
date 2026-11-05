@@ -638,3 +638,4 @@ Pilihan final
 {vehicle} akan menjadi kendaraan ke-{n}. Pilihan ini final dan tidak bisa diubah nanti. Konfirmasi?
 {n} tahun lagi
 Berakhir {n} tahun lalu
+Catat km, biaya, dan pekerjaan di perawatan

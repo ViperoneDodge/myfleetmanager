@@ -638,3 +638,4 @@ Rogha deiridh
 Beidh {vehicle} mar fheithicil uimh. {n} agat. Is rogha deiridh í seo agus ní féidir í a athrú. An ndeimhníonn tú?
 I gceann {n} bliain
 D'éag {n} bliain ó shin
+Taifead km, costais agus obair sa chothabháil

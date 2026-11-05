@@ -638,5 +638,6 @@
  "reward.fixed": "Endgültige Wahl",
  "reward.confirm": "{vehicle} wird dein Fahrzeug Nr. {n}. Die Wahl ist endgültig und kann nicht mehr geändert werden. Bestätigen?",
  "due.inYears": "In {n} Jahren",
- "due.expiredYears": "Seit {n} Jahren abgelaufen"
+ "due.expiredYears": "Seit {n} Jahren abgelaufen",
+ "edit.serviceToMaint": "Kilometerstand, Kosten und Arbeiten in der Wartung erfassen"
 }

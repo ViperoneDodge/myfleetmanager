@@ -638,5 +638,6 @@
  "reward.fixed": "Scelta definitiva",
  "reward.confirm": "{vehicle} diventerà il tuo {n}° veicolo. La scelta è definitiva e non potrai più cambiarla. Confermi?",
  "due.inYears": "Tra {n} anni",
- "due.expiredYears": "Scaduta da {n} anni"
+ "due.expiredYears": "Scaduta da {n} anni",
+ "edit.serviceToMaint": "Registra km, costi e lavori nelle manutenzioni"
 }

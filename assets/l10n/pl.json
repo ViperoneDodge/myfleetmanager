@@ -638,5 +638,6 @@
  "reward.fixed": "Wybór ostateczny",
  "reward.confirm": "{vehicle} stanie się twoim pojazdem nr {n}. Wybór jest ostateczny i nie można go zmienić. Potwierdzasz?",
  "due.inYears": "Za {n} lat(a)",
- "due.expiredYears": "Wygasło {n} lat(a) temu"
+ "due.expiredYears": "Wygasło {n} lat(a) temu",
+ "edit.serviceToMaint": "Zapisz przebieg, koszty i prace w serwisie"
 }

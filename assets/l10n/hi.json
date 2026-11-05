@@ -638,5 +638,6 @@
  "reward.fixed": "अंतिम चयन",
  "reward.confirm": "{vehicle} आपका वाहन क्रमांक {n} बन जाएगा। यह चयन अंतिम है और बाद में बदला नहीं जा सकता। पुष्टि करें?",
  "due.inYears": "{n} साल में",
- "due.expiredYears": "{n} साल पहले समाप्त"
+ "due.expiredYears": "{n} साल पहले समाप्त",
+ "edit.serviceToMaint": "किमी, खर्च और काम रखरखाव में दर्ज करें"
 }

@@ -638,5 +638,6 @@
  "reward.fixed": "Galutinis pasirinkimas",
  "reward.confirm": "{vehicle} taps tavo transporto priemone nr. {n}. Pasirinkimas galutinis ir vėliau jo pakeisti negalėsi. Patvirtinti?",
  "due.inYears": "Po {n} m.",
- "due.expiredYears": "Baigėsi prieš {n} m."
+ "due.expiredYears": "Baigėsi prieš {n} m.",
+ "edit.serviceToMaint": "Įrašyti km, išlaidas ir darbus į priežiūrą"
 }

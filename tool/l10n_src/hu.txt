@@ -638,3 +638,4 @@ Végleges választás
 A(z) {vehicle} lesz a {n}. járműved. A választás végleges, később nem módosítható. Megerősíted?
 {n} év múlva
 {n} éve lejárt
+Km, költségek és munkák rögzítése a karbantartásban

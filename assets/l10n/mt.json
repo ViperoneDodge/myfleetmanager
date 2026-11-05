@@ -638,5 +638,6 @@
  "reward.fixed": "Għażla finali",
  "reward.confirm": "{vehicle} se ssir il-vettura nru {n} tiegħek. L-għażla hija finali u ma tistax tinbidel. Tikkonferma?",
  "due.inYears": "Fi {n} snin",
- "due.expiredYears": "Skada {n} snin ilu"
+ "due.expiredYears": "Skada {n} snin ilu",
+ "edit.serviceToMaint": "Irreġistra l-km, l-ispejjeż u x-xogħol fil-manutenzjoni"
 }
