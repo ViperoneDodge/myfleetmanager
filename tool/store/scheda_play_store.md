@@ -166,6 +166,7 @@ Available in 36 languages. Works on phones, tablets and foldables.
 - **Categoria**: Auto e veicoli · **Tag**: promemoria, manutenzione auto
 - **Email di contatto**: appmyfleetmanager@gmail.com
 - **Informativa privacy**: https://myfleetmanager-3ca03.web.app/privacy.html
+- **Termini di servizio**: https://myfleetmanager-3ca03.web.app/terms.html
 - **Annunci**: **Sì, l'app contiene annunci** (apertura app e video con premio)
 - **ID pubblicità**: **Sì**, usato per la pubblicità (Google AdMob)
 - **Accesso all'app**: account di prova con email e password (non Google) + istruzioni in inglese

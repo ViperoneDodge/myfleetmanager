@@ -3,6 +3,7 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione
+- [x] **Pagina dei Termini di servizio** `terms.html` sul sito (italiano e inglese), collegata dalla pagina di assistenza; da indicare nella Play Console (Termini di servizio) quando è online.
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 
 ## Versione 2.2.3 — prima versione comune su Android e iPhone

@@ -177,6 +177,7 @@ First version for iPhone and iPad.
 - **URL di supporto**: https://myfleetmanager-3ca03.web.app/support.html
 - **URL marketing** (facoltativo): lasciare vuoto
 - **URL informativa privacy**: https://myfleetmanager-3ca03.web.app/privacy.html
+- **Termini di servizio** (EULA personalizzata, facoltativa): https://myfleetmanager-3ca03.web.app/terms.html
 - **Copyright**: 2026 Gianluca Caprioglio
 - **Classificazione per età**: nessun contenuto sensibile; «Contenuti generati dagli utenti / comunicazione tra utenti»: gruppi su invito, senza chat → 4+ (o quello che propone il questionario)
 - **Acquisto in-app**: `myfleet_pro`, tipo **Non consumabile**, nome «MyFleetManager Pro». Richiede prima il **contratto per le app a pagamento** con dati bancari e fiscali (App Store Connect → Business).
