@@ -266,6 +266,7 @@ class VehicleDetailScreen extends StatelessWidget {
     final local = await appState.documentFile(d);
     if (await local.exists()) return local;
     if (!d.cloud) {
+      await appState.removeDocument(v.id, d.id);
       if (context.mounted) showSnack(context, tr('doc.notFound'));
       return null;
     }

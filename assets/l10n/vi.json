@@ -244,7 +244,7 @@
  "doc.openError": "Không mở được tệp: {error}",
  "doc.saved": "Đã lưu tài liệu",
  "doc.saveError": "Lỗi khi lưu: {error}",
- "doc.notFound": "Không tìm thấy tệp trên điện thoại.",
+ "doc.notFound": "Tệp không còn nữa: tài liệu đã bị xóa khỏi danh sách, hãy thêm lại.",
  "doc.noPdfApp": "Không có ứng dụng mở PDF: {error}",
  "doc.open": "Mở",
  "doc.rename": "Đổi tên",

@@ -243,7 +243,7 @@ Puhelimen tiedostoista, Drivesta, latauksista…
 Tiedoston avaaminen epäonnistui: {error}
 Asiakirja tallennettu
 Virhe tallennuksessa: {error}
-Tiedostoa ei löytynyt puhelimesta.
+Tiedostoa ei enää ole: asiakirja poistettiin luettelosta, lisää se uudelleen.
 Ei sovellusta PDF-tiedostojen avaamiseen: {error}
 Avaa
 Nimeä uudelleen

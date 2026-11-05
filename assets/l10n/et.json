@@ -244,7 +244,7 @@
  "doc.openError": "Faili ei saanud avada: {error}",
  "doc.saved": "Dokument salvestatud",
  "doc.saveError": "Viga salvestamisel: {error}",
- "doc.notFound": "Faili ei leitud telefonist.",
+ "doc.notFound": "Faili enam pole: dokument eemaldati loendist, lisa see uuesti.",
  "doc.noPdfApp": "PDF-i avamiseks pole rakendust: {error}",
  "doc.open": "Ava",
  "doc.rename": "Nimeta ümber",

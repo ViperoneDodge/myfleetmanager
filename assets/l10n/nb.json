@@ -244,7 +244,7 @@
  "doc.openError": "Kunne ikke åpne filen: {error}",
  "doc.saved": "Dokumentet er lagret",
  "doc.saveError": "Feil ved lagring: {error}",
- "doc.notFound": "Fant ikke filen på telefonen.",
+ "doc.notFound": "Filen finnes ikke lenger: dokumentet er fjernet fra listen, legg det til på nytt.",
  "doc.noPdfApp": "Ingen app for å åpne PDF: {error}",
  "doc.open": "Åpne",
  "doc.rename": "Gi nytt navn",

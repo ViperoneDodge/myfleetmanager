@@ -244,7 +244,7 @@
  "doc.openError": "Dosya açılamadı: {error}",
  "doc.saved": "Belge kaydedildi",
  "doc.saveError": "Kaydetme hatası: {error}",
- "doc.notFound": "Dosya telefonda bulunamadı.",
+ "doc.notFound": "Dosya artık yok: belge listeden kaldırıldı, lütfen yeniden ekle.",
  "doc.noPdfApp": "PDF açacak uygulama yok: {error}",
  "doc.open": "Aç",
  "doc.rename": "Yeniden adlandır",

@@ -243,7 +243,7 @@ Zo súborov telefónu, Disku, stiahnutých…
 Súbor nemožno otvoriť: {error}
 Dokument uložený
 Chyba pri ukladaní: {error}
-Súbor sa v telefóne nenašiel.
+Súbor už neexistuje: dokument bol odstránený zo zoznamu, pridajte ho znova.
 Žiadna aplikácia na otvorenie PDF: {error}
 Otvoriť
 Premenovať

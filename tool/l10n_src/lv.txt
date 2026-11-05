@@ -243,7 +243,7 @@ No tālruņa failiem, Drive, lejupielādēm…
 Neizdevās atvērt failu: {error}
 Dokuments saglabāts
 Kļūda saglabājot: {error}
-Fails tālrunī nav atrasts.
+Faila vairs nav: dokuments noņemts no saraksta, pievieno to vēlreiz.
 Nav lietotnes PDF atvēršanai: {error}
 Atvērt
 Pārdēvēt

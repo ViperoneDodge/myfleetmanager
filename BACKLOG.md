@@ -3,6 +3,7 @@
 Lavori rimandati, da fare prima di andare in produzione o in una versione successiva.
 
 ## Prossima versione
+- [x] **Documenti senza file**: un documento poteva restare nell'elenco con «Solo su questo telefono» anche se il file non c'era più (ad esempio dopo la reinstallazione con la vecchia scelta «No» della 2.2.0, o se la copia online veniva tolta da un altro dispositivo prima di essere scaricata); aprendolo compariva «File non trovato». Ora queste voci vengono tolte da sole e, se se ne apre una, l'app spiega che va aggiunta di nuovo.
 - [x] **Pagina dei Termini di servizio** `terms.html` sul sito (italiano e inglese), collegata dalla pagina di assistenza; da indicare nella Play Console (Termini di servizio) quando è online.
 - [ ] **Dispositivi di prova in AdMob** (Impostazioni → Dispositivi di prova) per i telefoni di chi prova l'app, così con gli ID veri vede annunci di prova e non rischia traffico non valido.
 

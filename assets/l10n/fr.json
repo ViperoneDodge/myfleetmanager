@@ -244,7 +244,7 @@
  "doc.openError": "Impossible d'ouvrir le fichier : {error}",
  "doc.saved": "Document enregistré",
  "doc.saveError": "Erreur lors de l'enregistrement : {error}",
- "doc.notFound": "Fichier introuvable sur le téléphone.",
+ "doc.notFound": "Le fichier n'existe plus : document retiré de la liste, ajoutez-le à nouveau.",
  "doc.noPdfApp": "Aucune app pour ouvrir les PDF : {error}",
  "doc.open": "Ouvrir",
  "doc.rename": "Renommer",

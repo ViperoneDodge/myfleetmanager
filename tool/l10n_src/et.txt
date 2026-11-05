@@ -243,7 +243,7 @@ Telefoni failidest, Drive'ist, allalaadimistest…
 Faili ei saanud avada: {error}
 Dokument salvestatud
 Viga salvestamisel: {error}
-Faili ei leitud telefonist.
+Faili enam pole: dokument eemaldati loendist, lisa see uuesti.
 PDF-i avamiseks pole rakendust: {error}
 Ava
 Nimeta ümber

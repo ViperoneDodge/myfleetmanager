@@ -244,7 +244,7 @@
  "doc.openError": "Não foi possível abrir o ficheiro: {error}",
  "doc.saved": "Documento guardado",
  "doc.saveError": "Erro ao guardar: {error}",
- "doc.notFound": "Ficheiro não encontrado no telemóvel.",
+ "doc.notFound": "O ficheiro já não existe: documento removido da lista, adicione-o novamente.",
  "doc.noPdfApp": "Nenhuma app para abrir PDF: {error}",
  "doc.open": "Abrir",
  "doc.rename": "Mudar nome",

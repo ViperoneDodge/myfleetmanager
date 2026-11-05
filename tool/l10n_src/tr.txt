@@ -243,7 +243,7 @@ Telefon dosyalarından, Drive'dan, indirilenlerden…
 Dosya açılamadı: {error}
 Belge kaydedildi
 Kaydetme hatası: {error}
-Dosya telefonda bulunamadı.
+Dosya artık yok: belge listeden kaldırıldı, lütfen yeniden ekle.
 PDF açacak uygulama yok: {error}
 Aç
 Yeniden adlandır

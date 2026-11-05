@@ -452,7 +452,27 @@ class AppState extends ChangeNotifier {
     });
   }
 
+  Future<bool> _pruneMissingDocs() async {
+    var changed = false;
+    for (final v in data.vehicles) {
+      final keep = <VehicleDocument>[];
+      for (final d in v.documents) {
+        if (!d.cloud && !await (await documentFile(d)).exists()) {
+          changed = true;
+        } else {
+          keep.add(d);
+        }
+      }
+      if (keep.length != v.documents.length) v.documents = keep;
+    }
+    return changed;
+  }
+
   Future<void> _uploadPending() async {
+    if (await _pruneMissingDocs()) {
+      await _persist();
+      notifyListeners();
+    }
     final me = session?.key;
     if (me == null || !isCloud || docsConsent != true) return;
     var changed = docsNotice != null;

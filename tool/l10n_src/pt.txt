@@ -243,7 +243,7 @@ Dos ficheiros do telemóvel, Drive, transferências…
 Não foi possível abrir o ficheiro: {error}
 Documento guardado
 Erro ao guardar: {error}
-Ficheiro não encontrado no telemóvel.
+O ficheiro já não existe: documento removido da lista, adicione-o novamente.
 Nenhuma app para abrir PDF: {error}
 Abrir
 Mudar nome

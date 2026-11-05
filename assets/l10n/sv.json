@@ -244,7 +244,7 @@
  "doc.openError": "Kunde inte öppna filen: {error}",
  "doc.saved": "Dokumentet har sparats",
  "doc.saveError": "Fel vid sparande: {error}",
- "doc.notFound": "Filen hittades inte på telefonen.",
+ "doc.notFound": "Filen finns inte längre: dokumentet togs bort från listan, lägg till det igen.",
  "doc.noPdfApp": "Ingen app för att öppna PDF: {error}",
  "doc.open": "Öppna",
  "doc.rename": "Byt namn",

@@ -243,7 +243,7 @@ Din fișierele telefonului, Drive, descărcări…
 Fișierul nu poate fi deschis: {error}
 Document salvat
 Eroare la salvare: {error}
-Fișierul nu a fost găsit pe telefon.
+Fișierul nu mai există: documentul a fost scos din listă, adaugă-l din nou.
 Nicio aplicație pentru deschiderea PDF: {error}
 Deschide
 Redenumește

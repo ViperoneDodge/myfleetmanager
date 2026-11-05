@@ -244,7 +244,7 @@
  "doc.openError": "A fájl nem nyitható meg: {error}",
  "doc.saved": "Dokumentum mentve",
  "doc.saveError": "Hiba mentés közben: {error}",
- "doc.notFound": "A fájl nem található a telefonon.",
+ "doc.notFound": "A fájl már nincs meg: a dokumentum lekerült a listáról, add hozzá újra.",
  "doc.noPdfApp": "Nincs alkalmazás PDF megnyitásához: {error}",
  "doc.open": "Megnyitás",
  "doc.rename": "Átnevezés",

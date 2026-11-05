@@ -244,7 +244,7 @@
  "doc.openError": "Kan het bestand niet openen: {error}",
  "doc.saved": "Document opgeslagen",
  "doc.saveError": "Fout bij opslaan: {error}",
- "doc.notFound": "Bestand niet gevonden op de telefoon.",
+ "doc.notFound": "Het bestand bestaat niet meer: document uit de lijst gehaald, voeg het opnieuw toe.",
  "doc.noPdfApp": "Geen app om pdf's te openen: {error}",
  "doc.open": "Openen",
  "doc.rename": "Hernoemen",

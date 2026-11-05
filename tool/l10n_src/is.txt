@@ -243,7 +243,7 @@ PDF-skrá eða mynd
 Tókst ekki að opna skrána: {error}
 Skjal vistað
 Villa við vistun: {error}
-Skrá fannst ekki í símanum.
+Skráin er ekki lengur til: skjalið var fjarlægt af listanum, bættu því við aftur.
 Ekkert app til að opna PDF: {error}
 Opna
 Endurnefna

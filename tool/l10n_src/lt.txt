@@ -243,7 +243,7 @@ Iš telefono failų, „Drive“, atsisiuntimų…
 Nepavyko atidaryti failo: {error}
 Dokumentas išsaugotas
 Klaida išsaugant: {error}
-Failas telefone nerastas.
+Failo nebėra: dokumentas pašalintas iš sąrašo, pridėk jį iš naujo.
 Nėra programėlės PDF atidaryti: {error}
 Atidaryti
 Pervadinti

@@ -244,7 +244,7 @@
  "doc.openError": "Tókst ekki að opna skrána: {error}",
  "doc.saved": "Skjal vistað",
  "doc.saveError": "Villa við vistun: {error}",
- "doc.notFound": "Skrá fannst ekki í símanum.",
+ "doc.notFound": "Skráin er ekki lengur til: skjalið var fjarlægt af listanum, bættu því við aftur.",
  "doc.noPdfApp": "Ekkert app til að opna PDF: {error}",
  "doc.open": "Opna",
  "doc.rename": "Endurnefna",

@@ -244,7 +244,7 @@
  "doc.openError": "Ma setax jinfetaħ il-fajl: {error}",
  "doc.saved": "Dokument issejvjat",
  "doc.saveError": "Żball fis-salvataġġ: {error}",
- "doc.notFound": "Il-fajl ma nstabx fuq it-telefon.",
+ "doc.notFound": "Il-fajl m'għadux hemm: id-dokument tneħħa mil-lista, erġa' żidu.",
  "doc.noPdfApp": "L-ebda app biex tiftaħ PDF: {error}",
  "doc.open": "Iftaħ",
  "doc.rename": "Ibdel l-isem",

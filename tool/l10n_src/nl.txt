@@ -243,7 +243,7 @@ Uit telefoonbestanden, Drive, downloads…
 Kan het bestand niet openen: {error}
 Document opgeslagen
 Fout bij opslaan: {error}
-Bestand niet gevonden op de telefoon.
+Het bestand bestaat niet meer: document uit de lijst gehaald, voeg het opnieuw toe.
 Geen app om pdf's te openen: {error}
 Openen
 Hernoemen

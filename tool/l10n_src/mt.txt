@@ -243,7 +243,7 @@ Mill-fajls tat-telefon, Drive, downloads…
 Ma setax jinfetaħ il-fajl: {error}
 Dokument issejvjat
 Żball fis-salvataġġ: {error}
-Il-fajl ma nstabx fuq it-telefon.
+Il-fajl m'għadux hemm: id-dokument tneħħa mil-lista, erġa' żidu.
 L-ebda app biex tiftaħ PDF: {error}
 Iftaħ
 Ibdel l-isem

@@ -244,7 +244,7 @@
  "doc.openError": "Fișierul nu poate fi deschis: {error}",
  "doc.saved": "Document salvat",
  "doc.saveError": "Eroare la salvare: {error}",
- "doc.notFound": "Fișierul nu a fost găsit pe telefon.",
+ "doc.notFound": "Fișierul nu mai există: documentul a fost scos din listă, adaugă-l din nou.",
  "doc.noPdfApp": "Nicio aplicație pentru deschiderea PDF: {error}",
  "doc.open": "Deschide",
  "doc.rename": "Redenumește",

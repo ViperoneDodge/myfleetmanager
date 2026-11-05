@@ -244,7 +244,7 @@
  "doc.openError": "Súbor nemožno otvoriť: {error}",
  "doc.saved": "Dokument uložený",
  "doc.saveError": "Chyba pri ukladaní: {error}",
- "doc.notFound": "Súbor sa v telefóne nenašiel.",
+ "doc.notFound": "Súbor už neexistuje: dokument bol odstránený zo zoznamu, pridajte ho znova.",
  "doc.noPdfApp": "Žiadna aplikácia na otvorenie PDF: {error}",
  "doc.open": "Otvoriť",
  "doc.rename": "Premenovať",

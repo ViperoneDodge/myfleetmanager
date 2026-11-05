@@ -244,7 +244,7 @@
  "doc.openError": "Could not open the file: {error}",
  "doc.saved": "Document saved",
  "doc.saveError": "Error while saving: {error}",
- "doc.notFound": "File not found on the phone.",
+ "doc.notFound": "The file is no longer there: document removed from the list, please add it again.",
  "doc.noPdfApp": "No app to open PDFs: {error}",
  "doc.open": "Open",
  "doc.rename": "Rename",

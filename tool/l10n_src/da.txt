@@ -243,7 +243,7 @@ Fra telefonens filer, Drive, downloads…
 Kunne ikke åbne filen: {error}
 Dokumentet er gemt
 Fejl ved gemning: {error}
-Filen blev ikke fundet på telefonen.
+Filen findes ikke længere: dokumentet er fjernet fra listen, tilføj det igen.
 Ingen app til at åbne PDF: {error}
 Åbn
 Omdøb

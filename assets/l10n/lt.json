@@ -244,7 +244,7 @@
  "doc.openError": "Nepavyko atidaryti failo: {error}",
  "doc.saved": "Dokumentas išsaugotas",
  "doc.saveError": "Klaida išsaugant: {error}",
- "doc.notFound": "Failas telefone nerastas.",
+ "doc.notFound": "Failo nebėra: dokumentas pašalintas iš sąrašo, pridėk jį iš naujo.",
  "doc.noPdfApp": "Nėra programėlės PDF atidaryti: {error}",
  "doc.open": "Atidaryti",
  "doc.rename": "Pervadinti",

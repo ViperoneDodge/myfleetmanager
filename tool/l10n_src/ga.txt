@@ -243,7 +243,7 @@ Comhad PDF nó íomhá
 Níorbh fhéidir an comhad a oscailt: {error}
 Doiciméad sábháilte
 Earráid le linn sábhála: {error}
-Níor aimsíodh an comhad ar an bhfón.
+Níl an comhad ann a thuilleadh: baineadh an doiciméad den liosta, cuir leis arís é.
 Níl aip ann chun PDF a oscailt: {error}
 Oscail
 Athainmnigh

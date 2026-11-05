@@ -244,7 +244,7 @@
  "doc.openError": "Neizdevās atvērt failu: {error}",
  "doc.saved": "Dokuments saglabāts",
  "doc.saveError": "Kļūda saglabājot: {error}",
- "doc.notFound": "Fails tālrunī nav atrasts.",
+ "doc.notFound": "Faila vairs nav: dokuments noņemts no saraksta, pievieno to vēlreiz.",
  "doc.noPdfApp": "Nav lietotnes PDF atvēršanai: {error}",
  "doc.open": "Atvērt",
  "doc.rename": "Pārdēvēt",

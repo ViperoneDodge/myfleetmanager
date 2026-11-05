@@ -243,7 +243,7 @@ Fra telefonens filer, Drive, nedlastinger…
 Kunne ikke åpne filen: {error}
 Dokumentet er lagret
 Feil ved lagring: {error}
-Fant ikke filen på telefonen.
+Filen finnes ikke lenger: dokumentet er fjernet fra listen, legg det til på nytt.
 Ingen app for å åpne PDF: {error}
 Åpne
 Gi nytt navn

@@ -243,7 +243,7 @@ Från telefonens filer, Drive, nedladdningar…
 Kunde inte öppna filen: {error}
 Dokumentet har sparats
 Fel vid sparande: {error}
-Filen hittades inte på telefonen.
+Filen finns inte längre: dokumentet togs bort från listan, lägg till det igen.
 Ingen app för att öppna PDF: {error}
 Öppna
 Byt namn

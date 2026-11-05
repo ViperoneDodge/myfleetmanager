@@ -244,7 +244,7 @@
  "doc.openError": "Tiedoston avaaminen epäonnistui: {error}",
  "doc.saved": "Asiakirja tallennettu",
  "doc.saveError": "Virhe tallennuksessa: {error}",
- "doc.notFound": "Tiedostoa ei löytynyt puhelimesta.",
+ "doc.notFound": "Tiedostoa ei enää ole: asiakirja poistettiin luettelosta, lisää se uudelleen.",
  "doc.noPdfApp": "Ei sovellusta PDF-tiedostojen avaamiseen: {error}",
  "doc.open": "Avaa",
  "doc.rename": "Nimeä uudelleen",

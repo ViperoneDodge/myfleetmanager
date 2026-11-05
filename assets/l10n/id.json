@@ -244,7 +244,7 @@
  "doc.openError": "Tidak dapat membuka file: {error}",
  "doc.saved": "Dokumen disimpan",
  "doc.saveError": "Kesalahan saat menyimpan: {error}",
- "doc.notFound": "File tidak ditemukan di ponsel.",
+ "doc.notFound": "File sudah tidak ada: dokumen dihapus dari daftar, tambahkan lagi.",
  "doc.noPdfApp": "Tidak ada aplikasi untuk membuka PDF: {error}",
  "doc.open": "Buka",
  "doc.rename": "Ganti nama",

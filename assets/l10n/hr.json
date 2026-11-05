@@ -244,7 +244,7 @@
  "doc.openError": "Nije moguće otvoriti datoteku: {error}",
  "doc.saved": "Dokument spremljen",
  "doc.saveError": "Pogreška pri spremanju: {error}",
- "doc.notFound": "Datoteka nije pronađena na telefonu.",
+ "doc.notFound": "Datoteka više ne postoji: dokument je uklonjen s popisa, dodaj ga ponovno.",
  "doc.noPdfApp": "Nema aplikacije za otvaranje PDF-a: {error}",
  "doc.open": "Otvori",
  "doc.rename": "Preimenuj",

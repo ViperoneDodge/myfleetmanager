@@ -244,7 +244,7 @@
  "doc.openError": "ファイルを開けませんでした：{error}",
  "doc.saved": "書類を保存しました",
  "doc.saveError": "保存エラー：{error}",
- "doc.notFound": "端末にファイルが見つかりません。",
+ "doc.notFound": "ファイルが見つかりません。書類をリストから削除しました。もう一度追加してください。",
  "doc.noPdfApp": "PDF を開くアプリがありません：{error}",
  "doc.open": "開く",
  "doc.rename": "名前を変更",

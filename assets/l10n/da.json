@@ -244,7 +244,7 @@
  "doc.openError": "Kunne ikke åbne filen: {error}",
  "doc.saved": "Dokumentet er gemt",
  "doc.saveError": "Fejl ved gemning: {error}",
- "doc.notFound": "Filen blev ikke fundet på telefonen.",
+ "doc.notFound": "Filen findes ikke længere: dokumentet er fjernet fra listen, tilføj det igen.",
  "doc.noPdfApp": "Ingen app til at åbne PDF: {error}",
  "doc.open": "Åbn",
  "doc.rename": "Omdøb",

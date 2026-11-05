@@ -243,7 +243,7 @@ Ze souborů telefonu, Disku, stažených…
 Soubor nelze otevřít: {error}
 Dokument uložen
 Chyba při ukládání: {error}
-Soubor nebyl v telefonu nalezen.
+Soubor už neexistuje: dokument byl odebrán ze seznamu, přidejte ho znovu.
 Žádná aplikace pro otevření PDF: {error}
 Otevřít
 Přejmenovat

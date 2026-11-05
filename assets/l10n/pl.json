@@ -244,7 +244,7 @@
  "doc.openError": "Nie można otworzyć pliku: {error}",
  "doc.saved": "Dokument zapisany",
  "doc.saveError": "Błąd zapisu: {error}",
- "doc.notFound": "Nie znaleziono pliku w telefonie.",
+ "doc.notFound": "Pliku już nie ma: dokument usunięto z listy, dodaj go ponownie.",
  "doc.noPdfApp": "Brak aplikacji do otwierania PDF: {error}",
  "doc.open": "Otwórz",
  "doc.rename": "Zmień nazwę",

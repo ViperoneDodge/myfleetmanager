@@ -243,7 +243,7 @@ Iz datotek telefona, Drive, prenosov…
 Datoteke ni mogoče odpreti: {error}
 Dokument shranjen
 Napaka pri shranjevanju: {error}
-Datoteke v telefonu ni mogoče najti.
+Datoteke ni več: dokument je odstranjen s seznama, dodaj ga znova.
 Ni aplikacije za odpiranje PDF: {error}
 Odpri
 Preimenuj

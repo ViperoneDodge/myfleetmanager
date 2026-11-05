@@ -243,7 +243,7 @@ Từ tệp trên điện thoại, Drive, tải xuống…
 Không mở được tệp: {error}
 Đã lưu tài liệu
 Lỗi khi lưu: {error}
-Không tìm thấy tệp trên điện thoại.
+Tệp không còn nữa: tài liệu đã bị xóa khỏi danh sách, hãy thêm lại.
 Không có ứng dụng mở PDF: {error}
 Mở
 Đổi tên

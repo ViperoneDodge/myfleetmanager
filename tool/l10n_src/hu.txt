@@ -243,7 +243,7 @@ A telefon fájljaiból, Drive-ról, letöltésekből…
 A fájl nem nyitható meg: {error}
 Dokumentum mentve
 Hiba mentés közben: {error}
-A fájl nem található a telefonon.
+A fájl már nincs meg: a dokumentum lekerült a listáról, add hozzá újra.
 Nincs alkalmazás PDF megnyitásához: {error}
 Megnyitás
 Átnevezés

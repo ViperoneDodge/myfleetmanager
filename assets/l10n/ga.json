@@ -244,7 +244,7 @@
  "doc.openError": "Níorbh fhéidir an comhad a oscailt: {error}",
  "doc.saved": "Doiciméad sábháilte",
  "doc.saveError": "Earráid le linn sábhála: {error}",
- "doc.notFound": "Níor aimsíodh an comhad ar an bhfón.",
+ "doc.notFound": "Níl an comhad ann a thuilleadh: baineadh an doiciméad den liosta, cuir leis arís é.",
  "doc.noPdfApp": "Níl aip ann chun PDF a oscailt: {error}",
  "doc.open": "Oscail",
  "doc.rename": "Athainmnigh",
